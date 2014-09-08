@@ -2,14 +2,14 @@
 
 // http://www.spoj.com/problems/PALIN/
 
-#include "PALIN.h"
+#include "SPOJ_PALIN.h"
 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-void processInput(string input)
+static void processInput(string input)
 {
     int length = input.length();
     bool isChainOf9 = true;
@@ -154,7 +154,7 @@ void processInput(string input)
     cout << endl;
 }
 
-int PALIN()
+int SPOJ_PALIN()
 {
     int round;
     cin >> round;

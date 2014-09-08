@@ -24,10 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PALIN.h">
+    <ClInclude Include="UVa272.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UVa_ProblemSetVolume_1_100.h">
+    <ClInclude Include="UVa100.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa394.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SPOJ_PALIN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,10 +44,16 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PALIN.cpp">
+    <ClCompile Include="UVa272.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVa_ProblemSetVolume_1_100.cpp">
+    <ClCompile Include="UVa100.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa394.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOJ_PALIN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -79,19 +79,23 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PALIN.h" />
+    <ClInclude Include="SPOJ_PALIN.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="UVa_ProblemSetVolume_1_100.h" />
+    <ClInclude Include="UVa272.h" />
+    <ClInclude Include="UVa100.h" />
+    <ClInclude Include="UVa394.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PALIN.cpp" />
+    <ClCompile Include="SPOJ_PALIN.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="UVa_ProblemSetVolume_1_100.cpp" />
+    <ClCompile Include="UVa272.cpp" />
+    <ClCompile Include="UVa100.cpp" />
+    <ClCompile Include="UVa394.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

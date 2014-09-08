@@ -2,7 +2,7 @@
 
 // http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=36
 
-#include "UVa_ProblemSetVolume_1_100.h"
+#include "UVa100.h"
 
 #include <iostream>
 #include <string>
@@ -37,7 +37,7 @@ int cycle_length(unsigned int input, map<unsigned int, int>& cycle_lengths)
 	return cycle_lengths[input] = (1 + cycle_length(recursive_input, cycle_lengths));
 }
 
-int UVa_ProblemSetVolume_1_100()
+int UVa100()
 {
 	// Ideally we would have use the stack - but that will stack overflow
 	map<unsigned int, int> cycle_lengths;

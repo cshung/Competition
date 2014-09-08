@@ -2,8 +2,10 @@
 //
 
 #include "stdafx.h"
-#include "PALIN.h"
-#include "UVa_ProblemSetVolume_1_100.h"
+#include "SPOJ_PALIN.h"
+#include "UVa100.h"
+#include "UVa272.h"
+#include "UVa394.h"
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -16,6 +18,9 @@
 //
 int _tmain(int argc, _TCHAR* argv[])
 {
-	return UVa_ProblemSetVolume_1_100();
+	// return SPOJ_PALIN();
+	// return UVa100();
+	// return UVa272();
+	return UVa394();
 }
 

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-static void processInput(string input)
+static void process_input(string input)
 {
     int length = input.length();
     bool isChainOf9 = true;
@@ -162,7 +162,7 @@ int SPOJ_PALIN()
     {
         string input;
         cin >> input;
-        processInput(input);
+        process_input(input);
     }
 
     return 0;

@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -85,6 +85,7 @@
     <ClInclude Include="UVa272.h" />
     <ClInclude Include="UVa100.h" />
     <ClInclude Include="UVa394.h" />
+    <ClInclude Include="UVa483.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -96,6 +97,7 @@
     <ClCompile Include="UVa272.cpp" />
     <ClCompile Include="UVa100.cpp" />
     <ClCompile Include="UVa394.cpp" />
+    <ClCompile Include="UVa483.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

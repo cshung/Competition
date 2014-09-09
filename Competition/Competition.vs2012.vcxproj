@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F82A6EBA-7A51-4E3C-9A2F-BAE2568CF7C6}</ProjectGuid>
+    <ProjectGuid>{B3F38A02-0DBE-4B0F-8113-02948792AEDB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Competition</RootNamespace>
+    <RootNamespace>Competitionvs2012</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -25,7 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -82,8 +82,8 @@
     <ClInclude Include="SPOJ_PALIN.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="UVa272.h" />
     <ClInclude Include="UVa100.h" />
+    <ClInclude Include="UVa272.h" />
     <ClInclude Include="UVa394.h" />
     <ClInclude Include="UVa483.h" />
   </ItemGroup>
@@ -94,8 +94,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="UVa272.cpp" />
     <ClCompile Include="UVa100.cpp" />
+    <ClCompile Include="UVa272.cpp" />
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa483.cpp" />
   </ItemGroup>

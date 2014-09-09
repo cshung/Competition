@@ -24,16 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UVa272.h">
+    <ClInclude Include="SPOJ_PALIN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UVa100.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UVa394.h">
+    <ClInclude Include="UVa272.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SPOJ_PALIN.h">
+    <ClInclude Include="UVa394.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UVa483.h">
@@ -47,16 +47,16 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVa272.cpp">
+    <ClCompile Include="SPOJ_PALIN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa100.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVa394.cpp">
+    <ClCompile Include="UVa272.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SPOJ_PALIN.cpp">
+    <ClCompile Include="UVa394.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa483.cpp">

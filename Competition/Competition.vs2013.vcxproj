@@ -86,6 +86,7 @@
     <ClInclude Include="UVa272.h" />
     <ClInclude Include="UVa394.h" />
     <ClInclude Include="UVa483.h" />
+    <ClInclude Include="UVa573.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -98,6 +99,7 @@
     <ClCompile Include="UVa272.cpp" />
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa483.cpp" />
+    <ClCompile Include="UVa573.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -101,7 +101,7 @@
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa483.cpp" />
     <ClCompile Include="UVa573.cpp" />
-    <ClInclude Include="UVa661.cpp" />
+    <ClCompile Include="UVa661.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

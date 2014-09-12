@@ -52,40 +52,44 @@ int UVa739()
 	{
 		string name;
 		cin >> name;
-		//       123456789
-		cout << "         " << name;
-		int spentColumn = name.length();
-		while (spentColumn < 25)
+		if (name.length() > 0)
 		{
-			cout << " ";
-			spentColumn++;
-		}
-		cout << name[0] ;
-		int lastDigitCode = digit(name[0]);
-		int emitted_digit_count = 0;
-		for (unsigned int i = 1; emitted_digit_count < 3 && i < name.length(); i++)
-		{
-			int currentDigitCode = digit(name[i]);
-			if (currentDigitCode != 0)
+			//       123456789
+			cout << "         " << name;
+			int spentColumn = name.length();
+			while (spentColumn < 25)
 			{
-				if (currentDigitCode != lastDigitCode)
-				{
-					emitted_digit_count++;
-					cout << currentDigitCode;
-				}
+				cout << " ";
+				spentColumn++;
 			}
-			lastDigitCode = currentDigitCode;
-		}
+			cout << name[0] ;
+			int lastDigitCode = digit(name[0]);
+			int emitted_digit_count = 0;
+			for (unsigned int i = 1; emitted_digit_count < 3 && i < name.length(); i++)
+			{
+				int currentDigitCode = digit(name[i]);
+				if (currentDigitCode != 0)
+				{
+					if (currentDigitCode != lastDigitCode)
+					{
+						emitted_digit_count++;
+						cout << currentDigitCode;
+					}
+				}
+				lastDigitCode = currentDigitCode;
+			}
 
-		while (emitted_digit_count < 3)
-		{
-			cout << 0;
-			emitted_digit_count++;
-		}
+			while (emitted_digit_count < 3)
+			{
+				cout << 0;
+				emitted_digit_count++;
+			}
 
-		cout << endl;
+			cout << endl;
+		}
 	}
+
 	//       12345678901234567890
-	cout << "                   END OF OUTPUT";
+	cout << "                   END OF OUTPUT" << endl;
 	return 0;
 }

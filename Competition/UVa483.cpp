@@ -14,7 +14,7 @@ int UVa483()
 {
     vector<char> charSeen;
     while (true)
-	{
+    {
         char c = cin.get();
         if (c == ' ' || c == '\r' || c == '\n' || c == -1)
         {
@@ -36,7 +36,7 @@ int UVa483()
         {
             charSeen.push_back(c);
         }
-	}
+    }
 
-	return 0;
+    return 0;
 }

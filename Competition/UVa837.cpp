@@ -21,78 +21,78 @@ const double negative_infinity = *(double*)&raw_negative_infinity;
 
 struct segment_endpoint
 {
-    double x;
-    double transparency;
-    bool isEnter;
+	double x;
+	double transparency;
+	bool isEnter;
 	int segment_id;
 };
 
 bool compare_segment(segment_endpoint* first, segment_endpoint* second)
 {
-    return first->x < second->x;
+	return first->x < second->x;
 }
 
 double to_double(string s)
 {
-    if (s == "+inf")
-    {
-        return positive_infinity;
-    }
-    else if (s == "-inf")
-    {
-        return negative_infinity;
-    }
-    else
-    {
-        double result;
-        sscanf(s.c_str(), "%lf", &result);
-        return result;
-    }
+	if (s == "+inf")
+	{
+		return positive_infinity;
+	}
+	else if (s == "-inf")
+	{
+		return negative_infinity;
+	}
+	else
+	{
+		double result;
+		sscanf(s.c_str(), "%lf", &result);
+		return result;
+	}
 }
 
 string to_my_string(double value)
 {
-    if (value == positive_infinity)
-    {
-        return "+inf";
-    }
-    else if (value == negative_infinity)
-    {
-        return "-inf";
-    }
-    else
-    {
-        char buffer[1024];
-        sprintf(buffer, "%#.3f", value);
-        return string(buffer);
-    }
+	if (value == positive_infinity)
+	{
+		return "+inf";
+	}
+	else if (value == negative_infinity)
+	{
+		return "-inf";
+	}
+	else
+	{
+		char buffer[1024];
+		sprintf(buffer, "%#.3f", value);
+		return string(buffer);
+	}
 }
 
 int UVa837()
 {
-    int number_of_cases;
-    cin >> number_of_cases;
-    for (int c = 0; c < number_of_cases; c++)
-    {
-        string s;
-        getline(cin, s);
-        int number_of_flims;
-        cin >> number_of_flims;
+	int number_of_cases;
+	cin >> number_of_cases;
+	for (int c = 0; c < number_of_cases; c++)
+	{
+		string s;
+		getline(cin, s);
+		int number_of_flims;
+		cin >> number_of_flims;
 		vector<double> segment_transparencies;
 		vector<bool> segment_state;
-        vector<segment_endpoint*> endpoints;
+		vector<segment_endpoint*> endpoints;
 		int segment_counter = 0;
-        for (int i = 0; i < number_of_flims; i++)
-        {
-            string ix1, iy1, ix2, iy2, ir;
-            double x1, y1, x2, y2, r;
-            cin >> ix1 >> iy1 >> ix2 >> iy2 >> ir;
+		for (int i = 0; i < number_of_flims; i++)
+		{
+			string ix1, iy1, ix2, iy2, ir;
+			double x1, y1, x2, y2, r;
+			cin >> ix1 >> iy1 >> ix2 >> iy2 >> ir;
 
-            x1 = to_double(ix1);
-            y1 = to_double(iy1);
-            x2 = to_double(ix2);
-            y2 = to_double(iy2);
-            r = to_double(ir);
+			x1 = to_double(ix1);
+			y1 = to_double(iy1);
+			x2 = to_double(ix2);
+			y2 = to_double(iy2);
+			r = to_double(ir);
 
 			if (y1 <= 0 && y2 <= 0 && (y1 + y2 < 0))
 			{
@@ -120,22 +120,22 @@ int UVa837()
 				}
 			}
 
-            segment_endpoint* start = new segment_endpoint();
-            segment_endpoint* end = new segment_endpoint();
+			segment_endpoint* start = new segment_endpoint();
+			segment_endpoint* end = new segment_endpoint();
 			start->segment_id = segment_counter;
-            start->x = min(x1, x2);
+			start->x = min(x1, x2);
 			end->segment_id = segment_counter;
-            end->x = max(x1, x2);
-            start->transparency = r;
-            end->transparency = r;
-            start->isEnter = true;
-            end->isEnter = false;
-            endpoints.push_back(start);
-            endpoints.push_back(end);
+			end->x = max(x1, x2);
+			start->transparency = r;
+			end->transparency = r;
+			start->isEnter = true;
+			end->isEnter = false;
+			endpoints.push_back(start);
+			endpoints.push_back(end);
 			segment_counter++;
 			segment_transparencies.push_back(r);
 			segment_state.push_back(false);
-        }
+		}
 
 		if (endpoints.size() == 0)
 		{
@@ -159,7 +159,7 @@ int UVa837()
 				}
 
 				double current_transparency = 1;
-				for (int i = 0; i < segment_transparencies.size(); i++)
+				for (unsigned int i = 0; i < segment_transparencies.size(); i++)
 				{
 					if (segment_state[i])
 					{
@@ -208,13 +208,13 @@ int UVa837()
 				cout << to_my_string(current_position) << " " << to_my_string(positive_infinity) << " " << to_my_string(1.0);
 			}
 		}
-        if (c != (number_of_cases - 1))
-        {
-            cout << endl;
-            cout << endl;
-        }
-    }
+		if (c != (number_of_cases - 1))
+		{
+			cout << endl;
+			cout << endl;
+		}
+	}
 
 	cout << endl;
-    return 0;
+	return 0;
 }

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// TODO
+// http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1304
 
 #include "UVa10363.h"
 
@@ -8,23 +8,6 @@
 #include <string>
 
 using namespace std;
-
-/**
- * if (#X = #O)
- * {
- *   if (#X wins) { fail - that can't happen, since #O take the last move }
- *   else { possible - #O win the game or they are still playing }
- * }
- * else if (#X = #O + 1)
- * {
- *   if (#O wins) { fail - that can't happen since #x take the last move }
- *   else { possible - #X win the game or they are still playing }
- * }
- * else
- * {
- *   fail - this is impossible
- * }
- */
 
 char match(char current, char next)
 {

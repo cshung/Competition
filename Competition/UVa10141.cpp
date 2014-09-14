@@ -12,20 +12,20 @@ using namespace std;
 
 int UVa10141()
 {
-	while (true)
-	{
-		int num_requirements;
-		int num_proposals;
-		cin >> num_requirements;
-		cin >> num_proposals;
-		vector<string> requirements;
-		for (int r = 0; r < num_requirements; r++)
-		{
-			string requirement;
-			getline(cin, requirement);
-			requirements.push_back(requirement);
-		}
+    while (true)
+    {
+        int num_requirements;
+        int num_proposals;
+        cin >> num_requirements;
+        cin >> num_proposals;
+        vector<string> requirements;
+        for (int r = 0; r < num_requirements; r++)
+        {
+            string requirement;
+            getline(cin, requirement);
+            requirements.push_back(requirement);
+        }
 
-	}
+    }
     return 0;
 }

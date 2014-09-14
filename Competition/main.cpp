@@ -26,16 +26,16 @@
 //
 int _tmain(int argc, _TCHAR* argv[])
 {
-	// return SPOJ_PALIN();
-	// return UVa100();
-	// return UVa272();
-	// return UVa394();
-	// return UVa573();
+    // return SPOJ_PALIN();
+    // return UVa100();
+    // return UVa272();
+    // return UVa394();
+    // return UVa573();
     // return UVa661();
-	// return UVa739();
+    // return UVa739();
     // return UVa837();
-	return UVa941();
-	// return UVa10082();
-	// return UVa10141();
+    return UVa941();
+    // return UVa10082();
+    // return UVa10141();
 }
 

@@ -34,8 +34,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa661();
     // return UVa739();
     // return UVa837();
-    return UVa941();
+    // return UVa941();
     // return UVa10082();
-    // return UVa10141();
+    return UVa10141();
 }
 

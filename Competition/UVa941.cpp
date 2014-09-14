@@ -10,10 +10,6 @@
 
 using namespace std;
 
-/**
- * Wrong answer - need to figure out what's wrong.
- */
-
 void compute_permutation(long long num_permutation, string ordering_string, vector<unsigned int> unused_positions)
 {
 	if (unused_positions.size() == 1)
@@ -63,14 +59,23 @@ int UVa941()
 		long long num_permutation;
 		string ordering_string;
 		cin >> ordering_string;
+		for (unsigned int i = 0; i < ordering_string.length(); i++)
+		{
+			for (unsigned int j = i + 1; j < ordering_string.length(); j++)
+			{
+				if (ordering_string[i] > ordering_string[j])
+				{
+					char temp = ordering_string[i];
+					ordering_string[i] = ordering_string[j];
+					ordering_string[j] = temp;
+				}
+			}
+		}
 		cin >> num_permutation;
 
 		// Computing ordering recursively
 		compute_permutation(num_permutation, ordering_string);
-		if (c != number_of_cases - 1)
-		{
-			cout << endl;
-		}
+		cout << endl;
 	}
 
 	return 0;

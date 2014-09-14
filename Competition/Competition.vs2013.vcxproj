@@ -83,6 +83,11 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UVa100.h" />
+    <ClInclude Include="UVa10082.h" />
+    <ClInclude Include="UVa10141.h" />
+    <ClInclude Include="UVa10281.h" />
+    <ClInclude Include="UVa10363.h" />
+    <ClInclude Include="UVa10420.h" />
     <ClInclude Include="UVa272.h" />
     <ClInclude Include="UVa394.h" />
     <ClInclude Include="UVa483.h" />
@@ -90,6 +95,7 @@
     <ClInclude Include="UVa661.h" />
     <ClInclude Include="UVa739.h" />
     <ClInclude Include="UVa837.h" />
+    <ClInclude Include="UVa941.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -99,6 +105,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="UVa100.cpp" />
+    <ClCompile Include="UVa10082.cpp" />
+    <ClCompile Include="UVa10141.cpp" />
+    <ClCompile Include="UVa10281.cpp" />
+    <ClCompile Include="UVa10363.cpp" />
+    <ClCompile Include="UVa10420.cpp" />
     <ClCompile Include="UVa272.cpp" />
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa483.cpp" />
@@ -106,6 +117,7 @@
     <ClCompile Include="UVa661.cpp" />
     <ClCompile Include="UVa739.cpp" />
     <ClCompile Include="UVa837.cpp" />
+    <ClCompile Include="UVa941.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

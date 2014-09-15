@@ -10,15 +10,6 @@
 
 using namespace std;
 
-/**
- * Would be nice to know what next_permutation actually do
- * I *think* this algorithm would work
- * Scan from the second last element to see if any element on the left of it greater than it.
- * For the first one that does pick the smallest of them on the left and replace self
- * Sort the rest on the left and output
- * 
- * Return false if scan fails
- */
 int UVa146()
 {
     vector<char> line;

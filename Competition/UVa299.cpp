@@ -8,9 +8,6 @@
 
 using namespace std;
 
-// The minimal number of swaps to take a number from right to left is the distance
-// Insertion sort achieved that bound.
-
 int UVa299()
 {
     int number_of_cases;

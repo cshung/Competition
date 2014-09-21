@@ -178,7 +178,7 @@ void move(position& current_position, pile*& current_pile, position& neighbor_po
     }
 }
 
-void play_accordance_patience(vector<card*>& deck)
+void play_accordance_patience(vector<card*>& deck, bool brute_force)
 {
     int current_card = 0;
     
@@ -195,6 +195,17 @@ void play_accordance_patience(vector<card*>& deck)
             {
                 break;
             }
+
+            if (brute_force)
+            {
+                // Brute force - force a star on every line
+                movable_cards.clear();
+                for (position gi = current_game.begin(); gi != current_game.end(); gi++)
+                {
+                    movable_cards.push_back(gi);
+                }
+            }
+
             // cout << "Deal: " << current_card << endl;
             inspect(current_game, movable_cards);
         }
@@ -262,7 +273,16 @@ void play_accordance_patience(vector<card*>& deck)
                         }
                     }
                 }
-
+                
+                if (brute_force)
+                {
+                    // Brute force - force a star on every line
+                    movable_cards.clear();
+                    for (position gi = current_game.begin(); gi != current_game.end(); gi++)
+                    {
+                        movable_cards.push_back(gi);
+                    }
+                }
                 // cout << "Move: " << move_count << endl;
                 inspect(current_game, movable_cards);
             }
@@ -286,7 +306,8 @@ int UVa127()
         vector<card*> deck;
         if (read_cards(deck))
         {
-            play_accordance_patience(deck);
+            // play_accordance_patience(deck, false);
+            play_accordance_patience(deck, true);
             delete_cards(deck);
         }
         else

@@ -2,26 +2,27 @@
 //
 
 #include "stdafx.h"
-#include "SPOJ_PALIN.h"
-#include "UVa100.h"
-#include "UVa272.h"
-#include "UVa394.h"
-#include "UVa483.h"
-#include "UVa573.h"
-#include "UVa661.h"
-#include "UVa739.h"
-#include "UVa837.h"
-#include "UVa941.h"
-#include "UVa10082.h"
-#include "UVa10141.h"
-#include "UVa10281.h"
-#include "UVa10363.h"
-#include "UVa10420.h"
-#include "UVa482.h"
-#include "UVa146.h"
-#include "UVa299.h"
-#include "UVa11462.h"
-#include "UVa127.h"
+#include "SPOJ_PALIN.h" // 001
+#include "UVa100.h"     // 002
+#include "UVa272.h"     // 003
+#include "UVa394.h"     // 004
+#include "UVa483.h"     // 005
+#include "UVa573.h"     // 006
+#include "UVa661.h"     // 007
+#include "UVa739.h"     // 008
+#include "UVa837.h"     // 009
+#include "UVa941.h"     // 010
+#include "UVa10082.h"   // 011
+#include "UVa10141.h"   // 012
+#include "UVa10281.h"   // 013
+#include "UVa10363.h"   // 014
+#include "UVa10420.h"   // 015
+#include "UVa482.h"     // 016
+#include "UVa146.h"     // 017
+#include "UVa299.h"     // 018
+#include "UVa11462.h"   // 019
+#include "UVa127.h"     // 020
+#include "UVa336.h"     // 021
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -52,6 +53,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa146();
     // return UVa299();
     // return UVa11462();
-    return UVa127();
+    // return UVa127();
+    return UVa336();
 }
 

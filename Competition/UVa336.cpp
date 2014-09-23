@@ -74,6 +74,7 @@ int UVa336()
         }
 
         // Step 3: Process the queries
+        bool* visited = new bool[number_of_nodes];
         while (true)
         {
             int start_node_number;
@@ -89,8 +90,6 @@ int UVa336()
             int start_node_id = node_number_to_id_map[start_node_number];
             queue<pair<int, int> > bfs_queue;
             bfs_queue.push(pair<int, int>(start_node_id, ttl));
-
-            bool* visited = new bool[number_of_nodes];
             for (int ni = 0; ni < number_of_nodes; ni++)
             {
                 visited[ni] = false;
@@ -125,7 +124,7 @@ int UVa336()
             }
             cout << "Case " << (test_case_id++) << ": " << (number_of_nodes - reachable_node_count) << " nodes not reachable from node " << start_node_number << " with TTL = " << ttl << "." << endl;
         }
-
+        delete[] visited;
         delete[] adjacency_list;
     }
     return 0;

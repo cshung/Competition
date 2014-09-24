@@ -93,6 +93,9 @@
     <ClInclude Include="UVa908.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UVa291.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -168,6 +171,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa908.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa291.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

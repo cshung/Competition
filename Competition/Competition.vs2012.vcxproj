@@ -85,21 +85,27 @@
     <ClInclude Include="UVa100.h" />
     <ClInclude Include="UVa10082.h" />
     <ClInclude Include="UVa10141.h" />
+    <ClInclude Include="UVa10226.h" />
     <ClInclude Include="UVa10281.h" />
     <ClInclude Include="UVa10363.h" />
     <ClInclude Include="UVa10420.h" />
+    <ClInclude Include="UVa11235.h" />
     <ClInclude Include="UVa11462.h" />
     <ClInclude Include="UVa127.h" />
     <ClInclude Include="UVa146.h" />
     <ClInclude Include="UVa272.h" />
+    <ClInclude Include="UVa291.h" />
     <ClInclude Include="UVa299.h" />
+    <ClInclude Include="UVa336.h" />
     <ClInclude Include="UVa394.h" />
+    <ClInclude Include="UVa459.h" />
     <ClInclude Include="UVa482.h" />
     <ClInclude Include="UVa483.h" />
     <ClInclude Include="UVa573.h" />
     <ClInclude Include="UVa661.h" />
     <ClInclude Include="UVa739.h" />
     <ClInclude Include="UVa837.h" />
+    <ClInclude Include="UVa908.h" />
     <ClInclude Include="UVa941.h" />
   </ItemGroup>
   <ItemGroup>
@@ -112,21 +118,27 @@
     <ClCompile Include="UVa100.cpp" />
     <ClCompile Include="UVa10082.cpp" />
     <ClCompile Include="UVa10141.cpp" />
+    <ClCompile Include="UVa10226.cpp" />
     <ClCompile Include="UVa10281.cpp" />
     <ClCompile Include="UVa10363.cpp" />
     <ClCompile Include="UVa10420.cpp" />
+    <ClCompile Include="UVa11235.cpp" />
     <ClCompile Include="UVa11462.cpp" />
     <ClCompile Include="UVa127.cpp" />
     <ClCompile Include="UVa146.cpp" />
     <ClCompile Include="UVa272.cpp" />
+    <ClCompile Include="UVa291.cpp" />
     <ClCompile Include="UVa299.cpp" />
+    <ClCompile Include="UVa336.cpp" />
     <ClCompile Include="UVa394.cpp" />
+    <ClCompile Include="UVa459.cpp" />
     <ClCompile Include="UVa482.cpp" />
     <ClCompile Include="UVa483.cpp" />
     <ClCompile Include="UVa573.cpp" />
     <ClCompile Include="UVa661.cpp" />
     <ClCompile Include="UVa739.cpp" />
     <ClCompile Include="UVa837.cpp" />
+    <ClCompile Include="UVa908.cpp" />
     <ClCompile Include="UVa941.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

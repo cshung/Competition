@@ -106,6 +106,7 @@
     <ClInclude Include="UVa739.h" />
     <ClInclude Include="UVa837.h" />
     <ClInclude Include="UVa908.h" />
+    <ClInclude Include="UVa912.h" />
     <ClInclude Include="UVa941.h" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClCompile Include="UVa739.cpp" />
     <ClCompile Include="UVa837.cpp" />
     <ClCompile Include="UVa908.cpp" />
+    <ClCompile Include="UVa912.cpp" />
     <ClCompile Include="UVa941.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

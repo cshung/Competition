@@ -71,9 +71,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa459();
     // return UVa11235();
     // return UVa912();
-    // return UVa11297(); // Updated to use row/col, still wrong answer?
-    // return UVa10505(); // Changed to use BFS, still hit runtime error?
-    return UVa11503(); // Time limit still exceeded after using scanf and printf
-    // return UVa10928(); // Accepted
+    // return UVa11297();
+    // return UVa10505(); // Added the bad input test changes from runtime error to wrong answer - something must be fishy with bad inputs
+    // return UVa11503(); // Time limit still exceeded after using scanf and printf
+    // return UVa10928();
 }
 

@@ -29,7 +29,10 @@ int UVa10505()
             {
                 int enemy;
                 cin >> enemy;
-                input.push_back(pair<int, int>(i, enemy));
+                if (enemy <= number_of_people) // This should never happen - but who knows - the bipartite condition is broken - this might as well happen.
+                {
+                    input.push_back(pair<int, int>(i, enemy));
+                }
             }
         }
 

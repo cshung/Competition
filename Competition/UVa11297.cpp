@@ -254,6 +254,7 @@ void query_tree(QuadTreeNode* node, int x1, int y1, int x2, int y2, int& minValu
 
 void update_tree(QuadTreeNode* node, int x, int y, int v)
 {
+    // cout << "update_tree (" << node->left_x <<", " << node->upper_y << ") - (" << node->right_x << ", " << node->lower_y << ")" << endl;
     if (node->upper_left != NULL)
     {
         if (node->upper_left->left_x <= x && x < node->upper_left->right_x && node->upper_left->upper_y <= y && y < node->upper_left->lower_y)
@@ -411,7 +412,10 @@ int UVa11297()
             cin >> row;
             cin >> col;
             cin >> v;
+            row--;
+            col--;
             update_tree(root, col, row, v);
+            // print_tree(root, 0);
         }
     }
 

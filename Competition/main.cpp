@@ -29,6 +29,10 @@
 #include "UVa459.h"     // 025
 #include "UVa11235.h"   // 026
 #include "UVa912.h"     // 027
+#include "UVa11297.h"   // 028
+#include "UVa10505.h"   // 029
+#include "UVa11503.h"   // 030
+#include "UVa10928.h"   // 031
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -66,6 +70,10 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa291();
     // return UVa459();
     // return UVa11235();
-    return UVa912();
+    // return UVa912();
+    // return UVa11297(); // Updated to use row/col, still wrong answer?
+    // return UVa10505(); // Changed to use BFS, still hit runtime error?
+    // return UVa11503(); // Time limit still exceeded after using scanf and printf
+    // return UVa10928(); // Accepted
 }
 

@@ -29,7 +29,7 @@ int UVa10505()
             {
                 int enemy;
                 cin >> enemy;
-                if (enemy <= number_of_people) // This should never happen - but who knows - the bipartite condition is broken - this might as well happen.
+                if (1 <= enemy && enemy <= number_of_people) // This should never happen - but who knows - the bipartite condition is broken - this might as well happen.
                 {
                     input.push_back(pair<int, int>(i, enemy));
                 }
@@ -63,6 +63,7 @@ int UVa10505()
                 queue<pair<int, int> > bfsQueue;
                 bfsQueue.push(pair<int, int>(i, 1));
                 visited[i] = 1;
+                bool bad = false;
                 while (bfsQueue.size() > 0)
                 {
                     pair<int, int> visiting = bfsQueue.front();
@@ -84,12 +85,14 @@ int UVa10505()
                         }
                         else if (visited[*ni] == visiting.second)
                         {
-                            trueCount = falseCount = 0;
-                            break;
+                            bad = true;
                         }
                     }
                 }
-                answer += max(trueCount, falseCount);
+                if (!bad)
+                {
+                    answer += max(trueCount, falseCount);
+                }
             }
         }
 

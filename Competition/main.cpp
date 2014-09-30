@@ -72,8 +72,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa11235();
     // return UVa912();
     // return UVa11297();
-    // return UVa10505(); // Added the bad input test changes from runtime error to wrong answer - something must be fishy with bad inputs
-    // return UVa11503(); // Time limit still exceeded after using scanf and printf
-    // return UVa10928();
+    // return UVa10505(); 
+    // return UVa11503();
+    return UVa10928();
 }
 

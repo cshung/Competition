@@ -3,8 +3,6 @@
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2498
 
-// Time limit exceed - need to optimize this code
-
 #include "UVa11503.h"
 
 #include <iostream>
@@ -80,18 +78,25 @@ int UVa11503()
             }
             int root1 = find(social_network, id1);
             int root2 = find(social_network, id2);
-            // Union by size
-            if (social_network[root1] < social_network[root2])
+            if (root1 != root2)
             {
-                social_network[root1] = social_network[root1] + social_network[root2];
-                social_network[root2] = root1;
-                printf("%d\n", -social_network[root1]);
+                // Union by size
+                if (social_network[root1] < social_network[root2])
+                {
+                    social_network[root1] = social_network[root1] + social_network[root2];
+                    social_network[root2] = root1;
+                    printf("%d\n", -social_network[root1]);
+                }
+                else
+                {
+                    social_network[root2] = social_network[root1] + social_network[root2];
+                    social_network[root1] = root2;
+                    printf("%d\n", -social_network[root2]);
+                }
             }
             else
             {
-                social_network[root2] = social_network[root1] + social_network[root2];
-                social_network[root1] = root2;
-                printf("%d\n", -social_network[root2]);
+                printf("%d\n", -social_network[root1]);
             }
         }
     }

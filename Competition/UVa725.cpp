@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2397
+// http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=666
 
 #include "UVa725.h"
 

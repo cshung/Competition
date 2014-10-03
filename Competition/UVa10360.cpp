@@ -20,12 +20,6 @@ struct rat_population
     int size;
 };
 
-/*
- * The inclusive/exclusive bound trick just won't work - leading to stack overflow
- * need the think about the split_value being inclusive to both side
- * and appropriately split the nodes in build tree.
- */
-
 struct kdtree_node
 {
     bool by_x;
@@ -89,7 +83,7 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
             else
             {
                 median_x = x_sorted[half]->x;
-                median_x = x_sorted[half]->y;
+                median_y = x_sorted[half]->y;
             }
             result->split_value = median_x;
             result->by_x = true;
@@ -348,7 +342,7 @@ int UVa10360()
 
         // Step 2.2: Recursively build the tree
         kdtree_node* root = build(x_sorted_rat_populations, y_sorted_rat_populations, true);
-        print_tree(root, 0);
+        // print_tree(root, 0);
 
         // Step 3: Search for answer
         int best_bomb_x = 0;

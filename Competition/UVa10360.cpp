@@ -20,6 +20,8 @@ struct rat_population
     int size;
 };
 
+#ifdef UVa10360_USEKDTREE
+
 struct kdtree_node
 {
     bool by_x;
@@ -423,3 +425,86 @@ int UVa10360()
 
     return 0;
 }
+
+#endif
+
+#ifndef UVa10360_USEKDTREE
+
+int kill[1025][1025];
+
+int UVa10360()
+{
+    int number_of_cases;
+    cin >> number_of_cases;
+    for (int c = 0; c < number_of_cases; c++)
+    {
+        // Step 1: Read input
+        int strength;
+        cin >> strength;
+        int num_rat_populations;
+        cin >> num_rat_populations;
+        list<rat_population*> rat_populations;
+        for (int p = 0; p < num_rat_populations; p++)
+        {
+            rat_population* current_line = new rat_population();
+            cin >> current_line->x;
+            cin >> current_line->y;
+            cin >> current_line->size;
+            rat_populations.push_back(current_line);
+        }
+
+        // Step 2: Build the dead map
+        for (int i = 0; i < 1025; i++)
+        {
+            for (int j = 0; j < 1025; j++)
+            {
+                kill[i][j] = 0;
+            }
+        }
+
+        for (list<rat_population*>::iterator ri = rat_populations.begin(); ri != rat_populations.end(); ri++)
+        {
+            int min_bomb_x = max(0,    (*ri)->x - strength);
+            int min_bomb_y = max(0,    (*ri)->y - strength);
+            int max_bomb_x = min(1024, (*ri)->x + strength);
+            int max_bomb_y = min(1024, (*ri)->y + strength);
+            for (int x = min_bomb_x; x <= max_bomb_x; x++)
+            {
+                for (int y = min_bomb_y; y <= max_bomb_y; y++)
+                {
+                    kill[x][y] += (*ri)->size;
+                }
+            }
+        }
+
+        int max_dead_rats = 0;
+        int best_bomb_x = 0;
+        int best_bomb_y = 0;
+        
+        // Step 3: Search for solution in the dead map
+        for (int x = 0; x < 1025; x++)
+        {
+            for (int y = 0; y < 1025; y++)
+            {
+                if (kill[x][y] > max_dead_rats)
+                {
+                    max_dead_rats = kill[x][y];
+                    best_bomb_x = x;
+                    best_bomb_y = y;
+                }
+            }
+        }
+
+        cout << best_bomb_x << " " << best_bomb_y << " " << max_dead_rats << endl;
+
+        // Step 4: Release dynamically allocated memory
+        for (list<rat_population*>::iterator ri = rat_populations.begin(); ri != rat_populations.end(); ri++)
+        {
+            delete (*ri);
+        }
+    }
+
+    return 0;
+}
+
+#endif

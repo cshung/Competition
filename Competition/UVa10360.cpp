@@ -52,19 +52,20 @@ struct kdtree_node
 
 bool sort_by_x(rat_population* first, rat_population* second)
 {
-    return first->x < second->x;
+    return first->x * 10000 + first->y < second->x * 10000 + second->y;
 }
 
 bool sort_by_y(rat_population* first, rat_population* second)
 {
-    return first->y < second->y;
+    return first->y * 10000 + first->x < second->y * 10000 + second->x;
 }
 
 kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_sorted, bool by_x)
 {
     kdtree_node* result = new kdtree_node();
     int num_points = x_sorted.size();        
-    double median;
+    double median_x;
+    double median_y;
     int half = num_points / 2;
 
     if (num_points == 0)
@@ -82,13 +83,15 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
         {
             if (num_points % 2 == 0)
             {
-                median = (x_sorted[half - 1]->x + x_sorted[half]->x) / 2.0;
+                median_x = (x_sorted[half - 1]->x + x_sorted[half]->x) / 2.0;
+                median_y = (x_sorted[half - 1]->y + x_sorted[half]->y) / 2.0;
             }
             else
             {
-                median = x_sorted[half]->x;
+                median_x = x_sorted[half]->x;
+                median_x = x_sorted[half]->y;
             }
-            result->split_value = median;
+            result->split_value = median_x;
             result->by_x = true;
             vector<rat_population*> left_x_sorted;
             vector<rat_population*> right_x_sorted;
@@ -97,11 +100,15 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
             for (vector<rat_population*>::iterator i = x_sorted.begin(); i != x_sorted.end(); i++)
             {
                 rat_population* current = *i;
-                if (current->x < median)
+                if (current->x < median_x)
                 {
                     left_x_sorted.push_back(current);
                 }
-                else 
+                else if (current->x == median_x && current->y < median_y)
+                {
+                    left_x_sorted.push_back(current);
+                }
+                else
                 {
                     right_x_sorted.push_back(current);
                 }
@@ -109,7 +116,11 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
             for (vector<rat_population*>::iterator i = y_sorted.begin(); i != y_sorted.end(); i++)
             {
                 rat_population* current = *i;
-                if (current->x < median)
+                if (current->x < median_x)
+                {
+                    left_y_sorted.push_back(current);
+                }
+                else if (current->x == median_x && current->y < median_y)
                 {
                     left_y_sorted.push_back(current);
                 }
@@ -125,13 +136,15 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
         {
             if (num_points % 2 == 0)
             {
-                median = (y_sorted[half - 1]->y + y_sorted[half]->y) / 2.0;
+                median_y = (y_sorted[half - 1]->y + y_sorted[half]->y) / 2.0;
+                median_x = (y_sorted[half - 1]->x + y_sorted[half]->x) / 2.0;
             }
             else
             {
-                median = y_sorted[half]->y;
+                median_y = y_sorted[half]->y;
+                median_x = y_sorted[half]->x;
             }
-            result->split_value = median;
+            result->split_value = median_y;
             result->by_x = false;
             vector<rat_population*> left_x_sorted;
             vector<rat_population*> right_x_sorted;
@@ -140,7 +153,11 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
             for (vector<rat_population*>::iterator i = x_sorted.begin(); i != x_sorted.end(); i++)
             {
                 rat_population* current = *i;
-                if (current->y < median)
+                if (current->y < median_y)
+                {
+                    left_x_sorted.push_back(current);
+                }
+                else if (current->y == median_y && current->x < median_x)
                 {
                     left_x_sorted.push_back(current);
                 }
@@ -152,7 +169,11 @@ kdtree_node* build(vector<rat_population*> x_sorted, vector<rat_population*> y_s
             for (vector<rat_population*>::iterator i = y_sorted.begin(); i != y_sorted.end(); i++)
             {
                 rat_population* current = *i;
-                if (current->y < median)
+                if (current->y < median_y)
+                {
+                    left_y_sorted.push_back(current);
+                }
+                else if (current->y == median_y && current->x < median_x)
                 {
                     left_y_sorted.push_back(current);
                 }
@@ -222,7 +243,7 @@ int count(kdtree_node* node, int qMinX, int qMinY, int qMaxX, int qMaxY, int bMi
     {
         if (node->data != NULL)
         {
-            if (qMinX <= node->data->x &&node->data->x < qMaxX && qMinY <= node->data->y &&node->data->y < qMaxY)
+            if (qMinX <= node->data->x &&node->data->x <= qMaxX && qMinY <= node->data->y &&node->data->y <= qMaxY)
             {
                 return node->data->size;
             }
@@ -243,15 +264,17 @@ int count(kdtree_node* node, int qMinX, int qMinY, int qMaxX, int qMaxY, int bMi
         return count(node);
     }
 
-    // When split_value is treated as exclusive upper bound, it should be round up (e.g the set of integers strictly less than 1.5 is the same set of integer strictly less than 2)
-    // When split_value is treated as inclusive lower bound, it should be round up (e.g the set of integers great than or equal to 1.5 is the same set of integer greater than or equals to 2)
-    int split_upper = (int)(node->split_value + 0.5); 
+    // These value matter only if node->split_value is not an integer
+    // When split_value is treated as inclusive upper bound, it should be round down (e.g the set of integers less    than or equal to 1.5 is the same set of integer less    than or equals to 1)
+    // When split_value is treated as inclusive lower bound, it should be round up   (e.g the set of integers greater than or equal to 1.5 is the same set of integer greater than or equals to 2)
+    int split_lower = (int)node->split_value; 
+    int split_upper = (int)(node->split_value + 0.5);
 
     if (node->by_x)
     {
-        if (qMaxX <= split_upper)
+        if (qMaxX <= split_lower)
         {
-            return count(node->left, qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, split_upper, bMaxY);
+            return count(node->left, qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, split_lower, bMaxY);
         }
         else if (qMinX >= split_upper)
         {
@@ -259,16 +282,16 @@ int count(kdtree_node* node, int qMinX, int qMinY, int qMaxX, int qMaxY, int bMi
         }
         else 
         {
-            int leftCount  = count(node->left,  qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, split_upper, bMaxY);
+            int leftCount = count(node->left, qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, split_lower, bMaxY);
             int rightCount = count(node->right, qMinX, qMinY, qMaxX, qMaxY, split_upper, bMinY, bMaxX, bMaxY);
             return leftCount + rightCount;
         }
     }
     else 
     {
-        if (qMaxY <= split_upper)
+        if (qMaxY <= split_lower)
         {
-            return count(node->left,  qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, bMaxX, split_upper);
+            return count(node->left, qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, bMaxX, split_lower);
         }
         else if (qMinY >= split_upper)
         {
@@ -276,7 +299,7 @@ int count(kdtree_node* node, int qMinX, int qMinY, int qMaxX, int qMaxY, int bMi
         }
         else
         {
-            int leftCount  = count(node->left,  qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, bMaxX, split_upper);
+            int leftCount = count(node->left, qMinX, qMinY, qMaxX, qMaxY, bMinX, bMinY, bMaxX, split_lower);
             int rightCount = count(node->right, qMinX, qMinY, qMaxX, qMaxY, bMinX, split_upper, bMaxX, bMaxY);
             return leftCount + rightCount;
         }
@@ -286,9 +309,7 @@ int count(kdtree_node* node, int qMinX, int qMinY, int qMaxX, int qMaxY, int bMi
 
 int count(kdtree_node* root, int minX, int minY, int maxX, int maxY)
 {
-    // The query API is inclusive on both side for simplicity, within the data structure, 
-    // lower bounds are inclusive, upper bounds are exclusive
-    return count(root, minX, minY, maxX + 1, maxY + 1, 0, 0, 1025, 1025);
+    return count(root, minX, minY, maxX, maxY, 0, 0, 1024, 1024);
 }
 
 int UVa10360()
@@ -327,7 +348,7 @@ int UVa10360()
 
         // Step 2.2: Recursively build the tree
         kdtree_node* root = build(x_sorted_rat_populations, y_sorted_rat_populations, true);
-        // print_tree(root, 0);
+        print_tree(root, 0);
 
         // Step 3: Search for answer
         int best_bomb_x = 0;

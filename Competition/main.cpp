@@ -36,6 +36,9 @@
 #include "UVa725.h"     // 032
 #include "UVa750.h"     // 033
 #include "UVa10360.h"   // 034
+#include "UVa524.h"     // 035
+#include "UVa628.h"     // 036
+#include "UVa639.h"     // 037
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -80,6 +83,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa10928();
     // return UVa725();
     // return UVa750();
-    return UVa10360();
+    // return UVa10360();
+    // return UVa524();    // Not submitted yet
+    // return UVa628();    // Not submitted yet
+    return UVa639();    // Not submitted yet
 }
 

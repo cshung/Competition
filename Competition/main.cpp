@@ -84,8 +84,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa725();
     // return UVa750();
     // return UVa10360();
-    // return UVa524();    // Not submitted yet
-    // return UVa628();    // Not submitted yet
-    return UVa639();    // Not submitted yet
+    // return UVa524();
+    return UVa628();    // Wrong answer?
+    // return UVa639();
 }
 

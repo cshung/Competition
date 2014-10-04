@@ -72,6 +72,7 @@ int UVa628()
             cin >> rule;
             rules.push_back(rule);
         }
+        cout << "--" << endl;
         for (list<string>::iterator ri = rules.begin(); ri != rules.end(); ri++)
         {
             list<string> generated;

@@ -135,6 +135,9 @@
     <ClInclude Include="UVa639.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UVa193.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -252,6 +255,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa639.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa193.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

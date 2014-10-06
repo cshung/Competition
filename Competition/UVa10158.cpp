@@ -11,65 +11,145 @@
 
 using namespace std;
 
-struct Partition
+struct partition
 {
-    set<int> left;
-    set<int> right;
+    int left_root;
+    int right_root;
 };
 
-int find(vector<pair<int, Partition*> >& disjoint_sets, int person)
+int find_group_representative(vector<pair<int, partition*> >& related_groups, int person)
 {
-    if (disjoint_sets[person].first < 0)
+    if (related_groups[person].first < 0)
     {
         return person;
     }
     else
     {
-        return (disjoint_sets[person].first = find(disjoint_sets, disjoint_sets[person].first));
+        return (related_groups[person].first = find_group_representative(related_groups, related_groups[person].first));
     }
 }
 
-Partition* merge_same_side(set<int>& one_left_set, set<int>& one_right_set, set<int>& two_left_set, set<int>& two_right_set)
+int find_friend_representative(vector<int>& known_friends, int person)
 {
-    Partition* merged = new Partition();
-    for (set<int>::iterator ol = one_left_set.begin(); ol != one_left_set.end(); ol++)
+    if (known_friends[person] < 0)
     {
-        merged->left.insert(*ol);
+        return person;
     }
-    for (set<int>::iterator or1 = one_right_set.begin(); or1 != one_right_set.end(); or1++)
+    else
     {
-        merged->right.insert(*or1);
+        return (known_friends[person] = find_friend_representative(known_friends, known_friends[person]));
     }
-    for (set<int>::iterator tl = two_left_set.begin(); tl != two_left_set.end(); tl++)
+}
+
+partition* merge_same_side(partition* first, partition* second, vector<int>& known_friends)
+{
+    partition* merged = new partition();
+
+    if (first->left_root == -1)
     {
-        merged->left.insert(*tl);
+        merged->left_root = second->left_root;
     }
-    for (set<int>::iterator tr = two_right_set.begin(); tr != two_right_set.end(); tr++)
+    else if (second->left_root == -1)
     {
-        merged->right.insert(*tr);
+        merged->left_root = first->left_root;
+    }
+    else
+    {
+        // Union-by-size for left
+        if (known_friends[first->left_root] < known_friends[second->left_root])
+        {
+            known_friends[first->left_root] = known_friends[first->left_root] + known_friends[second->left_root];
+            known_friends[second->left_root] = first->left_root;
+            merged->left_root = first->left_root;
+        }
+        else
+        {
+            known_friends[second->left_root] = known_friends[first->left_root] + known_friends[second->left_root];
+            known_friends[first->left_root] = second->left_root;
+            merged->left_root = second->left_root;
+        }
+    }
+
+    if (first->right_root == -1)
+    {
+        merged->right_root = second->right_root;
+    }
+    else if (second->right_root == -1)
+    {
+        merged->right_root = first->right_root;
+    }
+    else
+    {
+        // Union-by-size for right
+        if (known_friends[first->right_root] < known_friends[second->right_root])
+        {
+            known_friends[first->right_root] = known_friends[first->right_root] + known_friends[second->right_root];
+            known_friends[second->right_root] = first->right_root;
+            merged->right_root = first->right_root;
+        }
+        else
+        {
+            known_friends[second->right_root] = known_friends[first->right_root] + known_friends[second->right_root];
+            known_friends[first->right_root] = second->right_root;
+            merged->right_root = second->right_root;
+        }
     }
 
     return merged;
 }
 
-Partition* merge_diff_side(set<int>& one_left_set, set<int>& one_right_set, set<int>& two_left_set, set<int>& two_right_set)
+partition* merge_diff_side(partition* first, partition* second, vector<int>& known_friends)
 {
-    Partition* merged = new Partition();
-    for (set<int>::iterator ol = one_left_set.begin(); ol != one_left_set.end(); ol++)
+    partition* merged = new partition();
+    
+    if (first->left_root == -1)
     {
-        merged->left.insert(*ol);
+        merged->left_root = second->right_root;
     }
-    for (set<int>::iterator or1 = one_right_set.begin(); or1 != one_right_set.end(); or1++)
+    else if (second->right_root == -1)
     {
-        merged->right.insert(*or1);
+        merged->left_root = first->left_root;
     }
-    for (set<int>::iterator tl = two_left_set.begin(); tl != two_left_set.end(); tl++)
+    else
     {
-        merged->right.insert(*tl);
+        // Union-by-size for left
+        if (known_friends[first->left_root] < known_friends[second->right_root])
+        {
+            known_friends[first->left_root] = known_friends[first->left_root] + known_friends[second->right_root];
+            known_friends[second->right_root] = first->left_root;
+            merged->left_root = first->left_root;
+        }
+        else
+        {
+            known_friends[second->right_root] = known_friends[first->left_root] + known_friends[second->right_root];
+            known_friends[first->left_root] = second->right_root;
+            merged->left_root = second->right_root;
+        }
     }
-    for (set<int>::iterator tr = two_right_set.begin(); tr != two_right_set.end(); tr++)
+
+    if (first->right_root == -1)
     {
-        merged->left.insert(*tr);
+        merged->right_root = second->left_root;
+    }
+    else if (second->left_root == -1)
+    {
+        merged->right_root = first->right_root;
+    }
+    else
+    {
+        // Union-by-size for right
+        if (known_friends[first->right_root] < known_friends[second->left_root])
+        {
+            known_friends[first->right_root] = known_friends[first->right_root] + known_friends[second->left_root];
+            known_friends[second->left_root] = first->right_root;
+            merged->right_root = first->right_root;
+        }
+        else
+        {
+            known_friends[second->left_root] = known_friends[first->right_root] + known_friends[second->left_root];
+            known_friends[first->right_root] = second->left_root;
+            merged->right_root = second->left_root;
+        }
     }
 
     return merged;
@@ -79,13 +159,17 @@ int UVa10158()
 {
     int number_of_people;
     cin >> number_of_people;
-    vector<pair<int, Partition*> > disjoint_sets;
-    disjoint_sets.resize(number_of_people);
+    vector<pair<int, partition*> > related_groups;
+    vector<int> known_friends;
+    related_groups.resize(number_of_people);
+    known_friends.resize(number_of_people);
     for (int i = 0; i < number_of_people; i++)
     {
-        disjoint_sets[i].first = -1;
-        disjoint_sets[i].second = new Partition();
-        disjoint_sets[i].second->left.insert(i);
+        related_groups[i].first = -1;
+        related_groups[i].second = new partition();
+        related_groups[i].second->left_root = i;
+        related_groups[i].second->right_root = -1;
+        known_friends[i] = -1;
     }
     while (true)
     {
@@ -99,14 +183,10 @@ int UVa10158()
         {
             break;
         }
-        int root1 = find(disjoint_sets, person1);
-        int root2 = find(disjoint_sets, person2);
-        set<int>& one_left_set = disjoint_sets[root1].second->left;
-        set<int>& one_right_set = disjoint_sets[root1].second->right;
-        set<int>& two_left_set = disjoint_sets[root2].second->left;
-        set<int>& two_right_set = disjoint_sets[root2].second->right;
-        bool oneIsLeft = one_left_set.find(person1) != one_left_set.end();
-        bool twoIsLeft = two_left_set.find(person2) != two_left_set.end();
+        int root1 = find_group_representative(related_groups, person1);
+        int root2 = find_group_representative(related_groups, person2);
+        bool oneIsLeft = find_friend_representative(known_friends, person1) == related_groups[root1].second->left_root;
+        bool twoIsLeft = find_friend_representative(known_friends, person2) == related_groups[root2].second->left_root;
 
         switch(operation_code)
         {
@@ -126,37 +206,36 @@ int UVa10158()
             }
             else
             {
-                Partition* merged = NULL;
+                partition* merged = NULL;
                 if (oneIsLeft == twoIsLeft)
                 {
                     // Now we know they are on the same side
-                    merged = merge_same_side(one_left_set, one_right_set, two_left_set, two_right_set);
-                    
+                    merged = merge_same_side(related_groups[root1].second, related_groups[root2].second, known_friends);
                 }
                 else
                 {
                     // Now we know they are on the different sides
-                    merged = merge_diff_side(one_left_set, one_right_set, two_left_set, two_right_set);
+                    merged = merge_diff_side(related_groups[root1].second, related_groups[root2].second, known_friends);
                 }
 
                 // Union by size
-                if (disjoint_sets[root1].first < disjoint_sets[root2].first)
+                if (related_groups[root1].first < related_groups[root2].first)
                 {
-                    disjoint_sets[root1].first = disjoint_sets[root1].first + disjoint_sets[root2].first;
-                    disjoint_sets[root2].first = root1;
-                    delete disjoint_sets[root1].second;
-                    delete disjoint_sets[root2].second;
-                    disjoint_sets[root1].second = merged;
-                    disjoint_sets[root2].second = NULL;
+                    related_groups[root1].first = related_groups[root1].first + related_groups[root2].first;
+                    related_groups[root2].first = root1;
+                    delete related_groups[root1].second;
+                    delete related_groups[root2].second;
+                    related_groups[root1].second = merged;
+                    related_groups[root2].second = NULL;
                 }
                 else
                 {
-                    disjoint_sets[root2].first = disjoint_sets[root1].first + disjoint_sets[root2].first;
-                    disjoint_sets[root1].first = root2;
-                    delete disjoint_sets[root1].second;
-                    delete disjoint_sets[root2].second;
-                    disjoint_sets[root1].second = NULL;
-                    disjoint_sets[root2].second = merged;
+                    related_groups[root2].first = related_groups[root1].first + related_groups[root2].first;
+                    related_groups[root1].first = root2;
+                    delete related_groups[root1].second;
+                    delete related_groups[root2].second;
+                    related_groups[root1].second = NULL;
+                    related_groups[root2].second = merged;
                 }
             }
             break;
@@ -176,36 +255,36 @@ int UVa10158()
             }
             else
             {
-                Partition* merged = NULL;
+                partition* merged = NULL;
                 if (oneIsLeft == twoIsLeft)
                 {
                     // Now we know they are on different sides
-                    merged = merge_diff_side(one_left_set, one_right_set, two_left_set, two_right_set);
+                    merged = merge_diff_side(related_groups[root1].second, related_groups[root2].second, known_friends);
                 }
                 else
                 {
                     // Now we know they are on the same side
-                    merged = merge_same_side(one_left_set, one_right_set, two_left_set, two_right_set);
+                    merged = merge_same_side(related_groups[root1].second, related_groups[root2].second, known_friends);
                 }
 
                 // Union by size
-                if (disjoint_sets[root1].first < disjoint_sets[root2].first)
+                if (related_groups[root1].first < related_groups[root2].first)
                 {
-                    disjoint_sets[root1].first = disjoint_sets[root1].first + disjoint_sets[root2].first;
-                    disjoint_sets[root2].first = root1;
-                    delete disjoint_sets[root1].second;
-                    delete disjoint_sets[root2].second;
-                    disjoint_sets[root1].second = merged;
-                    disjoint_sets[root2].second = NULL;
+                    related_groups[root1].first = related_groups[root1].first + related_groups[root2].first;
+                    related_groups[root2].first = root1;
+                    delete related_groups[root1].second;
+                    delete related_groups[root2].second;
+                    related_groups[root1].second = merged;
+                    related_groups[root2].second = NULL;
                 }
                 else
                 {
-                    disjoint_sets[root2].first = disjoint_sets[root1].first + disjoint_sets[root2].first;
-                    disjoint_sets[root1].first = root2;
-                    delete disjoint_sets[root1].second;
-                    delete disjoint_sets[root2].second;
-                    disjoint_sets[root1].second = NULL;
-                    disjoint_sets[root2].second = merged;
+                    related_groups[root2].first = related_groups[root1].first + related_groups[root2].first;
+                    related_groups[root1].first = root2;
+                    delete related_groups[root1].second;
+                    delete related_groups[root2].second;
+                    related_groups[root1].second = NULL;
+                    related_groups[root2].second = merged;
                 }
             }
             break;

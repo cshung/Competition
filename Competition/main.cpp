@@ -90,6 +90,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa628();
     // return UVa639();
     // return UVa193();
-    return UVa10158(); // Not submitted yet
+    return UVa10158(); // ... Currently hitting time limit exceeded ...
 }
 

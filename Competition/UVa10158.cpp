@@ -17,7 +17,7 @@ struct Partition
     set<int> right;
 };
 
-int find(vector<pair<int, Partition*>>& disjoint_sets, int person)
+int find(vector<pair<int, Partition*> >& disjoint_sets, int person)
 {
     if (disjoint_sets[person].first < 0)
     {
@@ -36,9 +36,9 @@ Partition* merge_same_side(set<int>& one_left_set, set<int>& one_right_set, set<
     {
         merged->left.insert(*ol);
     }
-    for (set<int>::iterator or = one_right_set.begin(); or != one_right_set.end(); or++)
+    for (set<int>::iterator or1 = one_right_set.begin(); or1 != one_right_set.end(); or1++)
     {
-        merged->right.insert(*or);
+        merged->right.insert(*or1);
     }
     for (set<int>::iterator tl = two_left_set.begin(); tl != two_left_set.end(); tl++)
     {
@@ -59,9 +59,9 @@ Partition* merge_diff_side(set<int>& one_left_set, set<int>& one_right_set, set<
     {
         merged->left.insert(*ol);
     }
-    for (set<int>::iterator or = one_right_set.begin(); or != one_right_set.end(); or++)
+    for (set<int>::iterator or1 = one_right_set.begin(); or1 != one_right_set.end(); or1++)
     {
-        merged->right.insert(*or);
+        merged->right.insert(*or1);
     }
     for (set<int>::iterator tl = two_left_set.begin(); tl != two_left_set.end(); tl++)
     {
@@ -79,7 +79,7 @@ int UVa10158()
 {
     int number_of_people;
     cin >> number_of_people;
-    vector<pair<int, Partition*>> disjoint_sets;
+    vector<pair<int, Partition*> > disjoint_sets;
     disjoint_sets.resize(number_of_people);
     for (int i = 0; i < number_of_people; i++)
     {

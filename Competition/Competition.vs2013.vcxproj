@@ -124,6 +124,7 @@
     <ClInclude Include="UVa908.h" />
     <ClInclude Include="UVa912.h" />
     <ClInclude Include="UVa941.h" />
+    <ClInclude Include="UVa957.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -174,6 +175,7 @@
     <ClCompile Include="UVa908.cpp" />
     <ClCompile Include="UVa912.cpp" />
     <ClCompile Include="UVa941.cpp" />
+    <ClCompile Include="UVa957.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

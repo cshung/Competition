@@ -45,6 +45,7 @@
 #include "UVa679.h"     // 041
 #include "UVa714.h"     // 042
 #include "SPOJ_TEST.h"  // 043
+#include "UVa957.h"     // 044
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -98,6 +99,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa11242();
     // return UVa679();
     // return UVa714();
-    return SPOJ_TEST();
+    // return SPOJ_TEST();
+    return UVa957();
 }
 

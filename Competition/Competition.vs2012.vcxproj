@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SPOJ_PALIN.h" />
+    <ClInclude Include="SPOJ_TEST.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UVa100.h" />
@@ -114,6 +115,8 @@
     <ClInclude Include="UVa628.h" />
     <ClInclude Include="UVa639.h" />
     <ClInclude Include="UVa661.h" />
+    <ClInclude Include="UVa679.h" />
+    <ClInclude Include="UVa714.h" />
     <ClInclude Include="UVa725.h" />
     <ClInclude Include="UVa739.h" />
     <ClInclude Include="UVa750.h" />
@@ -121,10 +124,12 @@
     <ClInclude Include="UVa908.h" />
     <ClInclude Include="UVa912.h" />
     <ClInclude Include="UVa941.h" />
+    <ClInclude Include="UVa957.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_PALIN.cpp" />
+    <ClCompile Include="SPOJ_TEST.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -161,6 +166,8 @@
     <ClCompile Include="UVa628.cpp" />
     <ClCompile Include="UVa639.cpp" />
     <ClCompile Include="UVa661.cpp" />
+    <ClCompile Include="UVa679.cpp" />
+    <ClCompile Include="UVa714.cpp" />
     <ClCompile Include="UVa725.cpp" />
     <ClCompile Include="UVa739.cpp" />
     <ClCompile Include="UVa750.cpp" />
@@ -168,6 +175,7 @@
     <ClCompile Include="UVa908.cpp" />
     <ClCompile Include="UVa912.cpp" />
     <ClCompile Include="UVa941.cpp" />
+    <ClCompile Include="UVa957.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

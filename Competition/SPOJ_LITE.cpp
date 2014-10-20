@@ -18,6 +18,9 @@ const int right_too_heavy = -2;
 const int bias_left = 1;
 const int bias_right = -1;
 
+const int intMin = -2147483647;
+const int intMax = 2147483647;
+
 class SegmentTree
 {
 public:
@@ -55,8 +58,12 @@ private:
         int from;
         int to;
 
+        // Summaries for sub-tree
         int subtree_from;
         int subtree_to;
+        int finite_segment_count;
+        int even_segment_length;
+        int odd_segment_length;
     };
 
     void insert_elementary_interval(int from, int to);
@@ -138,6 +145,53 @@ void SegmentTree::SegmentTreeNode::summarize()
 {
     this->subtree_from = this->left == NULL ? this->from : this->left->subtree_from;
     this->subtree_to = this->right == NULL ? this->to : this->right->subtree_to;
+
+    if (this->from == intMin || this->to == intMax)
+    {
+        this->finite_segment_count = 0;
+    }
+    else
+    {
+        this->finite_segment_count = 1;
+        if (this->left != NULL)
+        {
+            this->finite_segment_count += this->left->finite_segment_count;
+        }
+        if (this->right != NULL)
+        {
+            this->finite_segment_count += this->right->finite_segment_count;
+        }
+    }
+
+    bool middle_is_even = true;
+    this->even_segment_length = 0;
+    if (this->left != NULL)
+    {
+        this->even_segment_length += this->left->even_segment_length;
+        this->odd_segment_length += this->left->odd_segment_length;
+        middle_is_even = this->left->finite_segment_count % 2 == 0;
+    }
+    if (middle_is_even)
+    {
+        this->even_segment_length += this->to - this->from;
+    }
+    else 
+    {
+        this->odd_segment_length += this->to - this->from;
+    }
+    if (this->right != NULL)
+    {
+        if (middle_is_even)
+        {
+            this->odd_segment_length += this->right->even_segment_length;
+            this->even_segment_length += this->right->odd_segment_length;
+        }
+        else
+        {
+            this->even_segment_length += this->right->even_segment_length;
+            this->odd_segment_length += this->right->odd_segment_length;
+        }
+    }
 }
 
 void SegmentTree::SegmentTreeNode::print(int indent)
@@ -148,7 +202,7 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
     if (this != NULL)
     {
-        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ")" << endl;
+        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments" << endl;
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }
@@ -161,7 +215,7 @@ void SegmentTree::SegmentTreeNode::print(int indent)
 SegmentTree::SegmentTree()
 {
     // TODO: replace these values with actual infinity
-    this->root = new SegmentTreeNode(-100, +100);
+    this->root = new SegmentTreeNode(intMin, intMax);
 }
 
 SegmentTree::~SegmentTree()

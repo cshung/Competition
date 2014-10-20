@@ -27,6 +27,7 @@ public:
     SegmentTree();
     ~SegmentTree();
     void insert_interval(int from, int to);
+    void query(int from, int to);
     // Debug only
     void print();
 private:
@@ -37,6 +38,8 @@ private:
         ~SegmentTreeNode();
         int get_from() const;
         int get_to() const;
+        int get_subtree_from() const;
+        int get_subtree_to() const;
         void set_interval(int from, int to);
         SegmentTreeNode* get_left() const;
         SegmentTreeNode* get_right() const;
@@ -98,6 +101,15 @@ int SegmentTree::SegmentTreeNode::get_from() const
 int SegmentTree::SegmentTreeNode::get_to() const
 {
     return this->to;
+}
+int SegmentTree::SegmentTreeNode::get_subtree_from() const
+{
+    return this->subtree_from;
+}
+
+int SegmentTree::SegmentTreeNode::get_subtree_to() const
+{
+    return this->subtree_to;
 }
 
 void SegmentTree::SegmentTreeNode::set_interval(int from, int to)
@@ -221,7 +233,6 @@ void SegmentTree::SegmentTreeNode::print(int indent)
 
 SegmentTree::SegmentTree()
 {
-    // TODO: replace these values with actual infinity
     this->root = new SegmentTreeNode(intMin, intMax);
 }
 
@@ -248,18 +259,9 @@ void SegmentTree::split_elementary_interval(SegmentTree::SegmentTreeNode* interv
 {
     int from = interval_to_split->get_from();
     int to = interval_to_split->get_to();
-    cout << "---------------------------------" << endl;
-    cout << "delete [" << interval_to_split->get_from() << ", " << interval_to_split->get_to() << ")" << endl;
     this->delete_elementary_interval(interval_to_split);
-    this->print();
-    cout << "---------------------------------" << endl;
-    cout << "insert [" << from << ", " << splitting_value << ")" << endl;
     this->insert_elementary_interval(from, splitting_value);
-    this->print();
-    cout << "---------------------------------" << endl;
-    cout << "insert [" << splitting_value << ", " << to << ")" << endl;
     this->insert_elementary_interval(splitting_value, to);
-    this->print();
 }
 
 void SegmentTree::insert_elementary_interval(int from, int to)
@@ -707,6 +709,7 @@ SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
         throw 11;
     }
     SegmentTree::SegmentTreeNode* cursor = root;
+
     while (true)
     {
         if (cursor == NULL)
@@ -737,11 +740,71 @@ void SegmentTree::print()
     this->root->print(0);
 }
 
+void SegmentTree::query(int query_from, int query_to)
+{
+    SegmentTreeNode* from_cursor = this->root;
+    SegmentTreeNode* to_cursor = this->root;
+    SegmentTreeNode* split_node = NULL;
+    bool from_found = false;
+    bool to_found = false;
+    while (!from_found || !to_found)
+    {
+        if (from_cursor == to_cursor)
+        {
+            split_node = from_cursor;
+        }
+
+        if (!from_found)
+        {
+            if (query_from < from_cursor->get_from())
+            {
+                from_cursor = from_cursor->get_left();
+            }
+            else if (query_from >= from_cursor->get_to())
+            {
+                from_cursor = from_cursor->get_right();
+            }
+            else
+            {
+                from_found = true;
+            }
+        }
+
+        if (!to_found)
+        {
+            if (query_to < to_cursor->get_from())
+            {
+                to_cursor = to_cursor->get_left();
+            }
+            else if (query_to >= to_cursor->get_to())
+            {
+                to_cursor = to_cursor->get_right();
+            }
+            else 
+            {
+                to_found = true;
+            }
+        }
+    }
+
+    cout << "From" << endl;
+    cout << from_cursor->get_from() << ", " << from_cursor->get_to() << endl;
+
+    cout << "To" << endl;
+    cout << to_cursor->get_from() << ", " << to_cursor->get_to() << endl;
+
+    cout << "Split" << endl;
+    cout << split_node->get_from() << ", " << split_node->get_to() << endl;
+
+    // Walk backward from the from/to node going back to the split node - join the paths - and find the final result
+}
+
 int SPOJ_LITE()
 {
     SegmentTree tree;
     tree.insert_interval(1, 5);
     tree.insert_interval(3, 7);
-
+    tree.query(2, 6);
+    // tree.print();
     return 0;
 }

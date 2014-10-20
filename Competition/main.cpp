@@ -46,6 +46,7 @@
 #include "UVa714.h"     // 042
 #include "SPOJ_TEST.h"  // 043
 #include "UVa957.h"     // 044
+#include "SPOJ_LITE.h"  // 045
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -100,6 +101,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa679();
     // return UVa714();
     // return SPOJ_TEST();
-    return UVa957();
+    // return UVa957();
+    return SPOJ_LITE();
 }
 

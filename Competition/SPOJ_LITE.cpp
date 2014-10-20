@@ -165,6 +165,7 @@ void SegmentTree::SegmentTreeNode::summarize()
 
     bool middle_is_even = true;
     this->even_segment_length = 0;
+    this->odd_segment_length = 0;
     if (this->left != NULL)
     {
         this->even_segment_length += this->left->even_segment_length;
@@ -173,11 +174,17 @@ void SegmentTree::SegmentTreeNode::summarize()
     }
     if (middle_is_even)
     {
-        this->even_segment_length += this->to - this->from;
+        if (this->from != intMin && this->to != intMax)
+        {
+            this->even_segment_length += this->to - this->from;
+        }
     }
     else 
     {
-        this->odd_segment_length += this->to - this->from;
+        if (this->from != intMin && this->to != intMax)
+        {
+            this->odd_segment_length += this->to - this->from;
+        }
     }
     if (this->right != NULL)
     {
@@ -202,7 +209,7 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
     if (this != NULL)
     {
-        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments" << endl;
+        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// TODO
+// http://www.spoj.com/problems/LITE/
 
 #include "SPOJ_LITE.h"
 
@@ -23,10 +23,7 @@ class SegmentTree
 public:
     SegmentTree();
     ~SegmentTree();
-    // Should be private
-    void insert_elementary_interval(int from, int to);
-    // Should be private
-    void delete_containing_interval(int value);
+    void insert_interval(int from, int to);
     // Debug only
     void print();
 private:
@@ -62,10 +59,12 @@ private:
         int subtree_to;
     };
 
-
+    void insert_elementary_interval(int from, int to);
+    void delete_elementary_interval(SegmentTreeNode* interval_to_delete);
+    void split_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_split, int splitting_value);
     pair<SegmentTreeNode*, int> insert_elementary_interval(SegmentTreeNode* current_node, int from, int to);
     SegmentTreeNode* find_containing_interval(int value);
-    pair<SegmentTreeNode*, int> delete_leaf_node(SegmentTreeNode* current_node, SegmentTreeNode* toDelete);
+    pair<SegmentTreeNode*, int> delete_easy_node(SegmentTreeNode* current_node, SegmentTreeNode* toDelete);
 
     pair<SegmentTree::SegmentTreeNode*, int> rotate_left(SegmentTreeNode* current_node);
     pair<SegmentTree::SegmentTreeNode*, int> rotate_right(SegmentTreeNode* current_node);
@@ -80,16 +79,8 @@ SegmentTree::SegmentTreeNode::SegmentTreeNode(int from, int to) : from(from), to
 
 SegmentTree::SegmentTreeNode::~SegmentTreeNode()
 {
-    if (this->left != NULL)
-    {
-        delete this->left;
-        this->left = NULL;
-    }
-    if (this->right != NULL)
-    {
-        delete this->right;
-        this->right = NULL;
-    }
+    // Since we need to delete a node without releasing the whole tree
+    // Deletion of the left/right subtrees is left to the tree itself
 }
 
 int SegmentTree::SegmentTreeNode::get_from() const
@@ -145,8 +136,8 @@ void SegmentTree::SegmentTreeNode::set_right(SegmentTree::SegmentTreeNode* right
 
 void SegmentTree::SegmentTreeNode::summarize()
 {
-    this->subtree_from = this->from;
-    this->subtree_to = this->to;
+    this->subtree_from = this->left == NULL ? this->from : this->left->subtree_from;
+    this->subtree_to = this->right == NULL ? this->to : this->right->subtree_to;
 }
 
 void SegmentTree::SegmentTreeNode::print(int indent)
@@ -157,7 +148,7 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
     if (this != NULL)
     {
-        cout << "[" << this->from << ", " << this->to << ")" << endl;
+        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ")" << endl;
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }
@@ -167,17 +158,47 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
 }
 
-SegmentTree::SegmentTree() : root(NULL)
+SegmentTree::SegmentTree()
 {
+    // TODO: replace these values with actual infinity
+    this->root = new SegmentTreeNode(-100, +100);
 }
 
 SegmentTree::~SegmentTree()
 {
+    // TODO: Delete the whole tree!
     if (this->root != NULL)
     {
         delete this->root;
         this->root = NULL;
     }
+}
+
+void SegmentTree::insert_interval(int from, int to)
+{
+    // TODO: Fix the assumption that the endpoints is disjoint
+    SegmentTree::SegmentTreeNode* from_containing_interval = this->find_containing_interval(from);
+    this->split_elementary_interval(from_containing_interval, from);
+    SegmentTree::SegmentTreeNode* to_containing_interval = this->find_containing_interval(to);
+    this->split_elementary_interval(to_containing_interval, to);
+}
+
+void SegmentTree::split_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_split, int splitting_value)
+{
+    int from = interval_to_split->get_from();
+    int to = interval_to_split->get_to();
+    cout << "---------------------------------" << endl;
+    cout << "delete [" << interval_to_split->get_from() << ", " << interval_to_split->get_to() << ")" << endl;
+    this->delete_elementary_interval(interval_to_split);
+    this->print();
+    cout << "---------------------------------" << endl;
+    cout << "insert [" << from << ", " << splitting_value << ")" << endl;
+    this->insert_elementary_interval(from, splitting_value);
+    this->print();
+    cout << "---------------------------------" << endl;
+    cout << "insert [" << splitting_value << ", " << to << ")" << endl;
+    this->insert_elementary_interval(splitting_value, to);
+    this->print();
 }
 
 void SegmentTree::insert_elementary_interval(int from, int to)
@@ -195,10 +216,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
     {
         if (to <= current_node->get_from())
         {
-            pair<SegmentTree::SegmentTreeNode*, int> left_result = insert_elementary_interval(current_node->get_left(), from, to);
-            SegmentTree::SegmentTreeNode* left_subtree_root = left_result.first;
-            int left_height_change = left_result.second;
-            current_node->set_left(left_result.first);
+            pair<SegmentTree::SegmentTreeNode*, int> left_insertion_result = insert_elementary_interval(current_node->get_left(), from, to);
+            SegmentTree::SegmentTreeNode* left_subtree_root = left_insertion_result.first;
+            int left_height_change = left_insertion_result.second;
+            current_node->set_left(left_subtree_root);
             if (left_height_change == 1)
             {
                 int result_height_change = 1;
@@ -223,15 +244,20 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
             }
             else
             {
-                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 1);
+                if (left_height_change != 0)
+                {
+                    throw 15;
+                }
+
+                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
             }
         }
         else if (from >= current_node->get_to())
         {
-            pair<SegmentTree::SegmentTreeNode*, int> right_result = insert_elementary_interval(current_node->get_right(), from, to);
-            SegmentTree::SegmentTreeNode* right_subtree_root = right_result.first;
-            int right_height_change = right_result.second;
-            current_node->set_right(right_result.first);
+            pair<SegmentTree::SegmentTreeNode*, int> right_insertion_result = insert_elementary_interval(current_node->get_right(), from, to);
+            SegmentTree::SegmentTreeNode* right_subtree_root = right_insertion_result.first;
+            int right_height_change = right_insertion_result.second;
+            current_node->set_right(right_subtree_root);
             if (right_height_change == 1)
             {
                 int result_height_change = 1;
@@ -256,7 +282,12 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
             }
             else
             {
-                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 1);
+                if (right_height_change != 0)
+                {
+                    throw 15;
+                }
+
+                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
             }
         }
         else
@@ -266,19 +297,16 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
     }
 }
 
-void SegmentTree::delete_containing_interval(int value)
+void SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_delete)
 {
-    // Step 1: Find the containing interval
-    SegmentTree::SegmentTreeNode* containing_interval = this->find_containing_interval(value);
-
-    // Step 2: Find the leaf node to delete
+    // Step 1: Find the leaf node to delete
     int replace_from;
     int replace_to;
     bool need_replace = false;
-    SegmentTree::SegmentTreeNode* leaf_node_to_delete = containing_interval;
-    if (containing_interval->get_left() != NULL && containing_interval->get_right() != NULL)
+    SegmentTree::SegmentTreeNode* leaf_node_to_delete = interval_to_delete;
+    if (interval_to_delete->get_left() != NULL && interval_to_delete->get_right() != NULL)
     {
-        leaf_node_to_delete = containing_interval->get_right();
+        leaf_node_to_delete = interval_to_delete->get_right();
         while (leaf_node_to_delete->get_left() != NULL)
         {
             leaf_node_to_delete = leaf_node_to_delete->get_left();
@@ -288,36 +316,105 @@ void SegmentTree::delete_containing_interval(int value)
         replace_to = leaf_node_to_delete->get_to();
     }
 
-    // Step 3: Delete the leaf node recursively
-    this->root = this->delete_leaf_node(this->root, leaf_node_to_delete).first;
+    // Step 2: Delete the node without two children recursively
+    this->root = this->delete_easy_node(this->root, leaf_node_to_delete).first;
 
-    // Step 4: Replace values
+    // Step 3: Replace values
     if (need_replace)
     {
-        containing_interval->set_interval(replace_from, replace_to);
+        interval_to_delete->set_interval(replace_from, replace_to);
     }
 }
 
-pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_leaf_node(SegmentTree::SegmentTreeNode* current_node, SegmentTree::SegmentTreeNode* to_delete)
+pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTree::SegmentTreeNode* current_node, SegmentTree::SegmentTreeNode* to_delete)
 {
     if (current_node == to_delete)
     {
+        SegmentTree::SegmentTreeNode* next = to_delete->get_left();
+        if (next == NULL)
+        {
+            next = to_delete->get_right();
+        }
         delete to_delete;
-        return pair<SegmentTree::SegmentTreeNode*, int>(NULL, -1);
+        return pair<SegmentTree::SegmentTreeNode*, int>(next, -1);
     }
     else
     {
         if (to_delete->get_to() <= current_node->get_from())
         {
-            // TODO: Rotation!
-            current_node->set_left(this->delete_leaf_node(current_node->get_left(), to_delete).first);
-            return pair<SegmentTree::SegmentTreeNode*, int>(current_node, -1);
+            pair<SegmentTree::SegmentTreeNode*, int> left_deletion_result = this->delete_easy_node(current_node->get_left(), to_delete);
+            SegmentTree::SegmentTreeNode* left_subtree_root = left_deletion_result.first;
+            int left_height_change = left_deletion_result.second;
+            current_node->set_left(left_subtree_root);
+            if (left_height_change == -1)
+            {
+                int result_height_change = -1;
+                current_node->balance -= bias_left;
+                if (current_node->balance == right_too_heavy)
+                {
+                    if (left_subtree_root->balance == left_heavy)
+                    {
+                        pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_right(left_subtree_root);
+                        if (right_rotation_result.second != 0)
+                        {
+                            throw 1;
+                        }
+                        current_node->set_left(right_rotation_result.first);
+                    }
+                    pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_left(current_node);
+                    result_height_change += right_rotation_result.second;
+                    current_node = right_rotation_result.first;
+                }
+
+                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, result_height_change);
+            }
+            else
+            {
+                if (left_height_change != 0)
+                {
+                    throw 15;
+                }
+
+                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
+            }
         }
         else if (current_node->get_to() <= to_delete->get_from())
         {
-            // TODO: Rotation!
-            current_node->set_right(this->delete_leaf_node(current_node->get_right(), to_delete).first);
-            return pair<SegmentTree::SegmentTreeNode*, int>(current_node, -1);
+            pair<SegmentTree::SegmentTreeNode*, int> right_deletion_result = this->delete_easy_node(current_node->get_right(), to_delete);
+            SegmentTree::SegmentTreeNode* right_subtree_root = right_deletion_result.first;
+            int right_height_change = right_deletion_result.second;
+            current_node->set_right(right_subtree_root);
+            if (right_height_change == -1)
+            {
+                int result_height_change = -1;
+                current_node->balance -= bias_right;
+                if (current_node->balance == left_too_heavy)
+                {
+                    if (right_subtree_root->balance == right_heavy)
+                    {
+                        pair<SegmentTree::SegmentTreeNode*, int> left_rotation_result = this->rotate_left(right_subtree_root);
+                        if (left_rotation_result.second != 0)
+                        {
+                            throw 1;
+                        }
+                        current_node->set_right(left_rotation_result.first);
+                    }
+                    pair<SegmentTree::SegmentTreeNode*, int> left_rotation_result = this->rotate_right(current_node);
+                    result_height_change += left_rotation_result.second;
+                    current_node = left_rotation_result.first;
+                }
+
+                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, result_height_change);
+            }
+            else
+            {
+                if (right_height_change != 0)
+                {
+                    throw 15;
+                }
+
+                return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
+            }
         }
         else
         {
@@ -582,11 +679,8 @@ void SegmentTree::print()
 int SPOJ_LITE()
 {
     SegmentTree tree;
-    tree.insert_elementary_interval(1, 5);
-    tree.insert_elementary_interval(10, 15);
-    tree.insert_elementary_interval(5, 10);
-    tree.delete_containing_interval(7);
+    tree.insert_interval(1, 5);
+    tree.insert_interval(3, 7);
 
-    tree.print();
     return 0;
 }

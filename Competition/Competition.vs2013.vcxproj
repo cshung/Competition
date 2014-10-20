@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SPOJ_LITE.h" />
     <ClInclude Include="SPOJ_PALIN.h" />
     <ClInclude Include="SPOJ_TEST.h" />
     <ClInclude Include="stdafx.h" />
@@ -128,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SPOJ_LITE.cpp" />
     <ClCompile Include="SPOJ_PALIN.cpp" />
     <ClCompile Include="SPOJ_TEST.cpp" />
     <ClCompile Include="stdafx.cpp">

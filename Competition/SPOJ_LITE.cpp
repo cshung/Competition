@@ -6,6 +6,8 @@
 
 #include <iostream>
 #include <map>
+#include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -18,8 +20,8 @@ const int right_too_heavy = -2;
 const int bias_left = 1;
 const int bias_right = -1;
 
-const int intMin = -2147483647;
 const int intMax = 2147483647;
+const int intMin = ~intMax;
 
 class SegmentTree
 {
@@ -43,6 +45,8 @@ private:
         void set_interval(int from, int to);
         SegmentTreeNode* get_left() const;
         SegmentTreeNode* get_right() const;
+        SegmentTreeNode* get_parent() const;
+
         void set_left(SegmentTreeNode* left);
         void set_right(SegmentTreeNode* right);
 
@@ -133,6 +137,11 @@ SegmentTree::SegmentTreeNode* SegmentTree::SegmentTreeNode::get_right() const
     return this->right;
 }
 
+SegmentTree::SegmentTreeNode* SegmentTree::SegmentTreeNode::get_parent() const
+{
+    return this->parent;
+}
+
 void SegmentTree::SegmentTreeNode::set_left(SegmentTree::SegmentTreeNode* left) 
 {
     this->left = left;
@@ -221,7 +230,8 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
     if (this != NULL)
     {
-        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
+        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << endl;
+//            << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }
@@ -251,17 +261,26 @@ void SegmentTree::insert_interval(int from, int to)
     // TODO: Fix the assumption that the endpoints is disjoint
     SegmentTree::SegmentTreeNode* from_containing_interval = this->find_containing_interval(from);
     this->split_elementary_interval(from_containing_interval, from);
-    SegmentTree::SegmentTreeNode* to_containing_interval = this->find_containing_interval(to);
-    this->split_elementary_interval(to_containing_interval, to);
+    SegmentTree::SegmentTreeNode* to_containing_interval = this->find_containing_interval(to + 1);
+    this->split_elementary_interval(to_containing_interval, to + 1);
 }
 
 void SegmentTree::split_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_split, int splitting_value)
 {
     int from = interval_to_split->get_from();
     int to = interval_to_split->get_to();
+    cout << "---------------------------------------------------------------------------------------" << endl;
+    cout << "Delete [" << from << ", " << to << ")" << endl;
     this->delete_elementary_interval(interval_to_split);
+    this->print();
+    cout << "---------------------------------------------------------------------------------------" << endl;
+    cout << "Insert [" << from << ", " << splitting_value << ")" << endl;
     this->insert_elementary_interval(from, splitting_value);
+    this->print();
+    cout << "---------------------------------------------------------------------------------------" << endl;
+    cout << "Insert [" << splitting_value << ", " << to << ")" << endl;
     this->insert_elementary_interval(splitting_value, to);
+    this->print();
 }
 
 void SegmentTree::insert_elementary_interval(int from, int to)
@@ -740,6 +759,24 @@ void SegmentTree::print()
     this->root->print(0);
 }
 
+// The idea of query is as follow
+//
+// First, find a path from the interval node containing from going to the other interval node containing to.
+//        that a path exist and is unique is because this is a tree with all elementary intervals
+//
+// Second, from a path, we can read out a sequence of number a follow:
+//        for a node on the path, we read out the from and to
+//        for an edge on the path which is a left tree edge, we read out the to of the child node and the from of the parent node
+//        similarily, for an edge on the path which is a right tree edge, we read out the from of the child node and the to of the parent node
+//        naturally, this numbers are connected. 
+//        We simply concatenate the summaries.
+//
+// Third, the key observation is that the edge is already summarized! 
+//        The summary of a left edge is the value of the right child of the child node of the edge.
+//        The summary of a right edge is the value of the left child of the child node of the edge.
+//
+// Last but not least, we need to figure out whether an interval is on or off, that is determined by its rank in the tree
+//
 void SegmentTree::query(int query_from, int query_to)
 {
     SegmentTreeNode* from_cursor = this->root;
@@ -787,24 +824,39 @@ void SegmentTree::query(int query_from, int query_to)
         }
     }
 
-    cout << "From" << endl;
-    cout << from_cursor->get_from() << ", " << from_cursor->get_to() << endl;
-
-    cout << "To" << endl;
-    cout << to_cursor->get_from() << ", " << to_cursor->get_to() << endl;
-
-    cout << "Split" << endl;
-    cout << split_node->get_from() << ", " << split_node->get_to() << endl;
-
-    // Walk backward from the from/to node going back to the split node - join the paths - and find the final result
+    stack<SegmentTree::SegmentTreeNode*> right_path;
+    vector<SegmentTree::SegmentTreeNode*> path;
+    while (from_cursor != split_node)
+    {
+        path.push_back(from_cursor);
+        from_cursor = from_cursor->get_parent();
+    }
+    path.push_back(split_node);
+    while (to_cursor != split_node)
+    {
+        right_path.push(to_cursor);
+        to_cursor = to_cursor->get_parent();
+    }
+    while (right_path.size() > 0)
+    {
+        path.push_back(right_path.top());
+        right_path.pop();
+    }
+    cout << "Path" << endl;
+    for (vector<SegmentTree::SegmentTreeNode*>::iterator pi = path.begin(); pi != path.end(); pi++)
+    {
+        cout << (*pi)->get_from() << ", " << (*pi)->get_to() << endl;
+    }
 }
 
 int SPOJ_LITE()
 {
     SegmentTree tree;
-    tree.insert_interval(1, 5);
-    tree.insert_interval(3, 7);
-    tree.query(2, 6);
-    // tree.print();
+    // Ooops, we have a rotation bug with this insertion sequence
+    tree.insert_interval(1, 7);
+    tree.insert_interval(3, 9);
+    tree.insert_interval(5, 11);
+    tree.query(2, 10);
+    tree.print();
     return 0;
 }

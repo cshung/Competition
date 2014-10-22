@@ -543,7 +543,20 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         // d was right too heavy
         // Therefore, the height of b was h - 1 (because d was right too heavy)
         //            the height of e was h - 3 (because d was right too heavy)
-        if (b->balance == right_heavy)
+        if (b->balance == right_too_heavy)
+        {
+            // Now we further know 
+            // the height of a is h - 2 (b was right too heavy)
+            // the height of c is h - 4 (b was right too heavy)
+            // 
+            // Therefore, after change
+            // d is left heavy (c is h - 4 and e is h - 3), and therefore the height of d is h - 2
+            // b is balance (a and d are both h - 2), and therefore the height of b is h - 1
+            d->balance = left_heavy;
+            b->balance = balance;
+            return pair<SegmentTree::SegmentTreeNode*, int>(b, -1);
+        }
+        else if (b->balance == right_heavy)
         {
             // Now we further know 
             // the height of a is h - 2 (b is right heavy)
@@ -582,8 +595,8 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         if (b->balance == right_heavy)
         {
             // Now we further know 
-            // the height of a is h - 2 (b is right heavy)
-            // the height of c is h - 3 (b is right heavy)
+            // the height of a is h - 2 (b was right heavy)
+            // the height of c is h - 3 (b was right heavy)
             // 
             // Therefore, after change
             // d is left heavy (c is h - 3 and e is h - 2), and therefore the height of d is h - 1
@@ -605,11 +618,20 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
             b->balance = left_heavy;
             return pair<SegmentTree::SegmentTreeNode*, int>(b, 0);
         }
-        else
+        else if (b->balance == left_heavy)
         {
-            throw 9;
+            // Now we further know 
+            // the height of a is h - 3 (b was left heavy)
+            // the height of c is h - 2 (b was left heavy)
+            // 
+            // Therefore, after change
+            // d is balance (both c and e are h - 2), and therefore the height of d is h - 1
+            // b is balance (a is h - 3 and d is h - 1), and therefore the height of b is h
+            d->balance = balance;
+            b->balance = left_too_heavy;
+            return pair<SegmentTree::SegmentTreeNode*, int>(b, 0);
         }
-    }    
+    }
     throw 10;
 }
 
@@ -651,7 +673,20 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         // d was left too heavy
         // Therefore, the height of b was h - 1 (because d was left too heavy)
         //            the height of e was h - 3 (because d was left too heavy)
-        if (b->balance == left_heavy)
+        if (b->balance == left_too_heavy)
+        {
+            // Now we further know 
+            // the height of a is h - 2 (b was left too heavy)
+            // the height of c is h - 4 (b was left too heavy)
+            // 
+            // Therefore, after change
+            // d is right heavy (c is h - 4 and e is h - 3), and therefore the height of d is h - 2
+            // b is balance (a and d are both h - 2), and therefore the height of b is h - 1
+            d->balance = right_heavy;
+            b->balance = balance;
+            return pair<SegmentTree::SegmentTreeNode*, int>(b, -1);
+        }
+        else if (b->balance == left_heavy)
         {
             // Now we further know 
             // the height of a is h - 2 (b is left heavy)
@@ -690,8 +725,8 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         if (b->balance == left_heavy)
         {
             // Now we further know 
-            // the height of a is h - 2 (b is left heavy)
-            // the height of c is h - 3 (b is left heavy)
+            // the height of a is h - 2 (b was left heavy)
+            // the height of c is h - 3 (b was left heavy)
             // 
             // Therefore, after change
             // d is right heavy (c is h - 3 and e is h - 2), and therefore the height of d is h - 1
@@ -713,11 +748,20 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
             b->balance = right_heavy;
             return pair<SegmentTree::SegmentTreeNode*, int>(b, 0);
         }
-        else
+        else if (b->balance == right_heavy)
         {
-            throw 9;
+            // Now we further know 
+            // the height of a is h - 3 (b was right heavy)
+            // the height of c is h - 2 (b was right heavy)
+            // 
+            // Therefore, after change
+            // d is balance (both c and e are h - 2), and therefore the height of d is h - 1
+            // b is balance (a is h - 3 and d is h - 1), and therefore the height of b is h
+            d->balance = balance;
+            b->balance = right_too_heavy;
+            return pair<SegmentTree::SegmentTreeNode*, int>(b, 0);
         }
-    }    
+    }
     throw 10;
 }
 
@@ -852,7 +896,6 @@ void SegmentTree::query(int query_from, int query_to)
 int SPOJ_LITE()
 {
     SegmentTree tree;
-    // Ooops, we have a rotation bug with this insertion sequence
     tree.insert_interval(1, 7);
     tree.insert_interval(3, 9);
     tree.insert_interval(5, 11);

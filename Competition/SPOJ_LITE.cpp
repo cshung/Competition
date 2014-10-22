@@ -106,6 +106,7 @@ int SegmentTree::SegmentTreeNode::get_to() const
 {
     return this->to;
 }
+
 int SegmentTree::SegmentTreeNode::get_subtree_from() const
 {
     return this->subtree_from;
@@ -142,7 +143,7 @@ SegmentTree::SegmentTreeNode* SegmentTree::SegmentTreeNode::get_parent() const
     return this->parent;
 }
 
-void SegmentTree::SegmentTreeNode::set_left(SegmentTree::SegmentTreeNode* left) 
+void SegmentTree::SegmentTreeNode::set_left(SegmentTree::SegmentTreeNode* left)
 {
     this->left = left;
     if (this->left != NULL)
@@ -200,7 +201,7 @@ void SegmentTree::SegmentTreeNode::summarize()
             this->even_segment_length += this->to - this->from;
         }
     }
-    else 
+    else
     {
         if (this->from != intMin && this->to != intMax)
         {
@@ -231,7 +232,7 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     if (this != NULL)
     {
         cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << endl;
-//            << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
+        //            << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }
@@ -269,18 +270,26 @@ void SegmentTree::split_elementary_interval(SegmentTree::SegmentTreeNode* interv
 {
     int from = interval_to_split->get_from();
     int to = interval_to_split->get_to();
+#ifdef LOG_AVL_OPERATIONS
     cout << "---------------------------------------------------------------------------------------" << endl;
     cout << "Delete [" << from << ", " << to << ")" << endl;
+#endif // LOG_AVL_OPERATIONS
     this->delete_elementary_interval(interval_to_split);
+#ifdef LOG_AVL_OPERATIONS
     this->print();
     cout << "---------------------------------------------------------------------------------------" << endl;
     cout << "Insert [" << from << ", " << splitting_value << ")" << endl;
+#endif // LOG_AVL_OPERATIONS
     this->insert_elementary_interval(from, splitting_value);
+#ifdef LOG_AVL_OPERATIONS
     this->print();
     cout << "---------------------------------------------------------------------------------------" << endl;
     cout << "Insert [" << splitting_value << ", " << to << ")" << endl;
+#endif // LOG_AVL_OPERATIONS
     this->insert_elementary_interval(splitting_value, to);
+#ifdef LOG_AVL_OPERATIONS
     this->print();
+#endif // LOG_AVL_OPERATIONS
 }
 
 void SegmentTree::insert_elementary_interval(int from, int to)
@@ -787,7 +796,7 @@ SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
         {
             cursor = cursor->get_left();
         }
-        else 
+        else
         {
             if (value < cursor->get_to())
             {
@@ -861,24 +870,64 @@ void SegmentTree::query(int query_from, int query_to)
             {
                 to_cursor = to_cursor->get_right();
             }
-            else 
+            else
             {
                 to_found = true;
             }
         }
     }
 
-    stack<SegmentTree::SegmentTreeNode*> right_path;
-    vector<SegmentTree::SegmentTreeNode*> path;
+    stack<pair<SegmentTree::SegmentTreeNode*, int> > right_path;
+    vector<pair<SegmentTree::SegmentTreeNode*, int> > path;
     while (from_cursor != split_node)
     {
-        path.push_back(from_cursor);
+        path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor, 0));
+        SegmentTree::SegmentTreeNode* parent = from_cursor->get_parent();
+        if (parent->get_left() == from_cursor)
+        {
+            if (from_cursor->get_right() != NULL)
+            {
+                path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor->get_right(), 1));
+            }
+        }
+        else if (parent->get_right() == from_cursor)
+        {
+            if (from_cursor->get_left() != NULL)
+            {
+                path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor->get_left(), 1));
+            }
+        }
+        else
+        {
+            throw 17;
+        }
+
         from_cursor = from_cursor->get_parent();
     }
-    path.push_back(split_node);
+    path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(split_node, 0));
     while (to_cursor != split_node)
     {
-        right_path.push(to_cursor);
+        right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor, 0));
+        SegmentTree::SegmentTreeNode* parent = to_cursor->get_parent();
+        if (parent->get_left() == to_cursor)
+        {
+            if (to_cursor->get_right() != NULL)
+            {
+                right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor->get_right(), 1));
+            }
+        }
+        else if (parent->get_right() == to_cursor)
+        {
+            if (to_cursor->get_left() != NULL)
+            {
+                right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor->get_left(), 1));
+            }
+        }
+        else
+        {
+            throw 17;
+        }
+
         to_cursor = to_cursor->get_parent();
     }
     while (right_path.size() > 0)
@@ -886,10 +935,22 @@ void SegmentTree::query(int query_from, int query_to)
         path.push_back(right_path.top());
         right_path.pop();
     }
-    cout << "Path" << endl;
-    for (vector<SegmentTree::SegmentTreeNode*>::iterator pi = path.begin(); pi != path.end(); pi++)
+
+    cout << "Path from the from interval to to interval." << endl;
+    for (vector<pair<SegmentTree::SegmentTreeNode*, int> >::iterator pi = path.begin(); pi != path.end(); pi++)
     {
-        cout << (*pi)->get_from() << ", " << (*pi)->get_to() << endl;
+        if (pi->second == 0)
+        {
+            cout << pi->first->get_from() << ", " << pi->first->get_to() << endl;
+        }
+        else if (pi->second == 1)
+        {
+            cout << pi->first->get_subtree_from() << ", " << pi->first->get_subtree_to() << endl;
+        }
+        else
+        {
+            throw 18;
+        }
     }
 }
 
@@ -899,7 +960,9 @@ int SPOJ_LITE()
     tree.insert_interval(1, 7);
     tree.insert_interval(3, 9);
     tree.insert_interval(5, 11);
-    tree.query(2, 10);
+    
     tree.print();
+
+    tree.query(2, 10);
     return 0;
 }

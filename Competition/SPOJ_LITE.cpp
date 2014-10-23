@@ -1,7 +1,8 @@
 #include "stdafx.h"
 
-// #define LOG_AVL_OPERATIONS
+#define LOG_AVL_OPERATIONS
 #define LOG_QUERY_STEPS
+#define LOG_FINAL_TREE
 
 // http://www.spoj.com/problems/LITE/
 
@@ -1096,6 +1097,10 @@ int SegmentTree::query(int query_from, int query_to) const
 				{
 					if (next_is_on)
 					{
+						// Suppose we are in [1, 3), moving forward
+						// and from == 2
+						// we should be counting only 1 value
+						// adjustment is to reduce [1, 2) values
 						on_count -= (query_from - current->get_from());
 					}
 				}
@@ -1103,7 +1108,11 @@ int SegmentTree::query(int query_from, int query_to) const
 				{
 					if (!next_is_on)
 					{
-						on_count -= current->get_to() - (query_from + 1);
+						// Suppose we are in [1, 2, 3), moving backward
+						// and from == 2
+						// we should be counting only 1 value
+						// adjustment is to get back [2, 3) values
+						on_count += (current->get_to() - query_from);
 					}
 				}
             }
@@ -1114,14 +1123,22 @@ int SegmentTree::query(int query_from, int query_to) const
                 {
                     if (next_is_on)
                     {
-                        on_count -= current->get_to() - (query_to + 1);
+						// Suppose we are in [4, 5, 6, 7), moving forward
+						// and to == 5
+						// we should be counting only 2 value
+						// adjustment is to reduce [6, 7) values
+                        on_count -= (current->get_to() - (query_to + 1));
                     }
                 }
                 else
                 {
                     if (!next_is_on)
                     {
-                        on_count += query_to + 1 - current->get_from();
+						// Suppose we are in [4, 5, 6, 7), moving backward
+						// and to == 5
+						// we should be counting only 1 value
+						// adjustment is to get back [4, 5] values
+                        on_count += ((query_to + 1) - current->get_from());
                     }
                 }
             }
@@ -1220,13 +1237,15 @@ int SegmentTree::query(int query_from, int query_to) const
 
 int SPOJ_LITE()
 {
-	// The initial segment is backward issue is solved
-	// but we still have some inaccuracy due to the initial segment in this case
+	// This current version seems cool!
+	// The only restriction now is that this is not thoroughly tested
+	// and it does not support inserting interval with same endpoint
     SegmentTree tree;
-    tree.insert_interval(3, 9);
-    tree.insert_interval(5, 11);
-    tree.insert_interval(1, 7);
+	tree.insert_interval(1, 5);
+    tree.insert_interval(3, 7);
+#ifdef LOG_FINAL_TREE
     tree.print();
+#endif
     cout << tree.query(2, 6) << endl;
     return 0;
 }

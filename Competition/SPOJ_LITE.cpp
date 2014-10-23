@@ -197,19 +197,19 @@ void SegmentTree::SegmentTreeNode::summarize()
     {
         this->finite_segment_count = 0;
     }
-	else
-	{
-		this->finite_segment_count = 1;
-	}
+    else
+    {
+        this->finite_segment_count = 1;
+    }
 
-	if (this->left != NULL)
-	{
-		this->finite_segment_count += this->left->finite_segment_count;
-	}
-	if (this->right != NULL)
-	{
-		this->finite_segment_count += this->right->finite_segment_count;
-	}
+    if (this->left != NULL)
+    {
+        this->finite_segment_count += this->left->finite_segment_count;
+    }
+    if (this->right != NULL)
+    {
+        this->finite_segment_count += this->right->finite_segment_count;
+    }
 
     bool middle_is_even = true;
     this->even_segment_length = 0;
@@ -1029,39 +1029,39 @@ int SegmentTree::query(int query_from, int query_to) const
 
     // Step 3: Walk the path and concatenate the summary
     //         We need to keep track of whether the next elementary interval in forward order is on
-    bool next_is_on = from_rank % 2 == 1; 
+    bool next_is_on = from_rank % 2 == 1;
     int on_count = 0;
     bool first_segment = true;
     int last_segment_ends = -1;
 
-	// Step 3.1: Determine whether we should walk the first segment forward or backward
-	SegmentTree::SegmentTreeNode* first_node = path.begin()->first;
-	if (first_node == split_node)
-	{
-		// we should move forward 
-		last_segment_ends = first_node->get_from();
-	}
-	else
-	{
-		SegmentTree::SegmentTreeNode* parent = first_node->get_parent();
-		if (parent->get_left() == first_node)
-		{
-			// we should move forward
-			last_segment_ends = first_node->get_from();
-		}
-		else if (parent->get_right() == first_node)
-		{
-			// we should move backward
-			last_segment_ends = first_node->get_to();
+    // Step 3.1: Determine whether we should walk the first segment forward or backward
+    SegmentTree::SegmentTreeNode* first_node = path.begin()->first;
+    if (first_node == split_node)
+    {
+        // we should move forward 
+        last_segment_ends = first_node->get_from();
+    }
+    else
+    {
+        SegmentTree::SegmentTreeNode* parent = first_node->get_parent();
+        if (parent->get_left() == first_node)
+        {
+            // we should move forward
+            last_segment_ends = first_node->get_from();
+        }
+        else if (parent->get_right() == first_node)
+        {
+            // we should move backward
+            last_segment_ends = first_node->get_to();
 
-			// In this case we are walking backward, so we are counting the next is on of the next segment
-			next_is_on = !next_is_on;
-		}
-		else
-		{
-			throw 0;
-		}
-	}
+            // In this case we are walking backward, so we are counting the next is on of the next segment
+            next_is_on = !next_is_on;
+        }
+        else
+        {
+            throw 0;
+        }
+    }
 
     for (vector<pair<SegmentTree::SegmentTreeNode*, int> >::iterator pi = path.begin(); pi != path.end(); pi++)
     {
@@ -1093,28 +1093,28 @@ int SegmentTree::query(int query_from, int query_to) const
             // Adjustment for the first and last segment for input
             if (first_segment)
             {
-				if (forward)
-				{
-					if (next_is_on)
-					{
-						// Suppose we are in [1, 3), moving forward
-						// and from == 2
-						// we should be counting only 1 value
-						// adjustment is to reduce [1, 2) values
-						on_count -= (query_from - current->get_from());
-					}
-				}
-				else
-				{
-					if (!next_is_on)
-					{
-						// Suppose we are in [1, 2, 3), moving backward
-						// and from == 2
-						// we should be counting only 1 value
-						// adjustment is to get back [2, 3) values
-						on_count += (current->get_to() - query_from);
-					}
-				}
+                if (forward)
+                {
+                    if (next_is_on)
+                    {
+                        // Suppose we are in [1, 3), moving forward
+                        // and from == 2
+                        // we should be counting only 1 value
+                        // adjustment is to reduce [1, 2) values
+                        on_count -= (query_from - current->get_from());
+                    }
+                }
+                else
+                {
+                    if (!next_is_on)
+                    {
+                        // Suppose we are in [1, 2, 3), moving backward
+                        // and from == 2
+                        // we should be counting only 1 value
+                        // adjustment is to get back [2, 3) values
+                        on_count += (current->get_to() - query_from);
+                    }
+                }
             }
 
             if (pi + 1 == path.end())
@@ -1123,10 +1123,10 @@ int SegmentTree::query(int query_from, int query_to) const
                 {
                     if (next_is_on)
                     {
-						// Suppose we are in [4, 5, 6, 7), moving forward
-						// and to == 5
-						// we should be counting only 2 value
-						// adjustment is to reduce [6, 7) values
+                        // Suppose we are in [4, 5, 6, 7), moving forward
+                        // and to == 5
+                        // we should be counting only 2 value
+                        // adjustment is to reduce [6, 7) values
                         on_count -= (current->get_to() - (query_to + 1));
                     }
                 }
@@ -1134,10 +1134,10 @@ int SegmentTree::query(int query_from, int query_to) const
                 {
                     if (!next_is_on)
                     {
-						// Suppose we are in [4, 5, 6, 7), moving backward
-						// and to == 5
-						// we should be counting only 1 value
-						// adjustment is to get back [4, 5] values
+                        // Suppose we are in [4, 5, 6, 7), moving backward
+                        // and to == 5
+                        // we should be counting only 1 value
+                        // adjustment is to get back [4, 5] values
                         on_count += ((query_to + 1) - current->get_from());
                     }
                 }
@@ -1237,11 +1237,11 @@ int SegmentTree::query(int query_from, int query_to) const
 
 int SPOJ_LITE()
 {
-	// This current version seems cool!
-	// The only restriction now is that this is not thoroughly tested
-	// and it does not support inserting interval with same endpoint
+    // This current version seems cool!
+    // The only restriction now is that this is not thoroughly tested
+    // and it does not support inserting interval with same endpoint
     SegmentTree tree;
-	tree.insert_interval(1, 5);
+    tree.insert_interval(1, 5);
     tree.insert_interval(3, 7);
 #ifdef LOG_FINAL_TREE
     tree.print();

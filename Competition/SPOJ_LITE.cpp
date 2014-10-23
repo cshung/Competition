@@ -196,18 +196,19 @@ void SegmentTree::SegmentTreeNode::summarize()
     {
         this->finite_segment_count = 0;
     }
-    else
-    {
-        this->finite_segment_count = 1;
-        if (this->left != NULL)
-        {
-            this->finite_segment_count += this->left->finite_segment_count;
-        }
-        if (this->right != NULL)
-        {
-            this->finite_segment_count += this->right->finite_segment_count;
-        }
-    }
+	else
+	{
+		this->finite_segment_count = 1;
+	}
+
+	if (this->left != NULL)
+	{
+		this->finite_segment_count += this->left->finite_segment_count;
+	}
+	if (this->right != NULL)
+	{
+		this->finite_segment_count += this->right->finite_segment_count;
+	}
 
     bool middle_is_even = true;
     this->even_segment_length = 0;
@@ -1191,6 +1192,6 @@ int SPOJ_LITE()
     tree.insert_interval(5, 11);
     tree.insert_interval(1, 7);
     tree.print();
-    cout << tree.query(2, 6) << endl;
+    // cout << tree.query(2, 6) << endl;
     return 0;
 }

@@ -1,5 +1,8 @@
 #include "stdafx.h"
 
+// #define LOG_AVL_OPERATIONS
+// #define LOG_QUERY_STEPS
+
 // http://www.spoj.com/problems/LITE/
 
 #include "SPOJ_LITE.h"
@@ -29,7 +32,7 @@ public:
     SegmentTree();
     ~SegmentTree();
     void insert_interval(int from, int to);
-    void query(int from, int to);
+    int query(int from, int to) const;
     // Debug only
     void print();
 private:
@@ -42,6 +45,10 @@ private:
         int get_to() const;
         int get_subtree_from() const;
         int get_subtree_to() const;
+        int get_finite_segment_count() const;
+        int get_odd_segment_length() const;
+        int get_even_segment_length() const;
+
         void set_interval(int from, int to);
         SegmentTreeNode* get_left() const;
         SegmentTreeNode* get_right() const;
@@ -83,6 +90,8 @@ private:
     pair<SegmentTree::SegmentTreeNode*, int> rotate_left(SegmentTreeNode* current_node);
     pair<SegmentTree::SegmentTreeNode*, int> rotate_right(SegmentTreeNode* current_node);
 
+    void delete_subtree(SegmentTreeNode* subtree_root);
+
     SegmentTreeNode* root;
 };
 
@@ -115,6 +124,21 @@ int SegmentTree::SegmentTreeNode::get_subtree_from() const
 int SegmentTree::SegmentTreeNode::get_subtree_to() const
 {
     return this->subtree_to;
+}
+
+int SegmentTree::SegmentTreeNode::get_finite_segment_count() const
+{
+    return this->finite_segment_count;
+}
+
+int SegmentTree::SegmentTreeNode::get_odd_segment_length() const
+{
+    return this->odd_segment_length;
+}
+
+int SegmentTree::SegmentTreeNode::get_even_segment_length() const
+{
+    return this->even_segment_length;
 }
 
 void SegmentTree::SegmentTreeNode::set_interval(int from, int to)
@@ -231,8 +255,7 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
     if (this != NULL)
     {
-        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << endl;
-        //            << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
+        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }
@@ -249,12 +272,18 @@ SegmentTree::SegmentTree()
 
 SegmentTree::~SegmentTree()
 {
-    // TODO: Delete the whole tree!
-    if (this->root != NULL)
+    this->delete_subtree(this->root);
+}
+
+void SegmentTree::delete_subtree(SegmentTree::SegmentTreeNode* subtree_root)
+{
+    if (subtree_root == NULL)
     {
-        delete this->root;
-        this->root = NULL;
+        return;
     }
+    this->delete_subtree(subtree_root->get_left());
+    this->delete_subtree(subtree_root->get_right());
+    delete subtree_root;
 }
 
 void SegmentTree::insert_interval(int from, int to)
@@ -337,7 +366,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
             {
                 if (left_height_change != 0)
                 {
-                    throw 15;
+                    throw 2;
                 }
 
                 return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
@@ -360,7 +389,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
                         pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_right(right_subtree_root);
                         if (right_rotation_result.second != 0)
                         {
-                            throw 1;
+                            throw 3;
                         }
                         current_node->set_right(right_rotation_result.first);
                     }
@@ -375,7 +404,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
             {
                 if (right_height_change != 0)
                 {
-                    throw 15;
+                    throw 4;
                 }
 
                 return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
@@ -383,7 +412,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
         }
         else
         {
-            throw 2;
+            throw 5;
         }
     }
 }
@@ -443,18 +472,18 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
                 current_node->balance -= bias_left;
                 if (current_node->balance == right_too_heavy)
                 {
-                    if (left_subtree_root->balance == left_heavy)
+                    if (current_node->get_right() != NULL && current_node->get_right()->balance == left_heavy)
                     {
-                        pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_right(left_subtree_root);
+                        pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_right(current_node->get_right());
                         if (right_rotation_result.second != 0)
                         {
-                            throw 1;
+                            throw 6;
                         }
-                        current_node->set_left(right_rotation_result.first);
+                        current_node->set_right(right_rotation_result.first);
                     }
-                    pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_left(current_node);
-                    result_height_change += right_rotation_result.second;
-                    current_node = right_rotation_result.first;
+                    pair<SegmentTree::SegmentTreeNode*, int> left_rotation_result = this->rotate_left(current_node);
+                    result_height_change += left_rotation_result.second;
+                    current_node = left_rotation_result.first;
                 }
 
                 return pair<SegmentTree::SegmentTreeNode*, int>(current_node, result_height_change);
@@ -463,7 +492,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
             {
                 if (left_height_change != 0)
                 {
-                    throw 15;
+                    throw 7;
                 }
 
                 return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
@@ -481,18 +510,18 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
                 current_node->balance -= bias_right;
                 if (current_node->balance == left_too_heavy)
                 {
-                    if (right_subtree_root->balance == right_heavy)
+                    if (current_node->get_left() != NULL && current_node->get_left()->balance == right_heavy)
                     {
-                        pair<SegmentTree::SegmentTreeNode*, int> left_rotation_result = this->rotate_left(right_subtree_root);
+                        pair<SegmentTree::SegmentTreeNode*, int> left_rotation_result = this->rotate_left(current_node->get_left());
                         if (left_rotation_result.second != 0)
                         {
-                            throw 1;
+                            throw 8;
                         }
-                        current_node->set_right(left_rotation_result.first);
+                        current_node->set_left(left_rotation_result.first);
                     }
-                    pair<SegmentTree::SegmentTreeNode*, int> left_rotation_result = this->rotate_right(current_node);
-                    result_height_change += left_rotation_result.second;
-                    current_node = left_rotation_result.first;
+                    pair<SegmentTree::SegmentTreeNode*, int> right_rotation_result = this->rotate_right(current_node);
+                    result_height_change += right_rotation_result.second;
+                    current_node = right_rotation_result.first;
                 }
 
                 return pair<SegmentTree::SegmentTreeNode*, int>(current_node, result_height_change);
@@ -501,7 +530,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
             {
                 if (right_height_change != 0)
                 {
-                    throw 15;
+                    throw 9;
                 }
 
                 return pair<SegmentTree::SegmentTreeNode*, int>(current_node, 0);
@@ -509,7 +538,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
         }
         else
         {
-            throw 14;
+            throw 10;
         }
     }
 }
@@ -535,7 +564,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
     SegmentTree::SegmentTreeNode* b = current_node->get_right();
     if (b == NULL)
     {
-        throw 7;
+        throw 11;
     }
     SegmentTree::SegmentTreeNode* c = b->get_left();
 
@@ -554,10 +583,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         //            the height of e was h - 3 (because d was right too heavy)
         if (b->balance == right_too_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was right too heavy)
             // the height of c is h - 4 (b was right too heavy)
-            // 
+            //
             // Therefore, after change
             // d is left heavy (c is h - 4 and e is h - 3), and therefore the height of d is h - 2
             // b is balance (a and d are both h - 2), and therefore the height of b is h - 1
@@ -567,10 +596,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         }
         else if (b->balance == right_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b is right heavy)
             // the height of c is h - 3 (b is right heavy)
-            // 
+            //
             // Therefore, after change
             // d is balance (c and e are both h - 3), and therefore the height of d is h - 2
             // b is balance (a and d are both h - 2), and therefore the height of b is h - 1
@@ -580,10 +609,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         }
         else if (b->balance == balance)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was balance)
             // the height of c is h - 2 (b was balance)
-            // 
+            //
             // Therefore, after change
             // d is right heavy (c is h - 2 and e is h - 3), and therefore the height of d is h - 1
             // b is left heavy (a is h - 2 and d is h - 1), and therefore the height of b is h
@@ -593,7 +622,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         }
         else
         {
-            throw 8;
+            throw 12;
         }
     }
     else if (d->balance == right_heavy)
@@ -603,10 +632,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         //            the height of e was h - 2 (because d was right heavy)
         if (b->balance == right_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was right heavy)
             // the height of c is h - 3 (b was right heavy)
-            // 
+            //
             // Therefore, after change
             // d is left heavy (c is h - 3 and e is h - 2), and therefore the height of d is h - 1
             // b is left heavy (a is h - 2 and d is h - 1), and therefore the height of b is h
@@ -616,10 +645,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         }
         else if (b->balance == balance)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was balance)
             // the height of c is h - 2 (b was balance)
-            // 
+            //
             // Therefore, after change
             // d is balance (both c and e are h - 2), and therefore the height of d is h - 1
             // b is left heavy (a is h - 2 and d is h - 1), and therefore the height of b is h
@@ -629,10 +658,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
         }
         else if (b->balance == left_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 3 (b was left heavy)
             // the height of c is h - 2 (b was left heavy)
-            // 
+            //
             // Therefore, after change
             // d is balance (both c and e are h - 2), and therefore the height of d is h - 1
             // b is balance (a is h - 3 and d is h - 1), and therefore the height of b is h
@@ -641,7 +670,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_left(SegmentTree::S
             return pair<SegmentTree::SegmentTreeNode*, int>(b, 0);
         }
     }
-    throw 10;
+    throw 13;
 }
 
 /**
@@ -665,7 +694,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
     SegmentTree::SegmentTreeNode* b = current_node->get_left();
     if (b == NULL)
     {
-        throw 7;
+        throw 14;
     }
     SegmentTree::SegmentTreeNode* c = b->get_right();
 
@@ -684,10 +713,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         //            the height of e was h - 3 (because d was left too heavy)
         if (b->balance == left_too_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was left too heavy)
             // the height of c is h - 4 (b was left too heavy)
-            // 
+            //
             // Therefore, after change
             // d is right heavy (c is h - 4 and e is h - 3), and therefore the height of d is h - 2
             // b is balance (a and d are both h - 2), and therefore the height of b is h - 1
@@ -697,10 +726,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         }
         else if (b->balance == left_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b is left heavy)
             // the height of c is h - 3 (b is left heavy)
-            // 
+            //
             // Therefore, after change
             // d is balance (c and e are both h - 3), and therefore the height of d is h - 2
             // b is balance (a and d are both h - 2), and therefore the height of b is h - 1
@@ -710,10 +739,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         }
         else if (b->balance == balance)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was balance)
             // the height of c is h - 2 (b was balance)
-            // 
+            //
             // Therefore, after change
             // d is left heavy (c is h - 2 and e is h - 3), and therefore the height of d is h - 1
             // b is right heavy (a is h - 2 and d is h - 1), and therefore the height of b is h
@@ -723,7 +752,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         }
         else
         {
-            throw 8;
+            throw 15;
         }
     }
     else if (d->balance == left_heavy)
@@ -733,10 +762,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         //            the height of e was h - 2 (because d was left heavy)
         if (b->balance == left_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was left heavy)
             // the height of c is h - 3 (b was left heavy)
-            // 
+            //
             // Therefore, after change
             // d is right heavy (c is h - 3 and e is h - 2), and therefore the height of d is h - 1
             // b is right heavy (a is h - 2 and d is h - 1), and therefore the height of b is h
@@ -746,10 +775,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         }
         else if (b->balance == balance)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 2 (b was balance)
             // the height of c is h - 2 (b was balance)
-            // 
+            //
             // Therefore, after change
             // d is balance (both c and e are h - 2), and therefore the height of d is h - 1
             // b is right heavy (a is h - 2 and d is h - 1), and therefore the height of b is h
@@ -759,10 +788,10 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
         }
         else if (b->balance == right_heavy)
         {
-            // Now we further know 
+            // Now we further know
             // the height of a is h - 3 (b was right heavy)
             // the height of c is h - 2 (b was right heavy)
-            // 
+            //
             // Therefore, after change
             // d is balance (both c and e are h - 2), and therefore the height of d is h - 1
             // b is balance (a is h - 3 and d is h - 1), and therefore the height of b is h
@@ -771,14 +800,14 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
             return pair<SegmentTree::SegmentTreeNode*, int>(b, 0);
         }
     }
-    throw 10;
+    throw 16;
 }
 
 SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
 {
     if (this->root == NULL)
     {
-        throw 11;
+        throw 17;
     }
     SegmentTree::SegmentTreeNode* cursor = root;
 
@@ -786,7 +815,7 @@ SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
     {
         if (cursor == NULL)
         {
-            throw 12;
+            throw 18;
         }
         if (cursor->get_from() <= value && value < cursor->get_to())
         {
@@ -800,7 +829,7 @@ SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
         {
             if (value < cursor->get_to())
             {
-                throw 13;
+                throw 19;
             }
             cursor = cursor->get_right();
         }
@@ -821,22 +850,32 @@ void SegmentTree::print()
 //        for a node on the path, we read out the from and to
 //        for an edge on the path which is a left tree edge, we read out the to of the child node and the from of the parent node
 //        similarily, for an edge on the path which is a right tree edge, we read out the from of the child node and the to of the parent node
-//        naturally, this numbers are connected. 
+//        naturally, this numbers are connected.
 //        We simply concatenate the summaries.
 //
-// Third, the key observation is that the edge is already summarized! 
+// Third, the key observation is that the edge is already summarized!
 //        The summary of a left edge is the value of the right child of the child node of the edge.
 //        The summary of a right edge is the value of the left child of the child node of the edge.
 //
 // Last but not least, we need to figure out whether an interval is on or off, that is determined by its rank in the tree
 //
-void SegmentTree::query(int query_from, int query_to)
+int SegmentTree::query(int query_from, int query_to) const
 {
+#ifdef LOG_QUERY_STEPS
+    cout << "Query [" << query_from << ", " << query_to << "]" << endl;
+#endif 
+    // Step 1: Walk the tree to find the node containing from, the node containing to, and the node where the path diverges.
     SegmentTreeNode* from_cursor = this->root;
     SegmentTreeNode* to_cursor = this->root;
     SegmentTreeNode* split_node = NULL;
     bool from_found = false;
     bool to_found = false;
+
+    int from_rank = 1; // offset 1 so that we account for the initial infinite segment
+    if (from_cursor->get_left() != 0)
+    {
+        from_rank += from_cursor->get_left()->get_finite_segment_count();
+    }
     while (!from_found || !to_found)
     {
         if (from_cursor == to_cursor)
@@ -849,10 +888,28 @@ void SegmentTree::query(int query_from, int query_to)
             if (query_from < from_cursor->get_from())
             {
                 from_cursor = from_cursor->get_left();
+                if (from_cursor == NULL)
+                {
+                    throw 20;
+                }
+                from_rank--;
+                if (from_cursor->get_right() != NULL)
+                {
+                    from_rank -= from_cursor->get_right()->get_finite_segment_count();
+                }
             }
             else if (query_from >= from_cursor->get_to())
             {
                 from_cursor = from_cursor->get_right();
+                if (from_cursor == NULL)
+                {
+                    throw 21;
+                }
+                from_rank++;
+                if (from_cursor->get_left() != NULL)
+                {
+                    from_rank += from_cursor->get_left()->get_finite_segment_count();
+                }
             }
             else
             {
@@ -877,14 +934,25 @@ void SegmentTree::query(int query_from, int query_to)
         }
     }
 
+    // Step 2: Find a path of summaries when we walk from the left node to the right node
+
+    // Step 2.1) Record the path from from node to split node (split node not included)
+    // To do this, we start from the left node and walk up until we reach the split node
+    // We always takes the first node and all edges, but if we are changing direction then
+    // we will not take the intermediate node.
     stack<pair<SegmentTree::SegmentTreeNode*, int> > right_path;
     vector<pair<SegmentTree::SegmentTreeNode*, int> > path;
+    int last_direction = 0; // 0 => first move, 1 => left, 2 => right
     while (from_cursor != split_node)
     {
-        path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor, 0));
         SegmentTree::SegmentTreeNode* parent = from_cursor->get_parent();
         if (parent->get_left() == from_cursor)
         {
+            if (last_direction == 0 || last_direction == 1)
+            {
+                path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor, 0));
+            }
+            last_direction = 1;
             if (from_cursor->get_right() != NULL)
             {
                 path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor->get_right(), 1));
@@ -892,6 +960,11 @@ void SegmentTree::query(int query_from, int query_to)
         }
         else if (parent->get_right() == from_cursor)
         {
+            if (last_direction == 0 || last_direction == 2)
+            {
+                path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor, 0));
+            }
+            last_direction = 2;
             if (from_cursor->get_left() != NULL)
             {
                 path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(from_cursor->get_left(), 1));
@@ -899,18 +972,28 @@ void SegmentTree::query(int query_from, int query_to)
         }
         else
         {
-            throw 17;
+            throw 23;
         }
 
-        from_cursor = from_cursor->get_parent();
+        from_cursor = parent;
     }
+
+    // Step 2.2: The split node is taken now, it is unconditional
     path.push_back(pair<SegmentTree::SegmentTreeNode*, int>(split_node, 0));
+
+    // Step 2.3: for the right hand side, we do the same thing, except since we have to walk backwards from right_node to split_node
+    // so we need to use a stack and reverse it on its way back.
+    last_direction = 0;
     while (to_cursor != split_node)
     {
-        right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor, 0));
         SegmentTree::SegmentTreeNode* parent = to_cursor->get_parent();
         if (parent->get_left() == to_cursor)
         {
+            if (last_direction == 0 || last_direction == 1)
+            {
+                right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor, 0));
+            }
+            last_direction = 1;
             if (to_cursor->get_right() != NULL)
             {
                 right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor->get_right(), 1));
@@ -918,6 +1001,11 @@ void SegmentTree::query(int query_from, int query_to)
         }
         else if (parent->get_right() == to_cursor)
         {
+            if (last_direction == 0 || last_direction == 2)
+            {
+                right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor, 0));
+            }
+            last_direction = 2;
             if (to_cursor->get_left() != NULL)
             {
                 right_path.push(pair<SegmentTree::SegmentTreeNode*, int>(to_cursor->get_left(), 1));
@@ -925,44 +1013,184 @@ void SegmentTree::query(int query_from, int query_to)
         }
         else
         {
-            throw 17;
+            throw 24;
         }
 
-        to_cursor = to_cursor->get_parent();
+        to_cursor = parent;
     }
+
     while (right_path.size() > 0)
     {
         path.push_back(right_path.top());
         right_path.pop();
     }
 
-    cout << "Path from the from interval to to interval." << endl;
+    // Step 3: Walk the path and concatenate the summary
+    //         We need to keep track of whether the next elementary interval in forward order is on
+    bool next_is_on = from_rank % 2 == 1; 
+    int on_count = 0;
+    bool first_segment = true;
+    int last_segment_ends = -1;
     for (vector<pair<SegmentTree::SegmentTreeNode*, int> >::iterator pi = path.begin(); pi != path.end(); pi++)
     {
+        SegmentTree::SegmentTreeNode* current = pi->first;
         if (pi->second == 0)
         {
-            cout << pi->first->get_from() << ", " << pi->first->get_to() << endl;
+            bool forward = first_segment || last_segment_ends == pi->first->get_from();
+            if (!forward && last_segment_ends != pi->first->get_to())
+            {
+                throw 25;
+            }
+
+            // This is a node
+            if (next_is_on)
+            {
+                if (forward)
+                {
+                    on_count += current->get_to() - current->get_from();
+                }
+            }
+            else
+            {
+                if (!forward)
+                {
+                    on_count -= current->get_to() - current->get_from();
+                }
+            }
+
+            // Adjustment for the first and last segment for input
+            if (first_segment)
+            {
+                if (next_is_on)
+                {
+                    on_count -= (query_from - current->get_from());
+                }
+            }
+
+            if (pi + 1 == path.end())
+            {
+                if (forward)
+                {
+                    if (next_is_on)
+                    {
+                        on_count -= current->get_to() - (query_to + 1);
+                    }
+                }
+                else
+                {
+                    if (!next_is_on)
+                    {
+                        on_count += query_to + 1 - current->get_from();
+                    }
+                }
+            }
+
+            // Updating state before moving forward
+            first_segment = false;
+            next_is_on = !next_is_on;
+
+            if (forward)
+            {
+                last_segment_ends = current->get_to();
+            }
+            else
+            {
+                last_segment_ends = current->get_from();
+            }
+#ifdef LOG_QUERY_STEPS
+            cout << "Moving through node [" << current->get_from() << ", " << current->get_to() << ") in " << (forward ? "forward" : "backward") << endl;
+            cout << "Found " << on_count << " so far " << endl;
+#endif
         }
         else if (pi->second == 1)
         {
-            cout << pi->first->get_subtree_from() << ", " << pi->first->get_subtree_to() << endl;
+            bool forward = last_segment_ends == current->get_subtree_from();
+            if (!forward && last_segment_ends != current->get_subtree_to())
+            {
+                throw 26;
+            }
+
+            // This is an edge
+            if (next_is_on)
+            {
+                if (forward)
+                {
+                    on_count += current->get_even_segment_length();
+                }
+                else
+                {
+                    if (current->get_finite_segment_count() % 2 == 1)
+                    {
+                        // The last segment is odd, and we know the last segment is off
+                        on_count -= current->get_even_segment_length();
+                    }
+                    else
+                    {
+                        on_count -= current->get_odd_segment_length();
+                    }
+                }
+            }
+            else
+            {
+                if (forward)
+                {
+                    on_count += current->get_odd_segment_length();
+                }
+                else
+                {
+                    if (current->get_finite_segment_count() % 2 == 1)
+                    {
+                        // The last segment is odd, and we know the last segment is on
+                        on_count -= current->get_odd_segment_length();
+                    }
+                    else
+                    {
+                        on_count -= current->get_even_segment_length();
+                    }
+                }
+            }
+
+            if (current->get_finite_segment_count() % 2 == 1)
+            {
+                next_is_on = !next_is_on;
+            }
+
+            if (forward)
+            {
+                last_segment_ends = current->get_subtree_to();
+            }
+            else
+            {
+                last_segment_ends = current->get_subtree_from();
+            }
+#ifdef LOG_QUERY_STEPS
+            cout << "Moving through edge [" << current->get_subtree_from() << ", " << current->get_subtree_to() << ") in " << (forward ? "forward" : "backward") << endl;
+            cout << "Found " << on_count << " so far " << endl;
+#endif
         }
         else
         {
-            throw 18;
+            throw 27;
         }
     }
+
+    return on_count;
 }
 
 int SPOJ_LITE()
 {
+    //
+    // The very first step in the query might not be forward - this is causing the bug
+    // The summary seems to be a bit off in this order too
+    //
+    // Experience is just telling me complicated code need a lot more testing
+    // Every time I think I am close and mess around with inputs, new bugs arises
+    // 
     SegmentTree tree;
-    tree.insert_interval(1, 7);
     tree.insert_interval(3, 9);
     tree.insert_interval(5, 11);
-    
+    tree.insert_interval(1, 7);
     tree.print();
-
-    tree.query(2, 10);
+    cout << tree.query(2, 6) << endl;
     return 0;
 }

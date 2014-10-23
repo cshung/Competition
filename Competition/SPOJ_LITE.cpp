@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 // #define LOG_AVL_OPERATIONS
-// #define LOG_QUERY_STEPS
+#define LOG_QUERY_STEPS
 
 // http://www.spoj.com/problems/LITE/
 
@@ -1032,12 +1032,42 @@ int SegmentTree::query(int query_from, int query_to) const
     int on_count = 0;
     bool first_segment = true;
     int last_segment_ends = -1;
+
+	// Step 3.1: Determine whether we should walk the first segment forward or backward
+	SegmentTree::SegmentTreeNode* first_node = path.begin()->first;
+	if (first_node == split_node)
+	{
+		// we should move forward 
+		last_segment_ends = first_node->get_from();
+	}
+	else
+	{
+		SegmentTree::SegmentTreeNode* parent = first_node->get_parent();
+		if (parent->get_left() == first_node)
+		{
+			// we should move forward
+			last_segment_ends = first_node->get_from();
+		}
+		else if (parent->get_right() == first_node)
+		{
+			// we should move backward
+			last_segment_ends = first_node->get_to();
+
+			// In this case we are walking backward, so we are counting the next is on of the next segment
+			next_is_on = !next_is_on;
+		}
+		else
+		{
+			throw 0;
+		}
+	}
+
     for (vector<pair<SegmentTree::SegmentTreeNode*, int> >::iterator pi = path.begin(); pi != path.end(); pi++)
     {
         SegmentTree::SegmentTreeNode* current = pi->first;
         if (pi->second == 0)
         {
-            bool forward = first_segment || last_segment_ends == pi->first->get_from();
+            bool forward = last_segment_ends == pi->first->get_from();
             if (!forward && last_segment_ends != pi->first->get_to())
             {
                 throw 25;
@@ -1062,10 +1092,20 @@ int SegmentTree::query(int query_from, int query_to) const
             // Adjustment for the first and last segment for input
             if (first_segment)
             {
-                if (next_is_on)
-                {
-                    on_count -= (query_from - current->get_from());
-                }
+				if (forward)
+				{
+					if (next_is_on)
+					{
+						on_count -= (query_from - current->get_from());
+					}
+				}
+				else
+				{
+					if (!next_is_on)
+					{
+						on_count -= current->get_to() - (query_from + 1);
+					}
+				}
             }
 
             if (pi + 1 == path.end())
@@ -1180,18 +1220,13 @@ int SegmentTree::query(int query_from, int query_to) const
 
 int SPOJ_LITE()
 {
-    //
-    // The very first step in the query might not be forward - this is causing the bug
-    // The summary seems to be a bit off in this order too
-    //
-    // Experience is just telling me complicated code need a lot more testing
-    // Every time I think I am close and mess around with inputs, new bugs arises
-    // 
+	// The initial segment is backward issue is solved
+	// but we still have some inaccuracy due to the initial segment in this case
     SegmentTree tree;
     tree.insert_interval(3, 9);
     tree.insert_interval(5, 11);
     tree.insert_interval(1, 7);
     tree.print();
-    // cout << tree.query(2, 6) << endl;
+    cout << tree.query(2, 6) << endl;
     return 0;
 }

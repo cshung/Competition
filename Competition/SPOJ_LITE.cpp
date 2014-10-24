@@ -1,14 +1,16 @@
 #include "stdafx.h"
 
+#define VERIFY_BALANCE
+// #define LOG_SUMMARY
 #define LOG_AVL_OPERATIONS
-#define LOG_QUERY_STEPS
-#define LOG_FINAL_TREE
+// #define LOG_QUERY_STEPS
 
 // http://www.spoj.com/problems/LITE/
 
 #include "SPOJ_LITE.h"
 
 #include <iostream>
+#include <algorithm>
 #include <map>
 #include <vector>
 #include <stack>
@@ -35,7 +37,7 @@ public:
     void insert_interval(int from, int to);
     int query(int from, int to) const;
     // Debug only
-    void print();
+    void print() const;
 private:
     class SegmentTreeNode
     {
@@ -59,7 +61,7 @@ private:
         void set_right(SegmentTreeNode* right);
 
         // Debug only
-        void print(int indent);
+        void print(int indent) const;
 
         // Encapsulation is meaningless for this
         int balance;
@@ -92,6 +94,10 @@ private:
     pair<SegmentTree::SegmentTreeNode*, int> rotate_right(SegmentTreeNode* current_node);
 
     void delete_subtree(SegmentTreeNode* subtree_root);
+
+#ifdef VERIFY_BALANCE
+    int verify_balance(SegmentTreeNode* subtree_root) const;
+#endif
 
     SegmentTreeNode* root;
 };
@@ -249,7 +255,7 @@ void SegmentTree::SegmentTreeNode::summarize()
     }
 }
 
-void SegmentTree::SegmentTreeNode::print(int indent)
+void SegmentTree::SegmentTreeNode::print(int indent) const
 {
     for (int i = 0; i < indent; i++)
     {
@@ -257,7 +263,11 @@ void SegmentTree::SegmentTreeNode::print(int indent)
     }
     if (this != NULL)
     {
+#ifdef LOG_SUMMARY
         cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << " covering [" << this->subtree_from << ", " << this->subtree_to << ") with " << this->finite_segment_count << " finite segments " << even_segment_length << "/" << odd_segment_length << endl;
+#else
+        cout << "[" << this->from << ", " << this->to << ")" << " has balance " << this->balance << endl;
+#endif
         this->left->print(indent + 2);
         this->right->print(indent + 2);
     }
@@ -275,17 +285,6 @@ SegmentTree::SegmentTree()
 SegmentTree::~SegmentTree()
 {
     this->delete_subtree(this->root);
-}
-
-void SegmentTree::delete_subtree(SegmentTree::SegmentTreeNode* subtree_root)
-{
-    if (subtree_root == NULL)
-    {
-        return;
-    }
-    this->delete_subtree(subtree_root->get_left());
-    this->delete_subtree(subtree_root->get_right());
-    delete subtree_root;
 }
 
 void SegmentTree::insert_interval(int from, int to)
@@ -326,6 +325,9 @@ void SegmentTree::split_elementary_interval(SegmentTree::SegmentTreeNode* interv
 void SegmentTree::insert_elementary_interval(int from, int to)
 {
     this->root = this->insert_elementary_interval(this->root, from, to).first;
+#ifdef VERIFY_BALANCE
+    this->verify_balance(this->root);
+#endif
 }
 
 pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval(SegmentTree::SegmentTreeNode* current_node, int from, int to)
@@ -344,7 +346,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
             current_node->set_left(left_subtree_root);
             if (left_height_change == 1)
             {
-                int result_height_change = 1;
+                int result_height_change = current_node->balance == right_heavy ? 0 : 1;
                 current_node->balance += bias_left;
                 if (current_node->balance == left_too_heavy)
                 {
@@ -382,7 +384,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
             current_node->set_right(right_subtree_root);
             if (right_height_change == 1)
             {
-                int result_height_change = 1;
+                int result_height_change = current_node->balance == left_heavy ? 0 : 1;
                 current_node->balance += bias_right;
                 if (current_node->balance == right_too_heavy)
                 {
@@ -446,6 +448,10 @@ void SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* inter
     {
         interval_to_delete->set_interval(replace_from, replace_to);
     }
+
+#ifdef VERIFY_BALANCE
+    this->verify_balance(this->root);
+#endif
 }
 
 pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTree::SegmentTreeNode* current_node, SegmentTree::SegmentTreeNode* to_delete)
@@ -470,7 +476,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
             current_node->set_left(left_subtree_root);
             if (left_height_change == -1)
             {
-                int result_height_change = -1;
+                int result_height_change = current_node->balance == left_heavy ? -1 : 0;
                 current_node->balance -= bias_left;
                 if (current_node->balance == right_too_heavy)
                 {
@@ -508,7 +514,7 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTr
             current_node->set_right(right_subtree_root);
             if (right_height_change == -1)
             {
-                int result_height_change = -1;
+                int result_height_change = current_node->balance == right_heavy ? -1 : 0;
                 current_node->balance -= bias_right;
                 if (current_node->balance == left_too_heavy)
                 {
@@ -838,7 +844,7 @@ SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
     }
 }
 
-void SegmentTree::print()
+void SegmentTree::print() const
 {
     this->root->print(0);
 }
@@ -1235,17 +1241,62 @@ int SegmentTree::query(int query_from, int query_to) const
     return on_count;
 }
 
+void SegmentTree::delete_subtree(SegmentTree::SegmentTreeNode* subtree_root)
+{
+    if (subtree_root == NULL)
+    {
+        return;
+    }
+    this->delete_subtree(subtree_root->get_left());
+    this->delete_subtree(subtree_root->get_right());
+    delete subtree_root;
+}
+
+#ifdef VERIFY_BALANCE
+int SegmentTree::verify_balance(SegmentTree::SegmentTreeNode* subtree_root) const
+{
+    if (subtree_root == NULL)
+    {
+        return 0;
+    }
+    int left_height = this->verify_balance(subtree_root->get_left());
+    int right_height = this->verify_balance(subtree_root->get_right());
+    int expected_balance = left_height - right_height;
+    if (subtree_root->balance != expected_balance)
+    {
+        cout << "Bad tree:" << endl;
+        this->print();
+        throw 0;
+    }
+    return max(left_height, right_height) + 1;
+}
+#endif
+
+// Some input breaks the AVL invariant - debugging
 int SPOJ_LITE()
 {
-    // This current version seems cool!
-    // The only restriction now is that this is not thoroughly tested
-    // and it does not support inserting interval with same endpoint
+    int num_lights;
+    int num_operations;
+    cin >> num_lights;
+    cin >> num_operations;
     SegmentTree tree;
-    tree.insert_interval(1, 5);
-    tree.insert_interval(3, 7);
-#ifdef LOG_FINAL_TREE
-    tree.print();
-#endif
-    cout << tree.query(2, 6) << endl;
+    for (int q = 0; q < num_operations; q++)
+    {
+        int operation_id;
+        int from;
+        int to;
+        cin >> operation_id;
+        cin >> from;
+        cin >> to;
+        if (operation_id == 0)
+        {
+            tree.insert_interval(from, to);
+        }
+        else
+        {
+            cout << tree.query(from, to) << endl;
+        }
+    }
+
     return 0;
 }

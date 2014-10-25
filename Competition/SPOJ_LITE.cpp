@@ -987,6 +987,12 @@ int SegmentTree::query(int query_from, int query_to) const
 #ifdef LOG_QUERY_STEPS
     cout << "Query [" << query_from << ", " << query_to << "]" << endl;
 #endif // LOG_QUERY_STEPS
+    // Step 0: Special case - if the tree has no user interval, return 0, the algorithm is fooled to believe the initial infinite segment is rank 0
+    if (this->root->get_left() == NULL && this->root->get_right() == NULL)
+    {
+        return 0;
+    }
+
     // Step 1: Walk the tree to find the node containing from, the node containing to, and the node where the path diverges.
     SegmentTreeNode* from_cursor = this->root;
     SegmentTreeNode* to_cursor = this->root;

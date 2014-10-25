@@ -1395,6 +1395,7 @@ int SegmentTree::verify_balance(SegmentTree::SegmentTreeNode* subtree_root) cons
 
 int SPOJ_LITE()
 {
+    std::ios::sync_with_stdio(false);
     int num_lights;
     int num_operations;
     cin >> num_lights;

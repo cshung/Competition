@@ -1,13 +1,13 @@
 #include "stdafx.h"
 
-#define VERIFY_BALANCE
-#define LOG_SUMMARY
-#define LOG_AVL_OPERATIONS
-#define LOG_QUERY_STEPS
-
 // http://www.spoj.com/problems/LITE/
 
 #include "SPOJ_LITE.h"
+
+//#define VERIFY_BALANCE
+//#define LOG_SUMMARY
+//#define LOG_AVL_OPERATIONS
+//#define LOG_QUERY_STEPS
 
 #include <iostream>
 #include <algorithm>
@@ -38,6 +38,7 @@ public:
     int query(int from, int to) const;
     // Debug only
     void print() const;
+    void print_successor_chain() const;
 private:
     class SegmentTreeNode
     {
@@ -57,13 +58,14 @@ private:
         SegmentTreeNode* get_right() const;
         SegmentTreeNode* get_parent() const;
 
+        void set_parent_null() { this->parent = NULL; }
         void set_left(SegmentTreeNode* left);
         void set_right(SegmentTreeNode* right);
 
         // Debug only
         void print(int indent) const;
 
-        // Encapsulation is meaningless for this
+        // Encapsulation is meaningless for these
         int balance;
         SegmentTreeNode* prev;
         SegmentTreeNode* succ;
@@ -86,12 +88,12 @@ private:
     };
 
     SegmentTree::SegmentTreeNode* insert_elementary_interval(int from, int to);
-    void delete_elementary_interval(SegmentTreeNode* interval_to_delete);
+    bool delete_elementary_interval(SegmentTreeNode* interval_to_delete);
 
     void split_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_split, int splitting_value);
     void merge_elementary_intervals(SegmentTree::SegmentTreeNode* before, SegmentTree::SegmentTreeNode* after);
-    pair<SegmentTreeNode*, int> insert_elementary_interval(SegmentTreeNode* current_node, int from, int to, SegmentTreeNode*& inserted_node);
-    SegmentTreeNode* find_containing_interval(int value);
+    pair<SegmentTreeNode*, int> insert_elementary_interval(SegmentTreeNode* current_node, int from, int to, SegmentTreeNode*& inserted_node, bool& chain_updated);
+    SegmentTreeNode* find_containing_interval(int value) const;
     pair<SegmentTreeNode*, int> delete_easy_node(SegmentTreeNode* current_node, SegmentTreeNode* toDelete);
 
     pair<SegmentTree::SegmentTreeNode*, int> rotate_left(SegmentTreeNode* current_node);
@@ -300,24 +302,15 @@ void SegmentTree::insert_interval(int from, int to)
     SegmentTree::SegmentTreeNode* from_containing_interval = this->find_containing_interval(from);
     if (from == from_containing_interval->get_from())
     {
-#ifdef LOG_AVL_OPERATIONS
-        cout << "merging elementary intervals" << endl;
-#endif // LOG_AVL_OPERATIONS
         this->merge_elementary_intervals(from_containing_interval->prev, from_containing_interval);
     }
     else
     {
-#ifdef LOG_AVL_OPERATIONS
-        cout << "splitting elementary intervals" << endl;
-#endif // LOG_AVL_OPERATIONS
         this->split_elementary_interval(from_containing_interval, from);
     }
     SegmentTree::SegmentTreeNode* to_containing_interval = this->find_containing_interval(to + 1);
     if (to + 1 == to_containing_interval->get_from())
     {
-#ifdef LOG_AVL_OPERATIONS
-        cout << "merging elementary intervals" << endl;
-#endif // LOG_AVL_OPERATIONS
         this->merge_elementary_intervals(to_containing_interval->prev, to_containing_interval);
     }
     else
@@ -328,98 +321,55 @@ void SegmentTree::insert_interval(int from, int to)
 
 void SegmentTree::split_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_split, int splitting_value)
 {
-    SegmentTree::SegmentTreeNode* node1 = interval_to_split->prev;
-    SegmentTree::SegmentTreeNode* node4 = interval_to_split->succ;
+#ifdef LOG_AVL_OPERATIONS
+    cout << "splitting elementary intervals [" << interval_to_split->get_from() << ", " << interval_to_split->get_to() << ") at " << splitting_value << endl;
+#endif // LOG_AVL_OPERATIONS
     int from = interval_to_split->get_from();
     int to = interval_to_split->get_to();
-#ifdef LOG_AVL_OPERATIONS
-    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-    cout << "Delete [" << from << ", " << to << ")" << endl;
-#endif // LOG_AVL_OPERATIONS
-    this->delete_elementary_interval(interval_to_split);
-#ifdef LOG_AVL_OPERATIONS
-    this->print();
-    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-    cout << "Insert [" << from << ", " << splitting_value << ")" << endl;
-#endif // LOG_AVL_OPERATIONS
-    SegmentTree::SegmentTreeNode* node2 = this->insert_elementary_interval(from, splitting_value);
-#ifdef LOG_AVL_OPERATIONS
-    this->print();
-    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-    cout << "Insert [" << splitting_value << ", " << to << ")" << endl;
-#endif // LOG_AVL_OPERATIONS
-    SegmentTree::SegmentTreeNode* node3 = this->insert_elementary_interval(splitting_value, to);
-#ifdef LOG_AVL_OPERATIONS
-    this->print();
-#endif // LOG_AVL_OPERATIONS
-
-    if (node1 != NULL)
-    {
-        node1->succ = node2;
-    }
-    node2->succ = node3;
-    node3->succ = node4;
-
-    if (node4 != NULL)
-    {
-        node4->prev = node3;
-    }
-    node3->prev = node2;
-    node2->prev = node1;
+    bool successor_updated = this->delete_elementary_interval(interval_to_split);
+    this->insert_elementary_interval(from, splitting_value);
+    this->insert_elementary_interval(splitting_value, to);
 }
 
 void SegmentTree::merge_elementary_intervals(SegmentTree::SegmentTreeNode* before, SegmentTree::SegmentTreeNode* after)
 {
-    SegmentTree::SegmentTreeNode* node1 = before->prev;
-    SegmentTree::SegmentTreeNode* node3 = after->succ;
+#ifdef LOG_AVL_OPERATIONS
+    cout << "merging elementary intervals [" << before->get_from() << ", " << before->get_to() << ") and [" << after->get_from() << ", " << after->get_to() << ")" << endl;
+#endif // LOG_AVL_OPERATIONS
+
+
     int from = before->get_from();
-    int after_from = after->get_from();
     int to = after->get_to();
-#ifdef LOG_AVL_OPERATIONS
-    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-    cout << "Delete [" << from << ", " << before->get_to() << ")" << endl;
-#endif // LOG_AVL_OPERATIONS
-    delete_elementary_interval(before);
-#ifdef LOG_AVL_OPERATIONS
-    this->print();
-    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-    cout << "Delete [" << after->get_from() << ", " << to << ")" << endl;
-#endif // LOG_AVL_OPERATIONS
-    delete_elementary_interval(find_containing_interval(after_from));
-#ifdef LOG_AVL_OPERATIONS
-    this->print();
-    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-    cout << "Insert [" << from << ", " << to << ")" << endl;
-#endif // LOG_AVL_OPERATIONS
-    SegmentTree::SegmentTreeNode* node2 = insert_elementary_interval(from, to);
-#ifdef LOG_AVL_OPERATIONS
-    this->print();
-#endif // LOG_AVL_OPERATIONS
-
-    if (node1 != NULL)
+    bool successor_updated = delete_elementary_interval(before);
+    if (successor_updated)
     {
-        node1->succ = node2;
+        after = before;
     }
-    node2->succ = node3;
 
-    if (node3 != NULL)
-    {
-        node3->prev = node2;
-    }
-    node2->prev = node1;
+    delete_elementary_interval(after);
+    insert_elementary_interval(from, to);
 }
 
 SegmentTree::SegmentTreeNode* SegmentTree::insert_elementary_interval(int from, int to)
 {
+#ifdef LOG_AVL_OPERATIONS
+    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+    cout << "Insert [" << from << ", " << to << ")" << endl;
+#endif // LOG_AVL_OPERATIONS
     SegmentTreeNode* inserted_node;
-    this->root = this->insert_elementary_interval(this->root, from, to, inserted_node).first;
+    bool chain_updated = false;
+    this->root = this->insert_elementary_interval(this->root, from, to, inserted_node, chain_updated).first;
+    this->root->set_parent_null();
 #ifdef VERIFY_BALANCE
     this->verify_balance(this->root);
 #endif // VERIFY_BALANCE
+#ifdef LOG_AVL_OPERATIONS
+    this->print();
+#endif
     return inserted_node;
 }
 
-pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval(SegmentTree::SegmentTreeNode* current_node, int from, int to, SegmentTree::SegmentTreeNode*& inserted_node)
+pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval(SegmentTree::SegmentTreeNode* current_node, int from, int to, SegmentTree::SegmentTreeNode*& inserted_node, bool& chain_updated)
 {
     if (current_node == NULL)
     {
@@ -430,8 +380,20 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
     {
         if (to <= current_node->get_from())
         {
-            pair<SegmentTree::SegmentTreeNode*, int> left_insertion_result = insert_elementary_interval(current_node->get_left(), from, to, inserted_node);
+            pair<SegmentTree::SegmentTreeNode*, int> left_insertion_result = insert_elementary_interval(current_node->get_left(), from, to, inserted_node, chain_updated);
             SegmentTree::SegmentTreeNode* left_subtree_root = left_insertion_result.first;
+            if (!chain_updated && left_subtree_root == inserted_node)
+            {
+                chain_updated = true;
+                SegmentTree::SegmentTreeNode* prev = current_node->prev;
+                if (prev != NULL)
+                {
+                    prev->succ = left_subtree_root;
+                    left_subtree_root->prev = prev;
+                }
+                left_subtree_root->succ = current_node;
+                current_node->prev = left_subtree_root;
+            }
             int left_height_change = left_insertion_result.second;
             current_node->set_left(left_subtree_root);
             if (left_height_change == 1)
@@ -468,8 +430,21 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
         }
         else if (from >= current_node->get_to())
         {
-            pair<SegmentTree::SegmentTreeNode*, int> right_insertion_result = insert_elementary_interval(current_node->get_right(), from, to, inserted_node);
+            pair<SegmentTree::SegmentTreeNode*, int> right_insertion_result = insert_elementary_interval(current_node->get_right(), from, to, inserted_node, chain_updated);
             SegmentTree::SegmentTreeNode* right_subtree_root = right_insertion_result.first;
+            if (!chain_updated && right_subtree_root == inserted_node)
+            {
+                chain_updated = true;
+                SegmentTree::SegmentTreeNode* succ = current_node->succ;
+                if (succ != NULL)
+                {
+                    succ->prev = right_subtree_root;
+                    right_subtree_root->succ = succ;
+                }
+                right_subtree_root->prev = current_node;
+                current_node->succ = right_subtree_root;
+            }
+
             int right_height_change = right_insertion_result.second;
             current_node->set_right(right_subtree_root);
             if (right_height_change == 1)
@@ -511,8 +486,16 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::insert_elementary_interval
     }
 }
 
-void SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_delete)
+bool SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* interval_to_delete)
 {
+#ifdef LOG_AVL_OPERATIONS
+    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+    cout << "Delete [" << interval_to_delete->get_from() << ", " << interval_to_delete->get_to() << ")" << endl;
+#endif // LOG_AVL_OPERATIONS
+
+    SegmentTree::SegmentTreeNode* prev = interval_to_delete->prev;
+    SegmentTree::SegmentTreeNode* succ = interval_to_delete->succ;
+
     // Step 1: Find the leaf node to delete
     int replace_from;
     int replace_to;
@@ -520,11 +503,9 @@ void SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* inter
     SegmentTree::SegmentTreeNode* leaf_node_to_delete = interval_to_delete;
     if (interval_to_delete->get_left() != NULL && interval_to_delete->get_right() != NULL)
     {
-        leaf_node_to_delete = interval_to_delete->get_right();
-        while (leaf_node_to_delete->get_left() != NULL)
-        {
-            leaf_node_to_delete = leaf_node_to_delete->get_left();
-        }
+        leaf_node_to_delete = succ;
+        prev = interval_to_delete;
+        succ = succ->succ;
         need_replace = true;
         replace_from = leaf_node_to_delete->get_from();
         replace_to = leaf_node_to_delete->get_to();
@@ -532,6 +513,10 @@ void SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* inter
 
     // Step 2: Delete the node without two children recursively
     this->root = this->delete_easy_node(this->root, leaf_node_to_delete).first;
+    if (this->root != NULL)
+    {
+        this->root->set_parent_null();
+    }
 
     // Step 3: Replace values
     if (need_replace)
@@ -539,9 +524,23 @@ void SegmentTree::delete_elementary_interval(SegmentTree::SegmentTreeNode* inter
         interval_to_delete->set_interval(replace_from, replace_to);
     }
 
+    if (prev != NULL)
+    {
+        prev->succ = succ;
+    }
+    if (succ != NULL)
+    {
+        succ->prev = prev;
+    }
+
 #ifdef VERIFY_BALANCE
     this->verify_balance(this->root);
 #endif // VERIFY_BALANCE
+
+#ifdef LOG_AVL_OPERATIONS
+    this->print();
+#endif // LOG_AVL_OPERATIONS
+    return need_replace;
 }
 
 pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::delete_easy_node(SegmentTree::SegmentTreeNode* current_node, SegmentTree::SegmentTreeNode* to_delete)
@@ -901,11 +900,11 @@ pair<SegmentTree::SegmentTreeNode*, int> SegmentTree::rotate_right(SegmentTree::
     throw 16;
 }
 
-SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
+SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value) const
 {
     if (this->root == NULL)
     {
-        throw 17;
+        return NULL;
     }
     SegmentTree::SegmentTreeNode* cursor = root;
 
@@ -937,6 +936,32 @@ SegmentTree::SegmentTreeNode* SegmentTree::find_containing_interval(int value)
 void SegmentTree::print() const
 {
     this->root->print(0);
+    this->print_successor_chain();
+}
+
+void SegmentTree::print_successor_chain() const
+{
+    SegmentTree::SegmentTreeNode* node = root;
+    if (root != NULL)
+    {
+        while (true)
+        {
+            if (node->prev != NULL)
+            {
+                node = node->prev;
+            }
+            else
+            {
+                break;
+            }
+        }
+        while (node != NULL)
+        {
+            cout << "[" << node->get_from() << ", " << node->get_to() << ") - ";
+            node = node->succ;
+        }
+        cout << endl;
+    }
 }
 
 // The idea of query is as follow
@@ -1389,89 +1414,3 @@ int SPOJ_LITE()
 
     return 0;
 }
-
-/*
-namespace Workspace
-{
-using System;
-using System.IO;
-using System.Linq;
-using System.Text;
-
-class Program
-{
-static void Main(string[] args)
-{
-Random random = new Random(0);
-int size = 10;
-var data = Enumerable.Range(0, size * 2).ToArray();
-for (int i = 0; i < size * 50; i++)
-{
-int p = random.Next(size * 2);
-int q = random.Next(size * 2);
-if (p == q)
-{
-i--;
-}
-else
-{
-int temp = data[p];
-data[p] = data[q];
-data[q] = temp;
-}
-}
-
-StringBuilder inputBuilder = new StringBuilder();
-
-inputBuilder.AppendLine(string.Format("{0} {1}", size * 2, size + size * (size * 2 + 1)));
-bool[] result = new bool[size * 2];
-for (int i = 0; i < size; i++)
-{
-int from = Math.Min(data[2 * i], data[2 * i + 1]);
-int to = Math.Max(data[2 * i], data[2 * i + 1]);
-for (int j = from; j <= to; j++)
-{
-result[j] = !result[j];
-}
-inputBuilder.AppendLine(string.Format("{0} {1} {2}", 0, from, to));
-}
-
-for (int i = 0; i < size * 2; i++)
-{
-for (int j = i; j < size * 2; j++)
-{
-inputBuilder.AppendLine(string.Format("{0} {1} {2}", 1, i, j));
-}
-}
-
-foreach (var b in result)
-{
-Console.Write(b ? 1 : 0);
-}
-Console.WriteLine();
-
-StringBuilder expectationBuilder = new StringBuilder();
-for (int i = 0; i < size * 2; i++)
-{
-for (int j = i; j < size * 2; j++)
-{
-int onCount = 0;
-for (int k = i; k <= j; k++)
-{
-if (result[k])
-{
-onCount++;
-}
-}
-expectationBuilder.AppendLine(onCount.ToString());
-}
-}
-
-string inputPath = @"C:\Users\andrewau\Documents\GitHub\Competition\input.txt";
-string expectationPath = @"C:\Users\andrewau\Documents\GitHub\Competition\expect.txt";
-File.WriteAllText(inputPath, inputBuilder.ToString());
-File.WriteAllText(expectationPath, expectationBuilder.ToString());
-}
-}
-}
-*/

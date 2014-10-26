@@ -5,6 +5,7 @@
 #include "SPOJ_HORRIBLE.h"
 
 #include <iostream>
+#include <algorithm>
 
 typedef long long int64;
 

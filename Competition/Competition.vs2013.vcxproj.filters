@@ -156,7 +156,19 @@
     <ClInclude Include="UVa957.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SPOJ_LITE.h">
+    <ClInclude Include="SPOJ_HORRIBLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SPOJ_LITE_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SPOJ_LITE_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa10077.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa10341.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -299,7 +311,19 @@
     <ClCompile Include="UVa957.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SPOJ_LITE.cpp">
+    <ClCompile Include="SPOJ_HORRIBLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOJ_LITE_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOJ_LITE_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa10077.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa10341.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

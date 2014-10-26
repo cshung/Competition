@@ -48,6 +48,8 @@
 #include "UVa957.h"      // 044
 #include "SPOJ_LITE_1.h" // 045
 #include "SPOJ_LITE_2.h" // 045
+#include "UVa10341.h"    // 046
+#include "UVa10077.h"    // 047
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -104,5 +106,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return SPOJ_TEST();
     // return UVa957();
     // return SPOJ_LITE_1(); // Time limit exceeded
-    return SPOJ_LITE_2();
+    // return SPOJ_LITE_2(); // Not submitted - hopefully better 
+    // return UVa10341();    // This should be good
+    return UVa10077();       // One more down - yeah - this one is easy.
 }

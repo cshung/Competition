@@ -4,6 +4,7 @@
 // http://www.spoj.com/problems/LITE/
 
 #include "SPOJ_LITE_2.h"
+#include <stdio.h>
 #include <iostream>
 #include <algorithm>
 
@@ -23,16 +24,17 @@ namespace _SPOJ_LITE_2
         {
         public:
             SegmentTreeNode(int from, int to);
-            int from;
-            int to;
-            int on_count;
-            bool children_flipped;
-            SegmentTreeNode* left;
-            SegmentTreeNode* right;
             void flip_children();
             void flip_lights(int from, int to);
             int query(int from, int to) ;
             void print(int indent) const;
+
+            int from;
+            int to;
+            SegmentTreeNode* left;
+            SegmentTreeNode* right;
+            int on_count;
+            bool children_flipped;
         };
 
         SegmentTreeNode* build_tree(int from, int to) const;

@@ -106,7 +106,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return SPOJ_TEST();
     // return UVa957();
     // return SPOJ_LITE_1(); // Time limit exceeded
-    // return SPOJ_LITE_2(); // Not submitted - hopefully better 
-    // return UVa10341();    // This should be good
-    return UVa10077();       // One more down - yeah - this one is easy.
+    return SPOJ_LITE_2(); // Not submitted - hopefully better 
+    // return UVa10341();
+    // return UVa10077();
 }

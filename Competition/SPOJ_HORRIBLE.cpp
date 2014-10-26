@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#pragma warning(disable : 4996)
 
 // http://www.spoj.com/problems/HORRIBLE/
 
@@ -26,7 +25,7 @@ namespace _SPOJ_HORRIBLE
 
             void add_constant(int from, int to, int64 value);
             int64 query(int from, int to);
-            
+
             void print(int indent) const;
 
             int from;
@@ -64,7 +63,6 @@ SegmentTree::SegmentTreeNode* SegmentTree::build_tree(int from, int to) const
     else if (size > 1)
     {
         int left_size = size / 2;
-        int right_size = size - left_size;
         int split = from + left_size;
         result->left = this->build_tree(from, split);
         result->right = this->build_tree(split, to);
@@ -214,30 +212,38 @@ void SegmentTree::SegmentTreeNode::print(int indent) const
 
 int SPOJ_HORRIBLE()
 {
-    int num_elements;
-    int num_operations;
-    scanf("%d %d", &num_elements, &num_operations);
-    SegmentTree tree(num_elements);
-    for (int q = 0; q < num_operations; q++)
+    int num_test_cases;
+    cin >> num_test_cases;
+    for (int c = 0; c < num_test_cases; c++)
     {
-        int operation_id;
-        int from;
-        int to;
-        scanf("%d %d %d", &operation_id, &from, &to);
-
-        // Converting the input one base inclusive/inclusive index to zero base inclusive/exclusive index
-        from--;
-
-        if (operation_id == 0)
+        int num_elements;
+        int num_operations;
+        cin >> num_elements;
+        cin >> num_operations;
+        SegmentTree tree(num_elements);
+        for (int q = 0; q < num_operations; q++)
         {
-            int value;
-            scanf(" %d", &value);
-            tree.add_constant(from, to, value);
-        }
-        else
-        {
-            int64 query_result = tree.query(from, to);
-            printf("%d\n", query_result);
+            int operation_id;
+            int from;
+            int to;
+            cin >> operation_id;
+            cin >> from;
+            cin >> to;
+
+            // Converting the input one base inclusive/inclusive index to zero base inclusive/exclusive index
+            from--;
+
+            if (operation_id == 0)
+            {
+                int value;
+                cin >> value;
+                tree.add_constant(from, to, value);
+            }
+            else
+            {
+                int64 query_result = tree.query(from, to);
+                cout << query_result << endl;
+            }
         }
     }
 

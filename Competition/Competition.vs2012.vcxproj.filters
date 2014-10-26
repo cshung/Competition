@@ -168,6 +168,9 @@
     <ClInclude Include="UVa10077.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SPOJ_HORRIBLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -318,6 +321,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa10077.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOJ_HORRIBLE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -187,8 +187,6 @@ void SegmentTree::SegmentTreeNode::print(int indent) const
 SegmentTree::SegmentTreeNode* SegmentTree::build_tree(int from, int to) const
 {
     SegmentTree::SegmentTreeNode* result = new SegmentTree::SegmentTreeNode(from, to);
-    result->from = from;
-    result->to = to;
     int size = to - from;
     if (size == 1)
     {

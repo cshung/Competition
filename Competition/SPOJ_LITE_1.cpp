@@ -3,7 +3,7 @@
 
 // http://www.spoj.com/problems/LITE/
 
-#include "SPOJ_LITE.h"
+#include "SPOJ_LITE_1.h"
 
 //#define VERIFY_BALANCE
 //#define LOG_SUMMARY
@@ -1421,7 +1421,7 @@ int SegmentTree::verify_balance(SegmentTree::SegmentTreeNode* subtree_root) cons
 }
 #endif //VERIFY_BALANCE
 
-int SPOJ_LITE()
+int SPOJ_LITE_1()
 {
     int num_lights;
     int num_operations;

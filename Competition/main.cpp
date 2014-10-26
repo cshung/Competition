@@ -2,51 +2,52 @@
 //
 
 #include "stdafx.h"
-#include "SPOJ_PALIN.h" // 001
-#include "UVa100.h"     // 002
-#include "UVa272.h"     // 003
-#include "UVa394.h"     // 004
-#include "UVa483.h"     // 005
-#include "UVa573.h"     // 006
-#include "UVa661.h"     // 007
-#include "UVa739.h"     // 008
-#include "UVa837.h"     // 009
-#include "UVa941.h"     // 010
-#include "UVa10082.h"   // 011
-#include "UVa10141.h"   // 012
-#include "UVa10281.h"   // 013
-#include "UVa10363.h"   // 014
-#include "UVa10420.h"   // 015
-#include "UVa482.h"     // 016
-#include "UVa146.h"     // 017
-#include "UVa299.h"     // 018
-#include "UVa11462.h"   // 019
-#include "UVa127.h"     // 020
-#include "UVa336.h"     // 021
-#include "UVa10226.h"   // 022
-#include "UVa908.h"     // 023
-#include "UVa291.h"     // 024
-#include "UVa459.h"     // 025
-#include "UVa11235.h"   // 026
-#include "UVa912.h"     // 027
-#include "UVa11297.h"   // 028
-#include "UVa10505.h"   // 029
-#include "UVa11503.h"   // 030
-#include "UVa10928.h"   // 031
-#include "UVa725.h"     // 032
-#include "UVa750.h"     // 033
-#include "UVa10360.h"   // 034
-#include "UVa524.h"     // 035
-#include "UVa628.h"     // 036
-#include "UVa639.h"     // 037
-#include "UVa193.h"     // 038
-#include "UVa10158.h"   // 039
-#include "UVa11242.h"   // 040
-#include "UVa679.h"     // 041
-#include "UVa714.h"     // 042
-#include "SPOJ_TEST.h"  // 043
-#include "UVa957.h"     // 044
-#include "SPOJ_LITE.h"  // 045
+#include "SPOJ_PALIN.h"  // 001
+#include "UVa100.h"      // 002
+#include "UVa272.h"      // 003
+#include "UVa394.h"      // 004
+#include "UVa483.h"      // 005
+#include "UVa573.h"      // 006
+#include "UVa661.h"      // 007
+#include "UVa739.h"      // 008
+#include "UVa837.h"      // 009
+#include "UVa941.h"      // 010
+#include "UVa10082.h"    // 011
+#include "UVa10141.h"    // 012
+#include "UVa10281.h"    // 013
+#include "UVa10363.h"    // 014
+#include "UVa10420.h"    // 015
+#include "UVa482.h"      // 016
+#include "UVa146.h"      // 017
+#include "UVa299.h"      // 018
+#include "UVa11462.h"    // 019
+#include "UVa127.h"      // 020
+#include "UVa336.h"      // 021
+#include "UVa10226.h"    // 022
+#include "UVa908.h"      // 023
+#include "UVa291.h"      // 024
+#include "UVa459.h"      // 025
+#include "UVa11235.h"    // 026
+#include "UVa912.h"      // 027
+#include "UVa11297.h"    // 028
+#include "UVa10505.h"    // 029
+#include "UVa11503.h"    // 030
+#include "UVa10928.h"    // 031
+#include "UVa725.h"      // 032
+#include "UVa750.h"      // 033
+#include "UVa10360.h"    // 034
+#include "UVa524.h"      // 035
+#include "UVa628.h"      // 036
+#include "UVa639.h"      // 037
+#include "UVa193.h"      // 038
+#include "UVa10158.h"    // 039
+#include "UVa11242.h"    // 040
+#include "UVa679.h"      // 041
+#include "UVa714.h"      // 042
+#include "SPOJ_TEST.h"   // 043
+#include "UVa957.h"      // 044
+#include "SPOJ_LITE_1.h" // 045
+#include "SPOJ_LITE_2.h" // 045
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -102,6 +103,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa714();
     // return SPOJ_TEST();
     // return UVa957();
-    return SPOJ_LITE();
+    // return SPOJ_LITE_1(); // Time limit exceeded
+    return SPOJ_LITE_2();
 }
-

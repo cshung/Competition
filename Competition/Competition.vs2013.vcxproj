@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
     <ClInclude Include="SPOJ_LITE_1.h" />
     <ClInclude Include="SPOJ_LITE_2.h" />
@@ -132,6 +133,7 @@
     <ClInclude Include="UVa957.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_HORRIBLE.cpp" />
     <ClCompile Include="SPOJ_LITE_1.cpp" />

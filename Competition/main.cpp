@@ -49,6 +49,7 @@
 #include "UVa10341.h"      // 046
 #include "UVa10077.h"      // 047
 #include "SPOJ_HORRIBLE.h" // 048
+#include "LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" // 049
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -108,5 +109,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return SPOJ_LITE_2();   // Accepted
     // return UVa10341();      // Accepted
     // return UVa10077();      // Accepted
-    return SPOJ_HORRIBLE(); // Accepted
+    // return SPOJ_HORRIBLE(); // Accepted
+    return LEET_LONGEST_CONSECUTIVE_SEQUENCE(); // Accepted
 }

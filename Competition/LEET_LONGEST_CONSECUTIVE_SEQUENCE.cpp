@@ -17,9 +17,9 @@ namespace _LEET_LONGEST_CONSECUTIVE_SEQUENCE
     public:
         int longestConsecutive(vector<int> &num)
         {
-            set<int> 	seen;		// A set keeping track of whether a number is seen or not
-            map<int, int>	startChain;	// A map from the starting number to the chain size
-            map<int, int>	endChain;	// A map from the ending number to the chain size
+            set<int>        seen;       // A set keeping track of whether a number is seen or not
+            map<int, int>   startChain; // A map from the starting number to the chain size
+            map<int, int>   endChain;   // A map from the ending number to the chain size
 
             for (unsigned int i = 0; i < num.size(); i++)
             {

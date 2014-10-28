@@ -51,7 +51,8 @@
 #include "SPOJ_HORRIBLE.h"                     // 048
 #include "LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" // 049
 #include "LEET_SUM_ROOT_TO_LEAF_NUMBER.h"      // 050
-#include "UVa410.h"
+#include "UVa410.h"                            // 051
+#include "UVa10020.h"                          // 052
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -114,5 +115,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return SPOJ_HORRIBLE();                     // Accepted
     // return LEET_LONGEST_CONSECUTIVE_SEQUENCE(); // Accepted
     // return LEET_SUM_ROOT_TO_LEAF_NUMBER();      // Accepted
-    return UVa410();                            // Accepted
+    // return UVa410();                            // Accepted
+    return UVa10020();
 }

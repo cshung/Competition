@@ -50,6 +50,7 @@
 #include "UVa10077.h"                          // 047
 #include "SPOJ_HORRIBLE.h"                     // 048
 #include "LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" // 049
+#include "LEET_SUM_ROOT_TO_LEAF_NUMBER.h"      // 050
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -62,53 +63,54 @@
 //
 int _tmain(int argc, _TCHAR* argv[])
 {
-    // return SPOJ_PALIN();                     // Accepted
-    // return UVa100();                         // Accepted
-    // return UVa272();                         // Accepted
-    // return UVa394();                         // Accepted
-    // return UVa573();                         // Accepted
-    // return UVa661();                         // Accepted
-    // return UVa739();                         // Accepted
-    // return UVa837();                         // Accepted
-    // return UVa941();                         // Accepted
-    // return UVa10082();                       // Accepted
-    // return UVa10141();                       // Accepted
-    // return UVa10281();                       // Accepted
-    // return UVa10363();                       // Accepted
-    // return UVa10420();                       // Accepted
-    // return UVa482();                         // Accepted
-    // return UVa146();                         // Accepted
-    // return UVa299();                         // Accepted
-    // return UVa11462();                       // Accepted
-    // return UVa127();                         // Accepted
-    // return UVa336();                         // Accepted
-    // return UVa10226();                       // Accepted
-    // return UVa908();                         // Accepted
-    // return UVa291();                         // Accepted
-    // return UVa459();                         // Accepted
-    // return UVa11235();                       // Accepted
-    // return UVa912();                         // Accepted
-    // return UVa11297();                       // Accepted
-    // return UVa10505();                       // Accepted
-    // return UVa11503();                       // Accepted
-    // return UVa10928();                       // Accepted
-    // return UVa725();                         // Accepted
-    // return UVa750();                         // Accepted
-    // return UVa10360();                       // Accepted
-    // return UVa524();                         // Accepted
-    // return UVa628();                         // Accepted
-    // return UVa639();                         // Accepted
-    // return UVa193();                         // Accepted
-    // return UVa10158();                       // Accepted
-    // return UVa11242();                       // Accepted
-    // return UVa679();                         // Accepted
-    // return UVa714();                         // Accepted
-    // return SPOJ_TEST();                      // Accepted
-    // return UVa957();                         // Accepted
-    // return SPOJ_LITE_1();                    // Time limit exceeded - but this algorithm is independent on number of lights - with large constant though
-    // return SPOJ_LITE_2();                    // Accepted
-    // return UVa10341();                       // Accepted
-    // return UVa10077();                       // Accepted
-    // return SPOJ_HORRIBLE();                  // Accepted
-    return LEET_LONGEST_CONSECUTIVE_SEQUENCE(); // Accepted
+    // return SPOJ_PALIN();                        // Accepted
+    // return UVa100();                            // Accepted
+    // return UVa272();                            // Accepted
+    // return UVa394();                            // Accepted
+    // return UVa573();                            // Accepted
+    // return UVa661();                            // Accepted
+    // return UVa739();                            // Accepted
+    // return UVa837();                            // Accepted
+    // return UVa941();                            // Accepted
+    // return UVa10082();                          // Accepted
+    // return UVa10141();                          // Accepted
+    // return UVa10281();                          // Accepted
+    // return UVa10363();                          // Accepted
+    // return UVa10420();                          // Accepted
+    // return UVa482();                            // Accepted
+    // return UVa146();                            // Accepted
+    // return UVa299();                            // Accepted
+    // return UVa11462();                          // Accepted
+    // return UVa127();                            // Accepted
+    // return UVa336();                            // Accepted
+    // return UVa10226();                          // Accepted
+    // return UVa908();                            // Accepted
+    // return UVa291();                            // Accepted
+    // return UVa459();                            // Accepted
+    // return UVa11235();                          // Accepted
+    // return UVa912();                            // Accepted
+    // return UVa11297();                          // Accepted
+    // return UVa10505();                          // Accepted
+    // return UVa11503();                          // Accepted
+    // return UVa10928();                          // Accepted
+    // return UVa725();                            // Accepted
+    // return UVa750();                            // Accepted
+    // return UVa10360();                          // Accepted
+    // return UVa524();                            // Accepted
+    // return UVa628();                            // Accepted
+    // return UVa639();                            // Accepted
+    // return UVa193();                            // Accepted
+    // return UVa10158();                          // Accepted
+    // return UVa11242();                          // Accepted
+    // return UVa679();                            // Accepted
+    // return UVa714();                            // Accepted
+    // return SPOJ_TEST();                         // Accepted
+    // return UVa957();                            // Accepted
+    // return SPOJ_LITE_1();                       // Time limit exceeded - but this algorithm is independent on number of lights - with large constant though
+    // return SPOJ_LITE_2();                       // Accepted
+    // return UVa10341();                          // Accepted
+    // return UVa10077();                          // Accepted
+    // return SPOJ_HORRIBLE();                     // Accepted
+    // return LEET_LONGEST_CONSECUTIVE_SEQUENCE(); // Accepted
+    return LEET_SUM_ROOT_TO_LEAF_NUMBER();
 }

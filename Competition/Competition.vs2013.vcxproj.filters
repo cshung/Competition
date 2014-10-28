@@ -177,6 +177,9 @@
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UVa410.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -336,6 +339,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa410.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

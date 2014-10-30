@@ -54,6 +54,7 @@
 #include "UVa410.h"                            // 051
 #include "UVa10020.h"                          // 052
 #include "UVa10340.h"                          // 052
+#include "UVa10440.h"                          // 053
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -118,5 +119,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SUM_ROOT_TO_LEAF_NUMBER();      // Accepted
     // return UVa410();                            // Accepted
     // return UVa10020();                          // Accepted
-    return UVa10340();                          // 
+    // return UVa10340();                          // Accepted
+    return UVa10440();                          // 
 }

@@ -182,12 +182,12 @@ int UVa10440()
         int size = 1;
         priority_queue.push_back(new UVa10440_state(-1, 0, 0, 0));
 
-        while (true)
+        while (size > 0)
         {
             // Step 1: Find the current best state
             UVa10440_state* current_best = delete_min(priority_queue, size);
 
-            // cout << "Processing current best at time" << current_best->time << " with " << current_best->processed_cars << " processed and " << current_best->pending_cars << " pending with " << current_best->trip_count << "trips" << endl;
+            // cout << "Processing current best at time " << current_best->time << " with " << current_best->processed_cars << " processed and " << current_best->pending_cars << " pending with " << current_best->trip_count << " trips." << endl;
 
             if (current_best->processed_cars == number_of_cars)
             {
@@ -200,7 +200,7 @@ int UVa10440()
             {
                 // In this case, we can consider moving right now
                 int new_time = current_best->time + 2 * trip_time;
-                int new_processed_cars = current_best->processed_cars + current_best->pending_cars;
+                int new_processed_cars = current_best->processed_cars + min(current_best->pending_cars, ferry_capacity);
                 int new_unseen_cars = number_of_cars - (upper_bound(arrival_times.begin(), arrival_times.end(), new_time) - arrival_times.begin());
                 int new_pending_cars = number_of_cars - new_processed_cars - new_unseen_cars;
                 int new_trip_count = current_best->trip_count + 1;
@@ -218,8 +218,9 @@ int UVa10440()
                 }
             }
 
-            // cout << "The priority queue has " << size << "elements after the moves" << endl;
-            // for (int p = 0; p < priority_queue.size(); p++)
+            // cout << endl;
+            // cout << "The priority queue has " << size << " elements after the moves." << endl;
+            // for (unsigned int p = 0; p < priority_queue.size(); p++)
             // {
             //     if (priority_queue[p] == NULL)
             //     {
@@ -230,6 +231,7 @@ int UVa10440()
             //         cout << priority_queue[p]->time << ", " << priority_queue[p]->processed_cars << ", " << priority_queue[p]->pending_cars << ", " << priority_queue[p]->trip_count << endl;
             //     }
             // }
+            // cout << endl;
         }
     }
     return 0;

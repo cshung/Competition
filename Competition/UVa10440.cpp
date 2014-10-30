@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+#define LOG
+
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1381
 
 #include "UVa10440.h"
@@ -113,6 +115,7 @@ UVa10440_state* delete_min(vector<UVa10440_state*>& priority_queue, int& size)
 {
     UVa10440_state* result = priority_queue[0];
     priority_queue[0] = priority_queue[size - 1];
+    priority_queue[size - 1] = NULL;
     size--;
     bubble_down(priority_queue, 0, size);
     return result;
@@ -146,6 +149,7 @@ void insert(vector<UVa10440_state*>& priority_queue, int& size, UVa10440_state* 
         else if (compare_result == 0)
         {
             priority_queue[current_index] = priority_queue[size - 1];
+            priority_queue[size - 1] = NULL;
             size--;
             bubble_down(priority_queue, current_index, size);
         }
@@ -187,7 +191,9 @@ int UVa10440()
             // Step 1: Find the current best state
             UVa10440_state* current_best = delete_min(priority_queue, size);
 
-            // cout << "Processing current best at time " << current_best->time << " with " << current_best->processed_cars << " processed and " << current_best->pending_cars << " pending with " << current_best->trip_count << " trips." << endl;
+#ifdef LOG
+            cout << "Processing current best at time " << current_best->time << " with " << current_best->processed_cars << " processed and " << current_best->pending_cars << " pending with " << current_best->trip_count << " trips." << endl;
+#endif
 
             if (current_best->processed_cars == number_of_cars)
             {
@@ -217,23 +223,24 @@ int UVa10440()
                     insert(priority_queue, size, new UVa10440_state(arrival_times[next_move_index], current_best->processed_cars, current_best->pending_cars + 1, current_best->trip_count));
                 }
             }
-
-            // cout << endl;
-            // cout << "The priority queue has " << size << " elements after the moves." << endl;
-            // for (unsigned int p = 0; p < priority_queue.size(); p++)
-            // {
-            //     if (priority_queue[p] == NULL)
-            //     {
-            //         cout << "(null)" << endl;
-            //     }
-            //     else
-            //     {
-            //         cout << priority_queue[p]->time << ", " << priority_queue[p]->processed_cars << ", " << priority_queue[p]->pending_cars << ", " << priority_queue[p]->trip_count << endl;
-            //     }
-            // }
-            // cout << endl;
+#ifdef LOG
+            cout << endl;
+            cout << "The priority queue has " << size << " elements after the moves." << endl;
+            for (unsigned int p = 0; p < priority_queue.size(); p++)
+            {
+                if (priority_queue[p] == NULL)
+                {
+                    cout << "(null)" << endl;
+                }
+                else
+                {
+                    cout << priority_queue[p]->time << ", " << priority_queue[p]->processed_cars << ", " << priority_queue[p]->pending_cars << ", " << priority_queue[p]->trip_count << endl;
+                }
+            }
+            cout << endl;
+#endif
+            }
         }
-    }
     return 0;
-}
+    }
 

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#define LOG
+// #define LOG
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1381
 
@@ -81,7 +81,7 @@ void bubble_down(vector<UVa10440_state*>& priority_queue, int current_index, int
                 {
                     UVa10440_state* temp = priority_queue[current_index];
                     priority_queue[current_index] = priority_queue[right_child_index];
-                    priority_queue[left_child_index] = temp;
+                    priority_queue[right_child_index] = temp;
                     current_index = right_child_index;
                 }
                 else
@@ -152,6 +152,7 @@ void insert(vector<UVa10440_state*>& priority_queue, int& size, UVa10440_state* 
             priority_queue[size - 1] = NULL;
             size--;
             bubble_down(priority_queue, current_index, size);
+            break;
         }
         else
         {
@@ -186,10 +187,39 @@ int UVa10440()
         int size = 1;
         priority_queue.push_back(new UVa10440_state(-1, 0, 0, 0));
 
+        UVa10440_state* last_best = NULL;
+
         while (size > 0)
         {
             // Step 1: Find the current best state
             UVa10440_state* current_best = delete_min(priority_queue, size);
+
+#ifdef LOG
+            cout << endl;
+            cout << "After delete min, the priority queue has " << size << " elements after the moves." << endl;
+            for (unsigned int p = 0; p < priority_queue.size(); p++)
+            {
+                if (priority_queue[p] == NULL)
+                {
+                    cout << "(null)" << endl;
+                }
+                else
+                {
+                    cout << priority_queue[p]->time << ", " << priority_queue[p]->processed_cars << ", " << priority_queue[p]->pending_cars << ", " << priority_queue[p]->trip_count << endl;
+                }
+            }
+            cout << endl;
+#endif
+
+            if (last_best != NULL)
+            {
+                if (last_best->time == current_best->time && last_best->trip_count == current_best->trip_count && last_best->processed_cars == current_best->processed_cars)
+                {
+                    // It is possible that the duplicate removal does not work :( because the minimum is on another branch
+                    continue;
+                }
+            }
+            last_best = current_best;
 
 #ifdef LOG
             cout << "Processing current best at time " << current_best->time << " with " << current_best->processed_cars << " processed and " << current_best->pending_cars << " pending with " << current_best->trip_count << " trips." << endl;
@@ -220,7 +250,12 @@ int UVa10440()
                 unsigned int next_move_index = upper_bound(arrival_times.begin(), arrival_times.end(), current_best->time) - arrival_times.begin();
                 if (next_move_index < arrival_times.size())
                 {
-                    insert(priority_queue, size, new UVa10440_state(arrival_times[next_move_index], current_best->processed_cars, current_best->pending_cars + 1, current_best->trip_count));
+                    int new_time = arrival_times[next_move_index];
+                    int new_processed_cars = current_best->processed_cars;
+                    int new_unseen_cars = number_of_cars - (upper_bound(arrival_times.begin(), arrival_times.end(), new_time) - arrival_times.begin());
+                    int new_pending_cars = number_of_cars - new_processed_cars - new_unseen_cars;
+                    int new_trip_count = current_best->trip_count;
+                    insert(priority_queue, size, new UVa10440_state(new_time, new_processed_cars, new_pending_cars, new_trip_count));
                 }
             }
 #ifdef LOG
@@ -239,8 +274,7 @@ int UVa10440()
             }
             cout << endl;
 #endif
-            }
         }
-    return 0;
     }
-
+    return 0;
+}

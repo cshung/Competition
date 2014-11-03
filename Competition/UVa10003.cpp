@@ -73,7 +73,7 @@ int UVa10003()
             }
         }
 
-        cout << "The minimum cutting is " << opt[0][endpoints.size() - 1] << endl;
+        cout << "The minimum cutting is " << opt[0][endpoints.size() - 1] << "." << endl;
     }
 
     return 0;

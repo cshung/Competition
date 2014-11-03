@@ -14,33 +14,32 @@ int UVa111()
 {
     int num_events;
     cin >> num_events;
-    map<int, int> actual_order;
-    for (int i = 0; i < num_events; i++)
+    map<int, int> actual_event_rank;
+    for (int event_id = 0; event_id < num_events; event_id++)
     {
-        int event_id;
-        cin >> event_id;
-        actual_order.insert(pair<int, int>(event_id, i));
+        int event_rank;
+        cin >> event_rank;
+        actual_event_rank.insert(pair<int, int>(event_id, event_rank));
     }
 
     while (true)
     {
         vector<int> student_answer;
-        for (int i = 0; i < num_events; i++)
+        map<int, int> student_event_id;
+        for (int event_id = 0; event_id < num_events; event_id++)
         {
-            int student_answer_value;
-            cin >> student_answer_value;
+            int student_event_rank;
+            cin >> student_event_rank;
             if (cin.eof())
             {
                 return 0;
             }
-            student_answer.push_back(actual_order[student_answer_value]);
+            student_event_id.insert(pair<int, int>(student_event_rank, event_id));
         }
-
-        for (int i = 0; i < num_events; i++)
+        for (int event_rank = 1; event_rank <= num_events; event_rank++)
         {
-            cout << student_answer[i] << " ";
+            student_answer.push_back(actual_event_rank[student_event_id[event_rank]]);
         }
-        cout << endl;
 
         vector<int> score;
         score.resize(num_events);

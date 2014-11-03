@@ -90,6 +90,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UVa100.h" />
     <ClInclude Include="UVa10003.h" />
+    <ClInclude Include="UVa10020.h" />
     <ClInclude Include="UVa10077.h" />
     <ClInclude Include="UVa10082.h" />
     <ClInclude Include="UVa10141.h" />
@@ -106,6 +107,7 @@
     <ClInclude Include="UVa10505.h" />
     <ClInclude Include="UVa10670.h" />
     <ClInclude Include="UVa10763.h" />
+    <ClInclude Include="UVa10911.h" />
     <ClInclude Include="UVa10928.h" />
     <ClInclude Include="UVa11054.h" />
     <ClInclude Include="UVa111.h" />
@@ -160,6 +162,7 @@
     </ClCompile>
     <ClCompile Include="UVa100.cpp" />
     <ClCompile Include="UVa10003.cpp" />
+    <ClCompile Include="UVa10020.cpp" />
     <ClCompile Include="UVa10077.cpp" />
     <ClCompile Include="UVa10082.cpp" />
     <ClCompile Include="UVa10141.cpp" />
@@ -176,6 +179,7 @@
     <ClCompile Include="UVa10505.cpp" />
     <ClCompile Include="UVa10670.cpp" />
     <ClCompile Include="UVa10763.cpp" />
+    <ClCompile Include="UVa10911.cpp" />
     <ClCompile Include="UVa10928.cpp" />
     <ClCompile Include="UVa11054.cpp" />
     <ClCompile Include="UVa111.cpp" />

@@ -219,6 +219,9 @@
     <ClInclude Include="UVa10911.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SPOJ_FISHER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -420,6 +423,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa10911.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOJ_FISHER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

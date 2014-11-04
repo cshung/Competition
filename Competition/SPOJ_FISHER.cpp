@@ -2,99 +2,24 @@
 
 // http://www.spoj.com/problems/FISHER/
 
-#define LOG
-
-#include "SPOJ_FISHER.h"
+// #define LOG
 
 #include <iostream>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 using namespace std;
-
-// Using global to avoid passing - bad coding :(
-int num_cities;
-int time_budget;
-vector<vector<int> > distances;
-vector<vector<int> > tolls;
-map<pair<int, int>, pair<int, int> > memo;
-
-// cost, time pair
-pair<int, int> find_optimal_tour(int current_node, int time_budget, int level)
-{
-#ifdef LOG
-    for (int indent = 0; indent < level; indent++) { cout << " "; }
-    cout << "Calling find_optimal_tour(" << current_node << ", " << time_budget << ")" << endl;
-#endif
-    map<pair<int, int>, pair<int, int> >::iterator probe = memo.find(pair<int, int>(current_node, time_budget));
-    if (probe != memo.end())
-    {
-#ifdef LOG
-        for (int indent = 0; indent < level; indent++) { cout << " "; }
-        cout << "Hit probe" << endl;
-#endif
-        return probe->second;
-    }
-    else
-    {
-#ifdef LOG
-        for (int indent = 0; indent < level; indent++) { cout << " "; }
-        cout << "Gone search" << endl;
-#endif
-    }
-
-    bool first = true;
-    int best_cost = -1;
-    int best_used_time = -1;
-    if (current_node == num_cities - 1)
-    {
-        return pair<int, int>(0, 0);
-    }
-
-    for (int i = 0; i < num_cities; i++)
-    {
-        if (i != current_node)
-        {
-            if (distances[current_node][i] < time_budget)
-            {
-                pair<int, int> remaining_result = find_optimal_tour(i, time_budget - distances[current_node][i], level + 4);
-                if (remaining_result.first != -1)
-                {
-                    int used_cost = tolls[current_node][i] + remaining_result.first;
-                    int used_time = distances[current_node][i] + remaining_result.second;
-
-                    if (first)
-                    {
-                        best_cost = used_cost;
-                        best_used_time = used_time;
-                        first = false;
-                    }
-                    else if (used_cost < best_cost)
-                    {
-                        best_cost = used_cost;
-                        best_used_time = used_time;
-                    }
-                }
-            }
-        }
-    }
-
-    for (int t = time_budget; t >= best_used_time && t >= 0; t--)
-    {
-#ifdef LOG
-        for (int indent = 0; indent < level; indent++) { cout << " "; }
-        cout << "Cached find_optimal_tour(" << current_node << ", " << t << ") = [" << best_cost << ", " << best_used_time << "]" << endl;
-#endif
-        memo[pair<int, int>(current_node, t)] = pair<int, int>(best_cost, best_used_time);
-    }
-
-    return pair<int, int>(best_cost, best_used_time);
-}
 
 int SPOJ_FISHER()
 {
     while (true)
     {
+        int num_cities;
+        int time_budget;
+        vector<vector<int> > distances;
+        vector<vector<int> > tolls;
+
         cin >> num_cities;
         cin >> time_budget;
         if (num_cities == 0 && time_budget == 0)
@@ -127,9 +52,145 @@ int SPOJ_FISHER()
             }
         }
 
-        // Try the algorithm
-        pair<int, int> result = find_optimal_tour(0, time_budget, 0);
-        cout << result.first << " " << result.second << endl;
+        // Try Floyd Warshall
+        // Denote the set of shortest paths from i to j going through {0,1,...k - 1} be shortest_paths[i][j][k], 
+        // It is a set of shortest paths because there can be multiple shortest path with different time used.
+        // We should record if using longer time can lead to lower cost
+        // The first element in the pair is the cost, the second element in the pair is time used
+        vector<vector<vector<vector<pair<int, int> > > > > shortest_paths;
+        shortest_paths.resize(num_cities);
+        for (int i = 0; i < num_cities; i++)
+        {
+            shortest_paths[i].resize(num_cities);
+            for (int j = 0; j < num_cities; j++)
+            {
+                shortest_paths[i][j].resize(num_cities + 1);
+            }
+        }
+
+        // Initialization - there is only one path without going through any node
+        for (int i = 0; i < num_cities; i++)
+        {
+            for (int j = 0; j < num_cities; j++)
+            {
+#ifdef LOG
+                cout << "  shortest_paths[" << i << "][" << j << "][" << 0 << "].push_back(" << tolls[i][j] << ", " << distances[i][j] << ");" << endl;
+#endif
+                shortest_paths[i][j][0].push_back(pair<int, int>(tolls[i][j], distances[i][j]));
+            }
+        }
+
+        // Iteration - the shortest path
+        for (int k = 1; k <= num_cities; k++)
+        {
+#ifdef LOG
+            cout << "Processing " << k << endl;
+#endif
+            for (int i = 0; i < num_cities; i++)
+            {
+                for (int j = 0; j < num_cities; j++)
+                {
+                    if (i != j)
+                    {
+                        // Step 1: Generate all candidate shortest paths
+                        vector<pair<pair<int, int>, bool> > candidates;
+                        for (vector<pair<int, int> >::iterator pi = shortest_paths[i][j][k - 1].begin(); pi != shortest_paths[i][j][k - 1].end(); pi++)
+                        {
+                            candidates.push_back(pair<pair<int, int>, bool>(*pi, false));
+                        }
+                        for (vector<pair<int, int> >::iterator fi = shortest_paths[i][k - 1][k - 1].begin(); fi != shortest_paths[i][k - 1][k - 1].end(); fi++)
+                        {
+                            for (vector<pair<int, int> >::iterator si = shortest_paths[k - 1][j][k - 1].begin(); si != shortest_paths[k - 1][j][k - 1].end(); si++)
+                            {
+                                int first_path_cost = fi->first;
+                                int first_path_time_used = fi->second;
+                                int second_path_cost = si->first;
+                                int second_path_time_used = si->second;
+
+                                int new_path_cost = first_path_cost + second_path_cost;
+                                int new_path_time_used = first_path_time_used + second_path_time_used;
+
+                                if (new_path_time_used <= time_budget)
+                                {
+                                    candidates.push_back(pair<pair<int, int>, bool>(pair<int, int>(new_path_cost, new_path_time_used), false));
+                                }
+                            }
+                        }
+
+                        // Eliminate the bad ones
+                        for (unsigned int p = 0; p < candidates.size(); p++)
+                        {
+                            for (unsigned int q = p + 1; q < candidates.size(); q++)
+                            {
+                                int first_path_cost = candidates[p].first.first;
+                                int first_path_time_used = candidates[p].first.second;
+                                int second_path_cost = candidates[q].first.first;
+                                int second_path_time_used = candidates[q].first.second;
+
+                                // First take less time and less cost than second, second is eliminated
+                                if (first_path_time_used <= second_path_time_used && first_path_cost <= second_path_cost)
+                                {
+                                    candidates[q].second = true;
+                                }
+                            }
+                        }
+
+                        for (unsigned int p = 0; p < candidates.size(); p++)
+                        {
+                            if (candidates[p].second == false)
+                            {
+#ifdef LOG
+                                cout << "  shortest_paths[" << i << "][" << j << "][" << k << "].push_back(" << candidates[p].first.first << ", " << candidates[p].first.second << ");" << endl;
+#endif
+                                shortest_paths[i][j][k].push_back(candidates[p].first);
+                            }
+                        }
+#ifdef LOG
+                        cout << endl;
+#endif
+                    }
+                }
+            }
+        }
+
+        bool first = true;
+        int best_cost = -1;
+        int best_cost_time = -1;
+        for (vector<pair<int, int> >::iterator pi = shortest_paths[0][num_cities - 1][num_cities].begin(); pi != shortest_paths[0][num_cities - 1][num_cities].end(); pi++)
+        {
+            if (first)
+            {
+                best_cost = pi->first;
+                best_cost_time = pi->second;
+                first = false;
+            }
+            else
+            {
+                if (pi->first < best_cost)
+                {
+                    best_cost = pi->first;
+                    best_cost_time = pi->second;
+                }
+            }
+        }
+        cout << best_cost << " " << best_cost_time << endl;
     }
+
     return 0;
+
 }
+/*
+4 7
+0 5 2 3
+5 0 2 3
+3 1 0 2
+3 3 2 0
+
+0 2 2 7
+2 0 1 2
+2 2 0 5
+7 2 5 0
+
+0 0
+
+*/

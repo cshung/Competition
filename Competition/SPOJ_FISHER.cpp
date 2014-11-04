@@ -93,10 +93,10 @@ int SPOJ_FISHER()
                     if (i != j)
                     {
                         // Step 1: Generate all candidate shortest paths
-                        vector<pair<pair<int, int>, bool> > candidates;
+                        map<pair<int, int>, bool> candidates;
                         for (vector<pair<int, int> >::iterator pi = shortest_paths[i][j][k - 1].begin(); pi != shortest_paths[i][j][k - 1].end(); pi++)
                         {
-                            candidates.push_back(pair<pair<int, int>, bool>(*pi, false));
+                            candidates.insert(pair<pair<int, int>, bool>(*pi, false));
                         }
                         for (vector<pair<int, int> >::iterator fi = shortest_paths[i][k - 1][k - 1].begin(); fi != shortest_paths[i][k - 1][k - 1].end(); fi++)
                         {
@@ -112,37 +112,46 @@ int SPOJ_FISHER()
 
                                 if (new_path_time_used <= time_budget)
                                 {
-                                    candidates.push_back(pair<pair<int, int>, bool>(pair<int, int>(new_path_cost, new_path_time_used), false));
+                                    candidates.insert(pair<pair<int, int>, bool>(pair<int, int>(new_path_cost, new_path_time_used), false));
                                 }
                             }
+                        }
+
+                        vector<pair<pair<int, int>, bool> > candidates_list;
+                        for (map<pair<int,int>, bool>::iterator ci = candidates.begin(); ci != candidates.end(); ci++)
+                        {
+                            candidates_list.push_back(*ci);
                         }
 
                         // Eliminate the bad ones
-                        for (unsigned int p = 0; p < candidates.size(); p++)
+                        for (unsigned int p = 0; p < candidates_list.size(); p++)
                         {
-                            for (unsigned int q = p + 1; q < candidates.size(); q++)
+                            for (unsigned int q = 0; q < candidates_list.size(); q++)
                             {
-                                int first_path_cost = candidates[p].first.first;
-                                int first_path_time_used = candidates[p].first.second;
-                                int second_path_cost = candidates[q].first.first;
-                                int second_path_time_used = candidates[q].first.second;
-
-                                // First take less time and less cost than second, second is eliminated
-                                if (first_path_time_used <= second_path_time_used && first_path_cost <= second_path_cost)
+                                if (p != q)
                                 {
-                                    candidates[q].second = true;
+                                    int first_path_cost = candidates_list[p].first.first;
+                                    int first_path_time_used = candidates_list[p].first.second;
+                                    int second_path_cost = candidates_list[q].first.first;
+                                    int second_path_time_used = candidates_list[q].first.second;
+
+                                    // First take less time and less cost than second, second is eliminated
+                                    if (first_path_time_used <= second_path_time_used && first_path_cost <= second_path_cost)
+                                    {
+                                        candidates_list[q].second = true;
+                                    }
                                 }
                             }
                         }
 
-                        for (unsigned int p = 0; p < candidates.size(); p++)
+                        for (unsigned int p = 0; p < candidates_list.size(); p++)
                         {
-                            if (candidates[p].second == false)
+                            if (candidates_list[p].second == false)
                             {
 #ifdef LOG
-                                cout << "  shortest_paths[" << i << "][" << j << "][" << k << "].push_back(" << candidates[p].first.first << ", " << candidates[p].first.second << ");" << endl;
+                                cout << "  shortest_paths[" << i << "][" << j << "][" << k << "].push_back(" << candidates_list[p].first.first << ", " << candidates_list[p].first.second << ");" << endl;
 #endif
-                                shortest_paths[i][j][k].push_back(candidates[p].first);
+                                shortest_paths[i][j][k].push_back(candidates_list[p].first);
                             }
                         }
 #ifdef LOG

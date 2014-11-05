@@ -203,6 +203,10 @@ int SPOJ_FISHER()
                     best_cost = pi->first;
                     best_cost_time = pi->second;
                 }
+                if (pi->first == best_cost && pi->second < best_cost_time)
+                {
+                    best_cost_time = pi->second;
+                }
             }
         }
         cout << best_cost << " " << best_cost_time << endl;

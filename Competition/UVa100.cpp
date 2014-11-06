@@ -39,7 +39,6 @@ int cycle_length(unsigned int input, map<unsigned int, int>& cycle_lengths)
 
 int UVa100()
 {
-    // Ideally we would have use the stack - but that will stack overflow
     map<unsigned int, int> cycle_lengths;
 
     int i, j, min_index, max_index;

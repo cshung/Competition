@@ -81,10 +81,13 @@ int SPOJ_FISHER()
 
             for (int j = 0; j < num_cities; j++)
             {
+                if (distances[i][j] <= time_budget) 
+                {
 #ifdef LOG
-                cout << "<td>(" << tolls[i][j] << ", " << distances[i][j] << ")</td>";
+                    cout << "<td>(" << tolls[i][j] << ", " << distances[i][j] << ")</td>";
 #endif
-                shortest_paths[i][j][0].push_back(pair<int, int>(tolls[i][j], distances[i][j]));
+                    shortest_paths[i][j][0].push_back(pair<int, int>(tolls[i][j], distances[i][j]));
+                }
             }
 #ifdef LOG
             cout << "</tr>" << endl;

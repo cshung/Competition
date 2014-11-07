@@ -34,26 +34,26 @@ int UVa231()
             break;
         }
 
-        // represents the longest_non_increasing_sequence_length that ends at the index
-        vector<int> longest_non_increasing_sequence_lengths;
-        longest_non_increasing_sequence_lengths.push_back(1);
+        // represents the longest_decreasing_sequence_length that ends at the index
+        vector<int> longest_decreasing_sequence_lengths;
+        longest_decreasing_sequence_lengths.push_back(1);
 
-        // represents the longest_non_increasing_sequence_length that ends at any index
-        int the_longest_non_increasing_sequence_length = 1;
+        // represents the longest_decreasing_sequence_length that ends at any index
+        int the_longest_decreasing_sequence_length = 1;
 
         for (unsigned int i = 1; i < missile_heights.size(); i++)
         {
-            int longest_non_increasing_sequence_length = 1;
+            int longest_decreasing_sequence_length = 1;
             for (unsigned int j = 0; j < i; j++)
             {
                 if (missile_heights[j] >= missile_heights[i])
                 {
-                    longest_non_increasing_sequence_length = longest_non_increasing_sequence_lengths[j] + 1;
+                    longest_decreasing_sequence_length = max(longest_decreasing_sequence_length, longest_decreasing_sequence_lengths[j] + 1);
                 }
             }
 
-            longest_non_increasing_sequence_lengths.push_back(longest_non_increasing_sequence_length);
-            the_longest_non_increasing_sequence_length = max(the_longest_non_increasing_sequence_length, longest_non_increasing_sequence_length);
+            longest_decreasing_sequence_lengths.push_back(longest_decreasing_sequence_length);
+            the_longest_decreasing_sequence_length = max(the_longest_decreasing_sequence_length, longest_decreasing_sequence_length);
         }
 
         if (c != 1)
@@ -62,7 +62,7 @@ int UVa231()
         }
 
         cout << "Test #" << c << ":" << endl;
-        cout << "  maximum possible interceptions : " << the_longest_non_increasing_sequence_length << endl;
+        cout << "  maximum possible interceptions : " << the_longest_decreasing_sequence_length << endl;
     }
    return 0;
 }

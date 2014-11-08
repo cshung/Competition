@@ -67,6 +67,7 @@
 #include "UVa10911.h"                          // 063
 #include "SPOJ_FISHER.h"                       // 064
 #include "UVa231.h"                            // 065
+#include "UVa481.h"                            // 066
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -144,5 +145,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa10003();                          // Accepted
     // return UVa10911();                          // Accepted
     // return SPOJ_FISHER();                       // Accepted
-    return UVa231();
+    // return UVa231();                            // Accepted
+    return UVa481();                            // Accepted
 }

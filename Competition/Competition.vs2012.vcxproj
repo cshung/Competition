@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="UVa481.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
@@ -205,6 +206,7 @@
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa410.cpp" />
     <ClCompile Include="UVa459.cpp" />
+    <ClCompile Include="UVa481.cpp" />
     <ClCompile Include="UVa482.cpp" />
     <ClCompile Include="UVa483.cpp" />
     <ClCompile Include="UVa524.cpp" />

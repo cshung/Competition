@@ -84,6 +84,15 @@ public:
         {
             return false;
         }
+        if (first->used_coin < second->used_coin)
+        {
+            return true;
+        }
+        else if (first->used_coin > second->used_coin)
+        {
+            return false;
+        }
+
         return false;
     }
 };
@@ -116,14 +125,20 @@ int UVa166()
         cin >> value;
         if (value < 0) { throw 0; }
         initial_state->value_in_cents = (int)(value * 100 + 0.1);
+        if (initial_state->value_in_cents % 5 != 0)
+        {
+            throw 0;
+        }
         queue<UVa166_State*> bfs_queue;
         bfs_queue.push(initial_state);
+        bool found = false;
         while (bfs_queue.size() > 0)
         {
             UVa166_State* current = bfs_queue.front();
             bfs_queue.pop();
             if (current->value_in_cents == 0)
             {
+                found = true;
                 cout << setw(3) << current->used_coin << endl;
                 break;
             }
@@ -331,6 +346,10 @@ int UVa166()
                     }
                 }
             }
+        }
+        if (!found)
+        {
+            throw 0;
         }
     }
 

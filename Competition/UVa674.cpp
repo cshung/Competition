@@ -13,7 +13,7 @@ using namespace std;
 const int UVa674_num_values = 5;
 int UVa674_values[UVa674_num_values] = {1, 5, 10, 25, 50};
 const int UVa674_max_cents = 7489;
-// ways[i, j] represents the number of ways (i * 5) cents can be represented using the first [0, j] values
+// ways[i, j] represents the number of ways i cents can be represented using the first [0, j] values
 int64 UVa674_ways[UVa674_max_cents + 1][UVa674_num_values];
 
 int UVa674()

@@ -19,7 +19,7 @@ struct UVa166_State
     int num_50_cents;
     int num_1_dollar;
     int num_2_dollars;
-    int value_in_5_cents;
+    int value_in_cents;
     int used_coin;
 };
 
@@ -28,11 +28,11 @@ class UVa166_State_less
 public:
     bool operator()(UVa166_State* first, UVa166_State* second)
     {
-        if (first->value_in_5_cents < second->value_in_5_cents)
+        if (first->value_in_cents < second->value_in_cents)
         {
             return true;
         }
-        else if (first->value_in_5_cents > second->value_in_5_cents)
+        else if (first->value_in_cents > second->value_in_cents)
         {
             return false;
         }
@@ -90,15 +90,6 @@ public:
 
 int UVa166()
 {
-    UVa166_State* zero = new UVa166_State();
-    zero->value_in_5_cents = 0;
-    zero->num_5_cents = 0;
-    zero->num_10_cents = 0;
-    zero->num_20_cents = 0;
-    zero->num_50_cents = 0;
-    zero->num_1_dollar = 0;
-    zero->num_2_dollars = 0;
-
     set<UVa166_State*, UVa166_State_less> visited;    
     while (true)
     {
@@ -109,38 +100,34 @@ int UVa166()
         cin >> initial_state->num_50_cents;
         cin >> initial_state->num_1_dollar;
         cin >> initial_state->num_2_dollars;
-        initial_state->value_in_5_cents = 0;
+        if (initial_state->num_5_cents < 0) { throw 0; }
+        if (initial_state->num_10_cents < 0) { throw 0; }
+        if (initial_state->num_20_cents < 0) { throw 0; }
+        if (initial_state->num_50_cents < 0) { throw 0; }
+        if (initial_state->num_1_dollar < 0) { throw 0; }
+        if (initial_state->num_2_dollars < 0) { throw 0; }
+        initial_state->value_in_cents = 0;
         initial_state->used_coin = 0;
-        if (!UVa166_State_less()(zero, initial_state))
+        if ((initial_state->num_5_cents + initial_state->num_10_cents + initial_state->num_20_cents + initial_state->num_50_cents + initial_state->num_1_dollar + initial_state->num_2_dollars) == 0)
         {
             break;
         }
         double value;
         cin >> value;
-        initial_state->value_in_5_cents = (int)(value * 100 / 5 + 0.1);
+        if (value < 0) { throw 0; }
+        initial_state->value_in_cents = (int)(value * 100 + 0.1);
         queue<UVa166_State*> bfs_queue;
         bfs_queue.push(initial_state);
         while (bfs_queue.size() > 0)
         {
             UVa166_State* current = bfs_queue.front();
-            for (int i = 0; i < current->used_coin; i++)
-            {
-                cout << ' ';
-            }
-            cout << "(" << current->value_in_5_cents / 20.0 << ":" << 
-                0.05 * -(current->num_5_cents - initial_state->num_5_cents) << " " << 
-                0.10 * -(current->num_10_cents - initial_state->num_10_cents) << " " << 
-                0.20 * -(current->num_20_cents - initial_state->num_20_cents) << " " << 
-                0.50* -(current->num_50_cents - initial_state->num_50_cents) << " " << 
-                1.00 * -(current->num_1_dollar - initial_state->num_1_dollar) << " " << 
-                2.00 * -(current->num_2_dollars - initial_state->num_2_dollars) << ")" << endl;
             bfs_queue.pop();
-            if (current->value_in_5_cents == 0)
+            if (current->value_in_cents == 0)
             {
-                cout << right << setw(3) << current->used_coin << endl;
+                cout << setw(3) << current->used_coin << endl;
                 break;
             }
-            else if (current->value_in_5_cents > 0)
+            else if (current->value_in_cents > 0)
             {
                 if (current->num_5_cents > 0)
                 {
@@ -151,7 +138,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents - 1;
+                    new_state->value_in_cents = current->value_in_cents - 5;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -168,7 +155,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents - 2;
+                    new_state->value_in_cents = current->value_in_cents - 10;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -185,7 +172,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents - 4;
+                    new_state->value_in_cents = current->value_in_cents - 20;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -202,7 +189,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents - 1;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents - 10;
+                    new_state->value_in_cents = current->value_in_cents - 50;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -219,7 +206,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar - 1;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents - 20;
+                    new_state->value_in_cents = current->value_in_cents - 100;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -236,7 +223,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars - 1;
-                    new_state->value_in_5_cents = current->value_in_5_cents - 40;
+                    new_state->value_in_cents = current->value_in_cents - 200;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -255,7 +242,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents + 1;
+                    new_state->value_in_cents = current->value_in_cents + 5;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -271,7 +258,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents + 2;
+                    new_state->value_in_cents = current->value_in_cents + 10;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -287,7 +274,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents + 4;
+                    new_state->value_in_cents = current->value_in_cents + 20;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -303,7 +290,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents + 10;
+                    new_state->value_in_cents = current->value_in_cents + 50;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -319,7 +306,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents + 20;
+                    new_state->value_in_cents = current->value_in_cents + 100;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {
@@ -335,7 +322,7 @@ int UVa166()
                     new_state->num_50_cents = current->num_50_cents;
                     new_state->num_1_dollar = current->num_1_dollar;
                     new_state->num_2_dollars = current->num_2_dollars;
-                    new_state->value_in_5_cents = current->value_in_5_cents + 40;
+                    new_state->value_in_cents = current->value_in_cents + 200;
                     new_state->used_coin = current->used_coin + 1;
                     if (visited.find(new_state) == visited.end())
                     {

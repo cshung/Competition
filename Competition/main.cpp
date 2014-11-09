@@ -149,6 +149,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return SPOJ_FISHER();                       // Accepted
     // return UVa231();                            // Accepted
     // return UVa481();                            // Accepted
-    // return UVa147();                            // Wrong answer?
+    // return UVa147();                            // Accepted
     return UVa166();                            // Wrong answer?
 }

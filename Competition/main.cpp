@@ -70,6 +70,10 @@
 #include "UVa481.h"                            // 066
 #include "UVa147.h"                            // 067
 #include "UVa166.h"                            // 068
+#include "UVa357.h"                            // 069
+#include "UVa674.h"                            // 070
+#include "UVa108.h"                            // 071
+#include "UVa836.h"                            // 072
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -150,5 +154,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa231();                            // Accepted
     // return UVa481();                            // Accepted
     // return UVa147();                            // Accepted
-    return UVa166();                            // Accepted
+    // return UVa166();                            // Accepted
+    // return UVa357();                            // Accepted
+    // return UVa674();                            // Accepted
+    // return UVa108();                            // Accepted - but we should be able to improve it to O(100^3)
+    return UVa836();                            // Accepted
 }

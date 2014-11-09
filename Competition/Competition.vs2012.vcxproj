@@ -79,8 +79,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="UVa108.h" />
     <ClInclude Include="UVa147.h" />
     <ClInclude Include="UVa166.h" />
+    <ClInclude Include="UVa357.h" />
     <ClInclude Include="UVa481.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
@@ -141,11 +143,13 @@
     <ClInclude Include="UVa628.h" />
     <ClInclude Include="UVa639.h" />
     <ClInclude Include="UVa661.h" />
+    <ClInclude Include="UVa674.h" />
     <ClInclude Include="UVa679.h" />
     <ClInclude Include="UVa714.h" />
     <ClInclude Include="UVa725.h" />
     <ClInclude Include="UVa739.h" />
     <ClInclude Include="UVa750.h" />
+    <ClInclude Include="UVa836.h" />
     <ClInclude Include="UVa837.h" />
     <ClInclude Include="UVa908.h" />
     <ClInclude Include="UVa912.h" />
@@ -185,6 +189,7 @@
     <ClCompile Include="UVa10505.cpp" />
     <ClCompile Include="UVa10670.cpp" />
     <ClCompile Include="UVa10763.cpp" />
+    <ClCompile Include="UVa108.cpp" />
     <ClCompile Include="UVa10911.cpp" />
     <ClCompile Include="UVa10928.cpp" />
     <ClCompile Include="UVa11054.cpp" />
@@ -207,6 +212,7 @@
     <ClCompile Include="UVa291.cpp" />
     <ClCompile Include="UVa299.cpp" />
     <ClCompile Include="UVa336.cpp" />
+    <ClCompile Include="UVa357.cpp" />
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa410.cpp" />
     <ClCompile Include="UVa459.cpp" />
@@ -218,11 +224,13 @@
     <ClCompile Include="UVa628.cpp" />
     <ClCompile Include="UVa639.cpp" />
     <ClCompile Include="UVa661.cpp" />
+    <ClCompile Include="UVa674.cpp" />
     <ClCompile Include="UVa679.cpp" />
     <ClCompile Include="UVa714.cpp" />
     <ClCompile Include="UVa725.cpp" />
     <ClCompile Include="UVa739.cpp" />
     <ClCompile Include="UVa750.cpp" />
+    <ClCompile Include="UVa836.cpp" />
     <ClCompile Include="UVa837.cpp" />
     <ClCompile Include="UVa908.cpp" />
     <ClCompile Include="UVa912.cpp" />

@@ -150,5 +150,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa231();                            // Accepted
     // return UVa481();                            // Accepted
     // return UVa147();                            // Accepted
-    return UVa166();                            // Wrong answer?
+    return UVa166();                            // Accepted
 }

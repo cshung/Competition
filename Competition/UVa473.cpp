@@ -91,11 +91,6 @@ int UVa473()
                             // Yes it can, let see if that's a better deal
                             int new_disk = current_disk;
                             int new_current_disk_remaining_time = current_disk_remaining_time - current_song_duration;
-                            //if (new_current_disk_remaining_time == 0)
-                            //{
-                            //    new_current_disk_remaining_time = time_per_disk;
-                            //    new_disk = new_disk - 1;
-                            //}
                             int new_song_recorded = current_song_recorded + 1;
                             if (!max_songs[new_disk][new_current_disk_remaining_time].reachable ||
                                 max_songs[new_disk][new_current_disk_remaining_time].songs_recorded < new_song_recorded)
@@ -110,12 +105,6 @@ int UVa473()
                             // Yes it can, let see if that's a better deal
                             int new_disk = current_disk - 1;
                             int new_current_disk_remaining_time = time_per_disk - current_song_duration;
-                            //if (new_current_disk_remaining_time == 0)
-                            //{
-                            //    new_current_disk_remaining_time = time_per_disk;
-                            //    new_disk = new_disk - 1;
-                            //}
-
                             int new_song_recorded = current_song_recorded + 1;
                             if (!max_songs[new_disk][new_current_disk_remaining_time].reachable ||
                                 max_songs[new_disk][new_current_disk_remaining_time].songs_recorded < new_song_recorded)

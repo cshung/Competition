@@ -10,6 +10,8 @@
 
 using namespace std;
 
+typedef long long int64;
+
 int UVa116()
 {
     while (true)
@@ -33,8 +35,8 @@ int UVa116()
             }
         }
 
-        vector<int> best_cost;
-        vector<int> next_best_cost;
+        vector<int64> best_cost;
+        vector<int64> next_best_cost;
         vector<vector<int> > next;
 
         best_cost.resize(num_rows);
@@ -54,10 +56,10 @@ int UVa116()
             {
                 int previous_row = (r == 0) ? num_rows - 1 : r - 1;
                 int next_row = (r + 1) % num_rows;
-                int previous_cost = next_best_cost[previous_row];
-                int current_cost = next_best_cost[r];
-                int next_cost = next_best_cost[next_row];
-                int best_next_cost = min(previous_cost, min(current_cost, next_cost));
+                int64 previous_cost = next_best_cost[previous_row];
+                int64 current_cost = next_best_cost[r];
+                int64 next_cost = next_best_cost[next_row];
+                int64 best_next_cost = min(previous_cost, min(current_cost, next_cost));
                 best_cost[r] = input[r][c] + best_next_cost;
                 int next_min = -1;
                 bool first = true;
@@ -95,7 +97,7 @@ int UVa116()
                     }
                     else
                     {
-                        next_min = min(r, next_min);
+                        next_min = min(next_row, next_min);
                     }
                 }
                 next[r][c] = next_min;
@@ -104,10 +106,18 @@ int UVa116()
             {
                 next_best_cost[r] = best_cost[r];
             }
+#if LOG
+            cout << "Col: " << c << endl;
+            for (int r = 0; r < num_rows; r++)
+            {
+                cout << best_cost[r] << " " << next[r][c] << endl;
+            }
+            cout << "---" << endl;
+#endif
         }
 
         bool first = true;
-        int best_row_cost = -1;
+        int64 best_row_cost = -1;
         int best_row_index = 0;
         for (int r = 0; r < num_rows; r++)
         {
@@ -119,6 +129,7 @@ int UVa116()
             }
             else if (best_cost[r] < best_row_cost)
             {
+                best_row_cost = best_cost[r];
                 best_row_index = r;
                 first = false;
             }

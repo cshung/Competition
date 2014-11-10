@@ -17,6 +17,15 @@ int UVa562()
     {
         int num_items;
         cin >> num_items;
+        if (num_items > 100)
+        {
+            throw 0;
+        }
+        if (num_items == 0)
+        {
+            cout << 0 << endl;
+            continue;
+        }
         vector<int> item_values;
         item_values.resize(num_items);
         int item_value_sum = 0;
@@ -24,8 +33,24 @@ int UVa562()
         {
             int item_value;
             cin >> item_value;
+            if (item_value < 1)
+            {
+                throw 0;
+            }
+            if (item_value > 500)
+            {
+                throw 0;
+            }
             item_values[i] = item_value;
             item_value_sum += item_value; 
+        }
+        if (item_value_sum < 1) 
+        {
+            throw 0;
+        }
+        if (item_value_sum > 50000)
+        {
+            throw 0;
         }
 
         int best_lower_value = item_value_sum / 2;

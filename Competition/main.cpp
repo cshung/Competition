@@ -163,8 +163,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa674();                            // Accepted
     // return UVa108();                            // Accepted - but we should be able to improve it to O(100^3)
     // return UVa836();                            // Accepted
-    // return UVa562();                            // Wrong answer?
-    // return UVa990();                            // 
-    // return UVa116();                            // 
-    return UVa473();                            // 
+    // return UVa562();                            // Accepted
+    // return UVa990();                            // Accepted
+    // return UVa116();                            // Accepted
+    return UVa473();                            // Accepted
 }

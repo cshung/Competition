@@ -80,9 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UVa108.h" />
+    <ClInclude Include="UVa116.h" />
     <ClInclude Include="UVa147.h" />
     <ClInclude Include="UVa166.h" />
     <ClInclude Include="UVa357.h" />
+    <ClInclude Include="UVa473.h" />
     <ClInclude Include="UVa481.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
@@ -139,6 +141,7 @@
     <ClInclude Include="UVa482.h" />
     <ClInclude Include="UVa483.h" />
     <ClInclude Include="UVa524.h" />
+    <ClInclude Include="UVa562.h" />
     <ClInclude Include="UVa573.h" />
     <ClInclude Include="UVa628.h" />
     <ClInclude Include="UVa639.h" />
@@ -155,6 +158,7 @@
     <ClInclude Include="UVa912.h" />
     <ClInclude Include="UVa941.h" />
     <ClInclude Include="UVa957.h" />
+    <ClInclude Include="UVa990.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
@@ -202,6 +206,7 @@
     <ClCompile Include="UVa11450.cpp" />
     <ClCompile Include="UVa11462.cpp" />
     <ClCompile Include="UVa11503.cpp" />
+    <ClCompile Include="UVa116.cpp" />
     <ClCompile Include="UVa127.cpp" />
     <ClCompile Include="UVa146.cpp" />
     <ClCompile Include="UVa147.cpp" />
@@ -216,10 +221,12 @@
     <ClCompile Include="UVa394.cpp" />
     <ClCompile Include="UVa410.cpp" />
     <ClCompile Include="UVa459.cpp" />
+    <ClCompile Include="UVa473.cpp" />
     <ClCompile Include="UVa481.cpp" />
     <ClCompile Include="UVa482.cpp" />
     <ClCompile Include="UVa483.cpp" />
     <ClCompile Include="UVa524.cpp" />
+    <ClCompile Include="UVa562.cpp" />
     <ClCompile Include="UVa573.cpp" />
     <ClCompile Include="UVa628.cpp" />
     <ClCompile Include="UVa639.cpp" />
@@ -236,6 +243,7 @@
     <ClCompile Include="UVa912.cpp" />
     <ClCompile Include="UVa941.cpp" />
     <ClCompile Include="UVa957.cpp" />
+    <ClCompile Include="UVa990.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

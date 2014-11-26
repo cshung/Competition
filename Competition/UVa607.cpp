@@ -57,8 +57,8 @@ int UVa607()
         }
 
         // 1st, schedule the topics greedily forward, this gives the minimum lecture index for a topic
-        vector<int> first_feasible_index;
-        first_feasible_index.resize(number_of_topics);
+        vector<int> first_lecture_index;
+        first_lecture_index.resize(number_of_topics);
         int lecture_index = 0;
         int remaining_lecture_time = lecture_length;
         for (int t = 0; t < number_of_topics; t++)
@@ -66,13 +66,13 @@ int UVa607()
             int topic_length = topic_lengths[t];
             if (remaining_lecture_time >= topic_lengths[t])
             {
-                first_feasible_index[t] = lecture_index;
+                first_lecture_index[t] = lecture_index;
                 remaining_lecture_time -= topic_length;
             }
             else
             {
                 lecture_index++;
-                first_feasible_index[t] = lecture_index;
+                first_lecture_index[t] = lecture_index;
                 remaining_lecture_time = lecture_length - topic_length;
             }
         }
@@ -80,8 +80,8 @@ int UVa607()
         int number_of_lectures = lecture_index + 1;
 
         // 2nd, schedule the topics greedily backwards, this gives the maximum lecture index for a topic
-        vector<int> last_feasible_index;
-        last_feasible_index.resize(number_of_topics);
+        vector<int> last_lecture_index;
+        last_lecture_index.resize(number_of_topics);
         lecture_index = number_of_lectures - 1;
         remaining_lecture_time = lecture_length;
         for (int t = number_of_topics - 1; t >= 0; t--)
@@ -89,151 +89,141 @@ int UVa607()
             int topic_length = topic_lengths[t];
             if (remaining_lecture_time >= topic_lengths[t])
             {
-                last_feasible_index[t] = lecture_index;
+                last_lecture_index[t] = lecture_index;
                 remaining_lecture_time -= topic_length;
             }
             else
             {
                 lecture_index--;
-                last_feasible_index[t] = lecture_index;
+                last_lecture_index[t] = lecture_index;
                 remaining_lecture_time = lecture_length - topic_length;
             }
         }
 
-        /*
+#ifdef LOG
         for (int t = 0; t < number_of_topics; t++)
         {
-            cout << first_feasible_index[t] << " ";
+            cout << first_lecture_index[t] << " ";
         }
         cout << endl;
 
         for (int t = 0; t < number_of_topics; t++)
         {
-            cout << last_feasible_index[t] << " ";
+            cout << last_lecture_index[t] << " ";
         }
         cout << endl;
-        */
+#endif
+        // 3rd, pre compute topic length sum to avoid calculating that later
 
-        // 3rd, find the minimum dsi schedule
+        vector<int> topic_length_sums;
+        topic_length_sums.resize(number_of_topics + 1);
+        int topic_length_sum = 0;
+        for (int topic = 0; topic < number_of_topics; topic++)
+        {
+            topic_length_sums[topic] = topic_length_sum;
+            topic_length_sum += topic_lengths[topic];
+        }
+        topic_length_sums[number_of_topics] = topic_length_sum;
 
-        vector<vector<vector<int>>> dsi_of_completed_lecture;
-        vector<vector<int>> best_dsi_if_lecture_ends_with_topic;
 
-        vector<vector<vector<bool>>> topic_can_ends;
-        vector<vector<bool>> lecture_can_ends; 
-
-        dsi_of_completed_lecture.resize(number_of_topics);
-        best_dsi_if_lecture_ends_with_topic.resize(number_of_topics);
+        vector<vector<bool> > lecture_can_ends;
+        vector<vector<int> > best_dsi_if_ends;
         lecture_can_ends.resize(number_of_topics);
-        topic_can_ends.resize(number_of_topics);
-
-        // Step 3.1 - just allocation
+        best_dsi_if_ends.resize(number_of_topics);
         for (int topic = 0; topic < number_of_topics; topic++)
         {
-            dsi_of_completed_lecture[topic].resize(number_of_lectures);
-            best_dsi_if_lecture_ends_with_topic[topic].resize(number_of_lectures);
-            topic_can_ends[topic].resize(number_of_lectures);
             lecture_can_ends[topic].resize(number_of_lectures);
-            for (int lecture = 0; lecture < number_of_lectures; lecture++)
-            {
-                dsi_of_completed_lecture[topic][lecture].resize(lecture_length + 1);
-                topic_can_ends[topic][lecture].resize(lecture_length + 1);
-            }
+            best_dsi_if_ends[topic].resize(number_of_lectures);
         }
 
-        // Dynamic programming, with time proportional to num_topics * num_lecture * lecture_time
-        //
-        // TODO, maybe able to leverage the forward backward planning above to further reduce execution time
-        // after all looping through the infeasible is meaningless
-        //
         for (int topic = 0; topic < number_of_topics; topic++)
         {
-            int topic_length = topic_lengths[topic];
-            for (int lecture = 0; lecture < number_of_lectures; lecture++)
+            for (int lecture = first_lecture_index[topic]; lecture <= last_lecture_index[topic]; lecture++)
             {
                 lecture_can_ends[topic][lecture] = false;
-                for (int time = 0; time <= lecture_length; time++)
+                if (lecture != (number_of_lectures - 1) && topic != (number_of_topics - 1))
                 {
-                    topic_can_ends[topic][lecture][time] = false;
-                    if (topic == 0)
+                    if ((first_lecture_index[topic + 1] <= lecture + 1) && (lecture + 1 <= last_lecture_index[topic + 1]))
                     {
-                        if ((lecture == 0) && (time == topic_length))
-                        {
-                            dsi_of_completed_lecture[topic][lecture][time] = 0; 
-                            best_dsi_if_lecture_ends_with_topic[topic][lecture] = current_lecture_dsi(lecture_length - time, c);
+                        // This is not the last lecture, last topic, 
+                        // so it is feasible to end the current lecture with the current topic
+                        // if it is feasible to start the next lecture with the next topic
+                        lecture_can_ends[topic][lecture] = true;
+                    }
+                }
+                else
+                {
+                    if (topic == number_of_topics - 1)
+                    {
+                        // The last lecture has to end with the last topic
+                        lecture_can_ends[topic][lecture] = true;
+                    }
+                }
 
-                            topic_can_ends[topic][lecture][time] = true;
-                            lecture_can_ends[topic][lecture] = true;
+                if (lecture_can_ends[topic][lecture])
+                {
 #ifdef LOG
-                            cout << "It is possible to end topic " << topic << " at lecture " << lecture << " at time " << time << "." << endl;
-                            cout << "The accumulated dsi is " << dsi_of_completed_lecture[topic][lecture][time] << "." << endl;
-                            cout << "If the lecture ends here, the best dsi will be " << best_dsi_if_lecture_ends_with_topic[topic][lecture] << endl;
-                            cout << endl;
+                    cout << "Topic " << topic << " can ends lecture " << lecture << endl;
 #endif
-                        }
+                    if (lecture == 0)
+                    {
+                        int used_time = topic_length_sums[topic + 1];
+                        int dsi = current_lecture_dsi(lecture_length - used_time, c);
+                        best_dsi_if_ends[topic][lecture] = dsi;
+#ifdef LOG
+                        cout << "The best dsi ending lecture " << lecture << " with topic " << topic << " is " << best_dsi_if_ends[topic][lecture] << endl;
+#endif
+                        
                     }
                     else
                     {
-                        if (time >= topic_length)
+                        bool first = true;
+                        int best_dsi = 10086;
+                        // TODO: consider indexing instead of looping through
+                        for (int last_ending_topic = 0; last_ending_topic < number_of_topics; last_ending_topic++)
                         {
-                            if (topic_can_ends[topic - 1][lecture][time - topic_length])
+                            if (lecture_can_ends[last_ending_topic][lecture - 1])
                             {
-                                dsi_of_completed_lecture[topic][lecture][time] = dsi_of_completed_lecture[topic - 1][lecture][time - topic_length];
-                                int new_dsi_value = dsi_of_completed_lecture[topic][lecture][time] + current_lecture_dsi(lecture_length - time, c);
-                                if (!lecture_can_ends[topic][lecture])
+                                // Consiedr the current lecture runs from last_ending_topic + 1 to topic
+                                int used_time = topic_length_sums[topic + 1] - topic_length_sums[last_ending_topic + 1];
+                                if (used_time <= lecture_length)
                                 {
-                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = new_dsi_value;
+                                    int dsi = best_dsi_if_ends[last_ending_topic][lecture - 1] + current_lecture_dsi(lecture_length - used_time, c);
+                                    if (first)
+                                    {
+                                        best_dsi = dsi;
+                                        first = false;
+                                    }
+                                    else
+                                    {
+                                        best_dsi = min(dsi, best_dsi);
+                                    }
                                 }
-                                else
-                                {
-                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = min(best_dsi_if_lecture_ends_with_topic[topic][lecture], new_dsi_value); 
-                                }
-
-                                topic_can_ends[topic][lecture][time] = true;
-                                lecture_can_ends[topic][lecture] = true;
-#ifdef LOG
-                                cout << "It is possible to end topic " << topic << " at lecture " << lecture << " at time " << time << "." << endl;
-                                cout << "The accumulated dsi is " << dsi_of_completed_lecture[topic][lecture][time] << "." << endl;
-                                cout << "If the lecture ends here, the best dsi will be " << best_dsi_if_lecture_ends_with_topic[topic][lecture] << endl;
-                                cout << endl;
-#endif
                             }
-                            if (time == topic_length && lecture > 0 && lecture_can_ends[topic - 1][lecture - 1])
-                            {
-                                dsi_of_completed_lecture[topic][lecture][time] = best_dsi_if_lecture_ends_with_topic[topic - 1][lecture - 1];
-
-                                int new_dsi_value = dsi_of_completed_lecture[topic][lecture][time] + current_lecture_dsi(lecture_length - time, c);
-                                if (!lecture_can_ends[topic][lecture])
-                                {
-                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = new_dsi_value;
-                                }
-                                else
-                                {
-                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = min(best_dsi_if_lecture_ends_with_topic[topic][lecture], new_dsi_value); 
-                                }
-
-                                topic_can_ends[topic][lecture][time] = true;
-                                lecture_can_ends[topic][lecture] = true;
+                        }
+                        if (!first)
+                        {
+                            best_dsi_if_ends[topic][lecture] = best_dsi;
 #ifdef LOG
-                                cout << "It is possible to end topic " << topic << " at lecture " << lecture << " at time " << time << "." << endl;
-                                cout << "The accumulated dsi is " << dsi_of_completed_lecture[topic][lecture][time] << "." << endl;
-                                cout << "If the lecture ends here, the best dsi will be " << best_dsi_if_lecture_ends_with_topic[topic][lecture] << endl;
-                                cout << endl;
+                            cout << "The best dsi ending lecture " << lecture << " with topic " << topic << " is " << best_dsi_if_ends[topic][lecture] << endl;
 #endif
-                            }
                         }
                     }
                 }
             }
         }
+        
+
+        int minimum_dsi = best_dsi_if_ends[number_of_topics - 1][number_of_lectures - 1];
 
         if (test_case_number != 1)
         {
             cout << endl;
         }
+
         cout << "Case " << test_case_number << ":" << endl;
         cout << "Minimum number of lectures: " << number_of_lectures << endl;
-        cout << "Total dissatisfaction index: " << best_dsi_if_lecture_ends_with_topic[number_of_topics - 1][number_of_lectures - 1] << endl;
+        cout << "Total dissatisfaction index: " << minimum_dsi << endl;
     }
 
     return 0;

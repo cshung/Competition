@@ -8,9 +8,11 @@
 #include <vector>
 #include <queue>
 
+#define LOG
+
 using namespace std;
 
-int dsi(int remaining_time, int c)
+int current_lecture_dsi(int remaining_time, int c)
 {
     if (remaining_time == 0)
     {
@@ -25,15 +27,6 @@ int dsi(int remaining_time, int c)
         return (remaining_time - 10) * (remaining_time - 10);
     }
 }
-
-class UVa607_State
-{
-public:
-    int scheduled_topics;
-    int dsi;
-    int lecture_index;
-    int remaining_time;
-};
 
 int UVa607()
 {
@@ -121,76 +114,113 @@ int UVa607()
         cout << endl;
         */
 
-        bool first = true;
-        int minimum_dsi = 0;
+        // 3rd, find the minimum dsi schedule
 
-        // 3rd, model the scheduling as a graph
-        queue<UVa607_State*> bfs_queue;
-        UVa607_State* initial_state = new UVa607_State();
-        initial_state->scheduled_topics = 0;
-        initial_state->lecture_index = 0;
-        initial_state->remaining_time = lecture_length;
-        initial_state->dsi = 0;
-        bfs_queue.push(initial_state);
-        while (bfs_queue.size() > 0)
+        vector<vector<vector<int>>> dsi_of_completed_lecture;
+        vector<vector<int>> best_dsi_if_lecture_ends_with_topic;
+
+        vector<vector<vector<bool>>> topic_can_ends;
+        vector<vector<bool>> lecture_can_ends; 
+
+        dsi_of_completed_lecture.resize(number_of_topics);
+        best_dsi_if_lecture_ends_with_topic.resize(number_of_topics);
+        lecture_can_ends.resize(number_of_topics);
+        topic_can_ends.resize(number_of_topics);
+
+        // Step 3.1 - just allocation
+        for (int topic = 0; topic < number_of_topics; topic++)
         {
-            UVa607_State* current_state = bfs_queue.front();
-            bfs_queue.pop();
-            if (current_state->scheduled_topics == 0)
+            dsi_of_completed_lecture[topic].resize(number_of_lectures);
+            best_dsi_if_lecture_ends_with_topic[topic].resize(number_of_lectures);
+            topic_can_ends[topic].resize(number_of_lectures);
+            lecture_can_ends[topic].resize(number_of_lectures);
+            for (int lecture = 0; lecture < number_of_lectures; lecture++)
             {
-                // For the 1st topic, we have to schedule it in the 1st lecture
-                UVa607_State* next_state = new UVa607_State();
-                next_state->lecture_index = 0;
-                next_state->scheduled_topics = 1;
-                next_state->remaining_time = lecture_length - topic_lengths[0];
-                next_state->dsi = 0;
-                // cout << next_state->lecture_index << ", " << next_state->scheduled_topics << ", " << next_state->remaining_time << ", " << next_state->dsi << endl;
-                bfs_queue.push(next_state);
+                dsi_of_completed_lecture[topic][lecture].resize(lecture_length + 1);
+                topic_can_ends[topic][lecture].resize(lecture_length + 1);
             }
-            else
+        }
+
+        // Dynamic programming, with time proportional to num_topics * num_lecture * lecture_time
+        //
+        // TODO, maybe able to leverage the forward backward planning above to further reduce execution time
+        // after all looping through the infeasible is meaningless
+        //
+        for (int topic = 0; topic < number_of_topics; topic++)
+        {
+            int topic_length = topic_lengths[topic];
+            for (int lecture = 0; lecture < number_of_lectures; lecture++)
             {
-                int topic_index = current_state->scheduled_topics;
-                if (topic_index < number_of_topics)
+                lecture_can_ends[topic][lecture] = false;
+                for (int time = 0; time <= lecture_length; time++)
                 {
-                    int topic_length = topic_lengths[topic_index];
-                    // Is it feasible to schedule the next lecture on the current lecture?
-                    if ((first_feasible_index[topic_index] <= current_state->lecture_index) && (current_state->lecture_index <= last_feasible_index[topic_index]))
+                    topic_can_ends[topic][lecture][time] = false;
+                    if (topic == 0)
                     {
-                        if (current_state->remaining_time >= topic_length)
+                        if ((lecture == 0) && (time == topic_length))
                         {
-                            UVa607_State* next_state = new UVa607_State();
-                            next_state->lecture_index = current_state->lecture_index;
-                            next_state->scheduled_topics = current_state->scheduled_topics + 1;
-                            next_state->remaining_time = current_state->remaining_time - topic_length;
-                            next_state->dsi = current_state->dsi;
-                            // cout << next_state->lecture_index << ", " << next_state->scheduled_topics << ", " << next_state->remaining_time << ", " << next_state->dsi << endl;
-                            bfs_queue.push(next_state);
+                            dsi_of_completed_lecture[topic][lecture][time] = 0; 
+                            best_dsi_if_lecture_ends_with_topic[topic][lecture] = current_lecture_dsi(lecture_length - time, c);
+
+                            topic_can_ends[topic][lecture][time] = true;
+                            lecture_can_ends[topic][lecture] = true;
+#ifdef LOG
+                            cout << "It is possible to end topic " << topic << " at lecture " << lecture << " at time " << time << "." << endl;
+                            cout << "The accumulated dsi is " << dsi_of_completed_lecture[topic][lecture][time] << "." << endl;
+                            cout << "If the lecture ends here, the best dsi will be " << best_dsi_if_lecture_ends_with_topic[topic][lecture] << endl;
+                            cout << endl;
+#endif
                         }
-                    }
-                    if ((first_feasible_index[topic_index] <= (current_state->lecture_index + 1)) && ((current_state->lecture_index + 1) <= last_feasible_index[topic_index]))
-                    {
-                        UVa607_State* next_state = new UVa607_State();
-                        next_state->lecture_index = current_state->lecture_index + 1;
-                        next_state->scheduled_topics = current_state->scheduled_topics + 1;
-                        next_state->remaining_time = lecture_length - topic_length;
-                        next_state->dsi = current_state->dsi + dsi(current_state->remaining_time, c);
-                        // cout << next_state->lecture_index << ", " << next_state->scheduled_topics << ", " << next_state->remaining_time << ", " << next_state->dsi << endl;
-                        bfs_queue.push(next_state);
-                    }
-                }
-                else
-                {
-                    int total_dsi = current_state->dsi + dsi(current_state->remaining_time, c);
-                    if (first)
-                    {
-                        minimum_dsi = total_dsi;
-                        first = false;
                     }
                     else
                     {
-                        if (total_dsi < minimum_dsi)
+                        if (time >= topic_length)
                         {
-                            minimum_dsi = total_dsi;
+                            if (topic_can_ends[topic - 1][lecture][time - topic_length])
+                            {
+                                dsi_of_completed_lecture[topic][lecture][time] = dsi_of_completed_lecture[topic - 1][lecture][time - topic_length];
+                                int new_dsi_value = dsi_of_completed_lecture[topic][lecture][time] + current_lecture_dsi(lecture_length - time, c);
+                                if (!lecture_can_ends[topic][lecture])
+                                {
+                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = new_dsi_value;
+                                }
+                                else
+                                {
+                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = min(best_dsi_if_lecture_ends_with_topic[topic][lecture], new_dsi_value); 
+                                }
+
+                                topic_can_ends[topic][lecture][time] = true;
+                                lecture_can_ends[topic][lecture] = true;
+#ifdef LOG
+                                cout << "It is possible to end topic " << topic << " at lecture " << lecture << " at time " << time << "." << endl;
+                                cout << "The accumulated dsi is " << dsi_of_completed_lecture[topic][lecture][time] << "." << endl;
+                                cout << "If the lecture ends here, the best dsi will be " << best_dsi_if_lecture_ends_with_topic[topic][lecture] << endl;
+                                cout << endl;
+#endif
+                            }
+                            if (time == topic_length && lecture > 0 && lecture_can_ends[topic - 1][lecture - 1])
+                            {
+                                dsi_of_completed_lecture[topic][lecture][time] = best_dsi_if_lecture_ends_with_topic[topic - 1][lecture - 1];
+
+                                int new_dsi_value = dsi_of_completed_lecture[topic][lecture][time] + current_lecture_dsi(lecture_length - time, c);
+                                if (!lecture_can_ends[topic][lecture])
+                                {
+                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = new_dsi_value;
+                                }
+                                else
+                                {
+                                    best_dsi_if_lecture_ends_with_topic[topic][lecture] = min(best_dsi_if_lecture_ends_with_topic[topic][lecture], new_dsi_value); 
+                                }
+
+                                topic_can_ends[topic][lecture][time] = true;
+                                lecture_can_ends[topic][lecture] = true;
+#ifdef LOG
+                                cout << "It is possible to end topic " << topic << " at lecture " << lecture << " at time " << time << "." << endl;
+                                cout << "The accumulated dsi is " << dsi_of_completed_lecture[topic][lecture][time] << "." << endl;
+                                cout << "If the lecture ends here, the best dsi will be " << best_dsi_if_lecture_ends_with_topic[topic][lecture] << endl;
+                                cout << endl;
+#endif
+                            }
                         }
                     }
                 }
@@ -203,7 +233,7 @@ int UVa607()
         }
         cout << "Case " << test_case_number << ":" << endl;
         cout << "Minimum number of lectures: " << number_of_lectures << endl;
-        cout << "Total dissatisfaction index: " << minimum_dsi << endl;
+        cout << "Total dissatisfaction index: " << best_dsi_if_lecture_ends_with_topic[number_of_topics - 1][number_of_lectures - 1] << endl;
     }
 
     return 0;

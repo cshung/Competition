@@ -12,6 +12,45 @@
 
 using namespace std;
 
+bool feasible(vector<int>& lengths, int length_target, int remaining_segments, int remaining_length, int starting_segment, int used_mask)
+{
+    if (remaining_segments == 0)
+    {
+        return true;
+    }
+
+    int bit = 1 << starting_segment;
+    bool first_entry = (remaining_length == length_target);
+    for (unsigned int i = starting_segment; i < lengths.size(); i++)
+    {
+        if ((used_mask & bit) == 0)
+        {
+            if (lengths[i] == remaining_length)
+            {
+                if (feasible(lengths, length_target, remaining_segments - 1, length_target, 0, used_mask | bit))
+                {
+                    return true;
+                }
+            }
+            else if (lengths[i] < remaining_length)
+            {
+                if (feasible(lengths, length_target, remaining_segments, remaining_length - lengths[i], i + 1, used_mask | bit))
+                {
+                    return true;
+                }
+            }
+            if (first_entry)
+            {
+                break;
+            }
+        }
+
+        bit = bit << 1;        
+    }
+
+    return false;
+}
+
 int UVa10364()
 {
     int num_test_case;
@@ -34,7 +73,14 @@ int UVa10364()
         if (length_sum % 4 == 0)
         {
             int length_target = length_sum / 4;
-            
+            if (feasible(lengths, length_target, 4, length_target, 0, 0)) 
+            {
+                cout << "yes" << endl;
+            }
+            else
+            {
+                cout << "no" << endl;
+            }
         }
         else
         {

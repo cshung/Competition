@@ -264,6 +264,21 @@
     <ClInclude Include="UVa10364.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UVa10651.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa590.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa10243.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa10891.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UVa910.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -510,6 +525,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa10364.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa10651.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa590.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa10243.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa10891.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa910.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

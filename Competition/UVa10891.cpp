@@ -4,13 +4,12 @@
 
 #include "UVa10891.h"
 
-#define LOG
+// #define LOG
 
 #include <iostream>
 #include <vector>
 
 using namespace std;
-
 
 struct UVa10891_strategy
 {
@@ -78,31 +77,15 @@ int UVa10891()
                 }
                 else
                 {
-                    bool first = true;
                     optimal_strategies[start][end].start_index = start;
                     optimal_strategies[start][end].end_index = end;
                     optimal_strategies[start][end].strategy_value = element_sums[end + 1] - element_sums[start];
                     for (int p = start; p < end; p++)
                     {
                         // Consider I am choosing [start, p]
-                        int strategy_value = element_sums[p + 1] - element_sums[start];
+                        int strategy_value = element_sums[p + 1] - element_sums[start];                        
                         UVa10891_strategy opponent_strategy = optimal_strategies[p + 1][end];
-                        if (opponent_strategy.start_index == p + 1)
-                        {
-                            // opponent is choosing [p + 1, opponent_strategy.end_index]
-                            if (opponent_strategy.end_index != end)
-                            {
-                                strategy_value += optimal_strategies[opponent_strategy.end_index + 1][end].strategy_value;
-                            }
-                        }
-                        else
-                        {
-                            // opponent is choosing [opponent.start_index, end]
-                            if (opponent_strategy.start_index != p + 1)
-                            {
-                                strategy_value += optimal_strategies[p + 1][opponent_strategy.start_index - 1].strategy_value;
-                            }
-                        }
+                        strategy_value -= opponent_strategy.strategy_value;
                         if (strategy_value > optimal_strategies[start][end].strategy_value)
                         {
                             optimal_strategies[start][end].strategy_value = strategy_value;
@@ -115,22 +98,7 @@ int UVa10891()
                         // Consider I am choosing [q, end]
                         int strategy_value = element_sums[end + 1] - element_sums[q];
                         UVa10891_strategy opponent_strategy = optimal_strategies[start][q - 1];
-                        if (opponent_strategy.start_index == start)
-                        {
-                            // opponent is choosing [start, opponent_strategy.end_index]
-                            if (opponent_strategy.end_index != q - 1)
-                            {
-                                strategy_value += optimal_strategies[opponent_strategy.end_index + 1][q - 1].strategy_value;
-                            }
-                        }
-                        else
-                        {
-                            // opponent is choosing [opponent_strategy.start_index, q - 1]
-                            if (opponent_strategy.start_index != start)
-                            {
-                                strategy_value += optimal_strategies[start][opponent_strategy.start_index - 1].strategy_value;
-                            }
-                        }
+                        strategy_value -= opponent_strategy.strategy_value;
                         if (strategy_value > optimal_strategies[start][end].strategy_value)
                         {
                             optimal_strategies[start][end].strategy_value = strategy_value;
@@ -143,32 +111,13 @@ int UVa10891()
 #endif
                 }
             }
+#ifdef LOG
+            cout << endl;
+#endif
         }
 
         UVa10891_strategy optimal_strategy = optimal_strategies[0][number_of_elements - 1];
-        if (optimal_strategy.start_index == 0)
-        {
-            if (optimal_strategy.end_index != number_of_elements - 1)
-            {
-                cout << optimal_strategy.strategy_value - optimal_strategies[optimal_strategy.end_index + 1][number_of_elements - 1].strategy_value << endl;
-            }
-            else
-            {
-                cout << optimal_strategy.strategy_value << endl;
-            }
-        }
-        else
-        {
-            if (optimal_strategy.start_index != 0)
-            {
-                cout << optimal_strategy.strategy_value - optimal_strategies[0][optimal_strategy.end_index - 1].strategy_value << endl;
-            }
-            else
-            {
-                cout << optimal_strategy.strategy_value << endl;
-            }
-        }
-        
+        cout << optimal_strategy.strategy_value << endl;
     }
     return 0;
 }

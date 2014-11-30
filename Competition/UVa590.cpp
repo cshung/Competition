@@ -2,6 +2,8 @@
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=531
 
+// #define LOG
+
 #include "UVa590.h"
 
 #include <iostream>
@@ -90,6 +92,7 @@ int UVa590()
                             if (first)
                             {
                                 new_cost[dst] = old_cost[src] + cost;
+                                first = false;
                             }
                             else
                             {
@@ -106,6 +109,21 @@ int UVa590()
                 old_cost[c] = new_cost[c];
                 old_reachable[c] = new_reachable[c];
             }
+#ifdef LOG
+            cout << "On day " << k << " we have: ";
+            for (int c = 0; c < number_of_cities; c++)
+            {
+                if (old_reachable[c])
+                {
+                    cout << old_cost[c] << " ";
+                }
+                else
+                {
+                    cout << "X" << " ";
+                }
+            }
+            cout << endl;
+#endif
         }
 
         // Step 4: Output

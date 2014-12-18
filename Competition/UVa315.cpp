@@ -8,14 +8,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 #include <set>
+=======
+>>>>>>> da79ef65f2ad44c397354aa1d608946fc5b83ba0
 #include <algorithm>
 
 // #define LOG
 
 using namespace std;
 
+<<<<<<< HEAD
 void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, int& num_articulation_points)
+=======
+void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, int& num_articulation_points)
+>>>>>>> da79ef65f2ad44c397354aa1d608946fc5b83ba0
 {
     colors[current] = 1; // black
 #ifdef LOG
@@ -26,9 +33,15 @@ void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >
     dfs_current_num++;
     int num_children = 0;
     bool has_bigger_child = false;
+<<<<<<< HEAD
     for (set<int>::iterator ni = adjacency_list[current].begin(); ni != adjacency_list[current].end(); ni++)
     {
         int neighbor = *ni;
+=======
+    for (unsigned int i = 0; i < adjacency_list[current].size(); i++)
+    {
+        int neighbor = adjacency_list[current][i];
+>>>>>>> da79ef65f2ad44c397354aa1d608946fc5b83ba0
         if (colors[neighbor] == 0)
         {
             num_children++;
@@ -94,7 +107,11 @@ int UVa315()
             break;
         }
         getline(cin, line); // just to consume the endline after number_of_nodes
+<<<<<<< HEAD
         vector<set<int> > adjacency_list;
+=======
+        vector<vector<int> > adjacency_list;
+>>>>>>> da79ef65f2ad44c397354aa1d608946fc5b83ba0
         adjacency_list.resize(number_of_nodes);
 
         while (true)
@@ -111,8 +128,13 @@ int UVa315()
             while (iss >> dst)
             {
                 // let's name to nodes in 0 based index for convenience
+<<<<<<< HEAD
                 adjacency_list[src - 1].insert(dst - 1);
                 adjacency_list[dst - 1].insert(src - 1);
+=======
+                adjacency_list[src - 1].push_back(dst - 1);
+                adjacency_list[dst - 1].push_back(src - 1);
+>>>>>>> da79ef65f2ad44c397354aa1d608946fc5b83ba0
             }
         }
 
@@ -135,11 +157,14 @@ int UVa315()
         int num_articulation_points = 0;
 
         UVa315_dfs(-1, 0, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, num_articulation_points);
+<<<<<<< HEAD
         if (dfs_current_num != number_of_nodes)
         {
             throw 0;
         }
 
+=======
+>>>>>>> da79ef65f2ad44c397354aa1d608946fc5b83ba0
         cout << num_articulation_points << endl;
     }
 

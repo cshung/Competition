@@ -11,10 +11,9 @@
 #include <set>
 #include <algorithm>
 
-#define LOG
+// #define LOG
 
 using namespace std;
-
 
 void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, int& num_articulation_points)
 {
@@ -29,6 +28,9 @@ void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >
         int neighbor = *ni;
         if (colors[neighbor] == 0)
         {
+#ifdef LOG
+            cout << "Tree edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
+#endif
             num_children++;
 
             UVa315_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, num_articulation_points);
@@ -45,16 +47,12 @@ void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >
             {
                 // We are seeing a backedge here that does not go through direct parent
 #ifdef LOG
-                cout << "Backedge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
+                cout << "Back edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
 #endif
-                dfs_low[current] = min(dfs_low[current], neighbor);
+                dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
             }
         }
     }
-#ifdef LOG
-    cout << "dfs_num[" << (current + 1) << "] = " << dfs_num[current] << endl;
-    cout << "dfs_low[" << (current + 1) << "] = " << dfs_low[current] << endl;
-#endif
 
     if (parent == -1)
     {
@@ -142,6 +140,28 @@ int UVa315()
         {
             throw 0;
         }
+
+
+#ifdef LOG
+        for (int i = 0; i < number_of_nodes; i++)
+        {
+            for (int j = 0; j < number_of_nodes; j++)
+            {
+                if (dfs_num[j] == i)
+                {
+                    cout << (j + 1) << " : " << dfs_num[j];
+
+                    for (int k = 0; k < number_of_nodes; k++)
+                    {
+                        if (dfs_num[k] == dfs_low[j])
+                        {
+                            cout << "/" << dfs_low[j] << " (" << (k + 1) << ")" << endl;
+                        }
+                    }
+                }
+            }
+        }
+#endif
 
         cout << num_articulation_points << endl;
     }

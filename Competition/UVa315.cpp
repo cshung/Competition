@@ -141,7 +141,6 @@ int UVa315()
             throw 0;
         }
 
-
 #ifdef LOG
         for (int i = 0; i < number_of_nodes; i++)
         {

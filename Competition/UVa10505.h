@@ -1,3 +1,3 @@
 #pragma once
 
-int UVa10504();
+int UVa10505();

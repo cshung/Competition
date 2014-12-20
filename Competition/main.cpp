@@ -88,6 +88,7 @@
 #include "UVa260.h"                            // 084
 #include "UVa352.h"                            // 085
 #include "UVa315.h"                            // 086
+#include "UVa610.h"                            // 087
 #include "UVa10731.h"                          // 088
 #include "UVa11504.h"                          // 089
 
@@ -189,6 +190,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa260();                            // Accepted
     // return UVa352();                            // Accepted
     // return UVa315();                            // Accepted
+    // return UVa610();                            // Accepted
     // return UVa10731();                          // 
     return UVa11504();                          // 
 }

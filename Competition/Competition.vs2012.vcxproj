@@ -84,6 +84,7 @@
     <ClInclude Include="UVa260.h" />
     <ClInclude Include="UVa315.h" />
     <ClInclude Include="UVa352.h" />
+    <ClInclude Include="UVa610.h" />
     <ClInclude Include="UVa910.h" />
     <ClInclude Include="UVa10243.h" />
     <ClInclude Include="UVa10364.h" />
@@ -251,6 +252,7 @@
     <ClCompile Include="UVa573.cpp" />
     <ClCompile Include="UVa590.cpp" />
     <ClCompile Include="UVa607.cpp" />
+    <ClCompile Include="UVa610.cpp" />
     <ClCompile Include="UVa628.cpp" />
     <ClCompile Include="UVa639.cpp" />
     <ClCompile Include="UVa661.cpp" />

@@ -4,6 +4,8 @@
 
 #include "UVa10731.h"
 
+// #define LOG
+
 #include <iostream>
 #include <string>
 #include <map>
@@ -61,8 +63,8 @@ int UVa10731()
 
         // Step 2: Copy the graph for running the algorithm
         int number_of_nodes = numbering.size();
-        vector<vector<int> > numbered_graph;
-        numbered_graph.resize(number_of_nodes);
+        vector<vector<int> > adjacency_list;
+        adjacency_list.resize(number_of_nodes);
 
         for (map<char, set<char> >::iterator gi = input_graph.begin(); gi != input_graph.end(); gi++)
         {
@@ -70,9 +72,22 @@ int UVa10731()
             for (set<char>::iterator ni = gi->second.begin(); ni != gi->second.end(); ni++)
             {
                 int to = UVa10731_number(numbering, naming, *ni);
-                numbered_graph[from].push_back(to);
+                adjacency_list[from].push_back(to);
             }
         }
+
+#ifdef LOG
+        cout << "digraph{" << endl;
+        for (unsigned int src = 0; src < adjacency_list.size(); src++)
+        {
+            for (unsigned int dst_index = 0; dst_index < adjacency_list[src].size(); dst_index++)
+            {
+                int dst = adjacency_list[src][dst_index];
+                cout << naming[src] << "->" << naming[dst] << ";" << endl;
+            }
+        }
+        cout << "}" << endl;
+#endif
 
         // Step 3: Run the strongly connected component algorithm
         vector<int> colors;
@@ -94,8 +109,29 @@ int UVa10731()
         for (int i = 0; i < number_of_nodes; i++)
         {            
             stack<int> strongly_connected_nodes;
-            UVa10731_dfs(-1, i, dfs_current_num, numbered_graph, colors, dfs_num, dfs_low, strongly_connected_nodes, naming, result);
+            UVa10731_dfs(-1, i, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, naming, result);
         }
+
+#ifdef LOG
+        for (int i = 0; i < number_of_nodes; i++)
+        {
+            for (int j = 0; j < number_of_nodes; j++)
+            {
+                if (dfs_num[j] == i)
+                {
+                    cout << naming[j] << " : " << dfs_num[j];
+
+                    for (int k = 0; k < number_of_nodes; k++)
+                    {
+                        if (dfs_num[k] == dfs_low[j])
+                        {
+                            cout << "/" << dfs_low[j] << " (" << (k + 1) << ")" << endl;
+                        }
+                    }
+                }
+            }
+        }
+#endif
 
         // Step 4: Output
         for (vector<vector<char> >::iterator ri = result.begin(); ri != result.end(); ri++)
@@ -147,18 +183,18 @@ void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<i
         if (colors[neighbor] == 0)
         {
 #ifdef LOG
-            cout << "Tree edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
+            cout << "Tree edge found:" << naming[current] << "->" << naming[neighbor] << ";" << endl;
 #endif
             UVa10731_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, naming, result);
             dfs_low[current] = min(dfs_low[current], dfs_low[neighbor]);
         }
         else
         {
-            if (neighbor != parent && colors[neighbor] == 1)
+            //if (neighbor != parent)
             {
                 // We are seeing a backedge here that does not go through direct parent
 #ifdef LOG
-                cout << "Back edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
+//                cout << "Back edge found:" << naming[current] << "->" << naming[neighbor] << endl;
 #endif
                 dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
             }

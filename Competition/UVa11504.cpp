@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void UVa11504_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, stack<int>& strongly_connected_nodes, vector<vector<int> >& result);
+void UVa11504_dfs(int parent, int current, vector<vector<int> >& adjacency_list, vector<int>& colors, stack<int>* order);
 
 int UVa11504()
 {
@@ -30,89 +30,69 @@ int UVa11504()
              int src, dst;
              cin >> src >> dst;
              adjacency_list[src - 1].push_back(dst - 1);
-             adjacency_list[dst - 1].push_back(src - 1);
          }
 
-        // Step 2: Run the strongly connected component algorithm
+        // Step 2: DFS once and order the nodes with decreasing finishing times
         vector<int> colors;
-        vector<int> dfs_num; // The dfs visit number
-        vector<int> dfs_low; // The lowest number reachable by the node without going through direct parent
         colors.resize(number_of_nodes);
-        dfs_num.resize(number_of_nodes);
-        dfs_low.resize(number_of_nodes);
         for (int i = 0; i < number_of_nodes; i++)
         {
             // white
             colors[i] = 0;
-            dfs_num[i] = 0;
-            dfs_low[i] = 0;
         }
 
-        int dfs_current_num = 0;
-        vector<vector<int> > result;
+        stack<int> order;
         for (int i = 0; i < number_of_nodes; i++)
-        {            
-            stack<int> strongly_connected_nodes;
-            UVa11504_dfs(-1, i, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, result);
+        {
+            UVa11504_dfs(-1, i, adjacency_list, colors, &order);
         }
-        cout << result.size() << endl;
+
+        // Step 3: DFS twice by going through the list in decreasing finishing times order
+        for (int i = 0; i < number_of_nodes; i++)
+        {
+            // white
+            colors[i] = 0;
+        }
+
+        int result = 0;
+        while (order.size() > 0)
+        {
+            if (colors[order.top()] == 0)
+            {
+                result++;
+            }
+            UVa11504_dfs(-1, order.top(), adjacency_list, colors, NULL);
+            order.pop();
+        }
+
+        // Step 4: Output
+        cout << result << endl;
     }
 
     return 0;
 }
 
-void UVa11504_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, stack<int>& strongly_connected_nodes, vector<vector<int> >& result)
+void UVa11504_dfs(int parent, int current, vector<vector<int> >& adjacency_list, vector<int>& colors, stack<int>* order)
 {
     if (colors[current] != 0)
     {
         return;
     }
-    strongly_connected_nodes.push(current);
     colors[current] = 1; // gray
-    dfs_num[current] = dfs_current_num;
-    dfs_low[current] = dfs_current_num;
-    dfs_current_num++;
 
     for (vector<int>::iterator ni = adjacency_list[current].begin(); ni != adjacency_list[current].end(); ni++)
     {
         int neighbor = *ni;
         if (colors[neighbor] == 0)
         {
-#ifdef LOG
-            cout << "Tree edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
-#endif
-            UVa11504_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, result);
-            dfs_low[current] = min(dfs_low[current], dfs_low[neighbor]);
-        }
-        else
-        {
-            if (neighbor != parent && colors[neighbor] == 1)
-            {
-                // We are seeing a backedge here that does not go through direct parent
-#ifdef LOG
-                cout << "Back edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
-#endif
-                dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
-            }
+            UVa11504_dfs(current, neighbor, adjacency_list, colors, order);
         }
     }
 
     colors[current] = 2; // black
 
-    if (dfs_low[current] == dfs_num[current])
+    if (order != NULL)
     {
-        vector<int> strongly_connected_component;
-        while (true)
-        {   
-            strongly_connected_component.push_back(strongly_connected_nodes.top());
-            if (strongly_connected_nodes.top() == current)
-            {
-                strongly_connected_nodes.pop();                    
-                break;
-            }
-            strongly_connected_nodes.pop();
-
-        }
-        result.push_back(strongly_connected_component);
+        order->push(current);
     }
 }

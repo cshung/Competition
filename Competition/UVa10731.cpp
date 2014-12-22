@@ -125,7 +125,7 @@ int UVa10731()
                     {
                         if (dfs_num[k] == dfs_low[j])
                         {
-                            cout << "/" << dfs_low[j] << " (" << (k + 1) << ")" << endl;
+                            cout << "/" << dfs_low[j] << " (" << naming[k] << ")" << endl;
                         }
                     }
                 }
@@ -188,16 +188,18 @@ void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<i
             UVa10731_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, naming, result);
             dfs_low[current] = min(dfs_low[current], dfs_low[neighbor]);
         }
+        else if (colors[neighbor] == 1)
+        {
+#ifdef LOG
+            cout << "Back edge found:" << naming[current] << "->" << naming[neighbor] << endl;
+#endif
+            dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
+        }
         else
         {
-            if (colors[neighbor] == 1)
-            {
-                // We are seeing a backedge here that does not go through direct parent
 #ifdef LOG
-//                cout << "Back edge found:" << naming[current] << "->" << naming[neighbor] << endl;
+            cout << "Forward/cross edge found:" << naming[current] << "->" << naming[neighbor] << endl;
 #endif
-                dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
-            }
         }
     }
 

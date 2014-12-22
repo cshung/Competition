@@ -190,7 +190,7 @@ void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<i
         }
         else
         {
-            //if (neighbor != parent)
+            if (colors[neighbor] == 1)
             {
                 // We are seeing a backedge here that does not go through direct parent
 #ifdef LOG

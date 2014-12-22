@@ -18,7 +18,7 @@ using namespace std;
 
 int UVa10731_number(map<char, int>& numbering, map<int, char>& naming, char c);
 void UVa10731_add_edge(map<char, set<char> >& input_graph, char from, char to);
-void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, stack<int>& strongly_connected_nodes, map<int, char>& naming, vector<vector<char> >& result);
+void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, stack<int>& strongly_connected_nodes, vector<bool>& inStack, map<int, char>& naming, vector<vector<char> >& result);
 bool UVa10731_order(vector<char> first, vector<char> second);
 
 int UVa10731()
@@ -91,15 +91,18 @@ int UVa10731()
 
         // Step 3: Run the strongly connected component algorithm
         vector<int> colors;
+        vector<bool> inStack;
         vector<int> dfs_num; // The dfs visit number
-        vector<int> dfs_low; // The lowest number reachable by the node without going through direct parent
+        vector<int> dfs_low; // The lowest number reachable by the node by following tree edges and at most one edges in stack
         colors.resize(number_of_nodes);
+        inStack.resize(number_of_nodes);
         dfs_num.resize(number_of_nodes);
         dfs_low.resize(number_of_nodes);
         for (int i = 0; i < number_of_nodes; i++)
         {
             // white
             colors[i] = 0;
+            inStack[i] = false;
             dfs_num[i] = 0;
             dfs_low[i] = 0;
         }
@@ -109,7 +112,7 @@ int UVa10731()
         for (int i = 0; i < number_of_nodes; i++)
         {            
             stack<int> strongly_connected_nodes;
-            UVa10731_dfs(-1, i, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, naming, result);
+            UVa10731_dfs(-1, i, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, inStack, naming, result);
         }
 
 #ifdef LOG
@@ -165,13 +168,15 @@ bool UVa10731_order(vector<char> first, vector<char> second)
     return first[0] < second[0];
 }
 
-void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, stack<int>& strongly_connected_nodes, map<int, char>& naming, vector<vector<char> >& result)
+void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, stack<int>& strongly_connected_nodes, vector<bool>& inStack, map<int, char>& naming, vector<vector<char> >& result)
 {
     if (colors[current] != 0)
     {
         return;
     }
     strongly_connected_nodes.push(current);
+    inStack[current] = true;
+
     colors[current] = 1; // gray
     dfs_num[current] = dfs_current_num;
     dfs_low[current] = dfs_current_num;
@@ -185,10 +190,10 @@ void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<i
 #ifdef LOG
             cout << "Tree edge found:" << naming[current] << "->" << naming[neighbor] << ";" << endl;
 #endif
-            UVa10731_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, naming, result);
+            UVa10731_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, strongly_connected_nodes, inStack, naming, result);
             dfs_low[current] = min(dfs_low[current], dfs_low[neighbor]);
         }
-        else if (colors[neighbor] == 1)
+        else if (inStack[neighbor])
         {
 #ifdef LOG
             cout << "Back edge found:" << naming[current] << "->" << naming[neighbor] << endl;
@@ -210,14 +215,14 @@ void UVa10731_dfs(int parent, int current, int& dfs_current_num, vector<vector<i
         vector<char> strongly_connected_component;
         while (true)
         {   
-            strongly_connected_component.push_back(naming[strongly_connected_nodes.top()]);
-            if (strongly_connected_nodes.top() == current)
+            int top = strongly_connected_nodes.top();
+            strongly_connected_component.push_back(naming[top]);
+            inStack[top] = false;
+            strongly_connected_nodes.pop();
+            if (top == current)
             {
-                strongly_connected_nodes.pop();                    
                 break;
             }
-            strongly_connected_nodes.pop();
-
         }
         result.push_back(strongly_connected_component);
     }

@@ -10,32 +10,7 @@
 
 using namespace std;
 
-int cycle_length(unsigned int input, map<unsigned int, int>& cycle_lengths)
-{
-    if (input == 1)
-    {
-        return 1;
-    }
-
-    map<unsigned int, int>::iterator probe = cycle_lengths.find(input);
-    if (probe != cycle_lengths.end())
-    {
-        return probe->second;
-    }
-
-    unsigned int recursive_input;
-
-    if (input % 2 == 0)
-    {
-        recursive_input = input / 2;
-    }
-    else
-    {
-        recursive_input = input * 3 + 1;
-    }
-
-    return cycle_lengths[input] = (1 + cycle_length(recursive_input, cycle_lengths));
-}
+int cycle_length(unsigned int input, map<unsigned int, int>& cycle_lengths);
 
 int UVa100()
 {
@@ -76,4 +51,31 @@ int UVa100()
     while (!cin.eof());
 
     return 0;
+}
+
+int cycle_length(unsigned int input, map<unsigned int, int>& cycle_lengths)
+{
+    if (input == 1)
+    {
+        return 1;
+    }
+
+    map<unsigned int, int>::iterator probe = cycle_lengths.find(input);
+    if (probe != cycle_lengths.end())
+    {
+        return probe->second;
+    }
+
+    unsigned int recursive_input;
+
+    if (input % 2 == 0)
+    {
+        recursive_input = input / 2;
+    }
+    else
+    {
+        recursive_input = input * 3 + 1;
+    }
+
+    return cycle_lengths[input] = (1 + cycle_length(recursive_input, cycle_lengths));
 }

@@ -15,71 +15,7 @@
 
 using namespace std;
 
-void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, int& num_articulation_points)
-{
-    colors[current] = 1; // gray
-    dfs_num[current] = dfs_current_num;
-    dfs_low[current] = dfs_current_num;
-    dfs_current_num++;
-    int num_children = 0;
-    bool has_bigger_child = false;
-    for (set<int>::iterator ni = adjacency_list[current].begin(); ni != adjacency_list[current].end(); ni++)
-    {
-        int neighbor = *ni;
-        if (colors[neighbor] == 0)
-        {
-#ifdef LOG
-            cout << "Tree edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
-#endif
-            num_children++;
-
-            UVa315_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, num_articulation_points);
-            if (dfs_low[neighbor] >= dfs_num[current])
-            {
-                has_bigger_child = true;
-            }
-
-            dfs_low[current] = min(dfs_low[current], dfs_low[neighbor]);
-        }
-        else
-        {
-            if (neighbor != parent && colors[neighbor] == 1)
-            {
-                // We are seeing a backedge here that does not go through direct parent
-#ifdef LOG
-                cout << "Back edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
-#endif
-                dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
-            }
-        }
-    }
-
-    if (parent == -1)
-    {
-        if (num_children > 1)
-        {
-#ifdef LOG
-            cout << (current + 1) << " is an articulation point." << endl;
-#endif
-            num_articulation_points++;
-        }
-    }
-    else
-    {
-        if (num_children > 0)
-        {
-            if (has_bigger_child)
-            {
-#ifdef LOG
-                cout << (current + 1) << " is an articulation point" << endl;
-#endif
-                num_articulation_points++;
-            }
-        }
-    }
-
-    colors[current] = 2; // black
-}
+void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, int& num_articulation_points);
 
 int UVa315()
 {
@@ -166,4 +102,70 @@ int UVa315()
     }
 
     return 0;
+}
+
+void UVa315_dfs(int parent, int current, int& dfs_current_num, vector<set<int> >& adjacency_list, vector<int>& colors, vector<int>& dfs_num, vector<int>& dfs_low, int& num_articulation_points)
+{
+    colors[current] = 1; // gray
+    dfs_num[current] = dfs_current_num;
+    dfs_low[current] = dfs_current_num;
+    dfs_current_num++;
+    int num_children = 0;
+    bool has_bigger_child = false;
+    for (set<int>::iterator ni = adjacency_list[current].begin(); ni != adjacency_list[current].end(); ni++)
+    {
+        int neighbor = *ni;
+        if (colors[neighbor] == 0)
+        {
+#ifdef LOG
+            cout << "Tree edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
+#endif
+            num_children++;
+
+            UVa315_dfs(current, neighbor, dfs_current_num, adjacency_list, colors, dfs_num, dfs_low, num_articulation_points);
+            if (dfs_low[neighbor] >= dfs_num[current])
+            {
+                has_bigger_child = true;
+            }
+
+            dfs_low[current] = min(dfs_low[current], dfs_low[neighbor]);
+        }
+        else
+        {
+            if (neighbor != parent && colors[neighbor] == 1)
+            {
+                // We are seeing a backedge here that does not go through direct parent
+#ifdef LOG
+                cout << "Back edge found:" << (current + 1) << "->" << (neighbor + 1) << endl;
+#endif
+                dfs_low[current] = min(dfs_low[current], dfs_num[neighbor]);
+            }
+        }
+    }
+
+    if (parent == -1)
+    {
+        if (num_children > 1)
+        {
+#ifdef LOG
+            cout << (current + 1) << " is an articulation point." << endl;
+#endif
+            num_articulation_points++;
+        }
+    }
+    else
+    {
+        if (num_children > 0)
+        {
+            if (has_bigger_child)
+            {
+#ifdef LOG
+                cout << (current + 1) << " is an articulation point" << endl;
+#endif
+                num_articulation_points++;
+            }
+        }
+    }
+
+    colors[current] = 2; // black
 }

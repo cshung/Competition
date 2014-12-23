@@ -11,5 +11,8 @@ using namespace std;
 
 int UVa124()
 {
-    return 0;
+    while (true)
+    {
+        
+    }
 }

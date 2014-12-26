@@ -25,6 +25,32 @@ int UVa10034_find(int item, vector<int>& sets)
     }
 }
 
+bool UVa10034_union(int item1, int item2, vector<int>& sets)
+{
+    int set1 = UVa10034_find(item1, sets);
+    int set2 = UVa10034_find(item2, sets);
+    if (set1 != set2)
+    {
+        // Union 
+        if (sets[set1] < sets[set2])              // set1 is larger
+        {
+            sets[set1] = sets[set1] + sets[set2]; // size increased
+            sets[set2] = set1;                    // union
+        }
+        else
+        {
+            sets[set2] = sets[set1] + sets[set2]; // size increased
+            sets[set1] = set2;                    // union
+        }
+
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 class UVa10034_Edge
 {
 public:
@@ -86,31 +112,17 @@ int UVa10034()
             disjoint_sets[f] = -1;
         }
 
-        // Step 2.3: Kruskal's 2: For each edge, if not create cycle, add
+        // Step 2.3: Kruskal's 3: For each edge, if not create cycle, add
         int num_edge_added = 0;
         double weight = 0;
         while (num_edge_added != number_of_freckles - 1)
         {
             UVa10034_Edge edge = edges.top();
             edges.pop();
-            int src_set = UVa10034_find(edge.src, disjoint_sets);
-            int dst_set = UVa10034_find(edge.dst, disjoint_sets);
-            if (src_set != dst_set)
+            if (UVa10034_union(edge.src, edge.dst, disjoint_sets))
             {
                 num_edge_added++;
                 weight += edge.weight;
-                
-                // Union 
-                if (disjoint_sets[src_set] < disjoint_sets[dst_set]) // src_set is larger
-                {
-                    disjoint_sets[src_set] = disjoint_sets[src_set] + disjoint_sets[dst_set]; // size increased
-                    disjoint_sets[dst_set] = src_set;                                         // union
-                }
-                else
-                {
-                    disjoint_sets[dst_set] = disjoint_sets[src_set] + disjoint_sets[dst_set]; // size increased
-                    disjoint_sets[src_set] = dst_set;                                         // union
-                }
             }
         }
         if (test_case != 1)

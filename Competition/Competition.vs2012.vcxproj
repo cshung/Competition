@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UVa10034.h" />
+    <ClInclude Include="UVa10307.h" />
     <ClInclude Include="UVa10731.h" />
     <ClInclude Include="UVa11504.h" />
     <ClInclude Include="UVa124.h" />
@@ -205,6 +206,7 @@
     <ClCompile Include="UVa10243.cpp" />
     <ClCompile Include="UVa10281.cpp" />
     <ClCompile Include="UVa103.cpp" />
+    <ClCompile Include="UVa10307.cpp" />
     <ClCompile Include="UVa10340.cpp" />
     <ClCompile Include="UVa10341.cpp" />
     <ClCompile Include="UVa10360.cpp" />

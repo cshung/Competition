@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="UVa10004.h" />
     <ClInclude Include="UVa10034.h" />
     <ClInclude Include="UVa10307.h" />
     <ClInclude Include="UVa10731.h" />
@@ -196,6 +197,7 @@
     </ClCompile>
     <ClCompile Include="UVa100.cpp" />
     <ClCompile Include="UVa10003.cpp" />
+    <ClCompile Include="UVa10004.cpp" />
     <ClCompile Include="UVa10020.cpp" />
     <ClCompile Include="UVa10034.cpp" />
     <ClCompile Include="UVa10077.cpp" />

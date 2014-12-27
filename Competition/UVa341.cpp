@@ -68,6 +68,7 @@ int UVa341()
         int j = 1;
         for (int i = 0; i < num_intersections; i++)
         {
+            previous[i] = -1;
             if (i == src - 1)
             {
                 distances[i] = 0;
@@ -90,18 +91,25 @@ int UVa341()
         {
             int explored = UVa341_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
 
-            for (unsigned int ni = 0; ni < graph[explored].size(); ni++)
+            if (reachable[explored])
             {
-                pair<int, int> neighbor_edge = graph[explored][ni];
-                int neighbor = neighbor_edge.first;
-                int new_neighbor_distance = distances[explored] + neighbor_edge.second;
-                if (!reachable[neighbor] || new_neighbor_distance < distances[neighbor])
+                for (unsigned int ni = 0; ni < graph[explored].size(); ni++)
                 {
-                    distances[neighbor] = new_neighbor_distance;
-                    previous[neighbor] = explored;
-                    reachable[neighbor] = true;
-                    UVa341_change_key(dijkstra_queue, distances, reachable, node_index, queue_size, neighbor);
+                    pair<int, int> neighbor_edge = graph[explored][ni];
+                    int neighbor = neighbor_edge.first;
+                    int new_neighbor_distance = distances[explored] + neighbor_edge.second;
+                    if (!reachable[neighbor] || new_neighbor_distance < distances[neighbor])
+                    {
+                        distances[neighbor] = new_neighbor_distance;
+                        previous[neighbor] = explored;
+                        reachable[neighbor] = true;
+                        UVa341_change_key(dijkstra_queue, distances, reachable, node_index, queue_size, neighbor);
+                    }
                 }
+            }
+            else
+            {
+                break;
             }
         }
 

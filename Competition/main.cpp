@@ -212,5 +212,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa10307();                          // Accepted
     // return UVa10004();                          // Accepted
     // return UVa11228();                          // Accepted
-    return UVa341();                            // 
+    return UVa341();                            // Time limit - but Dijkstra should be optimal - let's check for infinite loop
 }

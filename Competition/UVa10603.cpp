@@ -17,7 +17,7 @@ void UVa10603_bubble_down(vector<int>& dijkstra_queue, vector<int>& distances, v
 int UVa10603_delete_min(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size);
 void UVa10603_change_key(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size, int changed_node);
 void UVa10063_solve(int a, int b, int c, int d);
-void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph, int d);
+void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph);
 
 int UVa10603()
 {
@@ -130,7 +130,7 @@ void UVa10603_bubble_down(vector<int>& dijkstra_queue, vector<int>& distances, v
 class UVa10603_implicit_graph
 {
 public:
-    UVa10603_implicit_graph(int _a, int _b, int _c) : a(_a), b(_b), c(_c)
+    UVa10603_implicit_graph(int _a, int _b, int _c, int _d) : a(_a), b(_b), c(_c), d(_d), best_volume_achieved(0), archieving_distance(0)
     {
     }
 
@@ -145,7 +145,7 @@ public:
     {
         int a_curr_volume = node / 201;
         int b_curr_volume = node % 201;
-        int c_curr_volume = a - a_curr_volume - b_curr_volume;
+        int c_curr_volume = c - a_curr_volume - b_curr_volume;
 
         vector<pair<int, int> > result;
 
@@ -157,43 +157,110 @@ public:
 
         if (a_curr_volume > 0)
         {
-            pour(a_curr_volume, b_curr_volume, b, a_next_volume, b_next_volume, poured_volume);
-            int c_next_volume = c - a_next_volume - b_next_volume;
+            pour(a_curr_volume, b_curr_volume, b, &a_next_volume, &b_next_volume, &poured_volume);
+            c_next_volume = c - a_next_volume - b_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
             result.push_back(pair<int, int>(neighbor, poured_volume));
 
-            pour(a_curr_volume, c_curr_volume, c, a_next_volume, c_next_volume, poured_volume);
-            int b_next_volume = c - a_next_volume - c_next_volume;
+            pour(a_curr_volume, c_curr_volume, c, &a_next_volume, &c_next_volume, &poured_volume);
+            b_next_volume = c - a_next_volume - c_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
             result.push_back(pair<int, int>(neighbor, poured_volume));
         }
 
-        // TODO: Complete this with b and c
+        if (b_curr_volume > 0)
+        {
+            pour(b_curr_volume, a_curr_volume, a, &b_next_volume, &a_next_volume, &poured_volume);
+            c_next_volume = c - a_next_volume - b_next_volume;
+            neighbor = a_next_volume * 201 + b_next_volume;
+            result.push_back(pair<int, int>(neighbor, poured_volume));
+
+            pour(b_curr_volume, c_curr_volume, c, &b_next_volume, &c_next_volume, &poured_volume);
+            a_next_volume = c - b_next_volume - c_next_volume;
+            neighbor = a_next_volume * 201 + b_next_volume;
+            result.push_back(pair<int, int>(neighbor, poured_volume));
+        }
+
+        if (c_curr_volume > 0)
+        {
+            pour(c_curr_volume, a_curr_volume, a, &c_next_volume, &a_next_volume, &poured_volume);
+            b_next_volume = c - a_next_volume - c_next_volume;
+            neighbor = a_next_volume * 201 + b_next_volume;
+            result.push_back(pair<int, int>(neighbor, poured_volume));
+
+            pour(c_curr_volume, b_curr_volume, b, &c_next_volume, &b_next_volume, &poured_volume);
+            a_next_volume = c - b_next_volume - c_next_volume;
+            neighbor = a_next_volume * 201 + b_next_volume;
+            result.push_back(pair<int, int>(neighbor, poured_volume));
+        }
 
         return result;
+    }
+
+    bool on_node_explored(int node, int distance)
+    {
+        int a_curr_volume = node / 201;
+        int b_curr_volume = node % 201;
+        int c_curr_volume = c - a_curr_volume - b_curr_volume;
+
+        if (a_curr_volume == d || b_curr_volume == d || c_curr_volume == d)
+        {
+            best_volume_achieved = d;
+            archieving_distance = distance;
+            return true;
+        }
+        else
+        {
+            if (a_curr_volume < d && a_curr_volume > best_volume_achieved)
+            {
+                best_volume_achieved = a_curr_volume;
+                archieving_distance = distance;
+            }
+            if (b_curr_volume < d && b_curr_volume > best_volume_achieved)
+            {
+                best_volume_achieved = b_curr_volume;
+                archieving_distance = distance;
+            }
+            
+            if (c_curr_volume < d && c_curr_volume > best_volume_achieved)
+            {
+                best_volume_achieved = c_curr_volume;
+                archieving_distance = distance;
+            }
+            return false;
+        }
+    }
+
+    void conclude()
+    {
+        cout << archieving_distance << " " << best_volume_achieved << endl;
     }
 
 private:
     int a; 
     int b;
     int c;
+    int d;
 
-    void pour(int src_cur_volume, int dst_cur_volume, int dst_max_volume, int& src_result_volume, int& dst_result_volume, int& poured_volume)
+    int best_volume_achieved;
+    int archieving_distance;
+
+    void pour(int src_cur_volume, int dst_cur_volume, int dst_max_volume, int* src_result_volume, int* dst_result_volume, int* poured_volume)
     {
         int dst_avail_volume = dst_max_volume - dst_cur_volume;
         if (src_cur_volume <= dst_avail_volume)
         {
             // dst have enough space to hold them all
-            src_result_volume = 0;
-            dst_result_volume = dst_cur_volume + src_cur_volume;
-            poured_volume = src_cur_volume;
+            *src_result_volume = 0;
+            *dst_result_volume = dst_cur_volume + src_cur_volume;
+            *poured_volume = src_cur_volume;
         }
         else
         {
             // dst don't have enought space to hold them all
-            src_result_volume = src_cur_volume - dst_avail_volume;
-            dst_result_volume = dst_cur_volume + dst_avail_volume;
-            poured_volume = dst_avail_volume;
+            *src_result_volume = src_cur_volume - dst_avail_volume;
+            *dst_result_volume = dst_cur_volume + dst_avail_volume;
+            *poured_volume = dst_avail_volume;
         }
     }
 };
@@ -243,7 +310,7 @@ void UVa10603_change_key(vector<int>& dijkstra_queue, vector<int>& distances, ve
     }
 }
 
-void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph, int d)
+void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph)
 {
     vector<int> dijkstra_queue; // containing the node numbers
     vector<bool> reachable;     // false if the node is unreachable
@@ -283,6 +350,11 @@ void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph, int d)
     {
         int explored = UVa10603_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
 
+        if(implicit_graph->on_node_explored(explored, distances[explored]))
+        {
+            break;
+        };
+
         if (reachable[explored])
         {
             vector<pair<int, int> > neighbors = implicit_graph->get_neighbors(explored);
@@ -308,5 +380,8 @@ void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph, int d)
 
 void UVa10063_solve(int a, int b, int c, int d)
 {
-    UVa10603_dijkstra(0, new UVa10603_implicit_graph(a, b, c), d);
+    UVa10603_implicit_graph* graph = new UVa10603_implicit_graph(a, b, c, d);
+    UVa10603_dijkstra(0, graph);
+    graph->conclude();
+    delete graph;
 }

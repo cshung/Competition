@@ -217,9 +217,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa10307();                          // Accepted
     // return UVa10004();                          // Accepted
     // return UVa11228();                          // Accepted
-    // return UVa341();                            // Accepted
-    // return UVa929();                            // Accepted
-    // return UVa10278();                          // Accepted
+    // return UVa341();                            // Accepted - Refactored
+    // return UVa929();                            // Accepted - Refactored
+    // return UVa10278();                          // Accepted - Refactored
     return UVa10603();                          // 
     // return UVa10147();                          // 
     // return UVa10369();                          // 

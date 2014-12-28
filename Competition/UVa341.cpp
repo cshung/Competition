@@ -16,6 +16,7 @@ bool UVa341_less(vector<int>& distances, vector<bool>& reachable, int one, int t
 void UVa341_bubble_down(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size, int parent_index);
 int UVa341_delete_min(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size);
 void UVa341_change_key(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size, int changed_node);
+void UVa341_dijkstra(int src, vector<vector<pair<int, int> > >& adjacency_list, vector<int>& distances, vector<int>& previous);
 
 int UVa341()
 {
@@ -23,6 +24,7 @@ int UVa341()
     while (true)
     {
         test_case++;
+
         // Step 1: Read input 
         int num_intersections;
         cin >> num_intersections;
@@ -30,8 +32,8 @@ int UVa341()
         {
             break;
         }
-        vector<vector<pair<int, int> > > graph;
-        graph.resize(num_intersections);
+        vector<vector<pair<int, int> > > adjacency_list;
+        adjacency_list.resize(num_intersections);
         for (int src = 1; src <= num_intersections; src++)
         {
             int num_edge;
@@ -42,7 +44,7 @@ int UVa341()
                 int time;
                 cin >> dst;
                 cin >> time;
-                graph[src - 1].push_back(pair<int, int>(dst - 1, time));
+                adjacency_list[src - 1].push_back(pair<int, int>(dst - 1, time));
             }
         }
         int src;
@@ -50,70 +52,12 @@ int UVa341()
         cin >> src;
         cin >> dst;
 
-        // Dijkstra
-        vector<int> dijkstra_queue; // containing the node numbers
+        // Step 2: Dijkstra
         vector<int> distances;      // containing the distance values
         vector<int> previous;       // containing the previous node in the shortest path tree
-        vector<bool> reachable;     // false if the node is unreachable
-        vector<int> node_index;     // the priority queue position of the node in the queue
-        int queue_size;
-        dijkstra_queue.resize(num_intersections);
-        distances.resize(num_intersections);
-        previous.resize(num_intersections);
-        reachable.resize(num_intersections);
-        node_index.resize(num_intersections);
-        queue_size = num_intersections;
-
-        // Dijkstra 1: Initialize the nodes and get them into the queue
-        int j = 1;
-        for (int i = 0; i < num_intersections; i++)
-        {
-            previous[i] = -1;
-            if (i == src - 1)
-            {
-                distances[i] = 0;
-                reachable[i] = true;
-                dijkstra_queue[0] = i;
-                node_index[i] = 0;
-            }
-            else
-            {
-                distances[i] = -1;
-                reachable[i] = false;
-                dijkstra_queue[j] = i;
-                node_index[i] = j;
-                j++;
-            }
-        }
-
-        // Dijkstra 2: Main loop
-        while (queue_size > 0)
-        {
-            int explored = UVa341_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
-
-            if (reachable[explored])
-            {
-                for (unsigned int ni = 0; ni < graph[explored].size(); ni++)
-                {
-                    pair<int, int> neighbor_edge = graph[explored][ni];
-                    int neighbor = neighbor_edge.first;
-                    int new_neighbor_distance = distances[explored] + neighbor_edge.second;
-                    if (!reachable[neighbor] || new_neighbor_distance < distances[neighbor])
-                    {
-                        distances[neighbor] = new_neighbor_distance;
-                        previous[neighbor] = explored;
-                        reachable[neighbor] = true;
-                        UVa341_change_key(dijkstra_queue, distances, reachable, node_index, queue_size, neighbor);
-                    }
-                }
-            }
-            else
-            {
-                break;
-            }
-        }
-
-        // Output - trace the path and reverse
+        UVa341_dijkstra(src - 1, adjacency_list, distances, previous);
+        
+        // Step 3: Output - trace the path and reverse
         stack<int> path;
         int current = (dst - 1);
         while (true)
@@ -271,3 +215,68 @@ void UVa341_change_key(vector<int>& dijkstra_queue, vector<int>& distances, vect
         }
     }
 }
+
+void UVa341_dijkstra(int src, vector<vector<pair<int, int> > >& adjacency_list, vector<int>& distances, vector<int>& previous)
+{
+    vector<int> dijkstra_queue; // containing the node numbers
+    vector<bool> reachable;     // false if the node is unreachable
+    vector<int> node_index;     // the priority queue position of the node in the queue
+    int queue_size;
+    int num_nodes = adjacency_list.size();
+    dijkstra_queue.resize(num_nodes);
+    distances.resize(num_nodes);
+    previous.resize(num_nodes);
+    reachable.resize(num_nodes);
+    node_index.resize(num_nodes);
+    queue_size = num_nodes;
+
+    // Step 1: Initialize the nodes and get them into the queue
+    int j = 1;
+    for (int i = 0; i < num_nodes; i++)
+    {
+        previous[i] = -1;
+        if (i == src)
+        {
+            distances[i] = 0;
+            reachable[i] = true;
+            dijkstra_queue[0] = i;
+            node_index[i] = 0;
+        }
+        else
+        {
+            distances[i] = -1;
+            reachable[i] = false;
+            dijkstra_queue[j] = i;
+            node_index[i] = j;
+            j++;
+        }
+    }
+
+    // Step 2: Main Loop
+    while (queue_size > 0)
+    {
+        int explored = UVa341_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
+
+        if (reachable[explored])
+        {
+            for (unsigned int ni = 0; ni < adjacency_list[explored].size(); ni++)
+            {
+                pair<int, int> neighbor_edge = adjacency_list[explored][ni];
+                int neighbor = neighbor_edge.first;
+                int new_neighbor_distance = distances[explored] + neighbor_edge.second;
+                if (!reachable[neighbor] || new_neighbor_distance < distances[neighbor])
+                {
+                    distances[neighbor] = new_neighbor_distance;
+                    previous[neighbor] = explored;
+                    reachable[neighbor] = true;
+                    UVa341_change_key(dijkstra_queue, distances, reachable, node_index, queue_size, neighbor);
+                }
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+}
+

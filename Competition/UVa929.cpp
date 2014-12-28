@@ -15,6 +15,7 @@ bool UVa929_less(vector<int>& distances, vector<bool>& reachable, int one, int t
 void UVa929_bubble_down(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size, int parent_index);
 int UVa929_delete_min(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size);
 void UVa929_change_key(vector<int>& dijkstra_queue, vector<int>& distances, vector<bool>& reachable, vector<int>& node_index, int& queue_size, int changed_node);
+void UVa929_dijkstra(int num_cells, int src, int dst, vector<int>& distances);
 
 int grid[1000][1000];
 int graph_next[1000000][5];
@@ -29,6 +30,7 @@ int UVa929()
         char input;
         int num_rows;
         int num_cols;
+
         // Step 1: Read input
         scanf("%d %d",&num_rows,&num_cols);
         getchar();
@@ -75,84 +77,12 @@ int UVa929()
             }
         }
 
-        int src = 1;
-        int dst = num_cells;
+        int dst = num_cells - 1;
+        // Step 3: Dijkstra
+        vector<int> distances;
+        UVa929_dijkstra(num_cells, 0 , dst, distances);
 
-        // Dijkstra
-        vector<int> dijkstra_queue; // containing the node numbers
-        vector<int> distances;      // containing the distance values
-        vector<int> previous;       // containing the previous node in the shortest path tree
-        vector<bool> reachable;     // false if the node is unreachable
-        vector<int> node_index;     // the priority queue position of the node in the queue
-        int queue_size;
-        dijkstra_queue.resize(num_cells);
-        distances.resize(num_cells);
-        previous.resize(num_cells);
-        reachable.resize(num_cells);
-        node_index.resize(num_cells);
-        queue_size = num_cells;
-
-        // Dijkstra 1: Initialize the nodes and get them into the queue
-        int j = 1;
-        for (int i = 0; i < num_cells; i++)
-        {
-            previous[i] = -1;
-            if (i == src - 1)
-            {
-                distances[i] = 0;
-                reachable[i] = true;
-                dijkstra_queue[0] = i;
-                node_index[i] = 0;
-            }
-            else
-            {
-                distances[i] = -1;
-                reachable[i] = false;
-                dijkstra_queue[j] = i;
-                node_index[i] = j;
-                j++;
-            }
-        }
-
-        // Dijkstra 2: Main loop
-        while (queue_size > 0)
-        {
-            int explored = UVa929_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
-
-            if (explored == dst - 1)
-            {
-                break;
-            }
-
-            if (reachable[explored])
-            {
-                //for (unsigned int ni = 0; ni < graph[explored].size(); ni++)
-                for (int ni = 1; ni <= graph_next[explored][0]; ni++)
-                {
-                    // pair<int, int> neighbor_edge = graph[explored][ni];
-                    // int neighbor = neighbor_edge.first;
-                    // int edge_weight = neighbor_edge.second;
-
-                    int neighbor = graph_next[explored][ni];
-                    int edge_weight = graph_weight[explored][ni];
-
-                    int new_neighbor_distance = distances[explored] + edge_weight;
-                    if (!reachable[neighbor] || new_neighbor_distance < distances[neighbor])
-                    {
-                        distances[neighbor] = new_neighbor_distance;
-                        previous[neighbor] = explored;
-                        reachable[neighbor] = true;
-                        UVa929_change_key(dijkstra_queue, distances, reachable, node_index, queue_size, neighbor);
-                    }
-                }
-            }
-            else
-            {
-                break;
-            }
-        }
-
-        cout << grid[0][0] + distances[dst - 1] << endl;
+        cout << grid[0][0] + distances[dst] << endl;
     }
 
     return 0;
@@ -283,6 +213,72 @@ void UVa929_change_key(vector<int>& dijkstra_queue, vector<int>& distances, vect
             node_index[parent_value] = child_index;
             node_index[child_value] = parent_index;
             child_index = parent_index;
+        }
+        else
+        {
+            break;
+        }
+    }
+}
+
+void UVa929_dijkstra(int num_cells, int src, int dst, vector<int>& distances)
+{
+    vector<int> dijkstra_queue; // containing the node numbers
+    vector<bool> reachable;     // false if the node is unreachable
+    vector<int> node_index;     // the priority queue position of the node in the queue
+    int queue_size;
+    dijkstra_queue.resize(num_cells);
+    distances.resize(num_cells);
+    reachable.resize(num_cells);
+    node_index.resize(num_cells);
+    queue_size = num_cells;
+
+    // Step 1: Initialize the nodes and get them into the queue
+    int j = 1;
+    for (int i = 0; i < num_cells; i++)
+    {
+        if (i == src)
+        {
+            distances[i] = 0;
+            reachable[i] = true;
+            dijkstra_queue[0] = i;
+            node_index[i] = 0;
+        }
+        else
+        {
+            distances[i] = -1;
+            reachable[i] = false;
+            dijkstra_queue[j] = i;
+            node_index[i] = j;
+            j++;
+        }
+    }
+
+    // Step 2: Initialize the nodes and get them into the queue
+    while (queue_size > 0)
+    {
+        int explored = UVa929_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
+
+        if (explored == dst)
+        {
+            break;
+        }
+
+        if (reachable[explored])
+        {
+            for (int ni = 1; ni <= graph_next[explored][0]; ni++)
+            {
+                int neighbor = graph_next[explored][ni];
+                int edge_weight = graph_weight[explored][ni];
+
+                int new_neighbor_distance = distances[explored] + edge_weight;
+                if (!reachable[neighbor] || new_neighbor_distance < distances[neighbor])
+                {
+                    distances[neighbor] = new_neighbor_distance;
+                    reachable[neighbor] = true;
+                    UVa929_change_key(dijkstra_queue, distances, reachable, node_index, queue_size, neighbor);
+                }
+            }
         }
         else
         {

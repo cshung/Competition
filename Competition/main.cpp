@@ -220,7 +220,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa341();                            // Accepted - Refactored
     // return UVa929();                            // Accepted - Refactored
     // return UVa10278();                          // Accepted - Refactored
-    return UVa10603();                          // 
-    // return UVa10147();                          // 
+    // return UVa10603();                          // Accepted
+    return UVa10147();                          // 
     // return UVa10369();                          // 
 }

@@ -2,6 +2,8 @@
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1544
 
+// #define LOG
+
 #include "UVa10603.h"
 
 #include <iostream>
@@ -139,7 +141,7 @@ public:
         return 201 * 201;
     }
 
-    // A node is presented as a base 200 number
+    // A node is presented as a base 201 number
     // representing the volume of water in a and b respectively
     vector<pair<int, int> > get_neighbors(int node)
     {
@@ -160,11 +162,17 @@ public:
             pour(a_curr_volume, b_curr_volume, b, &a_next_volume, &b_next_volume, &poured_volume);
             c_next_volume = c - a_next_volume - b_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
+#ifdef LOG
+            log_neighbor(node, neighbor, poured_volume);
+#endif
             result.push_back(pair<int, int>(neighbor, poured_volume));
 
             pour(a_curr_volume, c_curr_volume, c, &a_next_volume, &c_next_volume, &poured_volume);
             b_next_volume = c - a_next_volume - c_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
+#ifdef LOG
+            log_neighbor(node, neighbor, poured_volume);
+#endif
             result.push_back(pair<int, int>(neighbor, poured_volume));
         }
 
@@ -173,11 +181,17 @@ public:
             pour(b_curr_volume, a_curr_volume, a, &b_next_volume, &a_next_volume, &poured_volume);
             c_next_volume = c - a_next_volume - b_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
+#ifdef LOG
+            log_neighbor(node, neighbor, poured_volume);
+#endif
             result.push_back(pair<int, int>(neighbor, poured_volume));
 
             pour(b_curr_volume, c_curr_volume, c, &b_next_volume, &c_next_volume, &poured_volume);
             a_next_volume = c - b_next_volume - c_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
+#ifdef LOG
+            log_neighbor(node, neighbor, poured_volume);
+#endif
             result.push_back(pair<int, int>(neighbor, poured_volume));
         }
 
@@ -186,14 +200,22 @@ public:
             pour(c_curr_volume, a_curr_volume, a, &c_next_volume, &a_next_volume, &poured_volume);
             b_next_volume = c - a_next_volume - c_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
+#ifdef LOG
+            log_neighbor(node, neighbor, poured_volume);
+#endif
             result.push_back(pair<int, int>(neighbor, poured_volume));
 
             pour(c_curr_volume, b_curr_volume, b, &c_next_volume, &b_next_volume, &poured_volume);
             a_next_volume = c - b_next_volume - c_next_volume;
             neighbor = a_next_volume * 201 + b_next_volume;
+#ifdef LOG
+            log_neighbor(node, neighbor, poured_volume);
+#endif
             result.push_back(pair<int, int>(neighbor, poured_volume));
         }
-
+#ifdef LOG
+        cout << endl;
+#endif
         return result;
     }
 
@@ -235,6 +257,21 @@ public:
     {
         cout << archieving_distance << " " << best_volume_achieved << endl;
     }
+
+#ifdef LOG
+    void log_neighbor(int from, int to, int cost)
+    {
+        int from_a = from / 201;
+        int from_b = from % 201;
+        int from_c = c - from_a - from_b;
+
+        int to_a = to / 201;
+        int to_b = to % 201;
+        int to_c = c - to_a - to_b;
+
+        cout << "(" << from_a << ", " << from_b << ", " << from_c << "):" << from << " -" << cost << "-> (" << to_a << ", " << to_b << ", " << to_c << "):" << to << endl;
+    }
+#endif
 
 private:
     int a; 
@@ -350,13 +387,13 @@ void UVa10603_dijkstra(int src, UVa10603_implicit_graph* implicit_graph)
     {
         int explored = UVa10603_delete_min(dijkstra_queue, distances, reachable, node_index, queue_size);
 
-        if(implicit_graph->on_node_explored(explored, distances[explored]))
-        {
-            break;
-        };
-
         if (reachable[explored])
         {
+            if(implicit_graph->on_node_explored(explored, distances[explored]))
+            {
+                break;
+            };
+
             vector<pair<int, int> > neighbors = implicit_graph->get_neighbors(explored);
             for (unsigned int ni = 0; ni < neighbors.size(); ni++)
             {

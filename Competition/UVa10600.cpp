@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// TODO
+// http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541
 
 #include "UVa10600.h"
 
@@ -64,7 +64,7 @@ class UVa10600_Edge_Less
 public:
     bool operator()(UVa10600_Edge edge1, UVa10600_Edge edge2)
     {
-        return edge1.weight > edge2.weight;
+        return edge1.weight < edge2.weight;
     }
 };
 
@@ -81,14 +81,7 @@ int UVa10600()
         cin >> number_of_nodes;
         cin >> number_of_edges;
 
-        vector<int> edge_from;
-        vector<int> edge_to;
-        vector<int> edge_cost;
-        vector<int> edge_id;
-        edge_from.resize(number_of_edges);
-        edge_to.resize(number_of_edges);
-        edge_cost.resize(number_of_edges);
-        edge_id.resize(number_of_edges);
+        vector<UVa10600_Edge> edges;
         for (int e = 0; e < number_of_edges; e++)
         {
             int from;
@@ -97,18 +90,11 @@ int UVa10600()
             cin >> from;
             cin >> to;
             cin >> cost;
-            edge_from[e] = from - 1;
-            edge_to[e] = to - 1;
-            edge_cost[e] = cost;
-            edge_id[e] = -1;
+            edges.push_back(UVa10600_Edge(from - 1, to - 1, cost, -1));
         }
         
-        // Step 2: Kruskal's Push edges to priority queue
-        priority_queue<UVa10600_Edge, vector<UVa10600_Edge>, UVa10600_Edge_Less> edges;
-        for (int e = 0; e < number_of_edges; e++)
-        {
-            edges.push(UVa10600_Edge(edge_from[e], edge_to[e], edge_cost[e], e));
-        }
+        // Step 2: Kruskal's: Sort the edges
+        sort(edges.begin(), edges.end(), UVa10600_Edge_Less());
 
         // Step 3: Kruskal's: Setup disjoint set union find
         vector<int> disjoint_sets;
@@ -121,30 +107,25 @@ int UVa10600()
         // Step 3: Kruskal's: For each edge, if not create cycle, add stop when we reach the right number of connected components
         int num_edge_added = 0;
         int minimal_spanning_tree_cost = 0;
+        int current_edge_index = 0;
         while (num_edge_added != number_of_nodes - 1)
         {
-            UVa10600_Edge edge = edges.top();
-            edges.pop();
+            UVa10600_Edge edge = edges[current_edge_index];
             if (UVa10600_union(edge.src, edge.dst, disjoint_sets))
             {
                 minimal_spanning_tree_cost += edge.weight;
-                edge_id[edge.edge_id] = num_edge_added;
+                edges[current_edge_index].edge_id = num_edge_added;
                 num_edge_added++;
             }
+            current_edge_index++;
         }
 
         // Step 4: Second best
         int second_best_minimal_spanning_tree_cost = 0;
-        for (int i = 0; i < number_of_nodes - 2; i++)
+        bool first = true;
+        for (int i = 0; i < number_of_nodes - 1; i++)
         {
-            // Step 4.1: Push all edges again
-            priority_queue<UVa10600_Edge, vector<UVa10600_Edge>, UVa10600_Edge_Less> edges2;
-            for (int e = 0; e < number_of_edges; e++)
-            {
-                edges2.push(UVa10600_Edge(edge_from[e], edge_to[e], edge_cost[e], edge_id[e]));
-            }
-
-            // Step 4.2: Reset the disjoint sets
+            // Step 4.1: Reset the disjoint sets
             for (int p = 0; p < number_of_nodes; p++)
             {
                 disjoint_sets[p] = -1;
@@ -152,29 +133,33 @@ int UVa10600()
 
             int num_edge_added = 0;
             int current_minimal_spanning_tree_cost = 0;
-            while (num_edge_added != number_of_nodes - 1)
+            current_edge_index = 0;
+            while ((num_edge_added != number_of_nodes - 1) && (current_edge_index < number_of_edges))
             {
-                UVa10600_Edge edge = edges2.top();
-                edges2.pop();
+                UVa10600_Edge edge = edges[current_edge_index];
 
                 if (edge.edge_id != i)
                 {
                     if (UVa10600_union(edge.src, edge.dst, disjoint_sets))
                     {
                         current_minimal_spanning_tree_cost += edge.weight;
-                        edge.edge_id = num_edge_added;
                         num_edge_added++;
                     }
                 }
+                current_edge_index++;
             }
 
-            if (i == 0)
+            if (num_edge_added == number_of_nodes - 1)
             {
-                second_best_minimal_spanning_tree_cost = current_minimal_spanning_tree_cost;
-            }
-            else
-            {
-                second_best_minimal_spanning_tree_cost = min(second_best_minimal_spanning_tree_cost, current_minimal_spanning_tree_cost);
+                if (first)
+                {
+                    second_best_minimal_spanning_tree_cost = current_minimal_spanning_tree_cost;
+                    first = false;
+                }
+                else
+                {
+                    second_best_minimal_spanning_tree_cost = min(second_best_minimal_spanning_tree_cost, current_minimal_spanning_tree_cost);
+                }
             }
         }
 

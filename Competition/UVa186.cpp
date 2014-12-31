@@ -72,32 +72,27 @@ int UVa186()
 
     vector<vector<int> > adjacency_matrix;
     vector<vector<int> > distances;
+    vector<vector<bool> > reachable;
     vector<vector<int> > path;
     adjacency_matrix.resize(number_of_nodes);
     distances.resize(number_of_nodes);
-
+    reachable.resize(number_of_nodes);
+    path.resize(number_of_nodes);
     for (int src = 0; src < number_of_nodes; src++)
     {
         adjacency_matrix[src].resize(number_of_nodes);
         distances[src].resize(number_of_nodes);
-        
+        reachable[src].resize(number_of_nodes);
+        path[src].resize(number_of_nodes);
+
         for (int dst = 0; dst < number_of_nodes; dst++)
         {
             adjacency_matrix[src][dst] = 0;
-            distances[src][dst] = (1 << 16) + 1;
+            distances[src][dst] = -1;
+            reachable[src][dst] = false;
+            path[src][dst] = -1;
         }
     }
-
-    path.resize(number_of_nodes);
-    for (int k = 0; k < number_of_nodes; k++)
-    {
-        path[k].resize(number_of_nodes);
-        for (int dst = 0; dst < number_of_nodes; dst++)
-        {
-            path[k][dst] = -1;
-        }
-    }
-
 
     for (unsigned int e = 0; e < edges.size(); e++)
     {
@@ -106,13 +101,19 @@ int UVa186()
         int dst = edge.first.second;
         int cost = edge.second;
 
-        adjacency_matrix[src][dst] = cost;
-        distances[src][dst] = cost;
-        path[src][dst] = dst;
+        // The input has multiple edges!
+        if (adjacency_matrix[src][dst] == 0 || cost < adjacency_matrix[src][dst])
+        {
+            adjacency_matrix[src][dst] = cost;
+            distances[src][dst] = cost;
+            reachable[src][dst] = true;
+            path[src][dst] = dst;
 
-        adjacency_matrix[dst][src] = cost;
-        distances[dst][src] = cost;
-        path[dst][src] = src;
+            adjacency_matrix[dst][src] = cost;
+            distances[dst][src] = cost;
+            reachable[dst][src] = true;
+            path[dst][src] = src;
+        }
     }
 
     for (int k = 0; k < number_of_nodes; k++)
@@ -121,12 +122,16 @@ int UVa186()
         {
             for (int dst = 0; dst < number_of_nodes; dst++)
             {
-                int current_distance = distances[src][dst];
-                int propose_distance = distances[src][k] + distances[k][dst];
-                if (propose_distance < current_distance)
+                if (reachable[src][k] && reachable[k][dst]) // relaxation is possible if the proposal is valid
                 {
-                    distances[src][dst] = propose_distance;
-                    path[src][dst] = path[src][k];
+                    int current_distance = distances[src][dst];
+                    int propose_distance = distances[src][k] + distances[k][dst];
+                    if (!reachable[src][dst] || propose_distance < current_distance)
+                    {
+                        distances[src][dst] = propose_distance;
+                        reachable[src][dst] = true;
+                        path[src][dst] = path[src][k];
+                    }
                 }
             }
         }

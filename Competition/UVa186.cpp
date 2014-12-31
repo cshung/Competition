@@ -9,6 +9,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -36,8 +37,16 @@ int UVa186()
         string dst = parts[1];
         string route = parts[2];
         int cost = stoi(parts[3]);
+
         int src_id = UVa186_assign_city_number(city_numbers, city_namings, src);
         int dst_id = UVa186_assign_city_number(city_numbers, city_namings, dst);
+
+        if (dst_id < src_id)
+        {
+            int temp = src_id;
+            src_id = dst_id;
+            dst_id = temp;
+        }
 
         pair<int, int> edge(src_id, dst_id);
         edge_namings.insert(pair<pair<int, int>, string>(edge, route));
@@ -144,10 +153,8 @@ int UVa186()
         int src = query.first;
         int dst = query.second;
 
-        if (q != 0)
-        {
-            cout << endl;
-        }
+        cout << endl;
+        cout << endl;
 
         cout << "From                 To                   Route      Miles" << endl;
         cout << "-------------------- -------------------- ---------- -----" << endl;
@@ -159,7 +166,11 @@ int UVa186()
             int path_dst_id = path[cur][dst];
             string path_src_name = city_namings[path_src_id];
             string path_dst_name = city_namings[path_dst_id];
-            string route = edge_namings[pair<int, int>(path_src_id, path_dst_id)];
+
+            int edge_src_id = min(path_src_id, path_dst_id);
+            int edge_dst_id = max(path_src_id, path_dst_id);
+
+            string route = edge_namings[pair<int, int>(edge_src_id, edge_dst_id)];
             while (path_src_name.length() < 20)
             {
                 path_src_name += ' ';

@@ -116,6 +116,7 @@
 #include "UVa821.h"                            // 112
 #include "UVa334.h"                            // 113
 #include "UVa869.h"                            // 114
+#include "UVa925.h"                            // 115
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -241,6 +242,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa186();                            // Accepted
     // return UVa423();                            // Accepted
     // return UVa821();                            // Accepted
-    return UVa334();                            // 
-    return UVa869();                            // 
+    // return UVa334();                            // 
+    // return UVa869();                            // 
+    return UVa925();                            // 
 }

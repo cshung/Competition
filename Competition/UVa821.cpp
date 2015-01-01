@@ -11,7 +11,7 @@
 
 using namespace std;
 
-int UVa186_assign_node_number(map<int, int>& node_numbers, map<int, int>& node_namings, int node_name);
+int UVa821_assign_node_number(map<int, int>& node_numbers, map<int, int>& node_namings, int node_name);
 
 int UVa821()
 {
@@ -34,8 +34,8 @@ int UVa821()
                 break;
             }
 
-            int src_number = UVa186_assign_node_number(node_numbers, node_namings, src_name);
-            int dst_number = UVa186_assign_node_number(node_numbers, node_namings, dst_name);
+            int src_number = UVa821_assign_node_number(node_numbers, node_namings, src_name);
+            int dst_number = UVa821_assign_node_number(node_numbers, node_namings, dst_name);
 
             edges.push_back(pair<int, int>(src_number, dst_number));
         }
@@ -124,7 +124,7 @@ int UVa821()
     return 0;
 }
 
-int UVa186_assign_node_number(map<int, int>& node_numbers, map<int, int>& node_namings, int node_name)
+int UVa821_assign_node_number(map<int, int>& node_numbers, map<int, int>& node_namings, int node_name)
 {
     int node_number;
     map<int, int>::iterator probe = node_numbers.find(node_name);

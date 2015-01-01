@@ -369,10 +369,10 @@
     <ClInclude Include="UVa334.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UVa869.h">
+    <ClInclude Include="UVa925.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UVa925.h">
+    <ClInclude Include="UVa534.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -728,10 +728,10 @@
     <ClCompile Include="UVa334.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVa869.cpp">
+    <ClCompile Include="UVa925.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVa925.cpp">
+    <ClCompile Include="UVa534.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

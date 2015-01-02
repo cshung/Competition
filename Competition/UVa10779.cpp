@@ -9,7 +9,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <tuple>
 #include <queue>
 
 using namespace std;
@@ -44,54 +43,9 @@ int UVa10779()
         // For each sticker, there is a source node for bob [1 ... ns]
         // For each sticker, there is a trace  node for bob [1 ... ns]
         // For each sticker, there is a sink   node for bob [1 ... ns]
-        // For each possible trade, there is a node 
-        // For each trade node, there is a link from bob trade node to the trade node, 
-        // and there is a link from the trade node back to the bob trade node 
-
-        // Step 2.1: Formulate the trades
-        vector<tuple<int, int, int>> trades;
-        for (int p = 1; p < number_of_people; p++)
-        {
-            vector<int> counts;
-            counts.resize(number_of_stickers_types);
-            for (int st = 0; st < number_of_stickers_types; st++)
-            {
-                counts[st] = 0;
-            }
-            for (unsigned int i = 0; i < input[p].size(); i++)
-            {
-                counts[input[p][i]]++;
-            }
-
-            vector<int> gives;
-            vector<int> takes;
-
-            for (int st = 0; st < number_of_stickers_types; st++)
-            {
-                if (counts[st] > 1)
-                {
-                    gives.push_back(st);
-                }
-                else if (counts[st] == 0)
-                {
-                    takes.push_back(st);
-                }
-            }
-
-            for (vector<int>::iterator gi = gives.begin(); gi != gives.end(); gi++)
-            {
-                for (vector<int>::iterator ti = takes.begin(); ti != takes.end(); ti++)
-                {
-                    int give = *gi;
-                    int give_volume = counts[give] - 1;
-                    int take = *ti;
-                    trades.push_back(std::make_tuple(give, take, give_volume));
-#ifdef LOG
-                    cout << "People " << p << " is willing to trade " << (1 + give) << " for " << (1 + take) << endl;
-#endif
-                }
-            }
-        }
+        // For each other user, there is a node
+        //   For each missing item from other user, there is a link from the bob trade node to the other user with capacity 1
+        //   For each duplicated item from other user, this is a link from the other user node to bob trade node with quantity - 1
         
         // Step 2.2: Allocate the graph
         int number_of_nodes = /* master source */ 1 +
@@ -99,7 +53,7 @@ int UVa10779()
                               /* bob source    */ number_of_stickers_types +
                               /* bob trade     */ number_of_stickers_types +
                               /* bob sink      */ number_of_stickers_types +
-                              /* trades        */ trades.size();
+                              /* other users   */ (number_of_people - 1);
 
         vector<vector<int>> capacities;
         vector<vector<int>> adjacency_list;
@@ -147,35 +101,57 @@ int UVa10779()
             adjacency_list[bob_sink].push_back(master_sink);
         }
 
-        // Step 2.4: Trade links
-        int trade_node = master_sink + 1;
-
-#ifdef LOG
-        cout << "Trade links" << endl;
-#endif
-        for (vector<tuple<int, int, int>>::iterator ti = trades.begin(); ti != trades.end(); ti++)
+        // Step 2.1: Formulate the trades
+        for (int p = 1; p < number_of_people; p++)
         {
-            int give = get<0>(*ti);
-            int take = get<1>(*ti);
-            int give_volume = get<2>(*ti);
-            
-            int give_trade_node = 1 + number_of_stickers_types + give;
-            int take_trade_node = 1 + number_of_stickers_types + take;
-#ifdef LOG
-            cout << take_trade_node << "--" << give_volume << "-->" << trade_node << endl;
-            cout << trade_node << "--" << 1 << "-->" << give_trade_node << endl;
-#endif
-            capacities[take_trade_node][trade_node] = give_volume;
-            capacities[trade_node][give_trade_node] = 1;
+            int people_node = master_sink + p;
+            vector<int> counts;
+            counts.resize(number_of_stickers_types);
+            for (int st = 0; st < number_of_stickers_types; st++)
+            {
+                counts[st] = 0;
+            }
+            for (unsigned int i = 0; i < input[p].size(); i++)
+            {
+                counts[input[p][i]]++;
+            }
 
-            adjacency_list[take_trade_node].push_back(trade_node);
-            adjacency_list[trade_node].push_back(give_trade_node);
-            trade_node++;
+            vector<int> gives;
+            vector<int> takes;
+
+            for (int st = 0; st < number_of_stickers_types; st++)
+            {
+                if (counts[st] > 1)
+                {
+                    gives.push_back(st);
+                }
+                else if (counts[st] == 0)
+                {
+                    takes.push_back(st);
+                }
+            }
+
+            for (vector<int>::iterator ti = takes.begin(); ti != takes.end(); ti++)
+            {
+                int take = *ti;
+                int bob_give_node = 1 + take + number_of_stickers_types;
+                capacities[bob_give_node][people_node] = 1;
+                adjacency_list[bob_give_node].push_back(people_node);
+            }
+
+            for (vector<int>::iterator gi = gives.begin(); gi != gives.end(); gi++)
+            {
+                int give = *gi;
+
+                int give_volume = counts[give] - 1;
+                // int give_volume = counts[give]; // brianfry?
+
+                int bob_take_node = 1 + give + number_of_stickers_types;
+                capacities[people_node][bob_take_node] = give_volume;
+                adjacency_list[people_node].push_back(bob_take_node);
+
+            }
         }
-
-#ifdef LOG
-        cout << "End trade links" << endl;
-#endif
 
         int total_flow = 0;
 

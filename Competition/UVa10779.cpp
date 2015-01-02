@@ -13,6 +13,8 @@
 
 using namespace std;
 
+int UVa10779_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>& adjacency_list, int src, int dst);
+
 int UVa10779()
 {
     int number_of_test_cases;
@@ -182,107 +184,115 @@ int UVa10779()
         cout << "}" << endl;
 #endif
 
-        int total_flow = 0;
+        
 
-        // Step 2: Edmonds Karp's
-        vector<int> parents; // Allow back-tracking the path found from bfs
-        parents.resize(number_of_nodes); // avoid reallocation
-        while (true)
+        cout << "Case #" << test_case << ": " << UVa10779_Edmonds_Karps(capacities, adjacency_list, master_source, master_sink) << endl;
+    }
+    
+    return 0;
+}
+
+int UVa10779_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>& adjacency_list, int src, int dst)
+{
+    int total_flow = 0;
+
+    // Step 2: Edmonds Karp's
+    vector<int> parents; // Allow back-tracking the path found from bfs
+    int number_of_nodes = capacities.size();
+    parents.resize(number_of_nodes); // avoid reallocation
+    while (true)
+    {
+        // Step 2.1: Use BFS to find an augmenting flow
+        queue<int> bfs_queue;
+        for (int n = 0; n < number_of_nodes; n++)
         {
-            // Step 2.1: Use BFS to find an augmenting flow
-            queue<int> bfs_queue;
-            for (int n = 0; n < number_of_nodes; n++)
-            {
-                parents[n] = -1; // indicating the node is not enqueued
-            }
+            parents[n] = -1; // indicating the node is not enqueued
+        }
 
-            parents[master_source] = -2; // indicating the node is enqueued but no actual parent because this is the root
-            bfs_queue.push(master_source);
-            while (bfs_queue.size() > 0)
+        parents[src] = -2; // indicating the node is enqueued but no actual parent because this is the root
+        bfs_queue.push(src);
+        while (bfs_queue.size() > 0)
+        {
+            int current = bfs_queue.front();
+            bfs_queue.pop();
+            for (vector<int>::iterator ni = adjacency_list[current].begin(); ni != adjacency_list[current].end(); ni++)
             {
-                int current = bfs_queue.front();
-                bfs_queue.pop();
-                for (vector<int>::iterator ni = adjacency_list[current].begin(); ni != adjacency_list[current].end(); ni++)
+                int neighbor = *ni;
+                if (parents[neighbor] == -1 && capacities[current][neighbor] > 0)
                 {
-                    int neighbor = *ni;
-                    if (parents[neighbor] == -1 && capacities[current][neighbor] > 0)
-                    {
-                        parents[neighbor] = current;
-                        bfs_queue.push(neighbor);
+                    parents[neighbor] = current;
+                    bfs_queue.push(neighbor);
 
-                        if (neighbor == master_sink)
-                        {
-                            break;
-                        }
+                    if (neighbor == dst)
+                    {
+                        break;
                     }
                 }
-                if (parents[master_sink] != -1)
+            }
+            if (parents[dst] != -1)
+            {
+                break;
+            }
+        }
+
+        if (parents[dst] == -1)
+        {
+            break;
+        }
+        else
+        {
+            // We have found an augmenting path, go through the path and find the max flow through this path
+            int cur = dst;
+            bool first = true;
+            int max_flow_through_path = 0;
+            while (true)
+            {
+                int src = parents[cur];
+                if (src != -2)
+                {
+                    int dst = cur;
+                    int available = capacities[src][dst];
+#ifdef LOG
+                    cout << src << "-" << available << "->" << dst << endl;
+#endif
+                    cur = parents[cur];
+                    if (first)
+                    {
+                        max_flow_through_path = available;
+                        first = false;
+                    }
+                    else
+                    {
+                        max_flow_through_path = min(max_flow_through_path, available);
+                    }
+                }
+                else
                 {
                     break;
                 }
             }
-
-            if (parents[master_sink] == -1)
-            {
-                break;
-            }
-            else
-            {
-                // We have found an augmenting path, go through the path and find the max flow through this path
-                int cur = master_sink;
-                bool first = true;
-                int max_flow_through_path = 0;
-                while (true)
-                {
-                    int src = parents[cur];
-                    if (src != -2)
-                    {
-                        int dst = cur;
-                        int available = capacities[src][dst];
 #ifdef LOG
-                        cout << src << "-" << available << "->" << dst << endl;
+            cout << "flowing " << max_flow_through_path << endl << endl;
 #endif
-                        cur = parents[cur];
-                        if (first)
-                        {
-                            max_flow_through_path = available;
-                            first = false;
-                        }
-                        else
-                        {
-                            max_flow_through_path = min(max_flow_through_path, available);
-                        }
-                    }
-                    else
-                    {
-                        break;
-                    }
+            total_flow += max_flow_through_path;
+            // Flow the max flow through the augmenting path
+            cur = dst;
+            while (true)
+            {
+                int src = parents[cur];
+                if (src != -2)
+                {
+                    capacities[src][cur] -= max_flow_through_path;
+                    capacities[cur][src] += max_flow_through_path;
+                    cur = parents[cur];
                 }
-#ifdef LOG
-                cout << "flowing " << max_flow_through_path << endl << endl;
-#endif
-                total_flow += max_flow_through_path;
-                // Flow the max flow through the augmenting path
-                cur = master_sink;
-                while (true)
+                else
                 {
-                    int src = parents[cur];
-                    if (src != -2)
-                    {
-                        capacities[src][cur] -= max_flow_through_path;
-                        capacities[cur][src] += max_flow_through_path;
-                        cur = parents[cur];
-                    }
-                    else
-                    {
-                        break;
-                    }
+                    break;
                 }
             }
         }
-
-        cout << "Case #" << test_case << ": " << total_flow << endl;
     }
-    
-    return 0;
+
+    return total_flow;
 }

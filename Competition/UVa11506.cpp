@@ -2,6 +2,8 @@
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2501
 
+// #define LOG
+
 #include "UVa11506.h"
 
 #include <iostream>
@@ -35,7 +37,7 @@ int UVa11506()
         // so let each other machines be (1, 2), (3, 4), ...
         // and therefore the central server is 2k + 3, where k is the number of other computers
 
-        int number_of_nodes = 1 + (number_of_computers - 2) * 2;
+        int number_of_nodes = 1 + (number_of_computers - 2) * 2 + 1;
 
         vector<vector<int>> capacities;
         vector<vector<int>> adjacency_list;
@@ -89,7 +91,22 @@ int UVa11506()
             adjacency_list[dst_computer_target_node].push_back(src_computer_source_node);
             adjacency_list[src_computer_source_node].push_back(dst_computer_target_node);
         }
-                int total_flow = 0;
+
+#ifdef LOG
+        cout << "digraph {" << endl;
+        for (int src = 0; src < number_of_nodes; src++)
+        {
+            for (vector<int>::iterator di = adjacency_list[src].begin(); di != adjacency_list[src].end(); di++)
+            {
+                int dst = *di;
+                cout << src << "->" << dst << " [label=\"" << capacities[src][dst] << "\"];" << endl;
+            }
+        }
+        cout << "}" << endl;
+#endif
+        int src = 0;
+        int dst = number_of_nodes - 1;
+        int total_flow = 0;
         // Step 2: Edmonds Karp's
         vector<int> parents; // Allow back-tracking the path found from bfs
         parents.resize(number_of_nodes); // avoid reallocation
@@ -102,8 +119,8 @@ int UVa11506()
                 parents[n] = -1; // indicating the node is not enqueued
             }
 
-            parents[0] = -2; // indicating the node is enqueued but no actual parent because this is the root
-            bfs_queue.push(0);
+            parents[src] = -2; // indicating the node is enqueued but no actual parent because this is the root
+            bfs_queue.push(src);
             while (bfs_queue.size() > 0)
             {
                 int current = bfs_queue.front();
@@ -116,57 +133,26 @@ int UVa11506()
                         parents[neighbor] = current;
                         bfs_queue.push(neighbor);
 
-                        if (neighbor == 1)
+                        if (neighbor == dst)
                         {
                             break;
                         }
                     }
                 }
-                if (parents[1] != -1)
+                if (parents[dst] != -1)
                 {
                     break;
                 }
             }
 
-            if (parents[1] == -1)
+            if (parents[dst] == -1)
             {
-                set<int> source_side;
-                for (int i = 0; i < number_of_nodes; i++)
-                {
-                    if (parents[i] == -2 || parents[i] >= 0)
-                    {
-                        source_side.insert(i);
-                        // These are reachable nodes, belongs to left hand side of the edge.
-                    }
-                }
-#ifdef LOG
-                cout << "Source side of the cut" << endl;
-                for (set<int>::iterator si = source_side.begin(); si != source_side.end(); si++)
-                {
-                    cout << *si << " ";
-                }
-                cout << endl;
-#endif
-                for (set<int>::iterator si = source_side.begin(); si != source_side.end(); si++)
-                {
-                    int s = *si;
-                    for (vector<int>::iterator ni = adjacency_list[s].begin(); ni != adjacency_list[s].end(); ni++)
-                    {
-                        int n = *ni;
-                        if (source_side.find(n) == source_side.end())
-                        {
-                            cout << (s + 1) << " " << (n + 1) << endl;
-                        }
-                    }
-                }
-                cout << endl;
-
                 break;
             }
             else
             {
                 // We have found an augmenting path, go through the path and find the max flow through this path
-                int cur = 1;
+                int cur = dst;
                 bool first = true;
                 int max_flow_through_path = 0;
                 while (true)
@@ -200,7 +186,7 @@ int UVa11506()
 #endif
                 total_flow += max_flow_through_path;
                 // Flow the max flow through the augmenting path
-                cur = 1;
+                cur = dst;
                 while (true)
                 {
                     int src = parents[cur];
@@ -217,7 +203,7 @@ int UVa11506()
                 }
             }
         }
-        cout << "The total flow is " << total_flow << endl;
+        cout << total_flow << endl;
     }
     return 0;
 }

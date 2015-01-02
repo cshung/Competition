@@ -252,5 +252,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa820();                            // Accepted
     // return UVa10480();                          // Accepted
     // return UVa10779();                          // Accepted
-    return UVa11506();                          // 
+    return UVa11506();                          // Accepted
 }

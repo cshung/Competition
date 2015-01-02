@@ -39,38 +39,22 @@ int UVa10511()
         vector<pair<int, int>> party_members;
         vector<pair<int, int>> person_clubs;
 
-        while (true)
+        while(getline(cin, line) && line != "" && line != " ")
         {
-            if (cin.eof())
-            {
-                break;
-            }
-            getline(cin, line);
-            if (line != "")
-            {
-                istringstream iss(line);
-                vector<string> tokens;
-                while (!iss.eof())
-                {
-                    string token;
-                    iss >> token;
-                    tokens.push_back(token);
-                }
+            string person_name;
+            string party_name;
+            string club_name;
+            stringstream sin(line);
+            sin >> person_name >> party_name;
 
-                int person_id = UVa10511_assign_person_number(person_numbers, person_namings, tokens[0]);
-                int party_id = UVa10511_assign_party_number(party_numbers, party_namings, tokens[1]);
-                party_members.push_back(pair<int, int>(party_id, person_id));
-                for (unsigned int c = 2; c < tokens.size(); c++)
-                {
-                    int club_id = UVa10511_assign_club_number(club_numbers, club_namings, tokens[c]);
-                    person_clubs.push_back(pair<int, int>(person_id, club_id));
-                }
-            }
-            else
+            int person_id = UVa10511_assign_person_number(person_numbers, person_namings, person_name);
+            int party_id = UVa10511_assign_party_number(party_numbers, party_namings, party_name);
+            party_members.push_back(pair<int, int>(party_id, person_id));
+            while(sin >> club_name)
             {
-                
-                break;
-            }
+                int club_id = UVa10511_assign_club_number(club_numbers, club_namings, club_name);
+                person_clubs.push_back(pair<int, int>(person_id, club_id));
+            }   
         }
         
         int number_of_parties = party_numbers.size();
@@ -145,15 +129,29 @@ int UVa10511()
             adjacency_list[club_node].push_back(number_of_nodes - 1);
             adjacency_list[number_of_nodes - 1].push_back(club_node);
         }
+        
+#ifdef LOG
+        cout << "digraph {" << endl;
+        for (int src = 0; src < number_of_nodes; src++)
+        {
+            for (vector<int>::iterator di = adjacency_list[src].begin(); di != adjacency_list[src].end(); di++)
+            {
+                int dst = *di;
+                cout << src << "->" << dst << " [label=\"" << capacities[src][dst] << "\"];" << endl;
+            }
+        }
+        cout << "}" << endl;
+#endif
 
         int total_flow = UVa10511_Edmonds_Karps(capacities, adjacency_list, 0, number_of_nodes - 1);
 
+        if (test_case > 0)
+        {
+            cout << endl;
+        }
+
         if (total_flow == number_of_clubs)
         {
-            if (test_case == 1)
-            {
-                cout << endl;
-            }
 
             for (vector<pair<int, int>>::iterator pci = person_clubs.begin(); pci != person_clubs.end(); pci++)
             {
@@ -171,7 +169,7 @@ int UVa10511()
         }
         else
         {
-            cout << "Impossible" << endl;
+            cout << "Impossible." << endl;
         }
     }
 

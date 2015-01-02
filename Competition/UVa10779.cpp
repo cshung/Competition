@@ -99,6 +99,14 @@ int UVa10779()
             adjacency_list[bob_source].push_back(bob_trade);
             adjacency_list[bob_trade].push_back(bob_sink);
             adjacency_list[bob_sink].push_back(master_sink);
+
+            // reverse connection could happen in residual graph
+            // instead of maintaining the list at that time, might as well just put 
+            // it here now for simplicity
+            adjacency_list[bob_source].push_back(master_source);
+            adjacency_list[bob_trade].push_back(bob_source);
+            adjacency_list[bob_sink].push_back(bob_trade);
+            adjacency_list[master_sink].push_back(bob_sink);
         }
 
         // Step 2.1: Formulate the trades
@@ -137,6 +145,11 @@ int UVa10779()
                 int bob_give_node = 1 + take + number_of_stickers_types;
                 capacities[bob_give_node][people_node] = 1;
                 adjacency_list[bob_give_node].push_back(people_node);
+
+                // reverse connection could happen in residual graph
+                // instead of maintaining the list at that time, might as well just put 
+                // it here now for simplicity
+                adjacency_list[people_node].push_back(bob_give_node);
             }
 
             for (vector<int>::iterator gi = gives.begin(); gi != gives.end(); gi++)
@@ -144,14 +157,30 @@ int UVa10779()
                 int give = *gi;
 
                 int give_volume = counts[give] - 1;
-                // int give_volume = counts[give]; // brianfry?
 
                 int bob_take_node = 1 + give + number_of_stickers_types;
                 capacities[people_node][bob_take_node] = give_volume;
                 adjacency_list[people_node].push_back(bob_take_node);
 
+                // reverse connection could happen in residual graph
+                // instead of maintaining the list at that time, might as well just put 
+                // it here now for simplicity
+                adjacency_list[bob_take_node].push_back(people_node);
             }
         }
+
+#ifdef LOG
+        cout << "digraph {" << endl;
+        for (int src = 0; src < number_of_nodes; src++)
+        {
+            for (vector<int>::iterator di = adjacency_list[src].begin(); di != adjacency_list[src].end(); di++)
+            {
+                int dst = *di;
+                cout << src << "->" << dst << " [label=\"" << capacities[src][dst] << "\"];" << endl;
+            }
+        }
+        cout << "}" << endl;
+#endif
 
         int total_flow = 0;
 
@@ -211,7 +240,7 @@ int UVa10779()
                         int dst = cur;
                         int available = capacities[src][dst];
 #ifdef LOG
-                        cout << src << "--" << available << "->" << dst << endl;
+                        cout << src << "-" << available << "->" << dst << endl;
 #endif
                         cur = parents[cur];
                         if (first)

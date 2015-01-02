@@ -2,6 +2,8 @@
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1452
 
+// #define LOG
+
 #include "UVa10511.h"
 
 #include <iostream>
@@ -77,11 +79,10 @@ int UVa10511()
 
         int number_of_nodes =
             /* master source */ 1 +
-            /* party source  */ number_of_parties +
-            /* party target */ number_of_parties +
-            /* person       */ number_of_persons +
-            /* clubs        */ number_of_clubs +
-            /* master sink  */ 1;
+            /* parties       */ number_of_parties +
+            /* person        */ number_of_persons +
+            /* clubs         */ number_of_clubs +
+            /* master sink   */ 1;
 
         vector<vector<int>> capacities;
         vector<vector<int>> adjacency_list;
@@ -102,32 +103,28 @@ int UVa10511()
 
         for (int p = 0; p < number_of_parties; p++)
         {
-            int party_source = 2 * p + 1;
-            int party_target = party_source + 1;
-            capacities[0][party_source] = max_party_participants;
-            capacities[party_source][party_target] = max_party_participants;
-            adjacency_list[0].push_back(party_source);
-            adjacency_list[party_source].push_back(0);
-            adjacency_list[party_source].push_back(party_target);
-            adjacency_list[party_target].push_back(party_source);
+            int party_node = p + 1;
+            capacities[0][party_node] = max_party_participants;
+            adjacency_list[0].push_back(party_node);
+            adjacency_list[party_node].push_back(0);
         }
 
-        int person_node_start = 1 + 2 * number_of_parties;
+        int person_node_start = 1 + number_of_parties;
 
         for (vector<pair<int, int>>::iterator pmi = party_members.begin(); pmi != party_members.end(); pmi++)
         {
             int party_id = pmi->first;
             int person_id = pmi->second;
 
-            int party_target = 2 * party_id + 2;
+            int party_node = party_id + 1;
             int person_node = person_node_start + person_id;
 
-            capacities[party_target][person_node] = 1;
-            adjacency_list[party_target].push_back(person_node);
-            adjacency_list[person_node].push_back(party_target);
+            capacities[party_node][person_node] = 1;
+            adjacency_list[party_node].push_back(person_node);
+            adjacency_list[person_node].push_back(party_node);
         }
 
-        int club_node_start = 1 + 2 * number_of_parties + number_of_persons;
+        int club_node_start = 1 + number_of_parties + number_of_persons;
         for (vector<pair<int, int>>::iterator pci = person_clubs.begin(); pci != person_clubs.end(); pci++)
         {
             int person_id = pci->first;

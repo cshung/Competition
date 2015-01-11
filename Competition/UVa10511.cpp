@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <set>
 #include <queue>
 
 using namespace std;
@@ -18,7 +19,7 @@ using namespace std;
 int UVa10511_assign_person_number(map<string, int>& person_numbers, map<int, string>& person_namings, string person_name);
 int UVa10511_assign_party_number(map<string, int>& party_numbers, map<int, string>& party_namings, string party_name);
 int UVa10511_assign_club_number(map<string, int>& club_numbers, map<int, string>& club_namings, string club_name);
-int UVa10511_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>& adjacency_list, int src, int dst);
+int UVa10511_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>& adjacency_list, int src, int dst, map<int, string>& node_namings);
 
 int UVa10511()
 {
@@ -37,7 +38,7 @@ int UVa10511()
         map<int, string> club_namings;
 
         vector<pair<int, int>> party_members;
-        vector<pair<int, int>> person_clubs;
+        map<int, set<int>> person_clubs;
 
         while(getline(cin, line) && line != "" && line != " ")
         {
@@ -53,7 +54,13 @@ int UVa10511()
             while(sin >> club_name)
             {
                 int club_id = UVa10511_assign_club_number(club_numbers, club_namings, club_name);
-                person_clubs.push_back(pair<int, int>(person_id, club_id));
+                /*person_clubs.insert(pair<int, int>(person_id, club_id));*/
+                map<int, set<int>>::iterator probe = person_clubs.find(person_id);
+                if (probe == person_clubs.end())
+                {
+                    person_clubs.insert(pair<int, set<int>>(person_id, set<int>()));
+                }
+                person_clubs[person_id].insert(club_id);
             }   
         }
         
@@ -67,6 +74,32 @@ int UVa10511()
             /* person        */ number_of_persons +
             /* clubs         */ number_of_clubs +
             /* master sink   */ 1;
+
+        map<int, string> node_namings;
+        int current_node = 0;
+        node_namings.insert(pair<int, string>(current_node++, "master source"));
+        for (int i = 0; i < number_of_parties; i++)
+        {
+#ifdef LOG
+            cout << party_namings[i] << endl;
+#endif
+            node_namings.insert(pair<int, string>(current_node++, party_namings[i]));
+        }
+        for (int i = 0; i < number_of_persons; i++)
+        {
+#ifdef LOG
+            cout << person_namings[i] << endl;
+#endif
+            node_namings.insert(pair<int, string>(current_node++, person_namings[i]));
+        }
+        for (int i = 0; i < number_of_clubs; i++)
+        {
+#ifdef LOG
+            cout << club_namings[i] << endl;
+#endif
+            node_namings.insert(pair<int, string>(current_node++, club_namings[i]));
+        }
+        node_namings.insert(pair<int, string>(current_node++, "master sink"));
 
         vector<vector<int>> capacities;
         vector<vector<int>> adjacency_list;
@@ -109,17 +142,20 @@ int UVa10511()
         }
 
         int club_node_start = 1 + number_of_parties + number_of_persons;
-        for (vector<pair<int, int>>::iterator pci = person_clubs.begin(); pci != person_clubs.end(); pci++)
+        for (map<int, set<int>>::iterator pci = person_clubs.begin(); pci != person_clubs.end(); pci++)
         {
             int person_id = pci->first;
-            int club_id = pci->second;
+            for (set<int>::iterator ci = pci->second.begin(); ci != pci->second.end(); ci++)
+            {
+                int club_id = *ci;
 
-            int person_node = person_node_start + person_id;
-            int club_node = club_node_start + club_id;
+                int person_node = person_node_start + person_id;
+                int club_node = club_node_start + club_id;
 
-            capacities[person_node][club_node] = 1;
-            adjacency_list[person_node].push_back(club_node);
-            adjacency_list[club_node].push_back(person_node);
+                capacities[person_node][club_node] = 1;
+                adjacency_list[person_node].push_back(club_node);
+                adjacency_list[club_node].push_back(person_node);
+            }
         }
 
         for (int c = 0; c < number_of_clubs; c++)
@@ -137,13 +173,13 @@ int UVa10511()
             for (vector<int>::iterator di = adjacency_list[src].begin(); di != adjacency_list[src].end(); di++)
             {
                 int dst = *di;
-                cout << src << "->" << dst << " [label=\"" << capacities[src][dst] << "\"];" << endl;
+                cout << node_namings[src] << "->" << node_namings[dst] << " [label=\"" << capacities[src][dst] << "\"];" << endl;
             }
         }
         cout << "}" << endl;
 #endif
 
-        int total_flow = UVa10511_Edmonds_Karps(capacities, adjacency_list, 0, number_of_nodes - 1);
+        int total_flow = UVa10511_Edmonds_Karps(capacities, adjacency_list, 0, number_of_nodes - 1, node_namings);
 
         if (test_case > 0)
         {
@@ -152,18 +188,20 @@ int UVa10511()
 
         if (total_flow == number_of_clubs)
         {
-
-            for (vector<pair<int, int>>::iterator pci = person_clubs.begin(); pci != person_clubs.end(); pci++)
+            for (map<int, set<int>>::iterator pci = person_clubs.begin(); pci != person_clubs.end(); pci++)
             {
                 int person_id = pci->first;
-                int club_id = pci->second;
-
-                int person_node = person_node_start + person_id;
-                int club_node = club_node_start + club_id;
-
-                if (capacities[person_node][club_node] == 0)
+                for (set<int>::iterator ci = pci->second.begin(); ci != pci->second.end(); ci++)
                 {
-                    cout << person_namings[person_id] << " " << club_namings[club_id] << endl;
+                    int club_id = *ci;
+
+                    int person_node = person_node_start + person_id;
+                    int club_node = club_node_start + club_id;
+
+                    if (capacities[person_node][club_node] == 0)
+                    {
+                        cout << person_namings[person_id] << " " << club_namings[club_id] << endl;
+                    }
                 }
             }
         }
@@ -230,7 +268,7 @@ int UVa10511_assign_club_number(map<string, int>& club_numbers, map<int, string>
     return club_number;
 }
 
-int UVa10511_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>& adjacency_list, int src, int dst)
+int UVa10511_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>& adjacency_list, int src, int dst, map<int, string>& node_namings)
 {
     int total_flow = 0;
     // Step 2: Edmonds Karp's
@@ -290,7 +328,7 @@ int UVa10511_Edmonds_Karps(vector<vector<int>>& capacities, vector<vector<int>>&
                     int dst = cur;
                     int available = capacities[src][dst];
 #ifdef LOG
-                    cout << src << "--" << available << "->" << dst << endl;
+                    cout << node_namings[src] << "--" << available << "->" << node_namings[dst] << endl;
 #endif
                     cur = parents[cur];
                     if (first)

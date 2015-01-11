@@ -256,5 +256,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa10779();                          // Accepted
     // return UVa11506();                          // Accepted
     // return UVa563();                            // Accepted
-    return UVa10511();                          // Wrong answer - asked for help
+    return UVa10511();                          // Accepted
 }

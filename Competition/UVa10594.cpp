@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// TODO
+// http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1535
 
 #include "UVa10594.h"
 

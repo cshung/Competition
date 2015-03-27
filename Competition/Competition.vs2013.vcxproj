@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
@@ -216,6 +217,7 @@
     <ClInclude Include="UVa990.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />

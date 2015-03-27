@@ -15,16 +15,25 @@ namespace _LEET_TWO_SUM
     public:
         vector<int> twoSum(vector<int> &numbers, int target) {
             vector<int> result;
+            map<int, unsigned int> previous;
             for (unsigned int i = 0; i < numbers.size(); i++)
             {
-                for (unsigned int j = i + 1; j < numbers.size(); j++)
+                if (i == 0)
                 {
-                    if (numbers[i] + numbers[j] == target)
+                    previous.insert(pair<int, unsigned int>(numbers[i], i));
+                }
+                else
+                {
+                    map<int, unsigned int>::iterator probe = previous.find(target - numbers[i]);
+                    if (probe != previous.end())
                     {
-                        
+                        result.push_back(probe->second + 1);
                         result.push_back(i + 1);
-                        result.push_back(j + 1);
-                        return result;
+                        break;
+                    }
+                    else
+                    {
+                        previous.insert(pair<int, unsigned int>(numbers[i], i));
                     }
                 }
             }

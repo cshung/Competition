@@ -405,6 +405,18 @@
     <ClInclude Include="LEET_SAME_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_NUMBER_OF_1_BITS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_PASCAL_TRIANGLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_BALANCED_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -792,6 +804,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SAME_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

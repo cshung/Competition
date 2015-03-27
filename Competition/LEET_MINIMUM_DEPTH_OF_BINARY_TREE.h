@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_MINIMUM_DEPTH_OF_BINARY_TREE();

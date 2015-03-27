@@ -420,6 +420,9 @@
     <ClInclude Include="LEET_SAME_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TWO_SUM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -822,6 +825,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SAME_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TWO_SUM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

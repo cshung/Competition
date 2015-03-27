@@ -88,6 +88,7 @@
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
+    <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
     <ClInclude Include="SPOJ_LITE_1.h" />
@@ -224,6 +225,7 @@
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
+    <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />
     <ClCompile Include="SPOJ_HORRIBLE.cpp" />

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://oj.leetcode.com/problems/longest-consecutive-sequence/
+// https://leetcode.com/problems/longest-consecutive-sequence/
 
 #include "LEET_LONGEST_CONSECUTIVE_SEQUENCE.h"
 

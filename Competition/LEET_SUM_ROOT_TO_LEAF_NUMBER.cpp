@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://oj.leetcode.com/problems/sum-root-to-leaf-numbers/
+// https://leetcode.com/problems/sum-root-to-leaf-numbers/
 
 #include "LEET_SUM_ROOT_TO_LEAF_NUMBER.h"
 #include <map>

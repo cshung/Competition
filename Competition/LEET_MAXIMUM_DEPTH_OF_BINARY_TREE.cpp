@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://oj.leetcode.com/problems/longest-consecutive-sequence/
+// https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 #include "LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h"
 

@@ -126,6 +126,7 @@
 #include "UVa11631.h"                          // 122
 #include "UVa10594.h"                          // 123
 #include "LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" // 124
+#include "LEET_SAME_TREE.h"                    // 125
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -261,6 +262,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa563();                            // Accepted
     // return UVa10511();                          // Accepted
     // return UVa11631();                          // Accepted
-    return UVa10594();                          // 
+    // return UVa10594();                          // 
     // return LEET_MAXIMUM_DEPTH_OF_BINARY_TREE(); // Accepted
+    return LEET_SAME_TREE();
 }

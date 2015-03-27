@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="UVa10004.h" />
     <ClInclude Include="UVa10034.h" />
     <ClInclude Include="UVa10147.h" />
@@ -211,6 +212,7 @@
   <ItemGroup>
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />

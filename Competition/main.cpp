@@ -136,6 +136,7 @@
 #include "LEET_ADD_TWO_NUMBERS.h"              // 132
 #include "LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" // 133
 #include "LEET_SINGLE_NUMBER.h"                // 134
+#include "LEET_PLUS_ONE.h"                     // 135
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -282,5 +283,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_TWO_SUM();                      // Accepted
     // return LEET_ADD_TWO_NUMBERS();
     // return LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS(); // Accepted
-    return LEET_SINGLE_NUMBER();
+    // return LEET_SINGLE_NUMBER(); // Accepted
+    return LEET_PLUS_ONE(); 
 }

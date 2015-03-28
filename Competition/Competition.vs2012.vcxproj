@@ -86,6 +86,7 @@
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
+    <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="UVa10004.h" />
@@ -225,6 +226,7 @@
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
+    <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />

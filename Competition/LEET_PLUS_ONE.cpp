@@ -11,9 +11,11 @@ using namespace std;
 
 namespace _LEET_PLUS_ONE
 {
-    class Solution {
+    class Solution
+    {
     public:
-        vector<int> plusOne(vector<int> &digits) {
+        vector<int> plusOne(vector<int> &digits)
+        {
             vector<int> result;
             int i = digits.size() - 1;
             int carry = 1;

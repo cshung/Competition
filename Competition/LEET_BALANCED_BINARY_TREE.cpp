@@ -14,15 +14,18 @@ using namespace std;
 
 namespace _LEET_BALANCED_BINARY_TREE
 {
-    struct TreeNode {
+    struct TreeNode
+    {
         int val;
         TreeNode *left;
         TreeNode *right;
         TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     };
-    class Solution {
+    class Solution
+    {
     public:
-        bool isBalanced(TreeNode *root) {
+        bool isBalanced(TreeNode *root)
+        {
             bool result = false;
             int depth = 0; // unused
             isBalanced(&result, &depth, root);

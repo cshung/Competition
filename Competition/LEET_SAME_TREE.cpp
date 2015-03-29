@@ -14,15 +14,18 @@ using namespace std;
 
 namespace _LEET_SAME_TREE
 {
-    struct TreeNode {
+    struct TreeNode
+    {
         int val;
         TreeNode *left;
         TreeNode *right;
         TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     };
-    class Solution {
+    class Solution 
+    {
     public:
-        bool isSameTree(TreeNode *p, TreeNode *q) {
+        bool isSameTree(TreeNode *p, TreeNode *q)
+        {
             if (p == NULL)
             {
                 if (q == NULL)
@@ -64,6 +67,5 @@ int LEET_SAME_TREE()
     Solution solution;
     cout << solution.isSameTree(&a, &a) << endl;
     cout << solution.isSameTree(&a, &b) << endl;
-
     return 0;
 }

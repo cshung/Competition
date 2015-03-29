@@ -11,15 +11,18 @@ using namespace std;
 
 namespace _LEET_ADD_TWO_NUMBERS
 {
-    struct ListNode {
+    struct ListNode
+    {
         int val;
         ListNode *next;
         ListNode(int x) : val(x), next(NULL) {}
     };
 
-    class Solution {
+    class Solution
+    {
     public:
-        ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+        ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
+        {
             ListNode* last_node = NULL;
             ListNode* result = NULL;
             int carry = 0;

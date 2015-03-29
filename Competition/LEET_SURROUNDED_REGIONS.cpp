@@ -27,6 +27,7 @@ namespace _LEET_SURROUNDED_REGIONS
         {
             node->p = Find(node->p);
         }
+
         return node->p;
     }
 
@@ -54,7 +55,8 @@ namespace _LEET_SURROUNDED_REGIONS
         }
     }
 
-    class Solution {
+    class Solution
+    {
     public:
         void solve(vector<vector<char> > &board)
         {
@@ -175,7 +177,6 @@ namespace _LEET_SURROUNDED_REGIONS
                     }
                 }
 
-
                 // Last step: Free the memory used for the algorithm
                 for (int i = 0; i < numRows; i++)
                 {
@@ -215,5 +216,6 @@ int LEET_SURROUNDED_REGIONS()
         }
         cout << endl;
     }
+
     return 0;
 }

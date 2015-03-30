@@ -138,6 +138,7 @@
 #include "LEET_SINGLE_NUMBER.h"                                  // 134
 #include "LEET_PLUS_ONE.h"                                       // 135
 #include "LEET_MAJORITY_ELEMENT.h"                               // 136
+#include "LEET_REVERSE_BITS.h"                                   // 137
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -286,5 +287,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS(); // Accepted
     // return LEET_SINGLE_NUMBER();                                  // Accepted
     // return LEET_PLUS_ONE();                                       // Accepted
-    return LEET_MAJORITY_ELEMENT();                               // Accepted
+    // return LEET_MAJORITY_ELEMENT();                               // Accepted
+    return LEET_REVERSE_BITS();                                   // Accepted
 }

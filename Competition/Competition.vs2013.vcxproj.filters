@@ -426,6 +426,21 @@
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MAJORITY_ELEMENT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_PLUS_ONE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_REVERSE_BITS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SINGLE_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -834,6 +849,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PLUS_ONE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REVERSE_BITS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SINGLE_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

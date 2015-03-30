@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
+    <ClInclude Include="LEET_COUNT_AND_SAY.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
@@ -88,6 +89,7 @@
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
+    <ClInclude Include="LEET_PATH_SUM.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_REVERSE_BITS.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
@@ -225,6 +227,7 @@
   <ItemGroup>
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
@@ -232,6 +235,7 @@
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
+    <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />

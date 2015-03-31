@@ -142,6 +142,7 @@
 #include "LEET_ROTATE_ARRAY.h"                                   // 138
 #include "LEET_COUNT_AND_SAY.h"                                  // 139
 #include "LEET_PATH_SUM.h"                                       // 140
+#include "LEET_FACTORIAL_TRAILING_ZEROES.h"                      // 141
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -294,5 +295,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REVERSE_BITS();                                   // Accepted
     // return LEET_ROTATE_ARRAY();                                   // Accepted
     // return LEET_COUNT_AND_SAY();                                  // Accepted
-    return LEET_PATH_SUM();                                          // Accepted
+    // return LEET_PATH_SUM();                                       // Accepted
+    return LEET_FACTORIAL_TRAILING_ZEROES();                      // 
 }

@@ -144,6 +144,7 @@
 #include "LEET_PATH_SUM.h"                                       // 140
 #include "LEET_FACTORIAL_TRAILING_ZEROES.h"                      // 141
 #include "LEET_HOUSE_ROBBER.h"                                   // 142
+#include "LEET_LENGTH_OF_LAST_WORD.h"                            // 143
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -298,5 +299,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_AND_SAY();                                  // Accepted
     // return LEET_PATH_SUM();                                       // Accepted
     // return LEET_FACTORIAL_TRAILING_ZEROES();                      // Accepted
-    return LEET_HOUSE_ROBBER();                                   // Accepted
+    // return LEET_HOUSE_ROBBER();                                   // Accepted
+    return LEET_LENGTH_OF_LAST_WORD();
 }

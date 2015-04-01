@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/add-two-numbers/
+// https://leetcode.com/problems/excel-sheet-column-number/
 
 #include "LEET_EXCEL_SHEET_COLUMN_NUMBER.h"
 #include <map>

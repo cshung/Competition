@@ -441,6 +441,27 @@
     <ClInclude Include="LEET_REVERSE_BITS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_COUNT_AND_SAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_HOUSE_ROBBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -864,6 +885,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REVERSE_BITS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_COUNT_AND_SAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_HOUSE_ROBBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

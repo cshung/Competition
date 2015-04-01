@@ -147,6 +147,7 @@
 #include "LEET_LENGTH_OF_LAST_WORD.h"                            // 143
 #include "LEET_EXCEL_SHEET_COLUMN_NUMBER.h"                      // 144
 #include "LEET_EXCEL_SHEET_COLUMN_TITLE.h"                       // 145
+#include "LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h"               // 146
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -304,5 +305,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_HOUSE_ROBBER();                                   // Accepted
     // return LEET_LENGTH_OF_LAST_WORD();                            // Accepted
     // return LEET_EXCEL_SHEET_COLUMN_NUMBER();                      // Accepted
-    return LEET_EXCEL_SHEET_COLUMN_TITLE();                       // Accepted
+    // return LEET_EXCEL_SHEET_COLUMN_TITLE();                       // Accepted
+    return LEET_INTERSECTION_OF_TWO_LINKED_LISTS();               // Accepted
 }

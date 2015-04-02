@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_INTERSECTION_OF_TWO_LINKED_LISTS();

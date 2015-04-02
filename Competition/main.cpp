@@ -150,6 +150,7 @@
 #include "LEET_MERGE_K_SORTED_LISTS.h"                           // 146
 #include "LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.h"              // 147
 #include "LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h"               // 148
+#include "LEET_REPEATED_DNA_SEQUENCES.h"                         // 149
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -310,5 +311,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_EXCEL_SHEET_COLUMN_TITLE();                       // Accepted
     // return LEET_MERGE_K_SORTED_LISTS();                           // Accepted
     // return LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL();              // Accepted
-    return LEET_INTERSECTION_OF_TWO_LINKED_LISTS();               // Accepted
+    // return LEET_INTERSECTION_OF_TWO_LINKED_LISTS();               // Accepted
+    return LEET_REPEATED_DNA_SEQUENCES();
 }

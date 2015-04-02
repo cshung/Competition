@@ -474,6 +474,9 @@
     <ClInclude Include="LEET_ROTATE_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -930,6 +933,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

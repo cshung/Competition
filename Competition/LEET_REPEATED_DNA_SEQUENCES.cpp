@@ -13,89 +13,52 @@ using namespace std;
 
 namespace _LEET_REPEATED_DNA_SEQUENCES
 {
-    class Node
-    {
-    public:
-        Node()
-        {
-            this->a = this->c = this->t = this->g = NULL;
-        }
-        ~Node()
-        {
-            if (this->a != NULL) { delete this->a; }
-            if (this->c != NULL) { delete this->c; }
-            if (this->t != NULL) { delete this->t; }
-            if (this->g != NULL) { delete this->g; }
-        }
-        Node* a;
-        Node* c;
-        Node* t;
-        Node* g;
-    };
-
     class Solution
     {
     public:
         vector<string> findRepeatedDnaSequences(string s)
         {
+            map<int, int> seen_signatures;
             vector<string> result;
-            Node* root = new Node();
-            for (int i = s.length() - 10; i >= 0; i--)
+            int current_signature = 0;
+            for (int i = 0; i < s.length(); i++)
             {
-                bool used_new = false;
-                Node* cursor = root;
-                for (unsigned int j = i; j < i + 10; j++)
+                current_signature = current_signature << 2;
+                current_signature = current_signature & 0x000FFFFF;
+                if (s[i] == 'A')
                 {
-                    if (s[j] == 'A')
-                    {
-                        if (cursor->a == NULL)
-                        {
-                            used_new = true;
-                            cursor->a = new Node();
-                        }
-
-                        cursor = cursor->a;
-                    } 
-                    else if (s[j] == 'C')
-                    {
-                        if (cursor->c == NULL)
-                        {
-                            used_new = true;
-                            cursor->c = new Node();
-                        }
-
-                        cursor = cursor->c;
-                    }
-                    else if (s[j] == 'T')
-                    {
-                        if (cursor->t == NULL)
-                        {
-                            used_new = true;
-                            cursor->t = new Node();
-                        }
-
-                        cursor = cursor->t;
-                    }
-                    else if (s[j] == 'G')
-                    {
-                        if (cursor->g == NULL)
-                        {
-                            used_new = true;
-                            cursor->g = new Node();
-                        }
-
-                        cursor = cursor->g;
-                    }
+                    current_signature = current_signature | 0x00000000;
                 }
-
-                if (!used_new)
+                else if (s[i] == 'C')
                 {
-                    string t = s.substr(i, 10);
-                    result.push_back(t);
+                    current_signature = current_signature | 0x00000001;
+                }
+                else if (s[i] == 'T')
+                {
+                    current_signature = current_signature | 0x00000002;
+                }
+                else if (s[i] == 'G')
+                {
+                    current_signature = current_signature | 0x00000003;
+                }
+                if (i >= 9)
+                {
+                    map<int, int>::iterator probe = seen_signatures.find(current_signature);
+                    if (probe == seen_signatures.end())
+                    {
+                        seen_signatures.insert(pair<int, int>(current_signature, i - 9));
+                    }
+                    else
+                    {
+                        if (probe->second != -1)
+                        {
+                            result.push_back(s.substr(probe->second, 10));
+                            probe->second = -1;
+                        }
+                    }
                 }
             }
 
-            delete root;
             return result;
         }
     };
@@ -106,7 +69,7 @@ using namespace _LEET_REPEATED_DNA_SEQUENCES;
 int LEET_REPEATED_DNA_SEQUENCES()
 {
     Solution solution;
-    vector<string> result = solution.findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT");
+    vector<string> result = solution.findRepeatedDnaSequences("AAAAAAAAAAAA");
     for (unsigned int i = 0; i < result.size(); i++)
     {
         cout << result[i] << endl;

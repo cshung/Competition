@@ -312,5 +312,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MERGE_K_SORTED_LISTS();                           // Accepted
     // return LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL();              // Accepted
     // return LEET_INTERSECTION_OF_TWO_LINKED_LISTS();               // Accepted
-    return LEET_REPEATED_DNA_SEQUENCES();
+    return LEET_REPEATED_DNA_SEQUENCES();                         // Accepted
 }

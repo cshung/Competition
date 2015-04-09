@@ -89,6 +89,7 @@
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
+    <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
@@ -245,6 +246,7 @@
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
+    <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />

@@ -477,6 +477,12 @@
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_VALID_PARENTHESES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -936,6 +942,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VALID_PARENTHESES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

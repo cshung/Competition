@@ -495,6 +495,12 @@
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -972,6 +978,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

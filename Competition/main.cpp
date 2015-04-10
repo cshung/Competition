@@ -154,6 +154,9 @@
 #include "LEET_VALID_PARENTHESES.h"                              // 150
 #include "LEET_UNIQUE_BINARY_SEARCH_TREES.h"                     // 151
 #include "LEET_LINKED_LIST_CYCLE.h"                              // 152
+#include "LEET_SINGLE_NUMBER_II.h"                               // 153
+#include "LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h"    // 154
+#include "LEET_CLIMBING_STAIRS.h"                                // 155
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -318,5 +321,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REPEATED_DNA_SEQUENCES();                         // Accepted
     // return LEET_VALID_PARENTHESES();                              // Accepted
     // return LEET_UNIQUE_BINARY_SEARCH_TREES();                     // Accepted
-    return LEET_LINKED_LIST_CYCLE();                              // Accepted
+    // return LEET_LINKED_LIST_CYCLE();                              // Accepted
+    // return LEET_SINGLE_NUMBER_II();                               // Accepted
+    // return LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE();    // Accepted
+    return LEET_CLIMBING_STAIRS();                                // Accepted
 }

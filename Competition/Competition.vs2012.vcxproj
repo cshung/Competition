@@ -81,7 +81,10 @@
   <ItemGroup>
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
+    <ClInclude Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
     <ClInclude Include="LEET_COUNT_AND_SAY.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
@@ -239,7 +242,10 @@
   <ItemGroup>
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />

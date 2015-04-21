@@ -501,6 +501,9 @@
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LARGEST_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -984,6 +987,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LARGEST_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

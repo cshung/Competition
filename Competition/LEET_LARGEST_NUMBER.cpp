@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/count-and-say/
+// https://leetcode.com/problems/largest-number/
 
 #include "LEET_LARGEST_NUMBER.h"
 #include <list>

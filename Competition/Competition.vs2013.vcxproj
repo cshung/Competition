@@ -95,6 +95,7 @@
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
+    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
     <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
@@ -260,6 +261,7 @@
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />

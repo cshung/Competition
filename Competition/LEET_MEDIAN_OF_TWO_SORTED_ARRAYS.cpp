@@ -25,7 +25,7 @@ namespace _LEET_MEDIAN_OF_TWO_SORTED_ARRAYS
             if (size % 2 == 0)
             {
                 // a[10] => (a[4] + a[5]) * 0.5
-                return (select(nums1, nums2, 0, size1, 0, size2, mid) + select(nums1, nums2, 0, size1, 0, size2, mid + 1)) * 0.5;
+                return (select(nums1, nums2, 0, size1, 0, size2, mid - 1) + select(nums1, nums2, 0, size1, 0, size2, mid)) * 0.5;
             }
             else
             {
@@ -76,7 +76,7 @@ namespace _LEET_MEDIAN_OF_TWO_SORTED_ARRAYS
                     {
                         // The number of elements smaller than probe2_value is at least a + c + 1
                         // so we can safely discard any values known to be larger than or equal to probe2_value
-                        return select(nums1, nums2, s1, e1, s2, probe2, k);
+                        return select(nums1, nums2, s1, e1, s2, s2 + probe2, k);
                     }
                     else if (a + c + 1 <= k)
                     {                        
@@ -92,7 +92,7 @@ namespace _LEET_MEDIAN_OF_TWO_SORTED_ARRAYS
                     {                        
                         // The number of elements smaller than probe1_value is at least a + c + 1
                         // so we can safely discard any values known to be larger than or equal to probe1_value
-                        return select(nums1, nums2, s1, probe1, s2, e2, k);
+                        return select(nums1, nums2, s1, s1 + probe1, s2, e2, k);
                     }
                     else if (a + c + 1 <= k)
                     {
@@ -114,9 +114,10 @@ using namespace _LEET_MEDIAN_OF_TWO_SORTED_ARRAYS;
 int LEET_MEDIAN_OF_TWO_SORTED_ARRAYS()
 {
     Solution solution;
-    int nums2[] = { 1, 2, 3 };
-    int nums1[] = { 4, 5 };
-    vector<int> nums1v(nums1, nums1 + sizeof(nums1) / sizeof(nums1[0]));
+    // int nums1[] = { };
+    int nums2[] = { 2, 3 };
+    vector<int> nums1v;
+    // vector<int> nums1v(nums1, nums1 + sizeof(nums1) / sizeof(nums1[0]));
     vector<int> nums2v(nums2, nums2 + sizeof(nums2) / sizeof(nums2[0]));
     cout << solution.findMedianSortedArrays(nums1v, nums2v) << endl;
     return 0;

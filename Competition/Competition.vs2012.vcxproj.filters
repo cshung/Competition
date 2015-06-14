@@ -501,6 +501,9 @@
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_INVERT_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -984,6 +987,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

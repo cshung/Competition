@@ -91,6 +91,7 @@
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h" />
+    <ClInclude Include="LEET_INVERT_BINARY_TREE.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
@@ -254,6 +255,7 @@
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
+    <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />

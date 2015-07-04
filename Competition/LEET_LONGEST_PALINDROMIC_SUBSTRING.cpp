@@ -19,70 +19,104 @@ namespace _LEET_LONGEST_PALINDROMIC_SUBSTRING
     public:
         string longestPalindrome(string s)
         {
-            TrieNode root;
-            int length = s.length();
-            
-            // Build a suffix trie
-            for (int i = 0; i < length; i++)
+            int conceptual_length = s.length() * 2 + 3;
+            vector<int> palindrome_half_lengths;
+            palindrome_half_lengths.resize(conceptual_length - 1); // We do not need to palindrome_half_lengths of the $ character
+
+            // Initialization - the ^ character match nothing, so palindrome_half_lengths[0] = 1
+            palindrome_half_lengths[0] = 1;
+            int current_center = 0;
+            int current_palindrome_inclusive_ends = 0;
+            for (int i = 1; i < conceptual_length - 1; i++) // avoid moving beyond $.
             {
-                TrieNode* current = &root;
-                for (int j = i; j < length; j++)
+                // Step 1: Infer the certainly mirroring half length at position i
+                int certainly_mirroring_half_length = 1;
+                if (current_palindrome_inclusive_ends > i)
                 {
-                    char current_char = s[j];
-                    TrieNode* next = NULL;
-                    map<char, TrieNode*>::iterator probe = current->children.find(current_char);
-                    if (probe == current->children.end())
+                    int inclusive_remaining_length = current_palindrome_inclusive_ends - i + 1;
+                    int mirror_position = current_center - (i - current_center);
+                    int mirror_palindrome_half_length = palindrome_half_lengths[mirror_position];
+                    if (inclusive_remaining_length < mirror_palindrome_half_length)
                     {
-                        next = new TrieNode();
-                        current->children.insert(pair<char, TrieNode*>(current_char, next));
+                        certainly_mirroring_half_length = inclusive_remaining_length;
                     }
                     else
                     {
-                        next = probe->second;
+                        certainly_mirroring_half_length = mirror_palindrome_half_length;
                     }
-
-                    current = next;
                 }
-            }
-
-            string best = "";
-
-            // For each prefix, try to walk the trie, but don't create nodes
-            for (int i = length ; i >= 0; i--)
-            {
-                TrieNode* current = &root;
-                string path = "";
-                for (int j = i - 1; j >= 0; j--)
+                else
                 {
-                    char current_char = s[j];
-                    TrieNode* next = NULL;
-                    map<char, TrieNode*>::iterator probe = current->children.find(current_char);
-                    if (probe == current->children.end())
-                    {
-                        if (path.length() > best.length())
-                        {
-                            best = path;
-                        }
-                        break;
-                    }
-                    else
-                    {
-                        path = path + current_char;
-                        next = probe->second;
-                    }
+                    certainly_mirroring_half_length = 1;
+                }
 
-                    current = next;
+                // Step 2: Expand 
+                while (get_conceptual_character(s, i - certainly_mirroring_half_length + 1) == get_conceptual_character(s, i + certainly_mirroring_half_length - 1))
+                {
+                    certainly_mirroring_half_length++;
+                }
+                certainly_mirroring_half_length--;
+
+                palindrome_half_lengths[i] = certainly_mirroring_half_length;
+
+                // Step 3: Update boundaries
+                if (i + certainly_mirroring_half_length > current_palindrome_inclusive_ends)
+                {
+                    current_center = i;
+                    current_palindrome_inclusive_ends = i + certainly_mirroring_half_length;
                 }
             }
+            /*
+            for (int i = 1; i < conceptual_length - 1; i++)
+            {
+                cout << i ;
+                cout << "\t";
+                print_conceptual_character(s, i);
+                cout << " ";
+                cout << palindrome_half_lengths[i];
+                cout << endl;
+            }
+            */
+            int max_index = -1;
+            int max_value = -1;
 
-            return best;
+            for (int i = 1; i < conceptual_length - 1; i++)
+            {
+                if (palindrome_half_lengths[i] > max_value)
+                {
+                    max_value = palindrome_half_lengths[i];
+                    max_index = i;
+                }
+            }
+            // suppose conceptual index 10 is the palindrome, and max_value is 5.
+            // which means [6, 7, 8, 9, 10] == [10, 11, 12, 13, 14] 
+            int s_index = max_index - max_value + 1;
+            int e_index = max_index + max_value - 1;
+            s_index++;
+            e_index--;
+            return s.substr(s_index / 2 - 1, (e_index - s_index) / 2 + 1);
         }
     private:
-        class TrieNode
+        pair<char, int> get_conceptual_character(string& s, int position)
         {
-        public:
-            map<char, TrieNode*> children;
-        };
+            if (position == 0)
+            {
+                return pair<char, int>(0, 1);
+            }
+            else if (position % 2 == 1)
+            {
+                return pair<char, int>(0, 2);
+            }
+            else if (position == (s.length() + 1) * 2)
+            {
+                return pair<char ,int>(0, 3);
+            }
+            else
+            {
+                return pair<char, int>(s[position / 2 - 1], 0);
+            }
+        }
+
     };
 };
 
@@ -91,11 +125,7 @@ using namespace _LEET_LONGEST_PALINDROMIC_SUBSTRING;
 int LEET_LONGEST_PALINDROMIC_SUBSTRING()
 {
     Solution solution;
-    string s;
-    for (int i = 0; i < 1000; i++)
-    {
-        s = s + 'x';
-    }
+    string s = "ababc";
     cout << s << endl;
     cout << solution.longestPalindrome(s) << endl;
     return 0;

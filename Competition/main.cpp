@@ -335,6 +335,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BINARY_TREE_PREORDER_TRAVERSAL();                 // Accepted
     // return LEET_LARGEST_NUMBER();                                 // Accepted
     // return LEET_MEDIAN_OF_TWO_SORTED_ARRAYS();                    // Accepted
-    // return LEET_LONGEST_PALINDROMIC_SUBSTRING();                  // 
-    return LEET_INVERT_BINARY_TREE();                                // Accepted
+    // return LEET_LONGEST_PALINDROMIC_SUBSTRING();                  // Accepted
+    return LEET_INVERT_BINARY_TREE();                             // Accepted
 }

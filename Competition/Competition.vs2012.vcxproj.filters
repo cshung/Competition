@@ -516,6 +516,15 @@
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SINGLE_NUMBER_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1014,6 +1023,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

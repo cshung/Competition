@@ -164,6 +164,8 @@
 #include "LEET_LONGEST_PALINDROMIC_SUBSTRING.h"                  // 160
 #include "LEET_INVERT_BINARY_TREE.h"                             // 161
 #include "LEET_ZIGZAG_CONVERSION.h"                              // 162
+#include "LEET_REVERSE_INTEGER.h"                                // 163
+#include "LEET_STRING_TO_INTEGER_ATOI.h"                         // 164
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -338,5 +340,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MEDIAN_OF_TWO_SORTED_ARRAYS();                    // Accepted
     // return LEET_LONGEST_PALINDROMIC_SUBSTRING();                  // Accepted
     // return LEET_INVERT_BINARY_TREE();                             // Accepted
-    return LEET_ZIGZAG_CONVERSION();                              // Accepted
+    // return LEET_ZIGZAG_CONVERSION();                              // Accepted
+    // return LEET_REVERSE_INTEGER();                                // Accepted
+    return LEET_STRING_TO_INTEGER_ATOI();                         // Accepted
 }

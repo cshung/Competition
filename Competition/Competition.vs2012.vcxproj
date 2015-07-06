@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
     <ClInclude Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.h" />
@@ -108,6 +109,7 @@
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h" />
     <ClInclude Include="LEET_REVERSE_BITS.h" />
+    <ClInclude Include="LEET_REVERSE_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
@@ -275,9 +277,11 @@
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
+    <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
+    <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />

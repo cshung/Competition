@@ -115,6 +115,7 @@
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
+    <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="UVa10004.h" />
     <ClInclude Include="UVa10034.h" />
     <ClInclude Include="UVa10147.h" />
@@ -282,6 +283,7 @@
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />
     <ClCompile Include="SPOJ_HORRIBLE.cpp" />

@@ -513,6 +513,18 @@
     <ClInclude Include="LEET_INVERT_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REVERSE_INTEGER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_ZIGZAG_CONVERSION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1008,6 +1020,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REVERSE_INTEGER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

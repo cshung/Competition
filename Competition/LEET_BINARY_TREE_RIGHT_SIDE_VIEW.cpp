@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/climbing-stairs/
+// https://leetcode.com/problems/binary-tree-right-side-view/
 
 #include "LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h"
 #include <map>

@@ -534,6 +534,12 @@
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1050,6 +1056,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

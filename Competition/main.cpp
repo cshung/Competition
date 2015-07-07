@@ -173,6 +173,7 @@
 #include "LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" // 169
 #include "LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" // 169
 #include "LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h"// 170
+#include "LEET_MERGE_SORTED_ARRAY.h"                                        // 171
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -355,5 +356,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_IMPLEMENT_QUEUE_USING_STACKS();                              // Accepted 
     // return LEET_REGULAR_EXPRESSION_MATCHING();                               // Accepted
     // return LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL(); // Accepted
-    return LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL();// Accepted
+    // return LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL();// Accepted
+    return LEET_MERGE_SORTED_ARRAY();                                        // Accepted
 }

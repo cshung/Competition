@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
+    <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
@@ -259,6 +260,7 @@
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />

@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
+    <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
@@ -262,6 +263,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
+    <ClCompile Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />

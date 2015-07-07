@@ -168,6 +168,7 @@
 #include "LEET_STRING_TO_INTEGER_ATOI.h"                         // 164
 #include "LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h"                    // 165
 #include "LEET_IMPLEMENT_QUEUE_USING_STACKS.h"                   // 166
+#include "LEET_REGULAR_EXPRESSION_MATCHING.h"                    // 167
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -346,5 +347,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REVERSE_INTEGER();                                // Accepted
     // return LEET_STRING_TO_INTEGER_ATOI();                         // Accepted
     // return LEET_BINARY_TREE_RIGHT_SIDE_VIEW();                    // Accepted
-    return LEET_IMPLEMENT_QUEUE_USING_STACKS();                   // 
+    // return LEET_IMPLEMENT_QUEUE_USING_STACKS();                   // Accepted
+    return LEET_REGULAR_EXPRESSION_MATCHING();                    // 
 }

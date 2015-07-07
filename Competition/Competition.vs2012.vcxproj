@@ -82,6 +82,7 @@
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
+    <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
@@ -282,6 +283,7 @@
     <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
+    <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />

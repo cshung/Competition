@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+// https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 
 #include "LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h"
 #include <map>

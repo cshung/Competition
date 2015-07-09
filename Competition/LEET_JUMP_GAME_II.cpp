@@ -76,11 +76,10 @@ int LEET_JUMP_GAME_II()
 {
     Solution solution;
     int case1Array[] = { 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    //                  0,1,2,3,4,5,6,7,8,9,A,B,C,D,E
     int case2Array[] = {9,7,9,4,8,1,6,1,5,6,2,1,7,9,0};
     vector<int> case1 = vector<int>(case1Array, case1Array + _countof(case1Array));
     vector<int> case2 = vector<int>(case2Array, case2Array + _countof(case2Array));
-    // cout << solution.jump(case1) << endl;
+    cout << solution.jump(case1) << endl;
     cout << solution.jump(case2) << endl;
     return 0;
 }

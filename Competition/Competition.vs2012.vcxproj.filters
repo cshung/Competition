@@ -546,6 +546,9 @@
     <ClInclude Include="LEET_JUMP_GAME_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PALINDROME_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1074,6 +1077,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_JUMP_GAME_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PALINDROME_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

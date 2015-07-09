@@ -176,6 +176,7 @@
 #include "LEET_MERGE_SORTED_ARRAY.h"                                        // 171
 #include "LEET_JUMP_GAME.h"                                                 // 172
 #include "LEET_JUMP_GAME_II.h"                                              // 173
+#include "LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h"                       // 174
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -362,4 +363,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MERGE_SORTED_ARRAY();                                        // Accepted
     // return LEET_JUMP_GAME();                                                 // Accepted
     return LEET_JUMP_GAME_II();                                              // 
+    // return LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY();                       // Accepted
 }

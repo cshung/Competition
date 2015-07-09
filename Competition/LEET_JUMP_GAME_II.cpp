@@ -16,20 +16,33 @@ namespace _LEET_JUMP_GAME_II
     public:
         int jump(vector<int>& nums)
         {
-            int horizon = 0;
-            vector<unsigned int> requiredStepsBeyond;
-            requiredStepsBeyond.resize(nums.size());
+            if (nums.size() == 1)
+            {
+                return 0;
+            }
+
+            unsigned int horizon = 0;
+            unsigned int steps = 0;
+            vector<unsigned int> walls;
+            vector<unsigned int> walls_positions;
+            walls.resize(nums.size());
+            walls_positions.resize(nums.size());
             for (unsigned int i = 0; i < nums.size(); i++)
             {
-                requiredStepsBeyond[i] = 0;
+                walls[i] = -1;
+                walls_positions[i] = -1; // int.max is a good value for not exist
             }
-            requiredStepsBeyond[0] = 1;
+            walls[0] = 0;
+            walls_positions[0] = 0;
 
             for (unsigned int i = 0; i < nums.size(); i++)
             {
                 if (i != 0)
                 {
-
+                    if (walls[i - 1] != -1)
+                    {
+                        steps = walls[i - 1] + 1;
+                    }
                 }
                 if (i > horizon)
                 {
@@ -37,15 +50,18 @@ namespace _LEET_JUMP_GAME_II
                 }
                 if (i + nums[i] > horizon)
                 {
-                    if (i + nums[i] < requiredStepsBeyond.size())
+                    unsigned int proposed_wall_position = i + nums[i];
+                    if (proposed_wall_position >=  walls.size())
                     {
-                        requiredStepsBeyond[i + nums[i]] = steps + 1;
+                        proposed_wall_position = walls.size() - 1;
                     }
-                    horizon = i + nums[i];
-                }
-                if (requiredStepsBeyond[i] > steps)
-                {
-                    steps = requiredStepsBeyond[i];
+                    if (walls_positions[steps + 1] != -1)
+                    {
+                        walls[walls_positions[steps + 1]] = -1;
+                    }
+                    walls[proposed_wall_position] = steps + 1;
+                    walls_positions[steps + 1] = proposed_wall_position;
+                    horizon = proposed_wall_position;
                 }
             }
 
@@ -54,23 +70,17 @@ namespace _LEET_JUMP_GAME_II
     };
 }
 
-/*
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B]
-[7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    x  x  x  x  x  x  x
-       y  y  y  y  y  y  y  y
-          z  z  z  z  z  z  z  z  z
- 0  1  1  1  1  1  1  1  2  2  2  2 [STEP VALUE]
- 1  x  x  x  x  x  x  2  x  x  x  3
- */
 using namespace _LEET_JUMP_GAME_II;
 
 int LEET_JUMP_GAME_II()
 {
     Solution solution;
-    // need quick way to find out if an index is reachable with n step
-    int case1Array[] = { 1 };
-    vector<int> case1 = vector<int>(case1Array, case1Array + 1);
-    cout << solution.jump(case1) << endl;
+    int case1Array[] = { 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    //                  0,1,2,3,4,5,6,7,8,9,A,B,C,D,E
+    int case2Array[] = {9,7,9,4,8,1,6,1,5,6,2,1,7,9,0};
+    vector<int> case1 = vector<int>(case1Array, case1Array + _countof(case1Array));
+    vector<int> case2 = vector<int>(case2Array, case2Array + _countof(case2Array));
+    // cout << solution.jump(case1) << endl;
+    cout << solution.jump(case2) << endl;
     return 0;
 }

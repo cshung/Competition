@@ -362,6 +362,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL();// Accepted
     // return LEET_MERGE_SORTED_ARRAY();                                        // Accepted
     // return LEET_JUMP_GAME();                                                 // Accepted
-    return LEET_JUMP_GAME_II();                                              // 
-    // return LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY();                       // Accepted
+    // return LEET_JUMP_GAME_II();                                              // Accepted
+    return LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY();                       // Accepted
 }

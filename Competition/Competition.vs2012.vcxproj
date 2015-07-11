@@ -82,6 +82,7 @@
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_CONTAINER_WITH_MOST_WATER.h" />
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
     <ClInclude Include="LEET_JUMP_GAME.h" />
     <ClInclude Include="LEET_JUMP_GAME_II.h" />
@@ -268,6 +269,7 @@
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />

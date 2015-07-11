@@ -24,41 +24,23 @@ namespace _LEET_CONTAINER_WITH_MOST_WATER
                 return - 1;
             }
 
-            unsigned int left = 0;
-
-            // Within the same left scan
             int bestAreaSoFar = -1;
-            int bestRightValueSoFar = -1;
-            int bestRightIndexSoFar = -1;
-            for (unsigned int right = 1; right < height.size(); right++)
+            for (unsigned int i = 0; i < height.size(); i++)
             {
-                if (height[right] < height[left])
+                for (unsigned int j = i + 1; j < height.size(); j++)
                 {
-                    if (height[right] > bestRightValueSoFar)
+                    int area = (j - i) * min(height[j], height[i]);
+                    if (area > bestAreaSoFar) 
                     {
-                        bestRightValueSoFar = height[right];
-                        int areaSoFar = (right - left) * height[right];
-                        if (areaSoFar > bestAreaSoFar)
-                        {
-                            bestAreaSoFar = areaSoFar;
-                        }
+                        bestAreaSoFar = area;
                     }
-                }
-                else
-                {
-                    int areaSoFar = (right - left) * height[left];
-                    if (areaSoFar > bestAreaSoFar)
-                    {
-                        bestAreaSoFar = areaSoFar;
-                    }
-                    left = right;
-                    bestRightValueSoFar = -1;
                 }
             }
 
             return bestAreaSoFar;
         }
-    };};
+    };
+};
 
 using namespace _LEET_CONTAINER_WITH_MOST_WATER;
 

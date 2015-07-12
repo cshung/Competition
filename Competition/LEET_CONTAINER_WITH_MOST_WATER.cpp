@@ -24,19 +24,39 @@ namespace _LEET_CONTAINER_WITH_MOST_WATER
                 return - 1;
             }
 
-            int bestAreaSoFar = -1;
-            for (unsigned int i = 0; i < height.size(); i++)
+            unsigned int l = 0; 
+            unsigned int r = height.size() - 1;
+            int currentHeight = min(height[r], height[l]);
+            int bestAreaSoFar = currentHeight * ( r - l );
+            while (l < r)
             {
-                for (unsigned int j = i + 1; j < height.size(); j++)
+                unsigned int lSearch = l;
+                unsigned int rSearch = r;
+                while (lSearch < height.size() && height[lSearch] <= currentHeight)
                 {
-                    int area = (j - i) * min(height[j], height[i]);
-                    if (area > bestAreaSoFar) 
+                    lSearch++;
+                }
+                while (rSearch > 0 && height[rSearch] <= currentHeight)
+                {
+                    rSearch--;
+                }
+                if (lSearch < rSearch)
+                {
+                    l = lSearch;
+                    r = rSearch;
+                    currentHeight = min(height[r], height[l]);
+                    int areaSoFar = currentHeight * ( r - l );
+                    if (areaSoFar > bestAreaSoFar)
                     {
-                        bestAreaSoFar = area;
+                        bestAreaSoFar = areaSoFar;
                     }
                 }
+                else
+                {
+                    break;
+                }
             }
-
+            
             return bestAreaSoFar;
         }
     };
@@ -54,12 +74,12 @@ int LEET_CONTAINER_WITH_MOST_WATER()
     int case5[] = { 4, 3, 2, 4, 4, 3, 2, 5 };
     int case6[] = { 4, 3, 2, 5, 4, 3, 2, 4 };
     int case7[] = { 1, 2, 1 };
-    cout << (solution.maxArea(vector<int>(case1, case1 + _countof(case1))) == 5) << endl;
-    cout << (solution.maxArea(vector<int>(case2, case2 + _countof(case2))) == 5) << endl;
+    cout << (solution.maxArea(vector<int>(case1, case1 + _countof(case1))) == 9) << endl;
+    cout << (solution.maxArea(vector<int>(case2, case2 + _countof(case2))) == 9) << endl;
     cout << (solution.maxArea(vector<int>(case3, case3 + _countof(case3))) == 12) << endl;
     cout << (solution.maxArea(vector<int>(case4, case4 + _countof(case4))) == 12) << endl;
-    cout << (solution.maxArea(vector<int>(case5, case5 + _countof(case5))) == 12) << endl;
-    cout << (solution.maxArea(vector<int>(case6, case6 + _countof(case6))) == 12) << endl;
-    cout << (solution.maxArea(vector<int>(case7, case7 + _countof(case7))) == 1) << endl;
+    cout << (solution.maxArea(vector<int>(case5, case5 + _countof(case5))) == 28) << endl;
+    cout << (solution.maxArea(vector<int>(case6, case6 + _countof(case6))) == 28) << endl;
+    cout << (solution.maxArea(vector<int>(case7, case7 + _countof(case7))) == 2) << endl;
     return 0;
 }

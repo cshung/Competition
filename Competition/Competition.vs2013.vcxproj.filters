@@ -564,6 +564,9 @@
     <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ROMAN_TO_INTEGER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1110,6 +1113,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

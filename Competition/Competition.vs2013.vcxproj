@@ -125,6 +125,7 @@
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h" />
     <ClInclude Include="LEET_REVERSE_BITS.h" />
     <ClInclude Include="LEET_REVERSE_INTEGER.h" />
+    <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
@@ -309,6 +310,7 @@
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
+    <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />

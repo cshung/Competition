@@ -68,6 +68,12 @@ namespace _LEET_INTEGER_TO_ROMAN
             return os.str();
         }
     };
+
+    string intToRoman(int num)
+    {
+        Solution s;
+        return s.intToRoman(num);
+    }
 };
 
 using namespace _LEET_INTEGER_TO_ROMAN;

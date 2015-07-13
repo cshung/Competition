@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LEET_INTEGER_TO_ROMAN.h" />
+    <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h" />
     <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
@@ -94,6 +95,7 @@
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
@@ -287,6 +289,7 @@
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
+    <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
@@ -309,6 +312,7 @@
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
+    <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />

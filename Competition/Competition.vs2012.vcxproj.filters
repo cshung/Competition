@@ -564,6 +564,12 @@
     <ClInclude Include="LEET_INTEGER_TO_ROMAN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_ROMAN_TO_INTEGER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1110,6 +1116,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_INTEGER_TO_ROMAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

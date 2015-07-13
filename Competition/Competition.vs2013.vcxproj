@@ -88,12 +88,14 @@
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_CONTAINER_WITH_MOST_WATER.h" />
     <ClInclude Include="LEET_COUNT_AND_SAY.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
+    <ClInclude Include="LEET_INTEGER_TO_ROMAN.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h" />
     <ClInclude Include="LEET_INVERT_BINARY_TREE.h" />
     <ClInclude Include="LEET_JUMP_GAME.h" />
@@ -104,6 +106,8 @@
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
     <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" />
+    <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h" />
@@ -268,12 +272,14 @@
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.cpp" />
+    <ClCompile Include="LEET_INTEGER_TO_ROMAN.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_JUMP_GAME.cpp" />
@@ -284,6 +290,8 @@
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
+    <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />

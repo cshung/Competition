@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
@@ -265,6 +266,7 @@
     <ClInclude Include="UVa990.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.cpp" />

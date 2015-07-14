@@ -22,8 +22,6 @@ namespace _LEET_3SUM
         {
             vector<vector<int>> result;
             sort(nums.begin(), nums.end());
-            vector<int> dedup;
-            vector<int> dup;
             map<int, int> count;
             bool seen = false;
             for (unsigned int i = 0; i < nums.size(); i++)
@@ -37,103 +35,48 @@ namespace _LEET_3SUM
                 {
                     probe->second++;
                 }
-                if (i != 0)
-                {
-                    if (nums[i] == nums[i - 1])
-                    {
-                        if (seen)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            dup.push_back(nums[i]);
-                            seen = true;
-                        }
-                    }
-                    else
-                    {
-                        dedup.push_back(nums[i]);
-                        seen = false;
-                    }
-                }
-                else
-                {
-                    dedup.push_back(nums[i]);
-                }
             }
-
-            int minTargetFound = ~(1 << 31);
-            for (unsigned int i = 0; i < dedup.size(); i++)
+            
+            for (unsigned int i = 0; i < nums.size(); i++)
             {
-                for (unsigned int j = (i + 1); j < dedup.size(); j++)
+                if (i != 0 && nums[i] == nums[i - 1])
                 {
-                    if (dedup[j] >= minTargetFound)
+                    continue;
+                }
+                for (unsigned int j = (i + 1); j < nums.size(); j++)
+                {
+                    if ((j - 1) != i && nums[j] == nums[j - 1])
                     {
-                        goto next;
+                        continue;
                     }
-                    int sum = dedup[i] + dedup[j];
+                    int sum = nums[i] + nums[j];
                     int target = -sum;
                     map<int, int>::iterator probe = count.find(target);
                     if (probe != count.end())
                     {
                         int requiredCount = 1;
-                        if (target == dedup[i])
+                        if (target == nums[i])
                         {
                             requiredCount++;
                         }
-                        if (target == dedup[j])
+                        if (target == nums[j])
                         {
                             requiredCount++;
                         }
                         if (probe->second >= requiredCount)
                         {
-                            if (target < minTargetFound)
+                            if (target >= nums[j])
                             {
-                                minTargetFound = target;
+#ifdef LOG
+                                cout << nums[i] << " " << nums[j] << " " << target << endl;
+#endif
+                                int tuple[] = { nums[i], nums[j], target };
+                                result.push_back(vector<int>(tuple, tuple + 3));
                             }
-#ifdef LOG
-                            cout << dedup[i] << " " << dedup[j] << " " << target << endl;
-#endif
-                            int tuple[] = { dedup[i], dedup[j], target };
-                            result.push_back(vector<int>(tuple, tuple + 3));
                         }
                     }
                 }
             }
-next:
-            minTargetFound = ~(1 << 31);
-            for (unsigned int i = 0; i < dup.size(); i++)
-            {
-                if (dup[i] >= minTargetFound)
-                {
-                    break;
-                }
-                int sum = dup[i] * 2;
-                int target = -sum;
-                map<int, int>::iterator probe = count.find(target);
-                if (probe != count.end())
-                {
-                    int requiredCount = 1;
-                    if (target == dup[i])
-                    {
-                        requiredCount += 2;
-                    }
-                    if (probe->second >= requiredCount)
-                    {
-                        if (target < minTargetFound)
-                        {
-                            minTargetFound = target;
-                        }
-#ifdef LOG
-                        cout << dup[i] << " " << dup[i] << " " << target << endl;
-#endif
-                        int tuple[] = { dup[i], dup[i], target };
-                        result.push_back(vector<int>(tuple, tuple + 3));
-                    }
-                }
-            }
-
             return result;
         }
     };
@@ -147,6 +90,8 @@ int LEET_3SUM()
     int case2[] = {1, 0, 1, 0, 1, 0};
     int case3[] = {-1,0,1,0};
     int case4[] = {-2, 1, 1};
+    int case5[] = { 3, 0, -2, -1, 1, 2 };
+    int case6[] = { -1, 0, 1 };
 
     Solution s;
     s.threeSum(vector<int>(case1, case1 + _countof(case1)));
@@ -156,5 +101,9 @@ int LEET_3SUM()
     s.threeSum(vector<int>(case3, case3 + _countof(case3)));
     cout << "-------------------------------------------------" << endl;
     s.threeSum(vector<int>(case4, case4 + _countof(case4)));
+    cout << "-------------------------------------------------" << endl;
+    s.threeSum(vector<int>(case5, case5 + _countof(case5)));
+    cout << "-------------------------------------------------" << endl;
+    s.threeSum(vector<int>(case6, case6 + _countof(case6)));
     return 0;
 }

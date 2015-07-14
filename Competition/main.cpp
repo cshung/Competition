@@ -377,5 +377,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_INTEGER_TO_ROMAN();                                          // Accepted
     // return LEET_ROMAN_TO_INTEGER();                                          // Accepted
     // return LEET_LONGEST_COMMON_PREFIX();                                     // Accepted
-    return LEET_3SUM();                                                      // 
+    return LEET_3SUM();                                                      // Accepted
 }

@@ -573,6 +573,9 @@
     <ClInclude Include="LEET_3SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1128,6 +1131,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_3SUM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

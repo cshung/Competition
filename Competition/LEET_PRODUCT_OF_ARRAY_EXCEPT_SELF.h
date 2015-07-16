@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF();

@@ -95,6 +95,7 @@
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
+    <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
@@ -311,6 +312,7 @@
     <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
+    <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />

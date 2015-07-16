@@ -576,6 +576,9 @@
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1134,6 +1137,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

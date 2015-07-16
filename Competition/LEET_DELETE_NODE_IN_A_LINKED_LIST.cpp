@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// 
+// https://leetcode.com/problems/delete-node-in-a-linked-list/
 
 #include "LEET_DELETE_NODE_IN_A_LINKED_LIST.h"
 #include <map>

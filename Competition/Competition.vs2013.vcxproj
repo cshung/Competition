@@ -118,6 +118,7 @@
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
+    <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
     <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
     <ClInclude Include="LEET_PATH_SUM.h" />
@@ -307,6 +308,7 @@
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
+    <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_PALINDROME_NUMBER.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />

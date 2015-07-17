@@ -187,6 +187,7 @@
 #include "LEET_DELETE_NODE_IN_A_LINKED_LIST.h"                              // 182
 #include "LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h"                              // 183
 #include "LEET_PALINDROME_LINKED_LIST.h"                                    // 184
+#include "LEET_NUMBER_OF_DIGIT_ONE.h"                                       // 185
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -383,5 +384,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_3SUM();                                                      // Accepted
     // return LEET_DELETE_NODE_IN_A_LINKED_LIST();                              // Accepted
     // return LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF();                              // Accepted
-    return LEET_PALINDROME_LINKED_LIST();                                    // Accepted
+    // return LEET_PALINDROME_LINKED_LIST();                                    // Accepted
+    return LEET_NUMBER_OF_DIGIT_ONE();                                       // 
 }

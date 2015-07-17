@@ -385,5 +385,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DELETE_NODE_IN_A_LINKED_LIST();                              // Accepted
     // return LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF();                              // Accepted
     // return LEET_PALINDROME_LINKED_LIST();                                    // Accepted
-    return LEET_NUMBER_OF_DIGIT_ONE();                                       // 
+    return LEET_NUMBER_OF_DIGIT_ONE();                                       // Accepted
 }

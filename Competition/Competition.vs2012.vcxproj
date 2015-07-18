@@ -93,6 +93,7 @@
     <ClInclude Include="LEET_JUMP_GAME_II.h" />
     <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
     <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
@@ -309,6 +310,7 @@
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />

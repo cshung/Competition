@@ -190,6 +190,7 @@
 #include "LEET_NUMBER_OF_DIGIT_ONE.h"                                       // 185
 #include "LEET_SLIDING_WINDOW_MAXIMUM.h"                                    // 186
 #include "LEET_MIN_STACK.h"                                                 // 187
+#include "LEET_POWER_OF_TWO.h"                                              // 188
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -389,5 +390,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_PALINDROME_LINKED_LIST();                                    // Accepted
     // return LEET_NUMBER_OF_DIGIT_ONE();                                       // Accepted
     // return LEET_SLIDING_WINDOW_MAXIMUM();                                    // Accepted
-    return LEET_MIN_STACK();                                                 // 
+    // return LEET_MIN_STACK();                                                 // Accepted
+    return LEET_POWER_OF_TWO();                                              // Accepted
 }

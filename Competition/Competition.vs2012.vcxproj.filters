@@ -591,6 +591,9 @@
     <ClInclude Include="LEET_MIN_STACK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_POWER_OF_TWO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1164,6 +1167,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MIN_STACK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_POWER_OF_TWO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

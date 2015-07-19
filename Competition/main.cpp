@@ -194,6 +194,7 @@
 #include "LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h"                             // 189
 #include "LEET_BINARY_SEARCH_TREE_ITERATOR.h"                               // 190
 #include "LEET_ADD_AND_SEARCH_WORD.h"                                       // 191
+#include "LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h"                        // 192
 
 //
 // To avoid create a lot of projects/executables for each competition problem,
@@ -397,5 +398,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_POWER_OF_TWO();                                              // Accepted
     // return LEET_KTH_SMALLEST_ELEMENT_IN_A_BST();                             // Accepted
     // return LEET_BINARY_SEARCH_TREE_ITERATOR();                               // Accepted
-    return LEET_ADD_AND_SEARCH_WORD();                                       // Accepted
+    // return LEET_ADD_AND_SEARCH_WORD();                                       // Accepted
+    return LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST();                        // Accepted
 }

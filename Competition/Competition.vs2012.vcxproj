@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h" />
     <ClInclude Include="LEET_INTEGER_TO_ROMAN.h" />
@@ -296,6 +297,7 @@
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_JUMP_GAME.cpp" />
     <ClCompile Include="LEET_JUMP_GAME_II.cpp" />
+    <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />

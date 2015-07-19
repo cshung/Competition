@@ -594,6 +594,9 @@
     <ClInclude Include="LEET_POWER_OF_TWO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1170,6 +1173,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_POWER_OF_TWO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

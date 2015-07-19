@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
     <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h" />
     <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
     <ClInclude Include="LEET_3SUM.h" />
@@ -276,6 +277,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LEET_3SUM.cpp" />
+    <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp" />

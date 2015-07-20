@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LEET_3SUM.h" />
+    <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
+    <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h" />
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
@@ -102,6 +104,7 @@
     <ClInclude Include="LEET_INVERT_BINARY_TREE.h" />
     <ClInclude Include="LEET_JUMP_GAME.h" />
     <ClInclude Include="LEET_JUMP_GAME_II.h" />
+    <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
@@ -117,6 +120,7 @@
     <ClInclude Include="LEET_MERGE_K_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
@@ -125,9 +129,11 @@
     <ClInclude Include="LEET_PATH_SUM.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
+    <ClInclude Include="LEET_POWER_OF_TWO.h" />
     <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h" />
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h" />
     <ClInclude Include="LEET_REVERSE_BITS.h" />
     <ClInclude Include="LEET_REVERSE_INTEGER.h" />
@@ -136,7 +142,9 @@
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
+    <ClInclude Include="LEET_SLIDING_WINDOW_MAXIMUM.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
+    <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
@@ -271,8 +279,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LEET_3SUM.cpp" />
+    <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
@@ -293,6 +303,7 @@
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_JUMP_GAME.cpp" />
     <ClCompile Include="LEET_JUMP_GAME_II.cpp" />
+    <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
@@ -308,6 +319,7 @@
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />
@@ -316,9 +328,11 @@
     <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
+    <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
@@ -327,7 +341,9 @@
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
+    <ClCompile Include="LEET_SLIDING_WINDOW_MAXIMUM.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
+    <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />

@@ -1,3 +1,4 @@
+.vs
 Debug
 Release
 ipch
@@ -9,3 +10,6 @@ Competition.vs2013.opensdf
 Competition.vs2013.sdf
 Competition.vs2013.v12.suo
 Competition/Competition.vs2013.vcxproj.user
+Competition.vs2015.opensdf
+Competition.vs2015.sdf
+Competition/Competition.vs2015.vcxproj.user

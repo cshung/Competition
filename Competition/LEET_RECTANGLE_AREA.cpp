@@ -67,7 +67,6 @@ namespace _LEET_RECTANGLE_AREA
     public:
         int computeArea(int A, int B, int C, int D, int E, int F, int G, int H)
         {
-            // Step 3: Compute the intesection
             int x_intersection = this->intersection_length(A, C, E, G);
             int y_intersection = this->intersection_length(B, D, F, H);
             int rect1_size = (C - A) * (D - B);

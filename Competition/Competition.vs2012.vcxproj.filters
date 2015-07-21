@@ -612,6 +612,9 @@
     <ClInclude Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_RECTANGLE_AREA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1206,6 +1209,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_RECTANGLE_AREA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

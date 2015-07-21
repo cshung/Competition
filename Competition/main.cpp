@@ -197,6 +197,10 @@
 #include "LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h"                        // 192
 #include "LEET_SUMMARY_RANGES.h"                                            // 193
 #include "LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h"                          // 194
+#include "LEET_RECTANGLE_AREA.h"                                            // 195
+
+// End of headers
+
 //
 // To avoid create a lot of projects/executables for each competition problem,
 // each problem answered as a separate file with an entry function
@@ -402,5 +406,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ADD_AND_SEARCH_WORD();                                       // Accepted
     // return LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST();                        // Accepted
     // return LEET_SUMMARY_RANGES();                                            // Accepted
-    return LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST();                          // Accepted
+    // return LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST();                          // Accepted
+    return LEET_RECTANGLE_AREA();                                            // Accepted
 }

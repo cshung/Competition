@@ -199,6 +199,7 @@
 #include "LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h"                          // 194
 #include "LEET_RECTANGLE_AREA.h"                                            // 195
 #include "LEET_SEARCH_A_2D_MATRIX_II.h"                                     // 196
+#include "LEET_VALID_ANAGRAM.h"                                             // 197
 
 // End of headers
 
@@ -409,5 +410,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SUMMARY_RANGES();                                            // Accepted
     // return LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST();                          // Accepted
     // return LEET_RECTANGLE_AREA();                                            // Accepted
-	return LEET_SEARCH_A_2D_MATRIX_II();                                     // Accepted
+    // return LEET_SEARCH_A_2D_MATRIX_II();                                     // Accepted
+    return LEET_VALID_ANAGRAM();                                             // Accepted
 }

@@ -618,6 +618,9 @@
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_VALID_ANAGRAM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1218,6 +1221,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VALID_ANAGRAM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

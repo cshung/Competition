@@ -615,6 +615,24 @@
     <ClInclude Include="LEET_RECTANGLE_AREA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_CONTAINS_DUPLICATE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_REMOVE_ELEMENT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_VALID_ANAGRAM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1212,6 +1230,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REMOVE_ELEMENT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VALID_ANAGRAM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

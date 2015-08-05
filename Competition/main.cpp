@@ -201,6 +201,8 @@
 #include "LEET_SEARCH_A_2D_MATRIX_II.h"                                     // 196
 #include "LEET_VALID_ANAGRAM.h"                                             // 197
 #include "LEET_IMPLEMENT_TRIE_PREFIX_TREE.h"                                // 198
+#include "LEET_MERGE_TWO_SORTED_LISTS.h"                                    // 199
+#include "LEET_CONTAINS_DUPLICATE.h"                                        // 200
 
 // End of headers
 
@@ -413,5 +415,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_RECTANGLE_AREA();                                            // Accepted
     // return LEET_SEARCH_A_2D_MATRIX_II();                                     // Accepted
     // return LEET_VALID_ANAGRAM();                                             // Accepted
-    return LEET_IMPLEMENT_TRIE_PREFIX_TREE();                                // Accepted
+    // return LEET_IMPLEMENT_TRIE_PREFIX_TREE();                                // Accepted
+    // return LEET_MERGE_TWO_SORTED_LISTS();                                    // Accepted
+    return LEET_CONTAINS_DUPLICATE();                                        // 
 }

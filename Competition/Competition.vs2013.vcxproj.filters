@@ -624,6 +624,12 @@
     <ClInclude Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_CONTAINS_DUPLICATE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1230,6 +1236,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

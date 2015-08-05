@@ -630,6 +630,9 @@
     <ClInclude Include="LEET_CONTAINS_DUPLICATE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REMOVE_ELEMENT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1242,6 +1245,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REMOVE_ELEMENT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -203,6 +203,7 @@
 #include "LEET_IMPLEMENT_TRIE_PREFIX_TREE.h"                                // 198
 #include "LEET_MERGE_TWO_SORTED_LISTS.h"                                    // 199
 #include "LEET_CONTAINS_DUPLICATE.h"                                        // 200
+#include "LEET_REMOVE_ELEMENT.h"                                            // 201
 
 // End of headers
 
@@ -417,5 +418,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_VALID_ANAGRAM();                                             // Accepted
     // return LEET_IMPLEMENT_TRIE_PREFIX_TREE();                                // Accepted
     // return LEET_MERGE_TWO_SORTED_LISTS();                                    // Accepted
-    return LEET_CONTAINS_DUPLICATE();                                        // 
+    // return LEET_CONTAINS_DUPLICATE();                                        // Accepted
+    return LEET_REMOVE_ELEMENT();                                            // 
 }

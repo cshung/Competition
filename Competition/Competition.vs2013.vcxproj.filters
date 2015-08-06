@@ -633,6 +633,12 @@
     <ClInclude Include="LEET_REMOVE_ELEMENT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_IMPLEMENT_STACK_USING_QUEUES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_REVERSE_LINKED_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1248,6 +1254,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REMOVE_ELEMENT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_IMPLEMENT_STACK_USING_QUEUES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

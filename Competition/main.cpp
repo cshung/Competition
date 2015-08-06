@@ -204,6 +204,8 @@
 #include "LEET_MERGE_TWO_SORTED_LISTS.h"                                    // 199
 #include "LEET_CONTAINS_DUPLICATE.h"                                        // 200
 #include "LEET_REMOVE_ELEMENT.h"                                            // 201
+#include "LEET_IMPLEMENT_STACK_USING_QUEUES.h"                              // 202
+#include "LEET_REVERSE_LINKED_LIST.h"                                       // 203
 
 // End of headers
 
@@ -419,5 +421,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_IMPLEMENT_TRIE_PREFIX_TREE();                                // Accepted
     // return LEET_MERGE_TWO_SORTED_LISTS();                                    // Accepted
     // return LEET_CONTAINS_DUPLICATE();                                        // Accepted
-    return LEET_REMOVE_ELEMENT();                                            // 
+    // return LEET_REMOVE_ELEMENT();                                            // Accepted
+    // return LEET_IMPLEMENT_STACK_USING_QUEUES();                              // Accepted
+    return LEET_REVERSE_LINKED_LIST();                                       // Accepted
 }

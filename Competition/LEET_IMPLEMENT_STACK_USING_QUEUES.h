@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_IMPLEMENT_STACK_USING_QUEUES();

@@ -206,6 +206,7 @@
 #include "LEET_REMOVE_ELEMENT.h"                                            // 201
 #include "LEET_IMPLEMENT_STACK_USING_QUEUES.h"                              // 202
 #include "LEET_REVERSE_LINKED_LIST.h"                                       // 203
+#include "LEET_PASCALS_TRIANGLE_II.h"                                       // 204
 
 // End of headers
 
@@ -423,5 +424,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CONTAINS_DUPLICATE();                                        // Accepted
     // return LEET_REMOVE_ELEMENT();                                            // Accepted
     // return LEET_IMPLEMENT_STACK_USING_QUEUES();                              // Accepted
-    return LEET_REVERSE_LINKED_LIST();                                       // Accepted
+    // return LEET_REVERSE_LINKED_LIST();                                       // Accepted
+    return LEET_PASCALS_TRIANGLE_II();                                       // 
 }

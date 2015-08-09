@@ -129,6 +129,7 @@
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
     <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
+    <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
     <ClInclude Include="LEET_PATH_SUM.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
@@ -338,6 +339,7 @@
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_PALINDROME_NUMBER.cpp" />
+    <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />

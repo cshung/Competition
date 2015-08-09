@@ -639,7 +639,11 @@
     <ClInclude Include="LEET_REVERSE_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h">
+=======
+    <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h">
+>>>>>>> 7d9c9a17d4cd11890476652d51b14fb5d086d1b3
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1265,7 +1269,11 @@
     <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp">
+=======
+    <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp">
+>>>>>>> 7d9c9a17d4cd11890476652d51b14fb5d086d1b3
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

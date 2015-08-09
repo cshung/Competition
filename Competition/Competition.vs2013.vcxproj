@@ -105,6 +105,7 @@
     <ClInclude Include="LEET_INTEGER_TO_ROMAN.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h" />
     <ClInclude Include="LEET_INVERT_BINARY_TREE.h" />
+    <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h" />
     <ClInclude Include="LEET_JUMP_GAME.h" />
     <ClInclude Include="LEET_JUMP_GAME_II.h" />
     <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
@@ -315,6 +316,7 @@
     <ClCompile Include="LEET_INTEGER_TO_ROMAN.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp" />
     <ClCompile Include="LEET_JUMP_GAME.cpp" />
     <ClCompile Include="LEET_JUMP_GAME_II.cpp" />
     <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />

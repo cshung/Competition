@@ -209,6 +209,7 @@
 #include "LEET_ISOMORPHIC_STRINGS.h"                                        // 204
 #include "LEET_PASCALS_TRIANGLE_II.h"                                       // 205
 #include "LEET_CONTAINS_DUPLICATE_II.h"                                     // 206
+#include "LEET_COUNT_PRIMES.h"                                              // 207
 
 // End of headers
 
@@ -429,5 +430,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REVERSE_LINKED_LIST();                                       // Accepted
     // return LEET_ISOMORPHIC_STRINGS();                                        // Accepted
     // return LEET_PASCALS_TRIANGLE_II();                                       // Accepted
-    return LEET_CONTAINS_DUPLICATE_II();                                     // Accepted
+    // return LEET_CONTAINS_DUPLICATE_II();                                     // Accepted
+    return LEET_COUNT_PRIMES();                                              // Accepted
 }

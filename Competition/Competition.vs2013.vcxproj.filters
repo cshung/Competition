@@ -651,6 +651,12 @@
     <ClInclude Include="LEET_COUNT_PRIMES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_HAPPY_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1284,6 +1290,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_COUNT_PRIMES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_HAPPY_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

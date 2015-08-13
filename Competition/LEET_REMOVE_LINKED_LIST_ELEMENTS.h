@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_REMOVE_LINKED_LIST_ELEMENTS();

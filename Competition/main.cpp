@@ -210,6 +210,8 @@
 #include "LEET_PASCALS_TRIANGLE_II.h"                                       // 205
 #include "LEET_CONTAINS_DUPLICATE_II.h"                                     // 206
 #include "LEET_COUNT_PRIMES.h"                                              // 207
+#include "LEET_REMOVE_LINKED_LIST_ELEMENTS.h"                               // 208
+#include "LEET_HAPPY_NUMBER.h"                                              // 209
 
 // End of headers
 
@@ -431,5 +433,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ISOMORPHIC_STRINGS();                                        // Accepted
     // return LEET_PASCALS_TRIANGLE_II();                                       // Accepted
     // return LEET_CONTAINS_DUPLICATE_II();                                     // Accepted
-    return LEET_COUNT_PRIMES();                                              // Accepted
+    // return LEET_COUNT_PRIMES();                                              // Accepted
+    // return LEET_REMOVE_LINKED_LIST_ELEMENTS();                               // Accepted
+    return LEET_HAPPY_NUMBER();                                              // Accepted
 }

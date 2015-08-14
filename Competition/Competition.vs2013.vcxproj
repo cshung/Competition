@@ -162,6 +162,7 @@
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
+    <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
@@ -377,6 +378,7 @@
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
+    <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />

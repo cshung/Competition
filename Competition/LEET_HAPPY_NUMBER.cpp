@@ -18,8 +18,6 @@ namespace _LEET_HAPPY_NUMBER
     public:
         bool isHappy(int n)
         {
-            set<int> known;
-            known.insert(n);
             while (true)
             {
                 int sum = 0;
@@ -33,17 +31,13 @@ namespace _LEET_HAPPY_NUMBER
                 {
                     return true;
                 }
+                else if (sum == 4)
+                {
+                    return false;
+                }
                 else
                 {
-                    if (known.find(sum) == known.end())
-                    {
-                        known.insert(sum);
-                        n = sum;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    n = sum;
                 }
             }
         }

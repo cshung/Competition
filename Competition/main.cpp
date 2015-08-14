@@ -212,6 +212,7 @@
 #include "LEET_COUNT_PRIMES.h"                                              // 207
 #include "LEET_REMOVE_LINKED_LIST_ELEMENTS.h"                               // 208
 #include "LEET_HAPPY_NUMBER.h"                                              // 209
+#include "LEET_SYMMETRIC_TREE.h"                                            // 210
 
 // End of headers
 
@@ -435,5 +436,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CONTAINS_DUPLICATE_II();                                     // Accepted
     // return LEET_COUNT_PRIMES();                                              // Accepted
     // return LEET_REMOVE_LINKED_LIST_ELEMENTS();                               // Accepted
-    return LEET_HAPPY_NUMBER();                                              // Accepted
+    // return LEET_HAPPY_NUMBER();                                              // Accepted
+    return LEET_SYMMETRIC_TREE();                                            // Accepted
 }

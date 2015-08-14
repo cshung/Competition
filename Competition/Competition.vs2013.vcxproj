@@ -100,6 +100,7 @@
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
+    <ClInclude Include="LEET_GENERATE_PARENTHESES.h" />
     <ClInclude Include="LEET_HAPPY_NUMBER.h" />
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
@@ -316,6 +317,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
+    <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
     <ClCompile Include="LEET_HAPPY_NUMBER.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.cpp" />

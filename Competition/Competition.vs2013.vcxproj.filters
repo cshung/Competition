@@ -660,6 +660,9 @@
     <ClInclude Include="LEET_SYMMETRIC_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_GENERATE_PARENTHESES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1302,6 +1305,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

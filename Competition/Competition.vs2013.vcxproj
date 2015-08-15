@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
+    <ClInclude Include="LEET_ADD_BINARY.h" />
     <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h" />
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
+    <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
@@ -298,6 +300,7 @@
   <ItemGroup>
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
+    <ClCompile Include="LEET_ADD_BINARY.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp" />
@@ -380,6 +383,7 @@
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
+    <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />

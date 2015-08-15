@@ -214,6 +214,8 @@
 #include "LEET_HAPPY_NUMBER.h"                                              // 209
 #include "LEET_SYMMETRIC_TREE.h"                                            // 210
 #include "LEET_GENERATE_PARENTHESES.h"                                      // 211
+#include "LEET_SWAP_NODES_IN_PAIRS.h"                                       // 212
+#include "LEET_ADD_BINARY.h"                                                // 213
 
 // End of headers
 
@@ -439,5 +441,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REMOVE_LINKED_LIST_ELEMENTS();                               // Accepted
     // return LEET_HAPPY_NUMBER();                                              // Accepted
     // return LEET_SYMMETRIC_TREE();                                            // Accepted
-    return LEET_GENERATE_PARENTHESES();                                      // Accepted
+    // return LEET_GENERATE_PARENTHESES();                                      // Accepted
+    // return LEET_SWAP_NODES_IN_PAIRS();                                       // Accepted
+    return LEET_ADD_BINARY();                                                // Accepted
 }

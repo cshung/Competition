@@ -669,6 +669,12 @@
     <ClInclude Include="LEET_ADD_BINARY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_PATHS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1320,6 +1326,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ADD_BINARY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_PATHS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

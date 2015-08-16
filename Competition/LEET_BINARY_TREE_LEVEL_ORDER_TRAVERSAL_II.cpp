@@ -92,7 +92,7 @@ int LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II()
     e.right = NULL;
 
     Solution solution;
-    vector<vector<int> > result = solution.levelOrder(&a);
+    vector<vector<int> > result = solution.levelOrderBottom(&a);
     for (unsigned int i = 0; i < result.size(); i++)
     {
         for (unsigned int j = 0; j < result[i].size(); j++)

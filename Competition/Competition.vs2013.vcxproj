@@ -162,6 +162,7 @@
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
+    <ClInclude Include="LEET_SINGLE_NUMBER_III.h" />
     <ClInclude Include="LEET_SLIDING_WINDOW_MAXIMUM.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
@@ -170,6 +171,8 @@
     <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
+    <ClInclude Include="LEET_UGLY_NUMBER.h" />
+    <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
@@ -384,6 +387,7 @@
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
+    <ClCompile Include="LEET_SINGLE_NUMBER_III.cpp" />
     <ClCompile Include="LEET_SLIDING_WINDOW_MAXIMUM.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
@@ -392,6 +396,8 @@
     <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
+    <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
+    <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />

@@ -678,6 +678,15 @@
     <ClInclude Include="LEET_ADD_DIGITS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_UGLY_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_UGLY_NUMBER_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SINGLE_NUMBER_III.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1338,6 +1347,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ADD_DIGITS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_UGLY_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_UGLY_NUMBER_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SINGLE_NUMBER_III.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

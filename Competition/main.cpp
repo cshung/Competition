@@ -222,6 +222,7 @@
 #include "LEET_UGLY_NUMBER.h"                                               // 217
 #include "LEET_UGLY_NUMBER_II.h"                                            // 218
 #include "LEET_SINGLE_NUMBER_III.h"                                         // 219
+#include "LEET_VALID_PALINDROME.h"                                          // 220
 
 // End of headers
 
@@ -455,5 +456,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ADD_DIGITS();                                                // Accepted
     // return LEET_UGLY_NUMBER();                                               // Accepted
     // return LEET_UGLY_NUMBER_II();                                            // Accepted
-    return LEET_SINGLE_NUMBER_III();                                         // Accepted
+    // return LEET_SINGLE_NUMBER_III();                                         // Accepted
+    return LEET_VALID_PALINDROME();                                          // Accepted
 }

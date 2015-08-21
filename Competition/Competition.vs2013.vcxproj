@@ -175,6 +175,7 @@
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
+    <ClInclude Include="LEET_VALID_PALINDROME.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
@@ -400,6 +401,7 @@
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
+    <ClCompile Include="LEET_VALID_PALINDROME.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />

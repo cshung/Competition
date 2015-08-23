@@ -690,6 +690,12 @@
     <ClInclude Include="LEET_IMPLEMENT_STRSTR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_VALID_SUDOKU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1362,6 +1368,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_IMPLEMENT_STRSTR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VALID_SUDOKU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

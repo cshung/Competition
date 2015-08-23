@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/3sum/
+// https://leetcode.com/problems/implement-strstr/
 
 #include "LEET_IMPLEMENT_STRSTR.h"
 #include <map>

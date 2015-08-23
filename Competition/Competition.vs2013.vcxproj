@@ -93,6 +93,7 @@
     <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
+    <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_CONTAINER_WITH_MOST_WATER.h" />
@@ -177,6 +178,7 @@
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
+    <ClInclude Include="LEET_VALID_SUDOKU.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
@@ -319,6 +321,7 @@
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
@@ -403,6 +406,7 @@
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />

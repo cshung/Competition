@@ -222,9 +222,10 @@
 #include "LEET_UGLY_NUMBER.h"                                               // 217
 #include "LEET_UGLY_NUMBER_II.h"                                            // 218
 #include "LEET_SINGLE_NUMBER_III.h"                                         // 219
-#include "LEET_IMPLEMENT_STRSTR.h"                                          // 220
-#include "LEET_VALID_SUDOKU.h"                                              // 221
-#include "LEET_COMPARE_VERSION_NUMBERS.h"                                   // 222
+#include "LEET_VALID_PALINDROME.h"                                          // 220
+#include "LEET_IMPLEMENT_STRSTR.h"                                          // 221
+#include "LEET_VALID_SUDOKU.h"                                              // 222
+#include "LEET_COMPARE_VERSION_NUMBERS.h"                                   // 223
 
 // End of headers
 
@@ -459,6 +460,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_UGLY_NUMBER();                                               // Accepted
     // return LEET_UGLY_NUMBER_II();                                            // Accepted
     // return LEET_SINGLE_NUMBER_III();                                         // Accepted
+    // return LEET_VALID_PALINDROME();                                          // Accepted
     // return LEET_IMPLEMENT_STRSTR();                                          // Accepted
     // return LEET_VALID_SUDOKU();                                              // Accepted
     return LEET_COMPARE_VERSION_NUMBERS();                                   // Accepted

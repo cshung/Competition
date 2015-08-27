@@ -227,6 +227,7 @@
 #include "LEET_VALID_SUDOKU.h"                                              // 222
 #include "LEET_COMPARE_VERSION_NUMBERS.h"                                   // 223
 #include "LEET_MISSING_NUMBER.h"                                            // 224
+#include "LEET_DIVIDE_TWO_INTEGERS.h"                                       // 225
 
 // End of headers
 
@@ -465,5 +466,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_IMPLEMENT_STRSTR();                                          // Accepted
     // return LEET_VALID_SUDOKU();                                              // Accepted
     // return LEET_COMPARE_VERSION_NUMBERS();                                   // Accepted
-    return LEET_MISSING_NUMBER();                                            // Accepted
+    // return LEET_MISSING_NUMBER();                                            // Accepted
+    return LEET_DIVIDE_TWO_INTEGERS();                                       // Accepted
 }

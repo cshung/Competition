@@ -102,6 +102,7 @@
     <ClInclude Include="LEET_COUNT_AND_SAY.h" />
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h" />
+    <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
@@ -332,6 +333,7 @@
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />

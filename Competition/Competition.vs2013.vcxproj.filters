@@ -705,6 +705,9 @@
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SQRTX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1392,6 +1395,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SQRTX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

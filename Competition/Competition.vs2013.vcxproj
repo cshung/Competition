@@ -168,6 +168,7 @@
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_III.h" />
     <ClInclude Include="LEET_SLIDING_WINDOW_MAXIMUM.h" />
+    <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
@@ -399,6 +400,7 @@
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_III.cpp" />
     <ClCompile Include="LEET_SLIDING_WINDOW_MAXIMUM.cpp" />
+    <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />

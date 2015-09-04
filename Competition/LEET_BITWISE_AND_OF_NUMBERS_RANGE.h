@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_BITWISE_AND_OF_NUMBERS_RANGE();

@@ -92,6 +92,7 @@
     <ClInclude Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
+    <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
     <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
@@ -324,6 +325,7 @@
     <ClCompile Include="LEET_BINARY_TREE_PATHS.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
+    <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
     <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />

@@ -711,6 +711,9 @@
     <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_H_INDEX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1404,6 +1407,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_H_INDEX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

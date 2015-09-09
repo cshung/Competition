@@ -231,6 +231,7 @@
 #include "LEET_SQRTX.h"                                                     // 226
 #include "LEET_BITWISE_AND_OF_NUMBERS_RANGE.h"                              // 227
 #include "LEET_H_INDEX.h"                                                   // 228
+#include "LEET_FIRST_BAD_VERSION.h"                                         // 229
 
 // End of headers
 
@@ -473,5 +474,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DIVIDE_TWO_INTEGERS();                                       // Accepted
     // return LEET_SQRTX();                                                     // Accepted
     // return LEET_BITWISE_AND_OF_NUMBERS_RANGE();                              // Accepted
-    return LEET_H_INDEX();                                                   // Accepted
+    // return LEET_H_INDEX();                                                   // Accepted
+    return LEET_FIRST_BAD_VERSION();                                         // Accepted
 }

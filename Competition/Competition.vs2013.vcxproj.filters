@@ -714,6 +714,9 @@
     <ClInclude Include="LEET_H_INDEX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIRST_BAD_VERSION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1410,6 +1413,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_H_INDEX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

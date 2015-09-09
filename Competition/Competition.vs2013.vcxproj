@@ -148,6 +148,7 @@
     <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
     <ClInclude Include="LEET_PATH_SUM.h" />
+    <ClInclude Include="LEET_PERFECT_SQUARES.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
     <ClInclude Include="LEET_POWER_OF_TWO.h" />
@@ -383,6 +384,7 @@
     <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />

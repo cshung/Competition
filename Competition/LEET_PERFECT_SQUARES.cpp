@@ -16,41 +16,67 @@ namespace _LEET_PERFECT_SQUARES
 {
     class Solution
     {
-    public:
-        int numSquares(int n)
+    private:
+        bool isSquare(int n)
         {
-            int* values = new int[n + 1]; 
-            for (int i = 1; i <= n; i++)
-            {
-                values[i] = 0;
-            }
-
             for (int i = 1; i * i <= n; i++)
             {
-                values[i * i] = 1;
-            }
-
-            for (int i = 1; i <= n; i++)
-            {
-                if (values[i] == 0)
+                if (i * i == n)
                 {
-                    int min = -1;
-                    for (int j = 1; j < i; j++)
-                    {
-                        int candidate = values[j] + values[i - j];
-                        if (min == -1 || candidate < min)
-                        {
-                            min = candidate;
-                        }
-                    }
-                    values[i] = min;
+                    return true;
                 }
             }
 
-            int result = values[n];
-            delete[] values;
+            return false;
+        }
+        bool isTwoSquare(int n)
+        {
+            for (int i = 1; i * i < n; i++)
+            {
+                int s = i * i;
+                int r = n - s;
+                if (isSquare(r))
+                {
+                    return true;
+                }
+            }
 
-            return result;
+            return false;
+        }
+        bool isThreeSquare(int n)
+        {
+            for (int i = 1; i * i < n; i++)
+            {
+                int s = i * i;
+                int r = n - s;
+                if (isTwoSquare(r))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    public:
+        int numSquares(int n)
+        {
+            if (isSquare(n))
+            {
+                return 1;
+            }
+            else if (isTwoSquare(n))
+            {
+                return 2;
+            }
+            else if (isThreeSquare(n))
+            {
+                return 3;
+            }
+            else
+            {
+                return 4;
+            }
+            
         }
     };
 };
@@ -60,6 +86,9 @@ using namespace _LEET_PERFECT_SQUARES;
 int LEET_PERFECT_SQUARES()
 {
     Solution s;
-    cout << s.numSquares(5254) << endl;
+    for (int i = 1; i <= 10000; i++)
+    {
+        cout << i << " " << s.numSquares(i) << endl;
+    }
     return 0;
 }

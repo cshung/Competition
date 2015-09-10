@@ -477,5 +477,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BITWISE_AND_OF_NUMBERS_RANGE();                              // Accepted
     // return LEET_H_INDEX();                                                   // Accepted
     // return LEET_FIRST_BAD_VERSION();                                         // Accepted
-    return LEET_PERFECT_SQUARES();                                           // 
+    return LEET_PERFECT_SQUARES();                                           // Accepted
 }

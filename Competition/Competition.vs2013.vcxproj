@@ -143,6 +143,7 @@
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
+    <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h" />
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
     <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
     <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h" />
@@ -167,6 +168,7 @@
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
+    <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
@@ -379,6 +381,7 @@
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_PALINDROME_NUMBER.cpp" />
     <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />
@@ -403,6 +406,7 @@
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
+    <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />

@@ -720,6 +720,12 @@
     <ClInclude Include="LEET_PERFECT_SQUARES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1422,6 +1428,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

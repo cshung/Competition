@@ -729,6 +729,12 @@
     <ClInclude Include="LEET_RESTORE_IP_ADDRESSES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1440,6 +1446,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RESTORE_IP_ADDRESSES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

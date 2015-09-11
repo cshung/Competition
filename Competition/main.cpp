@@ -236,6 +236,8 @@
 #include "LEET_SEARCH_A_2D_MATRIX.h"                                        // 231
 #include "LEET_NUMBER_OF_ISLANDS.h"                                         // 232
 #include "LEET_RESTORE_IP_ADDRESSES.h"                                      // 233
+#include "LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h"                           // 234
+#include "LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h"                        // 235
 
 // End of headers
 
@@ -483,5 +485,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_PERFECT_SQUARES();                                           // Accepted
     // return LEET_SEARCH_A_2D_MATRIX();                                        // Accepted
     // return LEET_NUMBER_OF_ISLANDS();                                         // Accepted
-    return LEET_RESTORE_IP_ADDRESSES();                                      // Accepted
+    // return LEET_RESTORE_IP_ADDRESSES();                                      // Accepted
+    // return LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK();                           // Accepted
+    return LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II();                        // Accepted
 }

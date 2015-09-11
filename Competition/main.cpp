@@ -235,6 +235,7 @@
 #include "LEET_PERFECT_SQUARES.h"                                           // 230
 #include "LEET_SEARCH_A_2D_MATRIX.h"                                        // 231
 #include "LEET_NUMBER_OF_ISLANDS.h"                                         // 232
+#include "LEET_RESTORE_IP_ADDRESSES.h"                                      // 233
 
 // End of headers
 
@@ -481,5 +482,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_FIRST_BAD_VERSION();                                         // Accepted
     // return LEET_PERFECT_SQUARES();                                           // Accepted
     // return LEET_SEARCH_A_2D_MATRIX();                                        // Accepted
-    return LEET_NUMBER_OF_ISLANDS();                                         // Accepted
+    // return LEET_NUMBER_OF_ISLANDS();                                         // Accepted
+    return LEET_RESTORE_IP_ADDRESSES();                                      // Accepted
 }

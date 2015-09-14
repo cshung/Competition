@@ -85,6 +85,7 @@
     <ClInclude Include="LEET_ADD_DIGITS.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h" />
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h" />
     <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h" />
     <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.h" />
     <ClInclude Include="LEET_BINARY_TREE_PATHS.h" />
@@ -328,6 +329,7 @@
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />
     <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.cpp" />

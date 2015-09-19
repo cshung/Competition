@@ -738,6 +738,9 @@
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MOVE_ZEROES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1458,6 +1461,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MOVE_ZEROES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

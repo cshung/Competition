@@ -144,6 +144,7 @@
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
+    <ClInclude Include="LEET_MOVE_ZEROES.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h" />
@@ -386,6 +387,7 @@
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
+    <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />

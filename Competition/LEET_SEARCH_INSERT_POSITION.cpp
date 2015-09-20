@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/3sum/
+// https://leetcode.com/problems/search-insert-position/
 
 #include "LEET_SEARCH_INSERT_POSITION.h"
 #include <map>

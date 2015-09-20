@@ -137,6 +137,7 @@
     <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MAXIMUM_SUBARRAY.h" />
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h" />
     <ClInclude Include="LEET_MERGE_K_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
@@ -381,6 +382,7 @@
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_SUBARRAY.cpp" />
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />

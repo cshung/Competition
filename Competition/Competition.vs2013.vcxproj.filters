@@ -750,6 +750,12 @@
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PEEKING_ITERATOR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1482,6 +1488,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PEEKING_ITERATOR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -103,6 +103,7 @@
     <ClInclude Include="LEET_CONTAINER_WITH_MOST_WATER.h" />
     <ClInclude Include="LEET_CONTAINS_DUPLICATE.h" />
     <ClInclude Include="LEET_CONTAINS_DUPLICATE_II.h" />
+    <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_COUNT_AND_SAY.h" />
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
     <ClInclude Include="LEET_PATH_SUM.h" />
+    <ClInclude Include="LEET_PEEKING_ITERATOR.h" />
     <ClInclude Include="LEET_PERFECT_SQUARES.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
@@ -349,6 +351,7 @@
     <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
+    <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
@@ -401,6 +404,7 @@
     <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />

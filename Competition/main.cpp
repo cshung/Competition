@@ -243,6 +243,8 @@
 #include "LEET_SEARCH_INSERT_POSITION.h"                                    // 238
 #include "LEET_MAXIMUM_SUBARRAY.h"                                          // 239
 #include "LEET_MAXIMUM_PRODUCT_SUBARRAY.h"                                  // 240
+#include "LEET_PEEKING_ITERATOR.h"                                          // 241
+#include "LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h"                // 242
 
 // End of headers
 
@@ -497,5 +499,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MOVE_ZEROES();                                               // Accepted
     // return LEET_SEARCH_INSERT_POSITION();                                    // Accepted
     // return LEET_MAXIMUM_SUBARRAY();                                          // Accepted
-    return LEET_MAXIMUM_PRODUCT_SUBARRAY();                                  // Accepted
+    // return LEET_MAXIMUM_PRODUCT_SUBARRAY();                                  // Accepted
+    // return LEET_PEEKING_ITERATOR();                                          // Accepted
+    return LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE();                // Accepted
 }

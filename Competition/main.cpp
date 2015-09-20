@@ -245,6 +245,7 @@
 #include "LEET_MAXIMUM_PRODUCT_SUBARRAY.h"                                  // 240
 #include "LEET_PEEKING_ITERATOR.h"                                          // 241
 #include "LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h"                // 242
+#include "LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h"                      // 243
 
 // End of headers
 
@@ -501,5 +502,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MAXIMUM_SUBARRAY();                                          // Accepted
     // return LEET_MAXIMUM_PRODUCT_SUBARRAY();                                  // Accepted
     // return LEET_PEEKING_ITERATOR();                                          // Accepted
-    return LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE();                // Accepted
+    // return LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE();                // Accepted
+    return LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY();                      // Accepted
 }

@@ -114,6 +114,7 @@
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_FIRST_BAD_VERSION.h" />
     <ClInclude Include="LEET_GENERATE_PARENTHESES.h" />
+    <ClInclude Include="LEET_GRAY_CODE.h" />
     <ClInclude Include="LEET_H_INDEX.h" />
     <ClInclude Include="LEET_HAPPY_NUMBER.h" />
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
@@ -364,6 +365,7 @@
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_GRAY_CODE.cpp" />
     <ClCompile Include="LEET_HAPPY_NUMBER.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_H_INDEX.cpp" />

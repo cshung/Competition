@@ -248,6 +248,7 @@
 #include "LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h"                      // 243
 #include "LEET_UNIQUE_PATHS.h"                                              // 244
 #include "LEET_GRAY_CODE.h"                                                 // 245
+#include "LEET_SORT_COLORS.h"                                               // 246
 
 // End of headers
 
@@ -507,5 +508,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE();                // Accepted
     // return LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY();                      // Accepted
     // return LEET_UNIQUE_PATHS();                                              // Accepted
-    return LEET_GRAY_CODE();                                                 // Accepted
+    // return LEET_GRAY_CODE();                                                 // Accepted
+    return LEET_SORT_COLORS();                                               // Accepted
 }

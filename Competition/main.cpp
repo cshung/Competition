@@ -250,6 +250,7 @@
 #include "LEET_GRAY_CODE.h"                                                 // 245
 #include "LEET_SORT_COLORS.h"                                               // 246
 #include "LEET_MINIMUM_PATH_SUM.h"                                          // 247
+#include "LEET_VALIDATE_BINARY_SEARCH_TREE.h"                               // 248
 
 // End of headers
 
@@ -511,5 +512,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_UNIQUE_PATHS();                                              // Accepted
     // return LEET_GRAY_CODE();                                                 // Accepted
     // return LEET_SORT_COLORS();                                               // Accepted
-    return LEET_MINIMUM_PATH_SUM();                                          // Accepted
+    // return LEET_MINIMUM_PATH_SUM();                                          // Accepted
+    return LEET_VALIDATE_BINARY_SEARCH_TREE();                               // Accepted
 }

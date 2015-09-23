@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ROTATE_IMAGE.h" />
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
     <ClInclude Include="LEET_ADD_BINARY.h" />
@@ -432,6 +433,7 @@
     <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
+    <ClCompile Include="LEET_ROTATE_IMAGE.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />

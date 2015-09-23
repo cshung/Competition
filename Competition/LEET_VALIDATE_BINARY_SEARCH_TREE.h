@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_VALIDATE_BINARY_SEARCH_TREE();

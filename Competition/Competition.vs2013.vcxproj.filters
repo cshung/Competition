@@ -771,7 +771,11 @@
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="LEET_ROTATE_IMAGE.h">
+=======
+    <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h">
+>>>>>>> 6605a7c14ec53afd5f0b8071bbdaffa28ac55879
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1530,6 +1534,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ROTATE_IMAGE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

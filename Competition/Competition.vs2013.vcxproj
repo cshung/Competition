@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
@@ -416,6 +417,7 @@
     <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
+    <ClCompile Include="LEET_PERMUTATIONS.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />

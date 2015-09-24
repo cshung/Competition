@@ -777,6 +777,9 @@
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PERMUTATIONS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1536,6 +1539,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PERMUTATIONS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -783,6 +783,9 @@
     <ClInclude Include="LEET_SPIRAL_MATRIX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SPIRAL_MATRIX_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1548,6 +1551,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -191,6 +191,7 @@
     <ClInclude Include="LEET_SLIDING_WINDOW_MAXIMUM.h" />
     <ClInclude Include="LEET_SORT_COLORS.h" />
     <ClInclude Include="LEET_SPIRAL_MATRIX.h" />
+    <ClInclude Include="LEET_SPIRAL_MATRIX_II.h" />
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
@@ -448,6 +449,7 @@
     <ClCompile Include="LEET_SLIDING_WINDOW_MAXIMUM.cpp" />
     <ClCompile Include="LEET_SORT_COLORS.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp" />
+    <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />

@@ -253,6 +253,7 @@
 #include "LEET_ROTATE_IMAGE.h"                                              // 248
 #include "LEET_VALIDATE_BINARY_SEARCH_TREE.h"                               // 249
 #include "LEET_PERMUTATIONS.h"                                              // 250
+#include "LEET_SPIRAL_MATRIX.h"                                             // 251
 
 // End of headers
 
@@ -517,5 +518,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINIMUM_PATH_SUM();                                          // Accepted
     // return LEET_ROTATE_IMAGE();                                              // Accepted
     // return LEET_VALIDATE_BINARY_SEARCH_TREE();                               // Accepted
-    return LEET_PERMUTATIONS();                                              // Accepted
+    // return LEET_PERMUTATIONS();                                              // Accepted
+    return LEET_SPIRAL_MATRIX();                                             // Accepted
 }

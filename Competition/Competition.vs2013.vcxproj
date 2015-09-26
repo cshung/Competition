@@ -206,6 +206,7 @@
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_UNIQUE_PATHS.h" />
+    <ClInclude Include="LEET_UNIQUE_PATHS_II.h" />
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
     <ClInclude Include="LEET_VALID_PALINDROME.h" />
@@ -466,6 +467,7 @@
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_UNIQUE_PATHS.cpp" />
+    <ClCompile Include="LEET_UNIQUE_PATHS_II.cpp" />
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
     <ClCompile Include="LEET_VALID_PALINDROME.cpp" />

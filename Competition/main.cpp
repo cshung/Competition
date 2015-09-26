@@ -257,6 +257,7 @@
 #include "LEET_SPIRAL_MATRIX_II.h"                                          // 252
 #include "LEET_GAS_STATION.h"                                               // 253
 #include "LEET_POW_X_N.h"                                                   // 254
+#include "LEET_UNIQUE_PATHS_II.h"                                           // 255
 
 // End of headers
 
@@ -525,5 +526,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SPIRAL_MATRIX();                                             // Accepted
     // return LEET_SPIRAL_MATRIX_II();                                          // Accepted
     // return LEET_GAS_STATION();                                               // Accepted
-    return LEET_POW_X_N();                                                   // Accepted
+    // return LEET_POW_X_N();                                                   // Accepted
+    return LEET_UNIQUE_PATHS_II();                                           // Accepted
 }

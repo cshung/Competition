@@ -79,7 +79,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
+    <ClInclude Include="LEET_POW_X_N.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
@@ -371,6 +373,7 @@
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
+    <ClCompile Include="LEET_GAS_STATION.cpp" />
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
     <ClCompile Include="LEET_GRAY_CODE.cpp" />
     <ClCompile Include="LEET_HAPPY_NUMBER.cpp" />
@@ -423,6 +426,7 @@
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
+    <ClCompile Include="LEET_POW_X_N.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />

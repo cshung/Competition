@@ -255,6 +255,8 @@
 #include "LEET_PERMUTATIONS.h"                                              // 250
 #include "LEET_SPIRAL_MATRIX.h"                                             // 251
 #include "LEET_SPIRAL_MATRIX_II.h"                                          // 252
+#include "LEET_GAS_STATION.h"                                               // 253
+#include "LEET_POW_X_N.h"                                                   // 254
 
 // End of headers
 
@@ -521,5 +523,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_VALIDATE_BINARY_SEARCH_TREE();                               // Accepted
     // return LEET_PERMUTATIONS();                                              // Accepted
     // return LEET_SPIRAL_MATRIX();                                             // Accepted
-    return LEET_SPIRAL_MATRIX_II();                                          // Accepted
+    // return LEET_SPIRAL_MATRIX_II();                                          // Accepted
+    // return LEET_GAS_STATION();                                               // Accepted
+    return LEET_POW_X_N();                                                   // Accepted
 }

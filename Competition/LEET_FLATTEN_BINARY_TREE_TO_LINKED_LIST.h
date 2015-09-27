@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST();

@@ -798,6 +798,9 @@
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1578,6 +1581,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

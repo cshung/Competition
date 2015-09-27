@@ -259,6 +259,7 @@
 #include "LEET_POW_X_N.h"                                                   // 254
 #include "LEET_UNIQUE_PATHS_II.h"                                           // 255
 #include "LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h"                           // 256
+#include "LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h"                        // 257
 
 // End of headers
 
@@ -529,5 +530,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_GAS_STATION();                                               // Accepted
     // return LEET_POW_X_N();                                                   // Accepted
     // return LEET_UNIQUE_PATHS_II();                                           // Accepted
-    return LEET_BINARY_TREE_POSTORDER_TRAVERSAL();                           // Accepted
+    // return LEET_BINARY_TREE_POSTORDER_TRAVERSAL();                           // Accepted
+    return LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST();                        // Accepted
 }

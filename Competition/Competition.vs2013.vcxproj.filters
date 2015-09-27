@@ -804,6 +804,9 @@
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SUBSETS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1590,6 +1593,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUBSETS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

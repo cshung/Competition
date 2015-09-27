@@ -199,6 +199,7 @@
     <ClInclude Include="LEET_SPIRAL_MATRIX_II.h" />
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
+    <ClInclude Include="LEET_SUBSETS.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
@@ -463,6 +464,7 @@
     <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
+    <ClCompile Include="LEET_SUBSETS.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />

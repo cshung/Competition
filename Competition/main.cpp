@@ -539,5 +539,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SET_MATRIX_ZEROES();                                         // Accepted
     // return LEET_SUBSETS();                                                   // Accepted
     // return LEET_SUBSETS_II();                                                // Accepted
-    return LEET_FIND_THE_DUPLICATE_NUMBER();                                 // Accepted
+    return LEET_FIND_THE_DUPLICATE_NUMBER();                                 // The approach is broken - try something else
 }

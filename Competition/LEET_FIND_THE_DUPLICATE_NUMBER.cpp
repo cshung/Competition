@@ -37,7 +37,7 @@ namespace _LEET_FIND_THE_DUPLICATE_NUMBER
                     }
                 }
                 int noDupSum = (mid - 1) * mid / 2;
-                if (sum == noDupSum)
+                if (sum <= noDupSum)
                 {
                     begin = mid;
                 }
@@ -54,10 +54,12 @@ using namespace _LEET_FIND_THE_DUPLICATE_NUMBER;
 
 int LEET_FIND_THE_DUPLICATE_NUMBER()
 {
-    int case1[] = { 2, 1, 2 };
+    int case1[] = { 2, 2, 2, 2, 2 };
     int case2[] = { 1, 2, 3, 4, 5, 6, 7, 7 };
+    int case3[] = { 4, 4, 16, 3, 12, 18, 11, 19, 10, 17, 4, 15, 4, 9, 4, 13, 4, 4, 1, 4 };
     Solution solution;
-    cout << solution.findDuplicate(vector<int>(case1, case1 + _countof(case1))) << endl;
-    cout << solution.findDuplicate(vector<int>(case2, case2 + _countof(case2))) << endl;
+    //cout << solution.findDuplicate(vector<int>(case1, case1 + _countof(case1))) << endl;
+    //cout << solution.findDuplicate(vector<int>(case2, case2 + _countof(case2))) << endl;
+    cout << solution.findDuplicate(vector<int>(case3, case3 + _countof(case3))) << endl;
     return 0;
 }

@@ -810,6 +810,9 @@
     <ClInclude Include="LEET_SUBSETS_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1602,6 +1605,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUBSETS_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

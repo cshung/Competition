@@ -264,6 +264,7 @@
 #include "LEET_SUBSETS.h"                                                   // 259
 #include "LEET_SUBSETS_II.h"                                                // 260
 #include "LEET_FIND_THE_DUPLICATE_NUMBER.h"                                 // 261
+#include "LEET_FIND_PEAK_ELEMENT.h"                                         // 262
 
 // End of headers
 
@@ -539,5 +540,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SET_MATRIX_ZEROES();                                         // Accepted
     // return LEET_SUBSETS();                                                   // Accepted
     // return LEET_SUBSETS_II();                                                // Accepted
-    return LEET_FIND_THE_DUPLICATE_NUMBER();                                 // Accepted
+    // return LEET_FIND_THE_DUPLICATE_NUMBER();                                 // Accepted
+    return LEET_FIND_PEAK_ELEMENT();                                         // Accepted
 }

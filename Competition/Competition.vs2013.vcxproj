@@ -85,6 +85,7 @@
     <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h" />
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
+    <ClInclude Include="LEET_NIM_GAME.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_POW_X_N.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
@@ -426,6 +427,7 @@
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
+    <ClCompile Include="LEET_NIM_GAME.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />

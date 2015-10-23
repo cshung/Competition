@@ -204,6 +204,7 @@
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="LEET_SUBSETS.h" />
     <ClInclude Include="LEET_SUBSETS_II.h" />
+    <ClInclude Include="LEET_SUDOKU_SOLVER.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
     <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
@@ -475,6 +476,7 @@
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />
     <ClCompile Include="LEET_SUBSETS_II.cpp" />
+    <ClCompile Include="LEET_SUDOKU_SOLVER.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />

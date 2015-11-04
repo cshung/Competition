@@ -268,6 +268,7 @@
 #include "LEET_MULTIPLY_STRINGS.h"                                          // 263
 #include "LEET_NIM_GAME.h"                                                  // 264
 #include "LEET_SUDOKU_SOLVER.h"                                             // 265
+#include "LEET_BULLS_AND_COWS.h"                                            // 266
 
 // End of headers
 
@@ -547,5 +548,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_FIND_PEAK_ELEMENT();                                         // Accepted
     // return LEET_MULTIPLY_STRINGS();                                          // Code too long :(
     // return LEET_NIM_GAME();                                                  // Accepted
-	return LEET_SUDOKU_SOLVER();                                             // Accepted
+	// return LEET_SUDOKU_SOLVER();                                             // Accepted
+    return LEET_BULLS_AND_COWS();                                            // Accepted
 }

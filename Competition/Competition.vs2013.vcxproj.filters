@@ -822,6 +822,15 @@
     <ClInclude Include="LEET_NIM_GAME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BULLS_AND_COWS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SUDOKU_SOLVER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1626,6 +1635,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_NIM_GAME.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BULLS_AND_COWS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUDOKU_SOLVER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

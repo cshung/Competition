@@ -270,6 +270,7 @@
 #include "LEET_SUDOKU_SOLVER.h"                                             // 265
 #include "LEET_BULLS_AND_COWS.h"                                            // 266
 #include "LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h"                     // 267
+#include "LEET_RANGE_SUM_QUERY_IMMUTABLE.h"                                 // 268
 
 // End of headers
 
@@ -551,5 +552,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_NIM_GAME();                                                  // Accepted
 	// return LEET_SUDOKU_SOLVER();                                             // Accepted
     // return LEET_BULLS_AND_COWS();                                            // Accepted
-    return LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE();                     // Accepted
+    // return LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE();                     // Accepted
+    return LEET_RANGE_SUM_QUERY_IMMUTABLE();                                 // Accepted
 }

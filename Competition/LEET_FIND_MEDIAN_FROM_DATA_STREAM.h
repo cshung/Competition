@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_FIND_MEDIAN_FROM_DATA_STREAM();

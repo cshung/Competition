@@ -837,6 +837,9 @@
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1656,6 +1659,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

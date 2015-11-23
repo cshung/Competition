@@ -272,6 +272,7 @@
 #include "LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h"                     // 267
 #include "LEET_RANGE_SUM_QUERY_IMMUTABLE.h"                                 // 268
 #include "LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h"                              // 269
+#include "LEET_RANGE_SUM_QUERY_MUTABLE.h"                                   // 270
 
 // End of headers
 
@@ -555,5 +556,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BULLS_AND_COWS();                                            // Accepted
     // return LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE();                     // Accepted
     // return LEET_RANGE_SUM_QUERY_IMMUTABLE();                                 // Accepted
-    return LEET_RANGE_SUM_QUERY_2D_IMMUTABLE();                              // Accepted
+    // return LEET_RANGE_SUM_QUERY_2D_IMMUTABLE();                              // Accepted
+    return LEET_RANGE_SUM_QUERY_MUTABLE();                                   // Accepted
 }

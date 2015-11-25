@@ -97,6 +97,7 @@
     <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
+    <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
@@ -147,6 +148,9 @@
     <ClInclude Include="LEET_POWER_OF_TWO.h" />
     <ClInclude Include="LEET_POW_X_N.h" />
     <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
     <ClInclude Include="LEET_RECTANGLE_AREA.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
@@ -386,6 +390,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
+    <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
     <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
@@ -448,6 +453,9 @@
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_POW_X_N.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />

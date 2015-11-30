@@ -79,6 +79,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
+    <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
@@ -362,6 +364,8 @@
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
+    <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />

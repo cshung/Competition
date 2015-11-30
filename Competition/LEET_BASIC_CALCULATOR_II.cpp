@@ -8,6 +8,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <stack>
 
 using namespace std;
 
@@ -17,27 +18,17 @@ namespace _LEET_BASIC_CALCULATOR_II
     {
     public:
         // Scanner states
-        int position;
+        unsigned int position;
         char token;
         string* expression;
 
-        // Expression = Factor
-        // Expression = Expression + Factor
-        // Expression = Expression - Factor
-        // Factor = Factor * Value
-        // Factor = Factor / Value
-        // Factor = Value
-        // Value = Number
-        // Value = ( Expression )
-
-        // The key innovation in this solution is parsing backward and thus eliminate the left recursion problem of the left associative grammar
         void scan()
         {
             while (true)
             {
-                if (position >= 0)
+                if (position < (*expression).size())
                 {
-                    token = (*expression)[position--];
+                    token = (*expression)[position++];
                 }
                 else
                 {
@@ -50,156 +41,122 @@ namespace _LEET_BASIC_CALCULATOR_II
             }
         }
 
-        bool ParseValue(int* result)
-        {
-            if (token >= '0' && token <= '9')
-            {
-                int base = 1;
-                *result = 0;
-                while (true)
-                {
-                    if (token >= '0' && token <= '9')
-                    {
-                        int digit = token - '0';
-                        *result = *result + base * digit;
-                        base *= 10;
-                        scan();
-                    }
-                    else
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            else if (token == ')')
-            {
-                scan();
-                int bracketedExpression;
-                if (ParseExpression(&bracketedExpression))
-                {
-                    *result = bracketedExpression;
-                    if (token == '(')
-                    {   
-                        scan();
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        bool ParseFactor(int* result)
-        {
-            if ((token >= '0' && token <= '9') || token == ')')
-            {
-                int tail;
-                if (ParseValue(&tail))
-                {
-                    if (token == '*')
-                    {
-                        scan();
-                        int head;
-                        if (ParseFactor(&head))
-                        {
-                            *result = head * tail;
-                            return true;
-                        }
-                    }
-                    else if (token == '/')
-                    {
-                        scan();
-                        int head;
-                        if (ParseFactor(&head))
-                        {
-                            *result = head / tail;
-                            return true;
-                        }
-                    }
-                    else if (token == '\0' || token == '(' || token == '+' || token == '-')
-                    {
-                        *result = tail;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-
-                return false;
-            }
-            return false;
-        }
-
-        bool ParseExpression(int* result)
-        {
-            if ((token >= '0' && token <= '9') || token == ')')
-            {
-                int tail;
-                if (ParseFactor(&tail))
-                {
-                    if (token == '+')
-                    {
-                        scan();
-                        int head;
-                        if (ParseExpression(&head))
-                        {
-                            *result = head + tail;
-                            return true;
-                        }
-                    }
-                    else if (token == '-')
-                    {
-                        scan();
-                        int head;
-                        if (ParseExpression(&head))
-                        {
-                            *result = head - tail;
-                            return true;
-                        }
-                    }
-                    else if (token == '\0' || token == '(')
-                    {
-                        *result = tail;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            }
-
-            return false;
-        }
-
+        // A hand written shift-reduce parser!
+        // I could have adapted the previous top-down parsing solution
+        // But there is a test case in the judge to stress memory usage, and a top down parser necessarily use up the space because of the recursion
+        // A shift-reduce parser can save space by reducing early and not using the stack space
         int calculate(string s)
         {
-            position = s.size() - 1;
+            const int PLUS = 0;
+            const int MINUS = 1;
+            const int MULTIPLY = 2;
+            const int DIVIDE = 3;
+
+            stack<int> numStack;
+            stack<int> sigStack;
+
+            position = 0;
             expression = &s;
-            scan();
-            int result;
-            if (ParseExpression(&result))
+
+            const int EXPECT_DIGIT = 0;
+            const int EXPECT_DIGIT_OR_OPERATOR = 1;
+            int state = EXPECT_DIGIT;
+
+            int currentNumber = 0;
+            while (true)
             {
-                return result;
+                scan();
+                if (token >= '0' && token <= '9')
+                {
+                    state = EXPECT_DIGIT_OR_OPERATOR;
+                    currentNumber = currentNumber * 10 + (token - '0');
+                }
+                else
+                {
+                    if (EXPECT_DIGIT)
+                    {
+                        throw 1;
+                    }
+                    numStack.push(currentNumber);
+                    currentNumber = 0;
+                    if (token == '*' || token == '/')
+                    {
+                        while (sigStack.size() > 0)
+                        {
+                            if (sigStack.top() >= MULTIPLY)
+                            {
+                                int operand2 = numStack.top(); numStack.pop();
+                                int operand1 = numStack.top(); numStack.pop();
+                                if (sigStack.top() == MULTIPLY)
+                                {
+                                    numStack.push(operand1 * operand2);
+                                }
+                                else if (sigStack.top() == DIVIDE)
+                                {
+                                    numStack.push(operand1 / operand2);
+                                }
+                                sigStack.pop();
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        if (token == '*')
+                        {
+                            sigStack.push(MULTIPLY);
+                        }
+                        else if (token == '/')
+                        {
+                            sigStack.push(DIVIDE);
+                        }
+
+                        state = EXPECT_DIGIT;
+                    }
+                    else if (token == '+' || token == '-' || token == '\0')
+                    {
+                        while (sigStack.size() > 0)
+                        {
+
+                            int operand2 = numStack.top(); numStack.pop();
+                            int operand1 = numStack.top(); numStack.pop();
+                            if (sigStack.top() == PLUS)
+                            {
+                                numStack.push(operand1 + operand2);
+                            }
+                            else if (sigStack.top() == MINUS)
+                            {
+                                numStack.push(operand1 - operand2);
+                            }
+                            else if (sigStack.top() == MULTIPLY)
+                            {
+                                numStack.push(operand1 * operand2);
+                            }
+                            else if (sigStack.top() == DIVIDE)
+                            {
+                                numStack.push(operand1 / operand2);
+                            }
+                            sigStack.pop();
+                        }
+                        if (token == '+')
+                        {
+                            sigStack.push(PLUS);
+                        }
+                        else if (token == '-')
+                        {
+                            sigStack.push(MINUS);
+                        }
+                        else if (token == '\0')
+                        {
+                            return numStack.top();
+                        }
+
+                        state = EXPECT_DIGIT;
+                    }
+                }
             }
-            cout << "Parse error!" << endl;
+
             return 0;
         }
     };
@@ -209,9 +166,9 @@ using namespace _LEET_BASIC_CALCULATOR_II;
 
 int LEET_BASIC_CALCULATOR_II()
 {
-    string s;
-    cin >> s;
     Solution solution;
-    cout << solution.calculate(s) << endl;
+    cout << (solution.calculate("3+2*2") == 7) << endl;
+    cout << (solution.calculate(" 3/2 ") == 1) << endl;
+    cout << (solution.calculate(" 3+5 / 2 ") == 5) << endl;
     return 0;
 }

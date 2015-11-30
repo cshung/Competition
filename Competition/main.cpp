@@ -274,6 +274,8 @@
 #include "LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h"                              // 269
 #include "LEET_RANGE_SUM_QUERY_MUTABLE.h"                                   // 270
 #include "LEET_FIND_MEDIAN_FROM_DATA_STREAM.h"                              // 271
+#include "LEET_BASIC_CALCULATOR.h"                                          // 272
+#include "LEET_BASIC_CALCULATOR_II.h"                                       // 273
 
 // End of headers
 
@@ -559,5 +561,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_RANGE_SUM_QUERY_IMMUTABLE();                                 // Accepted
     // return LEET_RANGE_SUM_QUERY_2D_IMMUTABLE();                              // Accepted
     // return LEET_RANGE_SUM_QUERY_MUTABLE();                                   // Accepted
-    return LEET_FIND_MEDIAN_FROM_DATA_STREAM();                              // Accepted
+    // return LEET_FIND_MEDIAN_FROM_DATA_STREAM();                              // Accepted
+    // return LEET_BASIC_CALCULATOR();                                          // Accepted
+    return LEET_BASIC_CALCULATOR_II();                                       // 
 }

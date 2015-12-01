@@ -276,6 +276,7 @@
 #include "LEET_FIND_MEDIAN_FROM_DATA_STREAM.h"                              // 271
 #include "LEET_BASIC_CALCULATOR.h"                                          // 272
 #include "LEET_BASIC_CALCULATOR_II.h"                                       // 273
+#include "LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h"            // 274
 
 // End of headers
 
@@ -563,5 +564,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_RANGE_SUM_QUERY_MUTABLE();                                   // Accepted
     // return LEET_FIND_MEDIAN_FROM_DATA_STREAM();                              // Accepted
     // return LEET_BASIC_CALCULATOR();                                          // Accepted
-    return LEET_BASIC_CALCULATOR_II();                                       // Accepted
+    // return LEET_BASIC_CALCULATOR_II();                                       // Accepted
+    return LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II();            // Accepted
 }

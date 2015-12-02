@@ -83,6 +83,7 @@
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
+    <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
@@ -382,6 +383,7 @@
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
     <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_COMBINATIONS.cpp" />
     <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />

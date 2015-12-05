@@ -93,6 +93,7 @@
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
+    <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
     <ClInclude Include="LEET_CONTAINS_DUPLICATE.h" />
     <ClInclude Include="LEET_CONTAINS_DUPLICATE_II.h" />
@@ -105,6 +106,7 @@
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
     <ClInclude Include="LEET_FIRST_BAD_VERSION.h" />
     <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h" />
+    <ClInclude Include="LEET_GAME_OF_LIFE.h" />
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_GENERATE_PARENTHESES.h" />
     <ClInclude Include="LEET_GRAY_CODE.h" />
@@ -380,6 +382,7 @@
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
     <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_COMBINATIONS.cpp" />
     <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
@@ -400,6 +403,7 @@
     <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
     <ClCompile Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_GAME_OF_LIFE.cpp" />
     <ClCompile Include="LEET_GAS_STATION.cpp" />
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
     <ClCompile Include="LEET_GRAY_CODE.cpp" />

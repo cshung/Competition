@@ -280,6 +280,7 @@
 #include "LEET_WORD_PATTERN.h"                                              // 275
 #include "LEET_COMBINATIONS.h"                                              // 276
 #include "LEET_GAME_OF_LIFE.h"                                              // 277
+#include "LEET_BURST_BALLOONS.h"                                            // 278
 
 // End of headers
 
@@ -571,5 +572,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II();            // Accepted
     // return LEET_WORD_PATTERN();                                              // Accepted
     // return LEET_COMBINATIONS();                                              // Accepted
-    return LEET_GAME_OF_LIFE();                                              // Accepted
+    // return LEET_GAME_OF_LIFE();                                              // Accepted
+    return LEET_BURST_BALLOONS();                                            // 
 }

@@ -861,6 +861,9 @@
     <ClInclude Include="LEET_GAME_OF_LIFE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BURST_BALLOONS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1704,6 +1707,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_GAME_OF_LIFE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BURST_BALLOONS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

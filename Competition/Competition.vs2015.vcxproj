@@ -145,6 +145,8 @@
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
     <ClInclude Include="LEET_ADD_BINARY.h" />
     <ClInclude Include="LEET_ADD_DIGITS.h" />
+    <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
+    <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h" />
@@ -159,7 +161,11 @@
     <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
+    <ClInclude Include="LEET_BULB_SWITCHER.h" />
+    <ClInclude Include="LEET_BULLS_AND_COWS.h" />
+    <ClInclude Include="LEET_BURST_BALLOONS.h" />
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
+    <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" />
@@ -174,9 +180,13 @@
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h" />
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
+    <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
+    <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
     <ClInclude Include="LEET_FIRST_BAD_VERSION.h" />
     <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h" />
+    <ClInclude Include="LEET_GAME_OF_LIFE.h" />
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_GENERATE_PARENTHESES.h" />
     <ClInclude Include="LEET_GRAY_CODE.h" />
@@ -216,6 +226,8 @@
     <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
     <ClInclude Include="LEET_MOVE_ZEROES.h" />
+    <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
+    <ClInclude Include="LEET_NIM_GAME.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h" />
@@ -229,9 +241,13 @@
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
+    <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
     <ClInclude Include="LEET_POWER_OF_TWO.h" />
     <ClInclude Include="LEET_POW_X_N.h" />
     <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
     <ClInclude Include="LEET_RECTANGLE_AREA.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
@@ -251,6 +267,7 @@
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
     <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
+    <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h" />
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
@@ -263,6 +280,7 @@
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_SUBSETS.h" />
     <ClInclude Include="LEET_SUBSETS_II.h" />
+    <ClInclude Include="LEET_SUDOKU_SOLVER.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
@@ -279,6 +297,7 @@
     <ClInclude Include="LEET_VALID_PALINDROME.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
     <ClInclude Include="LEET_VALID_SUDOKU.h" />
+    <ClInclude Include="LEET_WORD_PATTERN.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
@@ -413,6 +432,8 @@
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
+    <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />
@@ -425,7 +446,11 @@
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
+    <ClCompile Include="LEET_BULB_SWITCHER.cpp" />
+    <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
+    <ClCompile Include="LEET_BURST_BALLOONS.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_COMBINATIONS.cpp" />
     <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
@@ -440,9 +465,13 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
+    <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
+    <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
     <ClCompile Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_GAME_OF_LIFE.cpp" />
     <ClCompile Include="LEET_GAS_STATION.cpp" />
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
     <ClCompile Include="LEET_GRAY_CODE.cpp" />
@@ -482,6 +511,8 @@
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
+    <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
+    <ClCompile Include="LEET_NIM_GAME.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />
@@ -495,9 +526,13 @@
     <ClCompile Include="LEET_PERMUTATIONS.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
+    <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_POW_X_N.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
@@ -517,6 +552,7 @@
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
+    <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
@@ -529,6 +565,7 @@
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />
     <ClCompile Include="LEET_SUBSETS_II.cpp" />
+    <ClCompile Include="LEET_SUDOKU_SOLVER.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
@@ -545,6 +582,7 @@
     <ClCompile Include="LEET_VALID_PALINDROME.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
     <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
+    <ClCompile Include="LEET_WORD_PATTERN.cpp" />
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />

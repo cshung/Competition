@@ -574,6 +574,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_WORD_PATTERN();                                              // Accepted
     // return LEET_COMBINATIONS();                                              // Accepted
     // return LEET_GAME_OF_LIFE();                                              // Accepted
-    // return LEET_BURST_BALLOONS();                                            // 
-    return LEET_BULB_SWITCHER();                                                // Accepted
+    // return LEET_BURST_BALLOONS();                                            // Accepted
+    return LEET_BULB_SWITCHER();                                             // Accepted
 }

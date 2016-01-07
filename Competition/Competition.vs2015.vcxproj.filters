@@ -870,6 +870,9 @@
     <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_COIN_CHANGE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1722,6 +1725,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_COIN_CHANGE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

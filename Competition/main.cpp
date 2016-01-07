@@ -283,6 +283,7 @@
 #include "LEET_BURST_BALLOONS.h"                                            // 278
 #include "LEET_BULB_SWITCHER.h"                                             // 279
 #include "LEET_COUNT_COMPLETE_TREE_NODES.h"                                 // 280
+#include "LEET_COIN_CHANGE.h"                                               // 281
 
 // End of headers
 
@@ -577,5 +578,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_GAME_OF_LIFE();                                              // Accepted
     // return LEET_BURST_BALLOONS();                                            // Accepted
     // return LEET_BULB_SWITCHER();                                             // Accepted
-    return LEET_COUNT_COMPLETE_TREE_NODES();                                 // Accepted
+    // return LEET_COUNT_COMPLETE_TREE_NODES();                                 // Accepted
+    return LEET_COIN_CHANGE();                                               // Accepted
 }

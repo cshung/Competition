@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS();

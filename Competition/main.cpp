@@ -284,6 +284,7 @@
 #include "LEET_BULB_SWITCHER.h"                                             // 279
 #include "LEET_COUNT_COMPLETE_TREE_NODES.h"                                 // 280
 #include "LEET_COIN_CHANGE.h"                                               // 281
+#include "LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h"                           // 282
 
 // End of headers
 
@@ -579,5 +580,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BURST_BALLOONS();                                            // Accepted
     // return LEET_BULB_SWITCHER();                                             // Accepted
     // return LEET_COUNT_COMPLETE_TREE_NODES();                                 // Accepted
-    return LEET_COIN_CHANGE();                                               // Accepted
+    // return LEET_COIN_CHANGE();                                               // Accepted
+    return LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS();                           // 
 }

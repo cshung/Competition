@@ -86,6 +86,7 @@
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
     <ClInclude Include="LEET_BURST_BALLOONS.h" />
     <ClInclude Include="LEET_COMBINATIONS.h" />
+    <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
@@ -397,6 +398,7 @@
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
+    <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />

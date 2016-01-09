@@ -13,9 +13,11 @@ using namespace std;
 
 namespace _LEET_POWER_OF_THREE
 {
-    class Solution {
+    class Solution
+    {
     public:
-        bool isPowerOfThree(int n) {
+        bool isPowerOfThree(int n)
+        {
             if (n == 1) return true;
             if (n == 3) return true;
             if (n == 9) return true;

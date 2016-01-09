@@ -583,5 +583,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_COMPLETE_TREE_NODES();                                 // Accepted
     // return LEET_COIN_CHANGE();                                               // Accepted
     // return LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS();                           // Accepted
-    return LEET_POWER_OF_THREE();                                            // 
+    return LEET_POWER_OF_THREE();                                            // Accepted
 }

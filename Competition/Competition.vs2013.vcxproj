@@ -99,6 +99,7 @@
     <ClInclude Include="LEET_NIM_GAME.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
+    <ClInclude Include="LEET_POWER_OF_THREE.h" />
     <ClInclude Include="LEET_POW_X_N.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
@@ -471,6 +472,7 @@
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.cpp" />
+    <ClCompile Include="LEET_POWER_OF_THREE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_POW_X_N.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />

@@ -879,6 +879,9 @@
     <ClInclude Include="LEET_POWER_OF_THREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1740,6 +1743,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_POWER_OF_THREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

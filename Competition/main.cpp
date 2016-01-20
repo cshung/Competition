@@ -286,6 +286,7 @@
 #include "LEET_COIN_CHANGE.h"                                               // 281
 #include "LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h"                           // 282
 #include "LEET_POWER_OF_THREE.h"                                            // 283
+#include "LEET_ODD_EVEN_LINKED_LIST.h"                                      // 284
 
 // End of headers
 
@@ -583,5 +584,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_COMPLETE_TREE_NODES();                                 // Accepted
     // return LEET_COIN_CHANGE();                                               // Accepted
     // return LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS();                           // Accepted
-    return LEET_POWER_OF_THREE();                                            // Accepted
+    // return LEET_POWER_OF_THREE();                                            // Accepted
+    return LEET_ODD_EVEN_LINKED_LIST();                                      // 
 }

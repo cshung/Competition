@@ -96,6 +96,7 @@
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
+    <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
@@ -458,6 +459,7 @@
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
+    <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />
     <ClCompile Include="LEET_NIM_GAME.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />

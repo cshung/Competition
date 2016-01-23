@@ -587,5 +587,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS();                           // Accepted
     // return LEET_POWER_OF_THREE();                                            // Accepted
     // return LEET_ODD_EVEN_LINKED_LIST();                                      // Accepted
-    return LEET_MULTIPLY_STRINGS_2();                                        // 
+    return LEET_MULTIPLY_STRINGS_2();                                        // Accepted (This is not the best algorithm, but the code is short enough for acceptance)
 }

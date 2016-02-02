@@ -885,6 +885,9 @@
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_CLONE_GRAPH.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1752,6 +1755,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CLONE_GRAPH.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

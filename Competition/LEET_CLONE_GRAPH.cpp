@@ -3,7 +3,7 @@
 // https://leetcode.com/problems/clone-graph/
 
 #include "LEET_CLONE_GRAPH.h"
-#include <map>
+#include <unordered_map>
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -22,9 +22,9 @@ namespace _LEET_CLONE_GRAPH
     class Solution
     {
     private:
-        UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node, map<UndirectedGraphNode*, UndirectedGraphNode*> context)
+        UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node, unordered_map<UndirectedGraphNode*, UndirectedGraphNode*>& context)
         {
-            map<UndirectedGraphNode*, UndirectedGraphNode*>::iterator probe = context.find(node);
+            unordered_map<UndirectedGraphNode*, UndirectedGraphNode*>::iterator probe = context.find(node);
             if (probe == context.end())
             {
                 UndirectedGraphNode* clone = new UndirectedGraphNode(node->label);
@@ -44,7 +44,11 @@ namespace _LEET_CLONE_GRAPH
     public:
         UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node)
         {
-            map<UndirectedGraphNode*, UndirectedGraphNode*> context;
+            if (node == NULL)
+            {
+                return NULL;
+            }
+            unordered_map<UndirectedGraphNode*, UndirectedGraphNode*> context;
             return this->cloneGraph(node, context);
         }
     };

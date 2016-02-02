@@ -165,6 +165,7 @@
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
     <ClInclude Include="LEET_BURST_BALLOONS.h" />
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
+    <ClInclude Include="LEET_CLONE_GRAPH.h" />
     <ClInclude Include="LEET_COIN_CHANGE.h" />
     <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
@@ -456,6 +457,7 @@
     <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
     <ClCompile Include="LEET_BURST_BALLOONS.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_CLONE_GRAPH.cpp" />
     <ClCompile Include="LEET_COIN_CHANGE.cpp" />
     <ClCompile Include="LEET_COMBINATIONS.cpp" />
     <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />

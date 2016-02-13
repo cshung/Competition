@@ -18,27 +18,80 @@ namespace _LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY
         int findKthLargest(vector<int>& nums, int start, int end, int k)
         {
             int pivot = nums[start];
-            int left = start + 1;
-            int right = end - 1;
+            int left = start;
+            int right = end;
 
-            // Let's properly implement 3 way partitioning
-            int left_filled = start;    // [start, left_filled) < pivot
-            int right_filled = end;     // [right_filled, right) > pivot
-
-            while (left < right)
+            // Maintain these variables
+            int smallerEnd = left;             // [left, smallerEnd) are strictly smaller than the pivot
+            int smallerOrEqualEnd = left + 1;  // [smallerEnd, smallerOrEqualEnd) are smaller or equal to the pivot
+            int largerBegin = right;           // [largerBegin, right) are strictly larger than the pivot
+            
+            while (smallerOrEqualEnd < largerBegin - 1)
             {
-                while (nums[left] < pivot)
+                // TODO: Update smallerEnd here and swap as needed
+                while (nums[smallerOrEqualEnd] <= pivot)
                 {
-                    left++;
+                    smallerOrEqualEnd++;
                 }
-                while (nums[right] > pivot)
+
+                while (nums[largerBegin - 1] > pivot)
                 {
-                    right--;
+                    largerBegin--;
                 }
-                swap(nums[left], nums[right]);
+
+                // [left, smallerEnd) are strictly smaller than the pivot
+                // [smallerEnd, smallerOrEqualEnd) are smaller or equal to the pivot
+                // [largerBegin, right) are strictly larger than the pivot
+
+                // nums[smallerEnd] = pivot
+                // nums[smallerOrEqualEnd] > pivot
+                // nums[largerBegin - 1] <= pivot
+                if (nums[largerBegin - 1] == pivot)
+                {
+                    swap(nums[smallerOrEqualEnd], nums[largerBegin - 1]);
+                    smallerOrEqualEnd++;
+                    largerBegin--;
+                }
+                else
+                {
+                    nums[smallerEnd] = nums[largerBegin - 1];
+                    nums[largerBegin - 1] = nums[smallerOrEqualEnd];
+                    nums[smallerOrEqualEnd] = pivot;
+                    smallerEnd++;
+                    smallerOrEqualEnd++;
+                    largerBegin--;
+                }
+                // This is not the right way to update smaller end
+                while (nums[smallerEnd] < pivot)
+                {
+                    smallerEnd++;
+                }
+
+
+                for (int i = left; i < right; i++)
+                {
+                    cout << nums[i] << " ";
+                }
+                cout << endl;
+
+                cout << "[";
+                for (int i = left; i < smallerEnd; i++)
+                {
+                    cout << nums[i] << " ";
+                }
+                cout << "][";
+                for (int i = smallerEnd; i < smallerOrEqualEnd; i++)
+                {
+                    cout << nums[i] << " ";
+                }
+                cout << "][";
+                for (int i = largerBegin; i < right; i++)
+                {
+                    cout << nums[i] << " ";
+                }
+                cout << "]" << endl;
             }
 
-            
             return 0;
         }
     public:
@@ -53,7 +106,7 @@ using namespace _LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY;
 
 int LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY()
 {
-    int data[] = { 3, 0, 6, 2, 4, 7, 0, 0 };
+    int data[] = { 3, 0, 6, 3, 2, 4, 3, 7, 0, 0 };
     vector<int> case1 = vector<int>(data, data + _countof(data));
     Solution solution;
     cout << solution.findKthLargest(case1, 3) << endl;

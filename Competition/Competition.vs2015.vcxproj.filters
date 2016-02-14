@@ -894,6 +894,9 @@
     <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1770,6 +1773,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

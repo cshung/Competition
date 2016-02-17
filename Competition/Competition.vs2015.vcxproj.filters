@@ -897,6 +897,12 @@
     <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FRACTION_TO_RECURRING_DECIMAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_PARTITION_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1776,6 +1782,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FRACTION_TO_RECURRING_DECIMAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PARTITION_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

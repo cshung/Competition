@@ -295,6 +295,7 @@
 #include "LEET_FRACTION_TO_RECURRING_DECIMAL.h"                             // 290
 #include "LEET_PARTITION_LIST.h"                                            // 291
 #include "LEET_REVERSE_WORDS_IN_A_STRING.h"                                 // 292
+#include "LEET_DECODE_WAYS.h"                                               // 293
 
 // End of headers
 
@@ -601,5 +602,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE();            // Accepted
     // return LEET_FRACTION_TO_RECURRING_DECIMAL();                             // Accepted
     // return LEET_PARTITION_LIST();                                            // Accepted
-    return LEET_REVERSE_WORDS_IN_A_STRING();                                 // Accepted
+    // return LEET_REVERSE_WORDS_IN_A_STRING();                                 // Accepted
+    return LEET_DECODE_WAYS();                                               // Accepted
 }

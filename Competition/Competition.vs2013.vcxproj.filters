@@ -903,6 +903,12 @@
     <ClInclude Include="LEET_PARTITION_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_DECODE_WAYS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1788,6 +1794,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PARTITION_LIST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_DECODE_WAYS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

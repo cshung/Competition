@@ -104,6 +104,7 @@
     <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
+    <ClInclude Include="LEET_DECODE_WAYS.h" />
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h" />
     <ClInclude Include="LEET_RESTORE_IP_ADDRESSES.h" />
     <ClInclude Include="LEET_REVERSE_LINKED_LIST.h" />
+    <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h" />
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
@@ -413,6 +415,7 @@
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
+    <ClCompile Include="LEET_DECODE_WAYS.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
@@ -506,6 +509,7 @@
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
     <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_ROTATE_IMAGE.cpp" />

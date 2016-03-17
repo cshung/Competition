@@ -98,6 +98,7 @@
     <ClInclude Include="LEET_GAME_OF_LIFE.h" />
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
+    <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
     <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
@@ -242,6 +243,7 @@
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
+    <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.h" />
     <ClInclude Include="LEET_UNIQUE_PATHS.h" />
     <ClInclude Include="LEET_UNIQUE_PATHS_II.h" />
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h" />
@@ -452,6 +454,7 @@
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
+    <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
@@ -544,6 +547,7 @@
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
+    <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_PATHS.cpp" />
     <ClCompile Include="LEET_UNIQUE_PATHS_II.cpp" />
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp" />

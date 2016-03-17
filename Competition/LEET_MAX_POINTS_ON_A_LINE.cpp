@@ -98,7 +98,7 @@ namespace _LEET_MAX_POINTS_ON_A_LINE
                         line.slope_denominator = slope_denominator;
                         line.intercept_numerator = intercept_numerator;
                         line.intercept_denominator = intercept_denominator;
-                        unordered_map<SlantedLine, unordered_set<int>, SlantedLine, SlantedLineEqual>::iterator probe = slantedLineToPointsMap.find(line);
+                        unordered_map<SlantedLine, unordered_set<int>, SlantedLineHash, SlantedLineEqual>::iterator probe = slantedLineToPointsMap.find(line);
                         if (probe == slantedLineToPointsMap.end())
                         {
                             unordered_set<int> points;
@@ -120,7 +120,7 @@ namespace _LEET_MAX_POINTS_ON_A_LINE
             {
                 maxPoints = max(maxPoints, i->second.size());
             }
-            for (unordered_map<SlantedLine, unordered_set<int>, SlantedLine, SlantedLineEqual>::iterator i = slantedLineToPointsMap.begin(); i != slantedLineToPointsMap.end(); i++)
+            for (unordered_map<SlantedLine, unordered_set<int>, SlantedLineHash, SlantedLineEqual>::iterator i = slantedLineToPointsMap.begin(); i != slantedLineToPointsMap.end(); i++)
             {
                 maxPoints = max(maxPoints, i->second.size());
             }

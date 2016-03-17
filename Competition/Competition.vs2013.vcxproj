@@ -99,6 +99,7 @@
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
+    <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
@@ -462,6 +463,7 @@
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.cpp" />
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.cpp" />
     <ClCompile Include="LEET_MAXIMUM_SUBARRAY.cpp" />
+    <ClCompile Include="LEET_MAX_POINTS_ON_A_LINE.cpp" />
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />

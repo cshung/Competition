@@ -68,7 +68,7 @@ namespace _LEET_MAX_POINTS_ON_A_LINE
                     int y1 = points[i].y;
                     int x2 = points[j].x;
                     int y2 = points[j].y;
-                    
+
                     if (x1 == x2)
                     {
                         unordered_map<int, unordered_set<int>>::iterator probe = verticalLineToPointsMap.find(x1);
@@ -174,5 +174,7 @@ using namespace _LEET_MAX_POINTS_ON_A_LINE;
 int LEET_MAX_POINTS_ON_A_LINE()
 {
     Solution solution;
+    Point p[] = { Point(84, 250), Point(0, 0), Point(1, 0), Point(0, -70), Point(0, -70), Point(1, -1), Point(21, 10), Point(42, 90), Point(-42, -230) };
+    cout << solution.maxPoints(vector<Point>(p, p+ _countof(p))) << endl;
     return 0;
 }

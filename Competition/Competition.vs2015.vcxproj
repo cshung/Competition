@@ -177,6 +177,7 @@
     <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_COUNT_AND_SAY.h" />
     <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
+    <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h" />
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
     <ClInclude Include="LEET_DECODE_WAYS.h" />
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h" />
@@ -213,6 +214,7 @@
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
+    <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
     <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
@@ -280,6 +282,7 @@
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
+    <ClInclude Include="LEET_SEARCH_FOR_A_RANGE.h" />
     <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
     <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h" />
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
@@ -304,6 +307,7 @@
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
+    <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.h" />
     <ClInclude Include="LEET_UNIQUE_PATHS.h" />
     <ClInclude Include="LEET_UNIQUE_PATHS_II.h" />
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h" />
@@ -477,6 +481,7 @@
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
+    <ClCompile Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
     <ClCompile Include="LEET_DECODE_WAYS.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
@@ -513,6 +518,7 @@
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
+    <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
@@ -580,6 +586,7 @@
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />
+    <ClCompile Include="LEET_SEARCH_FOR_A_RANGE.cpp" />
     <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
     <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
@@ -604,6 +611,7 @@
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
+    <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_PATHS.cpp" />
     <ClCompile Include="LEET_UNIQUE_PATHS_II.cpp" />
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp" />

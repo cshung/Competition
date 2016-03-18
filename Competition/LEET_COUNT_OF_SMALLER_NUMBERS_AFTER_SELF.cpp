@@ -59,7 +59,9 @@ namespace _LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF
                 }
                 else
                 {
-                    if (nums[buffer[i]] < nums[buffer[j]])
+                    // Prioritize moving the left hand side item 
+                    // to avoid counting identical element as smaller
+                    if (nums[buffer[i]] <= nums[buffer[j]])
                     {
                         counts[buffer[i]] += (end - 1 - j);
                         result[k--] = buffer[i--];

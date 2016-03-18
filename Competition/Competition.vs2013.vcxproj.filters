@@ -921,6 +921,9 @@
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1824,6 +1827,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

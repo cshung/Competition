@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF();

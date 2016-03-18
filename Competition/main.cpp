@@ -300,6 +300,7 @@
 #include "LEET_MAX_POINTS_ON_A_LINE.h"                                      // 295
 #include "LEET_LINKED_LIST_CYCLE_II.h"                                      // 296
 #include "LEET_UNIQUE_BINARY_SEARCH_TREES_II.h"                             // 297
+#include "LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h"                       // 298
 
 // End of headers
 
@@ -611,5 +612,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SEARCH_FOR_A_RANGE();                                        // Accepted
     // return LEET_MAX_POINTS_ON_A_LINE();                                      // Accepted
     // return LEET_LINKED_LIST_CYCLE_II();                                      // Accepted
-    return LEET_UNIQUE_BINARY_SEARCH_TREES_II();                             // Accepted
+    // return LEET_UNIQUE_BINARY_SEARCH_TREES_II();                             // Accepted
+    return LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF();                       // Accepted
 }

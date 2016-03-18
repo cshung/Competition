@@ -54,6 +54,7 @@ namespace _LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF
                 }
                 else if (j < mid)
                 {
+                    counts[buffer[i]] += (end - 1 - j);
                     result[k--] = buffer[i--];
                 }
                 else
@@ -69,6 +70,17 @@ namespace _LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF
                     }
                 }
             }
+            /*cout << "After merge" << endl;
+            for (int i = begin; i < end; i++)
+            {
+                cout << nums[result[i]] << " ";
+            }
+            cout << endl;
+            for (int i = begin; i < end; i++)
+            {
+                cout << counts[result[i]] << " ";
+            }
+            cout << endl;*/
         }
     };
 };

@@ -102,6 +102,7 @@
     <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
     <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
+    <ClInclude Include="LEET_MINIMUM_HEIGHT_TREES.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
@@ -474,6 +475,7 @@
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />

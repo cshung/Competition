@@ -232,6 +232,7 @@
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MINIMUM_HEIGHT_TREES.h" />
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h" />
     <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
@@ -536,6 +537,7 @@
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />

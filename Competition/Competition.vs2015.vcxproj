@@ -304,6 +304,7 @@
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
     <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
+    <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
@@ -635,6 +636,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
     <ClCompile Include="UVa100.cpp" />
     <ClCompile Include="UVa10003.cpp" />
     <ClCompile Include="UVa10004.cpp" />

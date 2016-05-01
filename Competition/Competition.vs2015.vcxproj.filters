@@ -939,6 +939,9 @@
     <ClInclude Include="LEET_REVERSE_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REVERSE_VOWELS_OF_A_STRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1860,6 +1863,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REVERSE_STRING.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REVERSE_VOWELS_OF_A_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

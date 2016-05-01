@@ -305,6 +305,7 @@
 #include "LEET_WORD_LADDER.h"                                               // 300
 #include "LEET_THE_SKYLINE_PROBLEM.h"                                       // 301
 #include "LEET_TEXT_JUSTIFICATION.h"                                        // 302
+#include "LEET_POWER_OF_FOUR.h"                                             // 303
 
 // End of headers
 
@@ -621,5 +622,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINIMUM_HEIGHT_TREES();                                      // Accepted
     // return LEET_WORD_LADDER();                                               // Accepted
 	// return LEET_THE_SKYLINE_PROBLEM();                                       // Accepted
-	return LEET_TEXT_JUSTIFICATION();                                        // Accepted
+	// return LEET_TEXT_JUSTIFICATION();                                        // Accepted
+	return LEET_POWER_OF_FOUR();                                             // 
 }

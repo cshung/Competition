@@ -141,6 +141,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
     <ClInclude Include="LEET_ADD_BINARY.h" />
@@ -563,6 +564,7 @@
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.cpp" />
+    <ClCompile Include="LEET_POWER_OF_FOUR.cpp" />
     <ClCompile Include="LEET_POWER_OF_THREE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_POW_X_N.cpp" />

@@ -277,6 +277,7 @@
     <ClInclude Include="LEET_REVERSE_BITS.h" />
     <ClInclude Include="LEET_REVERSE_INTEGER.h" />
     <ClInclude Include="LEET_REVERSE_LINKED_LIST.h" />
+    <ClInclude Include="LEET_REVERSE_STRING.h" />
     <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h" />
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
@@ -585,6 +586,7 @@
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
     <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_REVERSE_STRING.cpp" />
     <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />

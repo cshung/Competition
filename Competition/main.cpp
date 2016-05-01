@@ -306,6 +306,7 @@
 #include "LEET_THE_SKYLINE_PROBLEM.h"                                       // 301
 #include "LEET_TEXT_JUSTIFICATION.h"                                        // 302
 #include "LEET_POWER_OF_FOUR.h"                                             // 303
+#include "LEET_REVERSE_STRING.h"                                            // 304
 
 // End of headers
 
@@ -623,5 +624,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_WORD_LADDER();                                               // Accepted
 	// return LEET_THE_SKYLINE_PROBLEM();                                       // Accepted
 	// return LEET_TEXT_JUSTIFICATION();                                        // Accepted
-	return LEET_POWER_OF_FOUR();                                             // 
+	// return LEET_POWER_OF_FOUR();                                             // Accepted
+	return LEET_REVERSE_STRING();                                            // Accepted
 }

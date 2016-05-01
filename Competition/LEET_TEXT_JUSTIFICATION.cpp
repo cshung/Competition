@@ -18,24 +18,26 @@ namespace _LEET_TEXT_JUSTIFICATION
 		vector<string> fullJustify(vector<string>& words, int maxWidth)
 		{
 			vector<string> result;
-			/* Step 1: Greedy packing */
 			int packed_size = -1;
 			size_t from = 0;
 			char* line = new char[maxWidth + 1];
+
+			// Note the loop also go through one index outside of the words vector
 			for (size_t i = 0; i <= words.size(); i++)
 			{
 				bool is_last_word = i == words.size();
 				int additional_size = is_last_word ? 0 : (words[i].length() + 1);
+				int l = 0;
 				if (((packed_size + additional_size) > maxWidth) || is_last_word)
 				{
 					// Emit a line with words coming from [from, i)
 					int numWords = i - from;
 					if ((numWords == 1) || is_last_word)
 					{
-						int l = 0;
-						// Emit all words
+						// Emit left justified
 						for (int j = from; j < i; j++)
 						{
+							// Emit all words
 							for (int k = 0; k < words[j].length(); k++)
 							{
 								line[l++] = words[j][k];
@@ -47,49 +49,50 @@ namespace _LEET_TEXT_JUSTIFICATION
 							}
 						}
 
+						// Emit spaces until we reach the end
 						for (; l < maxWidth; l++)
 						{
 							line[l] = ' ';
 						}
-						line[maxWidth] = '\0';
-						result.push_back(line);
 					}
 					else
 					{
+						// Emit full justified
 						int numGaps = numWords - 1;
 						int numSpaces = maxWidth - packed_size + numGaps;
 						int smallGaps = numSpaces / numGaps;
 						int numBigGaps = numSpaces % numGaps;
-						int l = 0;
-						// Emit all words
 						for (int j = from; j < i; j++)
 						{
+							// Emit all words
 							for (int k = 0; k < words[j].length(); k++)
 							{
 								line[l++] = words[j][k];
 							}
+	
 							if (j != i - 1)
 							{
+								// between each word, emit a small gap
 								for (int k = 0; k < smallGaps; k++)
 								{
 									line[l++] = ' ';
 								}
+								// Emit one more space for big gaps
 								if (j - from < numBigGaps)
 								{
 									line[l++] = ' ';
 								}
 							}
 						}
-						line[maxWidth] = '\0';
-						result.push_back(line);
 					}
+
+					// Null terminate the line
+					line[maxWidth] = '\0';
+					result.push_back(line);
+
+					// The next iteration will consider word (i + 1), so we account for the word i here
 					from = i;
-					i--;
-					packed_size = -1;
-					if (is_last_word)
-					{
-						break;
-					}
+					packed_size = additional_size - 1;
 				}
 				else
 				{

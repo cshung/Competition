@@ -304,6 +304,7 @@
 #include "LEET_MINIMUM_HEIGHT_TREES.h"                                      // 299
 #include "LEET_WORD_LADDER.h"                                               // 300
 #include "LEET_THE_SKYLINE_PROBLEM.h"                                       // 301
+#include "LEET_TEXT_JUSTIFICATION.h"                                        // 302
 
 // End of headers
 
@@ -619,5 +620,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF();                       // Accepted
     // return LEET_MINIMUM_HEIGHT_TREES();                                      // Accepted
     // return LEET_WORD_LADDER();                                               // Accepted
-    return LEET_THE_SKYLINE_PROBLEM();                                       // Accepted
+	// return LEET_THE_SKYLINE_PROBLEM();                                       // Accepted
+	return LEET_TEXT_JUSTIFICATION();                                        // Accepted
 }

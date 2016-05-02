@@ -109,12 +109,15 @@
     <ClInclude Include="LEET_PARTITION_LIST.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
+    <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_POWER_OF_THREE.h" />
     <ClInclude Include="LEET_POW_X_N.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
     <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h" />
+    <ClInclude Include="LEET_REVERSE_STRING.h" />
+    <ClInclude Include="LEET_REVERSE_VOWELS_OF_A_STRING.h" />
     <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
     <ClInclude Include="LEET_3SUM.h" />
@@ -241,6 +244,8 @@
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
     <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
+    <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
+    <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
@@ -500,6 +505,7 @@
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.cpp" />
+    <ClCompile Include="LEET_POWER_OF_FOUR.cpp" />
     <ClCompile Include="LEET_POWER_OF_THREE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_POW_X_N.cpp" />
@@ -520,6 +526,8 @@
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
     <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_REVERSE_STRING.cpp" />
+    <ClCompile Include="LEET_REVERSE_VOWELS_OF_A_STRING.cpp" />
     <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
@@ -548,6 +556,8 @@
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
     <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
+    <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
+    <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />

@@ -624,10 +624,10 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF();                       // Accepted
     // return LEET_MINIMUM_HEIGHT_TREES();                                      // Accepted
     // return LEET_WORD_LADDER();                                               // Accepted
-	// return LEET_THE_SKYLINE_PROBLEM();                                       // Accepted
-	// return LEET_TEXT_JUSTIFICATION();                                        // Accepted
-	// return LEET_POWER_OF_FOUR();                                             // Accepted
-	// return LEET_REVERSE_STRING();                                            // Accepted
-	// return LEET_REVERSE_VOWELS_OF_A_STRING();                                // Accepted
+    // return LEET_THE_SKYLINE_PROBLEM();                                       // Accepted
+    // return LEET_TEXT_JUSTIFICATION();                                        // Accepted
+    // return LEET_POWER_OF_FOUR();                                             // Accepted
+    // return LEET_REVERSE_STRING();                                            // Accepted
+    // return LEET_REVERSE_VOWELS_OF_A_STRING();                                // Accepted
     return LEET_INTERSECTION_OF_TWO_ARRAYS();                                // Accepted
 }

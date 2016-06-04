@@ -945,6 +945,9 @@
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1872,6 +1875,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_ARRAYS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

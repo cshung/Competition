@@ -90,6 +90,7 @@
     <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
     <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h" />
+    <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DECODE_WAYS.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
@@ -99,6 +100,7 @@
     <ClInclude Include="LEET_GAME_OF_LIFE.h" />
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
+    <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
@@ -429,6 +431,7 @@
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
     <ClCompile Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
+    <ClCompile Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.cpp" />
     <ClCompile Include="LEET_DECODE_WAYS.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
@@ -455,6 +458,7 @@
     <ClCompile Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.cpp" />
     <ClCompile Include="LEET_INTEGER_TO_ROMAN.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_ARRAYS.cpp" />
+    <ClCompile Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp" />

@@ -311,6 +311,7 @@
 #include "LEET_INTERSECTION_OF_TWO_ARRAYS.h"                                // 306
 #include "LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h"                         // 307
 #include "LEET_INTERSECTION_OF_TWO_ARRAYS_II.h"                             // 308
+#include "SPOJ_SAMER08F.h"                                                  // 309
 
 // End of headers
 
@@ -633,5 +634,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REVERSE_VOWELS_OF_A_STRING();                                // Accepted
     // return LEET_INTERSECTION_OF_TWO_ARRAYS();                                // Accepted
     // return LEET_DATA_STREAM_AS_DISJOINT_INTERVALS();                         // Accepted
-    return LEET_INTERSECTION_OF_TWO_ARRAYS_II();                             // Accepted
+    // return LEET_INTERSECTION_OF_TWO_ARRAYS_II();                             // Accepted
+    return SPOJ_SAMER08F();                                                  // Accepted
 }

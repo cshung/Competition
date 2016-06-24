@@ -312,6 +312,7 @@
 #include "LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h"                         // 307
 #include "LEET_INTERSECTION_OF_TWO_ARRAYS_II.h"                             // 308
 #include "SPOJ_SAMER08F.h"                                                  // 309
+#include "LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h"                          // 310
 
 // End of headers
 
@@ -635,5 +636,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_INTERSECTION_OF_TWO_ARRAYS();                                // Accepted
     // return LEET_DATA_STREAM_AS_DISJOINT_INTERVALS();                         // Accepted
     // return LEET_INTERSECTION_OF_TWO_ARRAYS_II();                             // Accepted
-    return SPOJ_SAMER08F();                                                  // Accepted
+    // return SPOJ_SAMER08F();                                                  // Accepted
+    return LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS();                          // Accepted
 }

@@ -141,6 +141,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
@@ -492,6 +493,7 @@
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
+    <ClCompile Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.cpp" />
     <ClCompile Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
     <ClCompile Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.cpp" />

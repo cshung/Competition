@@ -324,6 +324,7 @@
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
     <ClInclude Include="LEET_VALID_PALINDROME.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
+    <ClInclude Include="LEET_VALID_PERFECT_SQUARE.h" />
     <ClInclude Include="LEET_VALID_SUDOKU.h" />
     <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h" />
     <ClInclude Include="LEET_WORD_LADDER.h" />
@@ -639,6 +640,7 @@
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
     <ClCompile Include="LEET_VALID_PALINDROME.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_VALID_PERFECT_SQUARE.cpp" />
     <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
     <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_WORD_LADDER.cpp" />

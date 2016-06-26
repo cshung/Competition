@@ -313,6 +313,7 @@
 #include "LEET_INTERSECTION_OF_TWO_ARRAYS_II.h"                             // 308
 #include "SPOJ_SAMER08F.h"                                                  // 309
 #include "LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h"                          // 310
+#include "LEET_VALID_PERFECT_SQUARE.h"                                      // 311
 
 // End of headers
 
@@ -637,5 +638,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DATA_STREAM_AS_DISJOINT_INTERVALS();                         // Accepted
     // return LEET_INTERSECTION_OF_TWO_ARRAYS_II();                             // Accepted
     // return SPOJ_SAMER08F();                                                  // Accepted
-    return LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS();                          // Accepted
+    // return LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS();                          // Accepted
+    return LEET_VALID_PERFECT_SQUARE();                                      // Accepted
 }

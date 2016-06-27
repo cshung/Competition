@@ -327,6 +327,7 @@
     <ClInclude Include="LEET_VALID_PERFECT_SQUARE.h" />
     <ClInclude Include="LEET_VALID_SUDOKU.h" />
     <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h" />
+    <ClInclude Include="LEET_WATER_AND_JUG_PROBLEM.h" />
     <ClInclude Include="LEET_WORD_LADDER.h" />
     <ClInclude Include="LEET_WORD_PATTERN.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
@@ -643,6 +644,7 @@
     <ClCompile Include="LEET_VALID_PERFECT_SQUARE.cpp" />
     <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
     <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_WATER_AND_JUG_PROBLEM.cpp" />
     <ClCompile Include="LEET_WORD_LADDER.cpp" />
     <ClCompile Include="LEET_WORD_PATTERN.cpp" />
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />

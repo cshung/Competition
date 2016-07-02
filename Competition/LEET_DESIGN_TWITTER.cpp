@@ -18,8 +18,11 @@ namespace _LEET_DESIGN_TWITTER
 
     class Twitter {
     private:
+        unordered_set<int> m_users;
         unordered_map<int, deque<pair<int, int>>> m_user_tweets;
         unordered_map<int, unordered_set<int>> m_following;
+        unordered_map<int, unordered_set<int>> m_follower;
+        unordered_map<int, deque<int>> m_news_feed_cache;
         int m_time;
     public:
         /** Initialize your data structure here. */
@@ -31,6 +34,12 @@ namespace _LEET_DESIGN_TWITTER
         /** Compose a new tweet. */
         void postTweet(int userId, int tweetId)
         {
+            if (this->m_users.find(userId) == this->m_users.end())
+            {
+                this->m_users.insert(userId);
+                this->m_news_feed_cache.insert(make_pair(userId, deque<int>()));
+            }
+
             auto probe = this->m_user_tweets.find(userId);
             if (probe == this->m_user_tweets.end())
             {
@@ -48,13 +57,56 @@ namespace _LEET_DESIGN_TWITTER
                 old_user_tweets.push_front(pair<int, int>(tweetId, this->m_time));
             }
 
+            auto selfCacheProbe = this->m_news_feed_cache.find(userId);
+            if (selfCacheProbe != this->m_news_feed_cache.end())
+            {
+                if (selfCacheProbe->second.size() == MAX_TWEETS)
+                {
+                    selfCacheProbe->second.pop_back();
+                }
+
+                selfCacheProbe->second.push_front(tweetId);
+            }
+
+            auto followerSetProbe = this->m_follower.find(userId);
+            if (followerSetProbe != this->m_follower.end())
+            {
+                for (auto fi = followerSetProbe->second.begin(); fi != followerSetProbe->second.end(); fi++)
+                {
+                    auto followerCacheProbe = this->m_news_feed_cache.find(*fi);
+                    if (followerCacheProbe != this->m_news_feed_cache.end())
+                    {
+                        if (followerCacheProbe->second.size() == MAX_TWEETS)
+                        {
+                            followerCacheProbe->second.pop_back();
+                        }
+
+                        followerCacheProbe->second.push_front(tweetId);
+                    }
+                }
+            }
+
             this->m_time++;
         }
 
         /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
         vector<int> getNewsFeed(int userId)
         {
+            vector<int> result;
+
+            auto cacheProbe = this->m_news_feed_cache.find(userId);
+            if (cacheProbe != this->m_news_feed_cache.end())
+            {
+                for (auto ci = cacheProbe->second.begin(); ci != cacheProbe->second.end(); ci++)
+                {
+                    result.push_back(*ci);
+                }
+
+                return result;
+            }
+
             vector<pair<deque<pair<int, int>>::iterator, deque<pair<int, int>>::iterator>> following_tweets;
+            deque<int> cache;
             auto selfProbe = this->m_user_tweets.find(userId);
             if (selfProbe != this->m_user_tweets.end())
             {
@@ -74,9 +126,7 @@ namespace _LEET_DESIGN_TWITTER
                 }
             }
 
-            vector<int> result;
-
-            while (result.size() < 10)
+            while (result.size() < MAX_TWEETS)
             {
                 size_t best = -1;
                 for (size_t i = 0; i < following_tweets.size(); i++)
@@ -88,7 +138,7 @@ namespace _LEET_DESIGN_TWITTER
                         {
                             best = i;
                         }
-                        else if (following_tweets[i].first->second < following_tweets[best].first->second)
+                        else if (following_tweets[i].first->second > following_tweets[best].first->second)
                         {
                             best = i;
                         }
@@ -101,9 +151,12 @@ namespace _LEET_DESIGN_TWITTER
                 else
                 {
                     result.push_back(following_tweets[best].first->first);
+                    cache.push_back(following_tweets[best].first->first);
                     following_tweets[best].first++;
                 }
             }
+
+            this->m_news_feed_cache.insert(make_pair(userId, cache));
 
             return result;
         }
@@ -111,6 +164,12 @@ namespace _LEET_DESIGN_TWITTER
         /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
         void follow(int followerId, int followeeId)
         {
+            if (this->m_users.find(followerId) == this->m_users.end())
+            {
+                this->m_users.insert(followerId);
+                this->m_news_feed_cache.insert(make_pair(followerId, deque<int>()));
+            }
+
             if (followerId == followeeId)
             {
                 // Never follow myself
@@ -128,6 +187,24 @@ namespace _LEET_DESIGN_TWITTER
             {
                 probeFollowing->second.insert(followeeId);
             }
+
+            auto probeFollower = this->m_follower.find(followeeId);
+            if (probeFollower == this->m_follower.end())
+            {
+                unordered_set<int> newFollower;
+                newFollower.insert(followerId);
+                this->m_follower.insert(pair<int, unordered_set<int>>(followeeId, newFollower));
+            }
+            else
+            {
+                probeFollower->second.insert(followerId);
+            }
+
+            // Invalidate my cache since I changed my following relationship
+            if (this->m_news_feed_cache.find(followerId) != this->m_news_feed_cache.end())
+            {
+                this->m_news_feed_cache.erase(followerId);
+            }
         }
 
         /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
@@ -141,6 +218,21 @@ namespace _LEET_DESIGN_TWITTER
                     probeFollowing->second.erase(followeeId);
                 }
             }
+
+            auto probeFollower = this->m_follower.find(followeeId);
+            if (probeFollower != this->m_follower.end())
+            {
+                if (probeFollower->second.find(followerId) != probeFollower->second.end())
+                {
+                    probeFollower->second.erase(followerId);
+                }
+            }
+
+            // Invalidate my cache since I changed my following relationship
+            if (this->m_news_feed_cache.find(followerId) != this->m_news_feed_cache.end())
+            {
+                this->m_news_feed_cache.erase(followerId);
+            }
         }
     };
 };
@@ -149,13 +241,14 @@ using namespace _LEET_DESIGN_TWITTER;
 
 int LEET_DESIGN_TWITTER()
 {
+    vector<int> result;
     Twitter twitter;
-    twitter.postTweet(1, 3);
     twitter.postTweet(1, 5);
-    vector<int> result = twitter.getNewsFeed(1);
-    for (size_t i = 0; i < result.size(); i++)
-    {
-        cout << result[i] << endl;
-    }
+    result = twitter.getNewsFeed(1); for (size_t i = 0; i < result.size(); i++) { cout << result[i] << " "; } cout << endl;
+    twitter.follow(1, 2);
+    twitter.postTweet(2, 6);
+    result = twitter.getNewsFeed(1); for (size_t i = 0; i < result.size(); i++) { cout << result[i] << " "; } cout << endl;
+    twitter.unfollow(1, 2);
+    result = twitter.getNewsFeed(1); for (size_t i = 0; i < result.size(); i++) { cout << result[i] << " "; } cout << endl;
     return 0;
 }

@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
+    <ClInclude Include="LEET_DESIGN_TWITTER.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
@@ -502,6 +503,7 @@
     <ClCompile Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.cpp" />
     <ClCompile Include="LEET_DECODE_WAYS.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />

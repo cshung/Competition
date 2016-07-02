@@ -316,6 +316,7 @@
 #include "LEET_VALID_PERFECT_SQUARE.h"                                      // 311
 #include "LEET_WATER_AND_JUG_PROBLEM.h"                                     // 312
 #include "LEET_LRU_CACHE.h"                                                 // 313
+#include "LEET_DESIGN_TWITTER.h"                                            // 314
 
 // End of headers
 
@@ -643,5 +644,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS();                          // Accepted
     // return LEET_VALID_PERFECT_SQUARE();                                      // Accepted
     // return LEET_WATER_AND_JUG_PROBLEM();                                     // Accepted
-    return LEET_LRU_CACHE();                                                 // 
+    // return LEET_LRU_CACHE();                                                 // Accepted
+    return LEET_DESIGN_TWITTER();                                            // Accepted
 }

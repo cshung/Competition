@@ -289,6 +289,7 @@
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
+    <ClInclude Include="LEET_RUSSIAN_DOLL_ENVELOPES.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
@@ -609,6 +610,7 @@
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_ROTATE_IMAGE.cpp" />
+    <ClCompile Include="LEET_RUSSIAN_DOLL_ENVELOPES.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />

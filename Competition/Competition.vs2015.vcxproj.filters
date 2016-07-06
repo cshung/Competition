@@ -975,6 +975,9 @@
     <ClInclude Include="LEET_RUSSIAN_DOLL_ENVELOPES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1932,6 +1935,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RUSSIAN_DOLL_ENVELOPES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

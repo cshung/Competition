@@ -319,6 +319,7 @@
 #include "LEET_DESIGN_TWITTER.h"                                            // 314
 #include "LEET_RUSSIAN_DOLL_ENVELOPES.h"                                    // 315
 #include "LEET_LARGEST_DIVISIBLE_SUBSET.h"                                  // 316
+#include "LEET_WIGGLE_SUBSEQUENCE.h"                                        // 317
 
 // End of headers
 
@@ -649,5 +650,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LRU_CACHE();                                                 // Accepted
     // return LEET_DESIGN_TWITTER();                                            // Accepted
     // return LEET_RUSSIAN_DOLL_ENVELOPES();                                    // Accepted
-    return LEET_LARGEST_DIVISIBLE_SUBSET();                                  // Accepted
+    // return LEET_LARGEST_DIVISIBLE_SUBSET();                                  // Accepted
+    return LEET_WIGGLE_SUBSEQUENCE();                                        // Accepted
 }

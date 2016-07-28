@@ -144,6 +144,7 @@
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
+    <ClInclude Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
@@ -522,6 +523,7 @@
     <ClCompile Include="LEET_GAS_STATION.cpp" />
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
     <ClCompile Include="LEET_GRAY_CODE.cpp" />
+    <ClCompile Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.cpp" />
     <ClCompile Include="LEET_HAPPY_NUMBER.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_H_INDEX.cpp" />

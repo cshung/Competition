@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_LONGEST_ABSOLUTE_FILE_PATH();

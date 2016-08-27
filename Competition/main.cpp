@@ -321,6 +321,7 @@
 #include "LEET_LARGEST_DIVISIBLE_SUBSET.h"                                  // 316
 #include "LEET_WIGGLE_SUBSEQUENCE.h"                                        // 317
 #include "LEET_GUESS_NUMBER_HIGHER_OR_LOWER.h"                              // 318
+#include "LEET_LONGEST_ABSOLUTE_FILE_PATH.h"                                // 319
 
 // End of headers
 
@@ -653,5 +654,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_RUSSIAN_DOLL_ENVELOPES();                                    // Accepted
     // return LEET_LARGEST_DIVISIBLE_SUBSET();                                  // Accepted
     // return LEET_WIGGLE_SUBSEQUENCE();                                        // Accepted
-    return LEET_GUESS_NUMBER_HIGHER_OR_LOWER();                              // Accepted
+    // return LEET_GUESS_NUMBER_HIGHER_OR_LOWER();                              // Accepted
+    return LEET_LONGEST_ABSOLUTE_FILE_PATH();                                // Accepted
 }

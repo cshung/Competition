@@ -148,6 +148,7 @@
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
+    <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_3SUM.h" />
@@ -546,6 +547,7 @@
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
+    <ClCompile Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.cpp" />
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />

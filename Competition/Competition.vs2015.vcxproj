@@ -144,6 +144,7 @@
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
+    <ClInclude Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h" />
     <ClInclude Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
@@ -663,6 +664,7 @@
     <ClCompile Include="LEET_WORD_PATTERN.cpp" />
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />
     <ClCompile Include="SPOJ_HORRIBLE.cpp" />
     <ClCompile Include="SPOJ_LITE_1.cpp" />

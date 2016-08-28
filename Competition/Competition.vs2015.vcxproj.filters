@@ -993,6 +993,15 @@
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_ELIMINATION_GAME.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_PERFECT_RECTANGLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1968,6 +1977,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_THE_DIFFERENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ELIMINATION_GAME.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

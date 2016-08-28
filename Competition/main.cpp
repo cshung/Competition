@@ -324,6 +324,9 @@
 #include "LEET_LONGEST_ABSOLUTE_FILE_PATH.h"                                // 319
 #include "LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h"                        // 320
 #include "LEET_LEXICOGRAPHICAL_NUMBERS.h"                                   // 321
+#include "LEET_FIND_THE_DIFFERENCE.h"                                       // 322
+#include "LEET_ELIMINATION_GAME.h"                                          // 323
+#include "LEET_PERFECT_RECTANGLE.h"                                         // 324
 
 // End of headers
 
@@ -659,5 +662,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_GUESS_NUMBER_HIGHER_OR_LOWER();                              // Accepted
     // return LEET_LONGEST_ABSOLUTE_FILE_PATH();                                // Accepted
     // return LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING();                        // Accepted
-    return LEET_LEXICOGRAPHICAL_NUMBERS();                                   // Accepted
+    // return LEET_LEXICOGRAPHICAL_NUMBERS();                                   // Accepted
+    // return LEET_FIND_THE_DIFFERENCE();                                       // Accepted
+    // return LEET_ELIMINATION_GAME();                                          // Accepted
+    return LEET_PERFECT_RECTANGLE();                                         // 
 }

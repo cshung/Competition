@@ -149,6 +149,7 @@
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
+    <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
@@ -546,6 +547,7 @@
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
+    <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
     <ClCompile Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.cpp" />

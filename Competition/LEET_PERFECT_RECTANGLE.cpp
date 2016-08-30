@@ -3,7 +3,7 @@
 // https://leetcode.com/contest/2/problems/perfect-rectangle/
 
 #include "LEET_PERFECT_RECTANGLE.h"
-#include <map>
+#include <unordered_map>
 #include <algorithm>
 #include <iostream>
 #include <sstream>
@@ -14,6 +14,73 @@ using namespace std;
 
 namespace _LEET_PERFECT_RECTANGLE
 {
+    struct Range
+    {
+        Range(int from, int to)
+        {
+            this->from = from;
+            this->to = to;
+        }
+        int from;
+        int to;
+    };
+
+    class Ranges
+    {
+    public:
+        Ranges(int from, int to)
+        {
+            Range* range = new Range(from, to);
+            fromIndex.insert(make_pair(from, range));
+            toIndex.insert(make_pair(to, range));
+        }
+
+        void add_range(int from, int to)
+        {
+            auto leftFind = toIndex.find(from);
+            auto rightFind = fromIndex.find(to);
+            if (leftFind != toIndex.end())
+            {
+                Range* leftRange = leftFind->second;
+                fromIndex.erase(leftRange->from);
+                toIndex.erase(leftRange->to);
+                from = leftRange->from;
+                delete leftRange;
+            }
+            if (rightFind != fromIndex.end())
+            {
+                Range* rightRange = rightFind->second;
+                fromIndex.erase(rightRange->from);
+                toIndex.erase(rightRange->to);
+                to = rightRange->to;
+                delete rightRange;
+            }
+
+            Range* range = new Range(from, to);
+            fromIndex.insert(make_pair(from, range));
+            toIndex.insert(make_pair(to, range));
+        }
+
+        unordered_map<int, Range*> fromIndex;
+        unordered_map<int, Range*> toIndex;
+
+    };
+
+    void AddEdge(unordered_map<int, Ranges*>& allRanges, int key, int from, int to)
+    {
+        auto iter = allRanges.find(key);
+        if (iter == allRanges.end())
+        {
+            Ranges* ranges = new Ranges(from, to);
+            allRanges.insert(make_pair(key, ranges));
+        }
+        else
+        {
+            Ranges* ranges = iter->second;
+            ranges->add_range(from, to);
+        }
+    }
+
     class Solution
     {
     public:
@@ -21,28 +88,6 @@ namespace _LEET_PERFECT_RECTANGLE
         {
             return (rectangle[2] - rectangle[0]) * (rectangle[3] - rectangle[1]);
         }
-
-        bool overlap(vector<int>& rectangle1, vector<int>& rectangle2)
-        {
-            if (rectangle1[2] <= rectangle2[0])
-            {
-                return false;
-            }
-            if (rectangle2[2] <= rectangle1[0])
-            {
-                return false;
-            }
-            if (rectangle1[3] <= rectangle2[1])
-            {
-                return false;
-            }
-            if (rectangle2[3] <= rectangle1[1])
-            {
-                return false;
-            }
-            return true;
-        }
-
         bool isRectangleCover(vector<vector<int>>& rectangles)
         {
             int total_area = 0;
@@ -63,17 +108,96 @@ namespace _LEET_PERFECT_RECTANGLE
             {
                 return false;
             }
+            
+            unordered_map<int, Ranges*> topEdges;
+            unordered_map<int, Ranges*> bottomEdges;
+            unordered_map<int, Ranges*> leftEdges;
+            unordered_map<int, Ranges*> rightEdges;
+
+            // Imagine the min box is actually adjacent to four big boxes (so all edges have their 'other' sides)
+            topEdges.insert(make_pair(min_y, new Ranges(min_x, max_x)));
+            bottomEdges.insert(make_pair(max_y, new Ranges(min_x, max_x)));
+            rightEdges.insert(make_pair(min_x, new Ranges(min_y, max_y)));
+            leftEdges.insert(make_pair(max_x, new Ranges(min_y, max_y)));
+
             for (size_t i = 0; i < rectangles.size(); i++)
             {
-                for (size_t j = i + 1; j < rectangles.size(); j++)
+                int x1 = rectangles[i][0];
+                int y1 = rectangles[i][1];
+                int x2 = rectangles[i][2];
+                int y2 = rectangles[i][3];
+                AddEdge(topEdges, y2, x1, x2);
+                AddEdge(bottomEdges, y1, x1, x2);
+                AddEdge(leftEdges, x1, y1, y2);
+                AddEdge(rightEdges, x2, y1, y2);
+            }
+
+            for (auto topEdgeKeyValuePair : topEdges)
+            {
+                auto topEdgeKey = topEdgeKeyValuePair.first;
+                
+                auto bottomEdgeIter = bottomEdges.find(topEdgeKey);
+                if (bottomEdgeIter == bottomEdges.end())
                 {
-                    if (overlap(rectangles[i], rectangles[j]))
+                    return false;
+                }
+
+                auto topEdgeRanges = topEdgeKeyValuePair.second;
+                auto bottomEdgeRanges = bottomEdgeIter->second;
+
+                if (topEdgeRanges->fromIndex.size() != bottomEdgeRanges->fromIndex.size())
+                {
+                    return false;
+                }
+
+                for (auto topEdgeRangeKeyValuePair : topEdgeRanges->fromIndex)
+                {
+                    auto& topEdgeRange = topEdgeRangeKeyValuePair.second;
+
+                    auto bottomEdgeRange = bottomEdgeRanges->fromIndex.find(topEdgeRange->from);
+                    if (bottomEdgeRange == bottomEdgeRanges->fromIndex.end())
+                    {
+                        return false;
+                    }
+                    else if (bottomEdgeRange->second->to != topEdgeRange->to)
                     {
                         return false;
                     }
                 }
             }
+            for (auto rightEdgeKeyValuePair : rightEdges)
+            {
+                auto rightEdgeKey = rightEdgeKeyValuePair.first;
 
+                auto leftEdgeIter = leftEdges.find(rightEdgeKey);
+                if (leftEdgeIter == leftEdges.end())
+                {
+                    return false;
+                }
+
+                auto rightEdgeRanges = rightEdgeKeyValuePair.second;
+                auto leftEdgeRanges = leftEdgeIter->second;
+
+                if (rightEdgeRanges->fromIndex.size() != leftEdgeRanges->fromIndex.size())
+                {
+                    return false;
+                }
+
+                for (auto rightEdgeRangeKeyValuePair : rightEdgeRanges->fromIndex)
+                {
+                    auto& rightEdgeRange = rightEdgeRangeKeyValuePair.second;
+
+                    auto leftEdgeRange = leftEdgeRanges->fromIndex.find(rightEdgeRange->from);
+                    if (leftEdgeRange == leftEdgeRanges->fromIndex.end())
+                    {
+                        return false;
+                    }
+                    else if (leftEdgeRange->second->to != rightEdgeRange->to)
+                    {
+                        return false;
+                    }
+                }
+            }
             return true;
         }
     };
@@ -83,7 +207,8 @@ using namespace _LEET_PERFECT_RECTANGLE;
 
 int LEET_PERFECT_RECTANGLE()
 {
-    // Not a great approach, quadratic time is not allowed
+    // Better, but now the judge bitches on memory consumption
+    // After all I am using linear memory, maybe we can get there with compact encoding
     Solution solution;
     int r[5][4] = { {1, 1, 3, 3},{3, 1, 4, 2},{3, 2, 4, 4},{1, 3, 2, 4},{2, 3, 3, 4} };
     vector<vector<int>> rectangles;

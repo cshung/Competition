@@ -1002,6 +1002,9 @@
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MINI_PARSER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1986,6 +1989,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINI_PARSER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

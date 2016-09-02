@@ -154,6 +154,7 @@
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
+    <ClInclude Include="LEET_MINI_PARSER.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_3SUM.h" />
@@ -576,6 +577,7 @@
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_MINI_PARSER.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />

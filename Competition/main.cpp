@@ -327,6 +327,7 @@
 #include "LEET_FIND_THE_DIFFERENCE.h"                                       // 322
 #include "LEET_ELIMINATION_GAME.h"                                          // 323
 #include "LEET_PERFECT_RECTANGLE.h"                                         // 324
+#include "LEET_MINI_PARSER.h"                                               // 325
 
 // End of headers
 
@@ -665,5 +666,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LEXICOGRAPHICAL_NUMBERS();                                   // Accepted
     // return LEET_FIND_THE_DIFFERENCE();                                       // Accepted
     // return LEET_ELIMINATION_GAME();                                          // Accepted
-    return LEET_PERFECT_RECTANGLE();                                         // 
+    // return LEET_PERFECT_RECTANGLE();                                         // This is a linear time algorithm (however the implementation used too much memory)
+    return LEET_MINI_PARSER();                                               // Accepted
 }

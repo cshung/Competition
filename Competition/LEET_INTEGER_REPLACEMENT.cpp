@@ -30,12 +30,11 @@ namespace _LEET_INTEGER_REPLACEMENT
             {
                 return 0;
             }
-            // But the judge does not like this case :( - shame on leetcode 
-            //else if (n == 3)
-            //{
-            //    // The divide by 4 rule does not apply for it
-            //    return 2;
-            //}
+            else if (n == 3)
+            {
+                // The divide by 4 rule does not apply for it
+                return 2;
+            }
             else if (n % 2 == 0)
             {
                 return integerReplacementLong(n / 2) + 1;

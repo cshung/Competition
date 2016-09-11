@@ -332,6 +332,7 @@
 #include "LEET_INTEGER_REPLACEMENT.h"                                       // 327
 #include "LEET_RANDOM_PICK_INDEX.h"                                         // 328
 #include "LEET_EVALUATE_DIVISION.h"                                         // 329
+#include "LEET_ROTATE_FUNCTION.h"                                           // 330
 
 // End of headers
 
@@ -674,7 +675,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINI_PARSER();                                               // Accepted
     // return LEET_SHUFFLE_AN_ARRAY();                                          // Accepted
     // return LEET_INTEGER_REPLACEMENT();                                       // Accepted
-    // return LEET_RANDOM_PICK_INDEX();                                         // Memory Exceeded - why?
-    return LEET_EVALUATE_DIVISION();                                         // Accepted
-
+    return LEET_RANDOM_PICK_INDEX();                                         // Memory Exceeded - why?
+    // return LEET_EVALUATE_DIVISION();                                         // Accepted
+    // return LEET_ROTATE_FUNCTION();                                           // Accepted
 }

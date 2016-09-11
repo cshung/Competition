@@ -141,6 +141,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
@@ -520,6 +521,7 @@
     <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_ELIMINATION_GAME.cpp" />
+    <ClCompile Include="LEET_EVALUATE_DIVISION.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />

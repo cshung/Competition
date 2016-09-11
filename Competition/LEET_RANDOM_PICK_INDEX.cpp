@@ -46,15 +46,11 @@ namespace _LEET_RANDOM_PICK_INDEX
 
         int pick(int target)
         {
+            // I have no idea how can this run out of memory :(
             auto from = lower_bound(this->m_entries.begin(), this->m_entries.end(), Entry(target, 0), compareEntry);
             auto to = upper_bound(this->m_entries.begin(), this->m_entries.end(), Entry(target, 0), compareEntry);
-            vector<size_t> choices;
-            for (auto iter = from; iter != to; iter++)
-            {
-                choices.push_back(iter->m_index);
-            }
-
-            return choices[rand() % choices.size()];
+            long long x = distance(from, to);
+            return (int)(from + rand() % x)->m_index;
         }
     private:
         vector<Entry> m_entries;

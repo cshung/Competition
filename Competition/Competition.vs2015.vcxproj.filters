@@ -1014,6 +1014,9 @@
     <ClInclude Include="LEET_RANDOM_PICK_INDEX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_EVALUATE_DIVISION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2010,6 +2013,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EVALUATE_DIVISION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

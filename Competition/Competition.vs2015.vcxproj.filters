@@ -1008,6 +1008,12 @@
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_INTEGER_REPLACEMENT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_RANDOM_PICK_INDEX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1998,6 +2004,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_INTEGER_REPLACEMENT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

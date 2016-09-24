@@ -679,5 +679,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_RANDOM_PICK_INDEX();                                         // Memory Exceeded - why?
     // return LEET_EVALUATE_DIVISION();                                         // Accepted
     // return LEET_ROTATE_FUNCTION();                                           // Accepted
-    return LEET_NTH_DIGIT();                                                 // 
+    return LEET_NTH_DIGIT();                                                 // Accepted
 }

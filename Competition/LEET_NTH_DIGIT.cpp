@@ -20,15 +20,19 @@ namespace _LEET_NTH_DIGIT
         {
             // Programmer reasons with 0 based index
             n--;
-            int blockBase = 1;
+            long long blockBase = 1;
             int blockValueSize = 1;
             while (true)
             {
                 // An exclusive index for the 'value' that is in the block
-                int blockCeil = blockBase * 10;
+                long long blockCeil = blockBase * 10;
 
                 // Number of digits in the block
-                int blockSize = (blockCeil - blockBase) * blockValueSize;
+                long long blockSizeLong = (blockCeil - blockBase) * blockValueSize;
+
+                int intMax = ~(1 << 31);
+
+                int blockSize = blockSizeLong > intMax ? intMax : (int)blockSizeLong;
 
                 if (n < blockSize)
                 {
@@ -38,7 +42,7 @@ namespace _LEET_NTH_DIGIT
                     int index = n / blockValueSize;
                     
                     // Now we get the value of that number
-                    int value = blockBase + index;
+                    long long value = blockBase + index;
 
                     // Which digit (are we talking about), this is 0 based, counting from most significant digit
                     int digit = n % blockValueSize;

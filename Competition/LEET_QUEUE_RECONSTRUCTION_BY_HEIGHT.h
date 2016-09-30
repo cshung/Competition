@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT();

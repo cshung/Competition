@@ -1032,6 +1032,9 @@
     <ClInclude Include="LEET_REMOVE_K_DIGITS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2046,6 +2049,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REMOVE_K_DIGITS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

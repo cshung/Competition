@@ -353,6 +353,7 @@
     <ClInclude Include="LEET_WORD_LADDER.h" />
     <ClInclude Include="LEET_WORD_PATTERN.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
+    <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
     <ClInclude Include="SPOJ_LITE_1.h" />
@@ -661,6 +662,7 @@
     <ClCompile Include="LEET_SORT_COLORS.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp" />
+    <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />

@@ -337,6 +337,7 @@
 #include "LEET_BINARY_WATCH.h"                                              // 332
 #include "LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h"                            // 333
 #include "LEET_REMOVE_K_DIGITS.h"                                           // 334
+#include "LEET_SPLIT_ARRAY_LARGEST_SUM.h"                                   // 335
 
 // End of headers
 
@@ -685,5 +686,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_NTH_DIGIT();                                                 // Accepted
     // return LEET_BINARY_WATCH();                                              // Accepted
 	// return LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT();                            // Accepted
-	return LEET_REMOVE_K_DIGITS();                                           // Accepted
+	// return LEET_REMOVE_K_DIGITS();                                           // Accepted
+	return LEET_SPLIT_ARRAY_LARGEST_SUM();                                   // 
 }

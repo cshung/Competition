@@ -336,6 +336,7 @@
 #include "LEET_NTH_DIGIT.h"                                                 // 331
 #include "LEET_BINARY_WATCH.h"                                              // 332
 #include "LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h"                            // 333
+#include "LEET_REMOVE_K_DIGITS.h"                                           // 334
 
 // End of headers
 
@@ -683,5 +684,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ROTATE_FUNCTION();                                           // Accepted
     // return LEET_NTH_DIGIT();                                                 // Accepted
     // return LEET_BINARY_WATCH();                                              // Accepted
-	return LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT();                            // Accepted
+	// return LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT();                            // Accepted
+	return LEET_REMOVE_K_DIGITS();                                           // Accepted
 }

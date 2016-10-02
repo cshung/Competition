@@ -291,6 +291,7 @@
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h" />
     <ClInclude Include="LEET_REMOVE_ELEMENT.h" />
+    <ClInclude Include="LEET_REMOVE_K_DIGITS.h" />
     <ClInclude Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.h" />
     <ClInclude Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h" />
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h" />
@@ -629,6 +630,7 @@
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.cpp" />
     <ClCompile Include="LEET_REMOVE_ELEMENT.cpp" />
+    <ClCompile Include="LEET_REMOVE_K_DIGITS.cpp" />
     <ClCompile Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.cpp" />
     <ClCompile Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />

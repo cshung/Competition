@@ -685,7 +685,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ROTATE_FUNCTION();                                           // Accepted
     // return LEET_NTH_DIGIT();                                                 // Accepted
     // return LEET_BINARY_WATCH();                                              // Accepted
-	// return LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT();                            // Accepted
-	// return LEET_REMOVE_K_DIGITS();                                           // Accepted
-	return LEET_SPLIT_ARRAY_LARGEST_SUM();                                   // 
+    // return LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT();                            // Accepted
+    // return LEET_REMOVE_K_DIGITS();                                           // Accepted
+    return LEET_SPLIT_ARRAY_LARGEST_SUM();                                   // Accepted
 }

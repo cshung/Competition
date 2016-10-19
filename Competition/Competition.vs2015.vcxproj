@@ -141,6 +141,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
@@ -490,6 +491,7 @@
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
+    <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />

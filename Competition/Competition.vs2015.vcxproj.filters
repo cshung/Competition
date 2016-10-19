@@ -1044,6 +1044,9 @@
     <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ARITHMETIC_SLICES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2070,6 +2073,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

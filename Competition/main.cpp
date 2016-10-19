@@ -341,7 +341,7 @@
 #include "LEET_PATCHING_ARRAY.h"                                            // 336
 #include "LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h"                  // 337
 #include "LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h"                   // 338
-
+#include "LEET_ARITHMETIC_SLICES.h"                                         // 339
 
 // End of headers
 
@@ -694,5 +694,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SPLIT_ARRAY_LARGEST_SUM();                                   // Accepted
     // return LEET_PATCHING_ARRAY();                                            // Accepted
     // return LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH();                  // Accepted
-    return LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT();                   // Accepted
+    // return LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT();                   // Accepted
+    return LEET_ARITHMETIC_SLICES();                                         // 
 }

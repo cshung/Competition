@@ -340,6 +340,7 @@
 #include "LEET_SPLIT_ARRAY_LARGEST_SUM.h"                                   // 335
 #include "LEET_PATCHING_ARRAY.h"                                            // 336
 #include "LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h"                  // 337
+#include "LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h"                   // 338
 
 
 // End of headers
@@ -692,5 +693,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REMOVE_K_DIGITS();                                           // Accepted
     // return LEET_SPLIT_ARRAY_LARGEST_SUM();                                   // Accepted
     // return LEET_PATCHING_ARRAY();                                            // Accepted
-    return LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH();                  // Accepted
+    // return LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH();                  // Accepted
+    return LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT();                   // Accepted
 }

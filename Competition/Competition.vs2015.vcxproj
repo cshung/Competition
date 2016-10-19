@@ -156,6 +156,7 @@
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
+    <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_MINI_PARSER.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
@@ -575,6 +576,7 @@
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
+    <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp" />

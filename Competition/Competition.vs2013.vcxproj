@@ -79,9 +79,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_BULB_SWITCHER.h" />
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
     <ClInclude Include="LEET_BURST_BALLOONS.h" />
@@ -114,6 +116,7 @@
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
     <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
+    <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
     <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
@@ -122,18 +125,23 @@
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
+    <ClInclude Include="LEET_NTH_DIGIT.h" />
     <ClInclude Include="LEET_PARTITION_LIST.h" />
+    <ClInclude Include="LEET_PATCHING_ARRAY.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_POWER_OF_THREE.h" />
     <ClInclude Include="LEET_POW_X_N.h" />
+    <ClInclude Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h" />
     <ClInclude Include="LEET_RANDOM_PICK_INDEX.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
     <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h" />
+    <ClInclude Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h" />
+    <ClInclude Include="LEET_REMOVE_K_DIGITS.h" />
     <ClInclude Include="LEET_REVERSE_STRING.h" />
     <ClInclude Include="LEET_REVERSE_VOWELS_OF_A_STRING.h" />
     <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h" />
@@ -255,6 +263,7 @@
     <ClInclude Include="LEET_SORT_COLORS.h" />
     <ClInclude Include="LEET_SPIRAL_MATRIX.h" />
     <ClInclude Include="LEET_SPIRAL_MATRIX_II.h" />
+    <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_SUBSETS.h" />
@@ -420,6 +429,7 @@
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
+    <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
@@ -434,6 +444,7 @@
     <ClCompile Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
+    <ClCompile Include="LEET_BINARY_WATCH.cpp" />
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
     <ClCompile Include="LEET_BULB_SWITCHER.cpp" />
     <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
@@ -506,6 +517,7 @@
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
+    <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp" />
@@ -530,6 +542,7 @@
     <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />
     <ClCompile Include="LEET_NIM_GAME.cpp" />
+    <ClCompile Include="LEET_NTH_DIGIT.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />
@@ -539,6 +552,7 @@
     <ClCompile Include="LEET_PARTITION_LIST.cpp" />
     <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
+    <ClCompile Include="LEET_PATCHING_ARRAY.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
@@ -552,16 +566,19 @@
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
     <ClCompile Include="LEET_POW_X_N.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
+    <ClCompile Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.cpp" />
     <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp" />
+    <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.cpp" />
     <ClCompile Include="LEET_REMOVE_ELEMENT.cpp" />
+    <ClCompile Include="LEET_REMOVE_K_DIGITS.cpp" />
     <ClCompile Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.cpp" />
     <ClCompile Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
@@ -592,6 +609,7 @@
     <ClCompile Include="LEET_SORT_COLORS.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp" />
+    <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />

@@ -344,6 +344,7 @@
 #include "LEET_ARITHMETIC_SLICES.h"                                         // 339
 #include "LEET_FIZZ_BUZZ.h"                                                 // 340
 #include "LEET_SUM_OF_TWO_INTEGERS.h"                                       // 341
+#include "LEET_SUM_OF_LEFT_LEAVES.h"                                        // 342
 
 // End of headers
 
@@ -699,5 +700,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT();                   // Accepted
     // return LEET_ARITHMETIC_SLICES();                                         // Accepted
     // return LEET_FIZZ_BUZZ();                                                 // Accepted
-    return LEET_SUM_OF_TWO_INTEGERS();                                       // Accepted
+    // return LEET_SUM_OF_TWO_INTEGERS();                                       // Accepted
+    return LEET_SUM_OF_LEFT_LEAVES();                                        // Accepted
 }

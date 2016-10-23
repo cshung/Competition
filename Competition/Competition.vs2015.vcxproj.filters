@@ -1050,6 +1050,9 @@
     <ClInclude Include="LEET_FIZZ_BUZZ.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2082,6 +2085,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIZZ_BUZZ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

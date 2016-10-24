@@ -348,6 +348,7 @@
 #include "LEET_RANSOM_NOTE.h"                                               // 343
 #include "LEET_LONGEST_PALINDROME.h"                                        // 344
 #include "LEET_ADD_STRINGS.h"                                               // 345
+#include "LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h"                           // 346
 
 // End of headers
 
@@ -707,5 +708,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SUM_OF_LEFT_LEAVES();                                        // Accepted
     // return LEET_RANSOM_NOTE();                                               // Accepted
     // return LEET_LONGEST_PALINDROME();                                        // Accepted
-    return LEET_ADD_STRINGS();                                               // Accepted
+    // return LEET_ADD_STRINGS();                                               // Accepted
+    return LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL();                           // Accepted
 }

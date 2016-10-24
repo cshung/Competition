@@ -91,6 +91,7 @@
     <ClInclude Include="LEET_CLONE_GRAPH.h" />
     <ClInclude Include="LEET_COIN_CHANGE.h" />
     <ClInclude Include="LEET_COMBINATIONS.h" />
+    <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h" />
     <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h" />
@@ -466,6 +467,7 @@
     <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
+    <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />

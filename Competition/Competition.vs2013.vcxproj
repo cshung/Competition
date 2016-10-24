@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
@@ -103,6 +104,7 @@
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
     <ClInclude Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h" />
+    <ClInclude Include="LEET_FIZZ_BUZZ.h" />
     <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h" />
     <ClInclude Include="LEET_FRACTION_TO_RECURRING_DECIMAL.h" />
     <ClInclude Include="LEET_GAME_OF_LIFE.h" />
@@ -116,6 +118,7 @@
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
     <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
+    <ClInclude Include="LEET_LONGEST_PALINDROME.h" />
     <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
@@ -139,6 +142,7 @@
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
+    <ClInclude Include="LEET_RANSOM_NOTE.h" />
     <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h" />
     <ClInclude Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h" />
     <ClInclude Include="LEET_REMOVE_K_DIGITS.h" />
@@ -270,6 +274,8 @@
     <ClInclude Include="LEET_SUBSETS_II.h" />
     <ClInclude Include="LEET_SUDOKU_SOLVER.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
+    <ClInclude Include="LEET_SUM_OF_LEFT_LEAVES.h" />
+    <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h" />
     <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
     <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
@@ -428,6 +434,7 @@
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
+    <ClCompile Include="LEET_ADD_STRINGS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
@@ -482,6 +489,7 @@
     <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
     <ClCompile Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_FIZZ_BUZZ.cpp" />
     <ClCompile Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_FRACTION_TO_RECURRING_DECIMAL.cpp" />
     <ClCompile Include="LEET_GAME_OF_LIFE.cpp" />
@@ -516,6 +524,7 @@
     <ClCompile Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.cpp" />
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_PALINDROME.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
     <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
@@ -571,6 +580,7 @@
     <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
+    <ClCompile Include="LEET_RANSOM_NOTE.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
@@ -616,6 +626,8 @@
     <ClCompile Include="LEET_SUBSETS_II.cpp" />
     <ClCompile Include="LEET_SUDOKU_SOLVER.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
+    <ClCompile Include="LEET_SUM_OF_LEFT_LEAVES.cpp" />
+    <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
     <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />

@@ -347,6 +347,7 @@
 #include "LEET_SUM_OF_LEFT_LEAVES.h"                                        // 342
 #include "LEET_RANSOM_NOTE.h"                                               // 343
 #include "LEET_LONGEST_PALINDROME.h"                                        // 344
+#include "LEET_ADD_STRINGS.h"                                               // 345
 
 // End of headers
 
@@ -705,5 +706,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SUM_OF_TWO_INTEGERS();                                       // Accepted
     // return LEET_SUM_OF_LEFT_LEAVES();                                        // Accepted
     // return LEET_RANSOM_NOTE();                                               // Accepted
-    return LEET_LONGEST_PALINDROME();                                        // Accepted
+    // return LEET_LONGEST_PALINDROME();                                        // Accepted
+    return LEET_ADD_STRINGS();                                               // Accepted
 }

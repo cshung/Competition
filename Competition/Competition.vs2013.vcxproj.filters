@@ -1047,6 +1047,24 @@
     <ClInclude Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIZZ_BUZZ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_LONGEST_PALINDROME.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_RANSOM_NOTE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SUM_OF_LEFT_LEAVES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_ADD_STRINGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2076,6 +2094,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIZZ_BUZZ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_PALINDROME.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_RANSOM_NOTE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUM_OF_LEFT_LEAVES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ADD_STRINGS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

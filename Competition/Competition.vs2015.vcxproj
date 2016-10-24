@@ -289,6 +289,7 @@
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
+    <ClInclude Include="LEET_RANSOM_NOTE.h" />
     <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h" />
     <ClInclude Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h" />
     <ClInclude Include="LEET_RECTANGLE_AREA.h" />
@@ -636,6 +637,7 @@
     <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
+    <ClCompile Include="LEET_RANSOM_NOTE.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />

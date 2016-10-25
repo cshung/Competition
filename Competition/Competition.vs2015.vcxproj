@@ -141,8 +141,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
+    <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h" />
     <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
@@ -495,6 +497,7 @@
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
+    <ClCompile Include="LEET_ADD_STRINGS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
@@ -526,6 +529,7 @@
     <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
+    <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />

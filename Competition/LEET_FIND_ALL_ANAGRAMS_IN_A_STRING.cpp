@@ -21,34 +21,33 @@ namespace _LEET_FIND_ALL_ANAGRAMS_IN_A_STRING
             vector<int> result;
             if (s.length() >= p.length())
             {
+                int pattern[26];
                 int histogram[26];
                 for (int i = 0; i < 26; i++)
                 {
                     histogram[i] = 0;
+                    pattern[i] = 0;
                 }
 
                 // Pre-populate the histogram with the first |p| characters
                 for (size_t i = 0; i < p.length(); i++)
                 {
                     histogram[s[i] - 'a']++;
+                    pattern[p[i] - 'a']++;
                 }
 
                 for (size_t i = p.length(); i <= s.length(); i++)
                 {
                     // Check match
                     bool pass = true;
-                    for (size_t j = 0; j < p.length(); j++)
+                    for (int j = 0; pass && j < 26; j++)
                     {
-                        histogram[p[j] - 'a']--;
-                        if (histogram[p[j] - 'a'] < 0)
+                        if (histogram[j] != pattern[j])
                         {
                             pass = false;
                         }
                     }
-                    for (size_t j = 0; j < p.length(); j++)
-                    {
-                        histogram[p[j] - 'a']++;
-                    }
+                    
                     if (pass)
                     {
                         result.push_back(i - p.length());

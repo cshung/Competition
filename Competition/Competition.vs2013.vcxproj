@@ -100,6 +100,7 @@
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
     <ClInclude Include="LEET_ELIMINATION_GAME.h" />
     <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
+    <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
@@ -283,6 +284,7 @@
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
+    <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
@@ -484,6 +486,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
+    <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
@@ -636,6 +639,7 @@
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
     <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
+    <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />

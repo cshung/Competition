@@ -1068,6 +1068,12 @@
     <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2118,6 +2124,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

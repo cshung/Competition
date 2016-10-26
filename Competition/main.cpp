@@ -350,6 +350,7 @@
 #include "LEET_ADD_STRINGS.h"                                               // 345
 #include "LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h"                           // 346
 #include "LEET_THIRD_MAXIMUM_NUMBER.h"                                      // 347
+#include "LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h"                             // 348
 
 // End of headers
 
@@ -711,5 +712,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_PALINDROME();                                        // Accepted
     // return LEET_ADD_STRINGS();                                               // Accepted
     // return LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL();                           // Accepted
-    return LEET_THIRD_MAXIMUM_NUMBER();                                      // Accepted
+    // return LEET_THIRD_MAXIMUM_NUMBER();                                      // Accepted
+    return LEET_FIND_ALL_ANAGRAMS_IN_A_STRING();                             // Time limit exceeded, look like the problem requires linear algorithm
 }

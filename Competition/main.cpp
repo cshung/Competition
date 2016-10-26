@@ -349,6 +349,7 @@
 #include "LEET_LONGEST_PALINDROME.h"                                        // 344
 #include "LEET_ADD_STRINGS.h"                                               // 345
 #include "LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h"                           // 346
+#include "LEET_THIRD_MAXIMUM_NUMBER.h"                                      // 347
 
 // End of headers
 
@@ -709,5 +710,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_RANSOM_NOTE();                                               // Accepted
     // return LEET_LONGEST_PALINDROME();                                        // Accepted
     // return LEET_ADD_STRINGS();                                               // Accepted
-    return LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL();                           // Accepted
+    // return LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL();                           // Accepted
+    return LEET_THIRD_MAXIMUM_NUMBER();                                      // Accepted
 }

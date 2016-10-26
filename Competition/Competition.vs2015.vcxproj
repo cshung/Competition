@@ -345,6 +345,7 @@
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
+    <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
@@ -696,6 +697,7 @@
     <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
+    <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />

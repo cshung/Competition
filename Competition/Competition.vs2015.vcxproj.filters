@@ -1071,6 +1071,12 @@
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_PATH_SUM_III.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2124,6 +2130,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PATH_SUM_III.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

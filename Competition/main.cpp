@@ -351,6 +351,7 @@
 #include "LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h"                           // 346
 #include "LEET_THIRD_MAXIMUM_NUMBER.h"                                      // 347
 #include "LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h"                             // 348
+#include "LEET_PATH_SUM_III.h"                                              // 349
 
 // End of headers
 
@@ -713,5 +714,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ADD_STRINGS();                                               // Accepted
     // return LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL();                           // Accepted
     // return LEET_THIRD_MAXIMUM_NUMBER();                                      // Accepted
-    return LEET_FIND_ALL_ANAGRAMS_IN_A_STRING();                             // Accepted
+    // return LEET_FIND_ALL_ANAGRAMS_IN_A_STRING();                             // Accepted
+    return LEET_PATH_SUM_III();                                              // Accepted
 }

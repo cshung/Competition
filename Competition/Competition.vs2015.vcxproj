@@ -150,6 +150,7 @@
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
     <ClInclude Include="LEET_ELIMINATION_GAME.h" />
+    <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h" />
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
     <ClInclude Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h" />
     <ClInclude Include="LEET_FIZZ_BUZZ.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="LEET_MINI_PARSER.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
     <ClInclude Include="LEET_PATCHING_ARRAY.h" />
+    <ClInclude Include="LEET_PATH_SUM_III.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_3SUM.h" />
@@ -547,6 +549,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
+    <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
@@ -627,6 +630,7 @@
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATCHING_ARRAY.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_PATH_SUM_III.cpp" />
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />

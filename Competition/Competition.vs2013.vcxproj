@@ -133,6 +133,7 @@
     <ClInclude Include="LEET_NTH_DIGIT.h" />
     <ClInclude Include="LEET_PARTITION_LIST.h" />
     <ClInclude Include="LEET_PATCHING_ARRAY.h" />
+    <ClInclude Include="LEET_PATH_SUM_III.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
@@ -568,6 +569,7 @@
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATCHING_ARRAY.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_PATH_SUM_III.cpp" />
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />

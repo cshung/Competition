@@ -84,6 +84,7 @@
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
+    <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_BULB_SWITCHER.h" />
@@ -446,6 +447,7 @@
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
+    <ClCompile Include="LEET_BATTLESHIPS_IN_A_BOARD.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />

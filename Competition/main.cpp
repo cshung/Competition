@@ -352,6 +352,7 @@
 #include "LEET_THIRD_MAXIMUM_NUMBER.h"                                      // 347
 #include "LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h"                             // 348
 #include "LEET_PATH_SUM_III.h"                                              // 349
+#include "HACKER_RANK_FLIPPING_THE_MATRIX.h"                                // 350
 
 // End of headers
 
@@ -715,5 +716,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL();                           // Accepted
     // return LEET_THIRD_MAXIMUM_NUMBER();                                      // Accepted
     // return LEET_FIND_ALL_ANAGRAMS_IN_A_STRING();                             // Accepted
-    return LEET_PATH_SUM_III();                                              // Accepted
+    // return LEET_PATH_SUM_III();                                              // Accepted
+    return HACKER_RANK_FLIPPING_THE_MATRIX();                                // Accepted
 }

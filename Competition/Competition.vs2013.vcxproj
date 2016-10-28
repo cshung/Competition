@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
@@ -434,6 +435,7 @@
     <ClInclude Include="UVa990.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />

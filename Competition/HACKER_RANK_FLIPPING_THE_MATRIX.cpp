@@ -13,7 +13,6 @@ using namespace std;
 
 int HACKER_RANK_FLIPPING_THE_MATRIX()
 {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int q;
     cin >> q;
     for (int i = 0; i < q; i++)

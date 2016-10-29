@@ -147,6 +147,7 @@
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h" />
+    <ClInclude Include="LEET_COUNTING_BITS.h" />
     <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
@@ -538,6 +539,7 @@
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
     <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_COUNTING_BITS.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
     <ClCompile Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.cpp" />

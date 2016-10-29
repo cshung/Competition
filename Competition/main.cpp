@@ -354,6 +354,7 @@
 #include "LEET_PATH_SUM_III.h"                                              // 349
 #include "HACKER_RANK_FLIPPING_THE_MATRIX.h"                                // 350
 #include "LEET_BATTLESHIPS_IN_A_BOARD.h"                                    // 351
+#include "LEET_COUNTING_BITS.h"                                             // 352
 
 // End of headers
 
@@ -719,5 +720,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_FIND_ALL_ANAGRAMS_IN_A_STRING();                             // Accepted
     // return LEET_PATH_SUM_III();                                              // Accepted
     // return HACKER_RANK_FLIPPING_THE_MATRIX();                                // Accepted
-    return LEET_BATTLESHIPS_IN_A_BOARD();                                    // Accepted
+    // return LEET_BATTLESHIPS_IN_A_BOARD();                                    // Accepted
+    return LEET_COUNTING_BITS();                                             // Accepted
 }

@@ -1083,6 +1083,9 @@
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_COUNTING_BITS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2148,6 +2151,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BATTLESHIPS_IN_A_BOARD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_COUNTING_BITS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

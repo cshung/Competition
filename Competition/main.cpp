@@ -719,5 +719,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_FIND_ALL_ANAGRAMS_IN_A_STRING();                             // Accepted
     // return LEET_PATH_SUM_III();                                              // Accepted
     // return HACKER_RANK_FLIPPING_THE_MATRIX();                                // Accepted
-    return LEET_BATTLESHIPS_IN_A_BOARD();                                    // 
+    return LEET_BATTLESHIPS_IN_A_BOARD();                                    // Accepted
 }

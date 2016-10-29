@@ -1086,6 +1086,9 @@
     <ClInclude Include="LEET_COUNTING_BITS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2154,6 +2157,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_COUNTING_BITS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

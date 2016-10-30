@@ -1092,6 +1092,9 @@
     <ClInclude Include="LEET_PATH_SUM_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_IS_SUBSEQUENCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2166,6 +2169,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PATH_SUM_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_IS_SUBSEQUENCE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

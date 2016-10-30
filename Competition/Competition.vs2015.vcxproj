@@ -171,6 +171,7 @@
     <ClInclude Include="LEET_MINI_PARSER.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
     <ClInclude Include="LEET_PATCHING_ARRAY.h" />
+    <ClInclude Include="LEET_PATH_SUM_II.h" />
     <ClInclude Include="LEET_PATH_SUM_III.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
@@ -638,6 +639,7 @@
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PATCHING_ARRAY.cpp" />
     <ClCompile Include="LEET_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_PATH_SUM_II.cpp" />
     <ClCompile Include="LEET_PATH_SUM_III.cpp" />
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />

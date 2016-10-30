@@ -356,6 +356,7 @@
 #include "LEET_BATTLESHIPS_IN_A_BOARD.h"                                    // 351
 #include "LEET_COUNTING_BITS.h"                                             // 352
 #include "HACKER_RANK_NEW_YEAR_CHAOS.h"                                     // 353
+#include "LEET_PATH_SUM_II.h"                                               // 354
 
 // End of headers
 
@@ -723,5 +724,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return HACKER_RANK_FLIPPING_THE_MATRIX();                                // Accepted
     // return LEET_BATTLESHIPS_IN_A_BOARD();                                    // Accepted
     // return LEET_COUNTING_BITS();                                             // Accepted
-    return HACKER_RANK_NEW_YEAR_CHAOS();                                     // Accepted
+    // return HACKER_RANK_NEW_YEAR_CHAOS();                                     // Accepted
+    return LEET_PATH_SUM_II();                                               // Accepted
 }

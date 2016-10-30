@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
+    <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
@@ -94,6 +95,7 @@
     <ClInclude Include="LEET_COIN_CHANGE.h" />
     <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h" />
+    <ClInclude Include="LEET_COUNTING_BITS.h" />
     <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h" />
@@ -437,6 +439,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
+    <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
@@ -476,6 +479,7 @@
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
     <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_COUNTING_BITS.cpp" />
     <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
     <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
     <ClCompile Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.cpp" />

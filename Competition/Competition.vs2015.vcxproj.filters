@@ -1095,6 +1095,12 @@
     <ClInclude Include="LEET_IS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_NEXT_PERMUTATION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2172,6 +2178,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_IS_SUBSEQUENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_NEXT_PERMUTATION.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

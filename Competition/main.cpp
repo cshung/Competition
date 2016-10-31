@@ -358,6 +358,8 @@
 #include "HACKER_RANK_NEW_YEAR_CHAOS.h"                                     // 353
 #include "LEET_PATH_SUM_II.h"                                               // 354
 #include "LEET_IS_SUBSEQUENCE.h"                                            // 356
+#include "LEET_NEXT_PERMUTATION.h"                                          // 357
+#include "LEET_EVALUATE_REVERSE_POLISH_NOTATION.h"                          // 358
 
 // End of headers
 
@@ -727,5 +729,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNTING_BITS();                                             // Accepted
     // return HACKER_RANK_NEW_YEAR_CHAOS();                                     // Accepted
     // return LEET_PATH_SUM_II();                                               // Accepted
-    return LEET_IS_SUBSEQUENCE();                                            // Accepted
+    // return LEET_IS_SUBSEQUENCE();                                            // Accepted
+    // return LEET_NEXT_PERMUTATION();                                          // Accepted
+    return LEET_EVALUATE_REVERSE_POLISH_NOTATION();                          // Accepted
 }

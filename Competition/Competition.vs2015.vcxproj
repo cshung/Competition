@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
+    <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
@@ -506,6 +507,7 @@
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />

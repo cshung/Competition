@@ -1104,6 +1104,9 @@
     <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2190,6 +2193,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

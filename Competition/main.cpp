@@ -361,6 +361,7 @@
 #include "LEET_NEXT_PERMUTATION.h"                                          // 357
 #include "LEET_EVALUATE_REVERSE_POLISH_NOTATION.h"                          // 358
 #include "HACKER_RANK_S10_BASIC_STATISTICS.h"                               // 359
+#include "HACKER_RANK_S10_WEIGHTED_MEAN.h"                                  // 360
 
 // End of headers
 
@@ -733,5 +734,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_IS_SUBSEQUENCE();                                            // Accepted
     // return LEET_NEXT_PERMUTATION();                                          // Accepted
     // return LEET_EVALUATE_REVERSE_POLISH_NOTATION();                          // Accepted
-    return HACKER_RANK_S10_BASIC_STATISTICS();                               // 
+    // return HACKER_RANK_S10_BASIC_STATISTICS();                               // Accepted
+    return HACKER_RANK_S10_WEIGHTED_MEAN();                                  // Accepted
 }

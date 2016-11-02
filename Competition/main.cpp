@@ -363,6 +363,7 @@
 #include "HACKER_RANK_S10_BASIC_STATISTICS.h"                               // 359
 #include "HACKER_RANK_S10_WEIGHTED_MEAN.h"                                  // 360
 #include "HACKER_RANK_CAMEL_CASE.h"                                         // 361
+#include "LEET_EDIT_DISTANCE.h"                                             // 362
 
 // End of headers
 
@@ -737,5 +738,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_EVALUATE_REVERSE_POLISH_NOTATION();                          // Accepted
     // return HACKER_RANK_S10_BASIC_STATISTICS();                               // Accepted
     // return HACKER_RANK_S10_WEIGHTED_MEAN();                                  // Accepted
-    return HACKER_RANK_CAMEL_CASE();                                         // Accepted
+    // return HACKER_RANK_CAMEL_CASE();                                         // Accepted
+    return LEET_EDIT_DISTANCE();                                             // 
 }

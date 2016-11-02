@@ -1110,6 +1110,9 @@
     <ClInclude Include="HACKER_RANK_CAMEL_CASE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_EDIT_DISTANCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2202,6 +2205,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EDIT_DISTANCE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

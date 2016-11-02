@@ -37,8 +37,8 @@ int HACKER_RANK_S10_BASIC_STATISTICS()
 
     int last_number = v[0];
     int last_frequency = 1;
-    int max_frequency = v[0];
     int max_frequency_number = v[0];
+    int max_frequency = 1;
 
     for (int i = 1; i < n; i++)
     {

@@ -79,8 +79,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HACKER_RANK_CAMEL_CASE.h" />
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
+    <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
+    <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
@@ -102,6 +105,7 @@
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DECODE_WAYS.h" />
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
+    <ClInclude Include="LEET_EDIT_DISTANCE.h" />
     <ClInclude Include="LEET_ELIMINATION_GAME.h" />
     <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
     <ClInclude Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.h" />
@@ -262,6 +266,7 @@
     <ClInclude Include="LEET_REVERSE_LINKED_LIST.h" />
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
+    <ClInclude Include="LEET_ROTATE_LIST.h" />
     <ClInclude Include="LEET_RUSSIAN_DOLL_ENVELOPES.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
@@ -442,8 +447,11 @@
     <ClInclude Include="UVa990.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp" />
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
@@ -494,6 +502,7 @@
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
+    <ClCompile Include="LEET_EDIT_DISTANCE.cpp" />
     <ClCompile Include="LEET_ELIMINATION_GAME.cpp" />
     <ClCompile Include="LEET_EVALUATE_DIVISION.cpp" />
     <ClCompile Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.cpp" />
@@ -626,6 +635,7 @@
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_ROTATE_FUNCTION.cpp" />
     <ClCompile Include="LEET_ROTATE_IMAGE.cpp" />
+    <ClCompile Include="LEET_ROTATE_LIST.cpp" />
     <ClCompile Include="LEET_RUSSIAN_DOLL_ENVELOPES.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />

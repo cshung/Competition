@@ -1101,6 +1101,21 @@
     <ClInclude Include="LEET_PATH_SUM_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_CAMEL_CASE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_EDIT_DISTANCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_ROTATE_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2184,6 +2199,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PATH_SUM_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EDIT_DISTANCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ROTATE_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

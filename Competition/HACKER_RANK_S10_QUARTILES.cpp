@@ -79,6 +79,13 @@ void select(vector<int>& nums, int start, int end, vector<int>& goals, int goalS
     int pivotCount = 0;
     int rightGoalStart = -1;
 
+    cout << "Searching for (";
+    for (int i = goalStart; i < goalEnd; i++)
+    {
+        cout << goals[i] << " ";
+    }
+    cout << "in [" << left << ", " << right << ") when pivot is " << pivot << endl;
+
     for (int i = goalStart; i < goalEnd; i++)
     {
         int k = goals[i] - left;
@@ -109,6 +116,10 @@ void select(vector<int>& nums, int start, int end, vector<int>& goals, int goalS
             }
         }
     }
+    if (leftGoalEnd == -1)
+    {
+        leftGoalEnd = goalEnd;
+    }
 
     if (leftGoalEnd > goalStart)
     {
@@ -120,7 +131,7 @@ void select(vector<int>& nums, int start, int end, vector<int>& goals, int goalS
     }
     if (rightGoalStart != -1)
     {
-        select(nums, smallerOrEqualEnd, right, goals, rightGoalStart, goals.size(), result);
+        select(nums, smallerOrEqualEnd, right, goals, rightGoalStart, goalEnd, result);
     }
 }
 

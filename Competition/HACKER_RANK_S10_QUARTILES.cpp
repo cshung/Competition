@@ -79,13 +79,6 @@ void select(vector<int>& nums, int start, int end, vector<int>& goals, int goalS
     int pivotCount = 0;
     int rightGoalStart = -1;
 
-    cout << "Searching for (";
-    for (int i = goalStart; i < goalEnd; i++)
-    {
-        cout << goals[i] << " ";
-    }
-    cout << "in [" << left << ", " << right << ") when pivot is " << pivot << endl;
-
     for (int i = goalStart; i < goalEnd; i++)
     {
         int k = goals[i] - left;
@@ -146,11 +139,57 @@ int HACKER_RANK_S10_QUARTILES()
         cin >> data[i];
     }
     vector<int> goals;
-    goals.push_back(3);
-    goals.push_back(7);
     vector<int> result;
-    select(data, 0, n, goals, 0, goals.size(), result);
-    cout << result[0] << endl;
-    cout << result[1] << endl;
+    if (n % 4 == 3)
+    {
+        // [0, n/2) [n/2] [n/2 + 1, n)
+        goals.push_back(n / 4);
+        goals.push_back(n / 2);
+        goals.push_back(n / 2 + 1 + n / 4);
+        select(data, 0, n, goals, 0, goals.size(), result);
+        cout << result[0] << endl;
+        cout << result[1] << endl;
+        cout << result[2] << endl;
+    }
+    else if (n % 4 == 2)
+    {
+        // [0, n/2) [n/2, n)
+        goals.push_back(n / 4);
+        goals.push_back(n / 2 - 1);
+        goals.push_back(n / 2);
+        goals.push_back(n / 2 + n / 4);
+        select(data, 0, n, goals, 0, goals.size(), result);
+        cout << result[0] << endl;
+        cout << (result[1] + result[2]) / 2 << endl;
+        cout << result[3] << endl;
+    }
+    else if (n % 4 == 1)
+    {
+        // [0, n/2) {n/2}, [n/2 + 1, n]
+        goals.push_back(n / 4 - 1);
+        goals.push_back(n / 4);
+        goals.push_back(n / 2);
+        goals.push_back(n / 2 + n / 4);
+        goals.push_back(n / 2 + n / 4 + 1);
+        select(data, 0, n, goals, 0, goals.size(), result);
+        cout << (result[0] + result[1]) / 2 << endl;
+        cout << result[2] << endl;
+        cout << (result[3] + result[4]) / 2 << endl;
+    }
+    else if (n % 4 == 0)
+    {
+        // [0, n/2) [n/2, n]
+        goals.push_back(n / 4 - 1);
+        goals.push_back(n / 4);
+        goals.push_back(n / 2 - 1);
+        goals.push_back(n / 2);
+        goals.push_back(n / 2 + n / 4 - 1);
+        goals.push_back(n / 2 + n / 4);
+        select(data, 0, n, goals, 0, goals.size(), result);
+        cout << (result[0] + result[1]) / 2 << endl;
+        cout << (result[2] + result[3]) / 2 << endl;
+        cout << (result[4] + result[5]) / 2 << endl;
+    }
+
     return 0;
 }

@@ -742,6 +742,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return HACKER_RANK_S10_WEIGHTED_MEAN();                                  // Accepted
     // return HACKER_RANK_CAMEL_CASE();                                         // Accepted
     // return LEET_EDIT_DISTANCE();                                             // Accepted
-    // return LEET_ROTATE_LIST();                                               // 
-    return HACKER_RANK_S10_QUARTILES();                                      // 
+    // return LEET_ROTATE_LIST();                                               // Wrong test case!
+    return HACKER_RANK_S10_QUARTILES();                                      // Accepted
 }

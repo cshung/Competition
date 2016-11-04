@@ -83,6 +83,7 @@
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
     <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
+    <ClInclude Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.h" />
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
@@ -452,6 +453,7 @@
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
     <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.cpp" />
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />

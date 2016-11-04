@@ -1116,6 +1116,9 @@
     <ClInclude Include="LEET_ROTATE_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_S10_QUARTILES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2214,6 +2217,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ROTATE_LIST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

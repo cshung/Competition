@@ -85,6 +85,7 @@
     <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
     <ClInclude Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.h" />
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
+    <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
@@ -455,6 +456,7 @@
     <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
     <ClCompile Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.cpp" />
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />

@@ -368,6 +368,7 @@
 #include "HACKER_RANK_S10_QUARTILES.h"                                      // 364
 #include "HACKER_RANK_S10_QUARTILES.h"                                      // 364
 #include "HACKER_RANK_S10_INTERQUARTILE_RANGE.h"                            // 365
+#include "HACKER_RANK_S10_STANDARD_DEVIATION.h"                             // 366
 
 // End of headers
 
@@ -746,5 +747,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_EDIT_DISTANCE();                                             // Accepted
     // return LEET_ROTATE_LIST();                                               // Wrong test case!
     // return HACKER_RANK_S10_QUARTILES();                                      // Accepted
-    return HACKER_RANK_S10_INTERQUARTILE_RANGE();                            // 
+    // return HACKER_RANK_S10_INTERQUARTILE_RANGE();                            // Accepted
+    return HACKER_RANK_S10_STANDARD_DEVIATION();                             // Accepted
 }

@@ -151,6 +151,7 @@
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
+    <ClInclude Include="LEET_ARRANGING_COINS.h" />
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
     <ClInclude Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
@@ -529,6 +530,7 @@
     <ClCompile Include="LEET_ADD_STRINGS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
+    <ClCompile Include="LEET_ARRANGING_COINS.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />

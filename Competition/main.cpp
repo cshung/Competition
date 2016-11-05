@@ -371,6 +371,7 @@
 #include "HACKER_RANK_S10_STANDARD_DEVIATION.h"                             // 366
 #include "LEET_TRIANGLE.h"                                                  // 366
 #include "LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.h"                  // 367
+#include "LEET_ARRANGING_COINS.h"                                           // 368
 
 // End of headers
 
@@ -752,5 +753,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return HACKER_RANK_S10_INTERQUARTILE_RANGE();                            // Accepted
     // return HACKER_RANK_S10_STANDARD_DEVIATION();                             // Accepted
     // return LEET_TRIANGLE();                                                  // Accepted
-    return LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL();                  // Accepted
+    // return LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL();                  // Accepted
+    return LEET_ARRANGING_COINS();                                           // Accepted
 }

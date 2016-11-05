@@ -147,6 +147,7 @@
     <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
     <ClInclude Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.h" />
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
+    <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
@@ -363,6 +364,7 @@
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
+    <ClInclude Include="LEET_TRIANGLE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
@@ -517,6 +519,7 @@
     <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
     <ClCompile Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.cpp" />
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
@@ -732,6 +735,7 @@
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
+    <ClCompile Include="LEET_TRIANGLE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />

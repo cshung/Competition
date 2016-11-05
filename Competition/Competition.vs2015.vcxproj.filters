@@ -1122,6 +1122,12 @@
     <ClInclude Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_TRIANGLE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -2226,6 +2232,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TRIANGLE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

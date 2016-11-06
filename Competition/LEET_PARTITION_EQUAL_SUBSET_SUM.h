@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_PARTITION_EQUAL_SUBSET_SUM();

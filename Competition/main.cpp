@@ -375,6 +375,7 @@
 #include "LEET_DECODE_STRING.h"                                             // 369
 #include "LEET_RECOVER_BINARY_SEARCH_TREE.h"                                // 370
 #include "LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.h"                 // 371
+#include "LEET_PARTITION_EQUAL_SUBSET_SUM.h"                                // 372
 
 // End of headers
 
@@ -760,5 +761,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ARRANGING_COINS();                                           // Accepted
     // return LEET_DECODE_STRING();                                             // Accepted
     // return LEET_RECOVER_BINARY_SEARCH_TREE();                                // Accepted
-    return LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE();                 // Accepted
+    // return LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE();                 // Accepted
+    return LEET_PARTITION_EQUAL_SUBSET_SUM();                                // Accepted
 }

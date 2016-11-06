@@ -374,6 +374,7 @@
 #include "LEET_ARRANGING_COINS.h"                                           // 368
 #include "LEET_DECODE_STRING.h"                                             // 369
 #include "LEET_RECOVER_BINARY_SEARCH_TREE.h"                                // 370
+#include "LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.h"                 // 371
 
 // End of headers
 
@@ -758,5 +759,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL();                  // Accepted
     // return LEET_ARRANGING_COINS();                                           // Accepted
     // return LEET_DECODE_STRING();                                             // Accepted
-    return LEET_RECOVER_BINARY_SEARCH_TREE();                                // Accepted
+    // return LEET_RECOVER_BINARY_SEARCH_TREE();                                // Accepted
+    return LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE();                 // Accepted
 }

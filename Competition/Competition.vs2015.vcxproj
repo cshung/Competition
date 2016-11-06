@@ -388,6 +388,7 @@
     <ClInclude Include="LEET_WORD_PATTERN.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
+    <ClInclude Include="LEET_RECOVER_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
     <ClInclude Include="SPOJ_LITE_1.h" />
@@ -689,6 +690,7 @@
     <ClCompile Include="LEET_RANSOM_NOTE.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp" />
     <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp" />
+    <ClCompile Include="LEET_RECOVER_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />

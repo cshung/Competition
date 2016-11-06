@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_RECOVER_BINARY_SEARCH_TREE();

@@ -25,7 +25,7 @@ namespace _LEET_DECODE_STRING
         // 5: eof
         int token_type;
         int n;
-        string s;
+        string t;
 
         void scan(string& text)
         {
@@ -36,10 +36,12 @@ namespace _LEET_DECODE_STRING
             else if (text[p] == '[')
             {
                 token_type = 3;
+                p++;
             }
             else if (text[p] == ']')
             {
                 token_type = 4;
+                p++;
             }
             else if ('0' <= text[p] && text[p] <= '9')
             {
@@ -55,10 +57,11 @@ namespace _LEET_DECODE_STRING
             else
             {
                 this->token_type = 1;
-                this->s = "";
-                while (p != text.length() && !('0' <= text[p] && text[p] <= '9'))
+                this->t = "";
+                while (p != text.length() && text[p] != '[' && text[p] != ']' && !('0' <= text[p] && text[p] <= '9'))
                 {
-                    s += text[p];
+                    t += text[p];
+                    p++;
                 }
             }
         }
@@ -125,7 +128,7 @@ namespace _LEET_DECODE_STRING
                 }
                 else if (this->token_type == 1)
                 {
-                    result.push_back(new string_command(s));
+                    result.push_back(new string_command(t));
                     this->scan(s);
                 }
                 else if (this->token_type == 2)
@@ -136,11 +139,10 @@ namespace _LEET_DECODE_STRING
                     {
                         this->scan(s);
                         vector<command*> recursive_result = parseInput(s);
-                        this->scan(s);
                         if (this->token_type == 4)
                         {
-                            result.push_back(new repeat_command(r, recursive_result));
                             this->scan(s);
+                            result.push_back(new repeat_command(r, recursive_result));
                         }
                         else
                         {
@@ -165,5 +167,7 @@ int LEET_DECODE_STRING()
 {
     Solution solution;
     cout << solution.decodeString("3[a]2[bc]") << endl;
+    cout << solution.decodeString("3[a2[c]]") << endl;
+    cout << solution.decodeString("2[abc]3[cd]ef") << endl;
     return 0;
 }

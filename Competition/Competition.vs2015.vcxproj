@@ -181,6 +181,7 @@
     <ClInclude Include="LEET_LONGEST_PALINDROME.h" />
     <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
+    <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.h" />
     <ClInclude Include="LEET_MINI_PARSER.h" />
     <ClInclude Include="LEET_NEXT_PERMUTATION.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
@@ -650,6 +651,7 @@
     <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
+    <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
     <ClCompile Include="LEET_MINI_PARSER.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />

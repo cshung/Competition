@@ -265,6 +265,7 @@
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.h" />
     <ClInclude Include="LEET_MAXIMUM_SUBARRAY.h" />
+    <ClInclude Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h" />
     <ClInclude Include="LEET_MERGE_K_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
@@ -644,6 +645,7 @@
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.cpp" />
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.cpp" />
     <ClCompile Include="LEET_MAXIMUM_SUBARRAY.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />

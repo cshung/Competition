@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY();

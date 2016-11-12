@@ -396,6 +396,9 @@
     <ClInclude Include="LEET_MAXIMUM_SUBARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1527,6 +1530,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MAXIMUM_SUBARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp">

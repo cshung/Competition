@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II();

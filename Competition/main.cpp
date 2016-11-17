@@ -379,6 +379,7 @@
 #include "LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.h"                     // 373
 #include "LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.h"                    // 374
 #include "LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.h"                  // 375
+#include "LEET_ASSIGN_COOKIES.h"                                            // 376
 
 // End of headers
 
@@ -768,5 +769,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_PARTITION_EQUAL_SUBSET_SUM();                                // Accepted
     // return LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS();                     // Accepted
     // return LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY();                    // Accepted
-    return LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II();                  // Accepted
+    // return LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II();                  // Accepted
+    return LEET_ASSIGN_COOKIES();                                            // Accepted
 }

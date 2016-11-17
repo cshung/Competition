@@ -155,6 +155,7 @@
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_ARRANGING_COINS.h" />
+    <ClInclude Include="LEET_ASSIGN_COOKIES.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
@@ -536,6 +537,7 @@
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_ARRANGING_COINS.cpp" />
+    <ClCompile Include="LEET_ASSIGN_COOKIES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
@@ -907,5 +909,4 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets"></ImportGroup>
-</Project>
 </Project>

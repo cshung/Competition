@@ -52,10 +52,8 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Label="Shared"></ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -149,6 +147,9 @@
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
     <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
+    <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h" />
+    <ClInclude Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h" />
+    <ClInclude Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_132_PATTERN.h" />
     <ClInclude Include="LEET_3SUM.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
@@ -533,6 +534,9 @@
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
     <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_132_PATTERN.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
@@ -914,6 +918,5 @@
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
 </Project>

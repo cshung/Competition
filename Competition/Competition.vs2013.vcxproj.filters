@@ -42,6 +42,18 @@
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_132_PATTERN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_3SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1185,6 +1197,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_132_PATTERN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_3SUM.cpp">

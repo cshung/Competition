@@ -382,6 +382,9 @@
 #include "LEET_ASSIGN_COOKIES.h"                                            // 376
 #include "LEET_ISLAND_PERIMETER.h"                                          // 377
 #include "LEET_132_PATTERN.h"                                               // 378
+#include "HACKER_RANK_TREE_PREORDER_TRAVERSAL.h"                            // 379
+#include "HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h"                           // 380
+#include "HACKER_RANK_TREE_INORDER_TRAVERSAL.h"                             // 381
 
 // End of headers
 
@@ -774,5 +777,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II();                  // Accepted
     // return LEET_ASSIGN_COOKIES();                                            // Accepted
     // return LEET_ISLAND_PERIMETER();                                          // Accepted
-    return LEET_132_PATTERN();                                               // Accepted
+    // return LEET_132_PATTERN();                                               // Accepted
+    // return HACKER_RANK_TREE_PREORDER_TRAVERSAL();                            // Accepted
+    // return HACKER_RANK_TREE_POSTORDER_TRAVERSAL();                           // Accepted
+    return HACKER_RANK_TREE_INORDER_TRAVERSAL();                             // Accepted
 }

@@ -385,6 +385,7 @@
 #include "HACKER_RANK_TREE_PREORDER_TRAVERSAL.h"                            // 379
 #include "HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h"                           // 380
 #include "HACKER_RANK_TREE_INORDER_TRAVERSAL.h"                             // 381
+#include "HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h"                       // 382
 
 // End of headers
 
@@ -780,5 +781,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_132_PATTERN();                                               // Accepted
     // return HACKER_RANK_TREE_PREORDER_TRAVERSAL();                            // Accepted
     // return HACKER_RANK_TREE_POSTORDER_TRAVERSAL();                           // Accepted
-    return HACKER_RANK_TREE_INORDER_TRAVERSAL();                             // Accepted
+    // return HACKER_RANK_TREE_INORDER_TRAVERSAL();                             // Accepted
+    return HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE();                       // Accepted
 }

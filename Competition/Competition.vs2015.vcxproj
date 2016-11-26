@@ -147,6 +147,7 @@
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
     <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
+    <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h" />
     <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h" />
     <ClInclude Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.h" />
@@ -534,6 +535,7 @@
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
     <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.cpp" />

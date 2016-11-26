@@ -42,6 +42,9 @@
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1197,6 +1200,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp">

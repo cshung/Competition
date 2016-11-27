@@ -391,6 +391,7 @@
 #include "HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.h"                       // 385
 #include "HACKER_RANK_TREE_HUFFMAN_DECODING.h"                              // 386
 #include "HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.h"          // 387
+#include "HACKER_RANK_SWAP_NODES_ALGO.h"                                    // 388
 
 // End of headers
 
@@ -792,5 +793,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return HACKER_RANK_TREE_LEVEL_ORDER_TRAVERSAL();                         // Accepted
     // return HACKER_RANK_BINARY_SEARCH_TREE_INSERTION();                       // Accepted
     // return HACKER_RANK_TREE_HUFFMAN_DECODING();                              // Accepted
-    return HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR();          // Accepted
+    // return HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR();          // Accepted
+    return HACKER_RANK_SWAP_NODES_ALGO();                                    // Accepted
 }

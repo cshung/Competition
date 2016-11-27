@@ -30,6 +30,9 @@
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1206,6 +1209,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp">

@@ -82,6 +82,7 @@
     <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.h" />
     <ClInclude Include="HACKER_RANK_CAMEL_CASE.h" />
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
+    <ClInclude Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
     <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
     <ClInclude Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.h" />
@@ -476,6 +477,7 @@
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.cpp" />
     <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp" />
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
+    <ClCompile Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
     <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
     <ClCompile Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.cpp" />

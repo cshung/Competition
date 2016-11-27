@@ -139,6 +139,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.h" />
+    <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.h" />
     <ClInclude Include="HACKER_RANK_CAMEL_CASE.h" />
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
@@ -148,6 +150,7 @@
     <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
     <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h" />
+    <ClInclude Include="HACKER_RANK_TREE_HUFFMAN_DECODING.h" />
     <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h" />
     <ClInclude Include="HACKER_RANK_TREE_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h" />
@@ -529,6 +532,8 @@
     <ClInclude Include="UVa990.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp" />
+    <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.cpp" />
     <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp" />
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
@@ -538,6 +543,7 @@
     <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_HUFFMAN_DECODING.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_LEVEL_ORDER_TRAVERSAL.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.cpp" />

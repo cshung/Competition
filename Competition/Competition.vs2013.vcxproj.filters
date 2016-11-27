@@ -18,6 +18,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="HACKER_RANK_CAMEL_CASE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +49,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_TREE_HUFFMAN_DECODING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h">
@@ -1184,6 +1193,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1209,6 +1224,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_TREE_HUFFMAN_DECODING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp">

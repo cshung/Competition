@@ -1,0 +1,3 @@
+#pragma once
+
+int HACKER_RANK_BINARY_SEARCH_TREE_INSERTION();

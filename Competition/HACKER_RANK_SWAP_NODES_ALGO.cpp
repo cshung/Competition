@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/climbing-stairs/
+// https://www.hackerrank.com/challenges/swap-nodes-algo
 
 #include "HACKER_RANK_SWAP_NODES_ALGO.h"
 #include <cmath>

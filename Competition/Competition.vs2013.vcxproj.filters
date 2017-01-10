@@ -507,6 +507,9 @@
     <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ONES_AND_ZEROES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1686,6 +1689,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ONES_AND_ZEROES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp">

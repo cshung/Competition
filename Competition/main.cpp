@@ -802,5 +802,5 @@ int _tmain(int argc, _TCHAR* argv[])
     // return HACKER_RANK_IS_BINARY_SEARCH_TREE();                              // Accepted
     // return LEET_ONES_AND_ZEROES();                                           // Accepted
     // return LEET_HAMMING_DISTANCE();                                          // Accepted
-    return LEET_FIND_MODE_IN_BINARY_SEARCH_TREE();                           // 
+    return LEET_FIND_MODE_IN_BINARY_SEARCH_TREE();                           // Accepted
 }

@@ -22,10 +22,64 @@ namespace _LEET_FIND_MODE_IN_BINARY_SEARCH_TREE
     };
     class Solution {
     public:
+        void findMode(TreeNode* root, vector<int>& result, int& max_count, int& last_node, int& last_count)
+        {
+            if (root == nullptr)
+            {
+                return;
+            }
+
+            if (root->left != nullptr)
+            {
+                findMode(root->left, result, max_count, last_node, last_count);
+            }
+
+            if (max_count == 0)
+            {
+                // This is possible only for the very first call
+                result.push_back(root->val);
+                max_count = 1;
+                last_node = root->val;
+                last_count = 1;
+            }
+            else
+            {
+                if (root->val == last_node)
+                {
+                    last_count++;
+                }
+                else
+                {
+                    last_node = root->val;
+                    last_count = 1;
+                }
+
+                if (last_count == max_count)
+                {
+                    result.push_back(last_node);
+                }
+                else if (last_count > max_count)
+                {
+                    result.clear();
+                    result.push_back(last_node);
+                    max_count = last_count;
+                }
+            }
+
+            if (root->right != nullptr)
+            {
+                findMode(root->right, result, max_count, last_node, last_count);
+            }
+        }
+
         vector<int> findMode(TreeNode* root)
         {
             vector<int> result;
-            // TODO: Implementation
+            int max_count = 0;
+            int last_node = 0;
+            int last_count = 0;
+            findMode(root, result, max_count, last_node, last_count);
+            return result;
         }
     };
 };
@@ -47,7 +101,7 @@ int LEET_FIND_MODE_IN_BINARY_SEARCH_TREE()
     vector<int> result = solution.findMode(&a);
     for (int i = 0; i < result.size(); i++)
     {
-        cout << result[i];
+        cout << result[i] << endl;
     }
     return 0;
 }

@@ -224,6 +224,7 @@
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
     <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h" />
@@ -623,6 +624,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp" />
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp" />

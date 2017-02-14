@@ -1206,6 +1206,9 @@
     <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -2394,6 +2397,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

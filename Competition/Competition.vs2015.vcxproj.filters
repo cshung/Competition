@@ -1215,6 +1215,9 @@
     <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -2412,6 +2415,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

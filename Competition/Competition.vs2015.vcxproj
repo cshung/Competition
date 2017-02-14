@@ -299,6 +299,7 @@
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.h" />
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h" />
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
+    <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h" />
     <ClInclude Include="LEET_MOVE_ZEROES.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
@@ -700,6 +701,7 @@
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
+    <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp" />
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />

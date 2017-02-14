@@ -26,7 +26,7 @@ struct UVa166_State
 class UVa166_State_less
 {
 public:
-    bool operator()(UVa166_State* first, UVa166_State* second)
+    bool operator()(const UVa166_State* first, const UVa166_State* second) const
     {
         if (first->value_in_cents < second->value_in_cents)
         {

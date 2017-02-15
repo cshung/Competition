@@ -267,10 +267,19 @@
     <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h">
@@ -405,6 +414,9 @@
     <ClInclude Include="LEET_LONGEST_PALINDROME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -478,6 +490,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_MISSING_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_MOVE_ZEROES.h">
@@ -1203,21 +1218,6 @@
     <ClInclude Include="UVa990.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -1469,10 +1469,19 @@
     <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp">
@@ -1607,6 +1616,9 @@
     <ClCompile Include="LEET_LONGEST_PALINDROME.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1680,6 +1692,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MISSING_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MOVE_ZEROES.cpp">
@@ -2403,21 +2418,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa990.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

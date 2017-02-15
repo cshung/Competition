@@ -161,8 +161,11 @@
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
     <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h" />
+    <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
@@ -207,6 +210,7 @@
     <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROME.h" />
+    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
     <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h" />
     <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" />
@@ -232,6 +236,7 @@
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.h" />
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h" />
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
+    <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h" />
     <ClInclude Include="LEET_MOVE_ZEROES.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
@@ -558,8 +563,11 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp" />
+    <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp" />
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
     <ClCompile Include="LEET_FIND_THE_DIFFERENCE.cpp" />
     <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
@@ -604,6 +612,7 @@
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROME.cpp" />
+    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
     <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp" />
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
@@ -629,6 +638,7 @@
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
+    <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp" />
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />

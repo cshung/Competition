@@ -1218,6 +1218,9 @@
     <ClInclude Include="UVa990.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -2418,6 +2421,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa990.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

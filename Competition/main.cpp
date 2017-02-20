@@ -400,6 +400,7 @@
 #include "LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h"                       // 394
 #include "LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h"                               // 395
 #include "LEET_MOST_FREQUENT_SUBTREE_SUM.h"                                 // 396
+#include "LEET_TOTAL_HAMMING_DISTANCE.h"                                    // 397
 
 // End of headers
 
@@ -810,6 +811,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_PALINDROMIC_SUBSEQUENCE();                           // Accepted
     // return LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW();                       // Accepted
     // return LEET_FIND_BOTTOM_LEFT_TREE_VALUE();                               // Accepted
-    return LEET_MOST_FREQUENT_SUBTREE_SUM();                                 // Accepted
+    // return LEET_MOST_FREQUENT_SUBTREE_SUM();                                 // Accepted
+    return LEET_TOTAL_HAMMING_DISTANCE();                                    // Accepted
 }
 

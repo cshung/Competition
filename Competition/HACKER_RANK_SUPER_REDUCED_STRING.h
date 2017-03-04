@@ -1,0 +1,3 @@
+#pragma once
+
+int HACKER_RANK_SUPER_REDUCED_STRING();

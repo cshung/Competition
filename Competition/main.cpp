@@ -402,6 +402,7 @@
 #include "LEET_MOST_FREQUENT_SUBTREE_SUM.h"                                 // 396
 #include "LEET_TOTAL_HAMMING_DISTANCE.h"                                    // 397
 #include "HACKER_RANK_SUPER_REDUCED_STRING.h"                               // 398
+#include "HACKER_RANK_CAVITY_MAP.h"                                         // 399
 
 // End of headers
 
@@ -814,6 +815,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_FIND_BOTTOM_LEFT_TREE_VALUE();                               // Accepted
     // return LEET_MOST_FREQUENT_SUBTREE_SUM();                                 // Accepted
     // return LEET_TOTAL_HAMMING_DISTANCE();                                    // Accepted
-    return HACKER_RANK_SUPER_REDUCED_STRING();                               // Accepted
+    // return HACKER_RANK_SUPER_REDUCED_STRING();                               // Accepted
+    return HACKER_RANK_CAVITY_MAP();                                         // Accepted
 }
 

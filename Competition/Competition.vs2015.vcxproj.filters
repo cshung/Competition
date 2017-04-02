@@ -1224,6 +1224,9 @@
     <ClInclude Include="HACKER_RANK_SUPER_REDUCED_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_CAVITY_MAP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -2430,6 +2433,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_SUPER_REDUCED_STRING.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_CAVITY_MAP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

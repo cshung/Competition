@@ -27,6 +27,9 @@
     <ClInclude Include="HACKER_RANK_CAMEL_CASE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_CAVITY_MAP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -49,6 +52,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HACKER_RANK_SUPER_REDUCED_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HACKER_RANK_SWAP_NODES_ALGO.h">
@@ -780,6 +786,9 @@
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_TRIANGLE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1218,15 +1227,6 @@
     <ClInclude Include="UVa990.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HACKER_RANK_SUPER_REDUCED_STRING.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HACKER_RANK_CAVITY_MAP.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -1236,6 +1236,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_CAVITY_MAP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp">
@@ -1260,6 +1263,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_SUPER_REDUCED_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HACKER_RANK_SWAP_NODES_ALGO.cpp">
@@ -1991,6 +1997,9 @@
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_TRIANGLE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -2427,15 +2436,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa990.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HACKER_RANK_SUPER_REDUCED_STRING.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HACKER_RANK_CAVITY_MAP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

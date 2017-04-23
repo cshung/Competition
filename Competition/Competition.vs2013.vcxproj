@@ -81,6 +81,7 @@
     <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.h" />
     <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.h" />
     <ClInclude Include="HACKER_RANK_CAMEL_CASE.h" />
+    <ClInclude Include="HACKER_RANK_CAVITY_MAP.h" />
     <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
     <ClInclude Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
@@ -89,6 +90,7 @@
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
     <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
+    <ClInclude Include="HACKER_RANK_SUPER_REDUCED_STRING.h" />
     <ClInclude Include="HACKER_RANK_SWAP_NODES_ALGO.h" />
     <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h" />
     <ClInclude Include="HACKER_RANK_TREE_HUFFMAN_DECODING.h" />
@@ -332,6 +334,7 @@
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
+    <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h" />
     <ClInclude Include="LEET_TRIANGLE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
@@ -483,6 +486,7 @@
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp" />
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.cpp" />
     <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp" />
+    <ClCompile Include="HACKER_RANK_CAVITY_MAP.cpp" />
     <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
     <ClCompile Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
@@ -491,6 +495,7 @@
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
     <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
+    <ClCompile Include="HACKER_RANK_SUPER_REDUCED_STRING.cpp" />
     <ClCompile Include="HACKER_RANK_SWAP_NODES_ALGO.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_HUFFMAN_DECODING.cpp" />
@@ -734,6 +739,7 @@
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
     <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
+    <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp" />
     <ClCompile Include="LEET_TRIANGLE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />

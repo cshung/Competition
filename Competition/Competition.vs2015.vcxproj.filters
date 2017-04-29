@@ -1230,6 +1230,9 @@
     <ClInclude Include="LEET_ARRAY_PARTITION_I.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_TILT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -2442,6 +2445,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ARRAY_PARTITION_I.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_TILT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

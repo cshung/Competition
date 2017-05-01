@@ -108,6 +108,7 @@
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_ARRANGING_COINS.h" />
+    <ClInclude Include="LEET_ARRAY_PARTITION_I.h" />
     <ClInclude Include="LEET_ASSIGN_COOKIES.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
@@ -124,6 +125,7 @@
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
+    <ClInclude Include="LEET_BINARY_TREE_TILT.h" />
     <ClInclude Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
@@ -513,6 +515,7 @@
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_ARRANGING_COINS.cpp" />
+    <ClCompile Include="LEET_ARRAY_PARTITION_I.cpp" />
     <ClCompile Include="LEET_ASSIGN_COOKIES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
@@ -529,6 +532,7 @@
     <ClCompile Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_TILT.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_WATCH.cpp" />
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />

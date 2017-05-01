@@ -386,6 +386,7 @@
     <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
+    <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h" />
     <ClInclude Include="LEET_SUBSETS.h" />
     <ClInclude Include="LEET_SUBSETS_II.h" />
     <ClInclude Include="LEET_SUDOKU_SOLVER.h" />
@@ -793,6 +794,7 @@
     <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
+    <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />
     <ClCompile Include="LEET_SUBSETS_II.cpp" />
     <ClCompile Include="LEET_SUDOKU_SOLVER.cpp" />

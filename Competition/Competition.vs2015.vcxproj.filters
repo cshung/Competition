@@ -1236,6 +1236,9 @@
     <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
@@ -2454,6 +2457,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

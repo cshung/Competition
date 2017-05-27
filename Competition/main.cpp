@@ -407,6 +407,9 @@
 #include "LEET_BINARY_TREE_TILT.h"                                          // 401
 #include "LEET_STUDENT_ATTENDANCE_RECORD_II.h"                              // 402
 #include "HACKER_RANK_ALMOST_SORTED_INTERVAL.h"                             // 403
+#include "LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h"                            // 404
+#include "LEET_KILL_PROCESS.h"                                              // 405
+#include "LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h"                     // 406
 
 // End of headers
 
@@ -824,6 +827,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ARRAY_PARTITION_I();                                         // Accepted
     // return LEET_BINARY_TREE_TILT();                                          // Accepted
     // return LEET_STUDENT_ATTENDANCE_RECORD_II();                              // Accepted
-    return HACKER_RANK_ALMOST_SORTED_INTERVAL();                                // 
+    // return HACKER_RANK_ALMOST_SORTED_INTERVAL();                             // This is really difficult :( 
+	// return LEET_LONGEST_HARMONIOUS_SUBSEQUENCE();                            // Not submitted
+	// return LEET_KILL_PROCESS();                                              // Not submitted
+	return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Not submitted
 }
 

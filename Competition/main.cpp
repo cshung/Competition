@@ -410,6 +410,9 @@
 #include "LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h"                            // 404
 #include "LEET_KILL_PROCESS.h"                                              // 405
 #include "LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h"                     // 406
+#include "LEET_SUBARRAY_SUM_EQUALS_K.h"                                     // 407
+#include "LEET_PERMUTATION_IN_STRING.h"                                     // 408
+#include "LEET_SUBTREE_OF_ANOTHER_TREE.h"                                   // 409
 
 // End of headers
 
@@ -830,6 +833,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return HACKER_RANK_ALMOST_SORTED_INTERVAL();                             // This is really difficult :( 
 	// return LEET_LONGEST_HARMONIOUS_SUBSEQUENCE();                            // Not submitted
 	// return LEET_KILL_PROCESS();                                              // Not submitted
-	return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Not submitted
+	// return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Not submitted
+	// return LEET_SUBARRAY_SUM_EQUALS_K();                                     // Not submitted
+	// return LEET_PERMUTATION_IN_STRING();                                     // Not submitted
+	return LEET_SUBTREE_OF_ANOTHER_TREE();                                   // Not submitted
 }
 

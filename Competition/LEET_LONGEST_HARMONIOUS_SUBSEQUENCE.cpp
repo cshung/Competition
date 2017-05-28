@@ -12,53 +12,56 @@ using namespace std;
 
 namespace _LEET_LONGEST_HARMONIOUS_SUBSEQUENCE
 {
-	class Solution
-	{
-	public:
-		int findLHS(vector<int>& nums)
-		{
-			map<int, int> m;
-			for (auto&& n : nums)
-			{
-				auto probe = m.find(n);
-				if (probe == m.end())
-				{
-					m.insert(make_pair(n, 1));
-				}
-				else
-				{
-					probe->second++;
-				}
-			}
-			vector<int> freq;
-			for (auto&& p : m)
-			{
-				freq.push_back(p.second);
-			}
-			if (freq.size() == 1)
-			{
-				return freq[0];
-			}
-			else
-			{
-				int result = freq[0] + freq[1];
-				for (size_t i = 2; i < freq.size(); i++)
-				{
-					result = max(result, freq[i - 1] + freq[i]);
-				}
-				return result;
-			}
-		}
-	};
+    class Solution
+    {
+    public:
+        int findLHS(vector<int>& nums)
+        {
+            map<int, int> m;
+            for (auto&& n : nums)
+            {
+                auto probe = m.find(n);
+                if (probe == m.end())
+                {
+                    m.insert(make_pair(n, 1));
+                }
+                else
+                {
+                    probe->second++;
+                }
+            }
+            vector<pair<int, int>> freq;
+            for (auto&& p : m)
+            {
+                freq.push_back(p);
+            }
+            if (freq.size() < 2)
+            {
+                return 0;
+            }
+            else
+            {
+                int result = 0;
+                for (size_t i = 1; i < freq.size(); i++)
+                {
+                    if (freq[i - 1].first + 1 == freq[i].first)
+                    {
+                        result = max(result, freq[i - 1].second + freq[i].second);
+                    }
+                }
+                return result;
+            }
+        }
+    };
 };
 
 using namespace _LEET_LONGEST_HARMONIOUS_SUBSEQUENCE;
 
 int LEET_LONGEST_HARMONIOUS_SUBSEQUENCE()
 {
-	Solution s;
-	int input_array[] = { 1,3,2,2,5,2,3,7 };
-	vector<int> input(input_array, input_array + _countof(input_array));
-	cout << s.findLHS(input) << endl;
-	return 0;
+    Solution s;
+    int input_array[] = { 1,3,2,2,5,2,3,7 };
+    vector<int> input(input_array, input_array + _countof(input_array));
+    cout << s.findLHS(input) << endl;
+    return 0;
 }

@@ -831,11 +831,11 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BINARY_TREE_TILT();                                          // Accepted
     // return LEET_STUDENT_ATTENDANCE_RECORD_II();                              // Accepted
     // return HACKER_RANK_ALMOST_SORTED_INTERVAL();                             // This is really difficult :( 
-	// return LEET_LONGEST_HARMONIOUS_SUBSEQUENCE();                            // Not submitted
-	// return LEET_KILL_PROCESS();                                              // Not submitted
-	// return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Not submitted
-	// return LEET_SUBARRAY_SUM_EQUALS_K();                                     // Not submitted
-	// return LEET_PERMUTATION_IN_STRING();                                     // Not submitted
-	return LEET_SUBTREE_OF_ANOTHER_TREE();                                   // Not submitted
+     //return LEET_LONGEST_HARMONIOUS_SUBSEQUENCE();                            // Accepted
+     //return LEET_KILL_PROCESS();                                              // Accepted
+     //return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Accepted
+     //return LEET_SUBARRAY_SUM_EQUALS_K();                                     // Accepted
+     //return LEET_PERMUTATION_IN_STRING();                                     // Accepted
+    return LEET_SUBTREE_OF_ANOTHER_TREE();                                   // Accepted
 }
 

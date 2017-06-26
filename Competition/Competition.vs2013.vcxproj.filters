@@ -18,6 +18,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -390,6 +393,9 @@
     <ClInclude Include="LEET_JUMP_GAME_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_KILL_PROCESS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -421,6 +427,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_LONGEST_PALINDROME.h">
@@ -475,6 +484,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MERGE_TWO_BINARY_TREES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h">
@@ -577,6 +589,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_PERFECT_SQUARES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_PERMUTATION_IN_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_PERMUTATIONS.h">
@@ -720,6 +735,9 @@
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -753,10 +771,19 @@
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SUBARRAY_SUM_EQUALS_K.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SUBSETS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_SUBSETS_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_SUBTREE_OF_ANOTHER_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_SUDOKU_SOLVER.h">
@@ -1235,6 +1262,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1607,6 +1637,9 @@
     <ClCompile Include="LEET_JUMP_GAME_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_KILL_PROCESS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1638,6 +1671,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_PALINDROME.cpp">
@@ -1692,6 +1728,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MERGE_TWO_BINARY_TREES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp">
@@ -1794,6 +1833,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PERMUTATION_IN_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PERMUTATIONS.cpp">
@@ -1937,6 +1979,9 @@
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1970,10 +2015,19 @@
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUBARRAY_SUM_EQUALS_K.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_SUBSETS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUBSETS_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUBTREE_OF_ANOTHER_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUDOKU_SOLVER.cpp">

@@ -413,6 +413,7 @@
 #include "LEET_SUBARRAY_SUM_EQUALS_K.h"                                     // 407
 #include "LEET_PERMUTATION_IN_STRING.h"                                     // 408
 #include "LEET_SUBTREE_OF_ANOTHER_TREE.h"                                   // 409
+#include "LEET_MERGE_TWO_BINARY_TREES.h"                                    // 410
 
 // End of headers
 
@@ -831,11 +832,12 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BINARY_TREE_TILT();                                          // Accepted
     // return LEET_STUDENT_ATTENDANCE_RECORD_II();                              // Accepted
     // return HACKER_RANK_ALMOST_SORTED_INTERVAL();                             // This is really difficult :( 
-     //return LEET_LONGEST_HARMONIOUS_SUBSEQUENCE();                            // Accepted
-     //return LEET_KILL_PROCESS();                                              // Accepted
-     //return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Accepted
-     //return LEET_SUBARRAY_SUM_EQUALS_K();                                     // Accepted
-     //return LEET_PERMUTATION_IN_STRING();                                     // Accepted
-    return LEET_SUBTREE_OF_ANOTHER_TREE();                                   // Accepted
+    // return LEET_LONGEST_HARMONIOUS_SUBSEQUENCE();                            // Accepted
+    // return LEET_KILL_PROCESS();                                              // Accepted
+    // return LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY();                     // Accepted
+    // return LEET_SUBARRAY_SUM_EQUALS_K();                                     // Accepted
+    // return LEET_PERMUTATION_IN_STRING();                                     // Accepted
+    // return LEET_SUBTREE_OF_ANOTHER_TREE();                                   // Accepted
+    return LEET_MERGE_TWO_BINARY_TREES();                                    // Accepted
 }
 

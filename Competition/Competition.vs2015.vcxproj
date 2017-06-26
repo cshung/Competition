@@ -52,10 +52,8 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Label="Shared"></ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -266,6 +264,7 @@
     <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h" />
     <ClInclude Include="LEET_JUMP_GAME.h" />
     <ClInclude Include="LEET_JUMP_GAME_II.h" />
+    <ClInclude Include="LEET_KILL_PROCESS.h" />
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
@@ -277,6 +276,7 @@
     <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
     <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
+    <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROME.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
@@ -295,6 +295,7 @@
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h" />
     <ClInclude Include="LEET_MERGE_K_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_MERGE_TWO_BINARY_TREES.h" />
     <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_MINI_PARSER.h" />
@@ -329,6 +330,7 @@
     <ClInclude Include="LEET_PEEKING_ITERATOR.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_PERFECT_SQUARES.h" />
+    <ClInclude Include="LEET_PERMUTATION_IN_STRING.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
@@ -376,6 +378,7 @@
     <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
     <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h" />
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
+    <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h" />
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
@@ -388,8 +391,10 @@
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h" />
+    <ClInclude Include="LEET_SUBARRAY_SUM_EQUALS_K.h" />
     <ClInclude Include="LEET_SUBSETS.h" />
     <ClInclude Include="LEET_SUBSETS_II.h" />
+    <ClInclude Include="LEET_SUBTREE_OF_ANOTHER_TREE.h" />
     <ClInclude Include="LEET_SUDOKU_SOLVER.h" />
     <ClInclude Include="LEET_SUM_OF_LEFT_LEAVES.h" />
     <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h" />
@@ -675,6 +680,7 @@
     <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp" />
     <ClCompile Include="LEET_JUMP_GAME.cpp" />
     <ClCompile Include="LEET_JUMP_GAME_II.cpp" />
+    <ClCompile Include="LEET_KILL_PROCESS.cpp" />
     <ClCompile Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
@@ -686,6 +692,7 @@
     <ClCompile Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.cpp" />
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROME.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
@@ -704,6 +711,7 @@
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_MERGE_TWO_BINARY_TREES.cpp" />
     <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MINI_PARSER.cpp" />
@@ -738,6 +746,7 @@
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
+    <ClCompile Include="LEET_PERMUTATION_IN_STRING.cpp" />
     <ClCompile Include="LEET_PERMUTATIONS.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
@@ -785,6 +794,7 @@
     <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
     <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
+    <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp" />
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
@@ -797,8 +807,10 @@
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp" />
+    <ClCompile Include="LEET_SUBARRAY_SUM_EQUALS_K.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />
     <ClCompile Include="LEET_SUBSETS_II.cpp" />
+    <ClCompile Include="LEET_SUBTREE_OF_ANOTHER_TREE.cpp" />
     <ClCompile Include="LEET_SUDOKU_SOLVER.cpp" />
     <ClCompile Include="LEET_SUM_OF_LEFT_LEAVES.cpp" />
     <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp" />
@@ -964,6 +976,5 @@
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
 </Project>

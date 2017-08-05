@@ -378,6 +378,7 @@
     <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
     <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h" />
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
+    <ClInclude Include="LEET_SET_MISMATCH.h" />
     <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h" />
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
@@ -794,6 +795,7 @@
     <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
     <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
+    <ClCompile Include="LEET_SET_MISMATCH.cpp" />
     <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp" />
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />

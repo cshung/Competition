@@ -618,6 +618,9 @@
     <ClInclude Include="LEET_POWER_OF_TWO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PRINT_BINARY_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1863,6 +1866,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_POWER_OF_TWO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PRINT_BINARY_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp">

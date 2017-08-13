@@ -339,6 +339,7 @@
     <ClInclude Include="LEET_POWER_OF_FOUR.h" />
     <ClInclude Include="LEET_POWER_OF_THREE.h" />
     <ClInclude Include="LEET_POWER_OF_TWO.h" />
+    <ClInclude Include="LEET_PRINT_BINARY_TREE.h" />
     <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
     <ClInclude Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h" />
     <ClInclude Include="LEET_RANDOM_PICK_INDEX.h" />
@@ -756,6 +757,7 @@
     <ClCompile Include="LEET_POWER_OF_FOUR.cpp" />
     <ClCompile Include="LEET_POWER_OF_THREE.cpp" />
     <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
+    <ClCompile Include="LEET_PRINT_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
     <ClCompile Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.cpp" />
     <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp" />

@@ -287,6 +287,7 @@
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
     <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
+    <ClInclude Include="LEET_MAXIMUM_BINARY_TREE.h" />
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.h" />
@@ -705,6 +706,7 @@
     <ClCompile Include="LEET_LRU_CACHE.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
     <ClCompile Include="LEET_MAX_POINTS_ON_A_LINE.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.cpp" />
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.cpp" />
@@ -981,5 +983,4 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets"></ImportGroup>
-</Project>ortGroup>
 </Project>

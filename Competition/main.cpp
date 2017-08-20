@@ -417,6 +417,7 @@
 #include "LEET_SET_MISMATCH.h"                                              // 411
 #include "LEET_PRINT_BINARY_TREE.h"                                         // 412
 #include "LEET_MAXIMUM_BINARY_TREE.h"                                       // 413
+#include "LEET_REMOVE_9.h"                                                  // 414
 
 // End of headers
 
@@ -844,6 +845,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MERGE_TWO_BINARY_TREES();                                    // Accepted
     // return LEET_SET_MISMATCH();                                              // Accepted
     // return LEET_PRINT_BINARY_TREE();                                         // Accepted
-    return LEET_MAXIMUM_BINARY_TREE();                                       // Accepted
+    // return LEET_MAXIMUM_BINARY_TREE();                                       // Accepted
+    return LEET_REMOVE_9();                                                  // Accepted
 }
 

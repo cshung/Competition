@@ -292,6 +292,7 @@
     <ClInclude Include="LEET_RECOVER_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_RECTANGLE_AREA.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
+    <ClInclude Include="LEET_REMOVE_9.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h" />
     <ClInclude Include="LEET_REMOVE_ELEMENT.h" />
@@ -711,6 +712,7 @@
     <ClCompile Include="LEET_RECOVER_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
+    <ClCompile Include="LEET_REMOVE_9.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.cpp" />
     <ClCompile Include="LEET_REMOVE_ELEMENT.cpp" />

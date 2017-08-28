@@ -10,87 +10,107 @@
 #include <algorithm>
 using namespace std;
 
-// I am still debugging this test case
-
-/*
-100
-64 82 55 36 88 86 6 95 47 49 9 27 3 59 65 5 85 16 83 72 75 97 34 87 22 39 8 35 10 94 58 71 57 14 4 79 43 84 7 48 42 44 37 26 21 93 91 80 23 11 12 92 2 19 96 13 50 68 61 70 60 81 15 54 20 25 40 52 67 53 63 46 76 66 1 38 99 51 17 73 41 56 31 69 28 30 24 32 90 74 62 98 77 18 33 89 29 45 78 100
-*/
 namespace _HACKER_RANK_ALMOST_SORTED_INTERVAL
 {
-    void walk(int node, int* left, int* right, int* small, int* large, int* pCount, int* pCountExt)
+    int set_union(int set1, int set2, int* set)
     {
-        int leftCount;
-        int leftCountExt;
-        int rightCount;
-        int rightCountExt;
-
-        if (left[node] == -1 && right[node] == -1)
+        int size1 = -set[set1];
+        int size2 = -set[set2];
+        int size = size1 + size2;
+        if (size1 > size2)
         {
-            *pCount = 1;
-            *pCountExt = 1;
-
-            small[node] = node;
-            large[node] = node + 1;
-        }
-        else if (left[node] == -1)
-        {
-            walk(right[node], left, right, small, large, &rightCount, &rightCountExt);
-            *pCount = 1 + rightCount;
-            *pCountExt = rightCountExt;
-
-            small[node] = node;
-            large[node] = large[right[node]];
-        }
-        else if (right[node] == -1)
-        {
-            walk(left[node], left, right, small, large, &leftCount, &leftCountExt);
-            *pCount = leftCount + leftCountExt + 1;
-            *pCountExt = leftCountExt + leftCountExt + 1;
-
-            small[node] = small[left[node]];
-            large[node] = node + 1;
+            set[set2] = set1;
+            set[set1] = -size;
+			return set1;
         }
         else
         {
-            walk(left[node], left, right, small, large, &leftCount, &leftCountExt);
-            walk(right[node], left, right, small, large, &rightCount, &rightCountExt);
-            *pCount = leftCount + leftCountExt + 1 + rightCount;
-            *pCountExt = rightCountExt;
-            small[node] = small[left[node]];
-            large[node] = large[right[node]];
+            set[set1] = set2;
+            set[set2] = -size;
+			return set2;
         }
-
-        cout << "[" << small[node] << "," << large[node] << ")" << " = " << *pCount << endl;
     }
 
-    bool check(int node, int* input, int* left, int* right, int valueUpperBound, int indexLowerBound, int indexUpperBound)
+    int set_find(int x, int* set)
     {
-        if (node == -1)
+        if (set[x] < 0)
         {
-            return true;
+            return x;
         }
-        if (input[node] > valueUpperBound)
+        else
         {
-            return false;
+            return (set[x] = set_find(set[x], set));
         }
-        if (node < indexLowerBound)
+    }
+
+    int HACKER_RANK_ALMOST_SORTED_INTERVAL()
+    {
+        int n;
+        cin >> n;
+        int* input = new int[n];
+
+        int min_stack_size = 0;
+        int max_stack_size = 0;
+        int* min_stack_elements = new int[n];
+        int* max_stack_elements = new int[n];
+
+        int* min_stack_node_set = new int[n + 1];
+        int* min_stack_node_pos = new int[n + 1];
+
+        long long result = 0;
+
+        for (int i = 0; i < n; i++)
         {
-            return false;
+            cin >> input[i];
         }
-        if (node > indexUpperBound)
+
+        for (int i = 0; i < n + 1; i++)
         {
-            return false;
+            min_stack_node_set[i] = -1;
+			min_stack_node_pos[i] = -1;
         }
-        if (!check(left[node], input, left, right, input[node], indexLowerBound, node))
+        
+        for (int current_position = 0; current_position < n; current_position++)
         {
-            return false;
+            int current_value = input[current_position];
+            int old_min_stack_size = min_stack_size;
+            while (min_stack_size > 0 && input[min_stack_elements[min_stack_size - 1]] > current_value)
+            {
+                min_stack_size--;
+            }
+            for (int i = min_stack_size; i < old_min_stack_size; i++)
+            {
+                int canon = min_stack_size == 0 ? n : min_stack_elements[min_stack_size - 1];
+				int left = set_find(canon, min_stack_node_set);
+				int right = set_find(min_stack_elements[i], min_stack_node_set);
+                int merge = set_union(left, right, min_stack_node_set);
+				min_stack_node_pos[merge] = min_stack_node_pos[left];
+            }
+            while (max_stack_size > 0 && input[max_stack_elements[max_stack_size - 1]] < current_value)
+            {
+                max_stack_size--;
+            }
+            min_stack_elements[min_stack_size++] = current_position;
+            max_stack_elements[max_stack_size++] = current_position;
+
+            min_stack_node_pos[current_position] = min_stack_size - 1;
+
+            if (max_stack_size == 1)
+            {
+                result += min_stack_size;
+            }
+            else
+            {
+                int after_position = max_stack_elements[max_stack_size - 2];
+                int min_node_at_of_before_after_position = set_find(after_position, min_stack_node_set);
+                result += min_stack_size - min_stack_node_pos[min_node_at_of_before_after_position] - 1;
+            }
         }
-        if (!check(right[node], input, left, right, input[node], node, indexUpperBound))
-        {
-            return false;
-        }
-        return true;
+
+		cout << result << endl;
+        delete[] input;
+
+        return 0;
     }
 }
 
@@ -98,102 +118,5 @@ using namespace _HACKER_RANK_ALMOST_SORTED_INTERVAL;
 
 int HACKER_RANK_ALMOST_SORTED_INTERVAL()
 {
-    // Step 1: Read the input
-    int n;
-    cin >> n;
-    int* input = new int[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> input[i];
-    }
-
-    // Step 2: Build a (Max) Cartesian tree
-    // A cartesian tree is a tree such that the maximum of the array is at the top
-    // The left hand side is recursively a Cartesian tree of the elements on the left of the max element
-    // Similarly for the right hand side
-    int* left = new int[n];
-    int* right = new int[n];
-    int* parent = new int[n];
-
-    // For debugging use
-    int* small = new int[n];
-    int* large = new int[n];
-
-    int root = 0;
-    left[0] = -1;
-    right[0] = -1;
-    parent[0] = -1;
-    for (int i = 1; i < n; i++)
-    {
-        int last = i - 1;
-        while (input[last] < input[i] && last != root)
-        {
-            last = parent[last];
-        }
-        right[i] = -1;
-        if (input[last] < input[i])
-        {
-            parent[root] = i;
-            left[i] = root;
-            parent[i] = -1;
-            root = i;
-        }
-        else if (right[last] == -1)
-        {
-            right[last] = i;
-            left[i] = -1;
-            parent[i] = last;
-        }
-        else
-        {
-            parent[right[last]] = i;
-            left[i] = right[last];
-            right[last] = i;
-            parent[i] = last;
-        }
-    }
-
-    if (!check(root, input, left, right, n + 1, -1, n))
-    {
-        cout << "Bad tree!" << endl;
-    }
-
-    // Step 3: Walk the tree to find out the answer
-    int count;
-    int countExt;
-    walk(root, left, right, small, large, &count, &countExt);
-
-    cout << count << endl;
-
-    int s = 0;
-    int e = 100;
-
-    count = 0;
-    for (int i = s; i < e; i++)
-    {
-        for (int j = i + 1; j <= e; j++)
-        {
-            bool valid = true;
-            for (int k = i; valid && k < j; k++)
-            {
-                if (input[k] < input[i]) {
-                    valid = false;
-                }
-                if (input[k] > input[j - 1]) {
-                    valid = false;
-                }
-            }
-            if (valid)
-            {
-                count++;
-            }
-        }
-    }
-    cout << count << endl;
-
-    delete[] input;
-    delete[] left;
-    delete[] right;
-    delete[] parent;
-    return 0;
+    return _HACKER_RANK_ALMOST_SORTED_INTERVAL::HACKER_RANK_ALMOST_SORTED_INTERVAL();
 }

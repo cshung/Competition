@@ -21,13 +21,13 @@ namespace _HACKER_RANK_ALMOST_SORTED_INTERVAL
         {
             set[set2] = set1;
             set[set1] = -size;
-			return set1;
+            return set1;
         }
         else
         {
             set[set1] = set2;
             set[set2] = -size;
-			return set2;
+            return set2;
         }
     }
 
@@ -67,9 +67,9 @@ namespace _HACKER_RANK_ALMOST_SORTED_INTERVAL
         for (int i = 0; i < n + 1; i++)
         {
             min_stack_node_set[i] = -1;
-			min_stack_node_pos[i] = -1;
+            min_stack_node_pos[i] = -1;
         }
-        
+
         for (int current_position = 0; current_position < n; current_position++)
         {
             int current_value = input[current_position];
@@ -81,10 +81,10 @@ namespace _HACKER_RANK_ALMOST_SORTED_INTERVAL
             for (int i = min_stack_size; i < old_min_stack_size; i++)
             {
                 int canon = min_stack_size == 0 ? n : min_stack_elements[min_stack_size - 1];
-				int left = set_find(canon, min_stack_node_set);
-				int right = set_find(min_stack_elements[i], min_stack_node_set);
+                int left = set_find(canon, min_stack_node_set);
+                int right = set_find(min_stack_elements[i], min_stack_node_set);
                 int merge = set_union(left, right, min_stack_node_set);
-				min_stack_node_pos[merge] = min_stack_node_pos[left];
+                min_stack_node_pos[merge] = min_stack_node_pos[left];
             }
             while (max_stack_size > 0 && input[max_stack_elements[max_stack_size - 1]] < current_value)
             {
@@ -107,7 +107,7 @@ namespace _HACKER_RANK_ALMOST_SORTED_INTERVAL
             }
         }
 
-		cout << result << endl;
+        cout << result << endl;
         delete[] input;
 
         return 0;

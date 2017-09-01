@@ -76,7 +76,7 @@ int LEET_DIAMETER_OF_BINARY_TREE()
     c.right = nullptr;
     d.left = nullptr;
     d.right = nullptr;
-    e.left = nullptr;    
+    e.left = nullptr;
     e.right = nullptr;
     cout << s.diameterOfBinaryTree(&a) << endl;
     return 0;

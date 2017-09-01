@@ -34,7 +34,7 @@ namespace _HACKER_RANK_SWAP_NODES_ALGO
         inOrderSwapAndPrint(node->right, k, depth + 1);
     }
 
-    int main()
+    int HACKER_RANK_SWAP_NODES_ALGO()
     {
         int n;
         cin >> n;
@@ -101,6 +101,6 @@ namespace _HACKER_RANK_SWAP_NODES_ALGO
 
 int HACKER_RANK_SWAP_NODES_ALGO()
 {
-    _HACKER_RANK_SWAP_NODES_ALGO::main();
+    _HACKER_RANK_SWAP_NODES_ALGO::HACKER_RANK_SWAP_NODES_ALGO();
     return 0;
 }

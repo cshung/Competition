@@ -850,6 +850,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MAXIMUM_BINARY_TREE();                                       // Accepted
     // return LEET_REMOVE_9();                                                  // Accepted
     // return LEET_DIAMETER_OF_BINARY_TREE();                                   // Accepted
-	return LEET_CONVERT_BST_TO_GREATER_TREE();                               // 
+	return LEET_CONVERT_BST_TO_GREATER_TREE();                               // Accepted
 }
 

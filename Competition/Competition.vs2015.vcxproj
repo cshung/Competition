@@ -173,6 +173,7 @@
     <ClInclude Include="LEET_ARRAY_PARTITION_I.h" />
     <ClInclude Include="LEET_ASSIGN_COOKIES.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
+    <ClInclude Include="LEET_BASE_7.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
@@ -595,6 +596,7 @@
     <ClCompile Include="LEET_ARRAY_PARTITION_I.cpp" />
     <ClCompile Include="LEET_ASSIGN_COOKIES.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_BASE_7.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
     <ClCompile Include="LEET_BATTLESHIPS_IN_A_BOARD.cpp" />

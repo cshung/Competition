@@ -20,97 +20,92 @@ namespace _LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST
         TreeNode *right;
         TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     };
+    template<class T>
+    struct Optional
+    {
+        bool hasValue;
+        T value;
+        static Optional<T> min(Optional<T> a, Optional<T> b)
+        {
+            if (a.hasValue)
+            {
+                if (b.hasValue)
+                {
+                    if (a.value < b.value)
+                    {
+                        return a;
+                    }
+                    else
+                    {
+                        return b;
+                    }
+                }
+                else
+                {
+                    return a;
+                }
+            }
+            else if (b.hasValue)
+            {
+                return b;
+            }
+            else
+            {
+                Optional<T> result;
+                result.hasValue = false;
+                return result;
+            }
+        }
+    };
+    
     class Solution {
     private:
-        void getMinimumDifference(TreeNode* root, int* pMin, int* pMax, bool* pHasResult, int* pResult)
+        void getMinimumDifference(TreeNode* root, int* pMin, int* pMax, Optional<int>* pResult)
         {
             int leftMin;
             int leftMax;
-            bool leftHasResult;
-            int leftResult;
+            Optional<int> leftResult;
             int rightMin;
             int rightMax;
-            bool rightHasResult;
-            int rightResult;
+            Optional<int> rightResult;
+            Optional<int> leftDifference;
+            Optional<int> rightDifference;
 
             if (root->left != nullptr)
             {
-                getMinimumDifference(root->left, &leftMin, &leftMax, &leftHasResult, &leftResult);
-            }
-            if (root->right != nullptr)
-            {
-                getMinimumDifference(root->right, &rightMin, &rightMax, &rightHasResult, &rightResult);
-            }
-
-            if (root->left != nullptr) { *pMin = leftMin; }
-            else { *pMin = root->val; }
-            if (root->right != nullptr) { *pMax = rightMax; }
-            else { *pMax = root->val; }
-
-            if (root->left != nullptr)
-            {
-                if (leftHasResult)
-                {
-                    leftResult = min(leftResult, root->val - leftMax);
-                }
-                else
-                {
-                    leftResult = root->val - leftMax;
-                }
-                leftHasResult = true;
+                getMinimumDifference(root->left, &leftMin, &leftMax, &leftResult);
+                leftDifference.hasValue = true;
+                leftDifference.value = root->val - leftMax;
             }
             else
             {
-                leftHasResult = false;
+                leftResult.hasValue = false;
+                leftDifference.hasValue = false;
             }
             if (root->right != nullptr)
             {
-                if (rightHasResult)
-                {
-                    rightResult = min(rightResult, rightMin - root->val);
-                }
-                else
-                {
-                    rightResult = rightMax - root->val;
-                }
-                rightHasResult = true;
+                getMinimumDifference(root->right, &rightMin, &rightMax, &rightResult);
+                rightDifference.hasValue = true;
+                rightDifference.value = rightMin - root->val;
             }
             else
             {
-                rightHasResult = false;
-            }
-            *pHasResult = true;
-            if (leftHasResult)
-            {
-                if (rightHasResult)
-                {
-                    *pResult = min(leftResult, rightResult);
-                }
-                else
-                {
-                    *pResult = leftResult;
-                }
-            }
-            else {
-                if (rightHasResult)
-                {
-                    *pResult = rightResult;
-                }
-                else
-                {
-                    *pHasResult = false;
-                }
+                rightResult.hasValue = false;
+                rightDifference.hasValue = false;
             }
 
+            if (root->left != nullptr) { *pMin = leftMin; } else { *pMin = root->val; }
+            if (root->right != nullptr) { *pMax = rightMax; } else { *pMax = root->val; }
+
+            *pResult = Optional<int>::min(Optional<int>::min(Optional<int>::min(leftResult, leftDifference), rightResult), rightDifference);
         }
     public:
         int getMinimumDifference(TreeNode* root) {
             int min;
             int max;
-            bool hasResult;
-            int result;
-            getMinimumDifference(root, &min, &max, &hasResult, &result);
-            return result;
+            Optional<int> result;
+            getMinimumDifference(root, &min, &max, &result);
+            return result.value;
         }
     };
 };

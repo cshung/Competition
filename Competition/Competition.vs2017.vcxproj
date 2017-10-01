@@ -52,8 +52,10 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings"></ImportGroup>
-  <ImportGroup Label="Shared"></ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -273,6 +275,7 @@
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
+    <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h" />
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
@@ -696,6 +699,7 @@
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
+    <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp" />
     <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
@@ -990,6 +994,6 @@
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets"></ImportGroup>
-</Project>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>

@@ -421,6 +421,7 @@
 #include "LEET_DIAMETER_OF_BINARY_TREE.h"                                   // 415
 #include "LEET_CONVERT_BST_TO_GREATER_TREE.h"                               // 416
 #include "LEET_BASE_7.h"                                                    // 417
+#include "LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h"                     // 418
 
 // End of headers
 
@@ -852,6 +853,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REMOVE_9();                                                  // Accepted
     // return LEET_DIAMETER_OF_BINARY_TREE();                                   // Accepted
     // return LEET_CONVERT_BST_TO_GREATER_TREE();                               // Accepted
-    return LEET_BASE_7();                                                    // Accepted
+    // return LEET_BASE_7();                                                    // Accepted
+    return LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER();                     // Accepted
 }
 

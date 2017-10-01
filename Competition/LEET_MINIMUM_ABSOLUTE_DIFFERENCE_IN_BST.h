@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST();

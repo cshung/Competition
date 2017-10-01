@@ -1284,6 +1284,9 @@
     <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.cpp">
@@ -2550,6 +2553,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

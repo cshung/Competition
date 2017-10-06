@@ -420,6 +420,9 @@
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -508,6 +511,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_MINI_PARSER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h">
@@ -1281,10 +1287,7 @@
     <ClInclude Include="UVa990.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h">
+    <ClInclude Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1691,6 +1694,9 @@
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1779,6 +1785,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINI_PARSER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp">
@@ -2552,10 +2561,7 @@
     <ClCompile Include="UVa990.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp">
+    <ClCompile Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -212,6 +212,7 @@
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
+    <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h" />
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
     <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
@@ -242,6 +243,7 @@
     <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MIN_STACK.h" />
     <ClInclude Include="LEET_MINI_PARSER.h" />
+    <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h" />
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_MINIMUM_HEIGHT_TREES.h" />
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.h" />
@@ -635,6 +637,7 @@
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
+    <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp" />
     <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
     <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
@@ -665,6 +668,7 @@
     <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MIN_STACK.cpp" />
     <ClCompile Include="LEET_MINI_PARSER.cpp" />
+    <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.cpp" />

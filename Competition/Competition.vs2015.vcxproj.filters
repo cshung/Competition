@@ -405,6 +405,9 @@
     <ClInclude Include="LEET_KILL_PROCESS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -670,6 +673,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_RECTANGLE_AREA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEET_REDUNDANT_CONNECTION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h">
@@ -1676,6 +1682,9 @@
     <ClCompile Include="LEET_KILL_PROCESS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1941,6 +1950,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REDUNDANT_CONNECTION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp">

@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS();

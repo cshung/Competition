@@ -427,6 +427,7 @@
 #include "LEET_REDUNDANT_CONNECTION.h"                                      // 421
 #include "LEET_MAX_AREA_OF_ISLAND.h"                                        // 422
 #include "LEET_VALID_PARENTHESIS_STRING.h"                                  // 423
+#include "LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.h"                       // 424
 
 // End of headers
 
@@ -864,6 +865,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD();                          // Accepted
     // return LEET_REDUNDANT_CONNECTION();                                      // Accepted
     // return LEET_MAX_AREA_OF_ISLAND();                                        // Accepted
-    return LEET_VALID_PARENTHESIS_STRING();                                  // Accepted
+    // return LEET_VALID_PARENTHESIS_STRING();                                  // Accepted
+    return LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS();                       // Accepted
 }
 

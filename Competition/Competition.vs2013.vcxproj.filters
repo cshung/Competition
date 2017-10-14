@@ -141,6 +141,9 @@
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1422,6 +1425,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp">

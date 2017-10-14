@@ -430,6 +430,7 @@
     <ClInclude Include="LEET_VALID_ANAGRAM.h" />
     <ClInclude Include="LEET_VALID_PALINDROME.h" />
     <ClInclude Include="LEET_VALID_PARENTHESES.h" />
+    <ClInclude Include="LEET_VALID_PARENTHESIS_STRING.h" />
     <ClInclude Include="LEET_VALID_PERFECT_SQUARE.h" />
     <ClInclude Include="LEET_VALID_SUDOKU.h" />
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h" />
@@ -858,6 +859,7 @@
     <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
     <ClCompile Include="LEET_VALID_PALINDROME.cpp" />
     <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_VALID_PARENTHESIS_STRING.cpp" />
     <ClCompile Include="LEET_VALID_PERFECT_SQUARE.cpp" />
     <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp" />

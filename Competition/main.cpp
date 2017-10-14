@@ -426,6 +426,7 @@
 #include "LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.h"                          // 420
 #include "LEET_REDUNDANT_CONNECTION.h"                                      // 421
 #include "LEET_MAX_AREA_OF_ISLAND.h"                                        // 422
+#include "LEET_VALID_PARENTHESIS_STRING.h"                                  // 423
 
 // End of headers
 
@@ -862,6 +863,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST();                        // Accepted
     // return LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD();                          // Accepted
     // return LEET_REDUNDANT_CONNECTION();                                      // Accepted
-    return LEET_MAX_AREA_OF_ISLAND();                                        // Accepted
+    // return LEET_MAX_AREA_OF_ISLAND();                                        // Accepted
+    return LEET_VALID_PARENTHESIS_STRING();                                  // Accepted
 }
 

@@ -425,6 +425,7 @@
 #include "LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h"                        // 419
 #include "LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.h"                          // 420
 #include "LEET_REDUNDANT_CONNECTION.h"                                      // 421
+#include "LEET_MAX_AREA_OF_ISLAND.h"                                        // 422
 
 // End of headers
 
@@ -860,6 +861,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER();                     // Accepted
     // return LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST();                        // Accepted
     // return LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD();                          // Accepted
-    return LEET_REDUNDANT_CONNECTION();                                      // Accepted
+    // return LEET_REDUNDANT_CONNECTION();                                      // Accepted
+    return LEET_MAX_AREA_OF_ISLAND();                                        // Accepted
 }
 

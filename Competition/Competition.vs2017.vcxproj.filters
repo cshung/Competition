@@ -804,6 +804,9 @@
     <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SQRTX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2088,6 +2091,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SQRTX.cpp">

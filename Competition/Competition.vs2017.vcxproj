@@ -401,6 +401,7 @@
     <ClInclude Include="LEET_SPIRAL_MATRIX.h" />
     <ClInclude Include="LEET_SPIRAL_MATRIX_II.h" />
     <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
+    <ClInclude Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.h" />
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h" />
@@ -831,6 +832,7 @@
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp" />
+    <ClCompile Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp" />

@@ -430,6 +430,7 @@
 #include "LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.h"                       // 424
 #include "LEET_SPLIT_LINKED_LIST_IN_PARTS.h"                                // 425
 #include "LEET_SENTENCE_SIMILARITY.h"                                       // 426
+#include "LEET_SENTENCE_SIMILARITY_II.h"                                    // 427
 
 // End of headers
 
@@ -870,6 +871,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_VALID_PARENTHESIS_STRING();                                  // Accepted
     // return LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS();                       // Accepted
     // return LEET_SPLIT_LINKED_LIST_IN_PARTS();                                // Accepted
-    return LEET_SENTENCE_SIMILARITY();                                       // Accepted
+    // return LEET_SENTENCE_SIMILARITY();                                       // Accepted
+    return LEET_SENTENCE_SIMILARITY_II();                                    // Accepted
 }
 

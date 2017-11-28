@@ -389,6 +389,7 @@
     <ClInclude Include="LEET_SEARCH_FOR_A_RANGE.h" />
     <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
     <ClInclude Include="LEET_SENTENCE_SIMILARITY.h" />
+    <ClInclude Include="LEET_SENTENCE_SIMILARITY_II.h" />
     <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h" />
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
     <ClInclude Include="LEET_SET_MISMATCH.h" />
@@ -821,6 +822,7 @@
     <ClCompile Include="LEET_SEARCH_FOR_A_RANGE.cpp" />
     <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
     <ClCompile Include="LEET_SENTENCE_SIMILARITY.cpp" />
+    <ClCompile Include="LEET_SENTENCE_SIMILARITY_II.cpp" />
     <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
     <ClCompile Include="LEET_SET_MISMATCH.cpp" />

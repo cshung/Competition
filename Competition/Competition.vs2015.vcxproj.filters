@@ -768,6 +768,9 @@
     <ClInclude Include="LEET_SENTENCE_SIMILARITY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SENTENCE_SIMILARITY_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2058,6 +2061,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SENTENCE_SIMILARITY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SENTENCE_SIMILARITY_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp">

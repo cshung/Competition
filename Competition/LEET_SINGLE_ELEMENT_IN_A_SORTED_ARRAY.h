@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY();

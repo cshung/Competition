@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript" src="/static/js/analytics.js?v=1513849547.0" charset="utf-8"></script>
+
+<script type="text/javascript">archive_analytics.values.service='wb';archive_analytics.values.server_name='wwwb-app23.us.archive.org';archive_analytics.values.server_ms=460;</script><script type="text/javascript" src="/static/js/wbhack.js?v=1513849547.0" charset="utf-8"></script>
+
+<script type="text/javascript">
+__wbhack.init('https://web.archive.org/web');
+</script>
+<link rel="stylesheet" type="text/css" href="/static/css/banner-styles.css?v=1513849547.0" />
+<link rel="stylesheet" type="text/css" href="/static/css/iconochive.css?v=1513849547.0" />
+
+<!-- End Wayback Rewrite JS Include -->
+<meta charset="utf-8">
+<meta name="author" content="Jasper Bedaux">
+<meta name="generator" content="Jasper Bedaux">
+<title>C++2HTML</title>
+<style type="text/css">
+  #contentdiv {
+    max-width: 800px;
+  }
+  #footerdiv {
+    font-size: smaller;
+    font-family: sans-serif;
+    padding-top: 10mm;
+    padding-left: 3mm;
+  }
+  #gaddiv {
+    position: fixed;
+    top: 10mm;
+    left: 800px;
+    padding-left: 20mm;
+  }
+  h1 { 
+    color: #A0A0A0;
+    padding-top: 2mm;
+    padding-bottom: 5mm;
+    margin: 0px 0px 0px 0px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  h2 {
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    margin: 0px 0px 0px 0px;
+    font-family: sans-serif;
+    color: #000060;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  p, .content {
+    padding: 0mm 10mm 2mm 3mm ;
+    margin: 0px 0px 0px 0px;
+    text-align: justify;
+    line-height: 130%;
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  pre { padding-left: 3mm; }
+  .ref { }
+  .authors { }
+  .pubtitle { font-style: italic; }
+  .publisher { }
+  body {
+    padding: 5mm 5mm 5mm 5mm;
+    margin: 0px 0px 0px 0px;
+  }
+  a:link { color: #000080; text-decoration: none; }
+  a:visited { color: #000080; text-decoration: none; }
+  a:active { color: #000080; }
+  a:hover { text-decoration: underline; }
+  img { 
+    border-style: none;
+  }
+  table, td {
+    border-style: none;
+    padding: 0px 10px 0px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+</style>
+
+<!-- To generate your own colored code visit http://bedaux.net/cpp2html/ -->
+
+<style type="text/css">
+.comment { color: #999999; font-style: italic; }
+.string { color: #006600; }
+.bool { color: #000000; font-weight: bold; }
+.operator { color: #663300; font-weight: bold; }
+</style>
+
+<meta name="keywords" content="syntax,highlighting,syntax highlighting,colorizer,code,source,c++tohtml,cpp2html,cpptohtml,cpptohtm,cpp2htm,c++2htm,cpptohtm"/>
+
+<!-- This JavaScript program is copyright by Jasper Bedaux (C) 2003. -->
+
+<script type="text/javascript">
+versionOK = false
+</script>
+
+<script type="text/javascript;version=1.5">
+versionOK = true
+</script>
+
+<script language="javascript1.5" type="text/javascript"> <!-- "language" is not valid in xhtml 1.1, but a quick fix to make it work in Google Chrome and Opera -->
+versionOK = true
+</script>
+
+<script type="text/jscript">
+if (parseFloat(ScriptEngineMajorVersion() + "." + ScriptEngineMinorVersion()) >= 5.5) versionOK = true
+</script>
+
+<script type="text/javascript">
+if (versionOK) {
+// edit lines below to change the output style
+  comment       = {color:"#999999", bold:false, italic:true,  name:"comment"} // comment blocks and lines
+  precompiler   = {color:"#000099", bold:false, italic:false, name:"pre"} // precompiler lines
+  operator      = {color:"#663300", bold:true,  italic:false, name:"operator"} // operator and punctuator symbols
+  stringLiteral = {color:"#009900", bold:false, italic:false, name:"string"} // string and wide char string literals
+  charLiteral   = {color:"#009900", bold:false, italic:false, name:"char"} // char and wchar_t literals
+  intLiteral    = {color:"#999900", bold:false, italic:false, name:"int"} // integer literals
+  floatLiteral  = {color:"#996600", bold:false, italic:false, name:"float"} // floating point literals
+  boolLiteral   = {color:"#000000", bold:true,  italic:false, name:"bool"} // boolean literals
+  types         = {color:"#FF6633", bold:false, italic:false, name:"type"} // built-in type names
+  flowControl   = {color:"#FF0000", bold:false, italic:false, name:"flow"} // program flow control keywords
+  keyword       = {color:"#990000", bold:false, italic:false, name:"keyword"} // other keywords
+}
+</script>
+
+<script type="text/javascript" src="highlight.js">
+</script>
+
+<script type="text/javascript">
+function disable() {
+  if (!versionOK) {
+    document.forms[0].xhtml[0].disabled = true
+    document.forms[0].xhtml[1].disabled = true
+    document.forms[0].t.disabled = true
+    document.forms[0].convert.disabled = true
+  }
+}
+</script>
+
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/timestamp.js?v=1513849547.0" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/graph-calc.js?v=1513849547.0" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/auto-complete.js?v=1513849547.0" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/toolbar.js?v=1513849547.0" charset="utf-8"></script>
+
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+.wb-autocomplete-suggestions {
+    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+    position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+}
+.wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
+.wb-autocomplete-suggestion b { font-weight: bold; }
+.wb-autocomplete-suggestion.selected { background: #f0f0f0; }
+</style>
+<div id="wm-ipp" lang="en" style="display:none;direction:ltr;">
+<div style="position:fixed;left:0;top:0;right:0;">
+<div id="wm-ipp-inside">
+  <div style="position:relative;">
+    <div id="wm-logo" style="float:left;width:130px;padding-top:10px;">
+      <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+    </div>
+    <div class="r" style="float:right;">
+      <div id="wm-btns" style="text-align:right;height:25px;">
+                  <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a href="#"
+             onclick="__wm.saveSnapshot('http://bedaux.net/cpp2html/', '20170604231513')"
+             title="Save to My Web Archive"
+             id="wm-save-snapshot-open"
+          >
+            <span class="iconochive-web"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        	<a href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+	<a id="wm-tb-close" href="#close" onclick="__wm.h(event);return false;" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" style="text-align:right;">
+	<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://web.archive.org/web/20170604231513/http://bedaux.net:80/cpp2html/', '', 'height=400,width=600'); return false;" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+	<a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=https://web.archive.org/web/20170604231513/http://bedaux.net:80/cpp2html/&amp;via=internetarchive', '', 'height=400,width=600'); return false;" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+    </div>
+    <table class="c" style="">
+      <tbody>
+	<tr>
+	  <td class="u" colspan="2">
+	    <form target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://bedaux.net/cpp2html/" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20170604231513" /><input type="submit" value="Go" /></form>
+	  </td>
+	  <td class="n" rowspan="2" style="width:110px;">
+	    <table>
+	      <tbody>
+		<!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+		<tr class="m">
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20170502151302/http://bedaux.net:80/cpp2html/" title="02 May 2017"><strong>May</strong></a></td>
+		  <td class="c" id="displayMonthEl" title="You are here: 23:15:13 Jun 04, 2017">JUN</td>
+		  <td class="f" nowrap="nowrap">Jul</td>
+		</tr>
+		<!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+		<tr class="d">
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20170602163231/http://www.bedaux.net:80/cpp2html/" title="16:32:31 Jun 02, 2017"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
+		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 23:15:13 Jun 04, 2017">04</td>
+		  <td class="f" nowrap="nowrap"><img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
+		</tr>
+		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+		<tr class="y">
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20160531020802/http://bedaux.net:80/cpp2html/" title="31 May 2016"><strong>2016</strong></a></td>
+		  <td class="c" id="displayYearEl" title="You are here: 23:15:13 Jun 04, 2017">2017</td>
+		  <td class="f" nowrap="nowrap">2018</td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="s">
+	    	    <div id="wm-nav-captures">
+	      	      <a class="t" href="/web/20170604231513*/http://bedaux.net/cpp2html/" title="See a list of every capture for this URL">290 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">10 Apr 2003 - 04 Jun 2017</div>
+	      </div>
+	  </td>
+	  <td class="k">
+	    <a href="" id="wm-graph-anchor">
+	      <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+		<canvas id="wm-sparkline-canvas" width="575" height="27" border="0"></canvas>
+	      </div>
+	    </a>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <div style="position:absolute;bottom:0;right:2px;text-align:right;">
+      <a id="wm-expand" class="wm-btn wm-closed" href="#expand" onclick="__wm.ex(event);return false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span style="font-size:80%">About this capture</span></a>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+            <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+    </div>
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="/static/images/loading.gif" alt="loading" /></div>
+    </div>
+  </div></div></div></div><script type="text/javascript">
+__wm.bt(575,27,25,2,"web","http://bedaux.net/cpp2html/","2017-06-04",1996);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<h1>C++2HTML</h1>
+
+<div id="contentdiv">
+
+<!-- XXXXXXXXXXXXXXXXXXXXX <body onload="disable()"> -->
+
+<noscript>
+<h2>
+Sorry, this program will not work since there is no JavaScript support in this
+browser, or JavaScript is turned off. You will need JavaScript 1.5 or higher to
+make this page work.
+</h2>
+</noscript>
+
+<h2>Convert C++ code to syntax highlighted (colored) HTML
+</h2>
+
+<h2>How does it work?
+</h2>
+
+<p>Paste your C++ code into the box below and
+press the <i>Convert</i> button. The output will open in a new window.
+If desired, you can save the output from the browser menu in 
+the output window. Choose to save as <em>HTML only</em>.
+</p>
+
+<form action="">
+<p>
+<textarea name="t" rows="20" cols="70" style="wrap: none;"></textarea>
+<br/>
+<a onclick="if (!document.forms[0].xhtml1.checked) document.forms[0].xhtml1.checked = true"><input type="radio" name="xhtml" id="xhtml1" checked="checked"/> Generate valid XHTML 1.1 (recommended, see below)</a><br/>
+<a onclick="if (!document.forms[0].xhtml2.checked) document.forms[0].xhtml2.checked = true"><input type="radio" name="xhtml" id="xhtml2"/> Generate old (non-valid) HTML using font color tags (not recommended)</a><br/>
+<input type="button" id="convert" value="Convert" onclick="colorCode(this.form)"/>
+<small>(can take some time for large pieces of code)</small>
+</p>
+</form>
+
+<h2>Should I generate XHTML 1.1?
+</h2>
+
+<p>
+Generally, yes, because it is very likely that pages that are written in XHTML 1.1 will
+stay compatible with future browsers for long.
+Although XHTML is quite modern, the pages that are generated by C++2HTML are compatible
+with very old browsers like Netscape 4 and Internet Explorer 4. Only if you need to 
+develop pages that are compatible with version 3 or even older browsers, you should generate the
+old HTML pages.
+</p>
+
+<h2>Can I modify the colors?
+</h2>
+
+<p>
+Yes, very easily. If you only want to change the colors for one generated page, just
+open that page in a text editor and look for the following lines:
+</p>
+
+<pre>
+.comment { color: #999999; font-style: italic; }
+.pre { color: #000099; }
+.string { color: #009900; }
+.char { color: #009900; }
+.float { color: #996600; }
+.int { color: #999900; }
+.bool { color: #000000; font-weight: bold; }
+.type { color: #FF6633; }
+.flow { color: #FF0000; }
+.keyword { color: #990000; }
+.operator { color: #663300; font-weight: bold; }
+</pre>
+
+<p>
+Here you can edit the colors. It is pretty self-explaining I hope.
+</p>
+
+<p>
+It is also possible to change the default colors because the program is written in
+client-side JavaScript. Save this page and open it in a text editor. Look for the following lines:
+</p>
+
+<pre>comment<span class="operator">       = {</span>color<span class="operator">:</span><span class="string">"#999999"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">true</span><span class="operator">,</span>  name<span class="operator">:</span><span class="string">"comment"</span><span class="operator">}</span><span class="comment">
+</span>precompiler<span class="operator">   = {</span>color<span class="operator">:</span><span class="string">"#000099"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"pre"</span><span class="operator">}</span><span class="comment">
+</span>operator<span class="operator">      = {</span>color<span class="operator">:</span><span class="string">"#663300"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">true</span><span class="operator">,</span>  italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"operator"</span><span class="operator">}</span><span class="comment">
+</span>stringLiteral<span class="operator"> = {</span>color<span class="operator">:</span><span class="string">"#009900"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"string"</span><span class="operator">}</span><span class="comment">
+</span>charLiteral<span class="operator">   = {</span>color<span class="operator">:</span><span class="string">"#009900"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"char"</span><span class="operator">}</span><span class="comment">
+</span>intLiteral<span class="operator">    = {</span>color<span class="operator">:</span><span class="string">"#999900"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"int"</span><span class="operator">}</span><span class="comment">
+</span>floatLiteral<span class="operator">  = {</span>color<span class="operator">:</span><span class="string">"#996600"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"float"</span><span class="operator">}</span><span class="comment">
+</span>boolLiteral<span class="operator">   = {</span>color<span class="operator">:</span><span class="string">"#000000"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">true</span><span class="operator">,</span>  italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"bool"</span><span class="operator">}</span><span class="comment">
+</span>types<span class="operator">         = {</span>color<span class="operator">:</span><span class="string">"#FF6633"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"type"</span><span class="operator">}</span><span class="comment">
+</span>flowControl<span class="operator">   = {</span>color<span class="operator">:</span><span class="string">"#FF0000"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"flow"</span><span class="operator">}</span><span class="comment">
+</span>keyword<span class="operator">       = {</span>color<span class="operator">:</span><span class="string">"#990000"</span><span class="operator">,</span> bold<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> italic<span class="operator">:</span><span class="bool">false</span><span class="operator">,</span> name<span class="operator">:</span><span class="string">"keyword"</span><span class="operator">}</span><span class="comment">
+</span></pre>
+
+<p>
+Now you can edit the colors and set which elements must be displayed bold and/or italic.
+Save the page, and you can run your modified version by opening it in your browser.
+</p>
+
+<h2>Does it work offline?
+</h2>
+
+<p>Yes, if this page is loaded in your browser and you go offline, 
+the script will still work because it is client-side JavaScript, and
+nothing needs to be uploaded or downloaded to a server. This also means that your 
+source code is not transmitted over the internet.
+</p>
+
+</div>
+
+<div id="footerdiv">
+&copy; 2003
+<a href="https://web.archive.org/web/20170604231513/http://bedaux.net/jasper/">Jasper Bedaux</a>
+</div>
+<div id="gaddiv">
+<script type="text/javascript">
+google_ad_client = "pub-8578942598778554";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_channel ="";
+google_color_border = "CCCCCC";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20170604231513js_/http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</body>
+</html>

@@ -18,7 +18,7 @@ fn to_day_of_week(input: &str) -> Option<usize>
     {
         Some(0)
     }
-    else if input == "tue"
+    else if input == "tues"
     {
         Some(1)
     }
@@ -26,7 +26,7 @@ fn to_day_of_week(input: &str) -> Option<usize>
     {
         Some(2)
     }
-    else if input == "thu"
+    else if input == "thurs"
     {
         Some(3)
     }

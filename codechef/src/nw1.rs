@@ -14,37 +14,16 @@ fn read_line(stdin: &io::Stdin) -> io::Result<String>
 
 fn to_day_of_week(input: &str) -> Option<usize>
 {
-    if input == "mon"
+    match input
     {
-        Some(0)
-    }
-    else if input == "tues"
-    {
-        Some(1)
-    }
-    else if input == "wed"
-    {
-        Some(2)
-    }
-    else if input == "thurs"
-    {
-        Some(3)
-    }
-    else if input == "fri"
-    {
-        Some(4)
-    }
-    else if input == "sat"
-    {
-        Some(5)
-    }
-    else if input == "sun"
-    {
-        Some(6)
-    }
-    else
-    { 
-        None
+        "mon" => Some(0),
+        "tues" => Some(1),
+        "wed" => Some(2),
+        "thurs" => Some(3),
+        "fri" => Some(4),
+        "sat" => Some(5),
+        "sun" => Some(6),
+        _ => None,
     }
 }
 

@@ -90,6 +90,9 @@
     <ClInclude Include="LEET_3SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_3SUM_CLOSEST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1386,6 +1389,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_3SUM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_3SUM_CLOSEST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp">

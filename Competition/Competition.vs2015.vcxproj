@@ -163,6 +163,7 @@
     <ClInclude Include="HACKER_RANK_TREE_TOP_VIEW.h" />
     <ClInclude Include="LEET_132_PATTERN.h" />
     <ClInclude Include="LEET_3SUM.h" />
+    <ClInclude Include="LEET_3SUM_CLOSEST.h" />
     <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
     <ClInclude Include="LEET_ADD_BINARY.h" />
     <ClInclude Include="LEET_ADD_DIGITS.h" />
@@ -597,6 +598,7 @@
     <ClCompile Include="HACKER_RANK_TREE_TOP_VIEW.cpp" />
     <ClCompile Include="LEET_132_PATTERN.cpp" />
     <ClCompile Include="LEET_3SUM.cpp" />
+    <ClCompile Include="LEET_3SUM_CLOSEST.cpp" />
     <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
     <ClCompile Include="LEET_ADD_BINARY.cpp" />
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />

@@ -810,6 +810,9 @@
     <ClInclude Include="LEET_SORT_COLORS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SPECIAL_BINARY_STRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SPIRAL_MATRIX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2112,6 +2115,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SORT_COLORS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SPECIAL_BINARY_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp">

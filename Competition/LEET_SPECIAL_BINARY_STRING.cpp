@@ -47,12 +47,12 @@ namespace _LEET_SPECIAL_BINARY_STRING
     class Solution
     {
     public:
-        void sortByHeight(Bracket* node)
+        void optimize(Bracket* node)
         {
             node->height = 1;
             for (auto child : node->children)
             {
-                sortByHeight(child);
+                optimize(child);
                 node->height = max(node->height, child->height + 1);
             }
             sort(node->children.begin(), node->children.end(), [](const Bracket* a, const Bracket* b) -> bool
@@ -130,7 +130,7 @@ namespace _LEET_SPECIAL_BINARY_STRING
                     current = current->parent;
                 }
             }
-            sortByHeight(root);
+            optimize(root);
 #ifdef LOG
             print(root, s);
 #endif

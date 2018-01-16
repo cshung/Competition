@@ -368,6 +368,7 @@
     <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h" />
     <ClInclude Include="LEET_TRIANGLE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
+    <ClInclude Include="LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED.h" />
     <ClInclude Include="LEET_UGLY_NUMBER.h" />
     <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
     <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
@@ -805,6 +806,7 @@
     <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp" />
     <ClCompile Include="LEET_TRIANGLE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />
+    <ClCompile Include="LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
     <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
     <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />

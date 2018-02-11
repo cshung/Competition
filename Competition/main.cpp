@@ -436,6 +436,7 @@
 #include "LEET_REACH_A_NUMBER.h"                                            // 430
 #include "LEET_SPECIAL_BINARY_STRING.h"                                     // 431
 #include "LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED.h"                          // 432
+#include "LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h"                            // 433
 
 // End of headers
 
@@ -882,7 +883,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_3SUM_CLOSEST();                                              // Accepted
     // return LEET_REACH_A_NUMBER();                                            // Accepted
     // return LEET_SPECIAL_BINARY_STRING();                                     // Accepted
-    return LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED();                          // Accepted
+    // return LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED();                          // Accepted
+    return LEET_NUMBER_OF_SEGMENTS_IN_A_STRING();                            // Accepted
 }
 
 

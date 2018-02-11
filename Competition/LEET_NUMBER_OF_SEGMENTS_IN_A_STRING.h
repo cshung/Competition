@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_NUMBER_OF_SEGMENTS_IN_A_STRING();

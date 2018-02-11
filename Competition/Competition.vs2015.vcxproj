@@ -325,6 +325,7 @@
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h" />
+    <ClInclude Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h" />
     <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h" />
     <ClInclude Include="LEET_ONES_AND_ZEROES.h" />
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
@@ -763,6 +764,7 @@
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_ONES_AND_ZEROES.cpp" />
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />

@@ -576,6 +576,9 @@
     <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1884,6 +1887,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp">

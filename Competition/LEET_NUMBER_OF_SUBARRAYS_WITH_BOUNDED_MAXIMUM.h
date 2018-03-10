@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM();

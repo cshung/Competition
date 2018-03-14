@@ -438,6 +438,7 @@
 #include "LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED.h"                          // 432
 #include "LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h"                            // 433
 #include "LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM.h"                  // 434
+#include "LEET_LONGEST_VALID_PARENTHESES.h"                                 // 435
 
 // End of headers
 
@@ -886,7 +887,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SPECIAL_BINARY_STRING();                                     // Accepted
     // return LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED();                          // Accepted
     // return LEET_NUMBER_OF_SEGMENTS_IN_A_STRING();                            // Accepted
-    return LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM();                  // Accepted
+    // return LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM();                  // Accepted
+    return LEET_LONGEST_VALID_PARENTHESES();                  // Accepted
 }
 
 

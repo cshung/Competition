@@ -194,6 +194,7 @@
     <ClInclude Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
+    <ClInclude Include="LEET_BOMB_ENEMY.h" />
     <ClInclude Include="LEET_BULB_SWITCHER.h" />
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
     <ClInclude Include="LEET_BURST_BALLOONS.h" />
@@ -636,6 +637,7 @@
     <ClCompile Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_WATCH.cpp" />
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
+    <ClCompile Include="LEET_BOMB_ENEMY.cpp" />
     <ClCompile Include="LEET_BULB_SWITCHER.cpp" />
     <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
     <ClCompile Include="LEET_BURST_BALLOONS.cpp" />

@@ -440,6 +440,7 @@
 #include "LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM.h"                  // 434
 #include "LEET_LONGEST_VALID_PARENTHESES.h"                                 // 435
 #include "LEET_PREDICT_THE_WINNER.h"                                        // 436
+#include "LEET_BOMB_ENEMY.h"                                                // 437
 
 // End of headers
 
@@ -890,7 +891,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_NUMBER_OF_SEGMENTS_IN_A_STRING();                            // Accepted
     // return LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM();                  // Accepted
     // return LEET_LONGEST_VALID_PARENTHESES();                                 // Accepted
-    return LEET_PREDICT_THE_WINNER();                                        // Accepted
+    // return LEET_PREDICT_THE_WINNER();                                        // Accepted
+    return LEET_BOMB_ENEMY();                                                // Cannot submit without subscription
 }
-
-

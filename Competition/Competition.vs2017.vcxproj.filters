@@ -657,6 +657,9 @@
     <ClInclude Include="LEET_POWER_OF_TWO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PREDICT_THE_WINNER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_PRINT_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1335,9 +1338,6 @@
     <ClInclude Include="UVa990.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LEET_PREDICT_THE_WINNER.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.cpp">
@@ -1977,6 +1977,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_POWER_OF_TWO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PREDICT_THE_WINNER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PRINT_BINARY_TREE.cpp">
@@ -2655,9 +2658,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa990.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LEET_PREDICT_THE_WINNER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

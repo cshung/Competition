@@ -12,6 +12,11 @@ fn read_line(stdin: &io::Stdin) -> io::Result<String>
     }
 }
 
+fn handle_line(stdin: &io::Stdin, result: [i32; 9]) -> Option<[i32; 9]>
+{
+	let read_line_result = read_line(&stdin);
+}
+
 fn h1(stdin: &io::Stdin) -> Option<[i32; 9]>
 {
     let mut result: [i32; 9] = [0; 9];
@@ -19,7 +24,9 @@ fn h1(stdin: &io::Stdin) -> Option<[i32; 9]>
     if read_blank_line_result.is_err()
     {
         return None;
-    }    
+    }
+    let handle_line_1_result = handle_line(&stdin, result);
+
     return Some(result);
 }
 
@@ -31,7 +38,7 @@ pub fn codechef_h1()
     {
         return;
     }
-    let first_line = read_first_line_result.unwrap();    
+    let first_line = read_first_line_result.unwrap();
     let parse_first_line_result = first_line.parse::<usize>();
     if parse_first_line_result.is_err()
     {
@@ -41,5 +48,5 @@ pub fn codechef_h1()
     for _i in 0..t
     {
         h1(&stdin);
-    }    
+    }
 }

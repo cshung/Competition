@@ -890,7 +890,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_NUMBER_OF_SEGMENTS_IN_A_STRING();                            // Accepted
     // return LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM();                  // Accepted
     // return LEET_LONGEST_VALID_PARENTHESES();                                 // Accepted
-    return LEET_PREDICT_THE_WINNER();                                        // 
+    return LEET_PREDICT_THE_WINNER();                                        // Accepted
 }
 
 

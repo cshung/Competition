@@ -442,6 +442,7 @@
 #include "LEET_PREDICT_THE_WINNER.h"                                        // 436
 #include "LEET_BOMB_ENEMY.h"                                                // 437
 #include "LEET_REVERSE_NODES_IN_K_GROUP.h"                                  // 438
+#include "LEET_CARD_FLIPPING_GAME.h"                                        // 437
 
 // End of headers
 
@@ -894,5 +895,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_VALID_PARENTHESES();                                 // Accepted
     // return LEET_PREDICT_THE_WINNER();                                        // Accepted
     // return LEET_BOMB_ENEMY();                                                // Cannot submit without subscription
-    return LEET_REVERSE_NODES_IN_K_GROUP();                                  // Accepted
+    // return LEET_REVERSE_NODES_IN_K_GROUP();                                  // Accepted
+    return LEET_CARD_FLIPPING_GAME();                                        // Accepted
 }

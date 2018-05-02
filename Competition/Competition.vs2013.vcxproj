@@ -371,6 +371,7 @@
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
     <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
     <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
+    <ClInclude Include="LEET_TEEMO_ATTACKING.h" />
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
@@ -818,6 +819,7 @@
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
     <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
+    <ClCompile Include="LEET_TEEMO_ATTACKING.cpp" />
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
     <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />

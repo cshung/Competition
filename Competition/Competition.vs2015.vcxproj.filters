@@ -897,6 +897,9 @@
     <ClInclude Include="LEET_SYMMETRIC_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TEEMO_ATTACKING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2232,6 +2235,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TEEMO_ATTACKING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp">

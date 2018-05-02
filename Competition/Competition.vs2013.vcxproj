@@ -311,6 +311,7 @@
     <ClInclude Include="LEET_REDUNDANT_CONNECTION.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_9.h" />
+    <ClInclude Include="LEET_REMOVE_BOXES.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h" />
     <ClInclude Include="LEET_REMOVE_ELEMENT.h" />
@@ -757,6 +758,7 @@
     <ClCompile Include="LEET_REDUNDANT_CONNECTION.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_9.cpp" />
+    <ClCompile Include="LEET_REMOVE_BOXES.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.cpp" />
     <ClCompile Include="LEET_REMOVE_ELEMENT.cpp" />

@@ -323,6 +323,7 @@
     <ClInclude Include="LEET_MOVE_ZEROES.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
+    <ClInclude Include="LEET_NETWORK_DELAY_TIME.h" />
     <ClInclude Include="LEET_NEXT_PERMUTATION.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
@@ -771,6 +772,7 @@
     <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />
+    <ClCompile Include="LEET_NETWORK_DELAY_TIME.cpp" />
     <ClCompile Include="LEET_NEXT_PERMUTATION.cpp" />
     <ClCompile Include="LEET_NIM_GAME.cpp" />
     <ClCompile Include="LEET_NTH_DIGIT.cpp" />

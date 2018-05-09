@@ -195,6 +195,9 @@
     <ClInclude Include="LEET_BURST_BALLOONS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_CAN_PLACE_FLOWERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_CARD_FLIPPING_GAME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1536,6 +1539,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BURST_BALLOONS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CAN_PLACE_FLOWERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_CARD_FLIPPING_GAME.cpp">

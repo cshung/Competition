@@ -3,7 +3,7 @@
 // https://leetcode.com/problems/subarray-sum-equals-k
 
 #include "LEET_SUBARRAY_SUM_EQUALS_K.h"
-#include <map>
+#include <unordered_map>
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -26,7 +26,7 @@ namespace _LEET_SUBARRAY_SUM_EQUALS_K
             {
                 running_sums[i + 1] = nums[i] + running_sums[i];
             }
-            map<int, int> wanted_count;
+            unordered_map<int, int> wanted_count;
             int result = 0;
             for (int i = 0; i < (n + 1); i++)
             {

@@ -448,6 +448,7 @@
 #include "LEET_TEEMO_ATTACKING.h"                                           // 442
 #include "LEET_NETWORK_DELAY_TIME.h"                                        // 443
 #include "LEET_CAN_PLACE_FLOWERS.h"                                         // 444
+#include "LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.h"                // 445
 
 // End of headers
 
@@ -906,5 +907,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REMOVE_BOXES();                                              // Accepted
     // return LEET_TEEMO_ATTACKING();                                           // Accepted
     // return LEET_NETWORK_DELAY_TIME();                                        // Accepted
-    return LEET_CAN_PLACE_FLOWERS();                                         // Accepted
+    // return LEET_CAN_PLACE_FLOWERS();                                         // Accepted
+    return LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING();                // Accepted
 }

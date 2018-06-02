@@ -558,6 +558,9 @@
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MISSING_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1902,6 +1905,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MISSING_NUMBER.cpp">

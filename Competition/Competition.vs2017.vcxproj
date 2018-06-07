@@ -287,6 +287,7 @@
     <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h" />
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h" />
+    <ClInclude Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROME.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
@@ -738,6 +739,7 @@
     <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROME.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />

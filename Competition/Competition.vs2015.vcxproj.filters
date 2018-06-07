@@ -462,6 +462,9 @@
     <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LONGEST_PALINDROME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1809,6 +1812,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_PALINDROME.cpp">

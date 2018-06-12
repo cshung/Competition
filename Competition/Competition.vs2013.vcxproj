@@ -312,6 +312,7 @@
     <ClInclude Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h" />
     <ClInclude Include="LEET_RECOVER_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_RECTANGLE_AREA.h" />
+    <ClInclude Include="LEET_RECTANGLE_AREA_II.h" />
     <ClInclude Include="LEET_REDUNDANT_CONNECTION.h" />
     <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
     <ClInclude Include="LEET_REMOVE_9.h" />
@@ -764,6 +765,7 @@
     <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp" />
     <ClCompile Include="LEET_RECOVER_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
+    <ClCompile Include="LEET_RECTANGLE_AREA_II.cpp" />
     <ClCompile Include="LEET_REDUNDANT_CONNECTION.cpp" />
     <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
     <ClCompile Include="LEET_REMOVE_9.cpp" />

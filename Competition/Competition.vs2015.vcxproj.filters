@@ -720,6 +720,9 @@
     <ClInclude Include="LEET_RECTANGLE_AREA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_RECTANGLE_AREA_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_REDUNDANT_CONNECTION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2070,6 +2073,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RECTANGLE_AREA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_RECTANGLE_AREA_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REDUNDANT_CONNECTION.cpp">

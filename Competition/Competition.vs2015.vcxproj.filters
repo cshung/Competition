@@ -186,6 +186,9 @@
     <ClInclude Include="LEET_BOMB_ENEMY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BRICKS_FALLING_WHEN_HIT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_BULB_SWITCHER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1539,6 +1542,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BOMB_ENEMY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BRICKS_FALLING_WHEN_HIT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BULB_SWITCHER.cpp">

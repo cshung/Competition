@@ -420,6 +420,9 @@
     <ClInclude Include="LEET_JUMP_GAME_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_KEYS_AND_ROOMS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_KILL_PROCESS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1776,6 +1779,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_JUMP_GAME_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_KEYS_AND_ROOMS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_KILL_PROCESS.cpp">

@@ -999,6 +999,9 @@
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="POJ1029.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SPOJ_FISHER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2361,6 +2364,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POJ1029.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SPOJ_FISHER.cpp">

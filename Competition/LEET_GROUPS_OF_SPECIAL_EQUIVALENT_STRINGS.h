@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS();

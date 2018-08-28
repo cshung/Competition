@@ -360,6 +360,9 @@
     <ClInclude Include="LEET_GRAY_CODE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1722,6 +1725,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_GRAY_CODE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.cpp">

@@ -108,6 +108,9 @@
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1473,6 +1476,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp">

@@ -64,6 +64,9 @@ using namespace _LEET_ALL_POSSIBLE_FULL_BINARY_TREES;
 int LEET_ALL_POSSIBLE_FULL_BINARY_TREES()
 {
     Solution solution;
-
+    for (int i = 0; i < 10; i++)
+    {
+        cout << solution.allPossibleFBT(i).size() << endl;
+    }
     return 0;
 }

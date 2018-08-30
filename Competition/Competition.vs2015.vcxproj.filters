@@ -522,6 +522,9 @@
     <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MAXIMUM_FREQUENCY_STACK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1890,6 +1893,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MAXIMUM_FREQUENCY_STACK.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.cpp">

@@ -456,6 +456,7 @@
 #include "POJ1029.h"                                                        // 450
 #include "LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.h"                      // 451
 #include "LEET_ALL_POSSIBLE_FULL_BINARY_TREES.h"                            // 452
+#include "LEET_MAXIMUM_FREQUENCY_STACK.h"                                   // 453
 
 // End of headers
 
@@ -922,5 +923,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_KEYS_AND_ROOMS();                                            // Accepted
     // return POJ1029();                                                        // Accepted
     // return LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS();                      // Accepted
-    return LEET_ALL_POSSIBLE_FULL_BINARY_TREES();                            // Accepted
+    // return LEET_ALL_POSSIBLE_FULL_BINARY_TREES();                            // Accepted
+    return LEET_MAXIMUM_FREQUENCY_STACK();                                   // Accepted
 }

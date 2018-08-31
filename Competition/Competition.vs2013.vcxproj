@@ -411,6 +411,7 @@
     <ClInclude Include="LEET_WORD_PATTERN.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="POJ1029.h" />
+    <ClInclude Include="SPOJ_CANDY.h" />
     <ClInclude Include="SPOJ_FISHER.h" />
     <ClInclude Include="SPOJ_HORRIBLE.h" />
     <ClInclude Include="SPOJ_LITE_1.h" />
@@ -873,6 +874,7 @@
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="POJ1029.cpp" />
+    <ClCompile Include="SPOJ_CANDY.cpp" />
     <ClCompile Include="SPOJ_FISHER.cpp" />
     <ClCompile Include="SPOJ_HORRIBLE.cpp" />
     <ClCompile Include="SPOJ_LITE_1.cpp" />

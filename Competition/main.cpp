@@ -459,6 +459,7 @@
 #include "LEET_MAXIMUM_FREQUENCY_STACK.h"                                   // 453
 #include "LEET_SURFACE_AREA_OF_3D_SHAPES.h"                                 // 454
 #include "LEET_SUM_OF_SUBSEQUENCE_WIDTHS.h"                                 // 455
+#include "SPOJ_CANDY.h"                                                     // 456
 
 // End of headers
 
@@ -928,5 +929,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ALL_POSSIBLE_FULL_BINARY_TREES();                            // Accepted
     // return LEET_MAXIMUM_FREQUENCY_STACK();                                   // Accepted
     // return LEET_SURFACE_AREA_OF_3D_SHAPES();                                 // Accepted
-    return LEET_SUM_OF_SUBSEQUENCE_WIDTHS();                                 // 
+    // return LEET_SUM_OF_SUBSEQUENCE_WIDTHS();                                 // Accepted
+    return SPOJ_CANDY();                                                     // Accepted
 }

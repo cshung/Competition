@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#pragma warning(disable : 4996)
 
 // http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=870
 

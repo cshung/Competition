@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#pragma warning(disable : 4996)
 
 // http://www.spoj.com/problems/LITE/
 

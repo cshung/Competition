@@ -4,8 +4,6 @@
 
 // #define LOG
 
-#pragma warning(disable : 4996)
-
 #include<stdio.h>
 
 int POJ1029()

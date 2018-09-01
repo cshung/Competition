@@ -1,0 +1,3 @@
+#pragma once
+
+int HACKER_RANK_SHERLOCK_AND_DIVISORS();

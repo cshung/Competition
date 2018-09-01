@@ -91,6 +91,7 @@
     <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
     <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
     <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
+    <ClInclude Include="HACKER_RANK_SHERLOCK_AND_DIVISORS.h" />
     <ClInclude Include="HACKER_RANK_SUPER_REDUCED_STRING.h" />
     <ClInclude Include="HACKER_RANK_SWAP_NODES_ALGO.h" />
     <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h" />
@@ -553,6 +554,7 @@
     <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
     <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
     <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
+    <ClCompile Include="HACKER_RANK_SHERLOCK_AND_DIVISORS.cpp" />
     <ClCompile Include="HACKER_RANK_SUPER_REDUCED_STRING.cpp" />
     <ClCompile Include="HACKER_RANK_SWAP_NODES_ALGO.cpp" />
     <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp" />

@@ -597,6 +597,9 @@
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MY_CALENDAR_III.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_NETWORK_DELAY_TIME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1980,6 +1983,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MY_CALENDAR_III.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_NETWORK_DELAY_TIME.cpp">

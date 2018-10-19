@@ -424,6 +424,7 @@
     <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER_III.h" />
     <ClInclude Include="LEET_SLIDING_WINDOW_MAXIMUM.h" />
+    <ClInclude Include="LEET_SORT_ARRAY_BY_PARITY.h" />
     <ClInclude Include="LEET_SORT_COLORS.h" />
     <ClInclude Include="LEET_SPECIAL_BINARY_STRING.h" />
     <ClInclude Include="LEET_SPIRAL_MATRIX.h" />
@@ -889,6 +890,7 @@
     <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER_III.cpp" />
     <ClCompile Include="LEET_SLIDING_WINDOW_MAXIMUM.cpp" />
+    <ClCompile Include="LEET_SORT_ARRAY_BY_PARITY.cpp" />
     <ClCompile Include="LEET_SORT_COLORS.cpp" />
     <ClCompile Include="LEET_SPECIAL_BINARY_STRING.cpp" />
     <ClCompile Include="LEET_SPIRAL_MATRIX.cpp" />

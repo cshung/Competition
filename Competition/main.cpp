@@ -465,6 +465,7 @@
 #include "LEET_JEWELS_AND_STONES.h"                                         // 459
 #include "LEET_SORT_ARRAY_BY_PARITY.h"                                      // 460
 #include "LEET_SORT_ARRAY_BY_PARITY_II.h"                                   // 461
+#include "LEET_FLIPPING_AN_IMAGE.h"                                         // 462
 
 // End of headers
 
@@ -940,5 +941,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MY_CALENDAR_III();                                           // Accepted
     // return LEET_JEWELS_AND_STONES();                                         // Accepted
     // return LEET_SORT_ARRAY_BY_PARITY();                                      // Accepted
-    return LEET_SORT_ARRAY_BY_PARITY_II();                                   // Accepted
+    // return LEET_SORT_ARRAY_BY_PARITY_II();                                   // Accepted
+    return LEET_FLIPPING_AN_IMAGE();                                         // Accepted
 }

@@ -289,6 +289,7 @@
     <ClInclude Include="LEET_ONES_AND_ZEROES.h" />
     <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
     <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
+    <ClInclude Include="LEET_PALINDROMIC_SUBSTRINGS.h" />
     <ClInclude Include="LEET_PARTITION_EQUAL_SUBSET_SUM.h" />
     <ClInclude Include="LEET_PARTITION_LIST.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
@@ -759,6 +760,7 @@
     <ClCompile Include="LEET_ONES_AND_ZEROES.cpp" />
     <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_PALINDROME_NUMBER.cpp" />
+    <ClCompile Include="LEET_PALINDROMIC_SUBSTRINGS.cpp" />
     <ClCompile Include="LEET_PARTITION_EQUAL_SUBSET_SUM.cpp" />
     <ClCompile Include="LEET_PARTITION_LIST.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />

@@ -468,6 +468,7 @@
 #include "LEET_FLIPPING_AN_IMAGE.h"                                         // 462
 #include "LEET_MAXIMUM_SUM_CIRCULAR_SUBARRAY.h"                             // 463
 #include "LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING.h"               // 464
+#include "LEET_PALINDROMIC_SUBSTRINGS.h"                                    // 465
 
 // End of headers
 
@@ -946,5 +947,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SORT_ARRAY_BY_PARITY_II();                                   // Accepted
     // return LEET_FLIPPING_AN_IMAGE();                                         // Accepted
     // return LEET_MAXIMUM_SUM_CIRCULAR_SUBARRAY();                             // Accepted
-    return LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING();               // Accepted
+    // return LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING();               // Accepted
+    return LEET_PALINDROMIC_SUBSTRINGS();                                    // 
 }

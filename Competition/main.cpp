@@ -470,6 +470,7 @@
 #include "LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING.h"               // 464
 #include "LEET_PALINDROMIC_SUBSTRINGS.h"                                    // 465
 #include "LEET_FLIP_STRING_TO_MONOTONE_INCREASING.h"                        // 466
+#include "LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.h"                     // 467
 
 // End of headers
 
@@ -950,5 +951,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MAXIMUM_SUM_CIRCULAR_SUBARRAY();                             // Accepted
     // return LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING();               // Accepted
     // return LEET_PALINDROMIC_SUBSTRINGS();                                    // Accepted
-    return LEET_FLIP_STRING_TO_MONOTONE_INCREASING();                        // Accepted
+    // return LEET_FLIP_STRING_TO_MONOTONE_INCREASING();                        // Accepted
+    return LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID();                     // Accepted
 }

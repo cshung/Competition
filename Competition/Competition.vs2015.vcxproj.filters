@@ -579,6 +579,9 @@
     <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1989,6 +1992,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp">

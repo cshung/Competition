@@ -420,6 +420,9 @@
     <ClInclude Include="LEET_INVERT_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_IS_GRAPH_BIPARTITE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_IS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1836,6 +1839,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_IS_GRAPH_BIPARTITE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_IS_SUBSEQUENCE.cpp">

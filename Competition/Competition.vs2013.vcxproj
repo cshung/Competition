@@ -212,6 +212,7 @@
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
     <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h" />
     <ClInclude Include="LEET_INVERT_BINARY_TREE.h" />
+    <ClInclude Include="LEET_IS_GRAPH_BIPARTITE.h" />
     <ClInclude Include="LEET_IS_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_ISLAND_PERIMETER.h" />
     <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h" />
@@ -686,6 +687,7 @@
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.cpp" />
     <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
     <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_IS_GRAPH_BIPARTITE.cpp" />
     <ClCompile Include="LEET_IS_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_ISLAND_PERIMETER.cpp" />
     <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp" />

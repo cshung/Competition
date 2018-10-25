@@ -268,6 +268,7 @@
     <ClInclude Include="LEET_MINI_PARSER.h" />
     <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h" />
     <ClInclude Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.h" />
+    <ClInclude Include="LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.h" />
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_MINIMUM_HEIGHT_TREES.h" />
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.h" />
@@ -743,6 +744,7 @@
     <ClCompile Include="LEET_MINI_PARSER.cpp" />
     <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp" />
     <ClCompile Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.cpp" />
+    <ClCompile Include="LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.cpp" />
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.cpp" />

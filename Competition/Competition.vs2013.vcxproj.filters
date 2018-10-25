@@ -588,6 +588,9 @@
     <ClInclude Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2007,6 +2010,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp">

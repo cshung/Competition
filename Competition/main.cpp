@@ -474,6 +474,7 @@
 #include "LEET_MAXIMUM_WIDTH_OF_BINARY_TREE.h"                              // 468
 #include "LEET_IS_GRAPH_BIPARTITE.h"                                        // 469
 #include "LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.h"                            // 470
+#include "LEET_READ_N_CHARACTERS_GIVEN_READ4.h"                             // 471
 
 // End of headers
 
@@ -958,5 +959,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID();                     // Accepted
     // return LEET_MAXIMUM_WIDTH_OF_BINARY_TREE();                              // Accepted
     // return LEET_IS_GRAPH_BIPARTITE();                                        // Accepted
-    return LEET_MINIMUM_COST_TO_HIRE_K_WORKERS();                            // Accepted
+    // return LEET_MINIMUM_COST_TO_HIRE_K_WORKERS();                            // Accepted
+    return LEET_READ_N_CHARACTERS_GIVEN_READ4();                             // Accepted
 }

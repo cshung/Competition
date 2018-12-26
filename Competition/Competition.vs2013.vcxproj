@@ -306,6 +306,7 @@
     <ClInclude Include="LEET_PATH_SUM_II.h" />
     <ClInclude Include="LEET_PATH_SUM_III.h" />
     <ClInclude Include="LEET_PEEKING_ITERATOR.h" />
+    <ClInclude Include="LEET_PERFECT_NUMBER.h" />
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_PERFECT_SQUARES.h" />
     <ClInclude Include="LEET_PERMUTATION_IN_STRING.h" />
@@ -785,6 +786,7 @@
     <ClCompile Include="LEET_PATH_SUM_II.cpp" />
     <ClCompile Include="LEET_PATH_SUM_III.cpp" />
     <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
+    <ClCompile Include="LEET_PERFECT_NUMBER.cpp" />
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
     <ClCompile Include="LEET_PERMUTATION_IN_STRING.cpp" />

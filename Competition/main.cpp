@@ -477,6 +477,7 @@
 #include "LEET_READ_N_CHARACTERS_GIVEN_READ4.h"                             // 471
 #include "LEET_ERECT_THE_FENCE.h"                                           // 472
 #include "LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.h"                         // 473
+#include "LEET_PERFECT_NUMBER.h"                                            // 474
 
 // End of headers
 
@@ -964,5 +965,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MINIMUM_COST_TO_HIRE_K_WORKERS();                            // Accepted
     // return LEET_READ_N_CHARACTERS_GIVEN_READ4();                             // Accepted
     // return LEET_ERECT_THE_FENCE();                                           // Accepted
-    return LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET();                         // Accepted
+    // return LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET();                         // Accepted
+    return LEET_PERFECT_NUMBER();                                            // Accepted
 }

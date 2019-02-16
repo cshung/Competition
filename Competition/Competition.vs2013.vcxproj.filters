@@ -303,6 +303,9 @@
     <ClInclude Include="LEET_ELIMINATION_GAME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_EQUAL_RATIONAL_NUMBERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ERECT_THE_FENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1743,6 +1746,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ELIMINATION_GAME.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_EQUAL_RATIONAL_NUMBERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ERECT_THE_FENCE.cpp">

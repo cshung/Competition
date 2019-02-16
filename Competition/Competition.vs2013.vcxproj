@@ -173,6 +173,7 @@
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
     <ClInclude Include="LEET_EDIT_DISTANCE.h" />
     <ClInclude Include="LEET_ELIMINATION_GAME.h" />
+    <ClInclude Include="LEET_EQUAL_RATIONAL_NUMBERS.h" />
     <ClInclude Include="LEET_ERECT_THE_FENCE.h" />
     <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
     <ClInclude Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.h" />
@@ -655,6 +656,7 @@
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_EDIT_DISTANCE.cpp" />
     <ClCompile Include="LEET_ELIMINATION_GAME.cpp" />
+    <ClCompile Include="LEET_EQUAL_RATIONAL_NUMBERS.cpp" />
     <ClCompile Include="LEET_ERECT_THE_FENCE.cpp" />
     <ClCompile Include="LEET_EVALUATE_DIVISION.cpp" />
     <ClCompile Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.cpp" />

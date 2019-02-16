@@ -480,6 +480,7 @@
 #include "LEET_PERFECT_NUMBER.h"                                            // 474
 #include "LEET_BINARY_TREE_CAMERAS.h"                                       // 475
 #include "LEET_DELETE_COLUMNS_TO_MAKE_SORTED.h"                             // 476
+#include "LEET_EQUAL_RATIONAL_NUMBERS.h"                                    // 477
 
 // End of headers
 
@@ -969,6 +970,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ERECT_THE_FENCE();                                           // Accepted
     // return LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET();                         // Accepted
     // return LEET_PERFECT_NUMBER();                                            // Accepted
-    // sreturn LEET_BINARY_TREE_CAMERAS();                                       // Accepted
-	return LEET_DELETE_COLUMNS_TO_MAKE_SORTED();                             // Accepted
+    // return LEET_BINARY_TREE_CAMERAS();                                       // Accepted
+    // return LEET_DELETE_COLUMNS_TO_MAKE_SORTED();                             // Accepted
+    return LEET_EQUAL_RATIONAL_NUMBERS();                                    // Accepted
 }

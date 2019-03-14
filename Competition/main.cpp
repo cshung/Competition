@@ -481,6 +481,7 @@
 #include "LEET_BINARY_TREE_CAMERAS.h"                                       // 475
 #include "LEET_DELETE_COLUMNS_TO_MAKE_SORTED.h"                             // 476
 #include "LEET_EQUAL_RATIONAL_NUMBERS.h"                                    // 477
+#include "LEET_UNIQUE_LETTER_STRING.h"                                      // 478
 
 // End of headers
 
@@ -972,5 +973,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_PERFECT_NUMBER();                                            // Accepted
     // return LEET_BINARY_TREE_CAMERAS();                                       // Accepted
     // return LEET_DELETE_COLUMNS_TO_MAKE_SORTED();                             // Accepted
-    return LEET_EQUAL_RATIONAL_NUMBERS();                                    // Accepted
+    // return LEET_EQUAL_RATIONAL_NUMBERS();                                    // Accepted
+    return LEET_UNIQUE_LETTER_STRING();                                      // Accepted
 }

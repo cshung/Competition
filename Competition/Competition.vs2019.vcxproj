@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CCAF9025-27BB-4369-8B85-9C509EE8B618}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Competitionvs2015</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.h" />
+    <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.h" />
+    <ClInclude Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.h" />
+    <ClInclude Include="HACKER_RANK_CAMEL_CASE.h" />
+    <ClInclude Include="HACKER_RANK_CAVITY_MAP.h" />
+    <ClInclude Include="HACKER_RANK_FLIPPING_THE_MATRIX.h" />
+    <ClInclude Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="HACKER_RANK_NEW_YEAR_CHAOS.h" />
+    <ClInclude Include="HACKER_RANK_S10_BASIC_STATISTICS.h" />
+    <ClInclude Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.h" />
+    <ClInclude Include="HACKER_RANK_S10_QUARTILES.h" />
+    <ClInclude Include="HACKER_RANK_S10_STANDARD_DEVIATION.h" />
+    <ClInclude Include="HACKER_RANK_S10_WEIGHTED_MEAN.h" />
+    <ClInclude Include="HACKER_RANK_SHERLOCK_AND_DIVISORS.h" />
+    <ClInclude Include="HACKER_RANK_SUPER_REDUCED_STRING.h" />
+    <ClInclude Include="HACKER_RANK_SWAP_NODES_ALGO.h" />
+    <ClInclude Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.h" />
+    <ClInclude Include="HACKER_RANK_TREE_HUFFMAN_DECODING.h" />
+    <ClInclude Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.h" />
+    <ClInclude Include="HACKER_RANK_TREE_LEVEL_ORDER_TRAVERSAL.h" />
+    <ClInclude Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.h" />
+    <ClInclude Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.h" />
+    <ClInclude Include="HACKER_RANK_TREE_TOP_VIEW.h" />
+    <ClInclude Include="LEET_132_PATTERN.h" />
+    <ClInclude Include="LEET_3SUM.h" />
+    <ClInclude Include="LEET_3SUM_CLOSEST.h" />
+    <ClInclude Include="LEET_ADD_AND_SEARCH_WORD.h" />
+    <ClInclude Include="LEET_ADD_BINARY.h" />
+    <ClInclude Include="LEET_ADD_DIGITS.h" />
+    <ClInclude Include="LEET_ADD_STRINGS.h" />
+    <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
+    <ClInclude Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.h" />
+    <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
+    <ClInclude Include="LEET_ARRANGING_COINS.h" />
+    <ClInclude Include="LEET_ARRAY_PARTITION_I.h" />
+    <ClInclude Include="LEET_ASSIGN_COOKIES.h" />
+    <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
+    <ClInclude Include="LEET_BASE_7.h" />
+    <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
+    <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
+    <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h" />
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h" />
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h" />
+    <ClInclude Include="LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.h" />
+    <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h" />
+    <ClInclude Include="LEET_BINARY_TREE_CAMERAS.h" />
+    <ClInclude Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.h" />
+    <ClInclude Include="LEET_BINARY_TREE_PATHS.h" />
+    <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
+    <ClInclude Include="LEET_BINARY_TREE_TILT.h" />
+    <ClInclude Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_WATCH.h" />
+    <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
+    <ClInclude Include="LEET_BOMB_ENEMY.h" />
+    <ClInclude Include="LEET_BRICKS_FALLING_WHEN_HIT.h" />
+    <ClInclude Include="LEET_BULB_SWITCHER.h" />
+    <ClInclude Include="LEET_BULLS_AND_COWS.h" />
+    <ClInclude Include="LEET_BURST_BALLOONS.h" />
+    <ClInclude Include="LEET_CAN_PLACE_FLOWERS.h" />
+    <ClInclude Include="LEET_CARD_FLIPPING_GAME.h" />
+    <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
+    <ClInclude Include="LEET_CLONE_GRAPH.h" />
+    <ClInclude Include="LEET_COIN_CHANGE.h" />
+    <ClInclude Include="LEET_COMBINATIONS.h" />
+    <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
+    <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_CONTAINER_WITH_MOST_WATER.h" />
+    <ClInclude Include="LEET_CONTAINS_DUPLICATE.h" />
+    <ClInclude Include="LEET_CONTAINS_DUPLICATE_II.h" />
+    <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h" />
+    <ClInclude Include="LEET_CONVERT_BST_TO_GREATER_TREE.h" />
+    <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_COUNT_AND_SAY.h" />
+    <ClInclude Include="LEET_COUNT_COMPLETE_TREE_NODES.h" />
+    <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
+    <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h" />
+    <ClInclude Include="LEET_COUNT_PRIMES.h" />
+    <ClInclude Include="LEET_COUNTING_BITS.h" />
+    <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
+    <ClInclude Include="LEET_DECODE_STRING.h" />
+    <ClInclude Include="LEET_DECODE_WAYS.h" />
+    <ClInclude Include="LEET_DELETE_COLUMNS_TO_MAKE_SORTED.h" />
+    <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h" />
+    <ClInclude Include="LEET_DESIGN_TWITTER.h" />
+    <ClInclude Include="LEET_DIAMETER_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
+    <ClInclude Include="LEET_EDIT_DISTANCE.h" />
+    <ClInclude Include="LEET_ELIMINATION_GAME.h" />
+    <ClInclude Include="LEET_EQUAL_RATIONAL_NUMBERS.h" />
+    <ClInclude Include="LEET_ERECT_THE_FENCE.h" />
+    <ClInclude Include="LEET_EVALUATE_DIVISION.h" />
+    <ClInclude Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.h" />
+    <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.h" />
+    <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
+    <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
+    <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h" />
+    <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h" />
+    <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
+    <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
+    <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
+    <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
+    <ClInclude Include="LEET_FIRST_BAD_VERSION.h" />
+    <ClInclude Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h" />
+    <ClInclude Include="LEET_FIZZ_BUZZ.h" />
+    <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h" />
+    <ClInclude Include="LEET_FLIP_STRING_TO_MONOTONE_INCREASING.h" />
+    <ClInclude Include="LEET_FLIPPING_AN_IMAGE.h" />
+    <ClInclude Include="LEET_FRACTION_TO_RECURRING_DECIMAL.h" />
+    <ClInclude Include="LEET_GAME_OF_LIFE.h" />
+    <ClInclude Include="LEET_GAS_STATION.h" />
+    <ClInclude Include="LEET_GENERATE_PARENTHESES.h" />
+    <ClInclude Include="LEET_GRAY_CODE.h" />
+    <ClInclude Include="LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.h" />
+    <ClInclude Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.h" />
+    <ClInclude Include="LEET_H_INDEX.h" />
+    <ClInclude Include="LEET_HAMMING_DISTANCE.h" />
+    <ClInclude Include="LEET_HAPPY_NUMBER.h" />
+    <ClInclude Include="LEET_HOUSE_ROBBER.h" />
+    <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
+    <ClInclude Include="LEET_IMPLEMENT_STACK_USING_QUEUES.h" />
+    <ClInclude Include="LEET_IMPLEMENT_STRSTR.h" />
+    <ClInclude Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.h" />
+    <ClInclude Include="LEET_INTEGER_REPLACEMENT.h" />
+    <ClInclude Include="LEET_INTEGER_TO_ROMAN.h" />
+    <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS.h" />
+    <ClInclude Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.h" />
+    <ClInclude Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.h" />
+    <ClInclude Include="LEET_INVERT_BINARY_TREE.h" />
+    <ClInclude Include="LEET_IS_GRAPH_BIPARTITE.h" />
+    <ClInclude Include="LEET_IS_SUBSEQUENCE.h" />
+    <ClInclude Include="LEET_ISLAND_PERIMETER.h" />
+    <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h" />
+    <ClInclude Include="LEET_JEWELS_AND_STONES.h" />
+    <ClInclude Include="LEET_JUMP_GAME.h" />
+    <ClInclude Include="LEET_JUMP_GAME_II.h" />
+    <ClInclude Include="LEET_KEYS_AND_ROOMS.h" />
+    <ClInclude Include="LEET_KILL_PROCESS.h" />
+    <ClInclude Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.h" />
+    <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
+    <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
+    <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
+    <ClInclude Include="LEET_LARGEST_NUMBER.h" />
+    <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
+    <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h" />
+    <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
+    <ClInclude Include="LEET_LINKED_LIST_CYCLE.h" />
+    <ClInclude Include="LEET_LINKED_LIST_CYCLE_II.h" />
+    <ClInclude Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.h" />
+    <ClInclude Include="LEET_LONGEST_COMMON_PREFIX.h" />
+    <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h" />
+    <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h" />
+    <ClInclude Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.h" />
+    <ClInclude Include="LEET_LONGEST_PALINDROME.h" />
+    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.h" />
+    <ClInclude Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.h" />
+    <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h" />
+    <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h" />
+    <ClInclude Include="LEET_LONGEST_VALID_PARENTHESES.h" />
+    <ClInclude Include="LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING.h" />
+    <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.h" />
+    <ClInclude Include="LEET_LRU_CACHE.h" />
+    <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
+    <ClInclude Include="LEET_MAX_AREA_OF_ISLAND.h" />
+    <ClInclude Include="LEET_MAX_INCREASE_TO_KEEP_CITY_SKYLINE.h" />
+    <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
+    <ClInclude Include="LEET_MAXIMUM_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MAXIMUM_FREQUENCY_STACK.h" />
+    <ClInclude Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h" />
+    <ClInclude Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.h" />
+    <ClInclude Include="LEET_MAXIMUM_SUBARRAY.h" />
+    <ClInclude Include="LEET_MAXIMUM_SUM_CIRCULAR_SUBARRAY.h" />
+    <ClInclude Include="LEET_MAXIMUM_WIDTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.h" />
+    <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h" />
+    <ClInclude Include="LEET_MERGE_K_SORTED_LISTS.h" />
+    <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_MERGE_TWO_BINARY_TREES.h" />
+    <ClInclude Include="LEET_MERGE_TWO_SORTED_LISTS.h" />
+    <ClInclude Include="LEET_MIN_STACK.h" />
+    <ClInclude Include="LEET_MINI_PARSER.h" />
+    <ClInclude Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.h" />
+    <ClInclude Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.h" />
+    <ClInclude Include="LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.h" />
+    <ClInclude Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_MINIMUM_HEIGHT_TREES.h" />
+    <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.h" />
+    <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.h" />
+    <ClInclude Include="LEET_MINIMUM_PATH_SUM.h" />
+    <ClInclude Include="LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.h" />
+    <ClInclude Include="LEET_MISSING_NUMBER.h" />
+    <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h" />
+    <ClInclude Include="LEET_MOVE_ZEROES.h" />
+    <ClInclude Include="LEET_MULTIPLY_STRINGS.h" />
+    <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
+    <ClInclude Include="LEET_MY_CALENDAR_III.h" />
+    <ClInclude Include="LEET_NETWORK_DELAY_TIME.h" />
+    <ClInclude Include="LEET_NEXT_PERMUTATION.h" />
+    <ClInclude Include="LEET_NIM_GAME.h" />
+    <ClInclude Include="LEET_NTH_DIGIT.h" />
+    <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
+    <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
+    <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h" />
+    <ClInclude Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM.h" />
+    <ClInclude Include="LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.h" />
+    <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h" />
+    <ClInclude Include="LEET_ONES_AND_ZEROES.h" />
+    <ClInclude Include="LEET_PALINDROME_LINKED_LIST.h" />
+    <ClInclude Include="LEET_PALINDROME_NUMBER.h" />
+    <ClInclude Include="LEET_PALINDROMIC_SUBSTRINGS.h" />
+    <ClInclude Include="LEET_PARTITION_EQUAL_SUBSET_SUM.h" />
+    <ClInclude Include="LEET_PARTITION_LIST.h" />
+    <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
+    <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h" />
+    <ClInclude Include="LEET_PATCHING_ARRAY.h" />
+    <ClInclude Include="LEET_PATH_SUM.h" />
+    <ClInclude Include="LEET_PATH_SUM_II.h" />
+    <ClInclude Include="LEET_PATH_SUM_III.h" />
+    <ClInclude Include="LEET_PEEKING_ITERATOR.h" />
+    <ClInclude Include="LEET_PERFECT_NUMBER.h" />
+    <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
+    <ClInclude Include="LEET_PERFECT_SQUARES.h" />
+    <ClInclude Include="LEET_PERMUTATION_IN_STRING.h" />
+    <ClInclude Include="LEET_PERMUTATIONS.h" />
+    <ClInclude Include="LEET_PLUS_ONE.h" />
+    <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
+    <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.h" />
+    <ClInclude Include="LEET_POW_X_N.h" />
+    <ClInclude Include="LEET_POWER_OF_FOUR.h" />
+    <ClInclude Include="LEET_POWER_OF_THREE.h" />
+    <ClInclude Include="LEET_POWER_OF_TWO.h" />
+    <ClInclude Include="LEET_PREDICT_THE_WINNER.h" />
+    <ClInclude Include="LEET_PRINT_BINARY_TREE.h" />
+    <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
+    <ClInclude Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h" />
+    <ClInclude Include="LEET_RANDOM_PICK_INDEX.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
+    <ClInclude Include="LEET_RANSOM_NOTE.h" />
+    <ClInclude Include="LEET_REACH_A_NUMBER.h" />
+    <ClInclude Include="LEET_READ_N_CHARACTERS_GIVEN_READ4.h" />
+    <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h" />
+    <ClInclude Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.h" />
+    <ClInclude Include="LEET_RECOVER_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_RECTANGLE_AREA.h" />
+    <ClInclude Include="LEET_RECTANGLE_AREA_II.h" />
+    <ClInclude Include="LEET_REDUNDANT_CONNECTION.h" />
+    <ClInclude Include="LEET_REGULAR_EXPRESSION_MATCHING.h" />
+    <ClInclude Include="LEET_REMOVE_9.h" />
+    <ClInclude Include="LEET_REMOVE_BOXES.h" />
+    <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.h" />
+    <ClInclude Include="LEET_REMOVE_ELEMENT.h" />
+    <ClInclude Include="LEET_REMOVE_K_DIGITS.h" />
+    <ClInclude Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.h" />
+    <ClInclude Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h" />
+    <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h" />
+    <ClInclude Include="LEET_RESTORE_IP_ADDRESSES.h" />
+    <ClInclude Include="LEET_REVERSE_BITS.h" />
+    <ClInclude Include="LEET_REVERSE_INTEGER.h" />
+    <ClInclude Include="LEET_REVERSE_LINKED_LIST.h" />
+    <ClInclude Include="LEET_REVERSE_NODES_IN_K_GROUP.h" />
+    <ClInclude Include="LEET_REVERSE_STRING.h" />
+    <ClInclude Include="LEET_REVERSE_VOWELS_OF_A_STRING.h" />
+    <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
+    <ClInclude Include="LEET_ROTATE_ARRAY.h" />
+    <ClInclude Include="LEET_ROTATE_FUNCTION.h" />
+    <ClInclude Include="LEET_ROTATE_IMAGE.h" />
+    <ClInclude Include="LEET_ROTATE_LIST.h" />
+    <ClInclude Include="LEET_RUSSIAN_DOLL_ENVELOPES.h" />
+    <ClInclude Include="LEET_SAME_TREE.h" />
+    <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
+    <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
+    <ClInclude Include="LEET_SEARCH_FOR_A_RANGE.h" />
+    <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
+    <ClInclude Include="LEET_SENTENCE_SIMILARITY.h" />
+    <ClInclude Include="LEET_SENTENCE_SIMILARITY_II.h" />
+    <ClInclude Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.h" />
+    <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
+    <ClInclude Include="LEET_SET_MISMATCH.h" />
+    <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h" />
+    <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h" />
+    <ClInclude Include="LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_SINGLE_NUMBER.h" />
+    <ClInclude Include="LEET_SINGLE_NUMBER_II.h" />
+    <ClInclude Include="LEET_SINGLE_NUMBER_III.h" />
+    <ClInclude Include="LEET_SLIDING_WINDOW_MAXIMUM.h" />
+    <ClInclude Include="LEET_SORT_ARRAY_BY_PARITY.h" />
+    <ClInclude Include="LEET_SORT_ARRAY_BY_PARITY_II.h" />
+    <ClInclude Include="LEET_SORT_COLORS.h" />
+    <ClInclude Include="LEET_SPECIAL_BINARY_STRING.h" />
+    <ClInclude Include="LEET_SPIRAL_MATRIX.h" />
+    <ClInclude Include="LEET_SPIRAL_MATRIX_II.h" />
+    <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
+    <ClInclude Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.h" />
+    <ClInclude Include="LEET_SQRTX.h" />
+    <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
+    <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h" />
+    <ClInclude Include="LEET_SUBARRAY_SUM_EQUALS_K.h" />
+    <ClInclude Include="LEET_SUBSETS.h" />
+    <ClInclude Include="LEET_SUBSETS_II.h" />
+    <ClInclude Include="LEET_SUBTREE_OF_ANOTHER_TREE.h" />
+    <ClInclude Include="LEET_SUDOKU_SOLVER.h" />
+    <ClInclude Include="LEET_SUM_OF_LEFT_LEAVES.h" />
+    <ClInclude Include="LEET_SUM_OF_SUBSEQUENCE_WIDTHS.h" />
+    <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h" />
+    <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
+    <ClInclude Include="LEET_SUMMARY_RANGES.h" />
+    <ClInclude Include="LEET_SURFACE_AREA_OF_3D_SHAPES.h" />
+    <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
+    <ClInclude Include="LEET_SWAP_NODES_IN_PAIRS.h" />
+    <ClInclude Include="LEET_SYMMETRIC_TREE.h" />
+    <ClInclude Include="LEET_TEEMO_ATTACKING.h" />
+    <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
+    <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
+    <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
+    <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h" />
+    <ClInclude Include="LEET_TRIANGLE.h" />
+    <ClInclude Include="LEET_TWO_SUM.h" />
+    <ClInclude Include="LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED.h" />
+    <ClInclude Include="LEET_UGLY_NUMBER.h" />
+    <ClInclude Include="LEET_UGLY_NUMBER_II.h" />
+    <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES.h" />
+    <ClInclude Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.h" />
+    <ClInclude Include="LEET_UNIQUE_LETTER_STRING.h" />
+    <ClInclude Include="LEET_UNIQUE_PATHS.h" />
+    <ClInclude Include="LEET_UNIQUE_PATHS_II.h" />
+    <ClInclude Include="LEET_VALID_ANAGRAM.h" />
+    <ClInclude Include="LEET_VALID_PALINDROME.h" />
+    <ClInclude Include="LEET_VALID_PARENTHESES.h" />
+    <ClInclude Include="LEET_VALID_PARENTHESIS_STRING.h" />
+    <ClInclude Include="LEET_VALID_PERFECT_SQUARE.h" />
+    <ClInclude Include="LEET_VALID_SUDOKU.h" />
+    <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h" />
+    <ClInclude Include="LEET_WATER_AND_JUG_PROBLEM.h" />
+    <ClInclude Include="LEET_WIGGLE_SUBSEQUENCE.h" />
+    <ClInclude Include="LEET_WORD_LADDER.h" />
+    <ClInclude Include="LEET_WORD_PATTERN.h" />
+    <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
+    <ClInclude Include="POJ1029.h" />
+    <ClInclude Include="SPOJ_CANDY.h" />
+    <ClInclude Include="SPOJ_FISHER.h" />
+    <ClInclude Include="SPOJ_HORRIBLE.h" />
+    <ClInclude Include="SPOJ_LITE_1.h" />
+    <ClInclude Include="SPOJ_LITE_2.h" />
+    <ClInclude Include="SPOJ_PALIN.h" />
+    <ClInclude Include="SPOJ_SAMER08F.h" />
+    <ClInclude Include="SPOJ_TEST.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UVa100.h" />
+    <ClInclude Include="UVa10003.h" />
+    <ClInclude Include="UVa10004.h" />
+    <ClInclude Include="UVa10020.h" />
+    <ClInclude Include="UVa10034.h" />
+    <ClInclude Include="UVa10077.h" />
+    <ClInclude Include="UVa10082.h" />
+    <ClInclude Include="UVa10141.h" />
+    <ClInclude Include="UVa10147.h" />
+    <ClInclude Include="UVa10158.h" />
+    <ClInclude Include="UVa10226.h" />
+    <ClInclude Include="UVa10243.h" />
+    <ClInclude Include="UVa10278.h" />
+    <ClInclude Include="UVa10281.h" />
+    <ClInclude Include="UVa103.h" />
+    <ClInclude Include="UVa10307.h" />
+    <ClInclude Include="UVa10340.h" />
+    <ClInclude Include="UVa10341.h" />
+    <ClInclude Include="UVa10360.h" />
+    <ClInclude Include="UVa10363.h" />
+    <ClInclude Include="UVa10364.h" />
+    <ClInclude Include="UVa10369.h" />
+    <ClInclude Include="UVa10397.h" />
+    <ClInclude Include="UVa10420.h" />
+    <ClInclude Include="UVa10440.h" />
+    <ClInclude Include="UVa10480.h" />
+    <ClInclude Include="UVa10505.h" />
+    <ClInclude Include="UVa10511.h" />
+    <ClInclude Include="UVa10557.h" />
+    <ClInclude Include="UVa10594.h" />
+    <ClInclude Include="UVa10600.h" />
+    <ClInclude Include="UVa10603.h" />
+    <ClInclude Include="UVa10651.h" />
+    <ClInclude Include="UVa10670.h" />
+    <ClInclude Include="UVa10731.h" />
+    <ClInclude Include="UVa10763.h" />
+    <ClInclude Include="UVa10779.h" />
+    <ClInclude Include="UVa108.h" />
+    <ClInclude Include="UVa10842.h" />
+    <ClInclude Include="UVa10891.h" />
+    <ClInclude Include="UVa10911.h" />
+    <ClInclude Include="UVa10928.h" />
+    <ClInclude Include="UVa11054.h" />
+    <ClInclude Include="UVa111.h" />
+    <ClInclude Include="UVa11228.h" />
+    <ClInclude Include="UVa11235.h" />
+    <ClInclude Include="UVa11242.h" />
+    <ClInclude Include="UVa11292.h" />
+    <ClInclude Include="UVa11297.h" />
+    <ClInclude Include="UVa11369.h" />
+    <ClInclude Include="UVa11450.h" />
+    <ClInclude Include="UVa11462.h" />
+    <ClInclude Include="UVa11503.h" />
+    <ClInclude Include="UVa11504.h" />
+    <ClInclude Include="UVa11506.h" />
+    <ClInclude Include="UVa116.h" />
+    <ClInclude Include="UVa11631.h" />
+    <ClInclude Include="UVa124.h" />
+    <ClInclude Include="UVa127.h" />
+    <ClInclude Include="UVa146.h" />
+    <ClInclude Include="UVa147.h" />
+    <ClInclude Include="UVa166.h" />
+    <ClInclude Include="UVa186.h" />
+    <ClInclude Include="UVa193.h" />
+    <ClInclude Include="UVa200.h" />
+    <ClInclude Include="UVa231.h" />
+    <ClInclude Include="UVa260.h" />
+    <ClInclude Include="UVa272.h" />
+    <ClInclude Include="UVa291.h" />
+    <ClInclude Include="UVa299.h" />
+    <ClInclude Include="UVa315.h" />
+    <ClInclude Include="UVa334.h" />
+    <ClInclude Include="UVa336.h" />
+    <ClInclude Include="UVa341.h" />
+    <ClInclude Include="UVa352.h" />
+    <ClInclude Include="UVa357.h" />
+    <ClInclude Include="UVa383.h" />
+    <ClInclude Include="UVa394.h" />
+    <ClInclude Include="UVa410.h" />
+    <ClInclude Include="UVa417.h" />
+    <ClInclude Include="UVa423.h" />
+    <ClInclude Include="UVa459.h" />
+    <ClInclude Include="UVa469.h" />
+    <ClInclude Include="UVa473.h" />
+    <ClInclude Include="UVa481.h" />
+    <ClInclude Include="UVa482.h" />
+    <ClInclude Include="UVa483.h" />
+    <ClInclude Include="UVa524.h" />
+    <ClInclude Include="UVa534.h" />
+    <ClInclude Include="UVa558.h" />
+    <ClInclude Include="UVa562.h" />
+    <ClInclude Include="UVa563.h" />
+    <ClInclude Include="UVa573.h" />
+    <ClInclude Include="UVa590.h" />
+    <ClInclude Include="UVa607.h" />
+    <ClInclude Include="UVa610.h" />
+    <ClInclude Include="UVa628.h" />
+    <ClInclude Include="UVa639.h" />
+    <ClInclude Include="UVa661.h" />
+    <ClInclude Include="UVa674.h" />
+    <ClInclude Include="UVa679.h" />
+    <ClInclude Include="UVa714.h" />
+    <ClInclude Include="UVa725.h" />
+    <ClInclude Include="UVa739.h" />
+    <ClInclude Include="UVa750.h" />
+    <ClInclude Include="UVa820.h" />
+    <ClInclude Include="UVa821.h" />
+    <ClInclude Include="UVa836.h" />
+    <ClInclude Include="UVa837.h" />
+    <ClInclude Include="UVa908.h" />
+    <ClInclude Include="UVa910.h" />
+    <ClInclude Include="UVa912.h" />
+    <ClInclude Include="UVa925.h" />
+    <ClInclude Include="UVa929.h" />
+    <ClInclude Include="UVa941.h" />
+    <ClInclude Include="UVa957.h" />
+    <ClInclude Include="UVa990.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HACKER_RANK_ALMOST_SORTED_INTERVAL.cpp" />
+    <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_INSERTION.cpp" />
+    <ClCompile Include="HACKER_RANK_BINARY_SEARCH_TREE_LOWEST_COMMON_ANCESTOR.cpp" />
+    <ClCompile Include="HACKER_RANK_CAMEL_CASE.cpp" />
+    <ClCompile Include="HACKER_RANK_CAVITY_MAP.cpp" />
+    <ClCompile Include="HACKER_RANK_FLIPPING_THE_MATRIX.cpp" />
+    <ClCompile Include="HACKER_RANK_IS_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="HACKER_RANK_NEW_YEAR_CHAOS.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_BASIC_STATISTICS.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_INTERQUARTILE_RANGE.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_QUARTILES.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_STANDARD_DEVIATION.cpp" />
+    <ClCompile Include="HACKER_RANK_S10_WEIGHTED_MEAN.cpp" />
+    <ClCompile Include="HACKER_RANK_SHERLOCK_AND_DIVISORS.cpp" />
+    <ClCompile Include="HACKER_RANK_SUPER_REDUCED_STRING.cpp" />
+    <ClCompile Include="HACKER_RANK_SWAP_NODES_ALGO.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_HEIGHT_OF_A_BINARY_TREE.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_HUFFMAN_DECODING.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_INORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_LEVEL_ORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_POSTORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_PREORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="HACKER_RANK_TREE_TOP_VIEW.cpp" />
+    <ClCompile Include="LEET_132_PATTERN.cpp" />
+    <ClCompile Include="LEET_3SUM.cpp" />
+    <ClCompile Include="LEET_3SUM_CLOSEST.cpp" />
+    <ClCompile Include="LEET_ADD_AND_SEARCH_WORD.cpp" />
+    <ClCompile Include="LEET_ADD_BINARY.cpp" />
+    <ClCompile Include="LEET_ADD_DIGITS.cpp" />
+    <ClCompile Include="LEET_ADD_STRINGS.cpp" />
+    <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
+    <ClCompile Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.cpp" />
+    <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
+    <ClCompile Include="LEET_ARRANGING_COINS.cpp" />
+    <ClCompile Include="LEET_ARRAY_PARTITION_I.cpp" />
+    <ClCompile Include="LEET_ASSIGN_COOKIES.cpp" />
+    <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_BASE_7.cpp" />
+    <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
+    <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
+    <ClCompile Include="LEET_BATTLESHIPS_IN_A_BOARD.cpp" />
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />
+    <ClCompile Include="LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.cpp" />
+    <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_CAMERAS.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_INORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_PATHS.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_TILT.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_WATCH.cpp" />
+    <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />
+    <ClCompile Include="LEET_BOMB_ENEMY.cpp" />
+    <ClCompile Include="LEET_BRICKS_FALLING_WHEN_HIT.cpp" />
+    <ClCompile Include="LEET_BULB_SWITCHER.cpp" />
+    <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
+    <ClCompile Include="LEET_BURST_BALLOONS.cpp" />
+    <ClCompile Include="LEET_CAN_PLACE_FLOWERS.cpp" />
+    <ClCompile Include="LEET_CARD_FLIPPING_GAME.cpp" />
+    <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
+    <ClCompile Include="LEET_CLONE_GRAPH.cpp" />
+    <ClCompile Include="LEET_COIN_CHANGE.cpp" />
+    <ClCompile Include="LEET_COMBINATIONS.cpp" />
+    <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
+    <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_CONTAINER_WITH_MOST_WATER.cpp" />
+    <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp" />
+    <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
+    <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp" />
+    <ClCompile Include="LEET_CONVERT_BST_TO_GREATER_TREE.cpp" />
+    <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_COUNT_AND_SAY.cpp" />
+    <ClCompile Include="LEET_COUNT_COMPLETE_TREE_NODES.cpp" />
+    <ClCompile Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.cpp" />
+    <ClCompile Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.cpp" />
+    <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
+    <ClCompile Include="LEET_COUNTING_BITS.cpp" />
+    <ClCompile Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.cpp" />
+    <ClCompile Include="LEET_DECODE_STRING.cpp" />
+    <ClCompile Include="LEET_DECODE_WAYS.cpp" />
+    <ClCompile Include="LEET_DELETE_COLUMNS_TO_MAKE_SORTED.cpp" />
+    <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />
+    <ClCompile Include="LEET_DIAMETER_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
+    <ClCompile Include="LEET_EDIT_DISTANCE.cpp" />
+    <ClCompile Include="LEET_ELIMINATION_GAME.cpp" />
+    <ClCompile Include="LEET_EQUAL_RATIONAL_NUMBERS.cpp" />
+    <ClCompile Include="LEET_ERECT_THE_FENCE.cpp" />
+    <ClCompile Include="LEET_EVALUATE_DIVISION.cpp" />
+    <ClCompile Include="LEET_EVALUATE_REVERSE_POLISH_NOTATION.cpp" />
+    <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_NUMBER.cpp" />
+    <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
+    <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
+    <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp" />
+    <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp" />
+    <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
+    <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
+    <ClCompile Include="LEET_FIND_THE_DIFFERENCE.cpp" />
+    <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
+    <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
+    <ClCompile Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_FIZZ_BUZZ.cpp" />
+    <ClCompile Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_FLIP_STRING_TO_MONOTONE_INCREASING.cpp" />
+    <ClCompile Include="LEET_FLIPPING_AN_IMAGE.cpp" />
+    <ClCompile Include="LEET_FRACTION_TO_RECURRING_DECIMAL.cpp" />
+    <ClCompile Include="LEET_GAME_OF_LIFE.cpp" />
+    <ClCompile Include="LEET_GAS_STATION.cpp" />
+    <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_GRAY_CODE.cpp" />
+    <ClCompile Include="LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.cpp" />
+    <ClCompile Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.cpp" />
+    <ClCompile Include="LEET_H_INDEX.cpp" />
+    <ClCompile Include="LEET_HAMMING_DISTANCE.cpp" />
+    <ClCompile Include="LEET_HAPPY_NUMBER.cpp" />
+    <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
+    <ClCompile Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.cpp" />
+    <ClCompile Include="LEET_IMPLEMENT_STACK_USING_QUEUES.cpp" />
+    <ClCompile Include="LEET_IMPLEMENT_STRSTR.cpp" />
+    <ClCompile Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.cpp" />
+    <ClCompile Include="LEET_INTEGER_REPLACEMENT.cpp" />
+    <ClCompile Include="LEET_INTEGER_TO_ROMAN.cpp" />
+    <ClCompile Include="LEET_INTERSECTION_OF_TWO_ARRAYS.cpp" />
+    <ClCompile Include="LEET_INTERSECTION_OF_TWO_ARRAYS_II.cpp" />
+    <ClCompile Include="LEET_INTERSECTION_OF_TWO_LINKED_LISTS.cpp" />
+    <ClCompile Include="LEET_INVERT_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_IS_GRAPH_BIPARTITE.cpp" />
+    <ClCompile Include="LEET_IS_SUBSEQUENCE.cpp" />
+    <ClCompile Include="LEET_ISLAND_PERIMETER.cpp" />
+    <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp" />
+    <ClCompile Include="LEET_JEWELS_AND_STONES.cpp" />
+    <ClCompile Include="LEET_JUMP_GAME.cpp" />
+    <ClCompile Include="LEET_JUMP_GAME_II.cpp" />
+    <ClCompile Include="LEET_KEYS_AND_ROOMS.cpp" />
+    <ClCompile Include="LEET_KILL_PROCESS.cpp" />
+    <ClCompile Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.cpp" />
+    <ClCompile Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.cpp" />
+    <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />
+    <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
+    <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
+    <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
+    <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp" />
+    <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp" />
+    <ClCompile Include="LEET_LINKED_LIST_CYCLE.cpp" />
+    <ClCompile Include="LEET_LINKED_LIST_CYCLE_II.cpp" />
+    <ClCompile Include="LEET_LONGEST_ABSOLUTE_FILE_PATH.cpp" />
+    <ClCompile Include="LEET_LONGEST_COMMON_PREFIX.cpp" />
+    <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.cpp" />
+    <ClCompile Include="LEET_LONGEST_PALINDROME.cpp" />
+    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSEQUENCE.cpp" />
+    <ClCompile Include="LEET_LONGEST_PALINDROMIC_SUBSTRING.cpp" />
+    <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp" />
+    <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp" />
+    <ClCompile Include="LEET_LONGEST_VALID_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_LONGEST_WORD_IN_DICTIONARY_THROUGH_DELETING.cpp" />
+    <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_LRU_CACHE.cpp" />
+    <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
+    <ClCompile Include="LEET_MAX_AREA_OF_ISLAND.cpp" />
+    <ClCompile Include="LEET_MAX_INCREASE_TO_KEEP_CITY_SKYLINE.cpp" />
+    <ClCompile Include="LEET_MAX_POINTS_ON_A_LINE.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_FREQUENCY_STACK.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_PRODUCT_SUBARRAY.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_SUBARRAY.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_SUM_CIRCULAR_SUBARRAY.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_WIDTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.cpp" />
+    <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />
+    <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
+    <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_MERGE_TWO_BINARY_TREES.cpp" />
+    <ClCompile Include="LEET_MERGE_TWO_SORTED_LISTS.cpp" />
+    <ClCompile Include="LEET_MIN_STACK.cpp" />
+    <ClCompile Include="LEET_MINI_PARSER.cpp" />
+    <ClCompile Include="LEET_MINIMUM_ABSOLUTE_DIFFERENCE_IN_BST.cpp" />
+    <ClCompile Include="LEET_MINIMUM_ADD_TO_MAKE_PARENTHESES_VALID.cpp" />
+    <ClCompile Include="LEET_MINIMUM_COST_TO_HIRE_K_WORKERS.cpp" />
+    <ClCompile Include="LEET_MINIMUM_DEPTH_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
+    <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.cpp" />
+    <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.cpp" />
+    <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.cpp" />
+    <ClCompile Include="LEET_MISSING_NUMBER.cpp" />
+    <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp" />
+    <ClCompile Include="LEET_MOVE_ZEROES.cpp" />
+    <ClCompile Include="LEET_MULTIPLY_STRINGS.cpp" />
+    <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />
+    <ClCompile Include="LEET_MY_CALENDAR_III.cpp" />
+    <ClCompile Include="LEET_NETWORK_DELAY_TIME.cpp" />
+    <ClCompile Include="LEET_NEXT_PERMUTATION.cpp" />
+    <ClCompile Include="LEET_NIM_GAME.cpp" />
+    <ClCompile Include="LEET_NTH_DIGIT.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM.cpp" />
+    <ClCompile Include="LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.cpp" />
+    <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_ONES_AND_ZEROES.cpp" />
+    <ClCompile Include="LEET_PALINDROME_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_PALINDROME_NUMBER.cpp" />
+    <ClCompile Include="LEET_PALINDROMIC_SUBSTRINGS.cpp" />
+    <ClCompile Include="LEET_PARTITION_EQUAL_SUBSET_SUM.cpp" />
+    <ClCompile Include="LEET_PARTITION_LIST.cpp" />
+    <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
+    <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />
+    <ClCompile Include="LEET_PATCHING_ARRAY.cpp" />
+    <ClCompile Include="LEET_PATH_SUM.cpp" />
+    <ClCompile Include="LEET_PATH_SUM_II.cpp" />
+    <ClCompile Include="LEET_PATH_SUM_III.cpp" />
+    <ClCompile Include="LEET_PEEKING_ITERATOR.cpp" />
+    <ClCompile Include="LEET_PERFECT_NUMBER.cpp" />
+    <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
+    <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
+    <ClCompile Include="LEET_PERMUTATION_IN_STRING.cpp" />
+    <ClCompile Include="LEET_PERMUTATIONS.cpp" />
+    <ClCompile Include="LEET_PLUS_ONE.cpp" />
+    <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />
+    <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II.cpp" />
+    <ClCompile Include="LEET_POW_X_N.cpp" />
+    <ClCompile Include="LEET_POWER_OF_FOUR.cpp" />
+    <ClCompile Include="LEET_POWER_OF_THREE.cpp" />
+    <ClCompile Include="LEET_POWER_OF_TWO.cpp" />
+    <ClCompile Include="LEET_PREDICT_THE_WINNER.cpp" />
+    <ClCompile Include="LEET_PRINT_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
+    <ClCompile Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.cpp" />
+    <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
+    <ClCompile Include="LEET_RANSOM_NOTE.cpp" />
+    <ClCompile Include="LEET_REACH_A_NUMBER.cpp" />
+    <ClCompile Include="LEET_READ_N_CHARACTERS_GIVEN_READ4.cpp" />
+    <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp" />
+    <ClCompile Include="LEET_RECONSTRUCT_ORIGINAL_DIGITS_FROM_ENGLISH.cpp" />
+    <ClCompile Include="LEET_RECOVER_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_RECTANGLE_AREA.cpp" />
+    <ClCompile Include="LEET_RECTANGLE_AREA_II.cpp" />
+    <ClCompile Include="LEET_REDUNDANT_CONNECTION.cpp" />
+    <ClCompile Include="LEET_REGULAR_EXPRESSION_MATCHING.cpp" />
+    <ClCompile Include="LEET_REMOVE_9.cpp" />
+    <ClCompile Include="LEET_REMOVE_BOXES.cpp" />
+    <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_REMOVE_DUPLICATES_FROM_SORTED_LIST.cpp" />
+    <ClCompile Include="LEET_REMOVE_ELEMENT.cpp" />
+    <ClCompile Include="LEET_REMOVE_K_DIGITS.cpp" />
+    <ClCompile Include="LEET_REMOVE_LINKED_LIST_ELEMENTS.cpp" />
+    <ClCompile Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.cpp" />
+    <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
+    <ClCompile Include="LEET_RESTORE_IP_ADDRESSES.cpp" />
+    <ClCompile Include="LEET_REVERSE_BITS.cpp" />
+    <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />
+    <ClCompile Include="LEET_REVERSE_LINKED_LIST.cpp" />
+    <ClCompile Include="LEET_REVERSE_NODES_IN_K_GROUP.cpp" />
+    <ClCompile Include="LEET_REVERSE_STRING.cpp" />
+    <ClCompile Include="LEET_REVERSE_VOWELS_OF_A_STRING.cpp" />
+    <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
+    <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
+    <ClCompile Include="LEET_ROTATE_FUNCTION.cpp" />
+    <ClCompile Include="LEET_ROTATE_IMAGE.cpp" />
+    <ClCompile Include="LEET_ROTATE_LIST.cpp" />
+    <ClCompile Include="LEET_RUSSIAN_DOLL_ENVELOPES.cpp" />
+    <ClCompile Include="LEET_SAME_TREE.cpp" />
+    <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
+    <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />
+    <ClCompile Include="LEET_SEARCH_FOR_A_RANGE.cpp" />
+    <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
+    <ClCompile Include="LEET_SENTENCE_SIMILARITY.cpp" />
+    <ClCompile Include="LEET_SENTENCE_SIMILARITY_II.cpp" />
+    <ClCompile Include="LEET_SERIALIZE_AND_DESERIALIZE_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
+    <ClCompile Include="LEET_SET_MISMATCH.cpp" />
+    <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp" />
+    <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp" />
+    <ClCompile Include="LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />
+    <ClCompile Include="LEET_SINGLE_NUMBER_II.cpp" />
+    <ClCompile Include="LEET_SINGLE_NUMBER_III.cpp" />
+    <ClCompile Include="LEET_SLIDING_WINDOW_MAXIMUM.cpp" />
+    <ClCompile Include="LEET_SORT_ARRAY_BY_PARITY.cpp" />
+    <ClCompile Include="LEET_SORT_ARRAY_BY_PARITY_II.cpp" />
+    <ClCompile Include="LEET_SORT_COLORS.cpp" />
+    <ClCompile Include="LEET_SPECIAL_BINARY_STRING.cpp" />
+    <ClCompile Include="LEET_SPIRAL_MATRIX.cpp" />
+    <ClCompile Include="LEET_SPIRAL_MATRIX_II.cpp" />
+    <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp" />
+    <ClCompile Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.cpp" />
+    <ClCompile Include="LEET_SQRTX.cpp" />
+    <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
+    <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp" />
+    <ClCompile Include="LEET_SUBARRAY_SUM_EQUALS_K.cpp" />
+    <ClCompile Include="LEET_SUBSETS.cpp" />
+    <ClCompile Include="LEET_SUBSETS_II.cpp" />
+    <ClCompile Include="LEET_SUBTREE_OF_ANOTHER_TREE.cpp" />
+    <ClCompile Include="LEET_SUDOKU_SOLVER.cpp" />
+    <ClCompile Include="LEET_SUM_OF_LEFT_LEAVES.cpp" />
+    <ClCompile Include="LEET_SUM_OF_SUBSEQUENCE_WIDTHS.cpp" />
+    <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp" />
+    <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
+    <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
+    <ClCompile Include="LEET_SURFACE_AREA_OF_3D_SHAPES.cpp" />
+    <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />
+    <ClCompile Include="LEET_SWAP_NODES_IN_PAIRS.cpp" />
+    <ClCompile Include="LEET_SYMMETRIC_TREE.cpp" />
+    <ClCompile Include="LEET_TEEMO_ATTACKING.cpp" />
+    <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
+    <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
+    <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
+    <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp" />
+    <ClCompile Include="LEET_TRIANGLE.cpp" />
+    <ClCompile Include="LEET_TWO_SUM.cpp" />
+    <ClCompile Include="LEET_TWO_SUM_II_INPUT_ARRAY_IS_SORTED.cpp" />
+    <ClCompile Include="LEET_UGLY_NUMBER.cpp" />
+    <ClCompile Include="LEET_UGLY_NUMBER_II.cpp" />
+    <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES.cpp" />
+    <ClCompile Include="LEET_UNIQUE_BINARY_SEARCH_TREES_II.cpp" />
+    <ClCompile Include="LEET_UNIQUE_LETTER_STRING.cpp" />
+    <ClCompile Include="LEET_UNIQUE_PATHS.cpp" />
+    <ClCompile Include="LEET_UNIQUE_PATHS_II.cpp" />
+    <ClCompile Include="LEET_VALID_ANAGRAM.cpp" />
+    <ClCompile Include="LEET_VALID_PALINDROME.cpp" />
+    <ClCompile Include="LEET_VALID_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_VALID_PARENTHESIS_STRING.cpp" />
+    <ClCompile Include="LEET_VALID_PERFECT_SQUARE.cpp" />
+    <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
+    <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_WATER_AND_JUG_PROBLEM.cpp" />
+    <ClCompile Include="LEET_WIGGLE_SUBSEQUENCE.cpp" />
+    <ClCompile Include="LEET_WORD_LADDER.cpp" />
+    <ClCompile Include="LEET_WORD_PATTERN.cpp" />
+    <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="POJ1029.cpp" />
+    <ClCompile Include="SPOJ_CANDY.cpp" />
+    <ClCompile Include="SPOJ_FISHER.cpp" />
+    <ClCompile Include="SPOJ_HORRIBLE.cpp" />
+    <ClCompile Include="SPOJ_LITE_1.cpp" />
+    <ClCompile Include="SPOJ_LITE_2.cpp" />
+    <ClCompile Include="SPOJ_PALIN.cpp" />
+    <ClCompile Include="SPOJ_SAMER08F.cpp" />
+    <ClCompile Include="SPOJ_TEST.cpp" />
+    <ClCompile Include="UVa100.cpp" />
+    <ClCompile Include="UVa10003.cpp" />
+    <ClCompile Include="UVa10004.cpp" />
+    <ClCompile Include="UVa10020.cpp" />
+    <ClCompile Include="UVa10034.cpp" />
+    <ClCompile Include="UVa10077.cpp" />
+    <ClCompile Include="UVa10082.cpp" />
+    <ClCompile Include="UVa10141.cpp" />
+    <ClCompile Include="UVa10147.cpp" />
+    <ClCompile Include="UVa10158.cpp" />
+    <ClCompile Include="UVa10226.cpp" />
+    <ClCompile Include="UVa10243.cpp" />
+    <ClCompile Include="UVa10278.cpp" />
+    <ClCompile Include="UVa10281.cpp" />
+    <ClCompile Include="UVa103.cpp" />
+    <ClCompile Include="UVa10307.cpp" />
+    <ClCompile Include="UVa10340.cpp" />
+    <ClCompile Include="UVa10341.cpp" />
+    <ClCompile Include="UVa10360.cpp" />
+    <ClCompile Include="UVa10363.cpp" />
+    <ClCompile Include="UVa10364.cpp" />
+    <ClCompile Include="UVa10369.cpp" />
+    <ClCompile Include="UVa10397.cpp" />
+    <ClCompile Include="UVa10420.cpp" />
+    <ClCompile Include="UVa10440.cpp" />
+    <ClCompile Include="UVa10480.cpp" />
+    <ClCompile Include="UVa10505.cpp" />
+    <ClCompile Include="UVa10511.cpp" />
+    <ClCompile Include="UVa10557.cpp" />
+    <ClCompile Include="UVa10594.cpp" />
+    <ClCompile Include="UVa10600.cpp" />
+    <ClCompile Include="UVa10603.cpp" />
+    <ClCompile Include="UVa10651.cpp" />
+    <ClCompile Include="UVa10670.cpp" />
+    <ClCompile Include="UVa10731.cpp" />
+    <ClCompile Include="UVa10763.cpp" />
+    <ClCompile Include="UVa10779.cpp" />
+    <ClCompile Include="UVa108.cpp" />
+    <ClCompile Include="UVa10842.cpp" />
+    <ClCompile Include="UVa10891.cpp" />
+    <ClCompile Include="UVa10911.cpp" />
+    <ClCompile Include="UVa10928.cpp" />
+    <ClCompile Include="UVa11054.cpp" />
+    <ClCompile Include="UVa111.cpp" />
+    <ClCompile Include="UVa11228.cpp" />
+    <ClCompile Include="UVa11235.cpp" />
+    <ClCompile Include="UVa11242.cpp" />
+    <ClCompile Include="UVa11292.cpp" />
+    <ClCompile Include="UVa11297.cpp" />
+    <ClCompile Include="UVa11369.cpp" />
+    <ClCompile Include="UVa11450.cpp" />
+    <ClCompile Include="UVa11462.cpp" />
+    <ClCompile Include="UVa11503.cpp" />
+    <ClCompile Include="UVa11504.cpp" />
+    <ClCompile Include="UVa11506.cpp" />
+    <ClCompile Include="UVa116.cpp" />
+    <ClCompile Include="UVa11631.cpp" />
+    <ClCompile Include="UVa124.cpp" />
+    <ClCompile Include="UVa127.cpp" />
+    <ClCompile Include="UVa146.cpp" />
+    <ClCompile Include="UVa147.cpp" />
+    <ClCompile Include="UVa166.cpp" />
+    <ClCompile Include="UVa186.cpp" />
+    <ClCompile Include="UVa193.cpp" />
+    <ClCompile Include="UVa200.cpp" />
+    <ClCompile Include="UVa231.cpp" />
+    <ClCompile Include="UVa260.cpp" />
+    <ClCompile Include="UVa272.cpp" />
+    <ClCompile Include="UVa291.cpp" />
+    <ClCompile Include="UVa299.cpp" />
+    <ClCompile Include="UVa315.cpp" />
+    <ClCompile Include="UVa334.cpp" />
+    <ClCompile Include="UVa336.cpp" />
+    <ClCompile Include="UVa341.cpp" />
+    <ClCompile Include="UVa352.cpp" />
+    <ClCompile Include="UVa357.cpp" />
+    <ClCompile Include="UVa383.cpp" />
+    <ClCompile Include="UVa394.cpp" />
+    <ClCompile Include="UVa410.cpp" />
+    <ClCompile Include="UVa417.cpp" />
+    <ClCompile Include="UVa423.cpp" />
+    <ClCompile Include="UVa459.cpp" />
+    <ClCompile Include="UVa469.cpp" />
+    <ClCompile Include="UVa473.cpp" />
+    <ClCompile Include="UVa481.cpp" />
+    <ClCompile Include="UVa482.cpp" />
+    <ClCompile Include="UVa483.cpp" />
+    <ClCompile Include="UVa524.cpp" />
+    <ClCompile Include="UVa534.cpp" />
+    <ClCompile Include="UVa558.cpp" />
+    <ClCompile Include="UVa562.cpp" />
+    <ClCompile Include="UVa563.cpp" />
+    <ClCompile Include="UVa573.cpp" />
+    <ClCompile Include="UVa590.cpp" />
+    <ClCompile Include="UVa607.cpp" />
+    <ClCompile Include="UVa610.cpp" />
+    <ClCompile Include="UVa628.cpp" />
+    <ClCompile Include="UVa639.cpp" />
+    <ClCompile Include="UVa661.cpp" />
+    <ClCompile Include="UVa674.cpp" />
+    <ClCompile Include="UVa679.cpp" />
+    <ClCompile Include="UVa714.cpp" />
+    <ClCompile Include="UVa725.cpp" />
+    <ClCompile Include="UVa739.cpp" />
+    <ClCompile Include="UVa750.cpp" />
+    <ClCompile Include="UVa820.cpp" />
+    <ClCompile Include="UVa821.cpp" />
+    <ClCompile Include="UVa836.cpp" />
+    <ClCompile Include="UVa837.cpp" />
+    <ClCompile Include="UVa908.cpp" />
+    <ClCompile Include="UVa910.cpp" />
+    <ClCompile Include="UVa912.cpp" />
+    <ClCompile Include="UVa925.cpp" />
+    <ClCompile Include="UVa929.cpp" />
+    <ClCompile Include="UVa941.cpp" />
+    <ClCompile Include="UVa957.cpp" />
+    <ClCompile Include="UVa990.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

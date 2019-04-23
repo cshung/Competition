@@ -750,6 +750,9 @@
     <ClInclude Include="LEET_PREDICT_THE_WINNER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_PRINT_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2196,6 +2199,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PREDICT_THE_WINNER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PRINT_BINARY_TREE.cpp">

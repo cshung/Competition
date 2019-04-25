@@ -470,6 +470,7 @@
     <ClInclude Include="LEET_TEXT_JUSTIFICATION.h" />
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
+    <ClInclude Include="LEET_THREE_EQUAL_PARTS.h" />
     <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h" />
     <ClInclude Include="LEET_TRIANGLE.h" />
     <ClInclude Include="LEET_TWO_SUM.h" />
@@ -955,6 +956,7 @@
     <ClCompile Include="LEET_TEXT_JUSTIFICATION.cpp" />
     <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
+    <ClCompile Include="LEET_THREE_EQUAL_PARTS.cpp" />
     <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp" />
     <ClCompile Include="LEET_TRIANGLE.cpp" />
     <ClCompile Include="LEET_TWO_SUM.cpp" />

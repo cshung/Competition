@@ -672,6 +672,9 @@
     <ClInclude Include="LEET_RANSOM_NOTE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REACH_A_NUMBER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_RECONSTRUCT_ITINERARY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1971,6 +1974,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RANSOM_NOTE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REACH_A_NUMBER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RECONSTRUCT_ITINERARY.cpp">

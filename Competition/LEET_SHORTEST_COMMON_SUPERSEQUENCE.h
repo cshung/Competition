@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_SHORTEST_COMMON_SUPERSEQUENCE();

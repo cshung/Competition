@@ -374,6 +374,7 @@
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
     <ClInclude Include="LEET_SET_MISMATCH.h" />
     <ClInclude Include="LEET_SHORTEST_COMMON_SUPERSEQUENCE.h" />
+    <ClInclude Include="LEET_SHORTEST_PALINDROME.h" />
     <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h" />
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h" />
     <ClInclude Include="LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY.h" />
@@ -861,6 +862,7 @@
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
     <ClCompile Include="LEET_SET_MISMATCH.cpp" />
     <ClCompile Include="LEET_SHORTEST_COMMON_SUPERSEQUENCE.cpp" />
+    <ClCompile Include="LEET_SHORTEST_PALINDROME.cpp" />
     <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp" />
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY.cpp" />

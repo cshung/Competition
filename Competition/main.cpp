@@ -486,6 +486,7 @@
 #include "LEET_THREE_EQUAL_PARTS.h"                                         // 480
 #include "LEET_SHORTEST_COMMON_SUPERSEQUENCE.h"                             // 481
 #include "LEET_SHORTEST_PALINDROME.h"                                       // 482
+#include "LEET_TRAPPING_RAIN_WATER.h"                                       // 483
 
 // End of headers
 
@@ -982,5 +983,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	// return LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION();                // Accepted
 	// return LEET_THREE_EQUAL_PARTS();                                         // Accepted
     // return LEET_SHORTEST_COMMON_SUPERSEQUENCE();                             // Accepted
-    return LEET_SHORTEST_PALINDROME();                                       // Accepted
+    // return LEET_SHORTEST_PALINDROME();                                       // Accepted
+    return LEET_TRAPPING_RAIN_WATER();                                       // Accepted
 }

@@ -46,7 +46,7 @@ namespace _LEET_SHORTEST_COMMON_SUPERSEQUENCE
                     if (str1[i - 1] == str2[j - 1])
                     {
                         choice[i][j] = 0;
-                        cost[i][j] = cost[i - 1][j - 1];
+                        cost[i][j] = cost[i - 1][j - 1] + 1;
                     }
                     else
                     {

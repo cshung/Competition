@@ -13,9 +13,11 @@ using namespace std;
 
 namespace _LEET_TRAPPING_RAIN_WATER
 {
-class Solution {
+class Solution
+{
 public:
-    int trap(vector<int>& height) {
+    int trap(vector<int>& height)
+    {
         if (height.size() < 3)
         {
             return 0;

@@ -23,8 +23,10 @@ def power(a,b,c,d,n):
     else:
       return (e,f,g,h)
 
-n = int(six.moves.input())
-k = int(six.moves.input())
+line = six.moves.input()
+tokens = line.split(' ')
+n = int(tokens[0])
+k = int(tokens[1])
 
 (a,b,c,d) = power(0,k,1,1,n - 1)
 print("%d" % (a + c))

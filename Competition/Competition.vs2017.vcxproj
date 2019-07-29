@@ -22,7 +22,7 @@
     <ProjectGuid>{CCAF9025-27BB-4369-8B85-9C509EE8B618}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Competitionvs2015</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -351,6 +351,7 @@
     <ClInclude Include="LEET_NIM_GAME.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
+    <ClInclude Include="LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH.h" />
     <ClInclude Include="LEET_NUMBER_OF_DIGIT_ONE.h" />
     <ClInclude Include="LEET_NUMBER_OF_ISLANDS.h" />
     <ClInclude Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h" />
@@ -840,6 +841,7 @@
     <ClCompile Include="LEET_NIM_GAME.cpp" />
     <ClCompile Include="LEET_NTH_DIGIT.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
+    <ClCompile Include="LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_DIGIT_ONE.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_ISLANDS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.cpp" />

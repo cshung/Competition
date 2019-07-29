@@ -488,6 +488,7 @@
 #include "LEET_SHORTEST_PALINDROME.h"                                       // 482
 #include "LEET_TRAPPING_RAIN_WATER.h"                                       // 483
 #include "LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH.h"     // 484
+#include "LEET_MINIMUM_AREA_RECTANGLE.h"                                    // 485
 
 // End of headers
 
@@ -986,5 +987,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SHORTEST_COMMON_SUPERSEQUENCE();                             // Accepted
     // return LEET_SHORTEST_PALINDROME();                                       // Accepted
     // return LEET_TRAPPING_RAIN_WATER();                                       // Accepted
-    return LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH();     // Accepted
+    // return LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH();     // Accepted
+    return LEET_MINIMUM_AREA_RECTANGLE();                                    // Accepted
 }

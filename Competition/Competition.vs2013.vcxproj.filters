@@ -516,6 +516,9 @@
     <ClInclude Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_SUBSTRING_WITH_AT_MOST_TWO_DISTINCT_CHARACTERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1983,6 +1986,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_REPEATING_CHARACTER_REPLACEMENT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_SUBSTRING_WITH_AT_MOST_TWO_DISTINCT_CHARACTERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_SUBSTRING_WITHOUT_REPEATING_CHARACTERS.cpp">

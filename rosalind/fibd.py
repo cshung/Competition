@@ -12,7 +12,7 @@ offset = 0
 population = [0] * k
 population[0] = 1
 
-logging = True
+logging = False
 
 num_mature_rabbits = 0
 for t in range(0, n - 1):

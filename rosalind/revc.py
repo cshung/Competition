@@ -1,7 +1,6 @@
 # http://rosalind.info/problems/revc/
 
 import six
-from UserString import MutableString
 
 def complement(n):
   if n == 'A':
@@ -16,7 +15,7 @@ def complement(n):
 
 dna = six.moves.input()
 nt = len(dna)
-answer = MutableString()
+answer = ""
 for i in range(0, nt):
   j = nt - 1 - i
   answer += complement(dna[j])

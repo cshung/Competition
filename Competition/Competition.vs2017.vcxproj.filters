@@ -621,6 +621,9 @@
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2091,6 +2094,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp">

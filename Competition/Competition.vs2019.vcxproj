@@ -340,6 +340,7 @@
     <ClInclude Include="LEET_MINIMUM_HEIGHT_TREES.h" />
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.h" />
     <ClInclude Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.h" />
+    <ClInclude Include="LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS.h" />
     <ClInclude Include="LEET_MINIMUM_PATH_SUM.h" />
     <ClInclude Include="LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.h" />
     <ClInclude Include="LEET_MISSING_NUMBER.h" />
@@ -832,6 +833,7 @@
     <ClCompile Include="LEET_MINIMUM_HEIGHT_TREES.cpp" />
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS.cpp" />
     <ClCompile Include="LEET_MINIMUM_MOVES_TO_EQUAL_ARRAY_ELEMENTS_II.cpp" />
+    <ClCompile Include="LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS.cpp" />
     <ClCompile Include="LEET_MINIMUM_PATH_SUM.cpp" />
     <ClCompile Include="LEET_MINIMUM_SWAPS_TO_MAKE_SEQUENCES_INCREASING.cpp" />
     <ClCompile Include="LEET_MISSING_NUMBER.cpp" />

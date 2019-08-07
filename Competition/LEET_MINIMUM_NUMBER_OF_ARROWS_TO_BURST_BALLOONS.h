@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS();

@@ -491,6 +491,7 @@
 #include "LEET_MINIMUM_AREA_RECTANGLE.h"                                    // 485
 #include "LEET_LONGEST_SUBSTRING_WITH_AT_MOST_TWO_DISTINCT_CHARACTERS.h"    // 486
 #include "LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS.h"                // 487
+#include "LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX.h"                       // 488
 
 // End of headers
 
@@ -992,5 +993,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH();     // Accepted
     // return LEET_MINIMUM_AREA_RECTANGLE();                                    // Accepted
     // return LEET_LONGEST_SUBSTRING_WITH_AT_MOST_TWO_DISTINCT_CHARACTERS();    // Accepted
-    return LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS();                // Accepted
+    // return LEET_MINIMUM_NUMBER_OF_ARROWS_TO_BURST_BALLOONS();                // Accepted
+    return LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX();                       // Accepted
 }

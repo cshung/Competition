@@ -501,6 +501,9 @@
     <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1974,6 +1977,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.cpp">

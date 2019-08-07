@@ -501,6 +501,9 @@
     <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1976,6 +1979,9 @@
     <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LEET_LONGEST_MOUNTAIN_IN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -2966,14 +2972,5 @@
     <ClCompile Include="UVa990.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-</Project>OONS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Competition.vs2019.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>

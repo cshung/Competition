@@ -9,3 +9,4 @@ ipch
 *.opendb
 *.user
 *.pyc
+.DS_STORE

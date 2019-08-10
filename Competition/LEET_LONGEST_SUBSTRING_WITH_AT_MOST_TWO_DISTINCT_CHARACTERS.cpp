@@ -1,4 +1,3 @@
-// LEET_LONGEST_SUBSTRING_WITH_AT_MOST_TWO_DISTINCT_CHARACTERS
 #include "stdafx.h"
 
 // https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/

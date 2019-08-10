@@ -944,7 +944,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM();                  // Accepted
     // return LEET_LONGEST_VALID_PARENTHESES();                                 // Accepted
     // return LEET_PREDICT_THE_WINNER();                                        // Accepted
-    // return LEET_BOMB_ENEMY();                                                // Cannot submit without subscription
+    // return LEET_BOMB_ENEMY();                                                // Accepted
     // return LEET_REVERSE_NODES_IN_K_GROUP();                                  // Accepted
     // return LEET_CARD_FLIPPING_GAME();                                        // Accepted
     // return LEET_MAX_INCREASE_TO_KEEP_CITY_SKYLINE();                         // Accepted
@@ -986,8 +986,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DELETE_COLUMNS_TO_MAKE_SORTED();                             // Accepted
     // return LEET_EQUAL_RATIONAL_NUMBERS();                                    // Accepted
     // return LEET_UNIQUE_LETTER_STRING();                                      // Accepted
-	// return LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION();                // Accepted
-	// return LEET_THREE_EQUAL_PARTS();                                         // Accepted
+    // return LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION();                // Accepted
+    // return LEET_THREE_EQUAL_PARTS();                                         // Accepted
     // return LEET_SHORTEST_COMMON_SUPERSEQUENCE();                             // Accepted
     // return LEET_SHORTEST_PALINDROME();                                       // Accepted
     // return LEET_TRAPPING_RAIN_WATER();                                       // Accepted

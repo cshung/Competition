@@ -395,6 +395,7 @@
     <ClInclude Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h" />
     <ClInclude Include="LEET_RANDOM_PICK_INDEX.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h" />
+    <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_MUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.h" />
     <ClInclude Include="LEET_RANGE_SUM_QUERY_MUTABLE.h" />
     <ClInclude Include="LEET_RANSOM_NOTE.h" />
@@ -890,6 +891,7 @@
     <ClCompile Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.cpp" />
     <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp" />
+    <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_MUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_IMMUTABLE.cpp" />
     <ClCompile Include="LEET_RANGE_SUM_QUERY_MUTABLE.cpp" />
     <ClCompile Include="LEET_RANSOM_NOTE.cpp" />

@@ -2,6 +2,12 @@
 
 import six
 
-dna = six.moves.input()
-rna = dna.replace("T","U")
-print(rna)
+def rna(dna):
+  return dna.replace("T","U")
+
+def main():
+  dna = six.moves.input()
+  print(rna(dna))
+
+if __name__ == "__main__":
+  main()

@@ -2,6 +2,10 @@
 
 import six
 
+def fib(n,k):
+  (a,b,c,d) = power(0, k, 1, 1, n - 1)
+  return a + c
+
 def power(a,b,c,d,n):
   if n == 0:
     return (1,0,0,1)
@@ -9,7 +13,7 @@ def power(a,b,c,d,n):
     return (a,b,c,d)
   else:
     half = n // 2;
-    (p,q,r,s) = power(a,b,c,d,half)
+    (p, q, r, s) = power(a, b, c, d, half)
     e = p * p + q * r
     f = p * q + q * s
     g = r * p + s * r
@@ -23,11 +27,13 @@ def power(a,b,c,d,n):
     else:
       return (e,f,g,h)
 
-line = six.moves.input()
-tokens = line.split(' ')
-n = int(tokens[0])
-k = int(tokens[1])
+def main():
+  line = six.moves.input()
+  tokens = line.split(' ')
+  n = int(tokens[0])
+  k = int(tokens[1])
+  answer = fib(n,k)
+  print("%d" % answer)
 
-(a,b,c,d) = power(0,k,1,1,n - 1)
-print("%d" % (a + c))
-
+if __name__ == "__main__":
+  main()

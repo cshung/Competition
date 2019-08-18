@@ -1,4 +1,3 @@
-
 code = {}
 code["UUU"]="F"
 code["CUU"]="L"

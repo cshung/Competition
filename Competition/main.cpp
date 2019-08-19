@@ -495,6 +495,7 @@
 #include "LEET_MEETING_ROOMS_II.h"                                          // 489
 #include "LEET_RANGE_SUM_QUERY_2D_MUTABLE.h"                                // 490
 #include "LEET_BINARY_TREE_UPSIDE_DOWN.h"                                   // 491
+#include "LEET_ONE_EDIT_DISTANCE.h"                                         // 492
 
 // End of headers
 
@@ -1000,5 +1001,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_INCREASING_PATH_IN_A_MATRIX();                       // Accepted
     // return LEET_MEETING_ROOMS_II();                                          // Accepted
     // return LEET_RANGE_SUM_QUERY_2D_MUTABLE();                                // Accepted
-    return LEET_BINARY_TREE_UPSIDE_DOWN();                                   // Accepted
+    // return LEET_BINARY_TREE_UPSIDE_DOWN();                                   // Accepted
+    return LEET_ONE_EDIT_DISTANCE();                                         // Accepted
 }

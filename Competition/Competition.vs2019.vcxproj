@@ -194,6 +194,7 @@
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_BINARY_TREE_TILT.h" />
+    <ClInclude Include="LEET_BINARY_TREE_UPSIDE_DOWN.h" />
     <ClInclude Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_WATCH.h" />
     <ClInclude Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.h" />
@@ -690,6 +691,7 @@
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_TILT.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_UPSIDE_DOWN.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_WATCH.cpp" />
     <ClCompile Include="LEET_BITWISE_AND_OF_NUMBERS_RANGE.cpp" />

@@ -1008,6 +1008,9 @@
     <ClInclude Include="LEET_STROBOGRAMMATIC_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_STROBOGRAMMATIC_NUMBER_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2520,6 +2523,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_STROBOGRAMMATIC_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_STROBOGRAMMATIC_NUMBER_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp">

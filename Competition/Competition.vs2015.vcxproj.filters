@@ -954,6 +954,9 @@
     <ClInclude Include="LEET_SHORTEST_WORD_DISTANCE_II.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SHORTEST_WORD_DISTANCE_III.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2460,6 +2463,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SHORTEST_WORD_DISTANCE_II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SHORTEST_WORD_DISTANCE_III.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp">

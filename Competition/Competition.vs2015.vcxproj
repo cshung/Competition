@@ -451,6 +451,7 @@
     <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h" />
     <ClInclude Include="LEET_SHORTEST_WORD_DISTANCE.h" />
     <ClInclude Include="LEET_SHORTEST_WORD_DISTANCE_II.h" />
+    <ClInclude Include="LEET_SHORTEST_WORD_DISTANCE_III.h" />
     <ClInclude Include="LEET_SHUFFLE_AN_ARRAY.h" />
     <ClInclude Include="LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_SINGLE_NUMBER.h" />
@@ -955,6 +956,7 @@
     <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp" />
     <ClCompile Include="LEET_SHORTEST_WORD_DISTANCE.cpp" />
     <ClCompile Include="LEET_SHORTEST_WORD_DISTANCE_II.cpp" />
+    <ClCompile Include="LEET_SHORTEST_WORD_DISTANCE_III.cpp" />
     <ClCompile Include="LEET_SHUFFLE_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_SINGLE_ELEMENT_IN_A_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_SINGLE_NUMBER.cpp" />

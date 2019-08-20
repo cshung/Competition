@@ -502,6 +502,7 @@
 #include "LEET_REVERSE_WORDS_IN_A_STRING_II.h"                              // 496
 #include "LEET_SHORTEST_WORD_DISTANCE.h"                                    // 497
 #include "LEET_SHORTEST_WORD_DISTANCE_II.h"                                 // 498
+#include "LEET_SHORTEST_WORD_DISTANCE_III.h"                                // 499
 
 // End of headers
 
@@ -1014,6 +1015,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COUNT_UNIVALUE_SUBTREES();                                   // Accepted
     // return LEET_REVERSE_WORDS_IN_A_STRING_II();                              // Accepted
     // return LEET_SHORTEST_WORD_DISTANCE();                                    // Accepted
-    return LEET_SHORTEST_WORD_DISTANCE_II();                                 // Accepted
-
+    // return LEET_SHORTEST_WORD_DISTANCE_II();                                 // Accepted
+    return LEET_SHORTEST_WORD_DISTANCE_III();                                // Accepted
 }

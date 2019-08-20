@@ -429,6 +429,7 @@
     <ClInclude Include="LEET_REVERSE_STRING.h" />
     <ClInclude Include="LEET_REVERSE_VOWELS_OF_A_STRING.h" />
     <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING_II.h" />
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h" />
     <ClInclude Include="LEET_ROTATE_ARRAY.h" />
     <ClInclude Include="LEET_ROTATE_FUNCTION.h" />
@@ -930,6 +931,7 @@
     <ClCompile Include="LEET_REVERSE_STRING.cpp" />
     <ClCompile Include="LEET_REVERSE_VOWELS_OF_A_STRING.cpp" />
     <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING_II.cpp" />
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_ROTATE_ARRAY.cpp" />
     <ClCompile Include="LEET_ROTATE_FUNCTION.cpp" />

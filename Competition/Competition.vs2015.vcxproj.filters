@@ -888,6 +888,9 @@
     <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REVERSE_WORDS_IN_A_STRING_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ROMAN_TO_INTEGER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2385,6 +2388,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REVERSE_WORDS_IN_A_STRING_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ROMAN_TO_INTEGER.cpp">

@@ -505,6 +505,7 @@
 #include "LEET_SHORTEST_WORD_DISTANCE_III.h"                                // 499
 #include "LEET_STROBOGRAMMATIC_NUMBER.h"                                    // 500
 #include "LEET_STROBOGRAMMATIC_NUMBER_II.h"                                 // 501
+#include "LEET_GROUP_SHIFTED_STRINGS.h"                                     // 502
 
 // End of headers
 
@@ -1020,5 +1021,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SHORTEST_WORD_DISTANCE_II();                                 // Accepted
     // return LEET_SHORTEST_WORD_DISTANCE_III();                                // Accepted
     // return LEET_STROBOGRAMMATIC_NUMBER();                                    // Accepted
-    return LEET_STROBOGRAMMATIC_NUMBER_II();                                 // Accepted
+    // return LEET_STROBOGRAMMATIC_NUMBER_II();                                 // Accepted
+    return LEET_GROUP_SHIFTED_STRINGS();                                     // Accepted
 }

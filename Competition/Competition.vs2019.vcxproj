@@ -468,6 +468,7 @@
     <ClInclude Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.h" />
     <ClInclude Include="LEET_SQRTX.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
+    <ClInclude Include="LEET_STROBOGRAMMATIC_NUMBER.h" />
     <ClInclude Include="LEET_STUDENT_ATTENDANCE_RECORD_II.h" />
     <ClInclude Include="LEET_SUBARRAY_SUM_EQUALS_K.h" />
     <ClInclude Include="LEET_SUBSETS.h" />
@@ -973,6 +974,7 @@
     <ClCompile Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
+    <ClCompile Include="LEET_STROBOGRAMMATIC_NUMBER.cpp" />
     <ClCompile Include="LEET_STUDENT_ATTENDANCE_RECORD_II.cpp" />
     <ClCompile Include="LEET_SUBARRAY_SUM_EQUALS_K.cpp" />
     <ClCompile Include="LEET_SUBSETS.cpp" />

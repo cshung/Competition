@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_TWO_SUM_III_DATA_STRUCTURE_DESIGN();

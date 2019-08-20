@@ -273,6 +273,9 @@
     <ClInclude Include="LEET_COUNT_PRIMES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_COUNT_UNIVALUE_SUBTREES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_COUNTING_BITS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1767,6 +1770,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_COUNT_PRIMES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_COUNT_UNIVALUE_SUBTREES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_COUNTING_BITS.cpp">

@@ -642,6 +642,9 @@
     <ClInclude Include="LEET_MISSING_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_MISSING_RANGES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_MOST_FREQUENT_SUBTREE_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2130,6 +2133,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MISSING_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_MISSING_RANGES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MOST_FREQUENT_SUBTREE_SUM.cpp">

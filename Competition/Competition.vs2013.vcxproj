@@ -142,6 +142,7 @@
     <ClInclude Include="LEET_BULB_SWITCHER.h" />
     <ClInclude Include="LEET_BULLS_AND_COWS.h" />
     <ClInclude Include="LEET_BURST_BALLOONS.h" />
+    <ClInclude Include="LEET_CAMPUS_BIKES_II.h" />
     <ClInclude Include="LEET_CAN_PLACE_FLOWERS.h" />
     <ClInclude Include="LEET_CARD_FLIPPING_GAME.h" />
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
@@ -650,6 +651,7 @@
     <ClCompile Include="LEET_BULB_SWITCHER.cpp" />
     <ClCompile Include="LEET_BULLS_AND_COWS.cpp" />
     <ClCompile Include="LEET_BURST_BALLOONS.cpp" />
+    <ClCompile Include="LEET_CAMPUS_BIKES_II.cpp" />
     <ClCompile Include="LEET_CAN_PLACE_FLOWERS.cpp" />
     <ClCompile Include="LEET_CARD_FLIPPING_GAME.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />

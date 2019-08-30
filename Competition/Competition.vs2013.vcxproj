@@ -131,6 +131,7 @@
     <ClInclude Include="LEET_BINARY_TREE_PATHS.h" />
     <ClInclude Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.h" />
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h" />
+    <ClInclude Include="LEET_BINARY_TREE_PRUNING.h" />
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h" />
     <ClInclude Include="LEET_BINARY_TREE_TILT.h" />
     <ClInclude Include="LEET_BINARY_TREE_UPSIDE_DOWN.h" />
@@ -640,6 +641,7 @@
     <ClCompile Include="LEET_BINARY_TREE_PATHS.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_POSTORDER_TRAVERSAL.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp" />
+    <ClCompile Include="LEET_BINARY_TREE_PRUNING.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_TILT.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_UPSIDE_DOWN.cpp" />

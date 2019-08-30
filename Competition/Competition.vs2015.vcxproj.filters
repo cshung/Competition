@@ -177,6 +177,9 @@
     <ClInclude Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BINARY_TREE_PRUNING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1698,6 +1701,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BINARY_TREE_PREORDER_TRAVERSAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BINARY_TREE_PRUNING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BINARY_TREE_RIGHT_SIDE_VIEW.cpp">

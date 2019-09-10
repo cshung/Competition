@@ -14,7 +14,7 @@ def lcsq(str1, str2):
   i = m
   j = n
   answer = []
-  while i != 0 and j != 0:
+  while i != 0 or j != 0:
     c = choice[i][j]
     if c == 0:
       i = i - 1
@@ -23,9 +23,9 @@ def lcsq(str1, str2):
         raise ValueError()
       answer.append(str1[i])
     elif c == 1:
-      i = i - 1
-    elif c == 2:
       j = j - 1
+    elif c == 2:
+      i = i - 1
     else:
       raise ValueError()
   answer.reverse()

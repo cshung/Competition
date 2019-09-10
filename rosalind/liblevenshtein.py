@@ -6,8 +6,8 @@ def levenshtein(str1, str2, allowReplacement):
   # choice[i][j] records the last editing operation used.
   #
   # There are three editing operation that we could use:
-  # Insert a character  (choice = 1)
-  # Delete a character  (choice = 2)
+  # Insert a character to str1 (choice = 1)
+  # Delete a character from str1 (choice = 2)
   # Replace a character (choice = 3)
   # Each of them has a cost of 1
   #  
@@ -26,6 +26,10 @@ def levenshtein(str1, str2, allowReplacement):
     cost[0][j] = j
     choice[0][j] = 1
   #
+  # We should not be reading this value, so we put a bad token here so that we can detect bad reads
+  #
+  choice[0][0] = 10086
+  #
   # Otherwise we use this dynamic programming algorithm
   #
   for i in range(1, m + 1):
@@ -37,12 +41,16 @@ def levenshtein(str1, str2, allowReplacement):
         cost[i][j] = cost[i - 1][j - 1]
         choice[i][j] = 0
       else:
-        # Otherwise there are only three choices left, either we choose to insert, delete or replace
-        insertion_cost = cost[i - 1][j] + 1
-        deletion_cost = cost[i][j - 1] + 1
+        # The last editing step could be inserting c2 to str1, before that we must have already made str1[0, i) == str2[0, j - 1)        
+        insertion_cost = 1 + cost[i][j - 1]
+
+        # The last editing step could be deleting c1 from str1, before that we must have already made str1[0, i - 1) == str2[0, j)
+        deletion_cost = 1 + cost[i - 1][j]
+
         cost[i][j] = min(insertion_cost, deletion_cost)
         if allowReplacement:
-          replacementCost = cost[i - 1][j - 1] + 1
+          # The last editing step could be replacing c1->c2 in str1, before that we must have already made str1[0, i - 1) == str2[0, j - 1)
+          replacementCost = 1 + cost[i - 1][j - 1]
           cost[i][j] = min(cost[i][j], replacementCost)
         if cost[i][j] == insertion_cost:
           choice[i][j] = 1

@@ -672,6 +672,9 @@
     <ClInclude Include="LEET_MY_CALENDAR_III.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_N_QUEENS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_NETWORK_DELAY_TIME.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2196,6 +2199,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_MY_CALENDAR_III.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_N_QUEENS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_NETWORK_DELAY_TIME.cpp">

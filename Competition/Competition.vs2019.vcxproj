@@ -358,6 +358,7 @@
     <ClInclude Include="LEET_MULTIPLY_STRINGS_2.h" />
     <ClInclude Include="LEET_MY_CALENDAR_III.h" />
     <ClInclude Include="LEET_N_QUEENS.h" />
+    <ClInclude Include="LEET_N_QUEENS_II.h" />
     <ClInclude Include="LEET_NETWORK_DELAY_TIME.h" />
     <ClInclude Include="LEET_NEXT_PERMUTATION.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
@@ -869,6 +870,7 @@
     <ClCompile Include="LEET_MULTIPLY_STRINGS_2.cpp" />
     <ClCompile Include="LEET_MY_CALENDAR_III.cpp" />
     <ClCompile Include="LEET_N_QUEENS.cpp" />
+    <ClCompile Include="LEET_N_QUEENS_II.cpp" />
     <ClCompile Include="LEET_NETWORK_DELAY_TIME.cpp" />
     <ClCompile Include="LEET_NEXT_PERMUTATION.cpp" />
     <ClCompile Include="LEET_NIM_GAME.cpp" />

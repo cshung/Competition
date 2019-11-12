@@ -510,6 +510,7 @@
 #include "LEET_BINARY_TREE_PRUNING.h"                                       // 504
 #include "LEET_N_QUEENS.h"                                                  // 505
 #include "LEET_N_QUEENS_II.h"                                               // 506
+#include "LEET_GRAPH_VALID_TREE.h"                                          // 507
 
 // End of headers
 
@@ -1030,5 +1031,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CAMPUS_BIKES_II();                                           // Accepted
     // return LEET_BINARY_TREE_PRUNING();                                       // Accepted
     // return LEET_N_QUEENS();                                                  // Accepted
-    return LEET_N_QUEENS_II();                                                  // Accepted
+    // return LEET_N_QUEENS_II();                                               // Accepted
+	return LEET_GRAPH_VALID_TREE();                                          // Accepted
 }

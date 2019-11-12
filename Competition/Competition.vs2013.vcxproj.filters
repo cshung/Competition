@@ -393,6 +393,9 @@
     <ClInclude Include="LEET_GENERATE_PARENTHESES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_GRAPH_VALID_TREE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_GRAY_CODE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1923,6 +1926,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_GRAPH_VALID_TREE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_GRAY_CODE.cpp">

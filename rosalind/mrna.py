@@ -3,7 +3,7 @@
 import six
 from libcode import code
 
-def mrna(rna):
+def mrna(protein):
   back = {}
   for key in code:
     value = code[key]
@@ -12,14 +12,14 @@ def mrna(rna):
     else:
       back[value] = 1
   answer = 1
-  for b in rna:
+  for b in protein:
     answer = (answer * back[b]) % 1000000
   answer = (answer * back["Stop"]) % 1000000
   return answer
 
 def main():
-  rna = six.moves.input()
-  answer = mrna(rna)
+  protein = six.moves.input()
+  answer = mrna(protein)
   print(answer)
 
 if __name__ == "__main__":

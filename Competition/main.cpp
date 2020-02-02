@@ -511,6 +511,7 @@
 #include "LEET_N_QUEENS.h"                                                  // 505
 #include "LEET_N_QUEENS_II.h"                                               // 506
 #include "LEET_GRAPH_VALID_TREE.h"                                          // 507
+#include "UVa10370.h"                                                       // 508
 
 // End of headers
 
@@ -648,7 +649,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa563();                                                         // Accepted
     // return UVa10511();                                                       // Accepted
     // return UVa11631();                                                       // Accepted
-    // return UVa10594();                                                       // 
+    // return UVa10594();                                                       //
     // return LEET_MAXIMUM_DEPTH_OF_BINARY_TREE();                              // Accepted
     // return LEET_SAME_TREE();                                                 // Accepted
     // return LEET_NUMBER_OF_1_BITS();                                          // Accepted
@@ -691,8 +692,8 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_REVERSE_INTEGER();                                           // Accepted
     // return LEET_STRING_TO_INTEGER_ATOI();                                    // Accepted
     // return LEET_BINARY_TREE_RIGHT_SIDE_VIEW();                               // Accepted
-    // return LEET_PALINDROME_NUMBER();                                         // Accepted 
-    // return LEET_IMPLEMENT_QUEUE_USING_STACKS();                              // Accepted 
+    // return LEET_PALINDROME_NUMBER();                                         // Accepted
+    // return LEET_IMPLEMENT_QUEUE_USING_STACKS();                              // Accepted
     // return LEET_REGULAR_EXPRESSION_MATCHING();                               // Accepted
     // return LEET_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL(); // Accepted
     // return LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL();// Accepted
@@ -811,9 +812,9 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_POWER_OF_THREE();                                            // Accepted
     // return LEET_ODD_EVEN_LINKED_LIST();                                      // Accepted
     // return LEET_MULTIPLY_STRINGS_2();                                        // Accepted (This is not the best algorithm, but the code is short enough for acceptance)
-    // return LEET_CLONE_GRAPH();                                               // Accepted 
-    // return LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY();                           // Accepted 
-    // return LEET_RECONSTRUCT_ITINERARY();                                     // Accepted 
+    // return LEET_CLONE_GRAPH();                                               // Accepted
+    // return LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY();                           // Accepted
+    // return LEET_RECONSTRUCT_ITINERARY();                                     // Accepted
     // return LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE();            // Accepted
     // return LEET_FRACTION_TO_RECURRING_DECIMAL();                             // Accepted
     // return LEET_PARTITION_LIST();                                            // Accepted
@@ -1032,5 +1033,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_BINARY_TREE_PRUNING();                                       // Accepted
     // return LEET_N_QUEENS();                                                  // Accepted
     // return LEET_N_QUEENS_II();                                               // Accepted
-	return LEET_GRAPH_VALID_TREE();                                          // Accepted
+    // return LEET_GRAPH_VALID_TREE();                                          // Accepted
+    return UVa10370();                                                       // Accepted
 }

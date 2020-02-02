@@ -1266,6 +1266,9 @@
     <ClInclude Include="UVa10369.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UVa10370.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="UVa10397.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2799,6 +2802,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa10369.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa10370.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa10397.cpp">

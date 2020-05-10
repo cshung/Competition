@@ -228,6 +228,7 @@
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
     <ClInclude Include="LEET_COUNT_UNIVALUE_SUBTREES.h" />
     <ClInclude Include="LEET_COUNTING_BITS.h" />
+    <ClInclude Include="LEET_COUSINS_IN_BINARY_TREE.h" />
     <ClInclude Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.h" />
     <ClInclude Include="LEET_DECODE_STRING.h" />
     <ClInclude Include="LEET_DECODE_WAYS.h" />
@@ -742,6 +743,7 @@
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
     <ClCompile Include="LEET_COUNT_UNIVALUE_SUBTREES.cpp" />
     <ClCompile Include="LEET_COUNTING_BITS.cpp" />
+    <ClCompile Include="LEET_COUSINS_IN_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_DATA_STREAM_AS_DISJOINT_INTERVALS.cpp" />
     <ClCompile Include="LEET_DECODE_STRING.cpp" />
     <ClCompile Include="LEET_DECODE_WAYS.cpp" />

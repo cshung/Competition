@@ -195,6 +195,7 @@
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
+    <ClInclude Include="LEET_FIND_THE_TOWN_JUDGE.h" />
     <ClInclude Include="LEET_FIRST_BAD_VERSION.h" />
     <ClInclude Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h" />
     <ClInclude Include="LEET_FIZZ_BUZZ.h" />
@@ -711,6 +712,7 @@
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
     <ClCompile Include="LEET_FIND_THE_DIFFERENCE.cpp" />
     <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
+    <ClCompile Include="LEET_FIND_THE_TOWN_JUDGE.cpp" />
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
     <ClCompile Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_FIZZ_BUZZ.cpp" />

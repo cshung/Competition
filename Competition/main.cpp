@@ -514,6 +514,7 @@
 #include "UVa10370.h"                                                       // 508
 #include "LEET_COUSINS_IN_BINARY_TREE.h"                                    // 509
 #include "LEET_CHECK_IF_IT_IS_A_STRAIGHT_LINE.h"                            // 510
+#include "LEET_FIND_THE_TOWN_JUDGE.h"                                       // 511
 
 // End of headers
 
@@ -1038,5 +1039,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_GRAPH_VALID_TREE();                                          // Accepted
     // return UVa10370();                                                       // Accepted
     // return LEET_COUSINS_IN_BINARY_TREE();                                    // Accepted
-    return LEET_CHECK_IF_IT_IS_A_STRAIGHT_LINE();                            // Accepted
+    // return LEET_CHECK_IF_IT_IS_A_STRAIGHT_LINE();                            // Accepted
+    return LEET_FIND_THE_TOWN_JUDGE();                                       // Accepted
 }

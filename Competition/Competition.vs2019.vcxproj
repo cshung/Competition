@@ -207,6 +207,7 @@
     <ClInclude Include="LEET_CAMPUS_BIKES_II.h" />
     <ClInclude Include="LEET_CAN_PLACE_FLOWERS.h" />
     <ClInclude Include="LEET_CARD_FLIPPING_GAME.h" />
+    <ClInclude Include="LEET_CHECK_IF_IT_IS_A_STRAIGHT_LINE.h" />
     <ClInclude Include="LEET_CLIMBING_STAIRS.h" />
     <ClInclude Include="LEET_CLONE_GRAPH.h" />
     <ClInclude Include="LEET_COIN_CHANGE.h" />
@@ -722,6 +723,7 @@
     <ClCompile Include="LEET_CAMPUS_BIKES_II.cpp" />
     <ClCompile Include="LEET_CAN_PLACE_FLOWERS.cpp" />
     <ClCompile Include="LEET_CARD_FLIPPING_GAME.cpp" />
+    <ClCompile Include="LEET_CHECK_IF_IT_IS_A_STRAIGHT_LINE.cpp" />
     <ClCompile Include="LEET_CLIMBING_STAIRS.cpp" />
     <ClCompile Include="LEET_CLONE_GRAPH.cpp" />
     <ClCompile Include="LEET_COIN_CHANGE.cpp" />

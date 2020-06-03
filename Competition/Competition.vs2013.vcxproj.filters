@@ -1110,6 +1110,9 @@
     <ClInclude Include="LEET_TRIANGLE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TWO_CITY_SCHEDULING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_TWO_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2658,6 +2661,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_TRIANGLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TWO_CITY_SCHEDULING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_TWO_SUM.cpp">

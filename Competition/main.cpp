@@ -517,6 +517,7 @@
 #include "LEET_FIND_THE_TOWN_JUDGE.h"                                       // 511
 #include "LEET_ONLINE_STOCK_SPAN.h"                                         // 512
 #include "LEET_TWO_CITY_SCHEDULING.h"                                       // 513
+#include "LEET_RANDOM_PICK_WITH_WEIGHT.h"                                   // 514
 
 // End of headers
 
@@ -1044,5 +1045,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CHECK_IF_IT_IS_A_STRAIGHT_LINE();                            // Accepted
     // return LEET_FIND_THE_TOWN_JUDGE();                                       // Accepted
     // return LEET_ONLINE_STOCK_SPAN();                                         // Accepted
-    return LEET_TWO_CITY_SCHEDULING();                                       // Accepted
+    // return LEET_TWO_CITY_SCHEDULING();                                       // Accepted
+    return LEET_RANDOM_PICK_WITH_WEIGHT();                                   // Accepted
 }

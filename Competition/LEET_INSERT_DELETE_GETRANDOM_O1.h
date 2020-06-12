@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_INSERT_DELETE_GETRANDOM_O1();

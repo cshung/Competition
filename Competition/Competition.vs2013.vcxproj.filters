@@ -444,6 +444,9 @@
     <ClInclude Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_INSERT_DELETE_GETRANDOM_O1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_INTEGER_REPLACEMENT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2001,6 +2004,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_INSERT_DELETE_GETRANDOM_O1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_INTEGER_REPLACEMENT.cpp">

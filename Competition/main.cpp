@@ -519,6 +519,7 @@
 #include "LEET_TWO_CITY_SCHEDULING.h"                                       // 513
 #include "LEET_RANDOM_PICK_WITH_WEIGHT.h"                                   // 514
 #include "LEET_COIN_CHANGE_2.h"                                             // 515
+#include "LEET_INSERT_DELETE_GETRANDOM_O1.h"                                // 516
 
 // End of headers
 
@@ -1048,6 +1049,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ONLINE_STOCK_SPAN();                                         // Accepted
     // return LEET_TWO_CITY_SCHEDULING();                                       // Accepted
     // return LEET_RANDOM_PICK_WITH_WEIGHT();                                   // Accepted
-    return LEET_COIN_CHANGE_2();                                             // Accepted
-
+    // return LEET_COIN_CHANGE_2();                                             // Accepted
+    return LEET_INSERT_DELETE_GETRANDOM_O1();                                // Accepted
 }

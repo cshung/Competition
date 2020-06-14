@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_CHEAPEST_FLIGHTS_WITHIN_K_STOPS();

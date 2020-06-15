@@ -454,6 +454,7 @@
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX_II.h" />
     <ClInclude Include="LEET_SEARCH_FOR_A_RANGE.h" />
+    <ClInclude Include="LEET_SEARCH_IN_A_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_SEARCH_INSERT_POSITION.h" />
     <ClInclude Include="LEET_SENTENCE_SIMILARITY.h" />
     <ClInclude Include="LEET_SENTENCE_SIMILARITY_II.h" />
@@ -977,6 +978,7 @@
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX_II.cpp" />
     <ClCompile Include="LEET_SEARCH_FOR_A_RANGE.cpp" />
+    <ClCompile Include="LEET_SEARCH_IN_A_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_SEARCH_INSERT_POSITION.cpp" />
     <ClCompile Include="LEET_SENTENCE_SIMILARITY.cpp" />
     <ClCompile Include="LEET_SENTENCE_SIMILARITY_II.cpp" />

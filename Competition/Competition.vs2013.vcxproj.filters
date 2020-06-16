@@ -1179,6 +1179,9 @@
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_VALIDATE_IP_ADDRESS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2745,6 +2748,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_VALIDATE_IP_ADDRESS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp">

@@ -526,6 +526,7 @@
     <ClInclude Include="LEET_VALID_PERFECT_SQUARE.h" />
     <ClInclude Include="LEET_VALID_SUDOKU.h" />
     <ClInclude Include="LEET_VALIDATE_BINARY_SEARCH_TREE.h" />
+    <ClInclude Include="LEET_VALIDATE_IP_ADDRESS.h" />
     <ClInclude Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.h" />
     <ClInclude Include="LEET_WATER_AND_JUG_PROBLEM.h" />
     <ClInclude Include="LEET_WIGGLE_SUBSEQUENCE.h" />
@@ -1050,6 +1051,7 @@
     <ClCompile Include="LEET_VALID_PERFECT_SQUARE.cpp" />
     <ClCompile Include="LEET_VALID_SUDOKU.cpp" />
     <ClCompile Include="LEET_VALIDATE_BINARY_SEARCH_TREE.cpp" />
+    <ClCompile Include="LEET_VALIDATE_IP_ADDRESS.cpp" />
     <ClCompile Include="LEET_VERIFY_PREORDER_SERIALIZATION_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_WATER_AND_JUG_PROBLEM.cpp" />
     <ClCompile Include="LEET_WIGGLE_SUBSEQUENCE.cpp" />

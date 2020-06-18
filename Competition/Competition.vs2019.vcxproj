@@ -275,6 +275,7 @@
     <ClInclude Include="LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.h" />
     <ClInclude Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.h" />
     <ClInclude Include="LEET_H_INDEX.h" />
+    <ClInclude Include="LEET_H_INDEX_II.h" />
     <ClInclude Include="LEET_HAMMING_DISTANCE.h" />
     <ClInclude Include="LEET_HAPPY_NUMBER.h" />
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
@@ -800,6 +801,7 @@
     <ClCompile Include="LEET_GROUPS_OF_SPECIAL_EQUIVALENT_STRINGS.cpp" />
     <ClCompile Include="LEET_GUESS_NUMBER_HIGHER_OR_LOWER.cpp" />
     <ClCompile Include="LEET_H_INDEX.cpp" />
+    <ClCompile Include="LEET_H_INDEX_II.cpp" />
     <ClCompile Include="LEET_HAMMING_DISTANCE.cpp" />
     <ClCompile Include="LEET_HAPPY_NUMBER.cpp" />
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />

@@ -537,6 +537,9 @@
     <ClInclude Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LONGEST_DUPLICATE_SUBSTRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2109,6 +2112,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_CONSECUTIVE_SEQUENCE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LONGEST_DUPLICATE_SUBSTRING.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LONGEST_HARMONIOUS_SUBSEQUENCE.cpp">

@@ -524,6 +524,7 @@
 #include "LEET_SEARCH_IN_A_BINARY_SEARCH_TREE.h"                            // 518
 #include "LEET_VALIDATE_IP_ADDRESS.h"                                       // 519
 #include "LEET_H_INDEX_II.h"                                                // 520
+#include "LEET_LONGEST_DUPLICATE_SUBSTRING.h"                               // 521
 
 // End of headers
 
@@ -1058,5 +1059,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_CHEAPEST_FLIGHTS_WITHIN_K_STOPS();                           // Accepted
     // return LEET_SEARCH_IN_A_BINARY_SEARCH_TREE();                            // Accepted
     // return LEET_VALIDATE_IP_ADDRESS();                                       // Accepted
-    return LEET_H_INDEX_II();                                                // Accepted
+    // return LEET_H_INDEX_II();                                                // Accepted
+    return LEET_LONGEST_DUPLICATE_SUBSTRING();                               // Accepted
 }

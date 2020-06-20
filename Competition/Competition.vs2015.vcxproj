@@ -399,6 +399,7 @@
     <ClInclude Include="LEET_PERFECT_RECTANGLE.h" />
     <ClInclude Include="LEET_PERFECT_SQUARES.h" />
     <ClInclude Include="LEET_PERMUTATION_IN_STRING.h" />
+    <ClInclude Include="LEET_PERMUTATION_SEQUENCE.h" />
     <ClInclude Include="LEET_PERMUTATIONS.h" />
     <ClInclude Include="LEET_PLUS_ONE.h" />
     <ClInclude Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.h" />
@@ -926,6 +927,7 @@
     <ClCompile Include="LEET_PERFECT_RECTANGLE.cpp" />
     <ClCompile Include="LEET_PERFECT_SQUARES.cpp" />
     <ClCompile Include="LEET_PERMUTATION_IN_STRING.cpp" />
+    <ClCompile Include="LEET_PERMUTATION_SEQUENCE.cpp" />
     <ClCompile Include="LEET_PERMUTATIONS.cpp" />
     <ClCompile Include="LEET_PLUS_ONE.cpp" />
     <ClCompile Include="LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE.cpp" />

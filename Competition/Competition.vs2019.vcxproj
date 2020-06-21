@@ -240,6 +240,7 @@
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
     <ClInclude Include="LEET_DIAMETER_OF_BINARY_TREE.h" />
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
+    <ClInclude Include="LEET_DUNGEON_GAME.h" />
     <ClInclude Include="LEET_EDIT_DISTANCE.h" />
     <ClInclude Include="LEET_ELIMINATION_GAME.h" />
     <ClInclude Include="LEET_EQUAL_RATIONAL_NUMBERS.h" />
@@ -768,6 +769,7 @@
     <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />
     <ClCompile Include="LEET_DIAMETER_OF_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
+    <ClCompile Include="LEET_DUNGEON_GAME.cpp" />
     <ClCompile Include="LEET_EDIT_DISTANCE.cpp" />
     <ClCompile Include="LEET_ELIMINATION_GAME.cpp" />
     <ClCompile Include="LEET_EQUAL_RATIONAL_NUMBERS.cpp" />

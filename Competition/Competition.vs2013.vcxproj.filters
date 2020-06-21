@@ -321,6 +321,9 @@
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_DUNGEON_GAME.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_EDIT_DISTANCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1899,6 +1902,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_DUNGEON_GAME.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_EDIT_DISTANCE.cpp">

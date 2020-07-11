@@ -351,6 +351,7 @@
     <ClInclude Include="LEET_PREDICT_THE_WINNER.h" />
     <ClInclude Include="LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION.h" />
     <ClInclude Include="LEET_PRINT_BINARY_TREE.h" />
+    <ClInclude Include="LEET_PRISON_CELLS_AFTER_N_DAYS.h" />
     <ClInclude Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.h" />
     <ClInclude Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.h" />
     <ClInclude Include="LEET_RANDOM_PICK_INDEX.h" />
@@ -881,6 +882,7 @@
     <ClCompile Include="LEET_PREDICT_THE_WINNER.cpp" />
     <ClCompile Include="LEET_PREIMAGE_SIZE_OF_FACTORIAL_ZEROES_FUNCTION.cpp" />
     <ClCompile Include="LEET_PRINT_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_PRISON_CELLS_AFTER_N_DAYS.cpp" />
     <ClCompile Include="LEET_PRODUCT_OF_ARRAY_EXCEPT_SELF.cpp" />
     <ClCompile Include="LEET_QUEUE_RECONSTRUCTION_BY_HEIGHT.cpp" />
     <ClCompile Include="LEET_RANDOM_PICK_INDEX.cpp" />

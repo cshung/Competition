@@ -528,6 +528,7 @@
 #include "LEET_PERMUTATION_SEQUENCE.h"                                      // 522
 #include "LEET_DUNGEON_GAME.h"                                              // 523
 #include "LEET_WORD_SEARCH_II.h"                                            // 524
+#include "LEET_PRISON_CELLS_AFTER_N_DAYS.h"                                 // 525
 
 // End of headers
 
@@ -1066,5 +1067,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LONGEST_DUPLICATE_SUBSTRING();                               // Accepted
     // return LEET_PERMUTATION_SEQUENCE();                                      // Accepted
     // return LEET_DUNGEON_GAME();                                              // Accepted
-    return LEET_WORD_SEARCH_II();                                            // Accepted
+    // return LEET_WORD_SEARCH_II();                                            // Accepted
+    return LEET_PRISON_CELLS_AFTER_N_DAYS();                                 // Accepted
 }

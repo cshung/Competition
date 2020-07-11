@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_FLATTEN_A_MULTILEVEL_DOUBLY_LINKED_LIST();

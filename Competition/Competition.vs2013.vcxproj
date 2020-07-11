@@ -202,6 +202,7 @@
     <ClInclude Include="LEET_FIRST_BAD_VERSION.h" />
     <ClInclude Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.h" />
     <ClInclude Include="LEET_FIZZ_BUZZ.h" />
+    <ClInclude Include="LEET_FLATTEN_A_MULTILEVEL_DOUBLY_LINKED_LIST.h" />
     <ClInclude Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.h" />
     <ClInclude Include="LEET_FLIP_STRING_TO_MONOTONE_INCREASING.h" />
     <ClInclude Include="LEET_FLIPPING_AN_IMAGE.h" />
@@ -733,6 +734,7 @@
     <ClCompile Include="LEET_FIRST_BAD_VERSION.cpp" />
     <ClCompile Include="LEET_FIRST_UNIQUE_CHARACTER_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_FIZZ_BUZZ.cpp" />
+    <ClCompile Include="LEET_FLATTEN_A_MULTILEVEL_DOUBLY_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_FLATTEN_BINARY_TREE_TO_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_FLIP_STRING_TO_MONOTONE_INCREASING.cpp" />
     <ClCompile Include="LEET_FLIPPING_AN_IMAGE.cpp" />

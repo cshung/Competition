@@ -1209,6 +1209,9 @@
     <ClInclude Include="LEET_WORD_PATTERN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_WORD_SEARCH_II.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2790,6 +2793,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_WORD_PATTERN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_WORD_SEARCH_II.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp">

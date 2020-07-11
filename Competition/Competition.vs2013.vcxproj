@@ -475,6 +475,7 @@
     <ClInclude Include="LEET_WIGGLE_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_WORD_LADDER.h" />
     <ClInclude Include="LEET_WORD_PATTERN.h" />
+    <ClInclude Include="LEET_WORD_SEARCH_II.h" />
     <ClInclude Include="LEET_ZIGZAG_CONVERSION.h" />
     <ClInclude Include="POJ1029.h" />
     <ClInclude Include="SPOJ_CANDY.h" />
@@ -1004,6 +1005,7 @@
     <ClCompile Include="LEET_WIGGLE_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_WORD_LADDER.cpp" />
     <ClCompile Include="LEET_WORD_PATTERN.cpp" />
+    <ClCompile Include="LEET_WORD_SEARCH_II.cpp" />
     <ClCompile Include="LEET_ZIGZAG_CONVERSION.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="POJ1029.cpp" />

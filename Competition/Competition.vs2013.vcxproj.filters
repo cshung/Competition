@@ -114,6 +114,9 @@
     <ClInclude Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1704,6 +1707,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp">

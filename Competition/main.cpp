@@ -530,6 +530,7 @@
 #include "LEET_WORD_SEARCH_II.h"                                            // 524
 #include "LEET_PRISON_CELLS_AFTER_N_DAYS.h"                                 // 525
 #include "LEET_FLATTEN_A_MULTILEVEL_DOUBLY_LINKED_LIST.h"                   // 526
+#include "LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.h"                            // 527
 
 // End of headers
 
@@ -1070,5 +1071,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DUNGEON_GAME();                                              // Accepted
     // return LEET_WORD_SEARCH_II();                                            // Accepted
     // return LEET_PRISON_CELLS_AFTER_N_DAYS();                                 // Accepted
-    return LEET_FLATTEN_A_MULTILEVEL_DOUBLY_LINKED_LIST();                   // Accepted
+    // return LEET_FLATTEN_A_MULTILEVEL_DOUBLY_LINKED_LIST();                   // Accepted
+    return LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK();                            // Accepted
 }

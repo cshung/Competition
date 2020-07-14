@@ -110,6 +110,7 @@
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
     <ClInclude Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.h" />
+    <ClInclude Include="LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.h" />
     <ClInclude Include="LEET_ARITHMETIC_SLICES.h" />
     <ClInclude Include="LEET_ARRANGING_COINS.h" />
     <ClInclude Include="LEET_ARRAY_PARTITION_I.h" />
@@ -642,6 +643,7 @@
     <ClCompile Include="LEET_ADD_STRINGS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
     <ClCompile Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.cpp" />
+    <ClCompile Include="LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.cpp" />
     <ClCompile Include="LEET_ARITHMETIC_SLICES.cpp" />
     <ClCompile Include="LEET_ARRANGING_COINS.cpp" />
     <ClCompile Include="LEET_ARRAY_PARTITION_I.cpp" />

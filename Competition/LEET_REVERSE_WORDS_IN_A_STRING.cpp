@@ -101,7 +101,7 @@ namespace _LEET_REVERSE_WORDS_IN_A_STRING
                     }
                 }
             }
-            if (s[j - 1] == ' ')
+            if (j > 0 && s[j - 1] == ' ')
             {
                 j--;
             }
@@ -116,7 +116,6 @@ int LEET_REVERSE_WORDS_IN_A_STRING()
 {
     Solution solution;
     string s = "  the  sky  is  blue  ";
-    //string s = "the sky is blue";
     solution.reverseWords(s);
     cout << "'" << s << "'" << endl;
     return 0;

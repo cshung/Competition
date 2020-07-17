@@ -512,6 +512,7 @@
     <ClInclude Include="LEET_THE_SKYLINE_PROBLEM.h" />
     <ClInclude Include="LEET_THIRD_MAXIMUM_NUMBER.h" />
     <ClInclude Include="LEET_THREE_EQUAL_PARTS.h" />
+    <ClInclude Include="LEET_TOP_K_FREQUENT_ELEMENTS.h" />
     <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h" />
     <ClInclude Include="LEET_TRAPPING_RAIN_WATER.h" />
     <ClInclude Include="LEET_TRIANGLE.h" />
@@ -1045,6 +1046,7 @@
     <ClCompile Include="LEET_THE_SKYLINE_PROBLEM.cpp" />
     <ClCompile Include="LEET_THIRD_MAXIMUM_NUMBER.cpp" />
     <ClCompile Include="LEET_THREE_EQUAL_PARTS.cpp" />
+    <ClCompile Include="LEET_TOP_K_FREQUENT_ELEMENTS.cpp" />
     <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp" />
     <ClCompile Include="LEET_TRAPPING_RAIN_WATER.cpp" />
     <ClCompile Include="LEET_TRIANGLE.cpp" />

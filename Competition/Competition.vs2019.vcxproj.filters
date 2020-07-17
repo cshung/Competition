@@ -1137,6 +1137,9 @@
     <ClInclude Include="LEET_THREE_EQUAL_PARTS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TOP_K_FREQUENT_ELEMENTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_TOTAL_HAMMING_DISTANCE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2730,6 +2733,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_THREE_EQUAL_PARTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TOP_K_FREQUENT_ELEMENTS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_TOTAL_HAMMING_DISTANCE.cpp">

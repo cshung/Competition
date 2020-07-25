@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_ALL_PATHS_FROM_SOURCE_TO_TARGET();

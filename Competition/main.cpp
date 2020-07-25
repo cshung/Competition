@@ -535,6 +535,7 @@
 #include "LEET_COURSE_SCHEDULE_II.h"                                        // 529
 #include "LEET_WORD_SEARCH.h"                                               // 530
 #include "LEET_ALL_PATHS_FROM_SOURCE_TO_TARGET.h"                           // 531
+#include "LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_II.h"                   // 532
 
 // End of headers
 
@@ -1080,5 +1081,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_TOP_K_FREQUENT_ELEMENTS();                                   // Accepted
     // return LEET_COURSE_SCHEDULE_II();                                        // Accepted
     // return LEET_WORD_SEARCH();                                               // Accepted
-    return LEET_ALL_PATHS_FROM_SOURCE_TO_TARGET();                           // Accepted
+    // return LEET_ALL_PATHS_FROM_SOURCE_TO_TARGET();                           // Accepted
+    return LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_II();                   // Accepted
 }

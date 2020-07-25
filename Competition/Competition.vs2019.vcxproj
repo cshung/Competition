@@ -258,6 +258,7 @@
     <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.h" />
+    <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_II.h" />
     <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
@@ -795,6 +796,7 @@
     <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp" />
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY.cpp" />
+    <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_II.cpp" />
     <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
     <ClCompile Include="LEET_FIND_THE_DIFFERENCE.cpp" />

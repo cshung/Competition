@@ -39,7 +39,7 @@ def build_kmp_shift(pattern):
   # matches the prefix
   #
   # z[i] is the length of the z-box starting from i
-  z = [0] * len(pattern)
+  z = build_z(pattern)
   #
   # shifts[i] is the amount of shift possible if a mismatch happens
   # on the i + 1 character. Mismatching on the 0th character needs
@@ -57,6 +57,26 @@ def build_kmp_shift(pattern):
   # no need to align the pattern, because we knew it wouldn't match.
   #
   shifts = list(range(1, len(pattern) + 1))
+  for i in range(1, len(pattern)):
+    length = z[i]
+    if i < shifts[i + length - 1]:
+      #
+      # After detecting a z-box, we need to update the shifts so that the z-box 
+      # align with the prefix, this is done by shifting the pattern by i step
+      # 
+      # The comparation above is there to make sure if there are two z-box
+      # terminate at exactly the same position, we take the shorter shift
+      #
+      shifts[i + length - 1] = i
+  if False:
+    for i in range(0, len(pattern)):
+      print(' ' * (i + 1) + '*')
+      print(pattern)
+      print(' ' * shifts[i] + pattern)
+  return shifts
+
+def build_z(pattern):
+  z = [0] * len(pattern)
   rightmost_zbox_left = 0
   rightmost_zbox_right = 0
   for i in range(1, len(pattern)):
@@ -90,21 +110,7 @@ def build_kmp_shift(pattern):
     # Record the z-box's length
     #
     z[i] = length
-    if i < shifts[i + length - 1]:
-      #
-      # After detecting a z-box, we need to update the shifts so that the z-box 
-      # align with the prefix, this is done by shifting the pattern by i step
-      # 
-      # The comparation above is there to make sure if there are two z-box
-      # terminate at exactly the same position, we take the shorter shift
-      #
-      shifts[i + length - 1] = i
     if i + length > rightmost_zbox_right:
       rightmost_zbox_left = i
       rightmost_zbox_right = i + length
-  if False:
-    for i in range(0, len(pattern)):
-      print(' ' * (i + 1) + '*')
-      print(pattern)
-      print(' ' * shifts[i] + pattern)
-  return shifts
+  return z

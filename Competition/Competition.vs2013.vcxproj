@@ -124,6 +124,7 @@
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h" />
+    <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_WITH_COOLDOWN.h" />
     <ClInclude Include="LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.h" />
     <ClInclude Include="LEET_BINARY_SEARCH_TREE_ITERATOR.h" />
     <ClInclude Include="LEET_BINARY_TREE_CAMERAS.h" />
@@ -663,6 +664,7 @@
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />
+    <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_WITH_COOLDOWN.cpp" />
     <ClCompile Include="LEET_BINARY_NUMBER_WITH_ALTERNATING_BITS.cpp" />
     <ClCompile Include="LEET_BINARY_SEARCH_TREE_ITERATOR.cpp" />
     <ClCompile Include="LEET_BINARY_TREE_CAMERAS.cpp" />

@@ -5,7 +5,7 @@ import math
 
 def perm(n):
   answers = []
-  perm_worker(range(1, n + 1), 0, answers)
+  perm_worker(list(range(1, n + 1)), 0, answers)
   return answers
 
 def perm_worker(l, i, answers):

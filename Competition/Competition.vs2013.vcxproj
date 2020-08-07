@@ -196,6 +196,7 @@
     <ClInclude Include="LEET_EXCEL_SHEET_COLUMN_TITLE.h" />
     <ClInclude Include="LEET_FACTORIAL_TRAILING_ZEROES.h" />
     <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h" />
+    <ClInclude Include="LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h" />
     <ClInclude Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.h" />
     <ClInclude Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.h" />
@@ -737,6 +738,7 @@
     <ClCompile Include="LEET_EXCEL_SHEET_COLUMN_TITLE.cpp" />
     <ClCompile Include="LEET_FACTORIAL_TRAILING_ZEROES.cpp" />
     <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp" />
+    <ClCompile Include="LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp" />
     <ClCompile Include="LEET_FIND_LARGEST_VALUE_IN_EACH_TREE_ROW.cpp" />
     <ClCompile Include="LEET_FIND_MEDIAN_FROM_DATA_STREAM.cpp" />

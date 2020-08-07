@@ -372,6 +372,9 @@
     <ClInclude Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1989,6 +1992,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIND_ALL_ANAGRAMS_IN_A_STRING.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_FIND_BOTTOM_LEFT_TREE_VALUE.cpp">

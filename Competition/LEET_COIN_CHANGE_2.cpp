@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/climbing-stairs/
+// https://leetcode.com/problems/coin-change-2/
 
 #include "LEET_COIN_CHANGE_2.h"
 #include <map>

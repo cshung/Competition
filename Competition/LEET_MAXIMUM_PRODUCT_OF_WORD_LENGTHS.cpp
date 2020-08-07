@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/climbing-stairs/
+// https://leetcode.com/problems/maximum-product-of-word-lengths/
 
 #include "LEET_MAXIMUM_PRODUCT_OF_WORD_LENGTHS.h"
 #include <algorithm>

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-// https://leetcode.com/problems/climbing-stairs/
+// https://leetcode.com/problems/palindrome-number/
 
 #include "LEET_PALINDROME_NUMBER.h"
 #include <map>

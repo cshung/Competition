@@ -540,6 +540,7 @@
 #include "LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_WITH_COOLDOWN.h"             // 534
 #include "LEET_DESIGN_HASHSET.h"                                            // 535
 #include "LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY.h"                           // 536
+#include "LEET_VERTICAL_ORDER_TRAVERSAL_OF_A_BINARY_TREE.h"                 // 537
 
 // End of headers
 
@@ -1090,5 +1091,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DETECT_CAPITAL();                                            // Accepted
     // return LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_WITH_COOLDOWN();             // Accepted
     // return LEET_DESIGN_HASHSET();                                            // Accepted
-    return LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY();                           // Accepted
+    // return LEET_FIND_ALL_DUPLICATES_IN_AN_ARRAY();                           // Accepted
+    return LEET_VERTICAL_ORDER_TRAVERSAL_OF_A_BINARY_TREE();                 // Accepted
 }

@@ -402,6 +402,7 @@
     <ClInclude Include="LEET_ROTATE_FUNCTION.h" />
     <ClInclude Include="LEET_ROTATE_IMAGE.h" />
     <ClInclude Include="LEET_ROTATE_LIST.h" />
+    <ClInclude Include="LEET_ROTTING_ORANGES.h" />
     <ClInclude Include="LEET_RUSSIAN_DOLL_ENVELOPES.h" />
     <ClInclude Include="LEET_SAME_TREE.h" />
     <ClInclude Include="LEET_SEARCH_A_2D_MATRIX.h" />
@@ -946,6 +947,7 @@
     <ClCompile Include="LEET_ROTATE_FUNCTION.cpp" />
     <ClCompile Include="LEET_ROTATE_IMAGE.cpp" />
     <ClCompile Include="LEET_ROTATE_LIST.cpp" />
+    <ClCompile Include="LEET_ROTTING_ORANGES.cpp" />
     <ClCompile Include="LEET_RUSSIAN_DOLL_ENVELOPES.cpp" />
     <ClCompile Include="LEET_SAME_TREE.cpp" />
     <ClCompile Include="LEET_SEARCH_A_2D_MATRIX.cpp" />

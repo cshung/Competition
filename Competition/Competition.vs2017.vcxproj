@@ -338,6 +338,7 @@
     <ClInclude Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.h" />
     <ClInclude Include="LEET_LRU_CACHE.h" />
     <ClInclude Include="LEET_MAJORITY_ELEMENT.h" />
+    <ClInclude Include="LEET_MAKE_THE_STRING_GREAT.h" />
     <ClInclude Include="LEET_MAX_AREA_OF_ISLAND.h" />
     <ClInclude Include="LEET_MAX_INCREASE_TO_KEEP_CITY_SKYLINE.h" />
     <ClInclude Include="LEET_MAX_POINTS_ON_A_LINE.h" />
@@ -883,6 +884,7 @@
     <ClCompile Include="LEET_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_LRU_CACHE.cpp" />
     <ClCompile Include="LEET_MAJORITY_ELEMENT.cpp" />
+    <ClCompile Include="LEET_MAKE_THE_STRING_GREAT.cpp" />
     <ClCompile Include="LEET_MAX_AREA_OF_ISLAND.cpp" />
     <ClCompile Include="LEET_MAX_INCREASE_TO_KEEP_CITY_SKYLINE.cpp" />
     <ClCompile Include="LEET_MAX_POINTS_ON_A_LINE.cpp" />

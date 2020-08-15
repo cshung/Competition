@@ -243,6 +243,7 @@
     <ClInclude Include="LEET_IS_SUBSEQUENCE.h" />
     <ClInclude Include="LEET_ISLAND_PERIMETER.h" />
     <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h" />
+    <ClInclude Include="LEET_ITERATOR_FOR_COMBINATION.h" />
     <ClInclude Include="LEET_JEWELS_AND_STONES.h" />
     <ClInclude Include="LEET_JUMP_GAME.h" />
     <ClInclude Include="LEET_JUMP_GAME_II.h" />
@@ -790,6 +791,7 @@
     <ClCompile Include="LEET_IS_SUBSEQUENCE.cpp" />
     <ClCompile Include="LEET_ISLAND_PERIMETER.cpp" />
     <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp" />
+    <ClCompile Include="LEET_ITERATOR_FOR_COMBINATION.cpp" />
     <ClCompile Include="LEET_JEWELS_AND_STONES.cpp" />
     <ClCompile Include="LEET_JUMP_GAME.cpp" />
     <ClCompile Include="LEET_JUMP_GAME_II.cpp" />

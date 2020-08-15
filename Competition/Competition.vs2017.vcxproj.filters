@@ -513,6 +513,9 @@
     <ClInclude Include="LEET_ISOMORPHIC_STRINGS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_ITERATOR_FOR_COMBINATION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_JEWELS_AND_STONES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2148,6 +2151,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ISOMORPHIC_STRINGS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_ITERATOR_FOR_COMBINATION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_JEWELS_AND_STONES.cpp">

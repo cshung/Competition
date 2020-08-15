@@ -384,6 +384,7 @@
     <ClInclude Include="LEET_NETWORK_DELAY_TIME.h" />
     <ClInclude Include="LEET_NEXT_PERMUTATION.h" />
     <ClInclude Include="LEET_NIM_GAME.h" />
+    <ClInclude Include="LEET_NON_OVERLAPPING_INTERVALS.h" />
     <ClInclude Include="LEET_NTH_DIGIT.h" />
     <ClInclude Include="LEET_NUMBER_OF_1_BITS.h" />
     <ClInclude Include="LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH.h" />
@@ -932,6 +933,7 @@
     <ClCompile Include="LEET_NETWORK_DELAY_TIME.cpp" />
     <ClCompile Include="LEET_NEXT_PERMUTATION.cpp" />
     <ClCompile Include="LEET_NIM_GAME.cpp" />
+    <ClCompile Include="LEET_NON_OVERLAPPING_INTERVALS.cpp" />
     <ClCompile Include="LEET_NTH_DIGIT.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_1_BITS.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_CONNECTED_COMPONENTS_IN_AN_UNDIRECTED_GRAPH.cpp" />

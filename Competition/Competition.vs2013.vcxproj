@@ -250,6 +250,7 @@
     <ClInclude Include="LEET_KILL_PROCESS.h" />
     <ClInclude Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.h" />
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
+    <ClInclude Include="LEET_KTH_MISSING_POSITIVE_NUMBER.h" />
     <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
@@ -796,6 +797,7 @@
     <ClCompile Include="LEET_KILL_PROCESS.cpp" />
     <ClCompile Include="LEET_KNIGHT_PROBABILITY_IN_CHESSBOARD.cpp" />
     <ClCompile Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.cpp" />
+    <ClCompile Include="LEET_KTH_MISSING_POSITIVE_NUMBER.cpp" />
     <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />

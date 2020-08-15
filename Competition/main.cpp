@@ -544,6 +544,7 @@
 #include "LEET_WORD_BREAK_II.h"                                             // 538
 #include "LEET_ROTTING_ORANGES.h"                                           // 539
 #include "LEET_MAKE_THE_STRING_GREAT.h"                                     // 540
+#include "LEET_KTH_MISSING_POSITIVE_NUMBER.h"                               // 541
 
 // End of headers
 
@@ -1098,5 +1099,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_VERTICAL_ORDER_TRAVERSAL_OF_A_BINARY_TREE();                 // Accepted
     // return LEET_WORD_BREAK_II();                                             // Accepted
     // return LEET_ROTTING_ORANGES();                                           // Accepted
-    return LEET_MAKE_THE_STRING_GREAT();                                     // Accepted
+    // return LEET_MAKE_THE_STRING_GREAT();                                     // Accepted
+    return LEET_KTH_MISSING_POSITIVE_NUMBER();                               // Accepted
 }

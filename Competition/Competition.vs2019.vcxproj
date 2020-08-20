@@ -280,6 +280,7 @@
     <ClInclude Include="LEET_GAME_OF_LIFE.h" />
     <ClInclude Include="LEET_GAS_STATION.h" />
     <ClInclude Include="LEET_GENERATE_PARENTHESES.h" />
+    <ClInclude Include="LEET_GOAT_LATIN.h" />
     <ClInclude Include="LEET_GRAPH_VALID_TREE.h" />
     <ClInclude Include="LEET_GRAY_CODE.h" />
     <ClInclude Include="LEET_GROUP_SHIFTED_STRINGS.h" />
@@ -831,6 +832,7 @@
     <ClCompile Include="LEET_GAME_OF_LIFE.cpp" />
     <ClCompile Include="LEET_GAS_STATION.cpp" />
     <ClCompile Include="LEET_GENERATE_PARENTHESES.cpp" />
+    <ClCompile Include="LEET_GOAT_LATIN.cpp" />
     <ClCompile Include="LEET_GRAPH_VALID_TREE.cpp" />
     <ClCompile Include="LEET_GRAY_CODE.cpp" />
     <ClCompile Include="LEET_GROUP_SHIFTED_STRINGS.cpp" />

@@ -394,6 +394,7 @@
     <ClInclude Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.h" />
     <ClInclude Include="LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM.h" />
     <ClInclude Include="LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.h" />
+    <ClInclude Include="LEET_NUMBERS_WITH_SAME_CONSECUTIVE_DIFFERENCES.h" />
     <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h" />
     <ClInclude Include="LEET_ONE_EDIT_DISTANCE.h" />
     <ClInclude Include="LEET_ONES_AND_ZEROES.h" />
@@ -944,6 +945,7 @@
     <ClCompile Include="LEET_NUMBER_OF_SEGMENTS_IN_A_STRING.cpp" />
     <ClCompile Include="LEET_NUMBER_OF_SUBARRAYS_WITH_BOUNDED_MAXIMUM.cpp" />
     <ClCompile Include="LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.cpp" />
+    <ClCompile Include="LEET_NUMBERS_WITH_SAME_CONSECUTIVE_DIFFERENCES.cpp" />
     <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_ONE_EDIT_DISTANCE.cpp" />
     <ClCompile Include="LEET_ONES_AND_ZEROES.cpp" />

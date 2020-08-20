@@ -783,6 +783,9 @@
     <ClInclude Include="LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_NUMBERS_WITH_SAME_CONSECUTIVE_DIFFERENCES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_ODD_EVEN_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2427,6 +2430,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_NUMBERS_AT_MOST_N_GIVEN_DIGIT_SET.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_NUMBERS_WITH_SAME_CONSECUTIVE_DIFFERENCES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_ODD_EVEN_LINKED_LIST.cpp">

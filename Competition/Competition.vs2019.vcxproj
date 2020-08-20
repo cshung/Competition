@@ -245,6 +245,7 @@
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
     <ClInclude Include="LEET_DETECT_CAPITAL.h" />
     <ClInclude Include="LEET_DIAMETER_OF_BINARY_TREE.h" />
+    <ClInclude Include="LEET_DISTRIBUTE_CANDIES_TO_PEOPLE.h" />
     <ClInclude Include="LEET_DIVIDE_TWO_INTEGERS.h" />
     <ClInclude Include="LEET_DUNGEON_GAME.h" />
     <ClInclude Include="LEET_EDIT_DISTANCE.h" />
@@ -794,6 +795,7 @@
     <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />
     <ClCompile Include="LEET_DETECT_CAPITAL.cpp" />
     <ClCompile Include="LEET_DIAMETER_OF_BINARY_TREE.cpp" />
+    <ClCompile Include="LEET_DISTRIBUTE_CANDIES_TO_PEOPLE.cpp" />
     <ClCompile Include="LEET_DIVIDE_TWO_INTEGERS.cpp" />
     <ClCompile Include="LEET_DUNGEON_GAME.cpp" />
     <ClCompile Include="LEET_EDIT_DISTANCE.cpp" />

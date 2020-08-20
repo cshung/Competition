@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_DISTRIBUTE_CANDIES_TO_PEOPLE();

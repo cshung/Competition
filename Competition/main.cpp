@@ -547,6 +547,7 @@
 #include "LEET_KTH_MISSING_POSITIVE_NUMBER.h"                               // 541
 #include "LEET_ITERATOR_FOR_COMBINATION.h"                                  // 542
 #include "LEET_NON_OVERLAPPING_INTERVALS.h"                                 // 543
+#include "LEET_DISTRIBUTE_CANDIES_TO_PEOPLE.h"                              // 544
 
 // End of headers
 
@@ -1104,5 +1105,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_MAKE_THE_STRING_GREAT();                                     // Accepted
     // return LEET_KTH_MISSING_POSITIVE_NUMBER();                               // Accepted
     // return LEET_ITERATOR_FOR_COMBINATION();                                  // Accepted
-    return LEET_NON_OVERLAPPING_INTERVALS();                                 // Accepted
+    // return LEET_NON_OVERLAPPING_INTERVALS();                                 // Accepted
+    return LEET_DISTRIBUTE_CANDIES_TO_PEOPLE();                              // Accepted
 }

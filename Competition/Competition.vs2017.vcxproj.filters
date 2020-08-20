@@ -966,6 +966,9 @@
     <ClInclude Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REORDER_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2616,6 +2619,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REORDER_LIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp">

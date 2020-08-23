@@ -900,6 +900,9 @@
     <ClInclude Include="LEET_RANDOM_PICK_WITH_WEIGHT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_RANDOM_POINT_IN_NON_OVERLAPPING_RECTANGLES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2553,6 +2556,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RANDOM_PICK_WITH_WEIGHT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_RANDOM_POINT_IN_NON_OVERLAPPING_RECTANGLES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RANGE_SUM_QUERY_2D_IMMUTABLE.cpp">

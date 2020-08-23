@@ -551,6 +551,7 @@
 #include "LEET_NUMBERS_WITH_SAME_CONSECUTIVE_DIFFERENCES.h"                 // 545
 #include "LEET_GOAT_LATIN.h"                                                // 546
 #include "LEET_REORDER_LIST.h"                                              // 547
+#include "LEET_RANDOM_POINT_IN_NON_OVERLAPPING_RECTANGLES.h"                // 548
 
 // End of headers
 
@@ -1112,5 +1113,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_DISTRIBUTE_CANDIES_TO_PEOPLE();                              // Accepted
     // return LEET_NUMBERS_WITH_SAME_CONSECUTIVE_DIFFERENCES();                 // Accepted
     // return LEET_GOAT_LATIN();                                                // Accepted
-    return LEET_REORDER_LIST();                                              // Accepted
+    // return LEET_REORDER_LIST();                                              // Accepted
+    return LEET_RANDOM_POINT_IN_NON_OVERLAPPING_RECTANGLES();                // Accepted
 }

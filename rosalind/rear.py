@@ -5,6 +5,43 @@ from collections import deque
 from math import factorial
 import datetime
 
+def encode(perm):
+    code = list(perm)
+    for i in range(0, len(code)):
+        count = 0
+        for j in range(i + 1, len(code)):
+            if code[i] > code[j]:
+                count = count + 1
+            else:
+                code[j] = code[j] - 1
+    return code
+
+def decode(perm):
+    code = list(perm)
+    for k in range(0, len(code)):
+        i = len(code) - k - 1
+        count = 0
+        for j in range(i + 1, len(code)):
+            if code[i] > code[j]:
+                count = count + 1
+            else:
+                code[j] = code[j] + 1
+    return code    
+
+def to_number(code):
+    answer = 0
+    for i in range(0, len(code)):
+        answer = answer + factorial(i) * code[len(code) - i - 1]
+    return answer
+
+def from_number(n, length):
+    code = [0] * length
+    for i in range(0, length):
+        remainder = n % (i + 1)
+        code[len(code) - 1 - i] = remainder
+        n = n // (i + 1)
+    return code
+
 def prepare():
   print (datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
   last_progress = 0

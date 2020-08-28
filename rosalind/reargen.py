@@ -1,5 +1,4 @@
 import sys
-import datetime
 from collections import deque
 from math import factorial
 from libperm import encode
@@ -9,13 +8,13 @@ def eprint(*args, **kwargs):
   print(*args, file=sys.stderr, **kwargs)
 
 def main():
-  last_progress = 0
+  progress = 0
+  last_progress_percent = 0
   n = 10
-  done = factorial(n)
   root = list(range(0, n))
   bfs_parent = deque()
   bfs_perm = deque()
-  parents = {}
+  parents = [None] * factorial(n)
   bfs_parent.append(None)
   bfs_perm.append(encode(root))
   parents[encode(root)] = 0
@@ -34,16 +33,15 @@ def main():
           left = left + 1
           right = right - 1
         neighbor_key = encode(perm)
-        if neighbor_key not in parents:
+        if parents[neighbor_key] == None:
           bfs_perm.append(neighbor_key)
           bfs_parent.append(key)
           parents[neighbor_key] = key
-          progress = len(parents) * 100 // done
-          if progress != last_progress:
-            eprint(progress)
-            last_progress = progress
-          if (len(parents) == done):
-            break
+          progress = progress + 1
+          progress_percent = progress * 100 // len(parents)
+          if progress_percent != last_progress_percent:
+            eprint(progress_percent)
+            last_progress_percent = progress_percent
         left = i
         right = j 
         while left < right:
@@ -52,9 +50,9 @@ def main():
           perm[right] = temp
           left = left + 1
           right = right - 1
-  print("parents = [0] * %s" % len(parents))
-  for key in parents:
-    print("parents[%s] = %s" % (key, parents[key]))
+    if progress == len(parents):
+      break
+  print("parents = %s" % parents)
 
 if __name__ == "__main__":
   main()

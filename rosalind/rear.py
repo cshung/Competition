@@ -1,12 +1,8 @@
 # http://rosalind.info/problems/rear/
 
 from sys import stdin
-from collections import deque
-from math import factorial
-import datetime
 from librear import parents
 from libperm import encode
-from libperm import decode
 
 def reversal_distance(source, target):
   map = {}

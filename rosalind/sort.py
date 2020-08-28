@@ -1,4 +1,4 @@
-# http://rosalind.info/problems/rear/
+# http://rosalind.info/problems/sort/
 
 from sys import stdin
 from collections import deque
@@ -8,7 +8,9 @@ from librear import parents
 from libperm import encode
 from libperm import decode
 
-def reversal_distance(target, source):
+def sort(data):
+  source = data[1]
+  target = data[0]
   map = {}
   for canon in range(0, len(source)):
     map[source[canon] - 1] = canon
@@ -30,10 +32,6 @@ def reversal_distance(target, source):
       last = last - 1
     path.append((first + 1, last + 1))
     distance = distance + 1
-  return (distance, path)
-
-def sort(data):
-  (distance, path) = reversal_distance(data[0], data[1])
   print(distance)
   for element in path:
     print("%s %s" % element)

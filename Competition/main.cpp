@@ -553,6 +553,7 @@
 #include "LEET_REORDER_LIST.h"                                              // 547
 #include "LEET_RANDOM_POINT_IN_NON_OVERLAPPING_RECTANGLES.h"                // 548
 #include "LEET_STREAM_OF_CHARACTERS.h"                                      // 549
+#include "LEET_MINIMUM_COST_FOR_TICKETS.h"                                  // 550
 
 // End of headers
 
@@ -1116,5 +1117,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_GOAT_LATIN();                                                // Accepted
     // return LEET_REORDER_LIST();                                              // Accepted
     // return LEET_RANDOM_POINT_IN_NON_OVERLAPPING_RECTANGLES();                // Accepted
-    return LEET_STREAM_OF_CHARACTERS();                                      // Accepted
+    // return LEET_STREAM_OF_CHARACTERS();                                      // Accepted
+    return LEET_MINIMUM_COST_FOR_TICKETS();                                  // Accepted
 }

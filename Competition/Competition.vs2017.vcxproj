@@ -266,6 +266,7 @@
     <ClInclude Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_II.h" />
     <ClInclude Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_FIND_PEAK_ELEMENT.h" />
+    <ClInclude Include="LEET_FIND_RIGHT_INTERVAL.h" />
     <ClInclude Include="LEET_FIND_THE_DIFFERENCE.h" />
     <ClInclude Include="LEET_FIND_THE_DUPLICATE_NUMBER.h" />
     <ClInclude Include="LEET_FIND_THE_TOWN_JUDGE.h" />
@@ -822,6 +823,7 @@
     <ClCompile Include="LEET_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_II.cpp" />
     <ClCompile Include="LEET_FIND_MODE_IN_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_FIND_PEAK_ELEMENT.cpp" />
+    <ClCompile Include="LEET_FIND_RIGHT_INTERVAL.cpp" />
     <ClCompile Include="LEET_FIND_THE_DIFFERENCE.cpp" />
     <ClCompile Include="LEET_FIND_THE_DUPLICATE_NUMBER.cpp" />
     <ClCompile Include="LEET_FIND_THE_TOWN_JUDGE.cpp" />

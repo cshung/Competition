@@ -358,6 +358,7 @@
     <ClInclude Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.h" />
     <ClInclude Include="LEET_MEETING_ROOMS_II.h" />
+    <ClInclude Include="LEET_MERGE_INTERVALS.h" />
     <ClInclude Include="LEET_MERGE_K_SORTED_LISTS.h" />
     <ClInclude Include="LEET_MERGE_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_MERGE_TWO_BINARY_TREES.h" />
@@ -916,6 +917,7 @@
     <ClCompile Include="LEET_MAXIMUM_XOR_OF_TWO_NUMBERS_IN_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_MEDIAN_OF_TWO_SORTED_ARRAYS.cpp" />
     <ClCompile Include="LEET_MEETING_ROOMS_II.cpp" />
+    <ClCompile Include="LEET_MERGE_INTERVALS.cpp" />
     <ClCompile Include="LEET_MERGE_K_SORTED_LISTS.cpp" />
     <ClCompile Include="LEET_MERGE_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_MERGE_TWO_BINARY_TREES.cpp" />

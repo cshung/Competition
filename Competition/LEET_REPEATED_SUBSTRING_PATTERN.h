@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_REPEATED_SUBSTRING_PATTERN();

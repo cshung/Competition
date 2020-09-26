@@ -558,6 +558,7 @@
 #include "LEET_PANCAKE_SORTING.h"                                           // 552
 #include "LEET_MERGE_INTERVALS.h"                                           // 553
 #include "LEET_PARTITION_LABELS.h"                                          // 554
+#include "LEET_REPEATED_SUBSTRING_PATTERN.h"                                // 555
 
 // End of headers
 
@@ -1126,5 +1127,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_FIND_RIGHT_INTERVAL();                                       // Accepted
     // return LEET_PANCAKE_SORTING();                                           // Accepted
     // return LEET_MERGE_INTERVALS();                                           // Accepted
-    return LEET_PARTITION_LABELS();                                          // Accepted
+    // return LEET_PARTITION_LABELS();                                          // Accepted
+    return LEET_REPEATED_SUBSTRING_PATTERN();                                // Accepted
 }

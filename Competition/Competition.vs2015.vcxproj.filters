@@ -990,6 +990,9 @@
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_REPEATED_SUBSTRING_PATTERN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_RESTORE_IP_ADDRESSES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2664,6 +2667,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_REPEATED_SUBSTRING_PATTERN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_RESTORE_IP_ADDRESSES.cpp">

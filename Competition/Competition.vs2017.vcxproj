@@ -463,6 +463,7 @@
     <ClInclude Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.h" />
     <ClInclude Include="LEET_REORDER_LIST.h" />
     <ClInclude Include="LEET_REPEATED_DNA_SEQUENCES.h" />
+    <ClInclude Include="LEET_REPEATED_SUBSTRING_PATTERN.h" />
     <ClInclude Include="LEET_RESTORE_IP_ADDRESSES.h" />
     <ClInclude Include="LEET_REVERSE_BITS.h" />
     <ClInclude Include="LEET_REVERSE_INTEGER.h" />
@@ -1023,6 +1024,7 @@
     <ClCompile Include="LEET_REMOVE_NTH_NODE_FROM_END_OF_LIST.cpp" />
     <ClCompile Include="LEET_REORDER_LIST.cpp" />
     <ClCompile Include="LEET_REPEATED_DNA_SEQUENCES.cpp" />
+    <ClCompile Include="LEET_REPEATED_SUBSTRING_PATTERN.cpp" />
     <ClCompile Include="LEET_RESTORE_IP_ADDRESSES.cpp" />
     <ClCompile Include="LEET_REVERSE_BITS.cpp" />
     <ClCompile Include="LEET_REVERSE_INTEGER.cpp" />

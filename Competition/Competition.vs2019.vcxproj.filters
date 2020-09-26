@@ -1194,6 +1194,9 @@
     <ClInclude Include="LEET_SYMMETRIC_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_TASK_SCHEDULER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_TEEMO_ATTACKING.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2871,6 +2874,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SYMMETRIC_TREE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_TASK_SCHEDULER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_TEEMO_ATTACKING.cpp">

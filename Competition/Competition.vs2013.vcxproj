@@ -347,6 +347,7 @@
     <ClInclude Include="LEET_PALINDROMIC_SUBSTRINGS.h" />
     <ClInclude Include="LEET_PANCAKE_SORTING.h" />
     <ClInclude Include="LEET_PARTITION_EQUAL_SUBSET_SUM.h" />
+    <ClInclude Include="LEET_PARTITION_LABELS.h" />
     <ClInclude Include="LEET_PARTITION_LIST.h" />
     <ClInclude Include="LEET_PASCAL_TRIANGLE.h" />
     <ClInclude Include="LEET_PASCALS_TRIANGLE_II.h" />
@@ -906,6 +907,7 @@
     <ClCompile Include="LEET_PALINDROMIC_SUBSTRINGS.cpp" />
     <ClCompile Include="LEET_PANCAKE_SORTING.cpp" />
     <ClCompile Include="LEET_PARTITION_EQUAL_SUBSET_SUM.cpp" />
+    <ClCompile Include="LEET_PARTITION_LABELS.cpp" />
     <ClCompile Include="LEET_PARTITION_LIST.cpp" />
     <ClCompile Include="LEET_PASCAL_TRIANGLE.cpp" />
     <ClCompile Include="LEET_PASCALS_TRIANGLE_II.cpp" />

@@ -825,6 +825,9 @@
     <ClInclude Include="LEET_PARTITION_EQUAL_SUBSET_SUM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_PARTITION_LABELS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_PARTITION_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2496,6 +2499,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PARTITION_EQUAL_SUBSET_SUM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_PARTITION_LABELS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_PARTITION_LIST.cpp">

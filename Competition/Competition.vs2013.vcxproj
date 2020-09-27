@@ -109,6 +109,7 @@
     <ClInclude Include="LEET_ADD_DIGITS.h" />
     <ClInclude Include="LEET_ADD_STRINGS.h" />
     <ClInclude Include="LEET_ADD_TWO_NUMBERS.h" />
+    <ClInclude Include="LEET_ALL_ELEMENTS_IN_TWO_BINARY_SEARCH_TREES.h" />
     <ClInclude Include="LEET_ALL_PATHS_FROM_SOURCE_TO_TARGET.h" />
     <ClInclude Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.h" />
     <ClInclude Include="LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.h" />
@@ -671,6 +672,7 @@
     <ClCompile Include="LEET_ADD_DIGITS.cpp" />
     <ClCompile Include="LEET_ADD_STRINGS.cpp" />
     <ClCompile Include="LEET_ADD_TWO_NUMBERS.cpp" />
+    <ClCompile Include="LEET_ALL_ELEMENTS_IN_TWO_BINARY_SEARCH_TREES.cpp" />
     <ClCompile Include="LEET_ALL_PATHS_FROM_SOURCE_TO_TARGET.cpp" />
     <ClCompile Include="LEET_ALL_POSSIBLE_FULL_BINARY_TREES.cpp" />
     <ClCompile Include="LEET_ANGLE_BETWEEN_HANDS_OF_A_CLOCK.cpp" />

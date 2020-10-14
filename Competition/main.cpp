@@ -561,6 +561,7 @@
 #include "LEET_REPEATED_SUBSTRING_PATTERN.h"                                // 555
 #include "LEET_TASK_SCHEDULER.h"                                            // 556
 #include "LEET_ALL_ELEMENTS_IN_TWO_BINARY_SEARCH_TREES.h"                   // 557
+#include "LEET_IMAGE_OVERLAP.h"                                             // 558
 
 // End of headers
 
@@ -1132,5 +1133,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_PARTITION_LABELS();                                          // Accepted
     // return LEET_REPEATED_SUBSTRING_PATTERN();                                // Accepted
     // return LEET_TASK_SCHEDULER();                                            // Accepted
-    return LEET_ALL_ELEMENTS_IN_TWO_BINARY_SEARCH_TREES();                   // Accepted
+    // return LEET_ALL_ELEMENTS_IN_TWO_BINARY_SEARCH_TREES();                   // Accepted
+    return LEET_IMAGE_OVERLAP();                                             // Accepted
 }

@@ -480,6 +480,9 @@
     <ClInclude Include="LEET_HOUSE_ROBBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_IMAGE_OVERLAP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2163,6 +2166,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_IMAGE_OVERLAP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.cpp">

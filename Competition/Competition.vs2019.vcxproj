@@ -217,6 +217,7 @@
     <ClInclude Include="LEET_CLONE_GRAPH.h" />
     <ClInclude Include="LEET_COIN_CHANGE.h" />
     <ClInclude Include="LEET_COIN_CHANGE_2.h" />
+    <ClInclude Include="LEET_COMBINATION_SUM_III.h" />
     <ClInclude Include="LEET_COMBINATIONS.h" />
     <ClInclude Include="LEET_COMPARE_VERSION_NUMBERS.h" />
     <ClInclude Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.h" />
@@ -781,6 +782,7 @@
     <ClCompile Include="LEET_CLONE_GRAPH.cpp" />
     <ClCompile Include="LEET_COIN_CHANGE.cpp" />
     <ClCompile Include="LEET_COIN_CHANGE_2.cpp" />
+    <ClCompile Include="LEET_COMBINATION_SUM_III.cpp" />
     <ClCompile Include="LEET_COMBINATIONS.cpp" />
     <ClCompile Include="LEET_COMPARE_VERSION_NUMBERS.cpp" />
     <ClCompile Include="LEET_CONSTRUCT_BINARY_TREE_FROM_INORDER_AND_POSTORDER_TRAVERSAL.cpp" />

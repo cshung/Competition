@@ -840,7 +840,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_SUBSETS_II();                                                // Accepted
     // return LEET_FIND_THE_DUPLICATE_NUMBER();                                 // Accepted
     // return LEET_FIND_PEAK_ELEMENT();                                         // Accepted
-    // return LEET_MULTIPLY_STRINGS();                                          // Code too long :(
+    // return LEET_MULTIPLY_STRINGS();                                          // Accepted
     // return LEET_NIM_GAME();                                                  // Accepted
     // return LEET_SUDOKU_SOLVER();                                             // Accepted
     // return LEET_BULLS_AND_COWS();                                            // Accepted

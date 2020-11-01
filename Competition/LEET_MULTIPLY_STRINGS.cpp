@@ -5,6 +5,8 @@
 #include "LEET_MULTIPLY_STRINGS.h"
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <vector>
 #include <cassert>
 #include <algorithm>
 
@@ -12,14 +14,14 @@ using namespace std;
 
 namespace _LEET_MULTIPLY_STRINGS
 {
-// #define LOG
+    // #define LOG
     class Solution
     {
     public:
         void add_with_shift(
-            char* input1, int input1_s, int input1_e,
-            char* input2, int input2_s, int input2_e, int input2_shift,
-            char* answer, int answer_s, int answer_e)
+            vector<char>& input1, int input1_s, int input1_e,
+            vector<char>& input2, int input2_s, int input2_e, int input2_shift,
+            vector<char>& answer, int answer_s, int answer_e)
         {
             int carry = 0;
             int input1_index = input1_e - 1;
@@ -74,9 +76,9 @@ namespace _LEET_MULTIPLY_STRINGS
         }
 
         void sub_with_shift(
-            char* input1, int input1_s, int input1_e,
-            char* input2, int input2_s, int input2_e, int input2_shift,
-            char* answer, int answer_s, int answer_e)
+            vector<char>& input1, int input1_s, int input1_e,
+            vector<char>& input2, int input2_s, int input2_e, int input2_shift,
+            vector<char>& answer, int answer_s, int answer_e)
         {
             int borrow = 0;
             int input1_index = input1_e - 1;
@@ -135,12 +137,12 @@ namespace _LEET_MULTIPLY_STRINGS
         }
 
         void multiply
-            (
-            char* input1, int input1_s, int input1_e,
-            char* input2, int input2_s, int input2_e,
-            char* answer, int answer_e,
+        (
+            vector<char>& input1, int input1_s, int input1_e,
+            vector<char>& input2, int input2_s, int input2_e,
+            vector<char>& answer, int answer_e,
             int recursion_depth
-            )
+        )
         {
             int size = input1_e - input1_s;
             assert(size == input2_e - input2_s);
@@ -182,9 +184,9 @@ namespace _LEET_MULTIPLY_STRINGS
                 int input1_m = (input1_s + input1_e) / 2;
                 int input2_m = (input2_s + input2_e) / 2;
 #ifdef LOG
-                for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "a = "; for (int i = input1_s; i < input1_m; i++) { cout << input1[i]; } cout << endl; 
+                for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "a = "; for (int i = input1_s; i < input1_m; i++) { cout << input1[i]; } cout << endl;
                 for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "b = "; for (int i = input1_m; i < input1_e; i++) { cout << input1[i]; } cout << endl;
-                for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "c = "; for (int i = input2_s; i < input1_m; i++) { cout << input2[i]; } cout << endl; 
+                for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "c = "; for (int i = input2_s; i < input1_m; i++) { cout << input2[i]; } cout << endl;
                 for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "d = "; for (int i = input2_m; i < input2_e; i++) { cout << input2[i]; } cout << endl;
 #endif
                 for (int i = 0; i < answer_e; i++)
@@ -199,11 +201,11 @@ namespace _LEET_MULTIPLY_STRINGS
                 assert(lower_part_length == input2_e - input2_m);
                 assert(lower_part_length >= upper_part_length);
 
-                char* amc = new char[2 * upper_part_length];
-                char* bmd = new char[2 * lower_part_length];
-                char* apb = new char[lower_part_length + 1];
-                char* cpd = new char[lower_part_length + 1];
-                char* apbmcpd = new char[lower_part_length * 2 + 2];
+                vector<char> amc(2 * upper_part_length);
+                vector<char> bmd(2 * lower_part_length);
+                vector<char> apb(lower_part_length + 1);
+                vector<char> cpd(lower_part_length + 1);
+                vector<char> apbmcpd(lower_part_length * 2 + 2);
 
                 // Computing a x c
                 this->multiply(input1, input1_s, input1_m, input2, input2_s, input2_m, amc, upper_part_length * 2, recursion_depth + 1);
@@ -231,7 +233,7 @@ namespace _LEET_MULTIPLY_STRINGS
                 // TODO: Be careful of buffer overrun here
                 // This leading zero removal is critical, without that the program will run out of stack
                 int leadingZero = 0;
-                while (apb[leadingZero] == '0' && cpd[leadingZero] == '0')
+                while (leadingZero < lower_part_length && apb[leadingZero] == '0' && cpd[leadingZero] == '0')
                 {
                     leadingZero++;
                 }
@@ -260,11 +262,6 @@ namespace _LEET_MULTIPLY_STRINGS
 #ifdef LOG
                 for (int i = 0; i < recursion_depth; i++) { cout << "  "; }; cout << "answer (5) = "; for (int i = 0; i < answer_e; i++) { cout << answer[i]; } cout << endl;
 #endif
-                delete[] amc;
-                delete[] bmd;
-                delete[] apb;
-                delete[] cpd;
-                delete[] apbmcpd;
             }
         }
 
@@ -284,9 +281,9 @@ namespace _LEET_MULTIPLY_STRINGS
                 size = num2.size();
             }
 
-            char* input1 = new char[size];
-            char* input2 = new char[size];
-            char* answer = new char[size * 2];
+            vector<char> input1(size);
+            vector<char> input2(size);
+            vector<char> answer(size * 2);
 
             for (int i = 0; i < num1_pad; i++) { input1[i] = '0'; }
             for (int i = 0; i < num1.size(); i++) { input1[i + num1_pad] = num1[i]; }
@@ -294,18 +291,18 @@ namespace _LEET_MULTIPLY_STRINGS
             for (int i = 0; i < num2.size(); i++) { input2[i + num2_pad] = num2[i]; }
 
             this->multiply(input1, 0, size, input2, 0, size, answer, size * 2, 0);
-            
+
             int leadingZero = 0;
             while (answer[leadingZero] == '0' && leadingZero < size * 2 - 1)
             {
                 leadingZero++;
             }
-
-            string result = string(answer + leadingZero, answer + size * 2);
-            delete[] input1;
-            delete[] input2;
-            delete[] answer;
-            return result;
+            ostringstream oss;
+            for (int i = leadingZero; i < size * 2; i++)
+            {
+                oss << answer[i];
+            }
+            return oss.str();
         }
     };
 };

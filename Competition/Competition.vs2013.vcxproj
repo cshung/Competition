@@ -165,6 +165,7 @@
     <ClInclude Include="LEET_CONTAINS_DUPLICATE.h" />
     <ClInclude Include="LEET_CONTAINS_DUPLICATE_II.h" />
     <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h" />
+    <ClInclude Include="LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER.h" />
     <ClInclude Include="LEET_CONVERT_BST_TO_GREATER_TREE.h" />
     <ClInclude Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.h" />
     <ClInclude Include="LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.h" />
@@ -730,6 +731,7 @@
     <ClCompile Include="LEET_CONTAINS_DUPLICATE.cpp" />
     <ClCompile Include="LEET_CONTAINS_DUPLICATE_II.cpp" />
     <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp" />
+    <ClCompile Include="LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER.cpp" />
     <ClCompile Include="LEET_CONVERT_BST_TO_GREATER_TREE.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.cpp" />
     <ClCompile Include="LEET_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.cpp" />

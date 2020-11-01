@@ -279,6 +279,9 @@
     <ClInclude Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_CONVERT_BST_TO_GREATER_TREE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1968,6 +1971,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_CONVERT_A_NUMBER_TO_HEXADECIMAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_CONVERT_BST_TO_GREATER_TREE.cpp">

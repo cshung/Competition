@@ -1,4 +1,6 @@
-from sys import stdin
+# http://rosalind.info/problems/kmer/
+# 
+# from sys import stdin
 from libfasta import readFasta
 
 def kmer(dna):

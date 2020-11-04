@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/revc/
 
-import six
+from sys import stdin
 
 def complement(n):
   if n == 'A':
@@ -21,7 +21,10 @@ def revc(dna):
   return answer
 
 def main():
-  dna = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  dna = data[0]
   answer = revc(dna)
   print(answer)
 

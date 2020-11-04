@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/lia/
 
-import six
+from sys import stdin
 
 def lia(n,k):
   population = 2 ** k 
@@ -19,7 +19,10 @@ def lia(n,k):
   return (1 - answer)
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   tokens = line.split(' ')
   k = int(tokens[0])
   n = int(tokens[1])

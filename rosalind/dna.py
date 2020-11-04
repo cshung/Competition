@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/dna/
 
-import six
+from sys import stdin
 
 def dna(problem):
   a = 0
@@ -19,7 +19,10 @@ def dna(problem):
   return (a,c,g,t)
 
 def main():
-  problem = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  problem = data[0]
   (a,c,g,t) = dna(problem)
   print("%d %d %d %d" % (a,c,g,t))
 

@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/fib/
 
-import six
+from sys import stdin
 
 def fib(n,k):
   (a,b,c,d) = power(0, k, 1, 1, n - 1)
@@ -28,7 +28,10 @@ def power(a,b,c,d,n):
       return (e,f,g,h)
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   tokens = line.split(' ')
   n = int(tokens[0])
   k = int(tokens[1])

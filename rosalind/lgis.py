@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/lgis/
 
-import six
+from sys import stdin
 import bisect
 
 def lis(data):
@@ -97,9 +97,10 @@ def lgis(data):
   return (lis(data),[-e for e in lis([-f for f in data])])
 
 def main():
-  line = six.moves.input()
-  line = six.moves.input()
-  tokens = line.split(' ')
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  tokens = data[1].split(' ')
   numbers = [int(t) for t in tokens]  
   inc,dec = lgis(numbers)
   print(' '.join(str(n) for n in inc))

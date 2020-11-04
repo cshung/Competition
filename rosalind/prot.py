@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/prot/
 
-import six
+from sys import stdin
 from libcode import code
 
 def prot(rna):
@@ -20,7 +20,10 @@ def prot(rna):
   return protein
 
 def main():
-  rna = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  rna = data[0]
   protein = prot(rna)
   print(protein)
 

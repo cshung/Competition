@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/lexf/
 
-import six
+from sys import stdin
 
 def lexf(alphabets, n):
   results = []
@@ -14,9 +14,11 @@ def lexf(alphabets, n):
   return results
 
 def main():
-  problem = six.moves.input()
-  alphabets = problem.split(' ')
-  n = int(six.moves.input())
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  alphabets = data[0].split(' ')
+  n = int(data[1])
   results = lexf(alphabets, n)
   for result in results:
     print(result)

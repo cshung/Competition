@@ -1,12 +1,15 @@
 # http://rosalind.info/problems/rna/
 
-import six
+from sys import stdin
 
 def rna(dna):
   return dna.replace("T","U")
 
 def main():
-  dna = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  dna = data[0]
   print(rna(dna))
 
 if __name__ == "__main__":

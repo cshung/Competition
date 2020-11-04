@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/prob/
 
-import six
+from sys import stdin
 import math
 
 def prob(dna,probs):
@@ -20,8 +20,11 @@ def prob(dna,probs):
   return answers
 
 def main():
-  dna = six.moves.input()
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  dna = data[0]
+  line = data[1]
   probs = [float(token) for token in line.split(' ')]
   answers = prob(dna, probs)
   print(' '.join(str(answer) for answer in answers))

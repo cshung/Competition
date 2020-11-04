@@ -1,6 +1,7 @@
 # http://rosalind.info/problems/iprb/
 
-import six
+from sys import stdin
+
 def iprb(k,m,n):
   N = k + m + n
   C = N * (N - 1) * 4.0
@@ -8,7 +9,10 @@ def iprb(k,m,n):
   return (1 - R/C)
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   tokens = line.split(' ')
   k = int(tokens[0])
   m = int(tokens[1])

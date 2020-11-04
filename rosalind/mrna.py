@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/mrna/
 
-import six
+from sys import stdin
 from libcode import code
 
 def mrna(protein):
@@ -18,7 +18,10 @@ def mrna(protein):
   return answer
 
 def main():
-  protein = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  protein = data[0]
   answer = mrna(protein)
   print(answer)
 

@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/prtm/
 
-import six
+from sys import stdin
 from libcode import mass
 
 def prtm(protein):
@@ -10,7 +10,10 @@ def prtm(protein):
   return answer
   
 def main():
-  protein = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  protein = data[0]
   print(prtm(protein))
 
 if __name__ == "__main__":

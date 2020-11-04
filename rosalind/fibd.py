@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/fibd/
 
-import six
+from sys import stdin
 
 def fibd(n,k):
   # population[(i + offset) % k] represents the number of rabbits of i months old
@@ -28,7 +28,10 @@ def fibd(n,k):
   return num_mature_rabbits + population[offset] 
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   tokens = line.split(' ')
   n = int(tokens[0])
   k = int(tokens[1])

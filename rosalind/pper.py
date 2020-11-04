@@ -1,13 +1,16 @@
 # http://rosalind.info/problems/pper/
 
-import six
+from sys import stdin
 import math
 
 def pper(n,k):
   return math.factorial(n)/math.factorial(n-k) % 1000000
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   tokens = line.split(' ')
   n = int(tokens[0])
   k = int(tokens[1])

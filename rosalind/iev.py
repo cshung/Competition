@@ -1,12 +1,15 @@
 # http://rosalind.info/problems/iev/
 
-import six
+from sys import stdin
 
 def iev(a,b,c,d,e,f):
   return ((4 * a + 4 * b + 4 * c + 3 * d + 2 * e) / 2.0)
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   tokens = line.split(' ')
   a = int(tokens[0])
   b = int(tokens[1])

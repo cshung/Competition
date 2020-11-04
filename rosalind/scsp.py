@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/scsp/
 
-import six
+from sys import stdin
 from liblevenshtein import levenshtein
 
 def scsp(str1, str2):
@@ -33,8 +33,11 @@ def scsp(str1, str2):
   return ''.join(superstring)
 
 def main():
-  str1 = six.moves.input()
-  str2 = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  str1 = data[0]
+  str2 = data[1]
   print(scsp(str1, str2))
 
 if __name__ == "__main__":

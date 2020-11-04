@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/subs/
 
-import six
+from sys import stdin
 
 def subs(dna, motif):
   answers = []
@@ -15,8 +15,11 @@ def subs(dna, motif):
   return answers
 
 def main():
-  dna = six.moves.input()
-  motif = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  dna = data[0]
+  motif = data[1]
   answers = subs(dna, motif)
   print(' '.join(str(a) for a in answers))
 

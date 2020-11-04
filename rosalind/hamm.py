@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/hamm/
 
-import six
+from sys import stdin
 
 def hamm(dna1, dna2):
   answer = 0
@@ -10,8 +10,11 @@ def hamm(dna1, dna2):
   return answer
 
 def main():
-  dna1 = six.moves.input()
-  dna2 = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  dna1 = data[0]
+  dna2 = data[1]
   answer = hamm(dna1, dna2)
   print(answer)
 

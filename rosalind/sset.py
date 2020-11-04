@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/sset/
 
-import six
+from sys import stdin
 
 def sset(n):
   return modpower(2, n, 1000000)
@@ -19,7 +19,10 @@ def modpower(a,n,p):
       return h * h % p
 
 def main():
-  line = six.moves.input()
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  line = data[0]
   print(sset(int(line)))
 
 if __name__ == "__main__":

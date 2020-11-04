@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/perm/
 
-import six
+from sys import stdin
 import math
 
 def perm(n):
@@ -22,7 +22,10 @@ def perm_worker(l, i, answers):
       l[j] = temp
 
 def main():
-  n = int(six.moves.input())
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  n = int(data[0])
   answers = perm(n)
   print(math.factorial(n))
   for answer in answers:

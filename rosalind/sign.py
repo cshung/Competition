@@ -1,6 +1,6 @@
 # http://rosalind.info/problems/sign/
 
-import six
+from sys import stdin
 import math
 
 def sign(n):
@@ -30,7 +30,10 @@ def sign_worker(l, i, answers):
       l[j] = temp
 
 def main():
-  n = int(six.moves.input())
+  data = []
+  for line in stdin:
+    data.append(line.strip())
+  n = int(data[0])
   answers = sign(n)
   print(len(answers))
   for answer in answers:

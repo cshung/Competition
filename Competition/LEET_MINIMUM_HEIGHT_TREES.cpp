@@ -12,7 +12,8 @@ using namespace std;
 
 namespace _LEET_MINIMUM_HEIGHT_TREES
 {
-    class Solution {
+    class Solution
+    {
     private:
         class summary
         {
@@ -84,14 +85,14 @@ namespace _LEET_MINIMUM_HEIGHT_TREES
             }
         }
 
-        vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges)
+        vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges)
         {
             vector<vector<int>> adjacency_list(n);
             vector<summary> summaries(n);
             for (size_t e = 0; e < edges.size(); e++)
             {
-                adjacency_list[edges[e].first].push_back(edges[e].second);
-                adjacency_list[edges[e].second].push_back(edges[e].first);
+                adjacency_list[edges[e][0]].push_back(edges[e][1]);
+                adjacency_list[edges[e][1]].push_back(edges[e][0]);
             }
 
             first_pass(-1, 0, adjacency_list, summaries);
@@ -120,14 +121,16 @@ using namespace _LEET_MINIMUM_HEIGHT_TREES;
 int LEET_MINIMUM_HEIGHT_TREES()
 {
     Solution solution;
-    vector<pair<int, int>> edges;
-
-    edges.push_back(pair<int, int>(0, 1));
-    edges.push_back(pair<int, int>(1, 3));
-    edges.push_back(pair<int, int>(1, 4));
-    edges.push_back(pair<int, int>(0, 2));
-    edges.push_back(pair<int, int>(4, 5));
-
-    solution.findMinHeightTrees(6, edges);
+    vector<vector<int>> edges(5, vector<int>(2, 0));
+    edges[0][0] = 0; edges[0][1] = 1;
+    edges[1][0] = 1; edges[1][1] = 3;
+    edges[2][0] = 1; edges[2][1] = 4;
+    edges[3][0] = 0; edges[3][1] = 2;
+    edges[4][0] = 4; edges[4][1] = 5;
+    auto answers = solution.findMinHeightTrees(6, edges);
+    for (auto answer : answers)
+    {
+        cout << answer << endl;
+    }
     return 0;
 }

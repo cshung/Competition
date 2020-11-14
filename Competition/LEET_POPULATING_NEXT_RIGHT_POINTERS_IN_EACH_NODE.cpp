@@ -13,29 +13,37 @@ using namespace std;
 
 namespace _LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE
 {
-    struct TreeLinkNode
+    class Node
     {
-        TreeLinkNode *left;
-        TreeLinkNode *right;
-        TreeLinkNode *next;
-    };
+    public:
+        int val;
+        Node* left;
+        Node* right;
+        Node* next;
 
+        Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+        Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+        Node(int _val, Node* _left, Node* _right, Node* _next)
+            : val(_val), left(_left), right(_right), next(_next) {}
+    };
     class Solution
     {
     public:
-        void connect(TreeLinkNode *root)
+        Node* connect(Node* root)
         {
             if (root == NULL)
             {
-                return;
+                return NULL;
             }
 
             root->next = NULL;
 
-            TreeLinkNode* nextLayerStart = root;
+            Node* nextLayerStart = root;
             while (nextLayerStart != NULL)
             {
-                TreeLinkNode* currentLayerCursor = nextLayerStart;
+                Node* currentLayerCursor = nextLayerStart;
                 nextLayerStart = nextLayerStart->left;
                 if (nextLayerStart == NULL)
                 {
@@ -57,6 +65,7 @@ namespace _LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE
                     currentLayerCursor = currentLayerCursor->next;
                 }
             }
+            return root;
         }
     };
 };
@@ -65,13 +74,13 @@ using namespace _LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE;
 
 int LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE()
 {
-    TreeLinkNode a;
-    TreeLinkNode b;
-    TreeLinkNode c;
-    TreeLinkNode d;
-    TreeLinkNode e;
-    TreeLinkNode f;
-    TreeLinkNode g;
+    Node a;
+    Node b;
+    Node c;
+    Node d;
+    Node e;
+    Node f;
+    Node g;
     a.left = &b;
     a.right = &c;
     b.left = &d;

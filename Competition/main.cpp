@@ -564,6 +564,7 @@
 #include "LEET_IMAGE_OVERLAP.h"                                             // 558
 #include "LEET_COMBINATION_SUM_III.h"                                       // 559
 #include "LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER.h"         // 560
+#include "LEET_ASTEROID_COLLISION.h"                                        // 561
 
 // End of headers
 
@@ -1138,5 +1139,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_ALL_ELEMENTS_IN_TWO_BINARY_SEARCH_TREES();                   // Accepted
     // return LEET_IMAGE_OVERLAP();                                             // Accepted
     // return LEET_COMBINATION_SUM_III();                                       // Accepted
-    return LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER();         // Accepted
+    // return LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER();         // Accepted
+    return LEET_ASTEROID_COLLISION();                                        // Accepted
 }

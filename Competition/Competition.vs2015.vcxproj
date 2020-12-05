@@ -178,6 +178,7 @@
     <ClInclude Include="LEET_ARRANGING_COINS.h" />
     <ClInclude Include="LEET_ARRAY_PARTITION_I.h" />
     <ClInclude Include="LEET_ASSIGN_COOKIES.h" />
+    <ClInclude Include="LEET_ASTEROID_COLLISION.h" />
     <ClInclude Include="LEET_BALANCED_BINARY_TREE.h" />
     <ClInclude Include="LEET_BASE_7.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
@@ -744,6 +745,7 @@
     <ClCompile Include="LEET_ARRANGING_COINS.cpp" />
     <ClCompile Include="LEET_ARRAY_PARTITION_I.cpp" />
     <ClCompile Include="LEET_ASSIGN_COOKIES.cpp" />
+    <ClCompile Include="LEET_ASTEROID_COLLISION.cpp" />
     <ClCompile Include="LEET_BALANCED_BINARY_TREE.cpp" />
     <ClCompile Include="LEET_BASE_7.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />

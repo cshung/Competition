@@ -13,32 +13,40 @@ using namespace std;
 
 namespace _LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II
 {
-    struct TreeLinkNode
+    class Node
     {
+    public:
         int val;
-        TreeLinkNode *left, *right, *next;
-        TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
-    };
+        Node* left;
+        Node* right;
+        Node* next;
 
+        Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+        Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+        Node(int _val, Node* _left, Node* _right, Node* _next)
+            : val(_val), left(_left), right(_right), next(_next) {}
+    };
     class Solution
     {
     public:
-        void connect(TreeLinkNode *root)
+        Node* connect(Node* root)
         {
             if (root == NULL)
             {
-                return;
+                return NULL;
             }
 
             root->next = NULL;
 
-            TreeLinkNode virtualNode(10086);
+            Node virtualNode(10086);
             virtualNode.next = root;
 
             while (virtualNode.next != NULL)
             {
-                TreeLinkNode* currentLayerCursor = virtualNode.next;
-                TreeLinkNode* nextLayerEnds = &virtualNode;
+                Node* currentLayerCursor = virtualNode.next;
+                Node* nextLayerEnds = &virtualNode;
                 nextLayerEnds->next = NULL;
                 while (currentLayerCursor != NULL)
                 {
@@ -55,6 +63,7 @@ namespace _LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II
                     currentLayerCursor = currentLayerCursor->next;
                 }
             }
+            return root;
         }
     };
 };
@@ -63,12 +72,12 @@ using namespace _LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II;
 
 int LEET_POPULATING_NEXT_RIGHT_POINTERS_IN_EACH_NODE_II()
 {
-    TreeLinkNode a(1);
-    TreeLinkNode b(2);
-    TreeLinkNode c(3);
-    TreeLinkNode d(4);
-    TreeLinkNode e(5);
-    TreeLinkNode g(7);
+    Node a(1);
+    Node b(2);
+    Node c(3);
+    Node d(4);
+    Node e(5);
+    Node g(7);
     a.left = &b;
     a.right = &c;
     b.left = &d;

@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_IMPLEMENT_RAND10_USING_RAND7();

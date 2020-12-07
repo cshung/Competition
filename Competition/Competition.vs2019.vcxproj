@@ -298,6 +298,7 @@
     <ClInclude Include="LEET_HOUSE_ROBBER.h" />
     <ClInclude Include="LEET_IMAGE_OVERLAP.h" />
     <ClInclude Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.h" />
+    <ClInclude Include="LEET_IMPLEMENT_RAND10_USING_RAND7.h" />
     <ClInclude Include="LEET_IMPLEMENT_STACK_USING_QUEUES.h" />
     <ClInclude Include="LEET_IMPLEMENT_STRSTR.h" />
     <ClInclude Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.h" />
@@ -865,6 +866,7 @@
     <ClCompile Include="LEET_HOUSE_ROBBER.cpp" />
     <ClCompile Include="LEET_IMAGE_OVERLAP.cpp" />
     <ClCompile Include="LEET_IMPLEMENT_QUEUE_USING_STACKS.cpp" />
+    <ClCompile Include="LEET_IMPLEMENT_RAND10_USING_RAND7.cpp" />
     <ClCompile Include="LEET_IMPLEMENT_STACK_USING_QUEUES.cpp" />
     <ClCompile Include="LEET_IMPLEMENT_STRSTR.cpp" />
     <ClCompile Include="LEET_IMPLEMENT_TRIE_PREFIX_TREE.cpp" />

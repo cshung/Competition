@@ -566,6 +566,7 @@
 #include "LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER.h"         // 560
 #include "LEET_ASTEROID_COLLISION.h"                                        // 561
 #include "LEET_IMPLEMENT_RAND10_USING_RAND7.h"                              // 562
+#include "LEET_DELETE_NODE_IN_A_BST.h"                                      // 563
 
 // End of headers
 
@@ -1142,5 +1143,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_COMBINATION_SUM_III();                                       // Accepted
     // return LEET_CONVERT_BINARY_NUMBER_IN_A_LINKED_LIST_TO_INTEGER();         // Accepted
     // return LEET_ASTEROID_COLLISION();                                        // Accepted
-    return LEET_IMPLEMENT_RAND10_USING_RAND7();                              // Accepted
+    // return LEET_IMPLEMENT_RAND10_USING_RAND7();                              // Accepted
+    return LEET_DELETE_NODE_IN_A_BST();                                      // Accepted
 }

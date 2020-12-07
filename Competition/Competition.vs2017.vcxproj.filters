@@ -333,6 +333,9 @@
     <ClInclude Include="LEET_DELETE_COLUMNS_TO_MAKE_SORTED.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_DELETE_NODE_IN_A_BST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2031,6 +2034,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_DELETE_COLUMNS_TO_MAKE_SORTED.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_DELETE_NODE_IN_A_BST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp">

@@ -183,6 +183,7 @@
     <ClInclude Include="LEET_DECODE_STRING.h" />
     <ClInclude Include="LEET_DECODE_WAYS.h" />
     <ClInclude Include="LEET_DELETE_COLUMNS_TO_MAKE_SORTED.h" />
+    <ClInclude Include="LEET_DELETE_NODE_IN_A_BST.h" />
     <ClInclude Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.h" />
     <ClInclude Include="LEET_DESIGN_HASHSET.h" />
     <ClInclude Include="LEET_DESIGN_TWITTER.h" />
@@ -751,6 +752,7 @@
     <ClCompile Include="LEET_DECODE_STRING.cpp" />
     <ClCompile Include="LEET_DECODE_WAYS.cpp" />
     <ClCompile Include="LEET_DELETE_COLUMNS_TO_MAKE_SORTED.cpp" />
+    <ClCompile Include="LEET_DELETE_NODE_IN_A_BST.cpp" />
     <ClCompile Include="LEET_DELETE_NODE_IN_A_LINKED_LIST.cpp" />
     <ClCompile Include="LEET_DESIGN_HASHSET.cpp" />
     <ClCompile Include="LEET_DESIGN_TWITTER.cpp" />

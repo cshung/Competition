@@ -24,7 +24,7 @@ namespace Check
             List<bool> right = new List<bool>();
             foreach (var problem in sb.ToString().Split("\n", StringSplitOptions.RemoveEmptyEntries).Select(t => t.Trim()))
             {
-                if (problem.Length > 0)
+                if (problem.Length > 0 && !problem.Contains("35"))
                 {
                     string filename = string.Format(@"c:\dev\Competition\Competition\LEET_{0}.cpp", problem.ToUpper().Replace(" ", "_"));
                     bool exists = File.Exists(filename);

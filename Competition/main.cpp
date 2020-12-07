@@ -50,7 +50,7 @@
 #include "UVa10077.h"                                                       // 047
 #include "SPOJ_HORRIBLE.h"                                                  // 048
 #include "LEET_LONGEST_CONSECUTIVE_SEQUENCE.h"                              // 049
-#include "LEET_SUM_ROOT_TO_LEAF_NUMBER.h"                                   // 050
+#include "LEET_SUM_ROOT_TO_LEAF_NUMBERS.h"                                  // 050
 #include "UVa410.h"                                                         // 051
 #include "UVa10020.h"                                                       // 052
 #include "UVa10340.h"                                                       // 052
@@ -628,7 +628,7 @@ int _tmain(int argc, _TCHAR* argv[])
     // return UVa10077();                                                       // Accepted
     // return SPOJ_HORRIBLE();                                                  // Accepted
     // return LEET_LONGEST_CONSECUTIVE_SEQUENCE();                              // Accepted
-    // return LEET_SUM_ROOT_TO_LEAF_NUMBER();                                   // Accepted
+    // return LEET_SUM_ROOT_TO_LEAF_NUMBERS();                                  // Accepted
     // return UVa410();                                                         // Accepted
     // return UVa10020();                                                       // Accepted
     // return UVa10340();                                                       // Accepted

@@ -530,7 +530,7 @@
     <ClInclude Include="LEET_SUM_OF_LEFT_LEAVES.h" />
     <ClInclude Include="LEET_SUM_OF_SUBSEQUENCE_WIDTHS.h" />
     <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h" />
-    <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h" />
+    <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBERS.h" />
     <ClInclude Include="LEET_SUMMARY_RANGES.h" />
     <ClInclude Include="LEET_SURFACE_AREA_OF_3D_SHAPES.h" />
     <ClInclude Include="LEET_SURROUNDED_REGIONS.h" />
@@ -1097,7 +1097,7 @@
     <ClCompile Include="LEET_SUM_OF_LEFT_LEAVES.cpp" />
     <ClCompile Include="LEET_SUM_OF_SUBSEQUENCE_WIDTHS.cpp" />
     <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp" />
-    <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp" />
+    <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBERS.cpp" />
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp" />
     <ClCompile Include="LEET_SURFACE_AREA_OF_3D_SHAPES.cpp" />
     <ClCompile Include="LEET_SURROUNDED_REGIONS.cpp" />

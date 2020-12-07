@@ -2,13 +2,13 @@
 
 // https://leetcode.com/problems/sum-root-to-leaf-numbers/
 
-#include "LEET_SUM_ROOT_TO_LEAF_NUMBER.h"
+#include "LEET_SUM_ROOT_TO_LEAF_NUMBERS.h"
 #include <map>
 #include <iostream>
 
 using namespace std;
 
-namespace _LEET_SUM_ROOT_TO_LEAF_NUMBER
+namespace _LEET_SUM_ROOT_TO_LEAF_NUMBERS
 {
     struct TreeNode {
         int val;
@@ -55,9 +55,9 @@ namespace _LEET_SUM_ROOT_TO_LEAF_NUMBER
 
 };
 
-using namespace _LEET_SUM_ROOT_TO_LEAF_NUMBER;
+using namespace _LEET_SUM_ROOT_TO_LEAF_NUMBERS;
 
-int LEET_SUM_ROOT_TO_LEAF_NUMBER()
+int LEET_SUM_ROOT_TO_LEAF_NUMBERS()
 {
     TreeNode* boot = new TreeNode(4);
 

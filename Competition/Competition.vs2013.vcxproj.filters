@@ -1191,7 +1191,7 @@
     <ClInclude Include="LEET_SUM_OF_TWO_INTEGERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.h">
+    <ClInclude Include="LEET_SUM_ROOT_TO_LEAF_NUMBERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LEET_SUMMARY_RANGES.h">
@@ -2888,7 +2888,7 @@
     <ClCompile Include="LEET_SUM_OF_TWO_INTEGERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBER.cpp">
+    <ClCompile Include="LEET_SUM_ROOT_TO_LEAF_NUMBERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUMMARY_RANGES.cpp">

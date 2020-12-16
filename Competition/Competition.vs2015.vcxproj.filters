@@ -1161,6 +1161,9 @@
     <ClInclude Include="LEET_SQRTX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SQUARES_OF_A_SORTED_ARRAY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_STREAM_OF_CHARACTERS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2865,6 +2868,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SQRTX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SQUARES_OF_A_SORTED_ARRAY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_STREAM_OF_CHARACTERS.cpp">

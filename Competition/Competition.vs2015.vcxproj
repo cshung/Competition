@@ -520,6 +520,7 @@
     <ClInclude Include="LEET_SPLIT_ARRAY_LARGEST_SUM.h" />
     <ClInclude Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.h" />
     <ClInclude Include="LEET_SQRTX.h" />
+    <ClInclude Include="LEET_SQUARES_OF_A_SORTED_ARRAY.h" />
     <ClInclude Include="LEET_STREAM_OF_CHARACTERS.h" />
     <ClInclude Include="LEET_STRING_TO_INTEGER_ATOI.h" />
     <ClInclude Include="LEET_STROBOGRAMMATIC_NUMBER.h" />
@@ -1090,6 +1091,7 @@
     <ClCompile Include="LEET_SPLIT_ARRAY_LARGEST_SUM.cpp" />
     <ClCompile Include="LEET_SPLIT_LINKED_LIST_IN_PARTS.cpp" />
     <ClCompile Include="LEET_SQRTX.cpp" />
+    <ClCompile Include="LEET_SQUARES_OF_A_SORTED_ARRAY.cpp" />
     <ClCompile Include="LEET_STREAM_OF_CHARACTERS.cpp" />
     <ClCompile Include="LEET_STRING_TO_INTEGER_ATOI.cpp" />
     <ClCompile Include="LEET_STROBOGRAMMATIC_NUMBER.cpp" />

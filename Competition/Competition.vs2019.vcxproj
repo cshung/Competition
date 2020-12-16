@@ -324,6 +324,7 @@
     <ClInclude Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.h" />
     <ClInclude Include="LEET_KTH_MISSING_POSITIVE_NUMBER.h" />
     <ClInclude Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.h" />
+    <ClInclude Include="LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
@@ -893,6 +894,7 @@
     <ClCompile Include="LEET_KTH_LARGEST_ELEMENT_IN_AN_ARRAY.cpp" />
     <ClCompile Include="LEET_KTH_MISSING_POSITIVE_NUMBER.cpp" />
     <ClCompile Include="LEET_KTH_SMALLEST_ELEMENT_IN_A_BST.cpp" />
+    <ClCompile Include="LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR.cpp" />
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />

@@ -1200,6 +1200,9 @@
     <ClInclude Include="LEET_SUM_OF_LEFT_LEAVES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_SUM_OF_SUBSEQUENCE_WIDTHS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2910,6 +2913,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUM_OF_LEFT_LEAVES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_SUM_OF_SUBSEQUENCE_WIDTHS.cpp">

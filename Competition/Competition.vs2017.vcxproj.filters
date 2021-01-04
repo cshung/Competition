@@ -582,6 +582,9 @@
     <ClInclude Include="LEET_LARGEST_NUMBER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_LARGEST_TIME_FOR_GIVEN_DIGITS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2289,6 +2292,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_LARGEST_TIME_FOR_GIVEN_DIGITS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp">

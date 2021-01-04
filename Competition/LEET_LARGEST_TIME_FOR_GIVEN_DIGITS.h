@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_LARGEST_TIME_FOR_GIVEN_DIGITS();

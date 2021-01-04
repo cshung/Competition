@@ -569,6 +569,7 @@
 #include "LEET_DELETE_NODE_IN_A_BST.h"                                      // 563
 #include "LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR.h"                   // 564
 #include "LEET_SQUARES_OF_A_SORTED_ARRAY.h"                                 // 565
+#include "LEET_LARGEST_TIME_FOR_GIVEN_DIGITS.h"                             // 566
 
 // End of headers
 
@@ -1148,5 +1149,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_IMPLEMENT_RAND10_USING_RAND7();                              // Accepted
     // return LEET_DELETE_NODE_IN_A_BST();                                      // Accepted
     // return LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR();                   // Accepted
-    return LEET_SQUARES_OF_A_SORTED_ARRAY();                                 // Accepted
+    // return LEET_SQUARES_OF_A_SORTED_ARRAY();                                 // Accepted
+    return LEET_LARGEST_TIME_FOR_GIVEN_DIGITS();                             // Accepted
 }

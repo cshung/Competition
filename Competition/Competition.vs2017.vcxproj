@@ -327,6 +327,7 @@
     <ClInclude Include="LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR.h" />
     <ClInclude Include="LEET_LARGEST_DIVISIBLE_SUBSET.h" />
     <ClInclude Include="LEET_LARGEST_NUMBER.h" />
+    <ClInclude Include="LEET_LARGEST_TIME_FOR_GIVEN_DIGITS.h" />
     <ClInclude Include="LEET_LENGTH_OF_LAST_WORD.h" />
     <ClInclude Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.h" />
     <ClInclude Include="LEET_LEXICOGRAPHICAL_NUMBERS.h" />
@@ -898,6 +899,7 @@
     <ClCompile Include="LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR.cpp" />
     <ClCompile Include="LEET_LARGEST_DIVISIBLE_SUBSET.cpp" />
     <ClCompile Include="LEET_LARGEST_NUMBER.cpp" />
+    <ClCompile Include="LEET_LARGEST_TIME_FOR_GIVEN_DIGITS.cpp" />
     <ClCompile Include="LEET_LENGTH_OF_LAST_WORD.cpp" />
     <ClCompile Include="LEET_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.cpp" />
     <ClCompile Include="LEET_LEXICOGRAPHICAL_NUMBERS.cpp" />

@@ -16,72 +16,79 @@ namespace _LEET_WORD_LADDER
     class Solution
     {
     public:
-        int ladderLength(string beginWord, string endWord, unordered_set<string>& wordList)
+        int ladderLength(string beginWord, string endWord, vector<string>& wordList)
         {
-            int n = 0;
-            unordered_map<string, int> wordMap;
-            vector<string> strings;
-
-            for (unordered_set<string>::iterator wi = wordList.begin(); wi != wordList.end(); wi++)
-            {
-                strings.push_back(*wi);
-                wordMap.insert(pair<string, int>(*wi, n++));
-            }
-
-            wordMap.erase(beginWord);
-            wordMap.erase(endWord);
-            wordMap.insert(pair<string, int>(beginWord, n));
-            wordMap.insert(pair<string, int>(endWord, n + 1));
-            strings.push_back(beginWord);
-            strings.push_back(endWord);
-
-            queue<int> bfs_queue;
-
-            vector<bool> enqueued(n + 2);
-            vector<int> lengths(n + 2);
+            wordList.push_back(beginWord);
+            int n = wordList.size();
+            int b = -1;
+            int e = -1;
+            int l = beginWord.length();
+            vector<vector<int>> adjacency_list(n);
             for (int i = 0; i < n; i++)
             {
-                enqueued[i] = false;
-                lengths[i] = 0;
-            }
-
-            lengths[n] = 1;
-            enqueued[n] = true;
-            bfs_queue.push(n);
-
-            while (bfs_queue.size() > 0)
-            {
-                int current_id = bfs_queue.front();
-                bfs_queue.pop();
-                string current = strings[current_id];
-                int length = lengths[current_id];
-
-                for (int c = 0; c < current.length(); c++)
+                string& si = wordList[i];
+                if (si == beginWord)
                 {
-                    char backup = current[c];
-                    for (char a = 'a'; a <= 'z'; a++)
+                    b = i;
+                }
+                else if (si == endWord)
+                {
+                    e = i;
+                }
+                for (int j = i + 1; j < n; j++)
+                {
+                    string& sj = wordList[j];
+                    int mismatch = 0;
+                    for (int c = 0; mismatch < 2 && c < l; c++)
                     {
-                        current[c] = a;
-                        unordered_map<string, int>::iterator probe = wordMap.find(current);
-                        if (probe != wordMap.end())
+                        if (si[c] != sj[c])
                         {
-                            int neighbor_id = probe->second;
-                            if (neighbor_id == (n + 1))
-                            {
-                                return length + 1;
-                            }
-                            if (!enqueued[neighbor_id])
-                            {
-                                lengths[neighbor_id] = length + 1;
-                                enqueued[neighbor_id] = true;
-                                bfs_queue.push(neighbor_id);
-                            }
+                            mismatch++;
                         }
                     }
-                    current[c] = backup;
+                    if (mismatch == 1)
+                    {
+                        adjacency_list[i].push_back(j);
+                        adjacency_list[j].push_back(i);
+                    }
                 }
             }
 
+            if (b == -1 || e == -1)
+            {
+                return false;
+            }
+            if (b == e)
+            {
+                return 1;
+            }
+            queue<int> bfs;
+            queue<int> lengths;
+            vector<bool> enqueued(n, false);
+            bfs.push(b);
+            lengths.push(1);
+            enqueued[b] = true;
+
+            while (bfs.size() > 0)
+            {
+                int v = bfs.front();
+                int length = lengths.front();
+                bfs.pop();
+                lengths.pop();
+                for (int neighbor : adjacency_list[v])
+                {
+                    if (neighbor == e)
+                    {
+                        return length + 1;
+                    }
+                    if (!enqueued[neighbor])
+                    {
+                        enqueued[neighbor] = true;
+                        bfs.push(neighbor);
+                        lengths.push(length + 1);
+                    }
+                }
+            }
             return 0;
         }
     };
@@ -92,10 +99,8 @@ using namespace _LEET_WORD_LADDER;
 int LEET_WORD_LADDER()
 {
     Solution s;
-    unordered_set<string> words;
-    words.insert("a");
-    words.insert("b");
-    words.insert("c");
-    cout << s.ladderLength("a", "c", words) << endl;
+    string case1[]{ "hot", "dot", "dog", "lot", "log", "cog" };
+    vector<string> words(case1, case1 + _countof(case1));
+    cout << s.ladderLength("hit", "cog", words) << endl;
     return 0;
 }

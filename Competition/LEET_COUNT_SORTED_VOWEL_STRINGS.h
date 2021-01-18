@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_COUNT_SORTED_VOWEL_STRINGS();

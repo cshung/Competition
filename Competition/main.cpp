@@ -571,6 +571,7 @@
 #include "LEET_SQUARES_OF_A_SORTED_ARRAY.h"                                 // 565
 #include "LEET_LARGEST_TIME_FOR_GIVEN_DIGITS.h"                             // 566
 #include "LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS.h"                        // 567
+#include "LEET_COUNT_SORTED_VOWEL_STRINGS.h"                                // 568
 
 // End of headers
 
@@ -1152,5 +1153,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LARGEST_COMPONENT_SIZE_BY_COMMON_FACTOR();                   // Accepted
     // return LEET_SQUARES_OF_A_SORTED_ARRAY();                                 // Accepted
     // return LEET_LARGEST_TIME_FOR_GIVEN_DIGITS();                             // Accepted
-    return LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS();                        // Accepted
+    // return LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS();                        // Accepted
+    return LEET_COUNT_SORTED_VOWEL_STRINGS();                                // Accepted
 }

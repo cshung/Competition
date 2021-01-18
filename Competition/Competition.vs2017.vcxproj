@@ -236,6 +236,7 @@
     <ClInclude Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.h" />
     <ClInclude Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.h" />
     <ClInclude Include="LEET_COUNT_PRIMES.h" />
+    <ClInclude Include="LEET_COUNT_SORTED_VOWEL_STRINGS.h" />
     <ClInclude Include="LEET_COUNT_UNIVALUE_SUBTREES.h" />
     <ClInclude Include="LEET_COUNTING_BITS.h" />
     <ClInclude Include="LEET_COURSE_SCHEDULE_II.h" />
@@ -809,6 +810,7 @@
     <ClCompile Include="LEET_COUNT_NUMBERS_WITH_UNIQUE_DIGITS.cpp" />
     <ClCompile Include="LEET_COUNT_OF_SMALLER_NUMBERS_AFTER_SELF.cpp" />
     <ClCompile Include="LEET_COUNT_PRIMES.cpp" />
+    <ClCompile Include="LEET_COUNT_SORTED_VOWEL_STRINGS.cpp" />
     <ClCompile Include="LEET_COUNT_UNIVALUE_SUBTREES.cpp" />
     <ClCompile Include="LEET_COUNTING_BITS.cpp" />
     <ClCompile Include="LEET_COURSE_SCHEDULE_II.cpp" />

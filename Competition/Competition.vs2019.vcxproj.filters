@@ -153,6 +153,9 @@
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LEET_BEAUTIFUL_ARRANGEMENT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1869,6 +1872,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BATTLESHIPS_IN_A_BOARD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEET_BEAUTIFUL_ARRANGEMENT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp">

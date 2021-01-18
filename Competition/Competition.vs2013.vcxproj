@@ -123,6 +123,7 @@
     <ClInclude Include="LEET_BASIC_CALCULATOR.h" />
     <ClInclude Include="LEET_BASIC_CALCULATOR_II.h" />
     <ClInclude Include="LEET_BATTLESHIPS_IN_A_BOARD.h" />
+    <ClInclude Include="LEET_BEAUTIFUL_ARRANGEMENT.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.h" />
     <ClInclude Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.h" />
@@ -697,6 +698,7 @@
     <ClCompile Include="LEET_BASIC_CALCULATOR.cpp" />
     <ClCompile Include="LEET_BASIC_CALCULATOR_II.cpp" />
     <ClCompile Include="LEET_BATTLESHIPS_IN_A_BOARD.cpp" />
+    <ClCompile Include="LEET_BEAUTIFUL_ARRANGEMENT.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_II.cpp" />
     <ClCompile Include="LEET_BEST_TIME_TO_BUY_AND_SELL_STOCK_III.cpp" />

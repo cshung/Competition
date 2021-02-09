@@ -442,6 +442,7 @@
     <ClInclude Include="LEET_SET_MATRIX_ZEROES.h" />
     <ClInclude Include="LEET_SET_MISMATCH.h" />
     <ClInclude Include="LEET_SHORTEST_COMMON_SUPERSEQUENCE.h" />
+    <ClInclude Include="LEET_SHORTEST_DISTANCE_TO_A_CHARACTER.h" />
     <ClInclude Include="LEET_SHORTEST_PALINDROME.h" />
     <ClInclude Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.h" />
     <ClInclude Include="LEET_SHORTEST_WORD_DISTANCE.h" />
@@ -1017,6 +1018,7 @@
     <ClCompile Include="LEET_SET_MATRIX_ZEROES.cpp" />
     <ClCompile Include="LEET_SET_MISMATCH.cpp" />
     <ClCompile Include="LEET_SHORTEST_COMMON_SUPERSEQUENCE.cpp" />
+    <ClCompile Include="LEET_SHORTEST_DISTANCE_TO_A_CHARACTER.cpp" />
     <ClCompile Include="LEET_SHORTEST_PALINDROME.cpp" />
     <ClCompile Include="LEET_SHORTEST_UNSORTED_CONTINUOUS_SUBARRAY.cpp" />
     <ClCompile Include="LEET_SHORTEST_WORD_DISTANCE.cpp" />

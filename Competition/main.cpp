@@ -573,6 +573,7 @@
 #include "LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS.h"                        // 567
 #include "LEET_COUNT_SORTED_VOWEL_STRINGS.h"                                // 568
 #include "LEET_BEAUTIFUL_ARRANGEMENT.h"                                     // 569
+#include "LEET_SHORTEST_DISTANCE_TO_A_CHARACTER.h"                          // 570
 
 // End of headers
 
@@ -1156,5 +1157,6 @@ int _tmain(int argc, _TCHAR* argv[])
     // return LEET_LARGEST_TIME_FOR_GIVEN_DIGITS();                             // Accepted
     // return LEET_SUM_OF_ROOT_TO_LEAF_BINARY_NUMBERS();                        // Accepted
     // return LEET_COUNT_SORTED_VOWEL_STRINGS();                                // Accepted
-    return LEET_BEAUTIFUL_ARRANGEMENT();                                     // Accepted
+    // return LEET_BEAUTIFUL_ARRANGEMENT();                                     // Accepted
+    return LEET_SHORTEST_DISTANCE_TO_A_CHARACTER();                          // Accepted
 }

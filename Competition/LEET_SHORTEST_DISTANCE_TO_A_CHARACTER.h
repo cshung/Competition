@@ -1,0 +1,3 @@
+#pragma once
+
+int LEET_SHORTEST_DISTANCE_TO_A_CHARACTER();

@@ -58,7 +58,7 @@ pub fn codechef_git01()
         let mut cur_row = 0;
         let mut cost1 = 0;
         let mut cost2 = 0;
-        for row in 0..height
+        for _row in 0..height
         {
             let read_test_matrix_row_result = read_line(&stdin);
             if read_test_matrix_row_result.is_err()

@@ -2,8 +2,7 @@ mod codechef;
 mod leetcode;
 
 fn main() {
-    if 1 == 0
-    {
+    if 1 == 0 {
         //
         // Please the Rust compiler happy with dead code
         //
@@ -17,6 +16,7 @@ fn main() {
         leetcode::minimum_number_of_arrows_to_burst_balloons::minimum_number_of_arrows_to_burst_balloons();
         leetcode::gas_station::gas_station();
         leetcode::max_points_on_a_line::max_points_on_a_line();
+        leetcode::binary_tree_preorder_traversal::binary_tree_preorder_traversal();
     }
-    leetcode::binary_tree_preorder_traversal::binary_tree_preorder_traversal();
+    leetcode::same_tree::same_tree();
 }

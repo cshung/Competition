@@ -5,13 +5,10 @@ impl Solution {
         let mut spent = 0;
         let mut count = 0;
         for cost in c {
-            if (spent + cost)  <= coins
-            {
+            if (spent + cost) <= coins {
                 count = count + 1;
                 spent = spent + cost;
-            }
-            else
-            {
+            } else {
                 break;
             }
         }
@@ -19,12 +16,9 @@ impl Solution {
     }
 }
 
-struct Solution
-{
-}
+struct Solution {}
 
-pub fn maximum_ice_cream_bars()
-{
-    let answer = Solution::max_ice_cream(vec![1,3,2,4,1], 7);
+pub fn maximum_ice_cream_bars() {
+    let answer = Solution::max_ice_cream(vec![1, 3, 2, 4, 1], 7);
     println!("{}", answer);
 }

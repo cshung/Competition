@@ -17,6 +17,7 @@ fn main() {
         leetcode::gas_station::gas_station();
         leetcode::max_points_on_a_line::max_points_on_a_line();
         leetcode::binary_tree_preorder_traversal::binary_tree_preorder_traversal();
+        leetcode::same_tree::same_tree();
     }
-    leetcode::same_tree::same_tree();
+    leetcode::minimum_time_to_collect_all_apples_in_a_tree::minimum_time_to_collect_all_apples_in_a_tree();
 }

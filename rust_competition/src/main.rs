@@ -18,6 +18,7 @@ fn main() {
         leetcode::max_points_on_a_line::max_points_on_a_line();
         leetcode::binary_tree_preorder_traversal::binary_tree_preorder_traversal();
         leetcode::same_tree::same_tree();
+        leetcode::minimum_time_to_collect_all_apples_in_a_tree::minimum_time_to_collect_all_apples_in_a_tree();
     }
-    leetcode::minimum_time_to_collect_all_apples_in_a_tree::minimum_time_to_collect_all_apples_in_a_tree();
+    leetcode::number_of_nodes_in_the_sub_tree_with_the_same_label::number_of_nodes_in_the_sub_tree_with_the_same_label();
 }

@@ -1,5 +1,6 @@
 pub mod binary_tree_preorder_traversal;
 pub mod gas_station;
+pub mod insert_interval;
 pub mod lexicographically_smallest_equivalent_string;
 pub mod longest_path_with_different_adjacent_characters;
 pub mod max_points_on_a_line;

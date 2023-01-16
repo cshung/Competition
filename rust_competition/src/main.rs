@@ -22,6 +22,7 @@ fn main() {
         leetcode::number_of_nodes_in_the_sub_tree_with_the_same_label::number_of_nodes_in_the_sub_tree_with_the_same_label();
         leetcode::longest_path_with_different_adjacent_characters::longest_path_with_different_adjacent_characters();
         leetcode::lexicographically_smallest_equivalent_string::lexicographically_smallest_equivalent_string();
+        leetcode::number_of_good_paths::number_of_good_paths();
     }
-    leetcode::number_of_good_paths::number_of_good_paths();
+    leetcode::insert_interval::insert_interval();
 }

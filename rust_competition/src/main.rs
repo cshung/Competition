@@ -23,6 +23,7 @@ fn main() {
         leetcode::longest_path_with_different_adjacent_characters::longest_path_with_different_adjacent_characters();
         leetcode::lexicographically_smallest_equivalent_string::lexicographically_smallest_equivalent_string();
         leetcode::number_of_good_paths::number_of_good_paths();
+        leetcode::insert_interval::insert_interval();
     }
-    leetcode::insert_interval::insert_interval();
+    leetcode::flip_string_to_monotone_increasing::flip_string_to_monotone_increasing();
 }

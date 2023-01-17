@@ -1,4 +1,5 @@
 pub mod binary_tree_preorder_traversal;
+pub mod flip_string_to_monotone_increasing;
 pub mod gas_station;
 pub mod insert_interval;
 pub mod lexicographically_smallest_equivalent_string;

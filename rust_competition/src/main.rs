@@ -25,6 +25,7 @@ fn main() {
         leetcode::number_of_good_paths::number_of_good_paths();
         leetcode::insert_interval::insert_interval();
         leetcode::flip_string_to_monotone_increasing::flip_string_to_monotone_increasing();
+        leetcode::maximum_sum_circular_subarray::maximum_sum_circular_subarray();
     }
-    leetcode::maximum_sum_circular_subarray::maximum_sum_circular_subarray();
+    leetcode::subarray_sums_divisible_by_k::subarray_sums_divisible_by_k();
 }

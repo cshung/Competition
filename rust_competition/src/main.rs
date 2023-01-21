@@ -27,6 +27,7 @@ fn main() {
         leetcode::flip_string_to_monotone_increasing::flip_string_to_monotone_increasing();
         leetcode::maximum_sum_circular_subarray::maximum_sum_circular_subarray();
         leetcode::subarray_sums_divisible_by_k::subarray_sums_divisible_by_k();
+        leetcode::non_decreasing_subsequences::non_decreasing_subsequences();
     }
-    leetcode::non_decreasing_subsequences::non_decreasing_subsequences();
+    leetcode::restore_ip_addresses::restore_ip_addresses();
 }

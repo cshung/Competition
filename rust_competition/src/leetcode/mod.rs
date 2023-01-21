@@ -13,6 +13,7 @@ pub mod minimum_time_to_collect_all_apples_in_a_tree;
 pub mod non_decreasing_subsequences;
 pub mod number_of_good_paths;
 pub mod number_of_nodes_in_the_sub_tree_with_the_same_label;
+pub mod restore_ip_addresses;
 pub mod same_tree;
 pub mod subarray_sums_divisible_by_k;
 pub mod two_sum;

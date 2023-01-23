@@ -1,4 +1,5 @@
 pub mod binary_tree_preorder_traversal;
+pub mod find_the_town_judge;
 pub mod flip_string_to_monotone_increasing;
 pub mod gas_station;
 pub mod insert_interval;

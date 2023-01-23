@@ -29,6 +29,7 @@ fn main() {
         leetcode::subarray_sums_divisible_by_k::subarray_sums_divisible_by_k();
         leetcode::non_decreasing_subsequences::non_decreasing_subsequences();
         leetcode::restore_ip_addresses::restore_ip_addresses();
+        leetcode::palindrome_partitioning::palindrome_partitioning();
     }
-    leetcode::palindrome_partitioning::palindrome_partitioning();
+    leetcode::find_the_town_judge::find_the_town_judge();
 }

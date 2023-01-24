@@ -17,5 +17,6 @@ pub mod number_of_nodes_in_the_sub_tree_with_the_same_label;
 pub mod palindrome_partitioning;
 pub mod restore_ip_addresses;
 pub mod same_tree;
+pub mod snakes_and_ladders;
 pub mod subarray_sums_divisible_by_k;
 pub mod two_sum;

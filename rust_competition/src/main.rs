@@ -30,6 +30,7 @@ fn main() {
         leetcode::non_decreasing_subsequences::non_decreasing_subsequences();
         leetcode::restore_ip_addresses::restore_ip_addresses();
         leetcode::palindrome_partitioning::palindrome_partitioning();
+        leetcode::find_the_town_judge::find_the_town_judge();
     }
-    leetcode::find_the_town_judge::find_the_town_judge();
+    leetcode::snakes_and_ladders::snakes_and_ladders();
 }

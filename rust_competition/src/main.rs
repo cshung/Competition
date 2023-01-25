@@ -31,6 +31,7 @@ fn main() {
         leetcode::restore_ip_addresses::restore_ip_addresses();
         leetcode::palindrome_partitioning::palindrome_partitioning();
         leetcode::find_the_town_judge::find_the_town_judge();
+        leetcode::snakes_and_ladders::snakes_and_ladders();
     }
-    leetcode::snakes_and_ladders::snakes_and_ladders();
+    leetcode::find_closest_node_to_given_two_nodes::find_closest_node_to_given_two_nodes();
 }

@@ -33,6 +33,7 @@ fn main() {
         leetcode::find_the_town_judge::find_the_town_judge();
         leetcode::snakes_and_ladders::snakes_and_ladders();
         leetcode::find_closest_node_to_given_two_nodes::find_closest_node_to_given_two_nodes();
+        leetcode::cheapest_flights_within_k_stops::cheapest_flights_within_k_stops();
     }
-    leetcode::cheapest_flights_within_k_stops::cheapest_flights_within_k_stops();
+    leetcode::concatenated_words::concatenated_words();
 }

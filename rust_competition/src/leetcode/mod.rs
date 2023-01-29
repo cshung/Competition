@@ -8,6 +8,7 @@ pub mod flip_string_to_monotone_increasing;
 pub mod gas_station;
 pub mod insert_interval;
 pub mod lexicographically_smallest_equivalent_string;
+pub mod lfu_cache;
 pub mod longest_path_with_different_adjacent_characters;
 pub mod max_points_on_a_line;
 pub mod maximum_ice_cream_bars;

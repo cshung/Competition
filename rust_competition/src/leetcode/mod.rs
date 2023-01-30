@@ -16,6 +16,7 @@ pub mod maximum_sum_circular_subarray;
 pub mod minimum_number_of_arrows_to_burst_balloons;
 pub mod minimum_rounds_to_complete_all_tasks;
 pub mod minimum_time_to_collect_all_apples_in_a_tree;
+pub mod n_th_tribonacci_number;
 pub mod non_decreasing_subsequences;
 pub mod number_of_good_paths;
 pub mod number_of_nodes_in_the_sub_tree_with_the_same_label;

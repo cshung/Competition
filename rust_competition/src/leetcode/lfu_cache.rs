@@ -155,7 +155,11 @@ impl LFUCache {
             let mut current_box = bucket.borrow().head.borrow().next();
             let tail_box = Rc::clone(&bucket.borrow().tail);
             while !Rc::ptr_eq(&current_box, &tail_box) {
-                println!("  {} -> {}", current_box.borrow().key, current_box.borrow().value);
+                println!(
+                    "  {} -> {}",
+                    current_box.borrow().key,
+                    current_box.borrow().value
+                );
                 let next_box = current_box.borrow().next();
                 current_box = next_box;
             }

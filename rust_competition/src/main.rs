@@ -37,6 +37,7 @@ fn main() {
         leetcode::concatenated_words::concatenated_words();
         leetcode::data_stream_as_disjoint_intervals::data_stream_as_disjoint_intervals();
         leetcode::lfu_cache::lfu_cache();
+        leetcode::n_th_tribonacci_number::n_th_tribonacci_number();
     }
-    leetcode::n_th_tribonacci_number::n_th_tribonacci_number();
+    leetcode::word_pattern::word_pattern();
 }

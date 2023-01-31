@@ -26,3 +26,4 @@ pub mod same_tree;
 pub mod snakes_and_ladders;
 pub mod subarray_sums_divisible_by_k;
 pub mod two_sum;
+pub mod word_pattern;

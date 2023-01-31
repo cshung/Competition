@@ -40,6 +40,7 @@ fn main() {
         leetcode::n_th_tribonacci_number::n_th_tribonacci_number();
         leetcode::word_pattern::word_pattern();
         leetcode::detect_capital::detect_capital();
+        leetcode::delete_columns_to_make_sorted::delete_columns_to_make_sorted();
     }
-    leetcode::delete_columns_to_make_sorted::delete_columns_to_make_sorted();
+    leetcode::best_team_with_no_conflicts::best_team_with_no_conflicts();
 }

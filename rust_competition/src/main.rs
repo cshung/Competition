@@ -39,6 +39,7 @@ fn main() {
         leetcode::lfu_cache::lfu_cache();
         leetcode::n_th_tribonacci_number::n_th_tribonacci_number();
         leetcode::word_pattern::word_pattern();
+        leetcode::detect_capital::detect_capital();
     }
-    leetcode::detect_capital::detect_capital();
+    leetcode::delete_columns_to_make_sorted::delete_columns_to_make_sorted();
 }

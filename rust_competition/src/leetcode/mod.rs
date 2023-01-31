@@ -2,6 +2,7 @@ pub mod binary_tree_preorder_traversal;
 pub mod cheapest_flights_within_k_stops;
 pub mod concatenated_words;
 pub mod data_stream_as_disjoint_intervals;
+pub mod delete_columns_to_make_sorted;
 pub mod detect_capital;
 pub mod find_closest_node_to_given_two_nodes;
 pub mod find_the_town_judge;

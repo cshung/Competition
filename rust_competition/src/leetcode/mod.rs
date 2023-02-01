@@ -9,6 +9,7 @@ pub mod find_closest_node_to_given_two_nodes;
 pub mod find_the_town_judge;
 pub mod flip_string_to_monotone_increasing;
 pub mod gas_station;
+pub mod greatest_common_divisor_of_strings;
 pub mod insert_interval;
 pub mod lexicographically_smallest_equivalent_string;
 pub mod lfu_cache;

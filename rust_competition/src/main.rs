@@ -41,6 +41,7 @@ fn main() {
         leetcode::word_pattern::word_pattern();
         leetcode::detect_capital::detect_capital();
         leetcode::delete_columns_to_make_sorted::delete_columns_to_make_sorted();
+        leetcode::best_team_with_no_conflicts::best_team_with_no_conflicts();
     }
-    leetcode::best_team_with_no_conflicts::best_team_with_no_conflicts();
+    leetcode::greatest_common_divisor_of_strings::greatest_common_divisor_of_strings();
 }

@@ -43,6 +43,7 @@ fn main() {
         leetcode::delete_columns_to_make_sorted::delete_columns_to_make_sorted();
         leetcode::best_team_with_no_conflicts::best_team_with_no_conflicts();
         leetcode::greatest_common_divisor_of_strings::greatest_common_divisor_of_strings();
+        leetcode::verifying_an_alien_dictionary::verifying_an_alien_dictionary();
     }
-    leetcode::verifying_an_alien_dictionary::verifying_an_alien_dictionary();
+    leetcode::zigzag_conversion::zigzag_conversion();
 }

@@ -44,6 +44,7 @@ fn main() {
         leetcode::best_team_with_no_conflicts::best_team_with_no_conflicts();
         leetcode::greatest_common_divisor_of_strings::greatest_common_divisor_of_strings();
         leetcode::verifying_an_alien_dictionary::verifying_an_alien_dictionary();
+        leetcode::zigzag_conversion::zigzag_conversion();
     }
-    leetcode::zigzag_conversion::zigzag_conversion();
+    leetcode::permutation_in_string::permutation_in_string();
 }

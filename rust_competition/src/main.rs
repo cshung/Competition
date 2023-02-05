@@ -45,6 +45,7 @@ fn main() {
         leetcode::greatest_common_divisor_of_strings::greatest_common_divisor_of_strings();
         leetcode::verifying_an_alien_dictionary::verifying_an_alien_dictionary();
         leetcode::zigzag_conversion::zigzag_conversion();
+        leetcode::permutation_in_string::permutation_in_string();
     }
-    leetcode::permutation_in_string::permutation_in_string();
+    leetcode::find_all_anagrams_in_a_string::find_all_anagrams_in_a_string();
 }

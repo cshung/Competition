@@ -46,6 +46,7 @@ fn main() {
         leetcode::verifying_an_alien_dictionary::verifying_an_alien_dictionary();
         leetcode::zigzag_conversion::zigzag_conversion();
         leetcode::permutation_in_string::permutation_in_string();
+        leetcode::find_all_anagrams_in_a_string::find_all_anagrams_in_a_string();
     }
-    leetcode::find_all_anagrams_in_a_string::find_all_anagrams_in_a_string();
+    leetcode::shuffle_the_array::shuffle_the_array();
 }

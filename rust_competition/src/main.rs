@@ -49,6 +49,7 @@ fn main() {
         leetcode::find_all_anagrams_in_a_string::find_all_anagrams_in_a_string();
         leetcode::shuffle_the_array::shuffle_the_array();
         leetcode::fruit_into_baskets::fruit_into_baskets();
+        leetcode::jump_game_ii::jump_game_ii();
     }
-    leetcode::jump_game_ii::jump_game_ii();
+    leetcode::naming_a_company::naming_a_company();
 }

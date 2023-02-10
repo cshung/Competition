@@ -50,6 +50,7 @@ fn main() {
         leetcode::shuffle_the_array::shuffle_the_array();
         leetcode::fruit_into_baskets::fruit_into_baskets();
         leetcode::jump_game_ii::jump_game_ii();
+        leetcode::naming_a_company::naming_a_company();
     }
-    leetcode::naming_a_company::naming_a_company();
+    leetcode::as_far_from_land_as_possible::as_far_from_land_as_possible();
 }

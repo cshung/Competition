@@ -51,6 +51,7 @@ fn main() {
         leetcode::fruit_into_baskets::fruit_into_baskets();
         leetcode::jump_game_ii::jump_game_ii();
         leetcode::naming_a_company::naming_a_company();
+        leetcode::as_far_from_land_as_possible::as_far_from_land_as_possible();
     }
-    leetcode::as_far_from_land_as_possible::as_far_from_land_as_possible();
+    leetcode::shortest_path_with_alternating_colors::shortest_path_with_alternating_colors();
 }

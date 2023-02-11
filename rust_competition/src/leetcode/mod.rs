@@ -33,6 +33,7 @@ pub mod palindrome_partitioning;
 pub mod permutation_in_string;
 pub mod restore_ip_addresses;
 pub mod same_tree;
+pub mod shortest_path_with_alternating_colors;
 pub mod shuffle_the_array;
 pub mod snakes_and_ladders;
 pub mod subarray_sums_divisible_by_k;

@@ -52,6 +52,7 @@ fn main() {
         leetcode::jump_game_ii::jump_game_ii();
         leetcode::naming_a_company::naming_a_company();
         leetcode::as_far_from_land_as_possible::as_far_from_land_as_possible();
+        leetcode::shortest_path_with_alternating_colors::shortest_path_with_alternating_colors();
     }
-    leetcode::shortest_path_with_alternating_colors::shortest_path_with_alternating_colors();
+    leetcode::minimum_fuel_cost_to_report_to_the_capital::minimum_fuel_cost_to_report_to_the_capital();
 }

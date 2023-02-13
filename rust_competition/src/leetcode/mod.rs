@@ -3,6 +3,7 @@ pub mod best_team_with_no_conflicts;
 pub mod binary_tree_preorder_traversal;
 pub mod cheapest_flights_within_k_stops;
 pub mod concatenated_words;
+pub mod count_odd_numbers_in_an_interval_range;
 pub mod data_stream_as_disjoint_intervals;
 pub mod delete_columns_to_make_sorted;
 pub mod detect_capital;

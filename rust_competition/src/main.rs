@@ -54,6 +54,7 @@ fn main() {
         leetcode::as_far_from_land_as_possible::as_far_from_land_as_possible();
         leetcode::shortest_path_with_alternating_colors::shortest_path_with_alternating_colors();
         leetcode::minimum_fuel_cost_to_report_to_the_capital::minimum_fuel_cost_to_report_to_the_capital();
+        leetcode::count_odd_numbers_in_an_interval_range::count_odd_numbers_in_an_interval_range();
     }
-    leetcode::count_odd_numbers_in_an_interval_range::count_odd_numbers_in_an_interval_range();
+    leetcode::add_binary::add_binary();
 }

@@ -1,3 +1,4 @@
+pub mod add_binary;
 pub mod as_far_from_land_as_possible;
 pub mod best_team_with_no_conflicts;
 pub mod binary_tree_preorder_traversal;

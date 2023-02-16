@@ -22,6 +22,7 @@ pub mod lexicographically_smallest_equivalent_string;
 pub mod lfu_cache;
 pub mod longest_path_with_different_adjacent_characters;
 pub mod max_points_on_a_line;
+pub mod maximum_depth_of_binary_tree;
 pub mod maximum_ice_cream_bars;
 pub mod maximum_sum_circular_subarray;
 pub mod minimum_fuel_cost_to_report_to_the_capital;

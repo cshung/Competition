@@ -56,6 +56,7 @@ fn main() {
         leetcode::minimum_fuel_cost_to_report_to_the_capital::minimum_fuel_cost_to_report_to_the_capital();
         leetcode::count_odd_numbers_in_an_interval_range::count_odd_numbers_in_an_interval_range();
         leetcode::add_binary::add_binary();
+        leetcode::add_to_array_form_of_integer::add_to_array_form_of_integer();
     }
-    leetcode::add_to_array_form_of_integer::add_to_array_form_of_integer();
+    leetcode::maximum_depth_of_binary_tree::maximum_depth_of_binary_tree();
 }

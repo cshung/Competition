@@ -57,6 +57,7 @@ fn main() {
         leetcode::count_odd_numbers_in_an_interval_range::count_odd_numbers_in_an_interval_range();
         leetcode::add_binary::add_binary();
         leetcode::add_to_array_form_of_integer::add_to_array_form_of_integer();
+        leetcode::maximum_depth_of_binary_tree::maximum_depth_of_binary_tree();
     }
-    leetcode::maximum_depth_of_binary_tree::maximum_depth_of_binary_tree();
+    leetcode::minimum_distance_between_bst_nodes::minimum_distance_between_bst_nodes();
 }

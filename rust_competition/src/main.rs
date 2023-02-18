@@ -58,6 +58,7 @@ fn main() {
         leetcode::add_binary::add_binary();
         leetcode::add_to_array_form_of_integer::add_to_array_form_of_integer();
         leetcode::maximum_depth_of_binary_tree::maximum_depth_of_binary_tree();
+        leetcode::minimum_distance_between_bst_nodes::minimum_distance_between_bst_nodes();
     }
-    leetcode::minimum_distance_between_bst_nodes::minimum_distance_between_bst_nodes();
+    leetcode::invert_binary_tree::invert_binary_tree();
 }

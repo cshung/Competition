@@ -60,6 +60,7 @@ fn main() {
         leetcode::maximum_depth_of_binary_tree::maximum_depth_of_binary_tree();
         leetcode::minimum_distance_between_bst_nodes::minimum_distance_between_bst_nodes();
         leetcode::invert_binary_tree::invert_binary_tree();
+        leetcode::binary_tree_zigzag_level_order_traversal::binary_tree_zigzag_level_order_traversal();
     }
-    leetcode::binary_tree_zigzag_level_order_traversal::binary_tree_zigzag_level_order_traversal();
+    leetcode::search_insert_position::search_insert_position();
 }

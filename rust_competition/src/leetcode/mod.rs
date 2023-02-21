@@ -44,6 +44,7 @@ pub mod same_tree;
 pub mod search_insert_position;
 pub mod shortest_path_with_alternating_colors;
 pub mod shuffle_the_array;
+pub mod single_element_in_a_sorted_array;
 pub mod snakes_and_ladders;
 pub mod subarray_sums_divisible_by_k;
 pub mod two_sum;

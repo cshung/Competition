@@ -4,6 +4,7 @@ pub mod as_far_from_land_as_possible;
 pub mod best_team_with_no_conflicts;
 pub mod binary_tree_preorder_traversal;
 pub mod binary_tree_zigzag_level_order_traversal;
+pub mod capacity_to_ship_packages_within_d_days;
 pub mod cheapest_flights_within_k_stops;
 pub mod concatenated_words;
 pub mod count_odd_numbers_in_an_interval_range;

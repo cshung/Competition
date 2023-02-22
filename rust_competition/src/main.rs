@@ -62,6 +62,7 @@ fn main() {
         leetcode::invert_binary_tree::invert_binary_tree();
         leetcode::binary_tree_zigzag_level_order_traversal::binary_tree_zigzag_level_order_traversal();
         leetcode::search_insert_position::search_insert_position();
+        leetcode::single_element_in_a_sorted_array::single_element_in_a_sorted_array();
     }
-    leetcode::single_element_in_a_sorted_array::single_element_in_a_sorted_array();
+    leetcode::capacity_to_ship_packages_within_d_days::capacity_to_ship_packages_within_d_days();
 }

@@ -1,5 +1,6 @@
 mod codechef;
 mod leetcode;
+mod library;
 
 fn main() {
     if 1 == 0 {

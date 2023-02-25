@@ -2,6 +2,7 @@ pub mod add_binary;
 pub mod add_to_array_form_of_integer;
 pub mod as_far_from_land_as_possible;
 pub mod best_team_with_no_conflicts;
+pub mod best_time_to_buy_and_sell_stock;
 pub mod binary_tree_preorder_traversal;
 pub mod binary_tree_zigzag_level_order_traversal;
 pub mod capacity_to_ship_packages_within_d_days;

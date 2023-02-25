@@ -67,6 +67,7 @@ fn main() {
         leetcode::capacity_to_ship_packages_within_d_days::capacity_to_ship_packages_within_d_days(
         );
         leetcode::ipo::ipo();
+        leetcode::minimize_deviation_in_array::minimize_deviation_in_array();
     }
-    leetcode::minimize_deviation_in_array::minimize_deviation_in_array();
+    leetcode::best_time_to_buy_and_sell_stock::best_time_to_buy_and_sell_stock();
 }

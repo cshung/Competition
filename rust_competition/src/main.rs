@@ -68,6 +68,7 @@ fn main() {
         );
         leetcode::ipo::ipo();
         leetcode::minimize_deviation_in_array::minimize_deviation_in_array();
+        leetcode::best_time_to_buy_and_sell_stock::best_time_to_buy_and_sell_stock();
     }
-    leetcode::best_time_to_buy_and_sell_stock::best_time_to_buy_and_sell_stock();
+    leetcode::edit_distance::edit_distance();
 }

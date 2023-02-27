@@ -8,6 +8,7 @@ pub mod binary_tree_zigzag_level_order_traversal;
 pub mod capacity_to_ship_packages_within_d_days;
 pub mod cheapest_flights_within_k_stops;
 pub mod concatenated_words;
+pub mod construct_quad_tree;
 pub mod count_odd_numbers_in_an_interval_range;
 pub mod data_stream_as_disjoint_intervals;
 pub mod delete_columns_to_make_sorted;

@@ -70,6 +70,7 @@ fn main() {
         leetcode::minimize_deviation_in_array::minimize_deviation_in_array();
         leetcode::best_time_to_buy_and_sell_stock::best_time_to_buy_and_sell_stock();
         leetcode::edit_distance::edit_distance();
+        leetcode::construct_quad_tree::construct_quad_tree(); // Note, not submitted
     }
-    leetcode::construct_quad_tree::construct_quad_tree();
+    leetcode::find_duplicate_subtrees::find_duplicate_subtrees();
 }

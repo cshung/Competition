@@ -54,6 +54,7 @@ pub mod shuffle_the_array;
 pub mod single_element_in_a_sorted_array;
 pub mod snakes_and_ladders;
 pub mod sort_an_array;
+pub mod string_compression;
 pub mod subarray_sums_divisible_by_k;
 pub mod two_sum;
 pub mod verifying_an_alien_dictionary;

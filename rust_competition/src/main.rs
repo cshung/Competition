@@ -72,6 +72,7 @@ fn main() {
         leetcode::edit_distance::edit_distance();
         leetcode::construct_quad_tree::construct_quad_tree(); // Note, not submitted
         leetcode::find_duplicate_subtrees::find_duplicate_subtrees();
+        leetcode::sort_an_array::sort_an_array();
     }
-    leetcode::sort_an_array::sort_an_array();
+    leetcode::string_compression::string_compression();
 }

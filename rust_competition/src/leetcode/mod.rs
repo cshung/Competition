@@ -17,6 +17,7 @@ pub mod edit_distance;
 pub mod find_all_anagrams_in_a_string;
 pub mod find_closest_node_to_given_two_nodes;
 pub mod find_duplicate_subtrees;
+pub mod find_the_index_of_the_first_occurrence_in_a_string;
 pub mod find_the_town_judge;
 pub mod flip_string_to_monotone_increasing;
 pub mod fruit_into_baskets;

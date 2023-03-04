@@ -10,6 +10,7 @@ pub mod cheapest_flights_within_k_stops;
 pub mod concatenated_words;
 pub mod construct_quad_tree;
 pub mod count_odd_numbers_in_an_interval_range;
+pub mod count_subarrays_with_fixed_bounds;
 pub mod data_stream_as_disjoint_intervals;
 pub mod delete_columns_to_make_sorted;
 pub mod detect_capital;

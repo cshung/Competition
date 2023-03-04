@@ -74,6 +74,7 @@ fn main() {
         leetcode::find_duplicate_subtrees::find_duplicate_subtrees();
         leetcode::sort_an_array::sort_an_array();
         leetcode::string_compression::string_compression();
+        leetcode::find_the_index_of_the_first_occurrence_in_a_string::find_the_index_of_the_first_occurrence_in_a_string();
     }
-    leetcode::find_the_index_of_the_first_occurrence_in_a_string::find_the_index_of_the_first_occurrence_in_a_string();
+    leetcode::count_subarrays_with_fixed_bounds::count_subarrays_with_fixed_bounds();
 }

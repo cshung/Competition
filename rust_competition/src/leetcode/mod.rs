@@ -28,6 +28,7 @@ pub mod insert_interval;
 pub mod invert_binary_tree;
 pub mod ipo;
 pub mod jump_game_ii;
+pub mod jump_game_iv;
 pub mod lexicographically_smallest_equivalent_string;
 pub mod lfu_cache;
 pub mod longest_path_with_different_adjacent_characters;

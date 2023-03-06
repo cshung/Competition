@@ -118,7 +118,6 @@ impl Solution {
                     break;
                 }
             }
-            suffix_start += 1;
             if current_start < maximal_start {
                 maximal_start = current_start;
                 maximal_end = current_end;

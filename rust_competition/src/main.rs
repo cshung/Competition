@@ -77,6 +77,7 @@ fn main() {
         leetcode::find_the_index_of_the_first_occurrence_in_a_string::find_the_index_of_the_first_occurrence_in_a_string();
         leetcode::count_subarrays_with_fixed_bounds::count_subarrays_with_fixed_bounds();
         leetcode::jump_game_iv::jump_game_iv();
+        leetcode::kth_missing_positive_number::kth_missing_positive_number();
     }
-    leetcode::kth_missing_positive_number::kth_missing_positive_number();
+    leetcode::minimum_time_to_complete_trips::minimum_time_to_complete_trips();
 }

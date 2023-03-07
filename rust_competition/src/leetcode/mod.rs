@@ -43,6 +43,7 @@ pub mod minimum_fuel_cost_to_report_to_the_capital;
 pub mod minimum_number_of_arrows_to_burst_balloons;
 pub mod minimum_rounds_to_complete_all_tasks;
 pub mod minimum_time_to_collect_all_apples_in_a_tree;
+pub mod minimum_time_to_complete_trips;
 pub mod n_th_tribonacci_number;
 pub mod naming_a_company;
 pub mod non_decreasing_subsequences;

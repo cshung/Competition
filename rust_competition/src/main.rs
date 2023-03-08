@@ -78,6 +78,7 @@ fn main() {
         leetcode::count_subarrays_with_fixed_bounds::count_subarrays_with_fixed_bounds();
         leetcode::jump_game_iv::jump_game_iv();
         leetcode::kth_missing_positive_number::kth_missing_positive_number();
+        leetcode::minimum_time_to_complete_trips::minimum_time_to_complete_trips();
     }
-    leetcode::minimum_time_to_complete_trips::minimum_time_to_complete_trips();
+    leetcode::koko_eating_bananas::koko_eating_bananas();
 }

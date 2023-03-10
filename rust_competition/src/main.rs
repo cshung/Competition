@@ -79,6 +79,7 @@ fn main() {
         leetcode::jump_game_iv::jump_game_iv();
         leetcode::kth_missing_positive_number::kth_missing_positive_number();
         leetcode::minimum_time_to_complete_trips::minimum_time_to_complete_trips();
+        leetcode::koko_eating_bananas::koko_eating_bananas();
     }
-    leetcode::koko_eating_bananas::koko_eating_bananas();
+    leetcode::linked_list_random_node::linked_list_random_node();
 }

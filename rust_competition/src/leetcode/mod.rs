@@ -33,6 +33,7 @@ pub mod koko_eating_bananas;
 pub mod kth_missing_positive_number;
 pub mod lexicographically_smallest_equivalent_string;
 pub mod lfu_cache;
+pub mod linked_list_random_node;
 pub mod longest_path_with_different_adjacent_characters;
 pub mod max_points_on_a_line;
 pub mod maximum_depth_of_binary_tree;

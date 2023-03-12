@@ -81,7 +81,8 @@ fn main() {
         leetcode::minimum_time_to_complete_trips::minimum_time_to_complete_trips();
         leetcode::koko_eating_bananas::koko_eating_bananas();
         leetcode::linked_list_random_node::linked_list_random_node();
-    }
-    leetcode::convert_sorted_list_to_binary_search_tree::convert_sorted_list_to_binary_search_tree(
+        leetcode::convert_sorted_list_to_binary_search_tree::convert_sorted_list_to_binary_search_tree(
     );
+    }
+    leetcode::merge_k_sorted_lists::merge_k_sorted_lists();
 }

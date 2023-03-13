@@ -82,7 +82,8 @@ fn main() {
         leetcode::koko_eating_bananas::koko_eating_bananas();
         leetcode::linked_list_random_node::linked_list_random_node();
         leetcode::convert_sorted_list_to_binary_search_tree::convert_sorted_list_to_binary_search_tree(
-    );
+        );
+        leetcode::merge_k_sorted_lists::merge_k_sorted_lists();
     }
-    leetcode::merge_k_sorted_lists::merge_k_sorted_lists();
+    leetcode::symmetric_tree::symmetric_tree();
 }

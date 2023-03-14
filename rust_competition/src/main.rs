@@ -84,6 +84,7 @@ fn main() {
         leetcode::convert_sorted_list_to_binary_search_tree::convert_sorted_list_to_binary_search_tree(
         );
         leetcode::merge_k_sorted_lists::merge_k_sorted_lists();
+        leetcode::symmetric_tree::symmetric_tree();
     }
-    leetcode::symmetric_tree::symmetric_tree();
+    leetcode::sum_root_to_leaf_numbers::sum_root_to_leaf_numbers();
 }

@@ -9,6 +9,7 @@ pub mod capacity_to_ship_packages_within_d_days;
 pub mod cheapest_flights_within_k_stops;
 pub mod check_completeness_of_a_binary_tree;
 pub mod concatenated_words;
+pub mod construct_binary_tree_from_inorder_and_postorder_traversal;
 pub mod construct_quad_tree;
 pub mod convert_sorted_list_to_binary_search_tree;
 pub mod count_odd_numbers_in_an_interval_range;

@@ -86,6 +86,7 @@ fn main() {
         leetcode::merge_k_sorted_lists::merge_k_sorted_lists();
         leetcode::symmetric_tree::symmetric_tree();
         leetcode::sum_root_to_leaf_numbers::sum_root_to_leaf_numbers();
+        leetcode::check_completeness_of_a_binary_tree::check_completeness_of_a_binary_tree();
     }
-    leetcode::check_completeness_of_a_binary_tree::check_completeness_of_a_binary_tree();
+    leetcode::construct_binary_tree_from_inorder_and_postorder_traversal::construct_binary_tree_from_inorder_and_postorder_traversal();
 }

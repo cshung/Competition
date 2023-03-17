@@ -27,6 +27,7 @@ pub mod flip_string_to_monotone_increasing;
 pub mod fruit_into_baskets;
 pub mod gas_station;
 pub mod greatest_common_divisor_of_strings;
+pub mod implement_trie_prefix_tree;
 pub mod insert_interval;
 pub mod invert_binary_tree;
 pub mod ipo;

@@ -88,6 +88,7 @@ fn main() {
         leetcode::sum_root_to_leaf_numbers::sum_root_to_leaf_numbers();
         leetcode::check_completeness_of_a_binary_tree::check_completeness_of_a_binary_tree();
         leetcode::construct_binary_tree_from_inorder_and_postorder_traversal::construct_binary_tree_from_inorder_and_postorder_traversal();
+        leetcode::implement_trie_prefix_tree::implement_trie_prefix_tree();
     }
-    leetcode::implement_trie_prefix_tree::implement_trie_prefix_tree();
+    leetcode::design_browser_history::design_browser_history();
 }

@@ -16,6 +16,7 @@ pub mod count_odd_numbers_in_an_interval_range;
 pub mod count_subarrays_with_fixed_bounds;
 pub mod data_stream_as_disjoint_intervals;
 pub mod delete_columns_to_make_sorted;
+pub mod design_browser_history;
 pub mod detect_capital;
 pub mod edit_distance;
 pub mod find_all_anagrams_in_a_string;

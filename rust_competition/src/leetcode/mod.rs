@@ -5,6 +5,7 @@ pub mod best_team_with_no_conflicts;
 pub mod best_time_to_buy_and_sell_stock;
 pub mod binary_tree_preorder_traversal;
 pub mod binary_tree_zigzag_level_order_traversal;
+pub mod can_place_flowers;
 pub mod capacity_to_ship_packages_within_d_days;
 pub mod cheapest_flights_within_k_stops;
 pub mod check_completeness_of_a_binary_tree;

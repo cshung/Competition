@@ -92,6 +92,7 @@ fn main() {
         leetcode::design_browser_history::design_browser_history();
         leetcode::design_add_and_search_words_data_structure::design_add_and_search_words_data_structure();
         leetcode::can_place_flowers::can_place_flowers();
+        leetcode::number_of_zero_filled_subarrays::number_of_zero_filled_subarrays();
     }
-    leetcode::number_of_zero_filled_subarrays::number_of_zero_filled_subarrays();
+    leetcode::minimum_score_of_a_path_between_two_cities::minimum_score_of_a_path_between_two_cities();
 }

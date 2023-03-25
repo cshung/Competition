@@ -95,6 +95,7 @@ fn main() {
         leetcode::number_of_zero_filled_subarrays::number_of_zero_filled_subarrays();
         leetcode::minimum_score_of_a_path_between_two_cities::minimum_score_of_a_path_between_two_cities();
         leetcode::number_of_operations_to_make_network_connected::number_of_operations_to_make_network_connected();
+        leetcode::reorder_routes_to_make_all_paths_lead_to_the_city_zero::reorder_routes_to_make_all_paths_lead_to_the_city_zero();
     }
-    leetcode::reorder_routes_to_make_all_paths_lead_to_the_city_zero::reorder_routes_to_make_all_paths_lead_to_the_city_zero();
+    leetcode::count_unreachable_pairs_of_nodes_in_an_undirected_graph::count_unreachable_pairs_of_nodes_in_an_undirected_graph();
 }

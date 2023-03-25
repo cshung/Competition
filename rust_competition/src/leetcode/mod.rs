@@ -15,6 +15,7 @@ pub mod construct_quad_tree;
 pub mod convert_sorted_list_to_binary_search_tree;
 pub mod count_odd_numbers_in_an_interval_range;
 pub mod count_subarrays_with_fixed_bounds;
+pub mod count_unreachable_pairs_of_nodes_in_an_undirected_graph;
 pub mod data_stream_as_disjoint_intervals;
 pub mod delete_columns_to_make_sorted;
 pub mod design_add_and_search_words_data_structure;

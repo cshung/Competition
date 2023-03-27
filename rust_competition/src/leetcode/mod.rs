@@ -53,6 +53,7 @@ pub mod minimize_deviation_in_array;
 pub mod minimum_distance_between_bst_nodes;
 pub mod minimum_fuel_cost_to_report_to_the_capital;
 pub mod minimum_number_of_arrows_to_burst_balloons;
+pub mod minimum_path_sum;
 pub mod minimum_rounds_to_complete_all_tasks;
 pub mod minimum_score_of_a_path_between_two_cities;
 pub mod minimum_time_to_collect_all_apples_in_a_tree;

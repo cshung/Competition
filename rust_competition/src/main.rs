@@ -98,6 +98,7 @@ fn main() {
         leetcode::reorder_routes_to_make_all_paths_lead_to_the_city_zero::reorder_routes_to_make_all_paths_lead_to_the_city_zero();
         leetcode::count_unreachable_pairs_of_nodes_in_an_undirected_graph::count_unreachable_pairs_of_nodes_in_an_undirected_graph();
         leetcode::longest_cycle_in_a_graph::longest_cycle_in_a_graph();
+        leetcode::minimum_path_sum::minimum_path_sum();
     }
-    leetcode::minimum_path_sum::minimum_path_sum();
+    leetcode::minimum_cost_for_tickets::minimum_cost_for_tickets();
 }

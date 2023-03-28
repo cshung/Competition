@@ -50,6 +50,7 @@ pub mod maximum_ice_cream_bars;
 pub mod maximum_sum_circular_subarray;
 pub mod merge_k_sorted_lists;
 pub mod minimize_deviation_in_array;
+pub mod minimum_cost_for_tickets;
 pub mod minimum_distance_between_bst_nodes;
 pub mod minimum_fuel_cost_to_report_to_the_capital;
 pub mod minimum_number_of_arrows_to_burst_balloons;

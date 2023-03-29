@@ -68,6 +68,7 @@ pub mod number_of_operations_to_make_network_connected;
 pub mod number_of_zero_filled_subarrays;
 pub mod palindrome_partitioning;
 pub mod permutation_in_string;
+pub mod reducing_dishes;
 pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero;
 pub mod restore_ip_addresses;
 pub mod same_tree;

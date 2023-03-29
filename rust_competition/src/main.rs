@@ -99,6 +99,7 @@ fn main() {
         leetcode::count_unreachable_pairs_of_nodes_in_an_undirected_graph::count_unreachable_pairs_of_nodes_in_an_undirected_graph();
         leetcode::longest_cycle_in_a_graph::longest_cycle_in_a_graph();
         leetcode::minimum_path_sum::minimum_path_sum();
+        leetcode::minimum_cost_for_tickets::minimum_cost_for_tickets();
     }
-    leetcode::minimum_cost_for_tickets::minimum_cost_for_tickets();
+    leetcode::reducing_dishes::reducing_dishes();
 }

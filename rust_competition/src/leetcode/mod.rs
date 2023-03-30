@@ -72,6 +72,7 @@ pub mod reducing_dishes;
 pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero;
 pub mod restore_ip_addresses;
 pub mod same_tree;
+pub mod scramble_string;
 pub mod search_insert_position;
 pub mod shortest_path_with_alternating_colors;
 pub mod shuffle_the_array;

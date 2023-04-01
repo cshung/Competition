@@ -102,6 +102,7 @@ fn main() {
         leetcode::minimum_cost_for_tickets::minimum_cost_for_tickets();
         leetcode::reducing_dishes::reducing_dishes();
         leetcode::scramble_string::scramble_string();
+        leetcode::number_of_ways_of_cutting_a_pizza::number_of_ways_of_cutting_a_pizza();
     }
-    leetcode::number_of_ways_of_cutting_a_pizza::number_of_ways_of_cutting_a_pizza();
+    leetcode::binary_search::binary_search();
 }

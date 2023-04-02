@@ -83,6 +83,7 @@ pub mod snakes_and_ladders;
 pub mod sort_an_array;
 pub mod string_compression;
 pub mod subarray_sums_divisible_by_k;
+pub mod successful_pairs_of_spells_and_potions;
 pub mod sum_root_to_leaf_numbers;
 pub mod symmetric_tree;
 pub mod two_sum;

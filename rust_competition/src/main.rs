@@ -103,6 +103,7 @@ fn main() {
         leetcode::reducing_dishes::reducing_dishes();
         leetcode::scramble_string::scramble_string();
         leetcode::number_of_ways_of_cutting_a_pizza::number_of_ways_of_cutting_a_pizza();
+        leetcode::binary_search::binary_search();
     }
-    leetcode::binary_search::binary_search();
+    leetcode::successful_pairs_of_spells_and_potions::successful_pairs_of_spells_and_potions();
 }

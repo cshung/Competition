@@ -69,6 +69,7 @@ pub mod number_of_nodes_in_the_sub_tree_with_the_same_label;
 pub mod number_of_operations_to_make_network_connected;
 pub mod number_of_ways_of_cutting_a_pizza;
 pub mod number_of_zero_filled_subarrays;
+pub mod optimal_partition_of_string;
 pub mod palindrome_partitioning;
 pub mod permutation_in_string;
 pub mod reducing_dishes;

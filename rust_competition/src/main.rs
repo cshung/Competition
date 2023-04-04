@@ -105,6 +105,7 @@ fn main() {
         leetcode::number_of_ways_of_cutting_a_pizza::number_of_ways_of_cutting_a_pizza();
         leetcode::binary_search::binary_search();
         leetcode::successful_pairs_of_spells_and_potions::successful_pairs_of_spells_and_potions();
+        leetcode::boats_to_save_people::boats_to_save_people();
     }
-    leetcode::boats_to_save_people::boats_to_save_people();
+    leetcode::optimal_partition_of_string::optimal_partition_of_string();
 }

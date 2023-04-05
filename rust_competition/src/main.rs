@@ -106,6 +106,7 @@ fn main() {
         leetcode::binary_search::binary_search();
         leetcode::successful_pairs_of_spells_and_potions::successful_pairs_of_spells_and_potions();
         leetcode::boats_to_save_people::boats_to_save_people();
+        leetcode::optimal_partition_of_string::optimal_partition_of_string();
     }
-    leetcode::optimal_partition_of_string::optimal_partition_of_string();
+    leetcode::minimize_maximum_of_array::minimize_maximum_of_array();
 }

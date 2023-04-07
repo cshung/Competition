@@ -66,6 +66,7 @@ pub mod n_th_tribonacci_number;
 pub mod naming_a_company;
 pub mod non_decreasing_subsequences;
 pub mod number_of_closed_islands;
+pub mod number_of_enclaves;
 pub mod number_of_good_paths;
 pub mod number_of_nodes_in_the_sub_tree_with_the_same_label;
 pub mod number_of_operations_to_make_network_connected;

@@ -1,4 +1,4 @@
-package leetcode
+package construct_quad_tree
 
 import "fmt"
 

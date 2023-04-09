@@ -41,6 +41,7 @@ pub mod jump_game_ii;
 pub mod jump_game_iv;
 pub mod koko_eating_bananas;
 pub mod kth_missing_positive_number;
+pub mod largest_color_value_in_a_directed_graph;
 pub mod lexicographically_smallest_equivalent_string;
 pub mod lfu_cache;
 pub mod linked_list_random_node;

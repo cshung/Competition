@@ -110,6 +110,8 @@ fn main() {
         leetcode::minimize_maximum_of_array::minimize_maximum_of_array();
         leetcode::number_of_closed_islands::number_of_closed_islands();
         leetcode::number_of_enclaves::number_of_enclaves();
+        leetcode::largest_color_value_in_a_directed_graph::largest_color_value_in_a_directed_graph(
+        );
     }
-    leetcode::largest_color_value_in_a_directed_graph::largest_color_value_in_a_directed_graph();
+    leetcode::valid_parentheses::valid_parentheses();
 }

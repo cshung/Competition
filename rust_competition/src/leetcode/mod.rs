@@ -93,6 +93,7 @@ pub mod successful_pairs_of_spells_and_potions;
 pub mod sum_root_to_leaf_numbers;
 pub mod symmetric_tree;
 pub mod two_sum;
+pub mod valid_parentheses;
 pub mod verifying_an_alien_dictionary;
 pub mod word_pattern;
 pub mod zigzag_conversion;

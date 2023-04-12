@@ -4,6 +4,7 @@ import "main/leetcode/construct_quad_tree"
 import "main/leetcode/linked_list_cycle_ii"
 import "main/leetcode/clone_graph"
 import "main/leetcode/removing_stars_from_a_string"
+import "main/leetcode/simplify_path"
 
 func main() {
 	if 1 == 0 {
@@ -13,6 +14,7 @@ func main() {
 		construct_quad_tree.Construct_quad_tree()
 		linked_list_cycle_ii.Linked_list_cycle_ii()
 		clone_graph.Clone_graph()
+		removing_stars_from_a_string.Removing_stars_from_a_string()
 	}
-	removing_stars_from_a_string.Removing_stars_from_a_string()
+	simplify_path.Simplify_path()
 }

@@ -7,6 +7,7 @@ import "main/leetcode/removing_stars_from_a_string"
 import "main/leetcode/simplify_path"
 import "main/leetcode/validate_stack_sequences"
 import "main/leetcode/longest_palindromic_subsequence"
+import "main/leetcode/maximum_value_of_k_coins_from_piles"
 
 func main() {
 	if 1 == 0 {
@@ -19,6 +20,7 @@ func main() {
 		removing_stars_from_a_string.Removing_stars_from_a_string()
 		simplify_path.Simplify_path()
 		validate_stack_sequences.Validate_stack_sequences()
+		longest_palindromic_subsequence.Longest_palindromic_subsequence()
 	}
-	longest_palindromic_subsequence.Longest_palindromic_subsequence()
+	maximum_value_of_k_coins_from_piles.Maximum_value_of_k_coins_from_piles()
 }

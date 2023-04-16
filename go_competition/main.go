@@ -8,6 +8,7 @@ import "main/leetcode/simplify_path"
 import "main/leetcode/validate_stack_sequences"
 import "main/leetcode/longest_palindromic_subsequence"
 import "main/leetcode/maximum_value_of_k_coins_from_piles"
+import "main/leetcode/number_of_ways_to_form_a_target_string_given_a_dictionary"
 
 func main() {
 	if 1 == 0 {
@@ -21,6 +22,7 @@ func main() {
 		simplify_path.Simplify_path()
 		validate_stack_sequences.Validate_stack_sequences()
 		longest_palindromic_subsequence.Longest_palindromic_subsequence()
+		maximum_value_of_k_coins_from_piles.Maximum_value_of_k_coins_from_piles()
 	}
-	maximum_value_of_k_coins_from_piles.Maximum_value_of_k_coins_from_piles()
+	number_of_ways_to_form_a_target_string_given_a_dictionary.Number_of_ways_to_form_a_target_string_given_a_dictionary()
 }

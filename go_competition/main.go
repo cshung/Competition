@@ -10,6 +10,7 @@ import "main/leetcode/longest_palindromic_subsequence"
 import "main/leetcode/maximum_value_of_k_coins_from_piles"
 import "main/leetcode/number_of_ways_to_form_a_target_string_given_a_dictionary"
 import "main/leetcode/kids_with_the_greatest_number_of_candies"
+import "main/leetcode/merge_strings_alternately"
 
 func main() {
 	if 1 == 0 {
@@ -25,6 +26,7 @@ func main() {
 		longest_palindromic_subsequence.Longest_palindromic_subsequence()
 		maximum_value_of_k_coins_from_piles.Maximum_value_of_k_coins_from_piles()
 		number_of_ways_to_form_a_target_string_given_a_dictionary.Number_of_ways_to_form_a_target_string_given_a_dictionary()
+		kids_with_the_greatest_number_of_candies.Kids_with_the_greatest_number_of_candies()
 	}
-	kids_with_the_greatest_number_of_candies.Kids_with_the_greatest_number_of_candies()
+	merge_strings_alternately.Merge_strings_alternately()
 }

@@ -23,6 +23,6 @@ func validateStackSequences(pushed []int, popped []int) bool {
 	}
 }
 
-func Validate_stack_sequences() {
+func Main() {
 	fmt.Println(validateStackSequences([]int{1, 2, 3, 4, 5}, []int{4, 5, 3, 2, 1}))
 }

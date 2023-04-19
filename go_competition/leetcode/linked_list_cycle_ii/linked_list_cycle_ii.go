@@ -35,7 +35,7 @@ func detectCycle(head *ListNode) *ListNode {
 	}
 }
 
-func Linked_list_cycle_ii() {
+func Main() {
 	a := ListNode{3, nil}
 	b := ListNode{2, nil}
 	c := ListNode{0, nil}

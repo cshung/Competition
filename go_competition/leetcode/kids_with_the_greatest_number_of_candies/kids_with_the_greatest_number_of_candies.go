@@ -23,7 +23,7 @@ func kidsWithCandies(candies []int, extraCandies int) []bool {
 	return answer
 }
 
-func Kids_with_the_greatest_number_of_candies() {
+func Main() {
 	answer := kidsWithCandies([]int{2, 3, 5, 1, 3}, 3)
 	for i := 0; i < len(answer); i++ {
 		fmt.Print(answer[i])

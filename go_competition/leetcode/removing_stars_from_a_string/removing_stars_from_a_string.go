@@ -21,6 +21,6 @@ func removeStars(s string) string {
 	return builder.String()
 }
 
-func Removing_stars_from_a_string() {
+func Main() {
 	fmt.Println(removeStars("leet**cod*e"))
 }

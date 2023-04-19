@@ -22,6 +22,6 @@ func mergeAlternately(word1 string, word2 string) string {
 	return builder.String()
 }
 
-func Merge_strings_alternately() {
+func Main() {
 	fmt.Println(mergeAlternately("abcd", "pq"))
 }

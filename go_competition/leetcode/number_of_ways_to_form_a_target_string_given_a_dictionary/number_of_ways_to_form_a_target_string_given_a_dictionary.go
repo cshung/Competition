@@ -44,7 +44,7 @@ func numWays(words []string, target string) int {
 	return last_answer[0]
 }
 
-func Number_of_ways_to_form_a_target_string_given_a_dictionary() {
+func Main() {
 	answer := numWays([]string{"acca", "bbbb", "caca"}, "aba")
 	fmt.Println(answer)
 }

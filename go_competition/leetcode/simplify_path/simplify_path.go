@@ -46,6 +46,6 @@ func simplifyPath(path string) string {
 	return builder.String()
 }
 
-func Simplify_path() {
+func Main() {
 	fmt.Println(simplifyPath("/home/"))
 }

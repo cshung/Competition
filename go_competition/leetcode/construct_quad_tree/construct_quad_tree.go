@@ -63,7 +63,7 @@ func displayQuadTree(root *Node, level int) {
 	}
 }
 
-func Construct_quad_tree() {
+func Main() {
 	s := [][]int{
 		[]int{0, 1},
 		[]int{1, 0},

@@ -28,7 +28,7 @@ func cloneGraph(node *Node) *Node {
 	return clone(clones, node)
 }
 
-func Clone_graph() {
+func Main() {
 	a := Node{1, make([]*Node, 2)}
 	b := Node{2, make([]*Node, 2)}
 	c := Node{3, make([]*Node, 2)}

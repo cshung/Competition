@@ -56,7 +56,7 @@ func maxValueOfCoins(piles [][]int, k int) int {
 	return last_answers[k-1]
 }
 
-func Maximum_value_of_k_coins_from_piles() {
+func Main() {
 	answer := maxValueOfCoins([][]int{[]int{1, 100, 3}, []int{7, 8, 9}}, 2)
 	fmt.Println(answer)
 }

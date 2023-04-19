@@ -55,6 +55,6 @@ func longestPalindromeSubseq(s string) int {
 	return answer[0][n]
 }
 
-func Longest_palindromic_subsequence() {
+func Main() {
 	fmt.Println(longestPalindromeSubseq("bbbab"))
 }

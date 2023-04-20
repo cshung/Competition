@@ -12,6 +12,7 @@ import "main/leetcode/number_of_ways_to_form_a_target_string_given_a_dictionary"
 import "main/leetcode/kids_with_the_greatest_number_of_candies"
 import "main/leetcode/merge_strings_alternately"
 import "main/leetcode/longest_zigzag_path_in_a_binary_tree"
+import "main/leetcode/maximum_width_of_binary_tree"
 
 func main() {
 	if 1 == 0 {
@@ -29,6 +30,7 @@ func main() {
 		number_of_ways_to_form_a_target_string_given_a_dictionary.Main()
 		kids_with_the_greatest_number_of_candies.Main()
 		merge_strings_alternately.Main()
+		longest_zigzag_path_in_a_binary_tree.Main()
 	}
-	longest_zigzag_path_in_a_binary_tree.Main()
+	maximum_width_of_binary_tree.Main()
 }

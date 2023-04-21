@@ -13,6 +13,7 @@ import "main/leetcode/kids_with_the_greatest_number_of_candies"
 import "main/leetcode/merge_strings_alternately"
 import "main/leetcode/longest_zigzag_path_in_a_binary_tree"
 import "main/leetcode/maximum_width_of_binary_tree"
+import "main/leetcode/profitable_schemes"
 
 func main() {
 	if 1 == 0 {
@@ -31,6 +32,7 @@ func main() {
 		kids_with_the_greatest_number_of_candies.Main()
 		merge_strings_alternately.Main()
 		longest_zigzag_path_in_a_binary_tree.Main()
+		maximum_width_of_binary_tree.Main()
 	}
-	maximum_width_of_binary_tree.Main()
+	profitable_schemes.Main()
 }

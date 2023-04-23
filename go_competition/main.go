@@ -15,6 +15,7 @@ import "main/leetcode/longest_zigzag_path_in_a_binary_tree"
 import "main/leetcode/maximum_width_of_binary_tree"
 import "main/leetcode/profitable_schemes"
 import "main/leetcode/minimum_insertion_steps_to_make_a_string_palindrome"
+import "main/leetcode/restore_the_array"
 
 func main() {
 	if 1 == 0 {
@@ -35,6 +36,7 @@ func main() {
 		longest_zigzag_path_in_a_binary_tree.Main()
 		maximum_width_of_binary_tree.Main()
 		profitable_schemes.Main()
+		minimum_insertion_steps_to_make_a_string_palindrome.Main()
 	}
-	minimum_insertion_steps_to_make_a_string_palindrome.Main()
+	restore_the_array.Main()
 }

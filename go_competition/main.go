@@ -16,6 +16,7 @@ import "main/leetcode/maximum_width_of_binary_tree"
 import "main/leetcode/profitable_schemes"
 import "main/leetcode/minimum_insertion_steps_to_make_a_string_palindrome"
 import "main/leetcode/restore_the_array"
+import "main/leetcode/last_stone_weight"
 
 func main() {
 	if 1 == 0 {
@@ -37,6 +38,7 @@ func main() {
 		maximum_width_of_binary_tree.Main()
 		profitable_schemes.Main()
 		minimum_insertion_steps_to_make_a_string_palindrome.Main()
+		restore_the_array.Main()
 	}
-	restore_the_array.Main()
+	last_stone_weight.Main()
 }

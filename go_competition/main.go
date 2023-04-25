@@ -17,6 +17,7 @@ import "main/leetcode/profitable_schemes"
 import "main/leetcode/minimum_insertion_steps_to_make_a_string_palindrome"
 import "main/leetcode/restore_the_array"
 import "main/leetcode/last_stone_weight"
+import "main/leetcode/smallest_number_in_infinite_set"
 
 func main() {
 	if 1 == 0 {
@@ -39,6 +40,7 @@ func main() {
 		profitable_schemes.Main()
 		minimum_insertion_steps_to_make_a_string_palindrome.Main()
 		restore_the_array.Main()
+		last_stone_weight.Main()
 	}
-	last_stone_weight.Main()
+	smallest_number_in_infinite_set.Main()
 }

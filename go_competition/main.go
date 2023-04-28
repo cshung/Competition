@@ -19,6 +19,7 @@ import "main/leetcode/restore_the_array"
 import "main/leetcode/last_stone_weight"
 import "main/leetcode/smallest_number_in_infinite_set"
 import "main/leetcode/add_digits"
+import "main/leetcode/similar_string_groups"
 
 func main() {
 	if 1 == 0 {
@@ -43,6 +44,7 @@ func main() {
 		restore_the_array.Main()
 		last_stone_weight.Main()
 		smallest_number_in_infinite_set.Main()
+		add_digits.Main()
 	}
-	add_digits.Main()
+	similar_string_groups.Main()
 }

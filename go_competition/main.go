@@ -22,6 +22,7 @@ import "main/leetcode/add_digits"
 import "main/leetcode/similar_string_groups"
 import "main/leetcode/checking_existence_of_edge_length_limited_paths"
 import "main/leetcode/remove_max_number_of_edges_to_keep_graph_fully_traversable"
+import "main/leetcode/average_salary_excluding_the_minimum_and_maximum_salary"
 
 func main() {
 	if 1 == 0 {
@@ -49,6 +50,7 @@ func main() {
 		add_digits.Main()
 		similar_string_groups.Main()
 		checking_existence_of_edge_length_limited_paths.Main()
+		remove_max_number_of_edges_to_keep_graph_fully_traversable.Main()
 	}
-	remove_max_number_of_edges_to_keep_graph_fully_traversable.Main()
+	average_salary_excluding_the_minimum_and_maximum_salary.Main()
 }

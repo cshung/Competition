@@ -21,6 +21,7 @@ import "main/leetcode/smallest_number_in_infinite_set"
 import "main/leetcode/add_digits"
 import "main/leetcode/similar_string_groups"
 import "main/leetcode/checking_existence_of_edge_length_limited_paths"
+import "main/leetcode/remove_max_number_of_edges_to_keep_graph_fully_traversable"
 
 func main() {
 	if 1 == 0 {
@@ -47,6 +48,7 @@ func main() {
 		smallest_number_in_infinite_set.Main()
 		add_digits.Main()
 		similar_string_groups.Main()
+		checking_existence_of_edge_length_limited_paths.Main()
 	}
-	checking_existence_of_edge_length_limited_paths.Main()
+	remove_max_number_of_edges_to_keep_graph_fully_traversable.Main()
 }

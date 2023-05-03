@@ -24,6 +24,7 @@ import "main/leetcode/checking_existence_of_edge_length_limited_paths"
 import "main/leetcode/remove_max_number_of_edges_to_keep_graph_fully_traversable"
 import "main/leetcode/average_salary_excluding_the_minimum_and_maximum_salary"
 import "main/leetcode/sign_of_the_product_of_an_array"
+import "main/leetcode/find_the_difference_of_two_arrays"
 
 func main() {
 	if 1 == 0 {
@@ -53,6 +54,7 @@ func main() {
 		checking_existence_of_edge_length_limited_paths.Main()
 		remove_max_number_of_edges_to_keep_graph_fully_traversable.Main()
 		average_salary_excluding_the_minimum_and_maximum_salary.Main()
+		sign_of_the_product_of_an_array.Main()
 	}
-	sign_of_the_product_of_an_array.Main()
+	find_the_difference_of_two_arrays.Main()
 }

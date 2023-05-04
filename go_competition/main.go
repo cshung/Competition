@@ -25,6 +25,7 @@ import "main/leetcode/remove_max_number_of_edges_to_keep_graph_fully_traversable
 import "main/leetcode/average_salary_excluding_the_minimum_and_maximum_salary"
 import "main/leetcode/sign_of_the_product_of_an_array"
 import "main/leetcode/find_the_difference_of_two_arrays"
+import "main/leetcode/dota2_senate"
 
 func main() {
 	if 1 == 0 {
@@ -55,6 +56,7 @@ func main() {
 		remove_max_number_of_edges_to_keep_graph_fully_traversable.Main()
 		average_salary_excluding_the_minimum_and_maximum_salary.Main()
 		sign_of_the_product_of_an_array.Main()
+		find_the_difference_of_two_arrays.Main()
 	}
-	find_the_difference_of_two_arrays.Main()
+	dota2_senate.Main()
 }

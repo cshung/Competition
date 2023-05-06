@@ -27,6 +27,7 @@ import "main/leetcode/sign_of_the_product_of_an_array"
 import "main/leetcode/find_the_difference_of_two_arrays"
 import "main/leetcode/dota2_senate"
 import "main/leetcode/maximum_number_of_vowels_in_a_substring_of_given_length"
+import "main/leetcode/number_of_subsequences_that_satisfy_the_given_sum_condition"
 
 func main() {
 	if 1 == 0 {
@@ -59,6 +60,7 @@ func main() {
 		sign_of_the_product_of_an_array.Main()
 		find_the_difference_of_two_arrays.Main()
 		dota2_senate.Main()
+		maximum_number_of_vowels_in_a_substring_of_given_length.Main()
 	}
-	maximum_number_of_vowels_in_a_substring_of_given_length.Main()
+	number_of_subsequences_that_satisfy_the_given_sum_condition.Main()
 }

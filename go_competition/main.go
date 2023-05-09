@@ -30,6 +30,7 @@ import "main/leetcode/maximum_number_of_vowels_in_a_substring_of_given_length"
 import "main/leetcode/number_of_subsequences_that_satisfy_the_given_sum_condition"
 import "main/leetcode/find_the_longest_valid_obstacle_course_at_each_position"
 import "main/leetcode/matrix_diagonal_sum"
+import "main/leetcode/spiral_matrix"
 
 func main() {
 	if 1 == 0 {
@@ -65,6 +66,7 @@ func main() {
 		maximum_number_of_vowels_in_a_substring_of_given_length.Main()
 		number_of_subsequences_that_satisfy_the_given_sum_condition.Main()
 		find_the_longest_valid_obstacle_course_at_each_position.Main()
+		matrix_diagonal_sum.Main()
 	}
-	matrix_diagonal_sum.Main()
+	spiral_matrix.Main()
 }

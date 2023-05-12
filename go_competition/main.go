@@ -32,6 +32,7 @@ import "main/leetcode/find_the_longest_valid_obstacle_course_at_each_position"
 import "main/leetcode/matrix_diagonal_sum"
 import "main/leetcode/spiral_matrix"
 import "main/leetcode/spiral_matrix_ii"
+import "main/leetcode/uncrossed_lines"
 
 func main() {
 	if 1 == 0 {
@@ -69,6 +70,7 @@ func main() {
 		find_the_longest_valid_obstacle_course_at_each_position.Main()
 		matrix_diagonal_sum.Main()
 		spiral_matrix.Main()
+		spiral_matrix_ii.Main()
 	}
-	spiral_matrix_ii.Main()
+	uncrossed_lines.Main()
 }

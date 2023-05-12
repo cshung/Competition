@@ -33,6 +33,7 @@ import "main/leetcode/matrix_diagonal_sum"
 import "main/leetcode/spiral_matrix"
 import "main/leetcode/spiral_matrix_ii"
 import "main/leetcode/uncrossed_lines"
+import "main/leetcode/solving_questions_with_brainpower"
 
 func main() {
 	if 1 == 0 {
@@ -71,6 +72,7 @@ func main() {
 		matrix_diagonal_sum.Main()
 		spiral_matrix.Main()
 		spiral_matrix_ii.Main()
+		uncrossed_lines.Main()
 	}
-	uncrossed_lines.Main()
+	solving_questions_with_brainpower.Main()
 }

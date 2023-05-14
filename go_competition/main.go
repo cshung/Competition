@@ -35,6 +35,7 @@ import "main/leetcode/spiral_matrix_ii"
 import "main/leetcode/uncrossed_lines"
 import "main/leetcode/solving_questions_with_brainpower"
 import "main/leetcode/count_ways_to_build_good_strings"
+import "main/leetcode/maximize_score_after_n_operations"
 
 func main() {
 	if 1 == 0 {
@@ -75,6 +76,7 @@ func main() {
 		spiral_matrix_ii.Main()
 		uncrossed_lines.Main()
 		solving_questions_with_brainpower.Main()
+		count_ways_to_build_good_strings.Main()
 	}
-	count_ways_to_build_good_strings.Main()
+	maximize_score_after_n_operations.Main()
 }

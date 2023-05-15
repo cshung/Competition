@@ -38,6 +38,7 @@ import "main/leetcode/count_ways_to_build_good_strings"
 import "main/leetcode/maximize_score_after_n_operations"
 import "main/leetcode/swapping_nodes_in_a_linked_list"
 import "main/leetcode/paint_house_ii"
+import "main/leetcode/maximum_distance_in_arrays"
 
 func main() {
 	if 1 == 0 {
@@ -81,6 +82,7 @@ func main() {
 		count_ways_to_build_good_strings.Main()
 		maximize_score_after_n_operations.Main()
 		swapping_nodes_in_a_linked_list.Main()
+		paint_house_ii.Main()
 	}
-	paint_house_ii.Main()
+	maximum_distance_in_arrays.Main()
 }

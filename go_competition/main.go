@@ -41,6 +41,7 @@ import "main/leetcode/paint_house_ii"
 import "main/leetcode/maximum_distance_in_arrays"
 import "main/leetcode/wiggle_sort"
 import "main/leetcode/swap_nodes_in_pairs"
+import "main/leetcode/confusing_number"
 
 func main() {
 	if 1 == 0 {
@@ -87,6 +88,7 @@ func main() {
 		paint_house_ii.Main()
 		maximum_distance_in_arrays.Main()
 		wiggle_sort.Main()
+		swap_nodes_in_pairs.Main()
 	}
-	swap_nodes_in_pairs.Main()
+	confusing_number.Main()
 }

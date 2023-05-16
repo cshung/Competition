@@ -39,6 +39,7 @@ import "main/leetcode/maximize_score_after_n_operations"
 import "main/leetcode/swapping_nodes_in_a_linked_list"
 import "main/leetcode/paint_house_ii"
 import "main/leetcode/maximum_distance_in_arrays"
+import "main/leetcode/wiggle_sort"
 
 func main() {
 	if 1 == 0 {
@@ -83,6 +84,7 @@ func main() {
 		maximize_score_after_n_operations.Main()
 		swapping_nodes_in_a_linked_list.Main()
 		paint_house_ii.Main()
+		maximum_distance_in_arrays.Main()
 	}
-	maximum_distance_in_arrays.Main()
+	wiggle_sort.Main()
 }

@@ -40,6 +40,7 @@ import "main/leetcode/swapping_nodes_in_a_linked_list"
 import "main/leetcode/paint_house_ii"
 import "main/leetcode/maximum_distance_in_arrays"
 import "main/leetcode/wiggle_sort"
+import "main/leetcode/swap_nodes_in_pairs"
 
 func main() {
 	if 1 == 0 {
@@ -85,6 +86,7 @@ func main() {
 		swapping_nodes_in_a_linked_list.Main()
 		paint_house_ii.Main()
 		maximum_distance_in_arrays.Main()
+		wiggle_sort.Main()
 	}
-	wiggle_sort.Main()
+	swap_nodes_in_pairs.Main()
 }

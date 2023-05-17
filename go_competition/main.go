@@ -42,6 +42,7 @@ import "main/leetcode/maximum_distance_in_arrays"
 import "main/leetcode/wiggle_sort"
 import "main/leetcode/swap_nodes_in_pairs"
 import "main/leetcode/confusing_number"
+import "main/leetcode/maximum_twin_sum_of_a_linked_list"
 
 func main() {
 	if 1 == 0 {
@@ -89,6 +90,7 @@ func main() {
 		maximum_distance_in_arrays.Main()
 		wiggle_sort.Main()
 		swap_nodes_in_pairs.Main()
+		confusing_number.Main()
 	}
-	confusing_number.Main()
+	maximum_twin_sum_of_a_linked_list.Main()
 }

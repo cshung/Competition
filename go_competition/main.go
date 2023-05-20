@@ -44,6 +44,7 @@ import "main/leetcode/swap_nodes_in_pairs"
 import "main/leetcode/confusing_number"
 import "main/leetcode/maximum_twin_sum_of_a_linked_list"
 import "main/leetcode/perform_string_shifts"
+import "main/leetcode/minimum_number_of_vertices_to_reach_all_nodes"
 
 func main() {
 	if 1 == 0 {
@@ -93,6 +94,7 @@ func main() {
 		swap_nodes_in_pairs.Main()
 		confusing_number.Main()
 		maximum_twin_sum_of_a_linked_list.Main()
+		perform_string_shifts.Main()
 	}
-	perform_string_shifts.Main()
+	minimum_number_of_vertices_to_reach_all_nodes.Main()
 }

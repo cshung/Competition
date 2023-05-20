@@ -47,6 +47,7 @@ import "main/leetcode/perform_string_shifts"
 import "main/leetcode/minimum_number_of_vertices_to_reach_all_nodes"
 import "main/leetcode/is_graph_bipartite"
 import "main/leetcode/evaluate_division"
+import "main/leetcode/one_edit_distance"
 
 func main() {
 	if 1 == 0 {
@@ -99,6 +100,7 @@ func main() {
 		perform_string_shifts.Main()
 		minimum_number_of_vertices_to_reach_all_nodes.Main()
 		is_graph_bipartite.Main()
+		evaluate_division.Main()
 	}
-	evaluate_division.Main()
+	one_edit_distance.Main()
 }

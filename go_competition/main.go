@@ -46,6 +46,7 @@ import "main/leetcode/maximum_twin_sum_of_a_linked_list"
 import "main/leetcode/perform_string_shifts"
 import "main/leetcode/minimum_number_of_vertices_to_reach_all_nodes"
 import "main/leetcode/is_graph_bipartite"
+import "main/leetcode/evaluate_division"
 
 func main() {
 	if 1 == 0 {
@@ -97,6 +98,7 @@ func main() {
 		maximum_twin_sum_of_a_linked_list.Main()
 		perform_string_shifts.Main()
 		minimum_number_of_vertices_to_reach_all_nodes.Main()
+		is_graph_bipartite.Main()
 	}
-	is_graph_bipartite.Main()
+	evaluate_division.Main()
 }

@@ -48,6 +48,7 @@ import "main/leetcode/minimum_number_of_vertices_to_reach_all_nodes"
 import "main/leetcode/is_graph_bipartite"
 import "main/leetcode/evaluate_division"
 import "main/leetcode/one_edit_distance"
+import "main/leetcode/shortest_bridge"
 
 func main() {
 	if 1 == 0 {
@@ -101,6 +102,7 @@ func main() {
 		minimum_number_of_vertices_to_reach_all_nodes.Main()
 		is_graph_bipartite.Main()
 		evaluate_division.Main()
+		one_edit_distance.Main()
 	}
-	one_edit_distance.Main()
+	shortest_bridge.Main()
 }

@@ -49,6 +49,7 @@ import "main/leetcode/is_graph_bipartite"
 import "main/leetcode/evaluate_division"
 import "main/leetcode/one_edit_distance"
 import "main/leetcode/shortest_bridge"
+import "main/leetcode/top_k_frequent_elements"
 
 func main() {
 	if 1 == 0 {
@@ -103,6 +104,7 @@ func main() {
 		is_graph_bipartite.Main()
 		evaluate_division.Main()
 		one_edit_distance.Main()
+		shortest_bridge.Main()
 	}
-	shortest_bridge.Main()
+	top_k_frequent_elements.Main()
 }

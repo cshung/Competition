@@ -51,6 +51,7 @@ import "main/leetcode/one_edit_distance"
 import "main/leetcode/shortest_bridge"
 import "main/leetcode/top_k_frequent_elements"
 import "main/leetcode/kth_largest_element_in_a_stream"
+import "main/leetcode/maximum_subsequence_score"
 
 func main() {
 	if 1 == 0 {
@@ -107,6 +108,7 @@ func main() {
 		one_edit_distance.Main()
 		shortest_bridge.Main()
 		top_k_frequent_elements.Main()
+		kth_largest_element_in_a_stream.Main()
 	}
-	kth_largest_element_in_a_stream.Main()
+	maximum_subsequence_score.Main()
 }

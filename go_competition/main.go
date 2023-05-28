@@ -54,6 +54,7 @@ import "main/leetcode/kth_largest_element_in_a_stream"
 import "main/leetcode/maximum_subsequence_score"
 import "main/leetcode/new_21_game"
 import "main/leetcode/stone_game_ii"
+import "main/leetcode/minimum_cost_to_cut_a_stick"
 
 func main() {
 	if 1 == 0 {
@@ -113,6 +114,7 @@ func main() {
 		kth_largest_element_in_a_stream.Main()
 		maximum_subsequence_score.Main()
 		new_21_game.Main()
+		stone_game_ii.Main()
 	}
-	stone_game_ii.Main()
+	minimum_cost_to_cut_a_stick.Main()
 }

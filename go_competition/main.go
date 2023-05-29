@@ -56,6 +56,7 @@ import "main/leetcode/new_21_game"
 import "main/leetcode/stone_game_ii"
 import "main/leetcode/minimum_cost_to_cut_a_stick"
 import "main/leetcode/design_parking_system"
+import "main/leetcode/stone_game_iii"
 
 func main() {
 	if 1 == 0 {
@@ -117,6 +118,7 @@ func main() {
 		new_21_game.Main()
 		stone_game_ii.Main()
 		minimum_cost_to_cut_a_stick.Main()
+		design_parking_system.Main()
 	}
-	design_parking_system.Main()
+	stone_game_iii.Main()
 }

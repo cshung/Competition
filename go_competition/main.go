@@ -61,6 +61,7 @@ import "main/leetcode/reverse_words_in_a_string_ii"
 import "main/leetcode/shortest_way_to_form_string"
 import "main/leetcode/longest_substring_with_at_most_two_distinct_characters"
 import "main/leetcode/longest_substring_with_at_most_k_distinct_characters"
+import "main/leetcode/max_consecutive_ones_ii"
 
 func main() {
 	if 1 == 0 {
@@ -127,6 +128,7 @@ func main() {
 		reverse_words_in_a_string_ii.Main()
 		shortest_way_to_form_string.Main()
 		longest_substring_with_at_most_two_distinct_characters.Main()
+		longest_substring_with_at_most_k_distinct_characters.Main()
 	}
-	longest_substring_with_at_most_k_distinct_characters.Main()
+	max_consecutive_ones_ii.Main()
 }

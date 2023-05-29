@@ -55,6 +55,7 @@ import "main/leetcode/maximum_subsequence_score"
 import "main/leetcode/new_21_game"
 import "main/leetcode/stone_game_ii"
 import "main/leetcode/minimum_cost_to_cut_a_stick"
+import "main/leetcode/design_parking_system"
 
 func main() {
 	if 1 == 0 {
@@ -115,6 +116,7 @@ func main() {
 		maximum_subsequence_score.Main()
 		new_21_game.Main()
 		stone_game_ii.Main()
+		minimum_cost_to_cut_a_stick.Main()
 	}
-	minimum_cost_to_cut_a_stick.Main()
+	design_parking_system.Main()
 }

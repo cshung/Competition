@@ -58,6 +58,7 @@ import "main/leetcode/minimum_cost_to_cut_a_stick"
 import "main/leetcode/design_parking_system"
 import "main/leetcode/stone_game_iii"
 import "main/leetcode/reverse_words_in_a_string_ii"
+import "main/leetcode/shortest_way_to_form_string"
 
 func main() {
 	if 1 == 0 {
@@ -121,6 +122,7 @@ func main() {
 		minimum_cost_to_cut_a_stick.Main()
 		design_parking_system.Main()
 		stone_game_iii.Main()
+		reverse_words_in_a_string_ii.Main()
 	}
-	reverse_words_in_a_string_ii.Main()
+	shortest_way_to_form_string.Main()
 }

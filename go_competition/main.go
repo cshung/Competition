@@ -57,6 +57,7 @@ import "main/leetcode/stone_game_ii"
 import "main/leetcode/minimum_cost_to_cut_a_stick"
 import "main/leetcode/design_parking_system"
 import "main/leetcode/stone_game_iii"
+import "main/leetcode/reverse_words_in_a_string_ii"
 
 func main() {
 	if 1 == 0 {
@@ -119,6 +120,7 @@ func main() {
 		stone_game_ii.Main()
 		minimum_cost_to_cut_a_stick.Main()
 		design_parking_system.Main()
+		stone_game_iii.Main()
 	}
-	stone_game_iii.Main()
+	reverse_words_in_a_string_ii.Main()
 }

@@ -59,6 +59,7 @@ import "main/leetcode/design_parking_system"
 import "main/leetcode/stone_game_iii"
 import "main/leetcode/reverse_words_in_a_string_ii"
 import "main/leetcode/shortest_way_to_form_string"
+import "main/leetcode/longest_substring_with_at_most_two_distinct_characters"
 
 func main() {
 	if 1 == 0 {
@@ -123,6 +124,7 @@ func main() {
 		design_parking_system.Main()
 		stone_game_iii.Main()
 		reverse_words_in_a_string_ii.Main()
+		shortest_way_to_form_string.Main()
 	}
-	shortest_way_to_form_string.Main()
+	longest_substring_with_at_most_two_distinct_characters.Main()
 }

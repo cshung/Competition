@@ -63,6 +63,7 @@ import "main/leetcode/longest_substring_with_at_most_two_distinct_characters"
 import "main/leetcode/longest_substring_with_at_most_k_distinct_characters"
 import "main/leetcode/max_consecutive_ones_ii"
 import "main/leetcode/design_hashset"
+import "main/leetcode/design_underground_system"
 
 func main() {
 	if 1 == 0 {
@@ -131,6 +132,7 @@ func main() {
 		longest_substring_with_at_most_two_distinct_characters.Main()
 		longest_substring_with_at_most_k_distinct_characters.Main()
 		max_consecutive_ones_ii.Main()
+		design_hashset.Main()
 	}
-	design_hashset.Main()
+	design_underground_system.Main()
 }

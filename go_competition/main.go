@@ -65,6 +65,7 @@ import "main/leetcode/max_consecutive_ones_ii"
 import "main/leetcode/design_hashset"
 import "main/leetcode/design_underground_system"
 import "main/leetcode/shortest_path_in_binary_matrix"
+import "main/leetcode/detonate_the_maximum_bombs"
 
 func main() {
 	if 1 == 0 {
@@ -135,6 +136,7 @@ func main() {
 		max_consecutive_ones_ii.Main()
 		design_hashset.Main()
 		design_underground_system.Main()
+		shortest_path_in_binary_matrix.Main()
 	}
-	shortest_path_in_binary_matrix.Main()
+	detonate_the_maximum_bombs.Main()
 }

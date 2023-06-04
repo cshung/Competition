@@ -66,6 +66,7 @@ import "main/leetcode/design_hashset"
 import "main/leetcode/design_underground_system"
 import "main/leetcode/shortest_path_in_binary_matrix"
 import "main/leetcode/detonate_the_maximum_bombs"
+import "main/leetcode/time_needed_to_inform_all_employees"
 
 func main() {
 	if 1 == 0 {
@@ -137,6 +138,7 @@ func main() {
 		design_hashset.Main()
 		design_underground_system.Main()
 		shortest_path_in_binary_matrix.Main()
+		detonate_the_maximum_bombs.Main()
 	}
-	detonate_the_maximum_bombs.Main()
+	time_needed_to_inform_all_employees.Main()
 }

@@ -68,6 +68,7 @@ import "main/leetcode/shortest_path_in_binary_matrix"
 import "main/leetcode/detonate_the_maximum_bombs"
 import "main/leetcode/time_needed_to_inform_all_employees"
 import "main/leetcode/number_of_provinces"
+import "main/leetcode/find_k_length_substrings_with_no_repeated_characters"
 
 func main() {
 	if 1 == 0 {
@@ -141,6 +142,7 @@ func main() {
 		shortest_path_in_binary_matrix.Main()
 		detonate_the_maximum_bombs.Main()
 		time_needed_to_inform_all_employees.Main()
+		number_of_provinces.Main()
 	}
-	number_of_provinces.Main()
+	find_k_length_substrings_with_no_repeated_characters.Main()
 }

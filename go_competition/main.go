@@ -70,6 +70,7 @@ import "main/leetcode/time_needed_to_inform_all_employees"
 import "main/leetcode/number_of_provinces"
 import "main/leetcode/find_k_length_substrings_with_no_repeated_characters"
 import "main/leetcode/check_if_it_is_a_straight_line"
+import "main/leetcode/can_make_arithmetic_progression_from_sequence"
 
 func main() {
 	if 1 == 0 {
@@ -145,6 +146,7 @@ func main() {
 		time_needed_to_inform_all_employees.Main()
 		number_of_provinces.Main()
 		find_k_length_substrings_with_no_repeated_characters.Main()
+		check_if_it_is_a_straight_line.Main()
 	}
-	check_if_it_is_a_straight_line.Main()
+	can_make_arithmetic_progression_from_sequence.Main()
 }

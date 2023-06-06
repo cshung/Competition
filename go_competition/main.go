@@ -69,6 +69,7 @@ import "main/leetcode/detonate_the_maximum_bombs"
 import "main/leetcode/time_needed_to_inform_all_employees"
 import "main/leetcode/number_of_provinces"
 import "main/leetcode/find_k_length_substrings_with_no_repeated_characters"
+import "main/leetcode/check_if_it_is_a_straight_line"
 
 func main() {
 	if 1 == 0 {
@@ -143,6 +144,7 @@ func main() {
 		detonate_the_maximum_bombs.Main()
 		time_needed_to_inform_all_employees.Main()
 		number_of_provinces.Main()
+		find_k_length_substrings_with_no_repeated_characters.Main()
 	}
-	find_k_length_substrings_with_no_repeated_characters.Main()
+	check_if_it_is_a_straight_line.Main()
 }

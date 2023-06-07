@@ -71,6 +71,7 @@ import "main/leetcode/number_of_provinces"
 import "main/leetcode/find_k_length_substrings_with_no_repeated_characters"
 import "main/leetcode/check_if_it_is_a_straight_line"
 import "main/leetcode/can_make_arithmetic_progression_from_sequence"
+import "main/leetcode/minimum_flips_to_make_a_or_b_equal_to_c"
 
 func main() {
 	if 1 == 0 {
@@ -147,6 +148,7 @@ func main() {
 		number_of_provinces.Main()
 		find_k_length_substrings_with_no_repeated_characters.Main()
 		check_if_it_is_a_straight_line.Main()
+		can_make_arithmetic_progression_from_sequence.Main()
 	}
-	can_make_arithmetic_progression_from_sequence.Main()
+	minimum_flips_to_make_a_or_b_equal_to_c.Main()
 }

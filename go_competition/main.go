@@ -75,6 +75,7 @@ import "main/leetcode/minimum_flips_to_make_a_or_b_equal_to_c"
 import "main/leetcode/count_negative_numbers_in_a_sorted_matrix"
 import "main/leetcode/find_smallest_letter_greater_than_target"
 import "main/leetcode/maximum_value_at_a_given_index_in_a_bounded_array"
+import "main/leetcode/snapshot_array"
 
 func main() {
 	if 1 == 0 {
@@ -155,6 +156,7 @@ func main() {
 		minimum_flips_to_make_a_or_b_equal_to_c.Main()
 		count_negative_numbers_in_a_sorted_matrix.Main()
 		find_smallest_letter_greater_than_target.Main()
+		maximum_value_at_a_given_index_in_a_bounded_array.Main()
 	}
-	maximum_value_at_a_given_index_in_a_bounded_array.Main()
+	snapshot_array.Main()
 }

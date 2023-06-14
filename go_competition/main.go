@@ -77,6 +77,7 @@ import "main/leetcode/find_smallest_letter_greater_than_target"
 import "main/leetcode/maximum_value_at_a_given_index_in_a_bounded_array"
 import "main/leetcode/snapshot_array"
 import "main/leetcode/equal_row_and_column_pairs"
+import "main/leetcode/minimum_absolute_difference_in_bst"
 
 func main() {
 	if 1 == 0 {
@@ -159,6 +160,7 @@ func main() {
 		find_smallest_letter_greater_than_target.Main()
 		maximum_value_at_a_given_index_in_a_bounded_array.Main()
 		snapshot_array.Main()
+		equal_row_and_column_pairs.Main()
 	}
-	equal_row_and_column_pairs.Main()
+	minimum_absolute_difference_in_bst.Main()
 }

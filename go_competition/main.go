@@ -78,6 +78,7 @@ import "main/leetcode/maximum_value_at_a_given_index_in_a_bounded_array"
 import "main/leetcode/snapshot_array"
 import "main/leetcode/equal_row_and_column_pairs"
 import "main/leetcode/minimum_absolute_difference_in_bst"
+import "main/leetcode/maximum_level_sum_of_a_binary_tree"
 
 func main() {
 	if 1 == 0 {
@@ -161,6 +162,7 @@ func main() {
 		maximum_value_at_a_given_index_in_a_bounded_array.Main()
 		snapshot_array.Main()
 		equal_row_and_column_pairs.Main()
+		minimum_absolute_difference_in_bst.Main()
 	}
-	minimum_absolute_difference_in_bst.Main()
+	maximum_level_sum_of_a_binary_tree.Main()
 }

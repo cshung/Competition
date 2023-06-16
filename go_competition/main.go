@@ -79,6 +79,7 @@ import "main/leetcode/snapshot_array"
 import "main/leetcode/equal_row_and_column_pairs"
 import "main/leetcode/minimum_absolute_difference_in_bst"
 import "main/leetcode/maximum_level_sum_of_a_binary_tree"
+import "main/leetcode/number_of_ways_to_reorder_array_to_get_same_bst"
 
 func main() {
 	if 1 == 0 {
@@ -163,6 +164,7 @@ func main() {
 		snapshot_array.Main()
 		equal_row_and_column_pairs.Main()
 		minimum_absolute_difference_in_bst.Main()
+		maximum_level_sum_of_a_binary_tree.Main()
 	}
-	maximum_level_sum_of_a_binary_tree.Main()
+	number_of_ways_to_reorder_array_to_get_same_bst.Main()
 }

@@ -82,6 +82,7 @@ import "main/leetcode/maximum_level_sum_of_a_binary_tree"
 import "main/leetcode/number_of_ways_to_reorder_array_to_get_same_bst"
 import "main/leetcode/make_array_strictly_increasing"
 import "main/leetcode/number_of_increasing_paths_in_a_grid"
+import "main/leetcode/find_anagram_mappings"
 
 func main() {
 	if 1 == 0 {
@@ -169,6 +170,7 @@ func main() {
 		maximum_level_sum_of_a_binary_tree.Main()
 		number_of_ways_to_reorder_array_to_get_same_bst.Main()
 		make_array_strictly_increasing.Main()
+		number_of_increasing_paths_in_a_grid.Main()
 	}
-	number_of_increasing_paths_in_a_grid.Main()
+	find_anagram_mappings.Main()
 }

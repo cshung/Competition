@@ -84,6 +84,7 @@ import "main/leetcode/make_array_strictly_increasing"
 import "main/leetcode/number_of_increasing_paths_in_a_grid"
 import "main/leetcode/find_anagram_mappings"
 import "main/leetcode/palindrome_permutation"
+import "main/leetcode/sentence_similarity"
 
 func main() {
 	if 1 == 0 {
@@ -173,6 +174,7 @@ func main() {
 		make_array_strictly_increasing.Main()
 		number_of_increasing_paths_in_a_grid.Main()
 		find_anagram_mappings.Main()
+		palindrome_permutation.Main()
 	}
-	palindrome_permutation.Main()
+	sentence_similarity.Main()
 }

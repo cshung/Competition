@@ -83,6 +83,7 @@ import "main/leetcode/number_of_ways_to_reorder_array_to_get_same_bst"
 import "main/leetcode/make_array_strictly_increasing"
 import "main/leetcode/number_of_increasing_paths_in_a_grid"
 import "main/leetcode/find_anagram_mappings"
+import "main/leetcode/palindrome_permutation"
 
 func main() {
 	if 1 == 0 {
@@ -171,6 +172,7 @@ func main() {
 		number_of_ways_to_reorder_array_to_get_same_bst.Main()
 		make_array_strictly_increasing.Main()
 		number_of_increasing_paths_in_a_grid.Main()
+		find_anagram_mappings.Main()
 	}
-	find_anagram_mappings.Main()
+	palindrome_permutation.Main()
 }

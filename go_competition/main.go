@@ -87,6 +87,7 @@ import "main/leetcode/palindrome_permutation"
 import "main/leetcode/sentence_similarity"
 import "main/leetcode/single_row_keyboard"
 import "main/leetcode/group_shifted_strings"
+import "main/leetcode/minimum_cost_to_make_array_equal"
 
 func main() {
 	if 1 == 0 {
@@ -179,6 +180,7 @@ func main() {
 		palindrome_permutation.Main()
 		sentence_similarity.Main()
 		single_row_keyboard.Main()
+		group_shifted_strings.Main()
 	}
-	group_shifted_strings.Main()
+	minimum_cost_to_make_array_equal.Main()
 }

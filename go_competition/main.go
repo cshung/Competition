@@ -88,6 +88,7 @@ import "main/leetcode/sentence_similarity"
 import "main/leetcode/single_row_keyboard"
 import "main/leetcode/group_shifted_strings"
 import "main/leetcode/minimum_cost_to_make_array_equal"
+import "main/leetcode/best_time_to_buy_and_sell_stock_with_transaction_fee"
 
 func main() {
 	if 1 == 0 {
@@ -181,6 +182,7 @@ func main() {
 		sentence_similarity.Main()
 		single_row_keyboard.Main()
 		group_shifted_strings.Main()
+		minimum_cost_to_make_array_equal.Main()
 	}
-	minimum_cost_to_make_array_equal.Main()
+	best_time_to_buy_and_sell_stock_with_transaction_fee.Main()
 }

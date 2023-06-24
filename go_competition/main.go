@@ -89,6 +89,7 @@ import "main/leetcode/single_row_keyboard"
 import "main/leetcode/group_shifted_strings"
 import "main/leetcode/minimum_cost_to_make_array_equal"
 import "main/leetcode/best_time_to_buy_and_sell_stock_with_transaction_fee"
+import "main/leetcode/longest_arithmetic_subsequence"
 
 func main() {
 	if 1 == 0 {
@@ -183,6 +184,7 @@ func main() {
 		single_row_keyboard.Main()
 		group_shifted_strings.Main()
 		minimum_cost_to_make_array_equal.Main()
+		best_time_to_buy_and_sell_stock_with_transaction_fee.Main()
 	}
-	best_time_to_buy_and_sell_stock_with_transaction_fee.Main()
+	longest_arithmetic_subsequence.Main()
 }

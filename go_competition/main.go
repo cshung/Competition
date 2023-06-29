@@ -93,6 +93,7 @@ import "main/leetcode/longest_arithmetic_subsequence"
 import "main/leetcode/tallest_billboard"
 import "main/leetcode/shortest_path_to_get_all_keys"
 import "main/leetcode/path_with_maximum_probability"
+import "main/leetcode/find_k_pairs_with_smallest_sums"
 
 func main() {
 	if 1 == 0 {
@@ -191,6 +192,7 @@ func main() {
 		longest_arithmetic_subsequence.Main()
 		tallest_billboard.Main()
 		shortest_path_to_get_all_keys.Main()
+		path_with_maximum_probability.Main()
 	}
-	path_with_maximum_probability.Main()
+	find_k_pairs_with_smallest_sums.Main()
 }

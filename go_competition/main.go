@@ -91,6 +91,7 @@ import "main/leetcode/minimum_cost_to_make_array_equal"
 import "main/leetcode/best_time_to_buy_and_sell_stock_with_transaction_fee"
 import "main/leetcode/longest_arithmetic_subsequence"
 import "main/leetcode/tallest_billboard"
+import "main/leetcode/shortest_path_to_get_all_keys"
 
 func main() {
 	if 1 == 0 {
@@ -187,6 +188,7 @@ func main() {
 		minimum_cost_to_make_array_equal.Main()
 		best_time_to_buy_and_sell_stock_with_transaction_fee.Main()
 		longest_arithmetic_subsequence.Main()
+		tallest_billboard.Main()
 	}
-	tallest_billboard.Main()
+	shortest_path_to_get_all_keys.Main()
 }

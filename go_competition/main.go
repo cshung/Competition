@@ -95,6 +95,7 @@ import "main/leetcode/shortest_path_to_get_all_keys"
 import "main/leetcode/path_with_maximum_probability"
 import "main/leetcode/find_k_pairs_with_smallest_sums"
 import "main/leetcode/number_of_beautiful_pairs"
+import "main/leetcode/total_cost_to_hire_k_workers"
 
 func main() {
 	if 1 == 0 {
@@ -195,6 +196,7 @@ func main() {
 		shortest_path_to_get_all_keys.Main()
 		path_with_maximum_probability.Main()
 		find_k_pairs_with_smallest_sums.Main()
+		number_of_beautiful_pairs.Main()
 	}
-	number_of_beautiful_pairs.Main()
+	total_cost_to_hire_k_workers.Main()
 }

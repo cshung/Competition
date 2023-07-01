@@ -97,6 +97,7 @@ import "main/leetcode/find_k_pairs_with_smallest_sums"
 import "main/leetcode/number_of_beautiful_pairs"
 import "main/leetcode/total_cost_to_hire_k_workers"
 import "main/leetcode/last_day_where_you_can_still_cross"
+import "main/leetcode/fair_distribution_of_cookies"
 
 func main() {
 	if 1 == 0 {
@@ -199,6 +200,7 @@ func main() {
 		find_k_pairs_with_smallest_sums.Main()
 		number_of_beautiful_pairs.Main()
 		total_cost_to_hire_k_workers.Main()
+		last_day_where_you_can_still_cross.Main()
 	}
-	last_day_where_you_can_still_cross.Main()
+	fair_distribution_of_cookies.Main()
 }

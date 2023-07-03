@@ -106,6 +106,7 @@ import "main/leetcode/sum_of_imbalance_numbers_of_all_subarrays"
 import "main/leetcode/buddy_strings"
 import "main/leetcode/minimum_operations_to_make_the_integer_zero"
 import "main/leetcode/ways_to_split_array_into_good_subarrays"
+import "main/leetcode/robot_collisions"
 
 func main() {
 	if 1 == 0 {
@@ -217,6 +218,7 @@ func main() {
 		sum_of_imbalance_numbers_of_all_subarrays.Main()
 		buddy_strings.Main()
 		minimum_operations_to_make_the_integer_zero.Main()
+		ways_to_split_array_into_good_subarrays.Main()
 	}
-	ways_to_split_array_into_good_subarrays.Main()
+	robot_collisions.Main()
 }

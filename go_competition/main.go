@@ -100,6 +100,7 @@ import "main/leetcode/last_day_where_you_can_still_cross"
 import "main/leetcode/fair_distribution_of_cookies"
 import "main/leetcode/maximum_number_of_achievable_transfer_requests"
 import "main/leetcode/longest_even_odd_subarray_with_threshold"
+import "main/leetcode/prime_pairs_with_target_sum"
 
 func main() {
 	if 1 == 0 {
@@ -205,6 +206,7 @@ func main() {
 		last_day_where_you_can_still_cross.Main()
 		fair_distribution_of_cookies.Main()
 		maximum_number_of_achievable_transfer_requests.Main()
+		longest_even_odd_subarray_with_threshold.Main()
 	}
-	longest_even_odd_subarray_with_threshold.Main()
+	prime_pairs_with_target_sum.Main()
 }

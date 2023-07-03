@@ -108,6 +108,7 @@ import "main/leetcode/minimum_operations_to_make_the_integer_zero"
 import "main/leetcode/ways_to_split_array_into_good_subarrays"
 import "main/leetcode/robot_collisions"
 import "main/leetcode/count_all_possible_routes"
+import "main/leetcode/special_permutations"
 
 func main() {
 	if 1 == 0 {
@@ -221,6 +222,7 @@ func main() {
 		minimum_operations_to_make_the_integer_zero.Main()
 		ways_to_split_array_into_good_subarrays.Main()
 		robot_collisions.Main()
+		count_all_possible_routes.Main()
 	}
-	count_all_possible_routes.Main()
+	special_permutations.Main()
 }

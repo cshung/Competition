@@ -109,6 +109,7 @@ import "main/leetcode/ways_to_split_array_into_good_subarrays"
 import "main/leetcode/robot_collisions"
 import "main/leetcode/count_all_possible_routes"
 import "main/leetcode/special_permutations"
+import "main/leetcode/k_radius_subarray_averages"
 
 func main() {
 	if 1 == 0 {
@@ -223,6 +224,7 @@ func main() {
 		ways_to_split_array_into_good_subarrays.Main()
 		robot_collisions.Main()
 		count_all_possible_routes.Main()
+		special_permutations.Main()
 	}
-	special_permutations.Main()
+	k_radius_subarray_averages.Main()
 }

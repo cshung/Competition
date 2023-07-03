@@ -99,6 +99,7 @@ import "main/leetcode/total_cost_to_hire_k_workers"
 import "main/leetcode/last_day_where_you_can_still_cross"
 import "main/leetcode/fair_distribution_of_cookies"
 import "main/leetcode/maximum_number_of_achievable_transfer_requests"
+import "main/leetcode/longest_even_odd_subarray_with_threshold"
 
 func main() {
 	if 1 == 0 {
@@ -203,6 +204,7 @@ func main() {
 		total_cost_to_hire_k_workers.Main()
 		last_day_where_you_can_still_cross.Main()
 		fair_distribution_of_cookies.Main()
+		maximum_number_of_achievable_transfer_requests.Main()
 	}
-	maximum_number_of_achievable_transfer_requests.Main()
+	longest_even_odd_subarray_with_threshold.Main()
 }

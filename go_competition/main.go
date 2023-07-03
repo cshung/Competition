@@ -101,6 +101,7 @@ import "main/leetcode/fair_distribution_of_cookies"
 import "main/leetcode/maximum_number_of_achievable_transfer_requests"
 import "main/leetcode/longest_even_odd_subarray_with_threshold"
 import "main/leetcode/prime_pairs_with_target_sum"
+import "main/leetcode/continuous_subarrays"
 
 func main() {
 	if 1 == 0 {
@@ -207,6 +208,7 @@ func main() {
 		fair_distribution_of_cookies.Main()
 		maximum_number_of_achievable_transfer_requests.Main()
 		longest_even_odd_subarray_with_threshold.Main()
+		prime_pairs_with_target_sum.Main()
 	}
-	prime_pairs_with_target_sum.Main()
+	continuous_subarrays.Main()
 }

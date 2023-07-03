@@ -102,6 +102,7 @@ import "main/leetcode/maximum_number_of_achievable_transfer_requests"
 import "main/leetcode/longest_even_odd_subarray_with_threshold"
 import "main/leetcode/prime_pairs_with_target_sum"
 import "main/leetcode/continuous_subarrays"
+import "main/leetcode/sum_of_imbalance_numbers_of_all_subarrays"
 
 func main() {
 	if 1 == 0 {
@@ -209,6 +210,7 @@ func main() {
 		maximum_number_of_achievable_transfer_requests.Main()
 		longest_even_odd_subarray_with_threshold.Main()
 		prime_pairs_with_target_sum.Main()
+		continuous_subarrays.Main()
 	}
-	continuous_subarrays.Main()
+	sum_of_imbalance_numbers_of_all_subarrays.Main()
 }

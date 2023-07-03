@@ -112,6 +112,7 @@ import "main/leetcode/special_permutations"
 import "main/leetcode/k_radius_subarray_averages"
 import "main/leetcode/find_the_value_of_the_partition"
 import "main/leetcode/find_the_highest_altitude"
+import "main/leetcode/summary_ranges"
 
 func main() {
 	if 1 == 0 {
@@ -229,6 +230,7 @@ func main() {
 		special_permutations.Main()
 		k_radius_subarray_averages.Main()
 		find_the_value_of_the_partition.Main()
+		find_the_highest_altitude.Main()
 	}
-	find_the_highest_altitude.Main()
+	summary_ranges.Main()
 }

@@ -9,6 +9,7 @@ type myarr [57600]int
 var heapNode [57600]int
 var nodeHeap [57600]int
 var costs [57600]int
+var spend [57600]int
 var parents [57600]int
 var size int
 
@@ -19,6 +20,20 @@ func swap(h1 int, h2 int) {
 	heapNode[h2] = n1
 	nodeHeap[n1] = h2
 	nodeHeap[n2] = h1
+}
+
+func max(a, b int) int {
+	if a < b {
+		return b
+	}
+	return a
+}
+
+func abs(i int) int {
+	if i < 0 {
+		return -i
+	}
+	return i
 }
 
 func bubbleUp(h int) {
@@ -62,6 +77,17 @@ func stoneDown(h int) {
 	}
 }
 
+func heuristic(row int, col int, keys []int, goals []int) int {
+	n := len(goals) / 2
+	answer := 0
+	for i := 0; i < n; i++ {
+		if keys[i] == 0 {
+			answer = max(answer, abs(row-goals[2*i])+abs(col-goals[2*i+1]))
+		}
+	}
+	return answer
+}
+
 func shortestPathAllKeys(grid []string) int {
 
 	m := len(grid)
@@ -72,8 +98,10 @@ func shortestPathAllKeys(grid []string) int {
 		nodeHeap[i] = -1
 		parents[i] = -1
 		costs[i] = -1.0
+		spend[i] = -1.0
 	}
 
+	goals := []int{}
 	types := make(map[byte]int)
 	sr := -1
 	sc := -1
@@ -85,6 +113,8 @@ func shortestPathAllKeys(grid []string) int {
 				sc = c
 			}
 			if "a"[0] <= g && g <= "z"[0] {
+				goals = append(goals, r)
+				goals = append(goals, c)
 				next_type_id := len(types)/2 + 1
 				types[g] = -next_type_id
 				types[g+"A"[0]-"a"[0]] = next_type_id
@@ -99,17 +129,19 @@ func shortestPathAllKeys(grid []string) int {
 	types["@"[0]] = empty
 	types["."[0]] = empty
 
+	keys := make([]int, 6)
+
 	start := sr*30 + sc
 
 	size = 1
 	heapNode[0] = start
 	nodeHeap[start] = 0
-	costs[start] = 0.0
+	spend[start] = 0.0
+	costs[start] = heuristic(sr, sc, keys, goals)
 	parents[start] = -1
 
 	drs := []int{1, -1, 0, 0}
 	dcs := []int{0, 0, 1, -1}
-	keys := make([]int, 6)
 
 	for size > 0 {
 		srcNode := heapNode[0]
@@ -165,19 +197,22 @@ func shortestPathAllKeys(grid []string) int {
 					dstNode = dstNode + dstCol
 
 					if keyCount == allKeyCount {
-						return costs[srcNode] + 1
+						return spend[srcNode] + 1
 					}
 
 					dstHeap := nodeHeap[dstNode]
-					newCost := costs[srcNode] + 1
+					newSpend := spend[srcNode] + 1
+					newCost := newSpend + heuristic(dstRow, dstCol, keys, goals)
 					if dstHeap == -1 {
 						heapNode[size] = dstNode
 						nodeHeap[dstNode] = size
 						size = size + 1
+						spend[dstNode] = newSpend
 						costs[dstNode] = newCost
 						bubbleUp(size - 1)
 					} else {
 						if newCost < costs[dstNode] {
+							spend[dstNode] = newSpend
 							costs[dstNode] = newCost
 							bubbleUp(dstHeap)
 						}

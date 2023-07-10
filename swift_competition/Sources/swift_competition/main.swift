@@ -8,5 +8,6 @@ if 1 != one() {
   minimum_size_subarray_sum.main()
   maximize_the_confusion_of_an_exam.main()
   put_marbles_in_bags.main()
+  substring_with_largest_variance.main()
 }
-substring_with_largest_variance.main()
+minimum_depth_of_binary_tree.main()

@@ -1,5 +1,5 @@
 func one() -> Int {
-    return 1
+  return 1
 }
 
 if 1 != one() {
@@ -9,5 +9,6 @@ if 1 != one() {
   maximize_the_confusion_of_an_exam.main()
   put_marbles_in_bags.main()
   substring_with_largest_variance.main()
+  minimum_depth_of_binary_tree.main()
 }
-minimum_depth_of_binary_tree.main()
+all_nodes_distance_k_in_binary_tree.main()

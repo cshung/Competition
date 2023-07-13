@@ -11,5 +11,6 @@ if 1 != one() {
   substring_with_largest_variance.main()
   minimum_depth_of_binary_tree.main()
   all_nodes_distance_k_in_binary_tree.main()
+  find_eventual_safe_states.main()
 }
-find_eventual_safe_states.main()
+course_schedule.main()

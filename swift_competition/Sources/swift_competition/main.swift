@@ -18,5 +18,6 @@ if 1 != one() {
   smallest_sufficient_team.main()
   add_two_numbers_ii.main()
   minimum_index_of_a_valid_split.main()
+  length_of_the_longest_valid_substring.main()
 }
-length_of_the_longest_valid_substring.main()
+maximum_beauty_of_an_array_after_applying_operation.main()

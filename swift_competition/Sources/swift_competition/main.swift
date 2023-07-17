@@ -17,5 +17,6 @@ if 1 != one() {
   maximum_number_of_events_that_can_be_attended_ii.main()
   smallest_sufficient_team.main()
   add_two_numbers_ii.main()
+  minimum_index_of_a_valid_split.main()
 }
-minimum_index_of_a_valid_split.main()
+length_of_the_longest_valid_substring.main()

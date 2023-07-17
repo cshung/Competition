@@ -16,5 +16,6 @@ if 1 != one() {
   longest_arithmetic_subsequence_of_given_difference.main()
   maximum_number_of_events_that_can_be_attended_ii.main()
   smallest_sufficient_team.main()
+  add_two_numbers_ii.main()
 }
-add_two_numbers_ii.main()
+minimum_index_of_a_valid_split.main()

@@ -1,19 +1,7 @@
 enum all_nodes_distance_k_in_binary_tree {}
 
 extension all_nodes_distance_k_in_binary_tree {
-  class Node {
-    var value: Int
-    var depth: Int
-    var parent: Int
-    var next: Node?
-    weak var prev: Node?
 
-    init() {
-      value = 0
-      depth = 0
-      parent = 0
-    }
-  }
   public class TreeNode {
     public var val: Int
     public var left: TreeNode?
@@ -48,33 +36,18 @@ extension all_nodes_distance_k_in_binary_tree {
         adj[right.val]!.append(root.val)
       }
     }
-    func enqueue(_ head: inout Node, _ value: Int, _ depth: Int, _ parent: Int) {
-      let newNode = Node()
-      newNode.value = value
-      newNode.depth = depth
-      newNode.parent = parent
-      newNode.prev = head
-      newNode.next = head.next
-      newNode.prev!.next = newNode
-      newNode.next!.prev = newNode
-    }
-    func dequeue(_ tail: inout Node) -> (Int, Int, Int) {
-      let answer = tail.prev!
-      answer.next!.prev = answer.prev
-      answer.prev!.next = answer.next
-      return (answer.value, answer.depth, answer.parent)
-    }
     func distanceK(_ root: TreeNode?, _ target: TreeNode?, _ k: Int) -> [Int] {
+      var answers: [Int] = []
+      if k == 0 {
+        answers.append(target!.val)
+        return answers
+      }
       var adj = [Int: [Int]]()
       build(root!, &adj)
-      var head = Node()
-      var tail = Node()
-      head.next = tail
-      tail.prev = head
-      enqueue(&head, target!.val, 0, -1)
-      var answers : [Int] = []
-      while !(head.next === tail) {
-        let (value, depth, parent) = dequeue(&tail)
+      var queue = library.Deque<(Int, Int, Int)>()
+      queue.append((target!.val, 0, -1))
+      while !queue.isEmpty {
+        let (value, depth, parent) = queue.removeFirst()!
         let neighbors = adj[value]!
         for i in 0..<neighbors.count {
           let neighbor = neighbors[i]
@@ -82,7 +55,7 @@ extension all_nodes_distance_k_in_binary_tree {
             if depth + 1 == k {
               answers.append(neighbor)
             } else {
-              enqueue(&head, neighbor, depth + 1, value)
+              queue.append((neighbor, depth + 1, value))
             }
           }
         }

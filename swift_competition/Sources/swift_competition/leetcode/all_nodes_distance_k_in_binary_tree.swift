@@ -45,7 +45,7 @@ extension all_nodes_distance_k_in_binary_tree {
       var adj = [Int: [Int]]()
       build(root!, &adj)
       var queue = library.Deque<(Int, Int, Int)>()
-      queue.append((target!.val, 0, -1))
+      _ = queue.append((target!.val, 0, -1))
       while !queue.isEmpty {
         let (value, depth, parent) = queue.removeFirst()!
         let neighbors = adj[value]!
@@ -55,7 +55,7 @@ extension all_nodes_distance_k_in_binary_tree {
             if depth + 1 == k {
               answers.append(neighbor)
             } else {
-              queue.append((neighbor, depth + 1, value))
+              _ = queue.append((neighbor, depth + 1, value))
             }
           }
         }

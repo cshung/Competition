@@ -1,39 +1,43 @@
 extension library {
-  struct Deque<T> {
-    class LinkedListNode<T> {
-      var value: T
-      var next: LinkedListNode<T>?
+  class DequeNode<T> {
+    var value: T?
+    var next: DequeNode<T>?
+    weak var prev: DequeNode<T>?
 
-      init(_ value: T) {
-        self.value = value
-      }
+    func remove() {
+      prev!.next = next
+      next!.prev = prev
     }
-    var head: LinkedListNode<T>?
-    var tail: LinkedListNode<T>?
+  }
+  struct Deque<T> {
+    var head: DequeNode<T>
+    var tail: DequeNode<T>
 
-    mutating func append(_ value: T) {
-      let newNode = LinkedListNode(value)
-      if let tailNode = tail {
-        tailNode.next = newNode
-      } else {
-        head = newNode
-      }
-      tail = newNode
+    init() {
+      head = DequeNode()
+      tail = DequeNode()
+      head.next = tail
+      tail.prev = head
+    }
+
+    mutating func append(_ value: T) -> DequeNode<T> {
+      let newNode = DequeNode<T>()
+      newNode.value = value
+      newNode.prev = tail.prev
+      newNode.next = tail
+      newNode.prev!.next = newNode
+      newNode.next!.prev = newNode
+      return newNode
     }
 
     mutating func removeFirst() -> T? {
-      guard let headNode = head else {
-        return nil
-      }
-      head = headNode.next
-      if head == nil {
-        tail = nil
-      }
-      return headNode.value
+      let victim = head.next!
+      victim.remove()
+      return victim.value!
     }
 
     var isEmpty: Bool {
-      return head == nil
+      return head.next! === tail
     }
   }
 }

@@ -25,7 +25,7 @@ extension library {
 
     func aho_corasick_bfs(_ root: TrieNode) {
       var queue = library.Deque<(TrieNode?, Character, TrieNode)>()
-      queue.append((nil, " ", root))
+      _ = queue.append((nil, " ", root))
       while !queue.isEmpty {
         let (p, c, v) = queue.removeFirst()!
         var tmp = p
@@ -48,7 +48,7 @@ extension library {
           v.failure = root
         }
         for (child_key, child) in v.children {
-          queue.append((v, child_key, child))
+          _ = queue.append((v, child_key, child))
         }
       }
     }

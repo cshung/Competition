@@ -20,5 +20,6 @@ if 1 != one() {
   minimum_index_of_a_valid_split.main()
   length_of_the_longest_valid_substring.main()
   maximum_beauty_of_an_array_after_applying_operation.main()
+  sum_of_squares_of_special_elements.main()
 }
-sum_of_squares_of_special_elements.main()
+lru_cache.main()

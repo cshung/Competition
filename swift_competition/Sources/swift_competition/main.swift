@@ -21,5 +21,6 @@ if 1 != one() {
   length_of_the_longest_valid_substring.main()
   maximum_beauty_of_an_array_after_applying_operation.main()
   sum_of_squares_of_special_elements.main()
+  lru_cache.main()
 }
-lru_cache.main()
+non_overlapping_intervals.main()

@@ -22,5 +22,6 @@ if 1 != one() {
   maximum_beauty_of_an_array_after_applying_operation.main()
   sum_of_squares_of_special_elements.main()
   lru_cache.main()
+  non_overlapping_intervals.main()
 }
-non_overlapping_intervals.main()
+asteroid_collision.main()

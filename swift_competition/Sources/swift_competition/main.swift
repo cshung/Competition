@@ -23,5 +23,6 @@ if 1 != one() {
   sum_of_squares_of_special_elements.main()
   lru_cache.main()
   non_overlapping_intervals.main()
+  asteroid_collision.main()
 }
-asteroid_collision.main()
+number_of_longest_increasing_subsequence.main()

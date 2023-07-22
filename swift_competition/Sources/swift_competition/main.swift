@@ -25,5 +25,6 @@ if 1 != one() {
   non_overlapping_intervals.main()
   asteroid_collision.main()
   number_of_longest_increasing_subsequence.main()
+  knight_probability_in_chessboard.main()
 }
-knight_probability_in_chessboard.main()
+number_of_black_blocks.main()

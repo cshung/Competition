@@ -26,5 +26,6 @@ if 1 != one() {
   asteroid_collision.main()
   number_of_longest_increasing_subsequence.main()
   knight_probability_in_chessboard.main()
+  number_of_black_blocks.main()
 }
-number_of_black_blocks.main()
+partition_string_into_minimum_beautiful_substrings.main()

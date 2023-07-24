@@ -29,5 +29,6 @@ if 1 != one() {
   number_of_black_blocks.main()
   partition_string_into_minimum_beautiful_substrings.main()
   relocate_marbles.main()
+  longest_alternating_subarray.main()
 }
-longest_alternating_subarray.main()
+powx_n.main()

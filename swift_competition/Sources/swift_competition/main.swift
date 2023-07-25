@@ -30,5 +30,6 @@ if 1 != one() {
   partition_string_into_minimum_beautiful_substrings.main()
   relocate_marbles.main()
   longest_alternating_subarray.main()
+  powx_n.main()
 }
-powx_n.main()
+peak_index_in_a_mountain_array.main()

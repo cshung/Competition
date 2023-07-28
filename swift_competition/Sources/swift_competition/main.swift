@@ -32,5 +32,6 @@ if 1 != one() {
   longest_alternating_subarray.main()
   powx_n.main()
   peak_index_in_a_mountain_array.main()
+  minimum_speed_to_arrive_on_time.main()
 }
-minimum_speed_to_arrive_on_time.main()
+maximum_running_time_of_n_computers.main()

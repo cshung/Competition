@@ -34,5 +34,6 @@ if 1 != one() {
   peak_index_in_a_mountain_array.main()
   minimum_speed_to_arrive_on_time.main()
   maximum_running_time_of_n_computers.main()
+  predict_the_winner.main()
 }
-predict_the_winner.main()
+soup_servings.main()

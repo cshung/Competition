@@ -35,5 +35,6 @@ if 1 != one() {
   minimum_speed_to_arrive_on_time.main()
   maximum_running_time_of_n_computers.main()
   predict_the_winner.main()
+  soup_servings.main()
 }
-soup_servings.main()
+combinations.main()

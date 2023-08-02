@@ -36,5 +36,6 @@ if 1 != one() {
   maximum_running_time_of_n_computers.main()
   predict_the_winner.main()
   soup_servings.main()
+  combinations.main()
 }
-combinations.main()
+permutations.main()

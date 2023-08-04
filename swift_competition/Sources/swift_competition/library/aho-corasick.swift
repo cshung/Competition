@@ -1,28 +1,27 @@
 extension library {
-  class AhoCorasick {
-    class TrieNode {
-      var children = [Character: TrieNode]()
-      var failure: TrieNode?
-      var pattern: String?
-      var output: TrieNode?
+  class TrieNode {
+    var children = [Character: TrieNode]()
+    var failure: TrieNode?
+    var pattern: String?
+    var output: TrieNode?
 
-      func add(_ s: String) {
-        __add(Array(s), 0, s)
-      }
-
-      private func __add(_ s: [Character], _ i: Int, _ t: String) {
-        if i < s.count {
-          let first = s[i]
-          if children[first] == nil {
-            children[first] = TrieNode()
-          }
-          children[first]!.__add(s, i + 1, t)
-        } else {
-          pattern = t
-        }
-      }
+    func add(_ s: String) {
+      __add(Array(s), 0, s)
     }
 
+    private func __add(_ s: [Character], _ i: Int, _ t: String) {
+      if i < s.count {
+        let first = s[i]
+        if children[first] == nil {
+          children[first] = TrieNode()
+        }
+        children[first]!.__add(s, i + 1, t)
+      } else {
+        pattern = t
+      }
+    }
+  }
+  class AhoCorasick {
     func aho_corasick_bfs(_ root: TrieNode) {
       var queue = library.Deque<(TrieNode?, Character, TrieNode)>()
       _ = queue.append((nil, " ", root))

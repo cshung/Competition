@@ -38,5 +38,6 @@ if 1 != one() {
   soup_servings.main()
   combinations.main()
   permutations.main()
+  letter_combinations_of_a_phone_number.main()
 }
-letter_combinations_of_a_phone_number.main()
+word_break.main()

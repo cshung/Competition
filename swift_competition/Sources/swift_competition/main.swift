@@ -37,5 +37,6 @@ if 1 != one() {
   predict_the_winner.main()
   soup_servings.main()
   combinations.main()
+  permutations.main()
 }
-permutations.main()
+letter_combinations_of_a_phone_number.main()

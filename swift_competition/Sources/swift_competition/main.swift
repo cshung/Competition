@@ -39,5 +39,6 @@ if 1 != one() {
   combinations.main()
   permutations.main()
   letter_combinations_of_a_phone_number.main()
+  word_break.main()
 }
-word_break.main()
+number_of_music_playlists.main()

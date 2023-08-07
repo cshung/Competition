@@ -41,5 +41,6 @@ if 1 != one() {
   letter_combinations_of_a_phone_number.main()
   word_break.main()
   number_of_music_playlists.main()
+  search_a_2d_matrix.main()
 }
-search_a_2d_matrix.main()
+strange_printer.main()

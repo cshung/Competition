@@ -42,5 +42,6 @@ if 1 != one() {
   word_break.main()
   number_of_music_playlists.main()
   search_a_2d_matrix.main()
+  strange_printer.main()
 }
-strange_printer.main()
+search_in_rotated_sorted_array.main()

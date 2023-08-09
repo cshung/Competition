@@ -43,5 +43,6 @@ if 1 != one() {
   number_of_music_playlists.main()
   search_a_2d_matrix.main()
   strange_printer.main()
+  search_in_rotated_sorted_array.main()
 }
-search_in_rotated_sorted_array.main()
+minimize_the_maximum_difference_of_pairs.main()

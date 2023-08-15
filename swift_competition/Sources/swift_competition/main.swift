@@ -46,5 +46,6 @@ if 1 != one() {
   search_in_rotated_sorted_array.main()
   minimize_the_maximum_difference_of_pairs.main()
   partition_list.main()
+  search_in_rotated_sorted_array_ii.main()
 }
-search_in_rotated_sorted_array_ii.main()
+kth_largest_element_in_an_array.main()

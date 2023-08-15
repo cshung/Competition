@@ -44,5 +44,6 @@ if 1 != one() {
   search_a_2d_matrix.main()
   strange_printer.main()
   search_in_rotated_sorted_array.main()
+  minimize_the_maximum_difference_of_pairs.main()
 }
-minimize_the_maximum_difference_of_pairs.main()
+partition_list.main()

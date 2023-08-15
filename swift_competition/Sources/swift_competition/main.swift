@@ -48,5 +48,6 @@ if 1 != one() {
   partition_list.main()
   search_in_rotated_sorted_array_ii.main()
   kth_largest_element_in_an_array.main()
+  check_if_there_is_a_valid_partition_for_the_array.main()
 }
-check_if_there_is_a_valid_partition_for_the_array.main()
+unique_paths_ii.main()

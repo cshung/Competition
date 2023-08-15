@@ -1,0 +1,40 @@
+enum coin_change_ii {}
+
+extension coin_change_ii {
+  struct MemoKey: Hashable {
+    let amount: Int
+    let count: Int
+  }
+
+  class Solution {
+    func changeHelper(_ amount: Int, _ coins: [Int], _ count: Int, _ memo: inout [MemoKey: Int]) -> Int {
+      let key = MemoKey(amount: amount, count: count)
+      if let result = memo[key] {
+        return result
+      } else if amount == 0 {
+        return 1
+      } else if count <= 0 {
+        return 0
+      } else {
+        var ans = 0
+        for i in stride(from: count - 1, through: 0, by: -1) {
+          if amount >= coins[i] {
+            ans += changeHelper(amount - coins[i], coins, i + 1, &memo)
+          }
+        }
+        memo[key] = ans
+        return ans
+      }
+    }
+
+    func change(_ amount: Int, _ coins: [Int]) -> Int {
+      var mutableCoins = coins
+      mutableCoins.sort()
+      var memo = [MemoKey: Int]()
+      return changeHelper(amount, mutableCoins, coins.count, &memo)
+    }
+  }
+  static func main() {
+    print(Solution().change(5, [1, 2, 5]))
+  }
+}

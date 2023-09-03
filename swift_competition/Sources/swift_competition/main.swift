@@ -53,5 +53,6 @@ if 1 != one() {
   coin_change_ii.main()
   sliding_window_maximum.main()
   _01_matrix.main()
+  maximal_network_rank.main()
 }
-maximal_network_rank.main()
+find_critical_and_pseudo_critical_edges_in_minimum_spanning_tree.main()

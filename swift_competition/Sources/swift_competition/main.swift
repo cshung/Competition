@@ -55,5 +55,6 @@ if 1 != one() {
   _01_matrix.main()
   maximal_network_rank.main()
   find_critical_and_pseudo_critical_edges_in_minimum_spanning_tree.main()
+  sort_items_by_groups_respecting_dependencies.main()
 }
-sort_items_by_groups_respecting_dependencies.main()
+repeated_substring_pattern.main()

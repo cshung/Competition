@@ -1,14 +1,11 @@
 enum coin_change_ii {}
 
 extension coin_change_ii {
-  struct MemoKey: Hashable {
-    let amount: Int
-    let count: Int
-  }
-
   class Solution {
-    func changeHelper(_ amount: Int, _ coins: [Int], _ count: Int, _ memo: inout [MemoKey: Int]) -> Int {
-      let key = MemoKey(amount: amount, count: count)
+    func changeHelper(
+      _ amount: Int, _ coins: [Int], _ count: Int, _ memo: inout [library.IntPair: Int]
+    ) -> Int {
+      let key = library.IntPair(a: amount, b: count)
       if let result = memo[key] {
         return result
       } else if amount == 0 {
@@ -30,7 +27,7 @@ extension coin_change_ii {
     func change(_ amount: Int, _ coins: [Int]) -> Int {
       var mutableCoins = coins
       mutableCoins.sort()
-      var memo = [MemoKey: Int]()
+      var memo = [library.IntPair: Int]()
       return changeHelper(amount, mutableCoins, coins.count, &memo)
     }
   }

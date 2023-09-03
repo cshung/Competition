@@ -52,5 +52,6 @@ if 1 != one() {
   unique_paths_ii.main()
   coin_change_ii.main()
   sliding_window_maximum.main()
+  _01_matrix.main()
 }
-_01_matrix.main()
+maximal_network_rank.main()

@@ -1,5 +1,3 @@
-import Foundation
-
 enum search_in_rotated_sorted_array {}
 
 extension search_in_rotated_sorted_array {

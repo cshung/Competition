@@ -1,5 +1,3 @@
-import Foundation
-
 enum predict_the_winner {}
 
 extension predict_the_winner {

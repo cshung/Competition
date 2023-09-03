@@ -1,5 +1,3 @@
-import Foundation
-
 enum maximum_running_time_of_n_computers {}
 
 extension maximum_running_time_of_n_computers {

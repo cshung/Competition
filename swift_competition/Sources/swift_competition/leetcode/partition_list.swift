@@ -1,5 +1,3 @@
-import Foundation
-
 enum partition_list {}
 
 extension partition_list {

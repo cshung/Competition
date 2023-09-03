@@ -1,5 +1,3 @@
-import Foundation
-
 enum minimize_the_maximum_difference_of_pairs {}
 
 extension minimize_the_maximum_difference_of_pairs {

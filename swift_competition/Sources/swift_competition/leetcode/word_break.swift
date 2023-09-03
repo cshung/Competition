@@ -1,5 +1,3 @@
-import Foundation
-
 enum word_break {}
 
 extension word_break {

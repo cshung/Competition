@@ -1,5 +1,3 @@
-import Foundation
-
 enum permutations {}
 
 extension permutations {

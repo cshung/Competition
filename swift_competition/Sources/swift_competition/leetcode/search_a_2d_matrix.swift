@@ -1,5 +1,3 @@
-import Foundation
-
 enum search_a_2d_matrix {}
 
 extension search_a_2d_matrix {

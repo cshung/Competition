@@ -1,5 +1,3 @@
-import Foundation
-
 enum strange_printer {}
 
 extension strange_printer {

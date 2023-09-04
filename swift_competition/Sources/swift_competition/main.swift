@@ -57,5 +57,6 @@ if 1 != one() {
   find_critical_and_pseudo_critical_edges_in_minimum_spanning_tree.main()
   sort_items_by_groups_respecting_dependencies.main()
   repeated_substring_pattern.main()
+  excel_sheet_column_title.main()
 }
-excel_sheet_column_title.main()
+linked_list_cycle.main()

@@ -11,5 +11,9 @@ extension library {
     static func == (left: IntPair, right: IntPair) -> Bool {
       return left.a == right.a && left.b == right.b
     }
+
+    static func < (lhs: IntPair, rhs: IntPair) -> Bool {
+      return lhs.a < rhs.b || lhs.a == lhs.b && lhs.b < rhs.b
+    }
   }
 }

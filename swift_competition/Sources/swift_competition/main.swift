@@ -58,5 +58,6 @@ if 1 != one() {
   sort_items_by_groups_respecting_dependencies.main()
   repeated_substring_pattern.main()
   excel_sheet_column_title.main()
+  linked_list_cycle.main()
 }
-linked_list_cycle.main()
+reorganize_string.main()

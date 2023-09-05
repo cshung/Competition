@@ -1,5 +1,5 @@
 extension library {
-  struct IntPair: Hashable {
+  struct IntPair: Comparable, Hashable {
     var a: Int
     var b: Int
 
@@ -10,6 +10,10 @@ extension library {
 
     static func == (left: IntPair, right: IntPair) -> Bool {
       return left.a == right.a && left.b == right.b
+    }
+
+    static func < (lhs: IntPair, rhs: IntPair) -> Bool {
+      return (lhs.a < rhs.a) || ((lhs.a == rhs.a) && (lhs.b < rhs.b))
     }
   }
 }

@@ -60,5 +60,6 @@ if 1 != one() {
   excel_sheet_column_title.main()
   linked_list_cycle.main()
   reorganize_string.main()
+  copy_list_with_random_pointer.main()
 }
-copy_list_with_random_pointer.main()
+split_linked_list_in_parts.main()

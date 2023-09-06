@@ -63,5 +63,6 @@ if 1 != one() {
   copy_list_with_random_pointer.main()
   split_linked_list_in_parts.main()
   text_justification.main()
+  interleaving_string.main()
 }
-interleaving_string.main()
+maximum_length_of_pair_chain.main()

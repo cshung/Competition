@@ -62,5 +62,6 @@ if 1 != one() {
   reorganize_string.main()
   copy_list_with_random_pointer.main()
   split_linked_list_in_parts.main()
+  text_justification.main()
 }
-text_justification.main()
+interleaving_string.main()

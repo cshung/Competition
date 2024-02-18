@@ -7,7 +7,6 @@ def hdag(adjs):
   for adj in adjs:
     n = len(adj)
     visited = [False] * n
-    count = 0
     topo = []
 
     def dfs(i):
@@ -19,7 +18,6 @@ def hdag(adjs):
 
     for i in range(n):
       if not visited[i]:
-        count += 1
         dfs(i)
 
     topo.append(1)
